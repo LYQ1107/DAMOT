@@ -40,7 +40,8 @@ class CausalDirectionBank(nn.Module):
     def __init__(self, feat_dim, num_pcs=1, momentum=0.9, cov_momentum=0.95,
                  min_samples=32, normalize=True,
                  pca_mode="global_pc_ema", qr_orthogonalize=True,
-                 log_interval=50, debug_stats=False):
+                 log_interval=50, debug_stats=False,
+                 covariance_shrinkage=0.0):
         super().__init__()
         self.feat_dim = int(feat_dim)
         self.num_pcs = int(num_pcs)
@@ -52,6 +53,7 @@ class CausalDirectionBank(nn.Module):
         self.qr_orthogonalize = bool(qr_orthogonalize)
         self.log_interval = int(log_interval)
         self.debug_stats = bool(debug_stats)
+        self.covariance_shrinkage = float(covariance_shrinkage)
 
         D = self.feat_dim
         # shared: stored PCs [num_pcs, D]
@@ -107,6 +109,10 @@ class CausalDirectionBank(nn.Module):
                 cov = (xc.t() * w.unsqueeze(0)) @ xc
             if not torch.isfinite(cov).all():
                 return None
+            shrink = max(0.0, min(float(self.covariance_shrinkage), 1.0))
+            if shrink > 0:
+                diag_cov = torch.diag(torch.diagonal(cov))
+                cov = (1.0 - shrink) * cov + shrink * diag_cov
             return cov.detach()
         except Exception as e:
             warnings.warn(f"[CausalDirectionBank] compute_covariance error: {e}")
@@ -241,7 +247,9 @@ class CausalDirectionBank(nn.Module):
             self.last_update_ok.fill_(True)
             return True
 
-        elif mode in ("cov_ema", "car_weighted_cov_ema", "pairwise_residual"):
+        elif mode in ("cov_ema", "car_weighted_cov_ema", "pairwise_residual",
+                      "shrinkage_cov_ema", "prototype_centered_cov_ema",
+                      "proto_shrinkage_cov_ema"):
             cov_batch = self.compute_covariance(feats, weights=weights)
             return self.update_from_covariance(cov_batch)
 

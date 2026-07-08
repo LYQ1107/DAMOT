@@ -90,6 +90,9 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                  causal_use_scores=False,
                  causal_residual_source="key_ref_match",
                  causal_residual_normalize_before_delta=True,
+                 causal_covariance_shrinkage=0.0,
+                 causal_proto_center_momentum=0.95,
+                 causal_proto_center_min_count=4,
                  *args,
                  **kwargs):
         super().__init__(*args, **kwargs)
@@ -126,6 +129,9 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
         self.causal_residual_source = str(causal_residual_source)
         self.causal_residual_normalize_before_delta = bool(
             causal_residual_normalize_before_delta)
+        self.causal_covariance_shrinkage = float(causal_covariance_shrinkage)
+        self.causal_proto_center_momentum = float(causal_proto_center_momentum)
+        self.causal_proto_center_min_count = int(causal_proto_center_min_count)
 
         self._causal_logged_init = False
         self._causal_forward_count = 0
@@ -141,9 +147,17 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                 pca_mode=self.causal_pca_mode,
                 qr_orthogonalize=causal_qr_orthogonalize,
                 log_interval=causal_log_interval,
-                debug_stats=causal_debug_stats)
+                debug_stats=causal_debug_stats,
+                covariance_shrinkage=self.causal_covariance_shrinkage)
         else:
             self.causal_bank = None
+
+        self.register_buffer(
+            "causal_proto_centers",
+            torch.zeros(6, int(causal_feat_dim)))
+        self.register_buffer(
+            "causal_proto_center_counts",
+            torch.zeros(6, dtype=torch.long))
 
         self.roi_memory = None
         self.roi_proto_memory = None
@@ -281,6 +295,69 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
         except Exception as e:
             warnings.warn(f"[CausalQuasiDenseTrackHead] _get_key_pos_labels: {e}")
             return None
+
+    @torch.no_grad()
+    def _build_proto_centered_feats(self, feats, labels):
+        """Build residual features by subtracting running class centers.
+
+        Vectorised: no Python loop over RoIs.
+        """
+        if feats is None or feats.numel() == 0 or labels is None:
+            return None, 0
+        try:
+            x = feats.detach()
+            y = labels.detach().long().to(x.device)
+            if x.shape[0] != y.shape[0]:
+                return None, 0
+
+            if self.causal_class_ids is not None:
+                mask = torch.zeros(len(y), dtype=torch.bool, device=y.device)
+                for cid in self.causal_class_ids:
+                    mask |= (y == int(cid))
+                x = x[mask]
+                y = y[mask]
+
+            if x.shape[0] < self.causal_min_samples:
+                return None, int(x.shape[0])
+
+            max_cls = self.causal_proto_centers.shape[0]
+            valid_cls = (y >= 0) & (y < max_cls)
+            x = x[valid_cls]
+            y = y[valid_cls]
+            if x.shape[0] == 0:
+                return None, 0
+
+            # update running class centers for all unique classes
+            for cid_t in y.unique():
+                cid = int(cid_t.item())
+                cls_mask = (y == cid)
+                center = F.normalize(x[cls_mask].mean(dim=0), dim=0)
+                if int(self.causal_proto_center_counts[cid].item()) == 0:
+                    self.causal_proto_centers[cid].copy_(center)
+                else:
+                    m = self.causal_proto_center_momentum
+                    old = self.causal_proto_centers[cid].to(center.device)
+                    self.causal_proto_centers[cid].copy_(
+                        F.normalize(m * old + (1.0 - m) * center, dim=0))
+                self.causal_proto_center_counts[cid] += int(cls_mask.sum().item())
+
+            # vectorised residual: gather class centers for every RoI at once
+            min_count = self.causal_proto_center_min_count
+            counts = self.causal_proto_center_counts[y]          # [N]
+            ready  = counts >= min_count                          # [N] bool
+            if not ready.any():
+                return None, 0
+
+            x_ready = x[ready]
+            y_ready = y[ready]
+            centers = self.causal_proto_centers.to(x.device)[y_ready]  # [N', D]
+            out = x_ready - centers
+            if out.shape[0] < self.causal_min_samples:
+                return None, int(out.shape[0])
+            return out.detach(), out.shape[0]
+        except Exception as e:
+            warnings.warn(f"[CausalQuasiDenseTrackHead] _build_proto_centered_feats: {e}")
+            return None, 0
 
     def _build_pairwise_residuals(self, key_feats, ref_feats,
                                   key_sampling_results, ref_sampling_results,
@@ -436,11 +513,24 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                 update_ok = self.causal_bank.update(pca_feats,
                                                     domain=self.current_domain)
 
-            elif mode == "cov_ema":
+            elif mode in ("cov_ema", "shrinkage_cov_ema"):
                 pca_feats = torch.cat(
                     [key_feats.detach(), ref_feats.detach()], dim=0)
                 update_ok = self.causal_bank.update(pca_feats,
                                                     domain=self.current_domain)
+
+            elif mode in ("prototype_centered_cov_ema", "proto_shrinkage_cov_ema"):
+                key_labels = self._get_key_pos_labels(
+                    key_sampling_results, gt_labels)
+                num_feats = key_feats.shape[0]
+                pca_feats, num_proto = self._build_proto_centered_feats(
+                    key_feats, key_labels)
+                num_car = num_proto
+                if pca_feats is None:
+                    skip_reason = f"insufficient_proto_centered({num_proto})"
+                else:
+                    update_ok = self.causal_bank.update(
+                        pca_feats, domain=self.current_domain)
 
             elif mode == "car_weighted_cov_ema":
                 key_labels = self._get_key_pos_labels(

@@ -1,0 +1,6 @@
+history_domains,prototype_count,CPU_history_bytes,CPU_history_MiB,CPU_candidate_features_bytes,CPU_candidate_scores_bytes,stage_finalize_ms,scope,source
+0,0,0,0.0,0,0,0,per process; one process on V100; total equals per-process,"measured reconstructed library, not original training snapshot"
+1,100,102400,0.09765625,786432,3072,4.334188997745514,per process; one process on V100; total equals per-process,"measured reconstructed library, not original training snapshot"
+2,200,204800,0.1953125,919552,3592,0.9844452142715454,per process; one process on V100; total equals per-process,"measured reconstructed library, not original training snapshot"
+3,300,307200,0.29296875,927744,3624,0.6866380572319031,per process; one process on V100; total equals per-process,"measured reconstructed library, not original training snapshot"
+4,400,409600,0.390625,702464,2744,0.8245334029197693,per process; one process on V100; total equals per-process,"measured reconstructed library, not original training snapshot"

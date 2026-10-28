@@ -1,0 +1,10 @@
+{
+  "pid": 14350,
+  "gpu": "8",
+  "argv": [
+    "RUN_ROOT/scripts/evaluate_clear.py",
+    "--model",
+    "F_stage4_e5"
+  ],
+  "start": 1793025445.707097
+}

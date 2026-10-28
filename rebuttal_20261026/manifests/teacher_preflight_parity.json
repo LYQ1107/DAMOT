@@ -1,0 +1,22 @@
+{
+  "pass_parity": true,
+  "checkpoint": "F_stage3_e5",
+  "image_id": 1618,
+  "branch": "teacher_detector",
+  "manual_flow": "extract_feat -> RPN -> RoI -> strict score>0.7, before teacher_pipeline",
+  "same_as_archived_prepare_views": true,
+  "filtered_count": 2,
+  "maximum_coordinate_error_pixels": 0.0003662109375,
+  "maximum_score_error": 3.427267074584961e-07,
+  "tolerance": "0.001 pixels and 1e-6 confidence (FP32 normalization order)",
+  "coordinate": "base resized xyxy; invert scale_factor for original GT",
+  "scale_factor": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "teacher_eval": true,
+  "no_EMA": true,
+  "no_backward": true
+}

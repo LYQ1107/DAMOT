@@ -1,0 +1,71 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "results": [
+    {
+      "timepoint": "e0",
+      "unique_frames": 7286,
+      "unique_videos": 36,
+      "saved_boxes_vs_fresh_matching_exact": true,
+      "summary_matches_exact": true,
+      "counts": {
+        "TP": 14293,
+        "FP": 642,
+        "FN": 66120,
+        "GT_count": 80413,
+        "pseudo_count": 14935,
+        "ignored_pseudo_count": 0
+      }
+    },
+    {
+      "timepoint": "e1",
+      "unique_frames": 7286,
+      "unique_videos": 36,
+      "saved_boxes_vs_fresh_matching_exact": true,
+      "summary_matches_exact": true,
+      "counts": {
+        "TP": 14894,
+        "FP": 675,
+        "FN": 65519,
+        "GT_count": 80413,
+        "pseudo_count": 15569,
+        "ignored_pseudo_count": 0
+      }
+    },
+    {
+      "timepoint": "e3",
+      "unique_frames": 7286,
+      "unique_videos": 36,
+      "saved_boxes_vs_fresh_matching_exact": true,
+      "summary_matches_exact": true,
+      "counts": {
+        "TP": 16215,
+        "FP": 738,
+        "FN": 64198,
+        "GT_count": 80413,
+        "pseudo_count": 16953,
+        "ignored_pseudo_count": 0
+      }
+    },
+    {
+      "timepoint": "e5",
+      "unique_frames": 7286,
+      "unique_videos": 36,
+      "saved_boxes_vs_fresh_matching_exact": true,
+      "summary_matches_exact": true,
+      "counts": {
+        "TP": 17483,
+        "FP": 824,
+        "FN": 62930,
+        "GT_count": 80413,
+        "pseudo_count": 18307,
+        "ignored_pseudo_count": 0
+      }
+    }
+  ],
+  "seconds": 10.226625442504883,
+  "unique_checkpoint_frame_results": 29144,
+  "e1_extra_dispatched_forwards": 6677,
+  "duplicate_rows_in_main_tables": 0,
+  "scope": "CPU recomputation from final canonical per-video teacher boxes, no extra GPU forward"
+}

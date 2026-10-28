@@ -1,0 +1,10 @@
+# The public rebuttal bundle contains reports and compact provenance only.
+# Do not add local caches, checkpoints, raw predictions, or profiler traces.
+cache/
+env/
+raw/
+data/views/
+**/*.pth
+**/*.pkl
+**/predictions/
+**/profile_history*.json

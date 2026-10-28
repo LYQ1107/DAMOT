@@ -1,0 +1,32 @@
+{
+  "frames": 7286,
+  "videos": 36,
+  "all_decoded": true,
+  "shape": [
+    720,
+    1280
+  ],
+  "bytes": 640574623,
+  "read_only_remote_command": [
+    "ssh",
+    "-p",
+    "24557",
+    "-i",
+    "<private-key-redacted>",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "HostKeyAlias=nas-readwrite",
+    "-o",
+    "UserKnownHostsFile=<known-hosts-redacted>",
+    "-o",
+    "ConnectTimeout=10",
+    "<nas-endpoint-redacted>",
+    "tar -C NAS_HOME_ROOTNAS_AVIS_ROOT/masa/data/bdd/bdd100k/images/track/val -cf - -T -"
+  ],
+  "transfer_seconds": 134.81467604637146
+}

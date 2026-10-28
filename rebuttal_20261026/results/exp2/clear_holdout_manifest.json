@@ -1,0 +1,87 @@
+{
+  "source_annotation": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/backup_all_splits_20260627_160444/box_track_clear_train_cocofmt.json",
+  "annotation": "RUN_ROOT/data/annotations/clear_holdout_45v.json",
+  "sha256": "5afd6fafb2f9c6f3c8a48852b6841eefafabfc4e8877a5c4ffa52d1b6a6e31bd",
+  "videos": 45,
+  "frames": 9103,
+  "annotations": 83822,
+  "categories": [
+    {
+      "id": 1,
+      "name": "pedestrian"
+    },
+    {
+      "id": 2,
+      "name": "car"
+    },
+    {
+      "id": 3,
+      "name": "truck"
+    },
+    {
+      "id": 4,
+      "name": "bus"
+    },
+    {
+      "id": 5,
+      "name": "motorcycle"
+    },
+    {
+      "id": 6,
+      "name": "bicycle"
+    }
+  ],
+  "image_view": "RUN_ROOT/data/views/clear_holdout_45v",
+  "split_by_video": {
+    "0000f77c-6257be58": "train",
+    "00054602-3bf57337": "train",
+    "00067cfb-5443fe39": "train",
+    "00067cfb-caba8a02": "train",
+    "00067cfb-f1b91e3c": "train",
+    "000d4f89-3bcbe37a": "train",
+    "000e0252-8523a4a9": "train",
+    "00207869-046fa443": "train",
+    "00207869-902288d1": "train",
+    "002d290d-89f4e5c0": "train",
+    "002d290d-90f2bab2": "train",
+    "002d290d-f9108a13": "train",
+    "00390995-49d9a01e": "train",
+    "003baca5-aab2e274": "train",
+    "003baca5-ad660439": "train",
+    "003baca5-d6cd84e5": "train",
+    "003e23ee-07d32feb": "train",
+    "004071a4-4e8a363a": "train",
+    "004071a4-a45d905f": "train",
+    "004071a4-ef4bf541": "train",
+    "004855fc-ff3946ad": "train",
+    "0048f391-2c5344eb": "train",
+    "0048f391-8eb40ca6": "train",
+    "0048f391-e9bfaf62": "train",
+    "0048f391-eae6a189": "train",
+    "0049e5b8-725e21a0": "train",
+    "0049e5b8-afda7206": "train",
+    "0052b279-87c692aa": "train",
+    "00618cec-3bc5573e": "train",
+    "00618cec-a7f7e470": "train",
+    "00618cec-ef92ac05": "train",
+    "0065fe83-c80cf6c3": "train",
+    "006a4209-4f3bf6cf": "train",
+    "006c0799-964a2695": "train",
+    "006fdb67-f4820206": "train",
+    "007693e6-2535e7bf": "train",
+    "007693e6-bc55f0e4": "train",
+    "00779058-517a4591": "train",
+    "00787a90-b350f376": "train",
+    "007ae77f-79995643": "train",
+    "007aeb45-9330e852": "train",
+    "007aeb45-f9f5ac8c": "train",
+    "007da0eb-e1f588e8": "train",
+    "0081c36b-30bff234": "train",
+    "0081e27b-17bf4a9e": "train"
+  },
+  "frame_manifest": "RUN_ROOT/manifests/clear_holdout_45v_frames.json",
+  "image_sha256_manifest": "RUN_ROOT/manifests/clear_holdout_45v_image_hashes.json",
+  "all_frames_decoded": true,
+  "video_overlap_with_source_or_target": [],
+  "protocol": "frozen epoch5 only; no adaptation, tuning or checkpoint selection on holdout GT"
+}

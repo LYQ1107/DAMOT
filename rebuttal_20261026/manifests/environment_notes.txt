@@ -1,0 +1,7 @@
+Host: cieelab (codex-cieelab). Local filesystem /data1. NAS read-only task inputs via existing sshfs mount.
+Isolated venv with inherited base: USER_HOME/anaconda3/envs/open-mmlab. Base environment was not modified.
+Restored: Python3.7.16, torch1.12.1 CUDA11.3, torchvision0.13.1; local mmcv-full1.6.0, mmdet2.25.3, mmtrack0.14.0.
+Original logged: Python3.7.12, torch1.13.1+cu117, mmcv1.6.2, mmtrack0.13.0. We do not claim exact original training reproduction. pip mmtrack0.13.0 lacked required QuasiDenseTracker API; pip0.14.0 supplies it. Base mmdet2.19.1 lacked log_img_scale.
+Torch imported first with OMP/MKL threads=1 avoids inherited duplicate OpenMP initialization. No unsafe KMP_DUPLICATE_LIB_OK workaround used.
+All init_cfg/pretrained entries removed only in resolved local configs when loading complete checkpoints. All target state keys strict-loaded and selected critical tensors checked exactly; teacher checkpoints strict teacher_detector prefix loaded.
+Local evaluator PLOT_CURVES=False is the only intentional original-code modification at audit time. Execution harnesses are separate.

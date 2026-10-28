@@ -1,0 +1,15 @@
+All results use stage04_after_night epoch5 for FinalOld; no features extracted, no new inference needed.
+N_old versus F_old: both global_pc_ema; batch per GPU 16 versus 14; seed metadata is recorded in manifests only; not a strict APR-only training comparison.
+F: proto_shrinkage_cov_ema, num_pcs=2, alpha=.10, loss=.025, min_samples=96, cov_momentum=.98, shrinkage=.15, batch16. F is a separate reference, its delta versus N_old cannot be attributed wholly to APR.
+Frozen native student QDTrack uses QuasiDenseTracker, detector score=.05, init=.30, obj=.20, nms_conf=.35, match=.5, class-aware bisoftmax; Conv-BN fusion; 1296x720 keep ratio, no test flip.
+Historical predictions used ordinary QDTrack evaluation config, so adapter teacher and training-only ICS/APR are not executed. This is compatible student deployment.
+GT_count computed from six-class dataset annotation filtering: skip ignore/iscrowd, no image intersection, area<=0, w/h<1. Independently verified FN=(1-recall)*GT from historical CLEAR metrics. OVERALL uses original official combined result, never class mean.
+Target evaluation revisits original adaptation pools, not independent target generalization.
+Only learned-domain cells enter forgetting statistics. Future-domain historical cells are preserved without additional inference.
+Reuse is supported by checkpoint_path.txt, epoch, used_config.py, commands, evaluator source, counts and CSV hashes. Historical checkpoint hashes were not recorded by original evaluation, so exact historical binary provenance cannot be proved retroactively; no evidence of checkpoint mismatch was found.
+
+Additional embedded-config diff: F_old out_pipeline collects gt_scores for APR filtering; N_old does not. Full resolved embedded differences are in N_old_vs_F_old_embedded_config_diff.json. F historical evaluation lacks saved used_config.py; its command refers to the same domain evaluation config preserved in the local code snapshot and the same threshold override. This provenance limitation is retained.
+
+All-frame HOTA correction: archived evaluator omitted predictions on images with no GT annotations from its timestep map. Re-evaluated all 48 qualified prediction JSONs with every annotation image indexed; HOTA/DetA/AssA updated consistently across models/stages. Legacy CSVs remain under *_legacy_eval.csv; CLEAR IDF1/IDSw already included such frames and are unchanged. No new model forward.
+
+Embedded training gpu_ids: N_old range(0,4), F_old range(0,6); nominal global batches 4*16=64 versus 6*14=84, not just per-GPU batch differences. This is another training-budget/optimization confound; full config diff is retained.

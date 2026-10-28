@@ -1,0 +1,7 @@
+mode,group,repeat,batch_pairs,history_domains,warmup_steps,measured_steps,window_seconds,step_per_second,key_reference_pair_per_second,key_frame_per_second,model_association_FPS,end_to_end_FPS,peak_allocated_MiB,peak_reserved_MiB,FP32,gpu,conv_bn_fusion
+inference_model_association,deployed_student,0,1,0,20,1621,74.31077742576599,,,,21.81379412453766,,534.88818359375,584.0,True,Tesla V100-DGXS-32GB,True
+inference_end_to_end,deployed_student,0,1,0,20,1621,137.7383864670992,,,,,11.768687303355332,534.88818359375,584.0,True,Tesla V100-DGXS-32GB,True
+inference_model_association,deployed_student,1,1,0,20,1621,73.71447190642357,,,,21.99025453316371,,534.88818359375,584.0,True,Tesla V100-DGXS-32GB,True
+inference_end_to_end,deployed_student,1,1,0,20,1621,134.6739212796092,,,,,12.036480296987042,534.88818359375,584.0,True,Tesla V100-DGXS-32GB,True
+inference_model_association,deployed_student,2,1,0,20,1621,74.3465489372611,,,,21.80329851447328,,534.88818359375,584.0,True,Tesla V100-DGXS-32GB,True
+inference_end_to_end,deployed_student,2,1,0,20,1621,137.10153663158417,,,,,11.823353988773377,534.88818359375,584.0,True,Tesla V100-DGXS-32GB,True

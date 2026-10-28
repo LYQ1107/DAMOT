@@ -1,0 +1,72 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "all_acceptance_checks_passed": true,
+  "files": [
+    {
+      "file": "exp1/apr_old_domain_metrics.csv",
+      "rows": 18,
+      "bytes": 17564,
+      "sha256": "ec2e5028d829578422dbffd1ee0cfb955ec62a834d48599c2f3c23be180de90b"
+    },
+    {
+      "file": "exp1/apr_forgetting_metrics.csv",
+      "rows": 18,
+      "bytes": 4757,
+      "sha256": "2f6ec54baa65a94fcb06e7575673908d9bf6c9dc852d160d7b0f388ea348be1f"
+    },
+    {
+      "file": "exp1/stage_domain_metrics.csv",
+      "rows": 96,
+      "bytes": 92040,
+      "sha256": "490fc9fce159408959ed350be4eedd4b72a85f062e7ce3527b8e2e03d5e5ffea"
+    },
+    {
+      "file": "exp2/clear_retention.csv",
+      "rows": 10,
+      "bytes": 3619,
+      "sha256": "8cf56fdc16cb34dcf4001b4c86f378596d751652c7b7bdaa86827a3162c671f9"
+    },
+    {
+      "file": "exp3/teacher_pseudo_quality.csv",
+      "rows": 8,
+      "bytes": 1591,
+      "sha256": "473a8ab8a6ee021b026450ad87d239a5e357f957eda6c456cec9cb5a4b22600c"
+    },
+    {
+      "file": "exp3/teacher_pseudo_quality_per_class.csv",
+      "rows": 24,
+      "bytes": 3469,
+      "sha256": "28baa54b6137c42117f50e0e5d9ca5b93641459f137f0604c48cdec3f7626c11"
+    },
+    {
+      "file": "exp3/teacher_pseudo_quality_per_video.csv",
+      "rows": 1008,
+      "bytes": 110791,
+      "sha256": "fdf9fd07794af74cb7e2920c5408aa042f556de7bd2e54d36e267f49d10e20b3"
+    },
+    {
+      "file": "exp4/efficiency_summary.csv",
+      "rows": 6,
+      "bytes": 2201,
+      "sha256": "b652b8c704504a77de3aeec6a6845db15abb600d7ec53cc3d530102c7e160b07"
+    },
+    {
+      "file": "exp4/prototype_storage_by_stage.csv",
+      "rows": 5,
+      "bytes": 1011,
+      "sha256": "d0000433deaf792bfd9dc42c67e383ed57ad451587b23876b992ee98f1089b4c"
+    },
+    {
+      "file": "exp4/prototype_runtime_storage.csv",
+      "rows": 4,
+      "bytes": 765,
+      "sha256": "42f10290c4671ed58903e607db03016104242d5b42acb560c88f1efb589e4d52"
+    }
+  ],
+  "adaptation_windows": 12,
+  "accuracy_unique_model_frames": 74659,
+  "teacher_extra_duplicate_forwards": 6677,
+  "verified_at_UTC": "2026-10-26T19:20:43.944424+00:00",
+  "verified_at_Asia_Shanghai": "2026-10-27T03:20:43.944424+08:00"
+}

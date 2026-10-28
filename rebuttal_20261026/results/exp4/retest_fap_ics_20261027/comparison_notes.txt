@@ -1,0 +1,11 @@
+同一进程交错重测（GPU1）
+
+配置：FAP -> FAP+ICS -> FAP -> FAP+ICS -> FAP -> FAP+ICS；同一 F_stage3_e5 起点、固定 512 Night 帧流、batch=4、FP32、cuDNN benchmark=False；每窗口 20 step warm-up + 100 step timed，三次/组。适应端计时包含 DataLoader、读图、H2D、CPU FAP、teacher/student、loss、backward、SGD 和 EMA。
+
+FAP pair/s：0.967052729987995、0.996719389946338、1.003969158593708；均值 0.989247092842680，样本标准差 0.019559705858069。
+FAP+ICS pair/s：0.974981666064979、0.949176855646028、1.000602683832841；均值 0.974920401847949，样本标准差 0.025712968831956。
+配对差（FAP+ICS - FAP）：+0.007928936076984、-0.047542534300310、-0.003366474760867 pair/s；均值 -0.014326690994731 pair/s，即 FAP+ICS 平均慢约 1.448%。
+
+峰值 allocated 均值：FAP 8961.306640625 MiB，FAP+ICS 8961.361165365 MiB，差 +0.054524740 MiB；两组 peak reserved 都是 11412 MiB。GPU1 在重测期间保留一个驱动残留的 [Not Found] PID 16536、12131 MiB，PID 不存在于 /proc，且每个窗口 live_peer_apps 为空；该残留对两组恒定，但绝对 GPU 总占用不能按干净卡解释。
+
+结论：原始表中 FAP+ICS 比 FAP 快约 20% 不是稳定的 ICS 加速。严格同进程交错后两组接近，平均反而 FAP+ICS 慢 1.45%，配对差在约 -4.8% 到 +0.8% 间波动。Night batch4 的 ICS covariance/eigh 调用仍为 0，因此该重测也不是完整 active covariance/eigh 成本。

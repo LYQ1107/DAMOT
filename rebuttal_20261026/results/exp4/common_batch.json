@@ -1,0 +1,6 @@
+{
+  "batch_pairs": 4,
+  "frame_flow_sha256": "b9848d19cd438f9f49f9c4521a0e2e2dacfd0aba75298f697fb9f5c789f0274c",
+  "pilots": [],
+  "full_module_pilot": "3 forward/backward/optimizer/EMA steps passed"
+}

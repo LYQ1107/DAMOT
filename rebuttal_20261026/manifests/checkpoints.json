@@ -1,0 +1,293 @@
+[
+  {
+    "model": "S",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/source/clear_20e/qdtrack_faster-rcnn_r50_fpn_20e_bdd_clear/epoch_20.pth",
+    "bytes": 454029945,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3,4,5,6,7,8,9: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 686931345,
+      "epoch": 20,
+      "iter": 1420,
+      "mmcv_version": "1.6.2",
+      "time": "Sun Jun 28 00:03:19 2026",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/source/clear_20e/qdtrack_faster-rcnn_r50_fpn_20e_bdd_clear/epoch_19.pth"
+      }
+    },
+    "state_key_count": 364,
+    "teacher_key_count": 0,
+    "config_sha256": "2e23dca7189d39038b1a55a953450f9bd1add76f139f46d307f8793634de5893",
+    "sha256": "be78a6f608d11b86515c1248134a9590a6f44f1f26cb7bc256d5ffb0de614207",
+    "local": "RUN_ROOT/cache/weights/S.pth"
+  },
+  {
+    "model": "F_stage1_e5",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/epoch_5.pth",
+    "bytes": 682303665,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1790355234,
+      "episode": "bdd_clear_seq3_continuous",
+      "epoch": 5,
+      "iter": 340,
+      "mmcv_version": "1.6.2",
+      "time": "Tue Jul  7 22:09:59 2026",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/epoch_4.pth"
+      }
+    },
+    "state_key_count": 752,
+    "teacher_key_count": 348,
+    "config_sha256": "f58f88ff60a7a5eb99e09bd6fdbc0d38113b767ec7a58668950967a1ab40f6ac",
+    "sha256": "ba7e56a58f753158b70d244a1763053f5816f5121958baa540308ebbaa282378",
+    "local": "RUN_ROOT/cache/weights/F_stage1_e5.pth"
+  },
+  {
+    "model": "F_stage2_e5",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/epoch_5.pth",
+    "bytes": 682303665,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1790355234,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/epoch_4.pth"
+      },
+      "epoch": 5,
+      "iter": 250,
+      "mmcv_version": "1.6.2",
+      "time": "Tue Jul  7 23:11:54 2026"
+    },
+    "state_key_count": 752,
+    "teacher_key_count": 348,
+    "config_sha256": "191174760bf3be69db79c40a61239313979fede2e3d76309b104177b7df776b3",
+    "sha256": "f01f0ff05eeb5e70ed89e7318a54a09f6b713df480b2a23940ebfee42d298ce3",
+    "local": "RUN_ROOT/cache/weights/F_stage2_e5.pth"
+  },
+  {
+    "model": "F_stage3_e5",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/epoch_5.pth",
+    "bytes": 682303665,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1790355234,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/epoch_4.pth"
+      },
+      "epoch": 5,
+      "iter": 490,
+      "mmcv_version": "1.6.2",
+      "time": "Wed Jul  8 01:10:56 2026"
+    },
+    "state_key_count": 752,
+    "teacher_key_count": 348,
+    "config_sha256": "38da31ec26b3b27b5daccbb6278b826d39c4c4d305bba7878a1c292827071d53",
+    "sha256": "1c18979e83c175a7181fa8ee0f88b0a70d5befb27b3f14d96c3584de0bf3a0e7",
+    "local": "RUN_ROOT/cache/weights/F_stage3_e5.pth"
+  },
+  {
+    "model": "F_stage4_e5",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth",
+    "bytes": 682303665,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1790355234,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_4.pth"
+      },
+      "epoch": 5,
+      "iter": 570,
+      "mmcv_version": "1.6.2",
+      "time": "Wed Jul  8 03:27:22 2026"
+    },
+    "state_key_count": 752,
+    "teacher_key_count": 348,
+    "config_sha256": "06d7c03544dea6a2bf983fa051230d50cb1147b3480d9fadd9d7c2a814f88255",
+    "sha256": "47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235",
+    "local": "RUN_ROOT/cache/weights/F_stage4_e5.pth"
+  },
+  {
+    "model": "F_stage4_e1",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_1.pth",
+    "bytes": 682303665,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1790355234,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/epoch_5.pth"
+      },
+      "epoch": 1,
+      "iter": 114,
+      "mmcv_version": "1.6.2",
+      "time": "Wed Jul  8 01:38:47 2026"
+    },
+    "state_key_count": 752,
+    "teacher_key_count": 348,
+    "config_sha256": "06d7c03544dea6a2bf983fa051230d50cb1147b3480d9fadd9d7c2a814f88255",
+    "sha256": "3cb0657ac5bbcedc24a9305d2bc593c9372c231daee1f5f94e043dd058d6ee7f",
+    "local": "RUN_ROOT/cache/weights/F_stage4_e1.pth",
+    "transfer": "read-only SSH tail resumed from local prefix",
+    "resumed_at_bytes": 461373440
+  },
+  {
+    "model": "F_stage4_e3",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_3.pth",
+    "bytes": 682303665,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1790355234,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_2.pth"
+      },
+      "epoch": 3,
+      "iter": 342,
+      "mmcv_version": "1.6.2",
+      "time": "Wed Jul  8 02:32:43 2026"
+    },
+    "state_key_count": 752,
+    "teacher_key_count": 348,
+    "config_sha256": "06d7c03544dea6a2bf983fa051230d50cb1147b3480d9fadd9d7c2a814f88255",
+    "sha256": "cd9fba912813a3a8b39ef5d9a704cce1d3488090ba5f206b787fd1c0f310d8f3",
+    "local": "RUN_ROOT/cache/weights/F_stage4_e3.pth",
+    "transfer": "read-only SSH tail resumed from local prefix",
+    "resumed_at_bytes": 0
+  },
+  {
+    "model": "N_old",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth",
+    "bytes": 682287225,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 1591423161,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_4.pth"
+      },
+      "epoch": 5,
+      "iter": 570,
+      "mmcv_version": "1.6.2",
+      "time": "Fri Jul  3 14:41:56 2026"
+    },
+    "state_key_count": 748,
+    "teacher_key_count": 348,
+    "config_sha256": "8189831c62795d1b9cdcceb6cb8444d268d588132147b8a762b8d87c1c0b9cc8",
+    "sha256": "fdac6cccd576b099093e5dea996adcef885b2b854aa361a5671756ee1c1f0104",
+    "hash_source": "NAS-side sha256sum of current archived binary; no download; original historical evaluator did not retain a binary hash"
+  },
+  {
+    "model": "F_old",
+    "source": "NAS_ROOTNAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth",
+    "bytes": 682287801,
+    "meta": {
+      "mmtrack_version": "0.13.0",
+      "CLASSES": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ],
+      "cat_name_to_label": null,
+      "env_info": "sys.platform: linux\nPython: 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) [GCC 9.4.0]\nCUDA available: True\nGPU 0,1,2,3,4,5: NVIDIA A100-SXM4-40GB\nCUDA_HOME: /usr/local/cuda\nNVCC: Cuda compilation tools, release 11.6, V11.6.124\nGCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nPyTorch: 1.13.1+cu117\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) Math Kernel Library Version 2020.0.2 Product Build 20200624 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.7\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86\n  - CuDNN 8.5\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, \n\nTorchVision: 0.9.0\nOpenCV: 4.10.0\nMMCV: 1.6.2\nMMCV Compiler: GCC 7.5\nMMCV CUDA Compiler: 11.6\nMMTracking: 0.13.0+",
+      "seed": 952475529,
+      "episode": "bdd_clear_seq3_continuous",
+      "hook_msgs": {
+        "last_ckpt": "NAS_AVIS_ROOT/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_4.pth"
+      },
+      "epoch": 5,
+      "iter": 435,
+      "mmcv_version": "1.6.2",
+      "time": "Sat Jul  4 06:39:47 2026"
+    },
+    "state_key_count": 748,
+    "teacher_key_count": 348,
+    "config_sha256": "ec535427c8fbaff33955e9865fa4f6ab82dc4f8c8a54ddfe7e6f99ca1aa50e2a",
+    "sha256": "f7a042f4afd64df5aedd1f06302a634225004adc2d41ca26df66a1a795a3cce9",
+    "hash_source": "NAS-side sha256sum of current archived binary; no download; original historical evaluator did not retain a binary hash"
+  }
+]

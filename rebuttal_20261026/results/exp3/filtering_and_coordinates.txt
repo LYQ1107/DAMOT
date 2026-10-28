@@ -1,0 +1,7 @@
+Frozen teacher_detector branch, strict state load. e0 is F stage03 epoch5 teacher (not Clear source).
+Teacher extract_feat -> test RPN -> RoI simple_test with original teacher test_cfg: score_thr=.05, NMS IoU=.5, max_per_img=100; original filter uses strict score > .7. This happens before teacher_pipeline geometry.
+All 7286 Night frames at all four checkpoints, same ordered manifest. Deterministic base resize 1296x720 keep ratio, no flip; SeqNormalize and SeqPad conventions. Predicted xyxy divided by actual scale_factor to original GT coordinates. Separate parity preflight agrees with real _prepare_views within 0.001px and 1e-6 confidence, with identical filtered class/count.
+Six classes via actual dataset.cat2label. GT from dataset.get_ann_info; invalid/ignore excluded, crowd in bboxes_ignore. Same-class greedy confidence-ordered one-to-one IoU>=.5; repeated predictions are FP; unmatched predictions inside any crowd region at IoF>.5 are ignored.
+Precision TP/(TP+FP), recall TP/(TP+FN), zero denominator N/A. pseudo_count includes ignored pseudo detections; ignored_pseudo_count is explicit.
+GT used only for post-hoc matching; no GT in teacher inference, filtering or sample selection; no backward or EMA.
+Stable/improved trajectory cannot rule out every error-propagation mechanism.

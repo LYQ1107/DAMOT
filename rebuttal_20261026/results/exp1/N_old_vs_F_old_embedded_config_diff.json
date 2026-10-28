@@ -1,0 +1,82 @@
+[
+  {
+    "key": "data.samples_per_gpu",
+    "N_old": "16",
+    "F_old": "14"
+  },
+  {
+    "key": "gpu_ids",
+    "N_old": "range(0, 4)",
+    "F_old": "range(0, 6)"
+  },
+  {
+    "key": "model.out_pipeline",
+    "N_old": "[{'type': 'SeqNormalize', 'mean': [123.675, 116.28, 103.53], 'std': [58.395, 57.12, 57.375], 'to_rgb': True}, {'type': 'SeqPad', 'size_divisor': 32}, {'type': 'MatchInstances', 'skip_nomatch': False}, {'type': 'VideoCollect', 'keys': ['img', 'gt_bboxes', 'gt_labels', 'gt_match_indices', 'gt_instance_ids']}]",
+    "F_old": "[{'type': 'SeqNormalize', 'mean': [123.675, 116.28, 103.53], 'std': [58.395, 57.12, 57.375], 'to_rgb': True}, {'type': 'SeqPad', 'size_divisor': 32}, {'type': 'MatchInstances', 'skip_nomatch': False}, {'type': 'VideoCollect', 'keys': ['img', 'gt_bboxes', 'gt_labels', 'gt_scores', 'gt_match_indices', 'gt_instance_ids']}]"
+  },
+  {
+    "key": "model.track_head.roi_proto_class_ids",
+    "N_old": "'<ABSENT>'",
+    "F_old": "(1,)"
+  },
+  {
+    "key": "model.track_head.roi_proto_diverse_select",
+    "N_old": "'<ABSENT>'",
+    "F_old": "False"
+  },
+  {
+    "key": "model.track_head.roi_proto_feature_source",
+    "N_old": "'<ABSENT>'",
+    "F_old": "'student'"
+  },
+  {
+    "key": "model.track_head.roi_proto_k_per_domain_class",
+    "N_old": "'<ABSENT>'",
+    "F_old": "100"
+  },
+  {
+    "key": "model.track_head.roi_proto_log_interval",
+    "N_old": "'<ABSENT>'",
+    "F_old": "50"
+  },
+  {
+    "key": "model.track_head.roi_proto_loss_weight",
+    "N_old": "'<ABSENT>'",
+    "F_old": "0.005"
+  },
+  {
+    "key": "model.track_head.roi_proto_max_candidates_per_domain",
+    "N_old": "'<ABSENT>'",
+    "F_old": "1000"
+  },
+  {
+    "key": "model.track_head.roi_proto_max_rois_per_batch",
+    "N_old": "'<ABSENT>'",
+    "F_old": "64"
+  },
+  {
+    "key": "model.track_head.roi_proto_memory_mode",
+    "N_old": "'<ABSENT>'",
+    "F_old": "'stage'"
+  },
+  {
+    "key": "model.track_head.roi_proto_score_thr",
+    "N_old": "'<ABSENT>'",
+    "F_old": "0.75"
+  },
+  {
+    "key": "model.track_head.roi_proto_topk",
+    "N_old": "'<ABSENT>'",
+    "F_old": "3"
+  },
+  {
+    "key": "model.track_head.use_roi_proto_memory",
+    "N_old": "False",
+    "F_old": "True"
+  },
+  {
+    "key": "work_dir",
+    "N_old": "'work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night'",
+    "F_old": "'work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night'"
+  }
+]

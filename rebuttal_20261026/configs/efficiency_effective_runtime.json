@@ -1,0 +1,41 @@
+{
+  "scope": "Effective runtime overrides for short disposable performance updates. Profiling .py configs preserve unused embedded archive fields; only model and base optimizer fields are consumed.",
+  "initial_weights": "F_stage3_e5",
+  "model_config": "F_stage3_e5 embedded model with all init_cfg/pretrained removed, strict full state load",
+  "groups": [
+    "baseline",
+    "FAP",
+    "FAP_ICS",
+    "FAP_ICS_APR"
+  ],
+  "batch_key_reference_pairs": 4,
+  "workers": 4,
+  "dtype": "FP32",
+  "physical_gpu": 9,
+  "gpu_count": 1,
+  "cudnn_benchmark": false,
+  "optimizer": {
+    "type": "SGD",
+    "lr": 0.002,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "grad_clip_max_norm": 35.0,
+    "state": "fresh and identical at every group/repeat",
+    "lr_schedule": "fixed configured base LR for profiling; no archived warm-up LR scheduler"
+  },
+  "EMA": {
+    "momentum": 0.002,
+    "interval": 1,
+    "warm_up": 100
+  },
+  "data": "Night local cache, empty GT inputs, 512 real keys with real adjacent references; model creates actual contrastive reference from key",
+  "frame_manifest": "results/exp4/adaptation_frame_manifest.json",
+  "repetitions": 3,
+  "warmup_steps": 20,
+  "timed_steps": 100,
+  "save_accuracy_checkpoint": false,
+  "teacher_and_student_both_present": true,
+  "APR_memory": "3 historical target domains, car label1, 100x256 FP32 per domain, score>=.75, topk3, .005 weight",
+  "ICS": "archived estimator and min_samples=96 unchanged",
+  "timer": "synchronized window boundaries; includes next(data), H2D, CPU FAP, actual teacher/student forward and loss, backward, optimizer and EMA; no profiler"
+}

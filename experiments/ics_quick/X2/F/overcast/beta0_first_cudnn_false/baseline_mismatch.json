@@ -1,0 +1,72 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "category": "OVERALL",
+      "metric": "HOTA",
+      "observed": 37.33309425458744,
+      "reference": 37.2910549158449,
+      "delta": 0.042039338742533516,
+      "passed": false
+    },
+    {
+      "category": "OVERALL",
+      "metric": "DetA",
+      "observed": 29.968486500300106,
+      "reference": 29.971056214367387,
+      "delta": -0.002569714067281126,
+      "passed": false
+    },
+    {
+      "category": "OVERALL",
+      "metric": "IDF1",
+      "observed": 42.19825875872371,
+      "reference": 42.08327498482939,
+      "delta": 0.11498377389432335,
+      "passed": false
+    },
+    {
+      "category": "OVERALL",
+      "metric": "AssA",
+      "observed": 46.81584826682858,
+      "reference": 46.70838434851451,
+      "delta": 0.10746391831407465,
+      "passed": false
+    },
+    {
+      "category": "car",
+      "metric": "HOTA",
+      "observed": 41.13807336342909,
+      "reference": 41.091150021156864,
+      "delta": 0.04692334227222972,
+      "passed": false
+    },
+    {
+      "category": "car",
+      "metric": "DetA",
+      "observed": 34.618989914334314,
+      "reference": 34.61895234363809,
+      "delta": 3.757069622167819e-05,
+      "passed": false
+    },
+    {
+      "category": "car",
+      "metric": "IDF1",
+      "observed": 47.85886744382397,
+      "reference": 47.72484891574831,
+      "delta": 0.13401852807565717,
+      "passed": false
+    },
+    {
+      "category": "car",
+      "metric": "AssA",
+      "observed": 49.13720605468974,
+      "reference": 49.02651836195508,
+      "delta": 0.11068769273466472,
+      "passed": false
+    }
+  ],
+  "reason": "Historical F baseline not reproduced exactly; no beta1 accepted or run for F",
+  "historical_cudnn_benchmark": true,
+  "first_attempt_cudnn_benchmark": false
+}

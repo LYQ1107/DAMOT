@@ -1,0 +1,17 @@
+{
+  "model": "F",
+  "features": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/clear_holdout_45v.npz",
+  "feature_sha256": "ffa2e70da11f59705b6e56d5feb725038ed940915e03224839cbbb820ec0d0bc",
+  "N": 7956,
+  "classes": "car",
+  "l2_normalize_before_class_centering": true,
+  "principal_angles_degrees": [
+    14.769829724719477,
+    82.34791744988047
+  ],
+  "explained_variance_top2": [
+    0.190766193198968,
+    0.13038372830420686
+  ],
+  "basis_sha256": "ac4137c4a89047a8e965dabeb0bc9325a8f5ad111217a9f8329b2e78254bfb05"
+}

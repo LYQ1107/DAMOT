@@ -1,0 +1,57 @@
+[
+  {
+    "scope": "X1",
+    "change": "Only embed_head parameters retain requires_grad; other parameters are held constant for autograd",
+    "reason": "Only the requested partial derivatives (embed_head parameters and key embeddings) are measured. This avoids retaining unnecessary backbone graphs for batch16 on V100; no forward values, loss function, train mode, samples or weights are changed."
+  },
+  {
+    "scope": "X1 F/night",
+    "change": "Initial run did not call roi_proto_start_stage, causing APR candidate collection to warn on empty history",
+    "reason": "APR is not part of either measured association loss. This cell retains its prespecified 20 batches and all association gradients; subsequent cells initialize the empty APR collection buffers explicitly."
+  },
+  {
+    "scope": "X1",
+    "change": "Report loss-key activation separately from key RoI sample threshold",
+    "reason": "The implementation emits loss_track_trim even when key RoIs <96; in this case key trim is identity but reference trim may still be active. Task text conflated this with the absence of the trim loss."
+  },
+  {
+    "scope": "X2",
+    "change": "Use native frozen inference via equivalent Python evaluation wrapper with metric bbox+track and all-frame HOTA correction",
+    "reason": "The historical F/HF reference numbers use all-frame HOTA; the original repository default indexes only frames containing GT and must be corrected for exact parity. Detector .05, tracker .30/.20, fusion, classes, image sizes and tracker logic are preserved. F original runtime configs are read-only because configs/mot is absent from commit ebc3190."
+  },
+  {
+    "scope": "X3",
+    "change": "Use one archived HF stage3 rank0 APR history identically in all four groups and ranks",
+    "reason": "Original rank-local APR histories are available. This fixes a shared starting library across groups, with its SHA256 recorded; no rebuild needed."
+  },
+  {
+    "scope": "X3",
+    "change": "Replace HF run-root audit hook with local audit hook, retain finite-loss and EMA hooks; keep find_unused_parameters=True as actual HF training",
+    "reason": "Prevents writes to the original HF directory; the generic seq3 script otherwise overrides this HF execution setting."
+  },
+  {
+    "scope": "X3 storage",
+    "change": "After a group finishes both evaluations, remove only its generated epoch1 and stage00 source copies; retain epoch2, final endpoint and stage3 starting copy",
+    "reason": "The shared /data1 filesystem currently has about 18 GiB free. This does not change training or reported checkpoints and avoids accumulating redundant weights. No other task files are modified."
+  },
+  {
+    "scope": "Input image access",
+    "change": "Independent read-only SSHFS session under this run, exposed through private data_views symlinks to the same original image files",
+    "reason": "Shared NAS mount briefly returned ENOTCONN during both X2 baselines. Existing completed video predictions were retained; incomplete videos are retried with the same inputs. No shared mount or image files were modified."
+  },
+  {
+    "scope": "X2 F first baseline",
+    "change": "First F beta0 used cuDNN benchmark=False and found a small mismatch with archived metrics; F beta1 was not run",
+    "reason": "The archived F command explicitly uses cuDNN benchmark=True. A separate corrected beta0_cudnn_true run now tests this setting; the first baseline and all mismatch metrics are preserved. The archival F reference only lists OVERALL and car, so parity is checked for those available categories. HF has all six categories and passes all of them."
+  },
+  {
+    "scope": "X2 F historical reproducibility gate",
+    "change": "Corrected full-domain F beta0 still differs from the historical frozen scores; F beta1 remains gated pending the user decision",
+    "reason": "Restoring cuDNN benchmark=True leaves the reported metrics unchanged. Disabled intervention output is bitwise identical to the native class, yet archived detections already differ slightly before association. A cross-runtime numerical difference or historical provenance gap remains possible, not established. All results and parity deltas are retained; no values are adjusted to match the archive."
+  },
+  {
+    "scope": "X2 F user-approved protocol change",
+    "change": "Use the current V100 F beta0 as the paired intervention baseline in both domains; keep the archived F discrepancy table",
+    "reason": "User explicitly approved this on 2026-10-29 after the corrected full-domain baseline still differed by +0.042 HOTA / +0.115 IDF1 / +0.107 AssA. Metrics are never altered to force historical equality. HF retains its exact historical-baseline gate."
+  }
+]

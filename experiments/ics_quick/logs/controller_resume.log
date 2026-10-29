@@ -1,0 +1,27 @@
+SUMMARY 1 0 0
+SUMMARY 1 0 0
+categories [1]
+X2_BASIS HF [16.550124   82.12410281]
+SUMMARY 2 0 0
+SUMMARY 2 1 0
+SUMMARY 3 1 0
+SUMMARY 3 2 0
+SUMMARY 4 2 0
+SUMMARY 4 4 0
+SUMMARY 4 6 0
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 62, in <module>
+    if __name__=='__main__':
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 58, in main
+    for f in concurrent.futures.as_completed(fs):f.result()
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 425, in result
+    return self.__get_result()
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 32, in x2_f
+    job('X2_F_overcast_beta0_resume',[PY,str(Q/'scripts/evaluate.py'),'--model','F','--domain','overcast','--beta','0','--check-disabled'],prefer='9,8,7,2,3,4,5,6')
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 20, in job
+    if rc:raise RuntimeError('%s failed (exit %d); inspect log'%(name,rc))
+RuntimeError: X2_F_overcast_beta0_resume failed (exit 1); inspect log

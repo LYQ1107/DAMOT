@@ -1,0 +1,13 @@
+{
+  "pid": 8508,
+  "gpu": 2,
+  "argv": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/grad_compare.py",
+    "--model",
+    "F",
+    "--domain",
+    "night"
+  ],
+  "prelaunch_gpu": "2, 0"
+}

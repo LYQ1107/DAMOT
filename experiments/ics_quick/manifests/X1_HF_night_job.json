@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    2
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/grad_compare.py",
+    "--model",
+    "HF",
+    "--domain",
+    "night"
+  ],
+  "time": 1793262948.7127652,
+  "pid": 15125
+}

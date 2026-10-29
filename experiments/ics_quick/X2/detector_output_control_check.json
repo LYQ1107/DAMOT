@@ -1,0 +1,18 @@
+[
+  {
+    "model": "F",
+    "domain": "overcast",
+    "frames": 4448,
+    "det_outputs_bitwise_equal_frames": 4448,
+    "det_shape_mismatch_frames": 0,
+    "max_component_difference_when_shapes_match": 0.0
+  },
+  {
+    "model": "HF",
+    "domain": "overcast",
+    "frames": 4448,
+    "det_outputs_bitwise_equal_frames": 4448,
+    "det_shape_mismatch_frames": 0,
+    "max_component_difference_when_shapes_match": 0.0
+  }
+]

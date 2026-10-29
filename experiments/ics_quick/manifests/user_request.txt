@@ -1,0 +1,131 @@
+【任务说明】ICS 作用机制的补充实验（与另一执行端的任务并行，彼此独立）
+
+一、背景（只需了解，不用复核）
+项目：DAMOT，多目标跟踪的无源持续域适应（BDD100K，Clear → Overcast → Rainy → Dawn/Dusk → Night，每域 5 epoch）。
+ICS 模块：训练时用 track_head.causal_bank 维护一个 2 维子空间 E（bank 的 buffer：pcs、cov_bank、num_updates），
+  把关联嵌入在 E 上收缩：z' = z − α·(zE)Eᵀ（α = causal_trim_alpha，当前为 0.10），再用 z' 多算一遍关联损失，
+  权重 causal_loss_weight = 0.025，原始关联损失保留不变。代码见 darth/models/track_heads/causal_quasi_dense_track_head.py
+  中的 _add_trimmed_pcl，以及 darth/models/utils/roi_causal_bank.py 中的 trim。
+已有发现：E 接近身份方向（特征方差最大的方向），不是天气方向；但 ICS 在消融里让 HOTA +0.2、遗忘 AvgF 0.27 → 0.17。
+本任务要判断这点提升来自哪里：
+  （甲）只是关联损失多了 2.5% 权重，方向不起作用；
+  （乙）压制主导（方差最大）方向的正则效果，与具体方向关系不大；
+  （丙）确实依赖 ICS 选出的方向。
+
+二、并行与隔离规则（必须遵守）
+- 另一执行端正在同一服务器上跑其他实验（会使用 /data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/
+  以及若干 4 卡训练）。不得修改、删除或覆盖他人的目录和文件；他人的 npz 特征、checkpoint 只能读。
+- 开始前用 nvidia-smi 确认空闲 GPU，只用当前完全空闲的卡；训练前再检查一次。被占用就等待，不要抢卡。
+- 代码在自己的副本里改：
+    git clone /data1/liuyeqiang/DAMOT /data1/liuyeqiang/ics_quick_<时间戳>/code
+    cd 该目录 && git checkout ebc3190
+  不要改 /data1/liuyeqiang/DAMOT 或 /data1/liuyeqiang/damot_rebuttal_20261026/code。
+- 所有输出写到 /data1/liuyeqiang/ics_quick_<时间戳>/，下文记为 $Q。
+- Python 环境：/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python（torch 1.12、mmcv-full 1.6、mmdet 2.25）。
+- 只改本说明列出的内容；不按结果筛选种子或样本；与本说明不一致的地方单独列出。
+- 最终把 $Q 下的结果（CSV、日志、配置差异、SUMMARY.md，不含权重和 npz）提交到 GitHub 仓库 LYQ1107/DAMOT 的
+  experiments/ics_quick/。
+
+三、输入
+RUN = /data1/liuyeqiang/damot_rebuttal_20261026
+F（论文版）：$RUN/cache/weights/F_stage{1..4}_e5.pth，配置 $RUN/configs/F_stage4_e5_embedded.py
+             （也嵌在 checkpoint 的 meta['config'] 里）。
+HF（新版：保留几何 + 低/高频 + APR 补空间耦合）：/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420
+   在该目录里找：stage03_after_dawn_dusk、stage04_after_night 的 epoch_5.pth；episode 的 stage_snapshots/；
+   训练用的 base config；评估命令（eval_command.txt 或日志）；结果 results/stage_domain_metrics.csv；
+   以及该运行实际使用的代码快照（HF 用了 APR 耦合代码，GitHub main 上没有）。
+   先把这些文件的实际路径写进 $Q/inputs.txt。
+标注与图片：$RUN/data/annotations/{clear_holdout_45v,overcast,rainy,dawn_dusk,night}.json，$RUN/data/views/<域>/。
+已有 F 的探针特征（只读）：$RUN/results/ics_probe/feats/F_stage4_e5/<域>.npz
+   （键：feat_clean 等 [N,256]、category、instance_id、video、frame_id、bank_pcs、bank_cov_bank）。
+探针脚本：代码副本中的 tools/analysis/ics_probe_extract.py、ics_probe_analyze.py（用法见 tools/analysis/ICS_PROBE_README.md）。
+
+四、X1 梯度对比（不训练，1 张 GPU，约 20–40 分钟）——最优先
+对象：F_stage4_e5 与 HF stage04 epoch_5，各做一遍。
+1. 用 checkpoint 自带的适应配置建模（与训练时相同的 teacher/student/contrastive pipeline），加载全部权重；
+   model.train()，teacher_detector 和 teacher_track_head 保持 eval()。
+2. 用该配置的目标域训练数据（Night、Overcast 各一套），samples_per_gpu = 16（与训练相同；batch 太小时
+   RoI 数达不到 causal_min_samples = 96，ICS 损失不会出现），固定种子，各取 20 个 batch。
+3. 每个 batch 做一次 forward_train，从 losses 中取：
+     L_pcl  = loss_track + loss_track_aux
+     L_trim = (loss_track_trim + loss_track_aux_trim) / causal_loss_weight
+   若本 batch 没有 loss_track_trim，记为"未触发"并跳过，最后报告触发比例。
+4. 在同一计算图上用 torch.autograd.grad(..., retain_graph=True) 分别对 L_pcl 与 L_trim 求梯度，对象为：
+   (a) track_head.embed_head 的全部参数（拼成一个向量）；
+   (b) key 关联嵌入本身。可以给 track_head.extract_bbox_feats 包一层，保存第一次调用的输出（key_feats）
+       并 retain_grad。
+5. 报告（每个 batch 及均值±标准差）：
+   - cos(∇L_pcl, ∇L_trim)，‖∇L_trim‖ / ‖∇L_pcl‖
+   - cos(∇(L_pcl + 0.025·L_trim), ∇L_pcl)：加入 ICS 后总梯度方向的变化
+   - (b) 中 (∇L_trim − ∇L_pcl) 落在 E 内的能量占比；E 取 bank 的 pcs（先 QR 正交化）
+   - bank 是否已初始化、num_updates、trim_alpha、num_pcs、触发比例
+判读：cos(∇L_pcl, ∇L_trim) ≥ 0.99 → 结论甲（ICS 基本等于关联损失加重 2.5%）。
+交付：$Q/X1/grad_compare.csv、grad_summary.csv、日志。
+
+五、X2 推理时去掉"方差最大的 2 个方向"（不训练，多卡并行，约 40 分钟）
+1. 在代码副本的 track_head 推理路径中（关联嵌入算出之后、送入 tracker 之前）加一个开关，默认关闭：
+     z ← z − β·(z E)Eᵀ，E 从 .npy 读入（[256,m]，正交列）
+   不改其他逻辑；先确认开关关闭时与原代码输出逐位一致。
+2. 计算基 (e)：在 clear_holdout_45v 的 clean 嵌入上做无标签 PCA（先减去各类均值，取 car 类），取前 2 个主方向。
+   - F：直接读 $RUN/results/ics_probe/feats/F_stage4_e5/clear_holdout_45v.npz 的 feat_clean（先 L2 归一化）；
+   - HF：用 ics_probe_extract.py 只抽 clear_holdout_45v、只要 clean 视图（--views clean --dose-frames-per-video 0），
+     抽样参数用默认值，输出写到 $Q/feats/。
+   各自保存为 $Q/X2/basis_e_<F|HF>.npy，并报告它与该 checkpoint 的 bank_pcs 的主角。
+3. 评估：checkpoint ∈ {F_stage4_e5, HF stage4 epoch5}，域 ∈ {Night, Overcast}，β ∈ {0, 1}。
+   评估命令与这两个模型原来的冻结评估完全相同（HF 用它自己的 eval 命令；F 用
+   tools/run/test.py <域的 qdtrack_faster-rcnn_r50_fpn_20e_bdd_<域>.py> --eval bbox track --fuse-conv-bn
+   --cfg-options model.tracker.init_score_thr=0.30），只多加 E 和 β。
+   β = 0 的结果必须与已有冻结评估一致：HF 对照 results/stage_domain_metrics.csv，F 对照原来的 forgetting_eval
+   结果。不一致就先停下排查。
+4. 报告 HOTA/DetA/IDF1/AssA，以及 β=1 相对 β=0 的差值。
+判读：β=1 时 AssA 上升 → 支持结论乙（压制主导方向本身有帮助）。
+   另一执行端会跑"去掉 ICS 方向 / 随机方向 / 身份方向"的同类表，最后会把两边合并比较；这里只需保证设置一致。
+交付：$Q/X2/intervention.csv、两个基的 .npy、日志。
+
+六、X3 只训 Night 阶段的 ICS 消融（训练，每组 4 张 GPU，约 1 小时/组，共 4 组）
+重要：HF 中 ICS 与 APR 补空间耦合共用同一个 E。为了只比较 ICS，本组实验全部关闭耦合
+（roi_proto_couple_ics=False），其余一律与 HF 相同。
+1. 起点：HF 的 stage03_after_dawn_dusk 快照。新建工作目录 $Q/X3/<组名>/episode/stage_snapshots/，把 HF 的
+   stage03_after_dawn_dusk.pth 复制进去（文件名不变），然后用 HF 的代码快照和 base config 运行：
+     tools/run/train_seq3_episode.py --base-config <HF base config + 本组改动>
+       --source-ckpt <与 HF 相同> --target-order overcast rainy dawn_dusk night
+       --eval-domains overcast rainy dawn_dusk night --work-dir $Q/X3/<组名>/episode
+       --epochs-per-stage 2 --resume-episode-from-stage 4
+       --samples-per-gpu <与 HF 相同> --workers-per-gpu <与 HF 相同> --launcher pytorch --no-validate
+       --seed <与 HF 相同>
+   用 torch.distributed.launch、4 张卡，与 HF 一致。
+2. APR 历史原型必须恢复（否则 Night 阶段 APR 没有历史，实验无效）：
+   - 先查 HF 是否保存了 stage1–3 的原型文件（如 *_roi_proto.pth），以及 HF 的训练脚本在
+     --resume-episode-from-stage 时会不会加载它。
+   - 如果没有，就按 $RUN/scripts/profile_damot.py 的 rebuild 逻辑，用 HF 的 stage1–3 checkpoint 在各自的域上
+     重新收集原型，在 stage 4 开始前注入模型（track_head.roi_proto_memory.load_state_dict_memory）。
+   - 四组用同一份原型，记录 sha256；日志里要能看到 stage 4 开始时 history_domains = 3。
+   - 两种办法都不行，就停下报告，不要用空历史继续跑。
+3. 四组，只改下列 track_head 字段：
+   X3-0  原设置（proto_shrinkage，trim_alpha 与 HF 相同），roi_proto_couple_ics=False   ← 对照组
+   X3-1  use_causal_direction_bank=False                                              （去掉 ICS）
+   X3-2  causal_trim_alpha=0.0                         （仍计算额外损失，但不收缩 → 相当于关联损失加重 2.5%）
+   X3-3  ICS 方向固定为随机正交 2 维且不再更新：加开关，例如 causal_freeze_random_basis=True、seed=0；
+         stage 开始时把 bank.pcs 设为该随机正交基、initialized=True，之后跳过所有 bank 更新；
+         把基存成 .npy
+   四组都必须 roi_proto_couple_ics=False，其余与 HF 相同。
+   每组都要导出 config_diff.json（相对 HF）和 resolved 配置里的 causal_* 与 roi_proto_* 字段。
+4. 训练中记录：每组 stage 4 开始和结束时 bank 的 num_updates；X3-2 和 X3-3 中 loss_track_trim 的出现比例。
+5. 评估：Night 与 Dawn/Dusk（旧域），HOTA/DetA/IDF1/AssA，评估方式与 HF 相同。
+   旧域遗忘 = HF stage3 checkpoint 在 Dawn/Dusk 上的值 − 本组训练后的值。
+6. 时间允许时，X3-0、X3-1、X3-2 换一个种子各再跑一次（三组用同一个新种子）。
+判读（单种子差距在 ±0.3 HOTA 以内记为"无差异"）：
+   X3-0 ≈ X3-2           → 结论甲
+   X3-0 ≈ X3-3 > X3-1    → 结论乙
+   X3-0 明显好于 X3-2 和 X3-3 → 结论丙
+交付：$Q/X3/ 下每组的配置差异、日志、评估 CSV，以及汇总表 x3_summary.csv。
+
+七、顺序
+X1（1 张卡）与 X2（其余空闲卡）同时开始 → X3（需要 4 张空闲卡；不够就等，不要缩减卡数或改 batch）。
+
+八、最终交付：$Q/SUMMARY.md
+  表 1  X1 梯度对比（F、HF × Night、Overcast）
+  表 2  X2 推理时干预（F、HF × Night、Overcast × β）
+  表 3  X3 四组（种子）的 Night 与 Dawn/Dusk 指标及遗忘
+  每张表写一句判读（甲 / 乙 / 丙 / 无差异），并列出所有偏离本说明的地方与原因。
+  然后提交到 GitHub experiments/ics_quick/。

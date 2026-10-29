@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    7
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py",
+    "--model",
+    "HF",
+    "--domain",
+    "overcast",
+    "--beta",
+    "1"
+  ],
+  "time": 1793263243.9008012,
+  "pid": 28519
+}

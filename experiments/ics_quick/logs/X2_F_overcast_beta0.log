@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py", line 27, in <module>
+    cfg=Config.fromfile(str(code/'configs/mot/qdtrack/bdd_7domain'/('qdtrack_faster-rcnn_r50_fpn_20e_bdd_%s.py'%a.domain)))
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/utils/config.py", line 341, in fromfile
+    use_predefined_variables)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/utils/config.py", line 183, in _file2dict
+    check_file_exist(filename)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/utils/path.py", line 23, in check_file_exist
+    raise FileNotFoundError(msg_tmpl.format(filename))
+FileNotFoundError: file "/data1/liuyeqiang/ics_quick_20261029_160807/code/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast.py" does not exist

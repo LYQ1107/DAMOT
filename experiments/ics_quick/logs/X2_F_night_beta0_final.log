@@ -1,0 +1,136 @@
+loading annotations into memory...
+Done (t=0.74s)
+creating index...
+index created!
+VIDEO_COMPLETE F night 0.0 9 203
+VIDEO_COMPLETE F night 0.0 11 203
+VIDEO_COMPLETE F night 0.0 12 202
+VIDEO_COMPLETE F night 0.0 13 203
+VIDEO_COMPLETE F night 0.0 14 202
+VIDEO_COMPLETE F night 0.0 16 203
+VIDEO_COMPLETE F night 0.0 17 202
+VIDEO_COMPLETE F night 0.0 18 203
+VIDEO_COMPLETE F night 0.0 21 202
+VIDEO_COMPLETE F night 0.0 23 203
+VIDEO_COMPLETE F night 0.0 24 203
+VIDEO_COMPLETE F night 0.0 25 202
+VIDEO_COMPLETE F night 0.0 26 203
+VIDEO_COMPLETE F night 0.0 27 202
+VIDEO_COMPLETE F night 0.0 31 202
+VIDEO_COMPLETE F night 0.0 32 202
+VIDEO_COMPLETE F night 0.0 33 202
+VIDEO_COMPLETE F night 0.0 35 200
+VIDEO_COMPLETE F night 0.0 36 203
+VIDEO_COMPLETE F night 0.0 37 202
+VIDEO_COMPLETE F night 0.0 39 203
+VIDEO_COMPLETE F night 0.0 40 202
+VIDEO_COMPLETE F night 0.0 41 203
+VIDEO_COMPLETE F night 0.0 42 202
+VIDEO_COMPLETE F night 0.0 43 202
+VIDEO_COMPLETE F night 0.0 45 203
+VIDEO_COMPLETE F night 0.0 48 203
+VIDEO_COMPLETE F night 0.0 52 203
+VIDEO_COMPLETE F night 0.0 53 202
+VIDEO_COMPLETE F night 0.0 55 202
+VIDEO_COMPLETE F night 0.0 56 203
+VIDEO_COMPLETE F night 0.0 58 202
+VIDEO_COMPLETE F night 0.0 60 202
+VIDEO_COMPLETE F night 0.0 64 202
+VIDEO_COMPLETE F night 0.0 65 202
+VIDEO_COMPLETE F night 0.0 69 203
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 26.70 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 36 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 9.97 seconds
+Evaluating COCO metrics...
+
+Evaluating bbox...
+Loading and preparing results...
+DONE (t=1.15s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=44.72s).
+Accumulating evaluation results...
+DONE (t=10.05s).
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.073
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.150
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.061
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.011
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.074
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.158
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.031
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.247
+
+
++------------+-------+------------+-------+----------+-------+
+| category   | AP    | category   | AP    | category | AP    |
++------------+-------+------------+-------+----------+-------+
+| pedestrian | 0.114 | car        | 0.265 | truck    | 0.014 |
+| bus        | 0.037 | motorcycle | 0.000 | bicycle  | 0.006 |
++------------+-------+------------+-------+----------+-------+
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT    PT    ML    FM
+----------------------------------------------------------------------------------
+pedestrian  23.0   4.4  72.3  1170   5777   342  24.3  61.3   20   150   230   315
+car         44.5  31.4  77.8  4460  40258  2480  41.5  86.5  262  1028   931  2063
+truck        4.1 -27.8  79.1   582   1860     7   3.0   8.9    0     4    33     7
+bus          9.6 -31.4  74.9   549   1244     7   9.2  18.7    0     4    20    12
+motorcycle   0.0   0.0    -      0     77     0   0.0    -     0     0     5     0
+bicycle      0.0   0.0    -      0    608     0   0.0    -     0     0    26     0
+----------------------------------------------------------------------------------
+OVERALL     40.8  26.1  77.5  6761  49824  2836  38.0  81.9  282  1186  1245  2397
+AVERAGE     13.5  -3.9  50.7  6761  49824  2836  13.0  29.2  282  1186  1245  2397
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+truck        22.5   77.8  21.6  81.3    2.4    7.3   1.9   6.3    639   174
+pedestrian   24.5   64.3  21.4  75.9   18.8   47.5  16.3  18.5   3021   833
+bus          18.6   68.9  15.8  78.6    7.1   14.5   5.1   9.0    675   130
+car          48.3   68.0  43.3  80.2   34.0   70.9  31.6  36.8  33015  2458
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+---------------------------------------------------------------------------
+AVERAGE      19.0   46.5  17.0  86.0   10.4   23.4   9.1  11.8  37350  3595
+OVERALL      46.9   67.9  42.0  79.9   31.1   66.9  28.4  34.3  37350  3595
+
+
+-------------------------------------------------
+         mAP  mAP_50  mAP_75  mAP_s  mAP_m  mAP_l
+-------------------------------------------------
+OVERALL  7.3    15.0     6.1    1.1    7.4   15.8
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+truck       81.3   1.9 -27.8   6.3   4.1  21.6
+pedestrian  75.9  16.3   4.4  18.5  23.0  21.4
+bus         78.6   5.1 -31.4   9.0   9.6  15.8
+car         80.2  31.6  31.4  36.8  44.5  43.3
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+----------------------------------------------
+AVERAGE     86.0   9.1  -3.9  11.8  13.5  17.0
+OVERALL     79.9  28.4  26.1  34.3  40.8  42.0
+
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py", line 122, in <module>
+    assert all(r['passed'] for r in checks),('Frozen baseline mismatch; intervention blocked',out)
+AssertionError: ('Frozen baseline mismatch; intervention blocked', PosixPath('/data1/liuyeqiang/ics_quick_20261029_160807/X2/F/night/beta0'))

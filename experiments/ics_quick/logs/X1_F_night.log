@@ -1,0 +1,10 @@
+2026-10-29 08:11:02,856 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-29 08:11:02,857 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-29 08:11:02,857 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-29 08:11:03,500 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-29 08:11:03,500 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-29 08:11:03,500 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/grad_compare.py", line 19, in <module>
+    m=m.cuda().train();m.teacher_detector.eval();m.teacher_track_head.eval()
+AttributeError: 'NoneType' object has no attribute 'teacher_detector'

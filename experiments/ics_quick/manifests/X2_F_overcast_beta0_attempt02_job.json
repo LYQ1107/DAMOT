@@ -1,0 +1,20 @@
+{
+  "status": "failed",
+  "exit_code": 1,
+  "gpus": [
+    9
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py",
+    "--model",
+    "F",
+    "--domain",
+    "overcast",
+    "--beta",
+    "0",
+    "--check-disabled"
+  ],
+  "time": 1793261982.386394,
+  "pid": 12215
+}

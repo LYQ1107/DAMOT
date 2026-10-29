@@ -1,0 +1,14 @@
+{
+  "pid": 4765,
+  "gpu": 2,
+  "argv": [
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/grad_compare.py",
+    "--model",
+    "F",
+    "--domain",
+    "night"
+  ],
+  "log": "/data1/liuyeqiang/ics_quick_20261029_160807/logs/X1_F_night.log",
+  "prelaunch_gpu": "2, 0",
+  "start": 1793261455.1284406
+}

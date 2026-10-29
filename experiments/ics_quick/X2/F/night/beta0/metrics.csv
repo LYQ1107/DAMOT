@@ -1,0 +1,8 @@
+model,domain,beta,category,checkpoint,checkpoint_sha256,frames,videos,HOTA_percent,DetA_percent,IDF1_percent,AssA_percent
+F,night,0.0,pedestrian,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,18.49662255617396,16.291912561338712,22.988073997558455,21.409548555091316
+F,night,0.0,car,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,36.762561382355905,31.614734858452938,44.45535609066268,43.33062828017232
+F,night,0.0,truck,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,6.315503198319891,1.864262686429879,4.068857589984351,21.624982524159535
+F,night,0.0,bus,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,8.964226206001728,5.085790220972566,9.58435207823961,15.823124183528517
+F,night,0.0,motorcycle,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,0.0,0.0,0.0,0.0
+F,night,0.0,bicycle,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,0.0,0.0,0.0,0.0
+F,night,0.0,OVERALL,/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth,47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235,7286,36,34.28007344130224,28.392946578503814,40.773417796761294,41.99050474012931

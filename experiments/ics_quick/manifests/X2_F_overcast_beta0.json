@@ -1,0 +1,16 @@
+{
+  "pid": 8511,
+  "gpu": 9,
+  "argv": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py",
+    "--model",
+    "F",
+    "--domain",
+    "overcast",
+    "--beta",
+    "0",
+    "--check-disabled"
+  ],
+  "prelaunch_gpu": "2, 0"
+}

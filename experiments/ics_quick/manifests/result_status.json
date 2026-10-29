@@ -1,0 +1,8 @@
+{
+  "X1_complete_cells": 4,
+  "X2_complete_cells": 8,
+  "X2_required_cells": 8,
+  "X3_complete_cells": 0,
+  "F_baseline_policy": "use_current_environment",
+  "complete": false
+}

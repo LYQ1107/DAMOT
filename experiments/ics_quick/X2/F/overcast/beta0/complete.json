@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "baseline_parity": false,
+  "baseline": "current-environment paired beta0; archived differences retained",
+  "user_approval": {
+    "mode": "use_current_environment",
+    "authorization": "Explicit user reply to the F baseline protocol question in this chat",
+    "user_answer": "允许使用当前环境的 F 配对基线，披露历史差异，继续全部实验（推荐）",
+    "scope": "F X2: use freshly reproduced same-environment beta0 for paired beta1 deltas in Overcast and Night; retain all historical reference differences",
+    "time": "2026-10-29T08:53:46.668125+00:00"
+  },
+  "frames": 4448,
+  "videos": 22,
+  "all_frame_hota": true,
+  "beta": 0,
+  "time": 1793264036.4964209
+}

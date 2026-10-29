@@ -1,0 +1,23 @@
+SUMMARY 0 0 0
+categories [1]
+X2_BASIS HF [16.550124   82.12410281]
+SUMMARY 1 0 0
+SUMMARY 2 0 0
+SUMMARY 3 1 0
+SUMMARY 4 2 0
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 55, in <module>
+    dump(Q/'manifests/controller.json',dict(status='running',pid=os.getpid(),time=time.time()))
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 51, in main
+    job(group+'_train',args,gpus=4,prefer='2,7,8,9,3,4,5,6')
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 425, in result
+    return self.__get_result()
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 39, in x2_hf
+    def x2_hf():
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/controller.py", line 20, in job
+    if rc:raise RuntimeError('%s failed (exit %d); inspect log'%(name,rc))
+RuntimeError: X2_HF_overcast_beta0 failed (exit 1); inspect log

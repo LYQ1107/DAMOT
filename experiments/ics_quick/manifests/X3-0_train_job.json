@@ -1,0 +1,10 @@
+{
+  "status": "waiting_for_idle_gpus",
+  "required": 4,
+  "available": [
+    7,
+    8
+  ],
+  "time": 1793266176.5829155,
+  "pid": 20854
+}

@@ -1,0 +1,46 @@
+loading annotations into memory...
+Done (t=0.76s)
+creating index...
+index created!
+VIDEO_COMPLETE F overcast 0.0 1 202
+VIDEO_COMPLETE F overcast 0.0 2 202
+VIDEO_COMPLETE F overcast 0.0 3 203
+VIDEO_COMPLETE F overcast 0.0 4 199
+VIDEO_COMPLETE F overcast 0.0 5 202
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py", line 79, in <module>
+    for idx,b in zip(pending,loader):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1376, in _next_data
+    return self._process_data(data)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1402, in _process_data
+    data.reraise()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/_utils.py", line 461, in reraise
+    raise exception
+OSError: Caught OSError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/_utils/worker.py", line 302, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/utils/data/dataset.py", line 290, in __getitem__
+    return self.dataset[self.indices[idx]]
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmdet/datasets/custom.py", line 218, in __getitem__
+    return self.prepare_test_img(idx)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmtrack/datasets/coco_video_dataset.py", line 294, in prepare_test_img
+    return self.prepare_data(idx)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmtrack/datasets/coco_video_dataset.py", line 270, in prepare_data
+    return self.pipeline(results)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmdet/datasets/pipelines/compose.py", line 41, in __call__
+    data = t(data)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmdet/datasets/pipelines/loading.py", line 67, in __call__
+    img_bytes = self.file_client.get(filename)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/fileio/file_client.py", line 1014, in get
+    return self.client.get(filepath)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/fileio/file_client.py", line 535, in get
+    with open(filepath, 'rb') as f:
+OSError: [Errno 107] Transport endpoint is not connected: '/data1/liuyeqiang/damot_rebuttal_20261026/data/views/overcast/b1f4491b-cf446195/b1f4491b-cf446195-0000087.jpg'
+

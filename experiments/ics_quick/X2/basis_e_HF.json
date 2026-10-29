@@ -1,0 +1,17 @@
+{
+  "model": "HF",
+  "features": "/data1/liuyeqiang/ics_quick_20261029_160807/feats/HF_stage4_e5/clear_holdout_45v.npz",
+  "feature_sha256": "94964d13aec00c07ed7fc01fe60599b8aba2616fc4d5b15407498e4c806bfd1a",
+  "N": 7956,
+  "classes": "car",
+  "l2_normalize_before_class_centering": true,
+  "principal_angles_degrees": [
+    16.550123996645578,
+    82.12410280575926
+  ],
+  "explained_variance_top2": [
+    0.1871749896427873,
+    0.11195404474569878
+  ],
+  "basis_sha256": "5687354142db1b824a788ca8e9b761cb00502515eea753db5fc762331d30fbb3"
+}

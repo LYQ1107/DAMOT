@@ -1,0 +1,85 @@
+{
+  "status": "historical_baseline_mismatch_after_config_correction",
+  "baseline_parity": [
+    {
+      "category": "car",
+      "metric": "HOTA",
+      "observed": "41.13807336342909",
+      "reference": "41.091150021156864",
+      "delta": "0.04692334227222972",
+      "passed": "False"
+    },
+    {
+      "category": "car",
+      "metric": "DetA",
+      "observed": "34.618989914334314",
+      "reference": "34.61895234363809",
+      "delta": "3.757069622167819e-05",
+      "passed": "False"
+    },
+    {
+      "category": "car",
+      "metric": "IDF1",
+      "observed": "47.85886744382397",
+      "reference": "47.72484891574831",
+      "delta": "0.13401852807565717",
+      "passed": "False"
+    },
+    {
+      "category": "car",
+      "metric": "AssA",
+      "observed": "49.13720605468974",
+      "reference": "49.02651836195508",
+      "delta": "0.11068769273466472",
+      "passed": "False"
+    },
+    {
+      "category": "OVERALL",
+      "metric": "HOTA",
+      "observed": "37.33309425458744",
+      "reference": "37.2910549158449",
+      "delta": "0.042039338742533516",
+      "passed": "False"
+    },
+    {
+      "category": "OVERALL",
+      "metric": "DetA",
+      "observed": "29.968486500300106",
+      "reference": "29.971056214367387",
+      "delta": "-0.002569714067281126",
+      "passed": "False"
+    },
+    {
+      "category": "OVERALL",
+      "metric": "IDF1",
+      "observed": "42.19825875872371",
+      "reference": "42.08327498482939",
+      "delta": "0.11498377389432335",
+      "passed": "False"
+    },
+    {
+      "category": "OVERALL",
+      "metric": "AssA",
+      "observed": "46.81584826682858",
+      "reference": "46.70838434851451",
+      "delta": "0.10746391831407465",
+      "passed": "False"
+    }
+  ],
+  "bitwise_disabled_check": {
+    "frames": 16,
+    "outputs_bitwise_equal": true,
+    "comparison": "native original class vs optional class beta=0, same checkpoint, fusion and inputs"
+  },
+  "F_interventions_started": false,
+  "scope": "F X2 only; X1 complete and HF X2 proceeds",
+  "possible_cause": "Current V100/torch1.12 execution differs from archived A100/torch1.13 experiment records; a numerical/runtime or historical provenance difference remains unproven. Do not claim a confirmed cause.",
+  "awaiting_user_decision": false,
+  "resolved_by_user_approval": {
+    "mode": "use_current_environment",
+    "authorization": "Explicit user reply to the F baseline protocol question in this chat",
+    "user_answer": "允许使用当前环境的 F 配对基线，披露历史差异，继续全部实验（推荐）",
+    "scope": "F X2: use freshly reproduced same-environment beta0 for paired beta1 deltas in Overcast and Night; retain all historical reference differences",
+    "time": "2026-10-29T08:53:46.668125+00:00"
+  }
+}

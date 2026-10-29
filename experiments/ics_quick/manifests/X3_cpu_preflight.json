@@ -1,0 +1,10 @@
+{
+  "hooks_registered": {
+    "EMATrainHook": true,
+    "CustomOptimizerHook": true,
+    "APRFiniteLossHook": true,
+    "ICSQuickAuditHook": true
+  },
+  "groups": 4,
+  "config_resolution_passed": true
+}

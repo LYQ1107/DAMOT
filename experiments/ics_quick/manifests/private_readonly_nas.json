@@ -1,0 +1,6 @@
+{
+  "pid": 4126,
+  "mount": "/data1/liuyeqiang/ics_quick_20261029_160807/nas/A100",
+  "read_only": true,
+  "source": "Existing authenticated NAS endpoint; independent SSHFS session; shared mount unchanged"
+}

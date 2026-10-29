@@ -1,0 +1,5 @@
+{
+  "frames": 16,
+  "outputs_bitwise_equal": true,
+  "comparison": "native original class vs optional class beta=0, same checkpoint, fusion and inputs"
+}

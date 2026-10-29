@@ -1,0 +1,29 @@
+{
+  "source": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank0.pth",
+  "source_sha256": "a251ee49ce8968a0595de6e0c50070da9f1d0465d21c7d1ae1e36fb94255cd06",
+  "original_training_state": true,
+  "history_domains": 3,
+  "history_shapes": {
+    "overcast": {
+      "1": [
+        100,
+        256
+      ]
+    },
+    "rainy": {
+      "1": [
+        100,
+        256
+      ]
+    },
+    "dawn_dusk": {
+      "1": [
+        100,
+        256
+      ]
+    }
+  },
+  "shared_history": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/shared_apr_history.pth",
+  "shared_history_sha256": "a8c2ea74e8d0d9aed6e069f9a7cb338bd0f39599a2e9f455dc07f8a6d2cf74bc",
+  "protocol": "Identical original rank-0 archived prototypes for every group and rank. No reconstruction required."
+}

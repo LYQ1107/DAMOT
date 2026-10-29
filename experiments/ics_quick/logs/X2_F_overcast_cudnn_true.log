@@ -1,0 +1,122 @@
+loading annotations into memory...
+Done (t=0.60s)
+creating index...
+index created!
+VIDEO_COMPLETE F overcast 0.0 1 202
+VIDEO_COMPLETE F overcast 0.0 2 202
+VIDEO_COMPLETE F overcast 0.0 3 203
+VIDEO_COMPLETE F overcast 0.0 4 199
+VIDEO_COMPLETE F overcast 0.0 5 202
+VIDEO_COMPLETE F overcast 0.0 6 202
+VIDEO_COMPLETE F overcast 0.0 7 203
+VIDEO_COMPLETE F overcast 0.0 8 203
+VIDEO_COMPLETE F overcast 0.0 9 202
+VIDEO_COMPLETE F overcast 0.0 10 202
+VIDEO_COMPLETE F overcast 0.0 11 203
+VIDEO_COMPLETE F overcast 0.0 12 202
+VIDEO_COMPLETE F overcast 0.0 13 202
+VIDEO_COMPLETE F overcast 0.0 14 202
+VIDEO_COMPLETE F overcast 0.0 15 203
+VIDEO_COMPLETE F overcast 0.0 16 202
+VIDEO_COMPLETE F overcast 0.0 17 202
+VIDEO_COMPLETE F overcast 0.0 18 203
+VIDEO_COMPLETE F overcast 0.0 19 202
+VIDEO_COMPLETE F overcast 0.0 20 202
+VIDEO_COMPLETE F overcast 0.0 21 202
+VIDEO_COMPLETE F overcast 0.0 22 203
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 22.21 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 22 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 9.80 seconds
+Evaluating COCO metrics...
+
+Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.94s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=31.24s).
+Accumulating evaluation results...
+DONE (t=7.49s).
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.117
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.211
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.028
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.142
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.368
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.182
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.182
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.182
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.045
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.206
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.586
+
+
++------------+-------+------------+-------+----------+-------+
+| category   | AP    | category   | AP    | category | AP    |
++------------+-------+------------+-------+----------+-------+
+| pedestrian | 0.198 | car        | 0.315 | truck    | 0.071 |
+| bus        | 0.106 | motorcycle | 0.004 | bicycle  | 0.008 |
++------------+-------+------------+-------+----------+-------+
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  28.9   9.9  75.6  1325   3766   450  38.8  64.3   55  119   179   222
+car         47.9  37.6  82.1  1290  26455  1154  42.9  93.9  239  600  1133   787
+truck        8.4   3.0  81.3    88   4175    19   5.5  73.3    0    6   135    33
+bus         22.6 -94.6  78.6  1297    707    10  31.7  20.2    2    8    17     8
+motorcycle   0.0   0.0    -      0    186     0   0.0    -     0    0     5     0
+bicycle      0.3   0.1  65.1     0    723     0   0.1 100.0    0    0    34     0
+---------------------------------------------------------------------------------
+OVERALL     42.2  29.2  81.3  4000  36012  1633  38.8  85.1  296  733  1503  1050
+AVERAGE     18.0  -7.3  63.8  4000  36012  1633  19.8  58.6  296  733  1503  1050
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+pedestrian   30.1   70.1  26.8  78.6   30.7   50.9  25.0  25.6   3709  1058
+bicycle       9.5   47.4   9.5  74.4    0.1   47.4   0.1   0.8      1     1
+car          54.6   72.9  49.1  84.0   36.2   79.3  34.6  41.1  21173  1192
+bus          53.5   79.2  51.5  81.2   25.6   16.3  11.3  24.1   1625   197
+truck        27.1   83.7  26.6  83.5    4.5   61.0   4.4  10.9    329    80
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+---------------------------------------------------------------------------
+AVERAGE      29.1   58.9  27.3  83.6   16.2   42.5  12.6  17.1  26837  2528
+OVERALL      52.0   72.9  46.8  83.4   32.5   71.3  30.0  37.3  26837  2528
+
+
+-------------------------------------------------
+         mAP  mAP_50  mAP_75  mAP_s  mAP_m  mAP_l
+-------------------------------------------------
+OVERALL 11.7    21.1    11.8    2.8   14.2   36.8
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+pedestrian  78.6  25.0   9.9  25.6  28.9  26.8
+bicycle     74.4   0.1   0.1   0.8   0.3   9.5
+car         84.0  34.6  37.6  41.1  47.9  49.1
+bus         81.2  11.3 -94.6  24.1  22.6  51.5
+truck       83.5   4.4   3.0  10.9   8.4  26.6
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+----------------------------------------------
+AVERAGE     83.6  12.6  -7.3  17.1  18.0  27.3
+OVERALL     83.4  30.0  29.2  37.3  42.2  46.8
+
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py", line 120, in <module>
+    assert all(r['passed'] for r in checks),('Frozen baseline mismatch; intervention blocked',out)
+AssertionError: ('Frozen baseline mismatch; intervention blocked', PosixPath('/data1/liuyeqiang/ics_quick_20261029_160807/X2/F/overcast/beta0_cudnn_true'))

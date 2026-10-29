@@ -1,0 +1,24 @@
+{
+  "pid": 4771,
+  "gpu": 8,
+  "argv": [
+    "/data1/liuyeqiang/ics_quick_20261029_160807/code_hf/tools/analysis/ics_probe_extract.py",
+    "--checkpoint",
+    "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night/epoch_5.pth",
+    "--label",
+    "HF_stage4_e5",
+    "--domain",
+    "clear_holdout_45v",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/clear_holdout_45v.json",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_holdout_45v/",
+    "--out-dir",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/feats",
+    "--views",
+    "clean",
+    "--dose-frames-per-video",
+    "0"
+  ],
+  "log": "/data1/liuyeqiang/ics_quick_20261029_160807/logs/X2_HF_extract.log",
+  "prelaunch_gpu": "2, 0",
+  "start": 1793261455.152552
+}

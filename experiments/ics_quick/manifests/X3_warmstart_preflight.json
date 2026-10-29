@@ -1,0 +1,71 @@
+[
+  {
+    "group": "X3-0",
+    "critical_student_and_teacher_tensors_exact": true,
+    "loaded_keys": 752,
+    "expected_ignored_keys": [],
+    "history_domains": 3,
+    "couple_ics": false,
+    "use_ics": true,
+    "trim_alpha": 0.1,
+    "bank_updates": 660,
+    "random_basis_initialized": false
+  },
+  {
+    "group": "X3-1",
+    "critical_student_and_teacher_tensors_exact": true,
+    "loaded_keys": 732,
+    "expected_ignored_keys": [
+      "track_head.causal_bank.pcs",
+      "track_head.causal_bank.initialized",
+      "track_head.causal_bank.cov_bank",
+      "track_head.causal_bank.cov_initialized",
+      "track_head.causal_bank.num_updates",
+      "track_head.causal_bank.last_eig1",
+      "track_head.causal_bank.last_eig_ratio",
+      "track_head.causal_bank.last_pc_drift",
+      "track_head.causal_bank.last_num_samples",
+      "track_head.causal_bank.last_update_ok",
+      "teacher_track_head.causal_bank.pcs",
+      "teacher_track_head.causal_bank.initialized",
+      "teacher_track_head.causal_bank.cov_bank",
+      "teacher_track_head.causal_bank.cov_initialized",
+      "teacher_track_head.causal_bank.num_updates",
+      "teacher_track_head.causal_bank.last_eig1",
+      "teacher_track_head.causal_bank.last_eig_ratio",
+      "teacher_track_head.causal_bank.last_pc_drift",
+      "teacher_track_head.causal_bank.last_num_samples",
+      "teacher_track_head.causal_bank.last_update_ok"
+    ],
+    "history_domains": 3,
+    "couple_ics": false,
+    "use_ics": false,
+    "trim_alpha": 0.1,
+    "bank_updates": null,
+    "random_basis_initialized": false
+  },
+  {
+    "group": "X3-2",
+    "critical_student_and_teacher_tensors_exact": true,
+    "loaded_keys": 752,
+    "expected_ignored_keys": [],
+    "history_domains": 3,
+    "couple_ics": false,
+    "use_ics": true,
+    "trim_alpha": 0.0,
+    "bank_updates": 660,
+    "random_basis_initialized": false
+  },
+  {
+    "group": "X3-3",
+    "critical_student_and_teacher_tensors_exact": true,
+    "loaded_keys": 752,
+    "expected_ignored_keys": [],
+    "history_domains": 3,
+    "couple_ics": false,
+    "use_ics": true,
+    "trim_alpha": 0.1,
+    "bank_updates": 660,
+    "random_basis_initialized": true
+  }
+]

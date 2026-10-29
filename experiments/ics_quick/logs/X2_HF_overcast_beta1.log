@@ -1,0 +1,119 @@
+loading annotations into memory...
+Done (t=0.56s)
+creating index...
+index created!
+VIDEO_COMPLETE HF overcast 1.0 1 202
+VIDEO_COMPLETE HF overcast 1.0 2 202
+VIDEO_COMPLETE HF overcast 1.0 3 203
+VIDEO_COMPLETE HF overcast 1.0 4 199
+VIDEO_COMPLETE HF overcast 1.0 5 202
+VIDEO_COMPLETE HF overcast 1.0 6 202
+VIDEO_COMPLETE HF overcast 1.0 7 203
+VIDEO_COMPLETE HF overcast 1.0 8 203
+VIDEO_COMPLETE HF overcast 1.0 9 202
+VIDEO_COMPLETE HF overcast 1.0 10 202
+VIDEO_COMPLETE HF overcast 1.0 11 203
+VIDEO_COMPLETE HF overcast 1.0 12 202
+VIDEO_COMPLETE HF overcast 1.0 13 202
+VIDEO_COMPLETE HF overcast 1.0 14 202
+VIDEO_COMPLETE HF overcast 1.0 15 203
+VIDEO_COMPLETE HF overcast 1.0 16 202
+VIDEO_COMPLETE HF overcast 1.0 17 202
+VIDEO_COMPLETE HF overcast 1.0 18 203
+VIDEO_COMPLETE HF overcast 1.0 19 202
+VIDEO_COMPLETE HF overcast 1.0 20 202
+VIDEO_COMPLETE HF overcast 1.0 21 202
+VIDEO_COMPLETE HF overcast 1.0 22 203
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 19.64 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 22 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 7.34 seconds
+Evaluating COCO metrics...
+
+Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.67s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=30.50s).
+Accumulating evaluation results...
+DONE (t=6.51s).
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.213
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.029
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.143
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.370
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.184
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.184
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.184
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.047
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.208
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.572
+
+
++------------+-------+------------+-------+----------+-------+
+| category   | AP    | category   | AP    | category | AP    |
++------------+-------+------------+-------+----------+-------+
+| pedestrian | 0.197 | car        | 0.319 | truck    | 0.077 |
+| bus        | 0.100 | motorcycle | 0.007 | bicycle  | 0.008 |
++------------+-------+------------+-------+----------+-------+
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  27.5   1.4  75.2  1827   3664   571  40.4  57.6   60  120   173   222
+car         47.2  37.3  82.1  1386  26210  1445  43.4  93.6  248  600  1124   811
+truck        9.3   3.8  81.9    81   4145    22   6.1  77.0    0    7   134    45
+bus         24.1 -84.3  78.3  1190    708    10  31.6  21.6    2    8    17     7
+motorcycle   0.0   0.0    -      0    186     0   0.0    -     0    0     5     0
+bicycle      0.0   0.0    -      0    724     0   0.0    -     0    0    34     0
+---------------------------------------------------------------------------------
+OVERALL     41.6  28.3  81.3  4484  35637  2048  39.4  83.8  310  735  1487  1085
+AVERAGE     18.0  -7.0  52.9  4484  35637  2048  20.3  41.6  310  735  1487  1085
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+truck        29.2   87.3  28.7  83.8    5.1   64.6   5.0  12.0    352    78
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+pedestrian   28.9   73.1  26.6  78.1   31.7   45.2  24.2  25.1   4313  1458
+car          51.6   75.9  47.5  84.0   36.7   79.1  35.1  40.7  21514  1490
+bus          54.2   78.3  51.5  81.0   25.4   17.4  11.8  24.6   1517   177
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+---------------------------------------------------------------------------
+AVERAGE      27.3   52.4  25.7  87.8   16.5   34.4  12.7  17.1  27696  3203
+OVERALL      49.2   75.9  45.4  83.4   33.1   70.3  30.2  36.9  27696  3203
+
+
+-------------------------------------------------
+         mAP  mAP_50  mAP_75  mAP_s  mAP_m  mAP_l
+-------------------------------------------------
+OVERALL 11.8    21.3    11.8    2.9   14.3   37.0
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+truck       83.8   5.0   3.8  12.0   9.3  28.7
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+pedestrian  78.1  24.2   1.4  25.1  27.5  26.6
+car         84.0  35.1  37.3  40.7  47.2  47.5
+bus         81.0  11.8 -84.3  24.6  24.1  51.5
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+----------------------------------------------
+AVERAGE     87.8  12.7  -7.0  17.1  18.0  25.7
+OVERALL     83.4  30.2  28.3  36.9  41.6  45.4
+
+EVAL_COMPLETE /data1/liuyeqiang/ics_quick_20261029_160807/X2/HF/overcast/beta1

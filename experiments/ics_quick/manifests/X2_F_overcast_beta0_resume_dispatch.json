@@ -1,0 +1,24 @@
+{
+  "pid": 5915,
+  "command": [
+    "/usr/bin/python3",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/gpu_job.py",
+    "--name",
+    "X2_F_overcast_beta0_resume",
+    "--gpus",
+    "1",
+    "--prefer",
+    "9,8,7,2,3,4,5,6",
+    "--",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py",
+    "--model",
+    "F",
+    "--domain",
+    "overcast",
+    "--beta",
+    "0",
+    "--check-disabled"
+  ],
+  "time": 1793262324.0358381
+}

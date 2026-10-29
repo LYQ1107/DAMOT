@@ -1,0 +1,98 @@
+--- a/darth/models/track_heads/causal_quasi_dense_track_head.py
++++ b/darth/models/track_heads/causal_quasi_dense_track_head.py
+@@ -93,6 +93,8 @@
+                  causal_covariance_shrinkage=0.0,
+                  causal_proto_center_momentum=0.95,
+                  causal_proto_center_min_count=4,
++                 causal_freeze_random_basis=False,
++                 causal_random_basis_seed=0,
+                  roi_proto_couple_ics=False,
+                  roi_proto_couple_beta=None,
+                  roi_proto_couple_basis='ics',
+@@ -136,6 +138,8 @@
+         self.causal_covariance_shrinkage = float(causal_covariance_shrinkage)
+         self.causal_proto_center_momentum = float(causal_proto_center_momentum)
+         self.causal_proto_center_min_count = int(causal_proto_center_min_count)
++        self.causal_freeze_random_basis = bool(causal_freeze_random_basis)
++        self.causal_random_basis_seed = int(causal_random_basis_seed)
+         self.roi_proto_couple_ics = bool(roi_proto_couple_ics)
+         self.roi_proto_couple_beta = (None if roi_proto_couple_beta is None
+                                       else float(roi_proto_couple_beta))
+@@ -542,7 +546,9 @@
+             num_feats = key_feats.shape[0] + ref_feats.shape[0]
+             num_pairs = num_car = 0
+ 
+-            if mode == "global_pc_ema":
++            if self.causal_freeze_random_basis:
++                skip_reason = "frozen_random_basis"
++            elif mode == "global_pc_ema":
+                 pca_feats = torch.cat(
+                     [key_feats.detach(), ref_feats.detach()], dim=0)
+                 update_ok = self.causal_bank.update(pca_feats,
+--- a/tools/run/train_seq3_episode.py
++++ b/tools/run/train_seq3_episode.py
+@@ -15,6 +15,8 @@
+ from mmtrack.utils import collect_env, get_root_logger
+ from darth.datasets import build_dataset
+ from darth.models import build_model
++from apr_complement_experiment import install_checkpointing, APRFiniteLossHook
++import ics_quick_hooks
+ 
+ 
+ def parse_args():
+@@ -33,6 +35,7 @@
+     p.add_argument('--keep-teacher-across-stages',action='store_true',default=True)
+     p.add_argument('--keep-optimizer-across-stages',action='store_true')
+     p.add_argument('--resume-episode-from-stage',type=int,default=0)
++    p.add_argument('--apr-history', required=True)
+     p.add_argument('--cfg-options',nargs='+',action=DictAction)
+     a=p.parse_args(); os.environ.setdefault('LOCAL_RANK',str(a.local_rank)); return a
+ 
+@@ -82,7 +85,7 @@
+ def stage_cfg(base,target,wdir,args):
+     cfg=copy.deepcopy(base); cfg.data.train=target_train_cfg(target, args.target_config_template); cfg.work_dir=wdir
+     cfg.total_epochs=args.epochs_per_stage
+-    cfg.find_unused_parameters=False
++    cfg.find_unused_parameters=base.get('find_unused_parameters',True)
+     if 'runner' in cfg: cfg.runner.max_epochs=args.epochs_per_stage
+     cfg.data.samples_per_gpu=args.samples_per_gpu; cfg.data.workers_per_gpu=args.workers_per_gpu
+     cfg.load_from=None; cfg.resume_from=None; cfg.workflow=[('train',1)]
+@@ -99,6 +102,7 @@
+ 
+ def main():
+     args=parse_args(); cfg=Config.fromfile(args.base_config)
++    install_checkpointing()
+     if args.cfg_options is not None: cfg.merge_from_dict(args.cfg_options)
+     setup_multi_processes(cfg)
+     if cfg.get('cudnn_benchmark',False): torch.backends.cudnn.benchmark=True
+@@ -136,6 +140,12 @@
+     if args.resume_episode_from_stage:
+         pi=args.resume_episode_from_stage-1; prev='stage00_source_only' if pi==0 else f'stage{pi:02d}_after_{args.target_order[pi-1]}'
+         rec=osp.join(args.work_dir,'stage_snapshots',prev+'.pth'); logger.warning('[RECOVERY] load snapshot for abnormal recovery only: %s',rec); load_checkpoint(model,rec,map_location='cpu')
++    # Checkpoints do not include APR Python history. Load the same archived
++    # stage-3 rank-0 library in every ablation and every rank.
++    history=torch.load(args.apr_history,map_location='cpu')
++    assert set(history)=={'overcast','rainy','dawn_dusk'}
++    unwrap(model).track_head.roi_proto_memory.load_state_dict_memory(history)
++    logger.info('[ICS_QUICK] Restored APR history_domains=3 file=%s',args.apr_history)
+     for i,t in enumerate(args.target_order,1):
+         if i<start: logger.info('[STAGE %d] skip due to recovery start=%d',i,start); continue
+         name=f'stage{i:02d}_after_{t}'; wdir=osp.join(args.work_dir,'adapt',name); mkdir(wdir)
+@@ -151,6 +161,17 @@
+         mod=unwrap(model)
+         if hasattr(mod,'set_current_target_domain'): mod.set_current_target_domain(t)
+         if hasattr(mod,'roi_proto_start_stage'): mod.roi_proto_start_stage(t)
++        h=mod.track_head
++        if h.causal_freeze_random_basis:
++            gen=torch.Generator(device='cpu');gen.manual_seed(h.causal_random_basis_seed)
++            basis=torch.linalg.qr(torch.randn(h.causal_feat_dim,h.causal_num_pcs,generator=gen),mode='reduced')[0]
++            h.causal_bank.pcs.copy_(basis.T.to(h.causal_bank.pcs));h.causal_bank.initialized.fill_(True)
++            if rank0():
++                import numpy as np
++                np.save(osp.join(args.work_dir,'random_basis.npy'),basis.numpy())
++            logger.info('[ICS_QUICK] Fixed random basis initialized, seed=%d updates=%d',h.causal_random_basis_seed,h.causal_bank.num_updates.item())
++        assert len(h.roi_proto_memory._history)==3
++        logger.info('[ICS_QUICK] Stage 4 begins history_domains=3 num_updates=%s',None if h.causal_bank is None else h.causal_bank.num_updates.item())
+         train_model(model,[ds],scfg,distributed=distributed,validate=False,timestamp=ts,meta=meta)
+         if hasattr(mod,'roi_proto_finalize_stage'): mod.roi_proto_finalize_stage(t)
+         if hasattr(mod,'roi_proto_memory_summary'):

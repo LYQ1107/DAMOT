@@ -87,6 +87,23 @@ def expected(name,domain):
         return {r['category']:r for r in csv.DictReader((folder/'metrics.csv').open())}
     return archived_expected(name,domain)
 
+def validate_full_baseline(name):
+    records=[]
+    for domain in STAGES:
+        folder=ROOT/'results/S4'/name/'baseline'/domain
+        assert (folder/'complete.json').exists()
+        current={r['']:r for r in csv.DictReader((folder/'evaluation/summary_metrics.csv').open())}
+        if name=='F':
+            ref={r['']:r for r in csv.DictReader((ROOT/'results/S4/F/baseline_audit'/domain/'evaluation/summary_metrics.csv').open())}
+        else:
+            ref={k:{m:r[m+'_percent'] for m in ['HOTA','DetA','IDF1','AssA']} for k,r in archived_expected(name,domain).items()}
+        for category in list(CLASSES)+['OVERALL']:
+            for metric in ['HOTA','DetA','IDF1','AssA']:
+                delta=float(current[category][metric])-float(ref[category][metric]);assert abs(delta)<1e-6,(name,domain,category,metric,delta)
+                records.append(dict(domain=domain,category=category,metric=metric,difference=delta))
+    dump(ROOT/'results/S4'/name/'baseline_full_class_validation.json',dict(status='PASS',comparisons=len(records),reference='user-approved fresh native F' if name=='F' else 'frozen HF',records=records))
+    print('FULL-CLASS BASELINE PASS',name,len(records),flush=True)
+
 def replay(name,domain,basis_name,beta):
     from darth.datasets.eval.coco_eval_dataset import BDD100K
     BDD100K._compute_image_to_timestep_mappings=all_frame_hota_index
@@ -136,6 +153,7 @@ def main():
     for d in STAGES:capture(args.model,d)
     if args.capture_only:return
     for d in STAGES:replay(args.model,d,'baseline',0.)
+    validate_full_baseline(args.model)
     if args.baseline_only:return
     for b in ['ICS_stored_m2','FAP_clear_fit_m2','Identity_fit_m16','Random_m2']:
         for beta in [.5,1.]:

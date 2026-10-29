@@ -1,0 +1,22 @@
+{
+  "pid": 37279,
+  "exit_code": 0,
+  "command": [
+    "/usr/bin/python3",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/gpu_slot.py",
+    "--name",
+    "S4_F",
+    "--count",
+    "1",
+    "--prefer",
+    "8,9,7,2,3,4,5,6",
+    "--",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "-u",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/run/ics_tracking_intervention.py",
+    "--model",
+    "F"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/S4_F_1793266394476812544.log",
+  "end": 1793269195.2484415
+}

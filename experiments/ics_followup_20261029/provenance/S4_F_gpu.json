@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    8
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "-u",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/run/ics_tracking_intervention.py",
+    "--model",
+    "F"
+  ],
+  "pid": 37279,
+  "time": 1793269184.3941686
+}

@@ -1,0 +1,13 @@
+[
+  "darth/datasets/eval/coco_eval_utils.py",
+  "darth/models/__init__.py",
+  "darth/models/jepa/__init__.py",
+  "darth/models/jepa/temporal_adapter.py",
+  "darth/models/track_heads/__init__.py",
+  "darth/models/track_heads/causal_quasi_dense_track_head.py",
+  "darth/models/track_heads/inference_subspace_track_head.py",
+  "darth/models/trackers/__init__.py",
+  "darth/models/trackers/temporal_jepa_tracker.py",
+  "darth/models/utils/roi_causal_bank.py",
+  "darth/models/utils/roi_proto_memory.py"
+]

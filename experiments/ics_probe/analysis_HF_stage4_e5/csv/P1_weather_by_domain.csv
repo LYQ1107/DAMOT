@@ -1,0 +1,25 @@
+domain,reference,subspace,energy_share
+overcast,clear_holdout_45v,ICS (checkpoint),0.032540397341203925
+overcast,clear_holdout_45v,FAP-residual PCA,0.12651633462313727
+overcast,clear_holdout_45v,Feature PCA,0.46571026135626276
+overcast,clear_holdout_45v,Oracle weather (labels),0.1502834176559719
+overcast,clear_holdout_45v,Oracle identity (labels),0.36570006726953047
+overcast,clear_holdout_45v,Random (mean),0.009738609600634985
+rainy,clear_holdout_45v,ICS (checkpoint),0.3253633010875338
+rainy,clear_holdout_45v,FAP-residual PCA,0.2868757742053129
+rainy,clear_holdout_45v,Feature PCA,0.2931051587334495
+rainy,clear_holdout_45v,Oracle weather (labels),0.33973664341823107
+rainy,clear_holdout_45v,Oracle identity (labels),0.04883912156533746
+rainy,clear_holdout_45v,Random (mean),0.00879404986103533
+dawn_dusk,clear_holdout_45v,ICS (checkpoint),0.1110694277505215
+dawn_dusk,clear_holdout_45v,FAP-residual PCA,0.3101711627532237
+dawn_dusk,clear_holdout_45v,Feature PCA,0.2466064344463728
+dawn_dusk,clear_holdout_45v,Oracle weather (labels),0.1558447638188605
+dawn_dusk,clear_holdout_45v,Oracle identity (labels),0.042917695565541945
+dawn_dusk,clear_holdout_45v,Random (mean),0.010102895924436396
+night,clear_holdout_45v,ICS (checkpoint),0.103335022093815
+night,clear_holdout_45v,FAP-residual PCA,0.44407418970964374
+night,clear_holdout_45v,Feature PCA,0.16718670287129686
+night,clear_holdout_45v,Oracle weather (labels),0.7310457131067896
+night,clear_holdout_45v,Oracle identity (labels),0.01146667592134209
+night,clear_holdout_45v,Random (mean),0.007068417593700281

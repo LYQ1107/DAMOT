@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/controller.py", line 65, in <module>
+    if __name__=='__main__':main()
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/controller.py", line 46, in main
+    if not s4_done('F'):start('S4_F',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','F'],active='ics_tracking_intervention.py --model F',gpu=1)
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/controller.py", line 21, in start
+    stamp=str(time.time_ns());log=ROOT/'logs'/(name+'_'+stamp+'.log');stream=log.open('w')
+AttributeError: module 'time' has no attribute 'time_ns'
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/controller.py", line 67, in <module>
+    if __name__=='__main__':main()
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/controller.py", line 46, in main
+    if not s4_done('F'):start('S4_F',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','F'],active='ics_tracking_intervention.py --model F',gpu=1)
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/controller.py", line 21, in start
+    stamp=str(time.time_ns());log=ROOT/'logs'/(name+'_'+stamp+'.log');stream=log.open('w')
+AttributeError: module 'time' has no attribute 'time_ns'
+START S4_HF_capture 39393
+ADOPT S4_HF_capture 39393
+DONE S4_HF_capture
+START S4_F 37279
+DONE S4_F
+START S4_native_F 3849
+DONE S4_native_F
+START CPU_HF 26584
+ADOPT CPU_HF 26584
+START S4_HF_baseline 26825
+ADOPT CPU_HF 26584
+START S4_HF_baseline 30455
+DONE CPU_HF

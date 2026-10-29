@@ -1,0 +1,24 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth",
+  "head_type": "SubspaceInterventionQuasiDenseTrackHead",
+  "beta": 1.0,
+  "basis": "Random_m2",
+  "basis_sha256": "05f2db5b77faac83d91858484c07e8b3bef41c6d4dbfb8ebee92e3e378b527c3",
+  "renormalization": false,
+  "tracker": {
+    "type": "QuasiDenseTracker",
+    "init_score_thr": 0.3,
+    "obj_score_thr": 0.2,
+    "match_score_thr": 0.5,
+    "memo_tracklet_frames": 10,
+    "memo_backdrop_frames": 1,
+    "memo_momentum": 0.8,
+    "nms_conf_thr": 0.35,
+    "nms_backdrop_iou_thr": 0.3,
+    "nms_class_iou_thr": 0.7,
+    "with_cats": true,
+    "match_metric": "bisoftmax"
+  },
+  "all_other_parameters_unchanged": true,
+  "cache_replay": "Native tracker receives exact FP32 embeddings and detections; beta0 per-frame outputs asserted identical"
+}

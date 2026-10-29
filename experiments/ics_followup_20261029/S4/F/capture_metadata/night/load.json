@@ -1,0 +1,8 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth",
+  "sha256": "47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235",
+  "loaded": 364,
+  "target": 364,
+  "missing": [],
+  "fusion": true
+}

@@ -1,0 +1,22 @@
+{
+  "pid": 30455,
+  "command": [
+    "/usr/bin/python3",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/gpu_slot.py",
+    "--name",
+    "S4_HF_baseline",
+    "--count",
+    "1",
+    "--prefer",
+    "8,9,7,2,3,4,5,6",
+    "--",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "-u",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/run/ics_tracking_intervention.py",
+    "--model",
+    "HF",
+    "--baseline-only"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/S4_HF_baseline_1793271617536241152.log",
+  "start": 1793271617.787767
+}

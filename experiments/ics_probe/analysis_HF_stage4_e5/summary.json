@@ -1,0 +1,534 @@
+{
+  "protocol": {
+    "args": {
+      "feat_root": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats",
+      "label": "HF_stage4_e5",
+      "domains": [
+        "clear_holdout_45v",
+        "overcast",
+        "rainy",
+        "dawn_dusk",
+        "night"
+      ],
+      "ref_domain": "clear_holdout_45v",
+      "stage_labels": [
+        "HF_stage1_e5",
+        "HF_stage2_e5",
+        "HF_stage3_e5",
+        "HF_stage4_e5"
+      ],
+      "stage_domains": [
+        "overcast",
+        "rainy",
+        "dawn_dusk",
+        "night"
+      ],
+      "compare_labels": [],
+      "classes": "1",
+      "m": 0,
+      "betas": "0,0.1,0.25,0.5,0.75,1.0",
+      "residual_view": "fap",
+      "paired": false,
+      "ref_variant": "clone",
+      "gap": 4,
+      "window": 30,
+      "max_queries": 4000,
+      "n_random": 50,
+      "montage": true,
+      "seed": 0,
+      "out": "/data1/liuyeqiang/damot_ics_followup_20261029/results/analysis_HF_stage4_e5"
+    },
+    "rois": 33839,
+    "fit_rois": 15820,
+    "test_rois": 18019,
+    "fit_videos": 71,
+    "test_videos": 77,
+    "domain_shift_reference": "clear_holdout_45v",
+    "weather_probe": "refitted logistic regression after each transformation",
+    "interpretation": "BDD domain labels also encode scene and identity differences; these unpaired probes do not identify a pure weather cause."
+  },
+  "P1": [
+    {
+      "subspace": "ICS (checkpoint)",
+      "m": 2,
+      "Real weather shift": 0.1316340850196605,
+      "Identity": 0.2929467330742202,
+      "Temporal (same ID)": 0.17519200074361022,
+      "FAP residual": 0.040923767879156144,
+      "Photometric residual": 0.036450807655012255,
+      "Student-view residual": 0.04126582668974161,
+      "Weather/Identity": 0.4493447789563187,
+      "FAP/Identity": 0.13969695940813961
+    },
+    {
+      "subspace": "FAP-residual PCA",
+      "m": 2,
+      "Real weather shift": 0.3636214873928439,
+      "Identity": 0.10711608401356769,
+      "Temporal (same ID)": 0.09527042233077836,
+      "FAP residual": 0.07450974228185617,
+      "Photometric residual": 0.05379277112936208,
+      "Student-view residual": 0.072731591941134,
+      "Weather/Identity": 3.3946488124359706,
+      "FAP/Identity": 0.6955980791056823
+    },
+    {
+      "subspace": "Feature PCA",
+      "m": 2,
+      "Real weather shift": 0.23252307791832988,
+      "Identity": 0.3091346468177574,
+      "Temporal (same ID)": 0.23269807748039947,
+      "FAP residual": 0.04901782964240663,
+      "Photometric residual": 0.04584025034757735,
+      "Student-view residual": 0.05050121494655235,
+      "Weather/Identity": 0.7521741102499453,
+      "FAP/Identity": 0.15856465830290872
+    },
+    {
+      "subspace": "Oracle weather (labels)",
+      "m": 2,
+      "Real weather shift": 0.5188885603370417,
+      "Identity": 0.16124484608829534,
+      "Temporal (same ID)": 0.09124109564003839,
+      "FAP residual": 0.043295881972167514,
+      "Photometric residual": 0.03186901885533758,
+      "Student-view residual": 0.04128394375478988,
+      "Weather/Identity": 3.2180164074806323,
+      "FAP/Identity": 0.26851017581170195
+    },
+    {
+      "subspace": "Oracle identity (labels)",
+      "m": 2,
+      "Real weather shift": 0.06201895953505832,
+      "Identity": 0.3237414903246518,
+      "Temporal (same ID)": 0.17617866185249526,
+      "FAP residual": 0.04415387365572484,
+      "Photometric residual": 0.03531569079971075,
+      "Student-view residual": 0.04302874680584674,
+      "Weather/Identity": 0.19156938912177554,
+      "FAP/Identity": 0.13638620620208558
+    },
+    {
+      "subspace": "Random (mean)",
+      "m": 2,
+      "Real weather shift": 0.008089561581127436,
+      "Identity": 0.00798628006779628,
+      "Temporal (same ID)": 0.007936256777094192,
+      "FAP residual": 0.007739750608700793,
+      "Photometric residual": 0.0078007439840495,
+      "Student-view residual": 0.007751535113837229,
+      "Weather/Identity": 1.0129323679412012,
+      "FAP/Identity": 0.9691308772079357
+    },
+    {
+      "subspace": "Chance m/D",
+      "m": 2,
+      "Real weather shift": 0.0078125,
+      "Identity": 0.0078125,
+      "Temporal (same ID)": 0.0078125,
+      "FAP residual": 0.0078125,
+      "Photometric residual": 0.0078125,
+      "Student-view residual": 0.0078125
+    }
+  ],
+  "angles_to_ICS_deg": {
+    "ICS (checkpoint)": [
+      0.0,
+      2.5241574669630703e-14
+    ],
+    "FAP-residual PCA": [
+      60.09039305998398,
+      86.74303286658036
+    ],
+    "Feature PCA": [
+      14.311546055116311,
+      80.55641163894556
+    ],
+    "Oracle weather (labels)": [
+      52.54092863080032,
+      80.53432428915002
+    ],
+    "Oracle identity (labels)": [
+      22.830435492234596,
+      44.809819885138076
+    ]
+  },
+  "P2": [
+    {
+      "space": "E only (2-d)",
+      "weather_bacc": 0.22482046490662405,
+      "chance": 0.2,
+      "id_mAP": 0.33685486951372223
+    },
+    {
+      "space": "E-perp (254-d)",
+      "weather_bacc": 0.36500364943059754,
+      "chance": 0.2,
+      "id_mAP": 0.581718481655948
+    },
+    {
+      "space": "Full (256-d)",
+      "weather_bacc": 0.3635750560773475,
+      "chance": 0.2,
+      "id_mAP": 0.5748859790413811
+    },
+    {
+      "space": "Random 2-d",
+      "weather_bacc": 0.21834354072108067,
+      "chance": 0.2,
+      "id_mAP": 0.2857538063968965
+    },
+    {
+      "space": "Identity oracle 2-d",
+      "weather_bacc": 0.21531563347913457,
+      "chance": 0.2,
+      "id_mAP": 0.3625056952944796
+    }
+  ],
+  "n_retrieval_queries": 4000,
+  "P3": [
+    {
+      "weather_bacc": 0.36348266894241005,
+      "weather_gap": 0.1695016410591001,
+      "id_mAP": 0.5748859790413811,
+      "subspace": "ICS",
+      "beta": 0.0
+    },
+    {
+      "weather_bacc": 0.36359214969644216,
+      "weather_gap": 0.171046877902611,
+      "id_mAP": 0.5763405353446045,
+      "subspace": "ICS",
+      "beta": 0.1
+    },
+    {
+      "weather_bacc": 0.36266898149454924,
+      "weather_gap": 0.1732339039450208,
+      "id_mAP": 0.578711037143462,
+      "subspace": "ICS",
+      "beta": 0.25
+    },
+    {
+      "weather_bacc": 0.36358529484979824,
+      "weather_gap": 0.176307749908947,
+      "id_mAP": 0.5812841761778259,
+      "subspace": "ICS",
+      "beta": 0.5
+    },
+    {
+      "weather_bacc": 0.3628435665270441,
+      "weather_gap": 0.17831807063841792,
+      "id_mAP": 0.5819952105562088,
+      "subspace": "ICS",
+      "beta": 0.75
+    },
+    {
+      "weather_bacc": 0.36511099564989546,
+      "weather_gap": 0.17900870568874336,
+      "id_mAP": 0.581718481655948,
+      "subspace": "ICS",
+      "beta": 1.0
+    },
+    {
+      "weather_bacc": 0.36348266894241005,
+      "weather_gap": 0.1695016410591001,
+      "id_mAP": 0.5748859790413811,
+      "subspace": "Random",
+      "beta": 0.0
+    },
+    {
+      "weather_bacc": 0.3635715015317562,
+      "weather_gap": 0.16952191099033248,
+      "id_mAP": 0.5747832423121316,
+      "subspace": "Random",
+      "beta": 0.1
+    },
+    {
+      "weather_bacc": 0.3636121135481265,
+      "weather_gap": 0.1695483734237045,
+      "id_mAP": 0.5747661637994275,
+      "subspace": "Random",
+      "beta": 0.25
+    },
+    {
+      "weather_bacc": 0.36361747920711496,
+      "weather_gap": 0.16958187983120424,
+      "id_mAP": 0.574689773643517,
+      "subspace": "Random",
+      "beta": 0.5
+    },
+    {
+      "weather_bacc": 0.3635376284100901,
+      "weather_gap": 0.1696020342747841,
+      "id_mAP": 0.5747029369899999,
+      "subspace": "Random",
+      "beta": 0.75
+    },
+    {
+      "weather_bacc": 0.3637005248039845,
+      "weather_gap": 0.16960876086939033,
+      "id_mAP": 0.5746960657978808,
+      "subspace": "Random",
+      "beta": 1.0
+    },
+    {
+      "weather_bacc": 0.36348266894241005,
+      "weather_gap": 0.1695016410591001,
+      "id_mAP": 0.5748859790413811,
+      "subspace": "Identity oracle",
+      "beta": 0.0
+    },
+    {
+      "weather_bacc": 0.3631138778815889,
+      "weather_gap": 0.1715021438891528,
+      "id_mAP": 0.5769712205368216,
+      "subspace": "Identity oracle",
+      "beta": 0.1
+    },
+    {
+      "weather_bacc": 0.3634493181935067,
+      "weather_gap": 0.174516546523942,
+      "id_mAP": 0.5799439942878951,
+      "subspace": "Identity oracle",
+      "beta": 0.25
+    },
+    {
+      "weather_bacc": 0.3628848823095691,
+      "weather_gap": 0.1792720131489327,
+      "id_mAP": 0.5830614281202734,
+      "subspace": "Identity oracle",
+      "beta": 0.5
+    },
+    {
+      "weather_bacc": 0.3624499282809571,
+      "weather_gap": 0.18290922765609546,
+      "id_mAP": 0.5826536651546956,
+      "subspace": "Identity oracle",
+      "beta": 0.75
+    },
+    {
+      "weather_bacc": 0.36114713778817015,
+      "weather_gap": 0.18431360549813755,
+      "id_mAP": 0.5807397835882012,
+      "subspace": "Identity oracle",
+      "beta": 1.0
+    }
+  ],
+  "P4": [
+    {
+      "family": "dark",
+      "level": 0.25,
+      "strength": 0.75,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.07846941408920187,
+      "out_E_norm": 0.40042334222589415,
+      "share_in_E": 0.04643452565108572,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "dark",
+      "level": 0.4,
+      "strength": 0.6,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.05100453240744237,
+      "out_E_norm": 0.2776767245651525,
+      "share_in_E": 0.040183224746780315,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "dark",
+      "level": 0.6,
+      "strength": 0.4,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.030337273073220625,
+      "out_E_norm": 0.1754084232658338,
+      "share_in_E": 0.035641204999068296,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "dark",
+      "level": 0.8,
+      "strength": 0.19999999999999996,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.015737103528263095,
+      "out_E_norm": 0.09330965957474266,
+      "share_in_E": 0.03406090277600073,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fapk",
+      "level": 0.3,
+      "strength": 0.7,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.10659332110082125,
+      "out_E_norm": 0.5651511277918989,
+      "share_in_E": 0.044231846567920285,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fapk",
+      "level": 0.5,
+      "strength": 0.5,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.09783647971982927,
+      "out_E_norm": 0.530506537222751,
+      "share_in_E": 0.04248108958534036,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fapk",
+      "level": 0.7,
+      "strength": 0.30000000000000004,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.0765962528797365,
+      "out_E_norm": 0.4186094152636741,
+      "share_in_E": 0.04299329912559492,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fapk",
+      "level": 0.9,
+      "strength": 0.09999999999999998,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.0429135654391012,
+      "out_E_norm": 0.24787260979551462,
+      "share_in_E": 0.04050391039180775,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fog",
+      "level": 0.15,
+      "strength": 0.15,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.0177448459727622,
+      "out_E_norm": 0.10499786778967102,
+      "share_in_E": 0.03587090217024728,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fog",
+      "level": 0.3,
+      "strength": 0.3,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.032719863480407174,
+      "out_E_norm": 0.189760842332671,
+      "share_in_E": 0.03587583892091637,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fog",
+      "level": 0.45,
+      "strength": 0.45,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.048574579720373365,
+      "out_E_norm": 0.2794040361302813,
+      "share_in_E": 0.03610664831840306,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    },
+    {
+      "family": "fog",
+      "level": 0.6,
+      "strength": 0.6,
+      "n": 1830,
+      "n_identity_reference_pairs": 211,
+      "in_E_norm": 0.07030853878519211,
+      "out_E_norm": 0.3949188273887309,
+      "share_in_E": 0.038723390683211296,
+      "identity_ref_in_E_norm": 0.5734043439918642,
+      "identity_ref_out_E_norm": 1.1104776900002773
+    }
+  ],
+  "P5": [
+    {
+      "stage": 1,
+      "label": "HF_stage1_e5",
+      "adapted_domain": "overcast",
+      "shift:overcast": 0.0011411284567753284,
+      "fap:overcast": 0.03911395633316198,
+      "shift:rainy": 0.2513466701680521,
+      "fap:rainy": 0.044687182003714444,
+      "shift:dawn_dusk": 0.1805657266522288,
+      "fap:dawn_dusk": 0.04715867919780415,
+      "shift:night": 0.11816534936117304,
+      "fap:night": 0.03810488574160926
+    },
+    {
+      "stage": 2,
+      "label": "HF_stage2_e5",
+      "adapted_domain": "rainy",
+      "shift:overcast": 0.006315724693921886,
+      "fap:overcast": 0.03813177386664751,
+      "shift:rainy": 0.21380677023084016,
+      "fap:rainy": 0.040731670920113164,
+      "shift:dawn_dusk": 0.2103974459830155,
+      "fap:dawn_dusk": 0.044626330351584004,
+      "shift:night": 0.13240528088989956,
+      "fap:night": 0.03361960665927659
+    },
+    {
+      "stage": 3,
+      "label": "HF_stage3_e5",
+      "adapted_domain": "dawn_dusk",
+      "shift:overcast": 0.05151825452911059,
+      "fap:overcast": 0.03754820814442285,
+      "shift:rainy": 0.2548065132532077,
+      "fap:rainy": 0.038824923136339964,
+      "shift:dawn_dusk": 0.24414472179387856,
+      "fap:dawn_dusk": 0.042891424634235814,
+      "shift:night": 0.05027816294910201,
+      "fap:night": 0.03599839016502136
+    },
+    {
+      "stage": 4,
+      "label": "HF_stage4_e5",
+      "adapted_domain": "night",
+      "shift:overcast": 0.015258122858698544,
+      "fap:overcast": 0.04240976869331328,
+      "shift:rainy": 0.25294928268500005,
+      "fap:rainy": 0.04739831241142057,
+      "shift:dawn_dusk": 0.34158364120073853,
+      "fap:dawn_dusk": 0.049793659478500764,
+      "shift:night": 0.06858578209867766,
+      "fap:night": 0.03759841782772874
+    }
+  ],
+  "P5_angles": [
+    {
+      "from": "HF_stage1_e5",
+      "to": "HF_stage2_e5",
+      "max_angle_deg": 24.552968251169403
+    },
+    {
+      "from": "HF_stage2_e5",
+      "to": "HF_stage3_e5",
+      "max_angle_deg": 34.89601766398748
+    },
+    {
+      "from": "HF_stage3_e5",
+      "to": "HF_stage4_e5",
+      "max_angle_deg": 27.389797826107777
+    }
+  ]
+}

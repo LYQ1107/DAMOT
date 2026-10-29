@@ -15,7 +15,7 @@ drift_cmd=[py,'-u',str(ROOT/'code/tools/analysis/ics_probe_drift.py'),'--feat-ro
 drift_log=(ROOT/'logs'/('S3_'+name+'.log')).open('a');drift=subprocess.Popen(drift_cmd,env=env,stdout=drift_log,stderr=subprocess.STDOUT,cwd=str(ROOT/'code'))
 for version in ['v2','v1']:
     out=ROOT/'results'/('analysis_'+label+('_v2' if version=='v2' else ''))
-    if (out/'summary.json').exists():continue
+    if (out/'summary.json').exists() and (out/'figure_manifest.json').exists():continue
     out.mkdir(parents=True,exist_ok=True)
     write_views(Config.fromfile(str(source/'configs/stage4.py')),out/'resolved_views.txt',dict(features='same fixed-geometry probe as F; not an invocation of training view pipelines'))
     write_json(out/'config_diff.json',dict(model_changes=[],analysis_version=version,covariance_vs_bank_pcs='separate families per user approval; actual angles retained',v2_changes=['k scan 2,4,8,16,32; beta 0,.5,1; random10','Fisher on raw projected features','night binary probes and Full confusion'],original_v1_preserved=True,seed=0))

@@ -6,7 +6,9 @@ ap=argparse.ArgumentParser();ap.add_argument('--count',type=int,default=1);ap.ad
 from protocol import write_json
 def idle():
     raw=subprocess.check_output(['nvidia-smi','--query-gpu=index,memory.used,utilization.gpu','--format=csv,noheader,nounits'],universal_newlines=True)
-    return {int(p[0]) for p in [r.split(',') for r in raw.splitlines()] if int(p[1])<10 and int(p[2])<10},raw
+    free={int(p[0]) for p in [r.split(',') for r in raw.splitlines()] if int(p[1])<10 and int(p[2])<10}
+    if not Path('/data1/liuyeqiang/damot_apr_complement_hf_nogeom_20261029_1443/controller_complete.json').exists():free-={3,4,5,6}
+    return free,raw
 roots=[ROOT/'locks'];legacy=Path('/data1/liuyeqiang/ics_quick_20261029_160807/locks')
 if legacy.exists():roots.append(legacy)
 for r in roots:r.mkdir(exist_ok=True)

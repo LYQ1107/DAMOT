@@ -16,6 +16,7 @@ def main():
     loaded=torch.load(str(common),map_location='cpu')
     assert all(torch.equal(loaded[d][c],history[d][c]) for d in history for c in history[d])
     provenance=dict(source_checkpoint=str(source),checkpoint_sha256=sha(source),history_path=str(common),history_sha256=sha(common),source_history_sidecar=str(statepath),source_sidecar_sha256=sha(statepath),prototypes=300,method='Exact saved stage3 APR history (rank0) shared by all groups and all ranks',deviation='No <stage>_roi_proto.pth filename exists. Exact APR histories were saved in stage3_final_rank*.pth; no approximate reconstruction is needed.',rank_rng_sources={str(r):str(HF/'episode/state'/('stage3_final_rank%d.pth'%r)) for r in range(4)})
+    provenance['rank_rng_sha256']={rank:sha(path) for rank,path in provenance['rank_rng_sources'].items()}
     write_json(ROOT/'manifests/S5_common_history.json',provenance)
     for group,mode,coupled in [('a','proto_shrinkage_cov_ema',True),('b','proto_shrinkage_cov_ema',False),('c','pairwise_residual',True),('d','pairwise_residual',False)]:
         out=ROOT/'results/S5'/('HF_'+group);out.mkdir(parents=True,exist_ok=True)

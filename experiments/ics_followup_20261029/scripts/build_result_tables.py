@@ -28,7 +28,8 @@ def tracking():
                 folder=ROOT/'results/S4'/name/tag/domain
                 assert json.loads((folder/'complete.json').read_text())['status']=='complete'
                 rows+=read(folder/'metrics.csv')
-                for r in read(folder/'evaluation/summary_metrics.csv'):raw.append(dict(checkpoint=name,setting=tag,domain=domain,category=r[''],**{m+'_percent':r[m] for m in METRICS}))
+                for r in read(folder/'evaluation/summary_metrics.csv'):
+                    if r[''] in ['pedestrian','car','truck','bus','motorcycle','bicycle','OVERALL']:raw.append(dict(checkpoint=name,setting=tag,domain=domain,category=r[''],**{m+'_percent':r[m] for m in METRICS}))
     assert len(rows)==144 and len(raw)==504;write(OUT/'table_F_all_domains.csv',rows);write(OUT/'S4_full_class_metrics.csv',raw)
     grouped=defaultdict(list)
     for r in rows:grouped[(r['checkpoint'],r['basis'],r['beta'],r['category'])].append(r)
@@ -62,7 +63,7 @@ def short_training():
             assert (active>0) if g in 'ac' else active==0
             if g in 'cd':
                 pair_rows=read(folder/('pair_checks_rank%d.csv'%rank));assert len(pair_rows)==end['pair_checks'];assert sum(int(r['insufficient_pairs']) for r in pair_rows)==end['insufficient_pairs'];assert {r['min_samples'] for r in pair_rows}=={'96'}
-            bank.append(dict(group=g,rank=rank,num_updates_start=end['num_updates_start'],num_updates_end=end['num_updates_end'],updates=end['updates'],pair_checks=end['pair_checks'],insufficient_pairs=end['insufficient_pairs'],APR_coupled_active_calls_in_this_run=active,history_sha256=start['history_sha256'],source_checkpoint_sha256=start['checkpoint_sha256']))
+            bank.append(dict(group=g,rank=rank,num_updates_start=end['num_updates_start'],num_updates_end=end['num_updates_end'],updates=end['updates'],bank_update_calls=end['bank_update_calls'],bank_successful_update_calls=end['bank_successful_update_calls'],pair_checks=end['pair_checks'],insufficient_pairs=end['insufficient_pairs'],APR_coupled_active_calls_in_this_run=active,history_sha256=start['history_sha256'],source_checkpoint_sha256=start['checkpoint_sha256'],rng_sidecar_sha256=start['rng_sidecar_sha256']))
     assert len(values)==112 and len(forget)==84 and len(bank)==16
     assert len({r['history_sha256'] for r in bank})==1
     write(OUT/'table_G_all_domains.csv',values);write(OUT/'table_G_forgetting.csv',forget);write(OUT/'S5_bank_updates_and_insufficient_pairs.csv',bank)

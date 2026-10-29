@@ -14,6 +14,8 @@ class ICSShortStageStateHook(Hook):
         self.rank=rank;m=unwrap(runner.model);h=m.track_head
         common=json.loads((self.root/'manifests/common.json').read_text())
         assert sha(common['history_path'])==common['history_sha256']
+        assert sha(common['source_checkpoint'])==common['checkpoint_sha256']
+        assert sha(common['rank_rng_sources'][str(rank)])==common['rank_rng_sha256'][str(rank)]
         saved=torch.load(common['source_checkpoint'],map_location='cpu')['state_dict']
         actual=m.state_dict()
         # Check the entire loaded student and teacher; no reset of inherited bank.
@@ -26,7 +28,11 @@ class ICSShortStageStateHook(Hook):
         source=torch.load(common['rank_rng_sources'][str(rank)],map_location='cpu')
         for k,v in source['counters'].items():setattr(h,k,v)
         instrument_fap(m)
-        self.pair_calls=0;self.insufficient=0
+        self.pair_calls=0;self.insufficient=0;self.bank_calls=0;self.bank_success=0
+        original_update=h.causal_bank.update
+        def bank_checks(*args,**kwargs):
+            result=original_update(*args,**kwargs);self.bank_calls+=1;self.bank_success+=int(bool(result));return result
+        h.causal_bank.update=bank_checks
         self.stream=(self.root/('pair_checks_rank%d.csv'%rank)).open('w')
         self.csv=csv.DictWriter(self.stream,fieldnames=['iteration','pairs','min_samples','insufficient_pairs']);self.csv.writeheader()
         original=h._build_pairwise_residuals
@@ -36,7 +42,7 @@ class ICSShortStageStateHook(Hook):
             self.csv.writerow(dict(iteration=runner.iter+1,pairs=n,min_samples=h.causal_min_samples,insufficient_pairs=int(bad)));self.stream.flush()
             return residual,n
         h._build_pairwise_residuals=pair_checks
-        write_json(self.root/('start_rank%d.json'%rank),dict(num_updates=self.start,history_sha256=common['history_sha256'],checkpoint_sha256=common['checkpoint_sha256'],all_loaded_tensors_exact=True,bank_reset=False,activity=activity(m),time=time.time()))
+        write_json(self.root/('start_rank%d.json'%rank),dict(num_updates=self.start,history_sha256=common['history_sha256'],checkpoint_sha256=common['checkpoint_sha256'],rng_sidecar_sha256=common['rank_rng_sha256'][str(rank)],all_loaded_tensors_exact=True,bank_reset=False,activity=activity(m),time=time.time()))
         # Same continuation RNG for corresponding ranks in every factorial group.
         random.setstate(source['python_rng']);np.random.set_state(source['numpy_rng']);torch.set_rng_state(source['torch_rng']);torch.cuda.set_rng_state(source['cuda_rng'])
     def before_train_epoch(self,runner):
@@ -52,7 +58,7 @@ class ICSShortStageStateHook(Hook):
         write_json(self.root/('epoch%d_rank%d.json'%(runner.epoch+1,self.rank)),dict(activity=activity(runner.model),insufficient_pairs=self.insufficient,pair_checks=self.pair_calls))
     def after_run(self,runner):
         self.stream.close();end=int(unwrap(runner.model).track_head.causal_bank.num_updates.item())
-        write_json(self.root/('end_rank%d.json'%self.rank),dict(num_updates_start=self.start,num_updates_end=end,updates=end-self.start,pair_checks=self.pair_calls,insufficient_pairs=self.insufficient,activity=activity(runner.model),time=time.time()))
+        write_json(self.root/('end_rank%d.json'%self.rank),dict(num_updates_start=self.start,num_updates_end=end,updates=end-self.start,bank_update_calls=self.bank_calls,bank_successful_update_calls=self.bank_success,pair_checks=self.pair_calls,insufficient_pairs=self.insufficient,activity=activity(runner.model),time=time.time()))
 
 def main():
     args=seq.parse_args()

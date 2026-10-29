@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": {
+    "HF_v1_v2_P1_exact": true,
+    "HF_complete_prespecified_scan": true,
+    "HF_full_confusion_count": 18019,
+    "HF_all_20_domain_checkpoint_ROI_files_match_F": true,
+    "all_exported_bases_orthonormal_and_drift_conservation": true,
+    "F_full_native_and_reference_validations": true
+  }
+}

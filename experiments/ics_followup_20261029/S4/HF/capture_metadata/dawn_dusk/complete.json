@@ -1,0 +1,7 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night/epoch_5.pth",
+  "videos": 33,
+  "frames": 6476,
+  "precision": "FP32",
+  "source": "native simple_test; detections and embeddings cached without quantization"
+}

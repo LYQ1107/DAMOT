@@ -1,0 +1,679 @@
+{
+  "status": "PASS",
+  "comparisons": 112,
+  "reference": "user-approved fresh native F",
+  "records": [
+    {
+      "domain": "overcast",
+      "category": "pedestrian",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "pedestrian",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "pedestrian",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "pedestrian",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "car",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "car",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "car",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "car",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "truck",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "truck",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "truck",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "truck",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bus",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bus",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bus",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bus",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "motorcycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "motorcycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "motorcycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "motorcycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bicycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bicycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bicycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "bicycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "OVERALL",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "OVERALL",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "OVERALL",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "overcast",
+      "category": "OVERALL",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "pedestrian",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "pedestrian",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "pedestrian",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "pedestrian",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "car",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "car",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "car",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "car",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "truck",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "truck",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "truck",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "truck",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bus",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bus",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bus",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bus",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "motorcycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "motorcycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "motorcycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "motorcycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bicycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bicycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bicycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "bicycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "OVERALL",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "OVERALL",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "OVERALL",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "rainy",
+      "category": "OVERALL",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "pedestrian",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "pedestrian",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "pedestrian",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "pedestrian",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "car",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "car",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "car",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "car",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "truck",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "truck",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "truck",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "truck",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bus",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bus",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bus",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bus",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "motorcycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "motorcycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "motorcycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "motorcycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bicycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bicycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bicycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "bicycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "OVERALL",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "OVERALL",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "OVERALL",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "dawn_dusk",
+      "category": "OVERALL",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "pedestrian",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "pedestrian",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "pedestrian",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "pedestrian",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "car",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "car",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "car",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "car",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "truck",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "truck",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "truck",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "truck",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bus",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bus",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bus",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bus",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "motorcycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "motorcycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "motorcycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "motorcycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bicycle",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bicycle",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bicycle",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "bicycle",
+      "metric": "AssA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "OVERALL",
+      "metric": "HOTA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "OVERALL",
+      "metric": "DetA",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "OVERALL",
+      "metric": "IDF1",
+      "difference": 0.0
+    },
+    {
+      "domain": "night",
+      "category": "OVERALL",
+      "metric": "AssA",
+      "difference": 0.0
+    }
+  ]
+}

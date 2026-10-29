@@ -1,0 +1,8 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night/epoch_5.pth",
+  "sha256": "63f8c6e8504caed2a7572fc1fc7d07e42632cc617747b8efa265f9a4098e14b3",
+  "loaded": 364,
+  "target": 364,
+  "missing": [],
+  "fusion": true
+}

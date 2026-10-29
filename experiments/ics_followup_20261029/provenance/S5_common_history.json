@@ -13,5 +13,11 @@
     "1": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank1.pth",
     "2": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank2.pth",
     "3": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank3.pth"
+  },
+  "rank_rng_sha256": {
+    "0": "a251ee49ce8968a0595de6e0c50070da9f1d0465d21c7d1ae1e36fb94255cd06",
+    "1": "c953a7e44aeed5e113c11e72a35179985c424ec93ca6c753ff19879aede768e9",
+    "2": "85b456aa24a16ef133c19ebebe471a842acf5d20eb16e3a022e2caf15634bec6",
+    "3": "0dab501913e6994f0a07eddde1ce09d3a1c2cb72549e8259a8a8137ef9bd1071"
   }
 }

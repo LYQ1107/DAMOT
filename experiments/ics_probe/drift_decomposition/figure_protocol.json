@@ -1,6 +1,7 @@
 {
   "models": [
-    "F"
+    "F",
+    "HF"
   ],
   "left": "Fixed stage3→4, old test RoIs; m16 bases plus actual stored ICS2 (covariance16 is separate)",
   "right": "Stage4←j, equal mean of the three old domains; all six restorations",

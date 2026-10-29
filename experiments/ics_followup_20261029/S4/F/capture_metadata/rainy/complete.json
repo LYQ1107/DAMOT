@@ -1,0 +1,7 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth",
+  "videos": 17,
+  "frames": 3150,
+  "precision": "FP32",
+  "source": "native simple_test; detections and embeddings cached without quantization"
+}

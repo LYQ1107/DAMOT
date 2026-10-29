@@ -1,0 +1,5 @@
+{
+  "replaced_queue_pid": 26825,
+  "model_process_started": false,
+  "reason": "Reserve NOGEOM GPUs3\u20136 until its original controller completes, including gaps between training and evaluation"
+}

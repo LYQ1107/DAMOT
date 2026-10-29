@@ -1,11 +1,9 @@
 {
-  "run_directory": "/data1/liuyeqiang/damot_ics_followup_20261029",
-  "code_base_commit": "ebc3190b2fa82d9e117315998c0d7435033e113c",
-  "completed_analyses": [
-    "analysis_F_stage4_e5_v2"
-  ],
-  "S4": "F fresh V100 beta0 approved by user; native/cache equality and fresh baseline metrics passed on all four domains; nonzero grid is running. Historical metrics and all differences preserved.",
-  "S5": "prepared and checked on CPU; waiting for original NOGEOM completion and S4; only Night 2 epochs will execute",
-  "NOGEOM": "original run resumed after transient NAS outage; never treated as complete because GPUs were temporarily idle",
-  "updated_UTC": "2026-10-29 08:41:32"
+  "run": "/data1/liuyeqiang/damot_ics_followup_20261029",
+  "F_S1_S2_S3_S4": "complete",
+  "HF_S1_S2_S3": "complete",
+  "HF_S4": "pending GPU",
+  "NOGEOM_S1_S2_S3": "pending original run completion",
+  "S5": "prepared, not trained",
+  "selection_by_metric": false
 }

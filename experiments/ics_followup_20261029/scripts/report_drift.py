@@ -1,5 +1,8 @@
 """Full CSV/LaTeX export and a fixed, prespecified two-panel S3 figure."""
-import csv,json,sys
+import csv,json,os,sys
+os.environ.setdefault('MKL_THREADING_LAYER','GNU')
+os.environ.setdefault('OMP_NUM_THREADS','1')
+os.environ.setdefault('OPENBLAS_NUM_THREADS','1')
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 import numpy as np
@@ -69,7 +72,7 @@ def main():
         ax[1].plot(np.arange(7),vals,'o-',color=colors[i],label=n)
     ax[1].axhline(0,color='.5',lw=.7);ax[1].set_xticks(np.arange(7));ax[1].set_xticklabels(labels2,rotation=20,ha='right',fontsize=10);ax[1].set_ylabel('Same-stage mAP − cross-stage mAP (pp)');ax[1].set_title('Stage 4 queries: equal mean over three old domains');ax[1].legend(frameon=False)
     for a in ax:a.grid(axis='y',alpha=.2);a.set_axisbelow(True)
-    fig.suptitle('Fixed reference: F stage1 fit videos; all reported statistics use test videos',fontsize=12);fig.tight_layout(rect=(0,0,1,.95))
+    fig.suptitle('FAP/weather/identity bases: F stage1 fit; ICS: destination bank; statistics: test videos',fontsize=12);fig.tight_layout(rect=(0,0,1,.95))
     for ext in ['png','pdf']:fig.savefig(str(OUT/('drift_decomposition.'+ext)),dpi=200,bbox_inches='tight')
     plt.close(fig)
     write_json(OUT/'figure_protocol.json',dict(models=names,left='Fixed stage3→4, old test RoIs; m16 bases plus actual stored ICS2 (covariance16 is separate)',right='Stage4←j, equal mean of the three old domains; all six restorations',all_transitions_and_ranks_retained_in_CSV=True,selection_by_metric=False))

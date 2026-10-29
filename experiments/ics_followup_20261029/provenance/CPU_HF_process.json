@@ -1,0 +1,11 @@
+{
+  "pid": 26584,
+  "exit_code": 0,
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/analyze_group.py",
+    "HF"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/CPU_HF_1793270581287137792.log",
+  "end": 1793273094.3295548
+}

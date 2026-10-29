@@ -83,7 +83,9 @@ def main():
             captured=all((ROOT/'cache/S4/HF'/d/'complete.json').exists() for d in D)
             if not captured:start('S4_HF_capture',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','HF','--capture-only'],gpu=1)
             elif not all((ROOT/'results/S4/HF/baseline'/d/'complete.json').exists() for d in D):start('S4_HF_baseline',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','HF','--baseline-only'],gpu=1)
-        if (ROOT/'results/S4/F/native_projection_validation.json').exists() and (ROOT/'results/analysis_HF_stage4_e5_v2/bases/provenance.json').exists() and not s4_done('HF'):start('S4_HF',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','HF'],active='ics_tracking_intervention.py --model HF',gpu=1)
+        HF_baseline_done=all((ROOT/'results/S4/HF/baseline'/d/'complete.json').exists() for d in D)
+        if (ROOT/'results/S4/F/native_projection_validation.json').exists() and not HF_baseline_done:start('S4_HF_baseline',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','HF','--baseline-only'],gpu=1)
+        if (ROOT/'results/S4/F/native_projection_validation.json').exists() and HF_baseline_done and (ROOT/'results/analysis_HF_stage4_e5_v2/bases/provenance.json').exists() and not s4_done('HF'):start('S4_HF',[PY,'-u',str(CODE/'tools/run/ics_tracking_intervention.py'),'--model','HF'],active='ics_tracking_intervention.py --model HF',gpu=1)
         if s4_done('HF') and not (ROOT/'results/S4/HF/native_projection_validation.json').exists():start('S4_native_HF',[PY,str(CODE/'tools/run/ics_validate_native_projection.py'),'--model','HF'],gpu=1)
         # NOGEOM evaluation finishes before these four GPUs are eligible.
         for ix,g in enumerate('abcd'):

@@ -1,0 +1,9 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+{
+  "Fisher_raw_known_value_and_scale_invariance": true,
+  "Oracle_rank_truncation": true,
+  "S4_beta0_exact_identity_and_raw_beta1_projection": true,
+  "S2_complete_78_cell_grid_and_frozen_beta0": true,
+  "S2_P1_matches_published_v1_exactly": true,
+  "S3_orthogonal_energy_conservation": true
+}

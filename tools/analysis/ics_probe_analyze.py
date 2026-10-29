@@ -66,6 +66,8 @@ def parse_args():
     p.add_argument('--montage', action='store_true',
                    help='read image crops for Fig. 3 (needs image paths)')
     p.add_argument('--seed', type=int, default=0)
+    p.add_argument('--v2', action='store_true', help='S2 multidimensional controls and Fisher ratio')
+    p.add_argument('--probe-only', action='store_true', help='P1/P2 and binary probes only (S5)')
     p.add_argument('--out', required=True)
     return p.parse_args()
 
@@ -304,6 +306,113 @@ def write_tex(path, text):
         f.write(text)
 
 
+def rank_basis(rows, k, center=False):
+    cov = cov_of(rows, center=center)
+    w, v = np.linalg.eigh((cov + cov.T) / 2)
+    order = np.argsort(w)[::-1]
+    rank = int((w > max(float(w.max()), EPS) * 1e-9).sum())
+    return v[:, order[:min(k, rank)]]
+
+
+def fisher_ratio(X, weather, cls):
+    """Trace ratio on raw projected features; no row renormalization."""
+    between, within = 0.0, 0.0
+    for c in np.unique(cls):
+        m = cls == c
+        mu = X[m].mean(0)
+        for d in np.unique(weather[m]):
+            a = m & (weather == d)
+            md = X[a].mean(0)
+            between += a.sum() * float(((md - mu) ** 2).sum())
+            within += float(((X[a] - md) ** 2).sum())
+    return between / (within + EPS)
+
+
+def probe_predictions(Xf, yf, Xt, yt, seed):
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.metrics import balanced_accuracy_score
+    if len(Xf) > 20000:
+        ii = np.random.RandomState(seed).choice(len(Xf), 20000, replace=False)
+        Xf, yf = Xf[ii], yf[ii]
+    mu, sd = Xf.mean(0), Xf.std(0) + 1e-6
+    clf = LogisticRegression(C=1., max_iter=2000, solver='lbfgs', class_weight='balanced')
+    clf.fit((Xf - mu) / sd, yf)
+    pred = clf.predict((Xt - mu) / sd)
+    return float(balanced_accuracy_score(yt, pred)), pred
+
+
+def binary_probes(Xf, Xt, wf, wt, seed):
+    a, b = np.isin(wf, ['night', 'clear_holdout_45v']), np.isin(wt, ['night', 'clear_holdout_45v'])
+    return dict(night_vs_clear_bacc=probe_predictions(Xf[a], (wf[a] == 'night').astype(int), Xt[b], (wt[b] == 'night').astype(int), seed)[0],
+                night_vs_rest_bacc=probe_predictions(Xf, (wf == 'night').astype(int), Xt, (wt == 'night').astype(int), seed)[0])
+
+
+def v2_interventions(args, data, bank, Z, fit, te, weather, cls, wlab, tasks):
+    E = orth(bank['pcs'].T.astype(float))
+    angles = principal_angles_deg(E, top_eig(bank['cov_bank'].astype(float), 2))
+    try:
+        assert float(angles.max()) < 1., 'covariance/PCS max principal angle %.6f deg' % angles.max()
+        equivalent = True
+    except AssertionError as error:
+        equivalent = False
+        print('[S2 assertion failed; approved separate labels] %s' % error, flush=True)
+    with open(osp.join(args.out, 'covariance_bank_equivalence.json'), 'w') as f:
+        json.dump(dict(angles_deg=angles.tolist(),threshold_deg=1,passed=equivalent,
+                       user_approved_resolution='Report stored bank_pcs separately from covariance eigenvector scans; never assert equivalence.'), f, indent=2)
+    iw = identity_rows(Z[fit], data['video'][fit], data['instance_id'][fit], cls[fit])
+    ww = between_weather_rows(Z[fit], weather[fit], cls[fit])
+    residual = normalize(data['feat_fap'].astype(float)) - Z
+    fap = residual[fit & np.isfinite(residual).all(1)]
+    rng = np.random.RandomState(args.seed + 9973)
+    def measure(B, beta):
+        raw = Z - beta * (Z @ B) @ B.T
+        scaled = normalize(raw)
+        return dict(id_mAP=retrieval_map(raw[te],tasks),weather_bacc=weather_probe(scaled[fit],wlab[fit],scaled[te],wlab[te],args.seed),
+                    weather_fisher=fisher_ratio(raw[te],weather[te],cls[te]))
+    zero = measure(E,0.)
+    rows = []
+    def append(name,k,Bs):
+        for beta in [0.,.5,1.]:
+            values = [zero] if beta == 0 else [measure(B,beta) for B in Bs]
+            r=dict(subspace=name,k_requested=k,k_effective=Bs[0].shape[1],beta=beta,random_repeats=10 if name=='Random' else 1)
+            for key in zero:
+                r[key]=float(np.mean([v[key] for v in values]))
+                r[key+'_std']=float(np.std([v[key] for v in values]))
+            rows.append(r)
+            write_csv(osp.join(args.out,'csv/P3_intervention.csv'),rows)
+            print('[P3-v2] %s k=%d/%d beta=%.1f %s'%(name,k,r['k_effective'],beta,r),flush=True)
+    append('ICS stored bank_pcs',2,[E])
+    for k in [2,4,8,16,32]:
+        append('ICS covariance eigenvectors',k,[top_eig(bank['cov_bank'].astype(float),k)])
+        append('Identity oracle',k,[rank_basis(iw,k)])
+        append('Weather oracle',k,[rank_basis(ww,k)])
+        append('FAP residual PCA',k,[rank_basis(fap,k,True)])
+        append('Random',k,[orth(rng.randn(Z.shape[1],k)) for _ in range(10)])
+    return rows
+
+
+def export_s4_bases(args, data, bank, Z, fit, weather, cls):
+    folder=osp.join(args.out,'bases');os.makedirs(folder,exist_ok=True)
+    R=normalize(data['feat_fap'].astype(float))-Z
+    clear=fit & (weather=='clear_holdout_45v') & np.isfinite(R).all(1)
+    bases={'ICS_stored_m2':orth(bank['pcs'].T.astype(float)),
+           'FAP_clear_fit_m2':rank_basis(R[clear],2,True),
+           'Identity_fit_m16':rank_basis(identity_rows(Z[fit],data['video'][fit],data['instance_id'][fit],cls[fit]),16),
+           'Random_m2':orth(np.random.RandomState(args.seed+9973).randn(Z.shape[1],2))}
+    for name,B in bases.items():np.save(osp.join(folder,name+'.npy'),B.T)
+    with open(osp.join(folder,'provenance.json'),'w') as f:
+        json.dump(dict(label=args.label,fit_videos=np.unique(data['video'][fit]).tolist(),clear_fit_videos=np.unique(data['video'][clear]).tolist(),
+                       FAP_uses_target_labels=False,basis_orientation='rows k x D',random_seed=args.seed+9973),f,indent=2)
+
+
+def v2_table(args, rows):
+    lines=[r'\begin{tabular}{lrrrrrr}',r'\toprule',r'Subspace & $k$ & Effective $k$ & $\beta$ & ID mAP & Weather BAcc & Fisher \\',r'\midrule']
+    for r in rows:
+        lines.append('%s & %d & %d & %.1f & %.5f & %.5f & %.6f \\\\'%(r['subspace'],r['k_requested'],r['k_effective'],r['beta'],r['id_mAP'],r['weather_bacc'],r['weather_fisher']))
+    lines += [r'\bottomrule',r'\end{tabular}']
+    write_tex(osp.join(args.out,'tables/tab_P3_intervention.tex'),'\n'.join(lines)+'\n')
+
+
 # --------------------------------------------------------------------------- #
 def main():
     args = parse_args()
@@ -431,13 +540,34 @@ def main():
     spaces.append(('Identity oracle %d-d' % m, lambda X: X @ ri))
     for name, f in spaces:
         Xf, Xt = f(Z[fit]), f(Z[te])
-        p2.append({'space': name,
+        row = {'space': name,
                    'weather_bacc': weather_probe(Xf, wlab[fit], Xt, wlab[te], args.seed),
                    'chance': 1.0 / len(np.unique(wlab)),
-                   'id_mAP': retrieval_map(Xt, tasks)})
+                   'id_mAP': retrieval_map(Xt, tasks)}
+        if args.v2:
+            row.update(binary_probes(Xf,Xt,weather[fit],weather[te],args.seed))
+            if name.startswith('Full'):
+                from sklearn.metrics import confusion_matrix
+                _, pred = probe_predictions(Xf,wlab[fit],Xt,wlab[te],args.seed)
+                names=np.unique(weather);cm=confusion_matrix(wlab[te],pred,labels=np.arange(len(names)))
+                write_csv(osp.join(args.out,'csv/P2_full_confusion_counts.csv'),[dict(true_domain=str(d),**{str(c):int(cm[i,j]) for j,c in enumerate(names)}) for i,d in enumerate(names)])
+                write_csv(osp.join(args.out,'csv/P2_full_confusion_row_normalized.csv'),[dict(true_domain=str(d),**{str(c):float(cm[i,j]/max(cm[i].sum(),1)) for j,c in enumerate(names)}) for i,d in enumerate(names)])
+                summary['P2_full_confusion']=dict(domains=names.tolist(),counts=cm.tolist())
+        p2.append(row)
     write_csv(osp.join(args.out, 'csv', 'P2_dissociation.csv'), p2)
     summary['P2'] = p2
     summary['n_retrieval_queries'] = len(tasks)
+    if args.v2:
+        export_s4_bases(args,data,bank,Z,fit,weather,cls)
+        write_csv(osp.join(args.out,'csv/P2_binary.csv'),[dict(space=r['space'],night_vs_clear_bacc=r['night_vs_clear_bacc'],night_vs_rest_bacc=r['night_vs_rest_bacc'],chance=.5) for r in p2])
+        summary['protocol'].update(fisher_features='Z - beta * Z E E^T, without L2 renormalization; car test split',classifier_features='L2 renormalized as v1; refitted at each intervention',covariance_scan_equivalent_to_bank_pcs=False)
+    if args.probe_only:
+        tables(args,p1,p2,[],m,D)
+        os.remove(osp.join(args.out,'tables/tab_P3_intervention.tex'))
+        summary.update(P3=[],P4=[],P5=[],probe_only=True)
+        with open(osp.join(args.out,'summary.json'),'w') as f:json.dump(summary,f,indent=2,default=float)
+        print('[done] P1/P2/binary probes only: '+args.out,flush=True)
+        return
 
     # ---------------- P3 intervention ----------------
     xw_tasks = []
@@ -446,10 +576,12 @@ def main():
                                        frame[te], inst[te], args.ref_variant,
                                        args.window, args.max_queries, args.seed)
     p3 = []
+    if args.v2:
+        p3=v2_interventions(args,data,bank,Z,fit,te,weather,cls,wlab,tasks)
     baseline = intervene(Z, E, 0.0, fit, te, wlab, weather, cls, tasks,
                          xw_tasks, args.seed)
-    for sname, Eb in (('ICS', E), ('Random', None),
-                      ('Identity oracle', ri)):
+    for sname, Eb in ([] if args.v2 else [('ICS', E), ('Random', None),
+                      ('Identity oracle', ri)]):
         for b in betas:
             if b == 0:
                 # All subspaces have exactly the same zero-dose features.
@@ -515,6 +647,9 @@ def main():
 
     # ---------------- tables and figures ----------------
     tables(args, p1, p2, p3, m, D)
+    if args.v2:
+        v2_table(args,p3)
+        write_csv(osp.join(args.out,'csv/P2_binary.csv'),[dict(space=r['space'],night_vs_clear_bacc=r['night_vs_clear_bacc'],night_vs_rest_bacc=r['night_vs_rest_bacc'],chance=.5) for r in p2])
     try:
         figures(args, data, Z, E, bases, randoms, weather, video, inst, te, p1, p4, p5)
     except Exception as e:

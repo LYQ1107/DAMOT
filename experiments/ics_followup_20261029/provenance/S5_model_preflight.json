@@ -1,0 +1,20 @@
+{
+  "a": {
+    "keys": 752,
+    "mode": "proto_shrinkage_cov_ema",
+    "bank_mode": "proto_shrinkage_cov_ema",
+    "num_updates": 660,
+    "bank_inherited_exact": true,
+    "min_samples": 96,
+    "seed": 1790355234
+  },
+  "c": {
+    "keys": 752,
+    "mode": "pairwise_residual",
+    "bank_mode": "pairwise_residual",
+    "num_updates": 660,
+    "bank_inherited_exact": true,
+    "min_samples": 96,
+    "seed": 1790355234
+  }
+}

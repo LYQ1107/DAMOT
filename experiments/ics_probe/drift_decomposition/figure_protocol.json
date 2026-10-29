@@ -1,0 +1,9 @@
+{
+  "models": [
+    "F"
+  ],
+  "left": "Fixed stage3→4, old test RoIs; m16 bases plus actual stored ICS2 (covariance16 is separate)",
+  "right": "Stage4←j, equal mean of the three old domains; all six restorations",
+  "all_transitions_and_ranks_retained_in_CSV": true,
+  "selection_by_metric": false
+}

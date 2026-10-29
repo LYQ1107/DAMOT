@@ -1,0 +1,9 @@
+{
+  "angles_deg": [
+    0.9282505562798531,
+    1.7519344566625346
+  ],
+  "threshold_deg": 1,
+  "passed": false,
+  "user_approved_resolution": "Report stored bank_pcs separately from covariance eigenvector scans; never assert equivalence."
+}

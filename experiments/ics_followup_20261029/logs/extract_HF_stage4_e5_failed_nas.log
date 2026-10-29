@@ -1,0 +1,52 @@
+[plan] clear_holdout_45v  videos=40 frames=1200 dose_frames=120 missing(sampled)=0
+[plan] overcast           videos=22 frames=660 dose_frames=66 missing(sampled)=0
+[plan] rainy              videos=17 frames=510 dose_frames=51 missing(sampled)=0
+[plan] dawn_dusk          videos=33 frames=990 dose_frames=99 missing(sampled)=0
+[plan] night              videos=36 frames=1080 dose_frames=108 missing(sampled)=0
+2026-10-29 08:02:41,870 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-29 08:02:41,870 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-29 08:02:41,870 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-29 08:02:42,400 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-29 08:02:42,400 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-29 08:02:42,400 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+[model] {"checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night/epoch_5.pth", "config": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/configs/stage4.py", "matched_keys": 752, "target_keys": 752, "missing_keys": 0, "bank_cfg": {"use_causal_direction_bank": true, "causal_pca_mode": "proto_shrinkage_cov_ema", "causal_num_pcs": 2, "causal_start_pc": 0, "causal_trim_alpha": 0.1, "causal_normalize_feats": true, "causal_residual_normalize_before_delta": null, "use_roi_proto_memory": true, "roi_proto_class_ids": [1]}, "bank_initialized": true, "bank_num_updates": 833, "missing_key_names": [], "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only"}
+[clear_holdout_45v] 50/1200 frames  166.4s
+[clear_holdout_45v] 100/1200 frames  201.4s
+[clear_holdout_45v] 150/1200 frames  290.1s
+[clear_holdout_45v] 200/1200 frames  394.9s
+[clear_holdout_45v] 250/1200 frames  444.7s
+[clear_holdout_45v] 300/1200 frames  508.0s
+[clear_holdout_45v] 350/1200 frames  661.3s
+[clear_holdout_45v] 400/1200 frames  861.2s
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/concurrent/futures/process.py", line 239, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/analysis/ics_probe_extract.py", line 208, in prepare_view_task
+    img, ratio = preprocess(path, scale)
+  File "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/analysis/ics_probe_extract.py", line 324, in preprocess
+    img = mmcv.imread(path)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/image/io.py", line 203, in imread
+    img_bytes = file_client.get(img_or_path)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/fileio/file_client.py", line 1014, in get
+    return self.client.get(filepath)
+  File "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/fileio/file_client.py", line 535, in get
+    with open(filepath, 'rb') as f:
+OSError: [Errno 107] Transport endpoint is not connected: '/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_holdout_45v/003e23ee-07d32feb/003e23ee-07d32feb-0000059.jpg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "tools/analysis/ics_probe_extract.py", line 491, in <module>
+    main()
+  File "tools/analysis/ics_probe_extract.py", line 401, in main
+    plan, name, prefix, views, args, pool):
+  File "tools/analysis/ics_probe_extract.py", line 232, in prepared_frames
+    prepared = future.result()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+OSError: [Errno 107] Transport endpoint is not connected: '/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_holdout_45v/003e23ee-07d32feb/003e23ee-07d32feb-0000059.jpg'

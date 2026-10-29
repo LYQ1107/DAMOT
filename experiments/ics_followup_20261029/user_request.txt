@@ -1,0 +1,108 @@
+【任务总览】（不做整段 4 域训练）
+背景：ICS 探针（ebc3190）显示当前 ICS（proto_shrinkage_cov_ema）子空间接近身份方向（与身份 oracle 夹角 13°，
+身份能量 29% > 跨域偏移 14.6%）；离线 FAP 成对残差 PCA 的天气/身份比 3.15，接近天气 oracle（3.10）。
+本轮只做推理、离线分析和"只重训最后一个阶段"的短实验，回答：
+  Q1 已完成的耦合实验里 APR 放开的是什么方向？
+  Q2 哪些方向的漂移真正导致旧域遗忘？（论文核心论点：不是所有漂移都导致遗忘）
+  Q3 在真实跟踪指标上，去掉哪种子空间会伤害/帮助关联？
+  Q4 不跑完整 4 域，ICS 估计器换成成对残差、以及 APR 耦合，在最后一个阶段各有多大影响？
+总原则：
+  - 只改本说明列出的字段；种子、阈值、评估协议与之前一致；
+  - 每项交付 config_diff.json、resolved_views.txt（打印 teacher/student/contrastive pipeline、data.train pipeline、
+    track_head 的 causal_* 与 roi_proto_* 字段）、日志、CSV；
+  - 结果提交到 GitHub experiments/<实验名>/，不传 npz 和权重；不按结果筛选；与本说明不一致之处单独列出。
+参照运行：
+  F      = 论文版 F_stage{1..4}_e5（rebuttal RUN 的 cache/weights）
+  HF     = /data1/liuyeqiang/damot_apr_complement_hf_20261028_1420
+  NOGEOM = /data1/liuyeqiang/damot_apr_complement_hf_nogeom_20261029_1443（若仍在训练，完成后再纳入）
+
+================================================================
+S1 配置核对 + 探针（只推理，1 张 GPU，约 1.5 h / checkpoint 组）
+================================================================
+S1.1 对 HF、NOGEOM 的 stage01 与 stage04 resolved 配置，记录：
+  teacher/contrastive pipeline 是否含 SeqRandomFlip / SeqRandomCrop / SeqResize.ratio_range；
+  student/contrastive 中 SeqSPAFrequencyTransform 的 mode 与参数；data.train 的 flip_ratio；
+  causal_pca_mode, causal_num_pcs, causal_trim_alpha, roi_proto_couple_ics/beta/basis。
+  NOGEOM 若仍含几何变换，立即报告。
+S1.2 用 experiments/ics_probe 现有脚本，对 HF（及 NOGEOM）stage1–4 epoch_5 抽特征并跑 P1–P5：
+  stage4 抽全部视图+剂量；stage1–3 只抽 clean,fap。抽样/类别/划分/种子与 F 完全相同（同一批 RoI）。
+
+================================================================
+S2 探针分析修正（只改 ics_probe_analyze.py，CPU，不重新抽特征；对 F、HF、NOGEOM 都重跑）
+================================================================
+S2.1 P3 多维负对照：k ∈ {2,4,8,16,32}，β ∈ {0,0.5,1}，子空间 = ICS（用 bank_cov_bank 前 k 个特征向量；
+     k=2 时先断言与 bank_pcs 主角 <1°）、身份 oracle、天气 oracle（秩不足取到秩为止）、FAP 残差 PCA、随机 k 维（10 次平均）。
+     每格报告 ID mAP、天气平衡准确率、Fisher 比（S2.2）。
+S2.2 域间距改为 Fisher = tr(S_between_domain)/tr(S_within_domain)，在未重新归一化的 (Z − βZEEᵀ) 上按 car 计算，test 划分。
+S2.3 P2 增加二分类探针：night vs clear_holdout_45v；night vs 其余四域。各空间都报告，并给 Full 空间 5 类混淆矩阵。
+交付：analysis_*_v2/，旧结果不覆盖。
+
+================================================================
+S3 跨阶段漂移分解（CPU，用 S1 和已有的 F stage1–4 clean 特征，不需要 GPU）
+================================================================
+目的：检验"天气方向的漂移不伤害旧域关联，身份方向的漂移才导致遗忘"。
+对 F、HF（NOGEOM 完成后也做）：
+  记 z_k(r) 为第 k 阶段 checkpoint 对同一 RoI r 的归一化嵌入（各阶段 RoI 完全相同，已校验）。
+S3.1 漂移分解：对每个相邻阶段 (k-1→k) 和 (1→4)，Δ(r) = z_k(r) − z_{k-1}(r)。在以下子空间（都用 fit 视频估计，
+     F_stage1 的特征上，m = 2 和 16 两档）上报告 ‖PΔ‖²/‖Δ‖² 的均值：
+     FAP 残差 PCA、天气 oracle、身份 oracle、当前 ICS（该阶段 bank）、随机。分别对"旧域 RoI"和"当前域 RoI"统计。
+S3.2 跨阶段检索（模拟 APR 用旧原型匹配）：对每个旧域 j < k，query 用 z_k、gallery 用 z_j
+     （同一视频、帧间隔 gap/window 与 P2 相同），算 ID mAP_cross(k←j)；同时算 mAP_same(j←j)。
+     遗忘代理 = mAP_same − mAP_cross。
+S3.3 归因：把 Δ 中某个子空间的分量还原回去（z_k' = z_k − P_W (z_k − z_j)，W 分别取 FAP 残差 PCA 和身份 oracle，
+     m = 2/8/16），重新算 mAP_cross。
+     预期支持论点的结果：还原身份 oracle 分量能明显减少遗忘代理，还原 FAP/天气分量基本不变。
+S3.4 F 与 HF 对比：耦合 APR（HF）在补空间的漂移是否比 F 小，在 ICS 子空间的漂移是否更大。
+交付：experiments/ics_probe/drift_decomposition/ 下的 CSV、LaTeX 表，以及一张图
+     （横轴子空间、纵轴漂移能量占比；第二子图为各子空间还原后的遗忘代理）。
+
+================================================================
+S4 推理时子空间干预的跟踪评估（只推理，1 张 GPU，约 2–3 h）
+================================================================
+目的：用真实 HOTA/AssA 代替 P3 的离线检索，检验去掉哪类方向对关联有害或有利。
+实现：在 track_head 推理时得到关联嵌入后、送入 tracker 之前，加一个可配置的线性变换
+     z ← z − β·(z Eᵀ)E，变换后按原来的方式进入 tracker，默认关闭（只加开关，不改其他逻辑）。
+     E 从 npz 读取或由 S2 的结果导出，保存为 .npy。
+基：
+  (a) 当前 ICS（bank_pcs, m=2）
+  (b) FAP 残差 PCA（m=2，只用 clear_holdout_45v 的 RoI 估计，无需目标域标签，避免泄露）
+  (c) 身份 oracle 前 16 维（fit 视频估计，作为负对照，预期 AssA 明显下降）
+  (d) 随机 2 维
+β ∈ {0.5, 1.0}；β=0 即原始结果（必须与已有冻结评估数值一致，先做这一致性检查）。
+checkpoint：F_stage4_e5 与 HF stage4 epoch5；评估域：4 个目标域全部。
+交付：每个 (checkpoint, 基, β, 域) 的 HOTA/DetA/IDF1/AssA，以及相对 β=0 的差值表。
+
+================================================================
+S5 只重训最后一个阶段的 2×2 短实验（4×V100，每组约 1 h，共 4 组）
+================================================================
+起点：HF 的 stage03_after_dawn_dusk epoch_5 checkpoint，用 train_seq3_episode.py --resume-episode-from-stage 4
+      只训练 Night 阶段，epochs-per-stage = 2（四组相同，以便公平比较；不要与 5 epoch 的完整结果直接比较绝对值）。
+APR 历史原型：先确认 HF 是否保存了 stage1–3 的 <stage>_roi_proto.pth。若没有，用 rebuttal 脚本 profile_damot.py rebuild
+      的方式，由 stage1–3 checkpoint 在各自域上重建历史原型；四组使用同一份原型（记录 sha256）。
+四组（只改 track_head 下列字段，其余与 HF 完全相同，包括几何与高低频设置）：
+  S5-a  causal_pca_mode='proto_shrinkage_cov_ema', roi_proto_couple_ics=True   （= HF 原设置，短训练对照）
+  S5-b  causal_pca_mode='proto_shrinkage_cov_ema', roi_proto_couple_ics=False
+  S5-c  causal_pca_mode='pairwise_residual',       roi_proto_couple_ics=True
+  S5-d  causal_pca_mode='pairwise_residual',       roi_proto_couple_ics=False
+  pairwise 两组：causal_residual_normalize_before_delta=True，min_samples 保持 96；bank 从 checkpoint 继承，
+  不手动重置；记录训练开始和结束时的 num_updates，并统计 insufficient_pairs 的次数。
+  若有空闲的 NOGEOM stage3 checkpoint，可在其上重复四组（第二优先级）。
+评估：Night 与三个旧域（Overcast、Rainy、Dawn-Dusk），HOTA/DetA/IDF1/AssA；
+     遗忘 = 旧域在 stage3 checkpoint 上的值 − 本次训练后的值。
+探针：四组训练后的 checkpoint 都跑 P1 + P2 + S2.3（只需 clean,fap 视图），报告 Weather/Identity、与天气 oracle 夹角。
+分析：
+  耦合效应    = (a−b) 与 (c−d)
+  估计器效应 = (c−a) 与 (d−b)
+  重点看：c 的旧域遗忘是否最小；c 的子空间是否最接近天气 oracle。
+
+================================================================
+顺序与交付
+================================================================
+顺序：S1 → S2、S3（CPU，与 S4 并行）→ S4（1 GPU）→ S5（4 GPU；NOGEOM 训练占用时等它结束）。
+在 experiments/SUMMARY_20261029.md 追加五张表：
+  表 C  子空间性质：F / HF / NOGEOM / S5-a…d
+  表 D  负对照 k 扫描
+  表 E  漂移分解与归因（S3）
+  表 F  推理时干预（S4）
+  表 G  2×2 短实验性能、遗忘与子空间性质（S5）
+每张表注明运行目录、checkpoint、种子和提交号。

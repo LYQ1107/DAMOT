@@ -1,0 +1,21 @@
+{
+  "model_changes": [],
+  "analysis_version": 2,
+  "seed": 0,
+  "k": [
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "betas": [
+    0,
+    0.5,
+    1
+  ],
+  "random_repeats": 10,
+  "Fisher": "raw unrenormalized projection on car/test",
+  "stored_vs_covariance": "separate per user approval; equivalence check failed",
+  "original_v1_preserved": true
+}

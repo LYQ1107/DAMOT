@@ -1,0 +1,11 @@
+{
+  "run_directory": "/data1/liuyeqiang/damot_ics_followup_20261029",
+  "code_base_commit": "ebc3190b2fa82d9e117315998c0d7435033e113c",
+  "completed_analyses": [
+    "analysis_F_stage4_e5_v2"
+  ],
+  "S4": "pending full-domain baseline identity checks and interventions",
+  "S5": "prepared only; no new short training yet; waiting for NOGEOM controller_complete.json",
+  "NOGEOM": "original run resumed after transient NAS outage; never treated as complete because GPUs were temporarily idle",
+  "updated_UTC": "2026-10-29 08:41:32"
+}

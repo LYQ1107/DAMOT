@@ -1,0 +1,14 @@
+{
+  "source": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/configs/stage4.py",
+  "changed_fields": [],
+  "audit_only": true,
+  "active_geometry": [
+    ".teacher_pipeline[0]:{'type': 'SeqRandomFlip', 'share_params': True, 'flip_ratio': 0.5}",
+    ".teacher_pipeline[1]:{'type': 'SeqResize', 'img_scale': (1088, 1088), 'share_params': True, 'ratio_range': (0.8, 1.2), 'keep_ratio': True, 'bbox_clip_border': False}",
+    ".teacher_pipeline[2]:{'type': 'SeqRandomCrop', 'share_params': False, 'crop_size': (1088, 1088), 'bbox_clip_border': False, 'allow_negative_crop': True}",
+    ".contrastive_pipeline[0]:{'type': 'SeqRandomFlip', 'share_params': True, 'flip_ratio': 0.5}",
+    ".contrastive_pipeline[1]:{'type': 'SeqResize', 'img_scale': (1088, 1088), 'share_params': True, 'ratio_range': (0.8, 1.2), 'keep_ratio': True, 'bbox_clip_border': False}",
+    ".contrastive_pipeline[2]:{'type': 'SeqRandomCrop', 'share_params': False, 'crop_size': (1088, 1088), 'bbox_clip_border': False, 'allow_negative_crop': True}",
+    ".data.train[0].pipeline[2]:{'type': 'SeqRandomFlip', 'share_params': True, 'flip_ratio': 0.5}"
+  ]
+}

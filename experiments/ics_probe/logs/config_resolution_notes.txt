@@ -1,0 +1,4 @@
+R2 configuration validation uses the full local rebuttal code snapshot at /data1/liuyeqiang/damot_rebuttal_20261026/code.
+The compact GitHub clone omits configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py, so resolving the base configuration directly there initially raised FileNotFoundError.
+Resolution in the full snapshot succeeded. The only resolved configuration difference is model.track_head.causal_pca_mode; min_samples remains 96. No R2 training was launched.
+The optional training example now pins source epoch_20.pth and the archived F seed 1790355234 instead of relying on latest.pth or a new random seed.

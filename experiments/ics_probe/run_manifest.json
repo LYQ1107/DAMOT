@@ -1,0 +1,192 @@
+{
+  "created_at_utc": "2026-10-28T16:28:27.564805+00:00",
+  "repository": "https://github.com/LYQ1107/DAMOT",
+  "local_repository": "/data1/liuyeqiang/DAMOT",
+  "git_head": "66f19abffb362b8c05f5ccfe60cb8969e7379ea0",
+  "run_root": "/data1/liuyeqiang/damot_rebuttal_20261026",
+  "output_root": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe",
+  "nas_input_policy": "read-only; existing local checkpoint caches reused",
+  "checkpoint_provenance": [
+    {
+      "model": "F_stage1_e5",
+      "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/epoch_5.pth",
+      "local": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage1_e5.pth",
+      "bytes": 682303665,
+      "sha256": "ba7e56a58f753158b70d244a1763053f5816f5121958baa540308ebbaa282378",
+      "config_sha256": "f58f88ff60a7a5eb99e09bd6fdbc0d38113b767ec7a58668950967a1ab40f6ac",
+      "training_seed": 1790355234,
+      "epoch": 5
+    },
+    {
+      "model": "F_stage2_e5",
+      "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/epoch_5.pth",
+      "local": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage2_e5.pth",
+      "bytes": 682303665,
+      "sha256": "f01f0ff05eeb5e70ed89e7318a54a09f6b713df480b2a23940ebfee42d298ce3",
+      "config_sha256": "191174760bf3be69db79c40a61239313979fede2e3d76309b104177b7df776b3",
+      "training_seed": 1790355234,
+      "epoch": 5
+    },
+    {
+      "model": "F_stage3_e5",
+      "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/epoch_5.pth",
+      "local": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage3_e5.pth",
+      "bytes": 682303665,
+      "sha256": "1c18979e83c175a7181fa8ee0f88b0a70d5befb27b3f14d96c3584de0bf3a0e7",
+      "config_sha256": "38da31ec26b3b27b5daccbb6278b826d39c4c4d305bba7878a1c292827071d53",
+      "training_seed": 1790355234,
+      "epoch": 5
+    },
+    {
+      "model": "F_stage4_e5",
+      "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth",
+      "local": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth",
+      "bytes": 682303665,
+      "sha256": "47262a4b7009cbd4afa5d8ea7774d1bbcec902ef7945769371a8adfa8fe48235",
+      "config_sha256": "06d7c03544dea6a2bf983fa051230d50cb1147b3480d9fadd9d7c2a814f88255",
+      "training_seed": 1790355234,
+      "epoch": 5
+    }
+  ],
+  "planned_sampling": {
+    "max_videos": 40,
+    "frames_per_video": 30,
+    "frame_stride": 2,
+    "dose_frames_per_video": 3,
+    "min_box": 16,
+    "max_rois_per_frame": 40,
+    "classes": "car"
+  },
+  "fixes": [
+    "Split model.to(device) and model.eval(): DarthQDTrack.eval() returns None.",
+    "Require initialized/updated ICS bank and all detector, embedding and bank keys.",
+    "Check every sampled image path, not just the first 50.",
+    "Use common random draws across FAP dose levels and matching photo/student color transforms.",
+    "Use domain shift relative to Clear for P1 when --ref-domain is set.",
+    "Namespace COCO image ids by video for same-frame identity controls.",
+    "Remove causal_min_samples=32 override from R2; retain inherited 96 for the estimator comparison.",
+    "Improve figure legends, identity colors, equal-scale arrow axes, crop labels and heatmap annotations.",
+    "Spawned CPU workers prefetch views; all 16 smoke-test feature arrays exactly match the synchronous path.",
+    "Reuse the identical beta=0 intervention result across all subspaces, avoiding redundant CPU fits.",
+    "Use the same dose-frame cohort for the P4 same-frame identity control, and report its pair count."
+  ],
+  "limitations": [
+    "Unpaired BDD domain differences combine weather, scene, camera and identity composition.",
+    "Target-domain data come from the original adaptation pool, not independent target generalization tests.",
+    "Geometry is fixed; student probe includes only photometric distortion and FAP, not the complete training pipeline.",
+    "P3 refits the logistic probe at every beta; partial invertible shrinkage need not remove decodable information.",
+    "R2 training and optional VKITTI2 paired extraction are not part of the current frozen-checkpoint run."
+  ],
+  "probe_source_sha256": {
+    "configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalPairRes_roiV1Weak_4domain_5e.py": "6180326adbda08a97497102c0655c251d7ea6b59d8aa330b1cc08ee94b29384d",
+    "tools/analysis/ICS_PROBE_README.md": "967d5b0343c138bd3d9995e1bf7992b7de2d0989ef44a8d4a043f82067bb4952",
+    "tools/analysis/ics_probe_analyze.py": "1b27fc4f9b9468dd25caab98f79e051348c776013c6dc2afcbe5486e5ce00f8e",
+    "tools/analysis/ics_probe_extract.py": "a35f8aba0c904f3a7ab49f4fdc9dd98971a078559ea86537e2d851dbb115976e",
+    "tools/analysis/ics_probe_selftest.py": "a7b09d3de0e7b53067407f47c3f69eb58cb366a3189a0c3a8d674d0b685ba4a9",
+    "tools/analysis/run_ics_probe_bdd.sh": "d97a8f60a88b4141069c64e6d3568f24953a16b0f7a76e2dc92c63128cad0d87"
+  },
+  "environment_notes": "Host: cieelab (codex-cieelab). Local filesystem /data1. NAS read-only task inputs via existing sshfs mount.\nIsolated venv with inherited base: /home/liuyeqiang/anaconda3/envs/open-mmlab. Base environment was not modified.\nRestored: Python3.7.16, torch1.12.1 CUDA11.3, torchvision0.13.1; local mmcv-full1.6.0, mmdet2.25.3, mmtrack0.14.0.\nOriginal logged: Python3.7.12, torch1.13.1+cu117, mmcv1.6.2, mmtrack0.13.0. We do not claim exact original training reproduction. pip mmtrack0.13.0 lacked required QuasiDenseTracker API; pip0.14.0 supplies it. Base mmdet2.19.1 lacked log_img_scale.\nTorch imported first with OMP/MKL threads=1 avoids inherited duplicate OpenMP initialization. No unsafe KMP_DUPLICATE_LIB_OK workaround used.\nAll init_cfg/pretrained entries removed only in resolved local configs when loading complete checkpoints. All target state keys strict-loaded and selected critical tensors checked exactly; teacher checkpoints strict teacher_detector prefix loaded.\nLocal evaluator PLOT_CURVES=False is the only intentional original-code modification at audit time. Execution harnesses are separate.\n",
+  "prefetch_parity": {
+    "views_max_absolute_error": {
+      "feat_clean": 0.0,
+      "feat_fap": 0.0,
+      "feat_photo": 0.0,
+      "feat_student": 0.0,
+      "feat_dark_0p80": 0.0,
+      "feat_dark_0p60": 0.0,
+      "feat_dark_0p40": 0.0,
+      "feat_dark_0p25": 0.0,
+      "feat_fog_0p15": 0.0,
+      "feat_fog_0p30": 0.0,
+      "feat_fog_0p45": 0.0,
+      "feat_fog_0p60": 0.0,
+      "feat_fapk_0p90": 0.0,
+      "feat_fapk_0p70": 0.0,
+      "feat_fapk_0p50": 0.0,
+      "feat_fapk_0p30": 0.0
+    },
+    "metadata_identical": true,
+    "all_pass": true
+  },
+  "R2_config_difference": {
+    ".model.track_head.causal_pca_mode": {
+      "base": "proto_shrinkage_cov_ema",
+      "control": "pairwise_residual"
+    }
+  },
+  "patch_validation": "git apply --check passed in a newly initialized empty repository",
+  "runtime_and_repository_sources_identical": true,
+  "analysis_regression_checks": {
+    "status": "passed",
+    "dose_control": {
+      "expected_in": 0.5,
+      "actual_in": 0.5,
+      "expected_out": 1.5,
+      "actual_out": 1.5,
+      "reference_pairs": 10
+    },
+    "clear_reference_energy": {
+      "expected": 0.8333333333333334,
+      "actual": 0.8333333333333194,
+      "pooled_centering_energy": 0.7499999999999719
+    },
+    "zero_beta_subspace_independent": true
+  },
+  "sampling_counts": [
+    {
+      "domain": "clear_holdout_45v",
+      "retained_videos": 40,
+      "frames_with_retained_rois": 1172,
+      "identities": 900,
+      "rois": 7956,
+      "dose_frames": 119,
+      "dose_rois": 816
+    },
+    {
+      "domain": "overcast",
+      "retained_videos": 22,
+      "frames_with_retained_rois": 647,
+      "identities": 699,
+      "rois": 5281,
+      "dose_frames": 63,
+      "dose_rois": 553
+    },
+    {
+      "domain": "rainy",
+      "retained_videos": 17,
+      "frames_with_retained_rois": 496,
+      "identities": 358,
+      "rois": 4279,
+      "dose_frames": 50,
+      "dose_rois": 426
+    },
+    {
+      "domain": "dawn_dusk",
+      "retained_videos": 33,
+      "frames_with_retained_rois": 959,
+      "identities": 727,
+      "rois": 6683,
+      "dose_frames": 95,
+      "dose_rois": 665
+    },
+    {
+      "domain": "night",
+      "retained_videos": 36,
+      "frames_with_retained_rois": 1057,
+      "identities": 844,
+      "rois": 9640,
+      "dose_frames": 105,
+      "dose_rois": 1020
+    }
+  ],
+  "final_selftest_passes": 7,
+  "model_code_sha256": {
+    "darth/models/adapters/darth_qdtrack.py": "904ed25fb241f5c51cf9cc11a3d004bfa4604862d7c0b845b8f4cda0d0c89879",
+    "darth/models/track_heads/causal_quasi_dense_track_head.py": "337b259a4feb5ef2f2a384f6c833b159f93d78c595f62fd31fccf83769659471",
+    "darth/models/utils/roi_causal_bank.py": "1fc1b97a965509269cf171369ee059ab15c428448136dbcabcc51544f861e3af",
+    "darth/datasets/pipelines/transforms.py": "8455c989254f2b5050f4422e4504fe566763463482d47db34d53dd94124e2f32"
+  },
+  "extraction_seed": 20261028,
+  "analysis_seed": 0,
+  "completed_at_shanghai": "2026-10-29T01:56:15.965585+08:00"
+}

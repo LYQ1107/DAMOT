@@ -1,0 +1,104 @@
+[plan] clear_holdout_45v  videos=40 frames=1200 dose_frames=0 missing(sampled)=0
+[plan] overcast           videos=22 frames=660 dose_frames=0 missing(sampled)=0
+[plan] rainy              videos=17 frames=510 dose_frames=0 missing(sampled)=0
+[plan] dawn_dusk          videos=33 frames=990 dose_frames=0 missing(sampled)=0
+[plan] night              videos=36 frames=1080 dose_frames=0 missing(sampled)=0
+2026-10-28 16:46:31,245 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-28 16:46:31,245 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-28 16:46:31,245 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-28 16:46:31,902 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-28 16:46:31,902 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-28 16:46:31,902 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+[model] {"checkpoint": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage1_e5.pth", "config": "checkpoint meta", "matched_keys": 752, "target_keys": 752, "missing_keys": 0, "bank_cfg": {"use_causal_direction_bank": true, "causal_pca_mode": "proto_shrinkage_cov_ema", "causal_num_pcs": 2, "causal_start_pc": 0, "causal_trim_alpha": 0.1, "causal_normalize_feats": true, "causal_residual_normalize_before_delta": null, "use_roi_proto_memory": true, "roi_proto_class_ids": [1]}, "bank_initialized": true, "bank_num_updates": 219, "missing_key_names": [], "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only"}
+[clear_holdout_45v] 50/1200 frames  40.3s
+[clear_holdout_45v] 100/1200 frames  67.5s
+[clear_holdout_45v] 150/1200 frames  86.6s
+[clear_holdout_45v] 200/1200 frames  109.7s
+[clear_holdout_45v] 250/1200 frames  132.4s
+[clear_holdout_45v] 300/1200 frames  157.8s
+[clear_holdout_45v] 350/1200 frames  178.8s
+[clear_holdout_45v] 400/1200 frames  195.2s
+[clear_holdout_45v] 450/1200 frames  215.0s
+[clear_holdout_45v] 500/1200 frames  234.8s
+[clear_holdout_45v] 550/1200 frames  252.1s
+[clear_holdout_45v] 600/1200 frames  276.4s
+[clear_holdout_45v] 650/1200 frames  299.6s
+[clear_holdout_45v] 700/1200 frames  319.2s
+[clear_holdout_45v] 750/1200 frames  342.0s
+[clear_holdout_45v] 800/1200 frames  364.7s
+[clear_holdout_45v] 850/1200 frames  386.5s
+[clear_holdout_45v] 900/1200 frames  405.5s
+[clear_holdout_45v] 950/1200 frames  424.9s
+[clear_holdout_45v] 1000/1200 frames  446.8s
+[clear_holdout_45v] 1050/1200 frames  465.6s
+[clear_holdout_45v] 1100/1200 frames  482.8s
+[clear_holdout_45v] 1150/1200 frames  500.4s
+[clear_holdout_45v] 1200/1200 frames  516.1s
+[done] clear_holdout_45v rois=7956 dose_rois=0 517.6s
+[overcast] 50/660 frames  21.0s
+[overcast] 100/660 frames  48.8s
+[overcast] 150/660 frames  73.3s
+[overcast] 200/660 frames  97.0s
+[overcast] 250/660 frames  117.0s
+[overcast] 300/660 frames  133.8s
+[overcast] 350/660 frames  151.6s
+[overcast] 400/660 frames  172.2s
+[overcast] 450/660 frames  191.0s
+[overcast] 500/660 frames  215.4s
+[overcast] 550/660 frames  232.4s
+[overcast] 600/660 frames  258.2s
+[overcast] 650/660 frames  275.4s
+[done] overcast rois=5281 dose_rois=0 280.1s
+[rainy] 50/510 frames  24.6s
+[rainy] 100/510 frames  47.4s
+[rainy] 150/510 frames  68.7s
+[rainy] 200/510 frames  86.5s
+[rainy] 250/510 frames  113.1s
+[rainy] 300/510 frames  134.4s
+[rainy] 350/510 frames  158.3s
+[rainy] 400/510 frames  181.4s
+[rainy] 450/510 frames  202.0s
+[rainy] 500/510 frames  232.4s
+[done] rainy rois=4279 dose_rois=0 238.2s
+[dawn_dusk] 50/990 frames  21.3s
+[dawn_dusk] 100/990 frames  43.0s
+[dawn_dusk] 150/990 frames  63.7s
+[dawn_dusk] 200/990 frames  85.0s
+[dawn_dusk] 250/990 frames  107.3s
+[dawn_dusk] 300/990 frames  128.7s
+[dawn_dusk] 350/990 frames  147.5s
+[dawn_dusk] 400/990 frames  187.5s
+[dawn_dusk] 450/990 frames  212.0s
+[dawn_dusk] 500/990 frames  239.7s
+[dawn_dusk] 550/990 frames  264.0s
+[dawn_dusk] 600/990 frames  282.8s
+[dawn_dusk] 650/990 frames  303.3s
+[dawn_dusk] 700/990 frames  321.7s
+[dawn_dusk] 750/990 frames  349.6s
+[dawn_dusk] 800/990 frames  379.8s
+[dawn_dusk] 850/990 frames  396.6s
+[dawn_dusk] 900/990 frames  433.4s
+[dawn_dusk] 950/990 frames  463.1s
+[done] dawn_dusk rois=6683 dose_rois=0 482.2s
+[night] 50/1080 frames  32.6s
+[night] 100/1080 frames  60.3s
+[night] 150/1080 frames  91.2s
+[night] 200/1080 frames  125.3s
+[night] 250/1080 frames  148.5s
+[night] 300/1080 frames  175.2s
+[night] 350/1080 frames  199.2s
+[night] 400/1080 frames  238.9s
+[night] 450/1080 frames  261.9s
+[night] 500/1080 frames  287.5s
+[night] 550/1080 frames  315.6s
+[night] 600/1080 frames  334.5s
+[night] 650/1080 frames  367.0s
+[night] 700/1080 frames  388.5s
+[night] 750/1080 frames  408.8s
+[night] 800/1080 frames  440.6s
+[night] 850/1080 frames  461.1s
+[night] 900/1080 frames  486.9s
+[night] 950/1080 frames  508.9s
+[night] 1000/1080 frames  532.5s
+[night] 1050/1080 frames  563.9s
+[done] night rois=9640 dose_rois=0 581.6s

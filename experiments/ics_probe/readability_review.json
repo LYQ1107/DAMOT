@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "reviewed_at_shanghai": "2026-10-29T01:53:40.879406+08:00",
+  "review_method": "Assistant visually inspected every generated PNG; matching PDF pages come from the same Matplotlib figures.",
+  "hypothesis_validation_separate_from_readability": true,
+  "figures": [
+    {
+      "figure": "fig1_quadrant",
+      "status": "passed",
+      "png_dimensions": [
+        2060,
+        1656
+      ],
+      "observations": "Both legends are outside the panels; 10 distinct identity colors; same points in both colorings. Weather colors are mixed in the ICS plane."
+    },
+    {
+      "figure": "fig2_arrows",
+      "status": "passed",
+      "png_dimensions": [
+        910,
+        770
+      ],
+      "observations": "Axes have equal scaling, arrow endpoints are inside the plot and the domain legend is outside. Some changes are very small and overlap at native scale."
+    },
+    {
+      "figure": "fig3_montage_e1",
+      "status": "passed",
+      "png_dimensions": [
+        2800,
+        720
+      ],
+      "observations": "All 20 crops render with domain and projection labels. Native small RoIs are pixelated; no invented sharpening. Extremes differ in viewpoint, scale and vehicle appearance as well as lighting."
+    },
+    {
+      "figure": "fig3_montage_e2",
+      "status": "passed",
+      "png_dimensions": [
+        2800,
+        720
+      ],
+      "observations": "All 20 crops render; front/side versus rear views are visible across the extremes. Projection sign has no physical meaning."
+    },
+    {
+      "figure": "fig4_dose_response",
+      "status": "passed",
+      "png_dimensions": [
+        2178,
+        935
+      ],
+      "observations": "Legends do not cover data. Both subspace and complement curves, matched-frame identity references and the chance line are visible. In-E energy is only about 3.3–4.3%."
+    },
+    {
+      "figure": "fig5_energy_bars",
+      "status": "passed",
+      "png_dimensions": [
+        2178,
+        894
+      ],
+      "observations": "All groups and labels are readable. Clear reference and the chance baseline are explicit; identity energy exceeds domain-shift energy for ICS."
+    },
+    {
+      "figure": "fig6_stage_heatmap",
+      "status": "passed",
+      "png_dimensions": [
+        1385,
+        799
+      ],
+      "observations": "All 16 cells have readable three-decimal annotations with a fixed 0–1 color scale. The most recently adapted domain is the row maximum in only 2 of 4 rows."
+    }
+  ],
+  "combined_pdf_pages": 7,
+  "montage_crops": 40
+}

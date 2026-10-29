@@ -1,0 +1,11 @@
+domain,split,rois,videos
+clear_holdout_45v,fit,4759,22
+clear_holdout_45v,test,3197,18
+dawn_dusk,fit,2705,16
+dawn_dusk,test,3978,17
+night,fit,2935,11
+night,test,6705,25
+overcast,fit,3468,14
+overcast,test,1813,8
+rainy,fit,1953,8
+rainy,test,2326,9

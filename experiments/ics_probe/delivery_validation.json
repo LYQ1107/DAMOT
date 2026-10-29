@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "figure_pages": 7,
+  "latex_tables": 3,
+  "validated_feature_files": 20,
+  "selftest_passes": 7,
+  "no_raw_npz_in_delivery": true
+}

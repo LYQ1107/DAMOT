@@ -1,0 +1,5 @@
+{
+  "combined_pdf": "figs/all_figures.pdf",
+  "page_count": 7,
+  "complement_visualization": "t-SNE"
+}

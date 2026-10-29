@@ -1,0 +1,141 @@
+{
+  "domain": "overcast",
+  "rois": 5281,
+  "embedding_norm_min": 2.518857955932617,
+  "embedding_norm_max": 7.22255277633667,
+  "FAP_residual_energy_share": 0.04253229360535907,
+  "dose": [
+    {
+      "family": "dark",
+      "level": 0.25,
+      "strength": 0.75,
+      "n": 553,
+      "in_E_norm": 0.06281624281672682,
+      "out_E_norm": 0.3459574739164434,
+      "share_in_E": 0.03904664769304602,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "dark",
+      "level": 0.4,
+      "strength": 0.6,
+      "n": 553,
+      "in_E_norm": 0.042319522377159025,
+      "out_E_norm": 0.23831820345093147,
+      "share_in_E": 0.03741107137036944,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "dark",
+      "level": 0.6,
+      "strength": 0.4,
+      "n": 553,
+      "in_E_norm": 0.02569929235197721,
+      "out_E_norm": 0.14940374116834396,
+      "share_in_E": 0.03518611500057496,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "dark",
+      "level": 0.8,
+      "strength": 0.19999999999999996,
+      "n": 553,
+      "in_E_norm": 0.012805053199173674,
+      "out_E_norm": 0.07722486851040354,
+      "share_in_E": 0.033746932510417244,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fapk",
+      "level": 0.3,
+      "strength": 0.7,
+      "n": 553,
+      "in_E_norm": 0.09863970033578529,
+      "out_E_norm": 0.5093281528197708,
+      "share_in_E": 0.044967565621866774,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fapk",
+      "level": 0.5,
+      "strength": 0.5,
+      "n": 553,
+      "in_E_norm": 0.09312343520842264,
+      "out_E_norm": 0.48467758210887485,
+      "share_in_E": 0.04653350590093818,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fapk",
+      "level": 0.7,
+      "strength": 0.30000000000000004,
+      "n": 553,
+      "in_E_norm": 0.07297152966995035,
+      "out_E_norm": 0.3975794941022807,
+      "share_in_E": 0.04271188391670925,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fapk",
+      "level": 0.9,
+      "strength": 0.09999999999999998,
+      "n": 553,
+      "in_E_norm": 0.04086184338225235,
+      "out_E_norm": 0.23190683168634418,
+      "share_in_E": 0.04023371210921539,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fog",
+      "level": 0.15,
+      "strength": 0.15,
+      "n": 553,
+      "in_E_norm": 0.013832006218074289,
+      "out_E_norm": 0.0810143278686372,
+      "share_in_E": 0.03557647825644733,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fog",
+      "level": 0.3,
+      "strength": 0.3,
+      "n": 553,
+      "in_E_norm": 0.026647969598126858,
+      "out_E_norm": 0.15616852050216556,
+      "share_in_E": 0.03491992753575292,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fog",
+      "level": 0.45,
+      "strength": 0.45,
+      "n": 553,
+      "in_E_norm": 0.040969377029346096,
+      "out_E_norm": 0.23951454450240772,
+      "share_in_E": 0.03513118311631846,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    },
+    {
+      "family": "fog",
+      "level": 0.6,
+      "strength": 0.6,
+      "n": 553,
+      "in_E_norm": 0.06091376198371983,
+      "out_E_norm": 0.34451610564021456,
+      "share_in_E": 0.03634834237497865,
+      "identity_ref_in_E_norm": 0.5054805015509055,
+      "identity_ref_out_E_norm": 1.1004461393247604
+    }
+  ]
+}

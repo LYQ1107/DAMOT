@@ -1,0 +1,22 @@
+{
+  "views_max_absolute_error": {
+    "feat_clean": 0.0,
+    "feat_fap": 0.0,
+    "feat_photo": 0.0,
+    "feat_student": 0.0,
+    "feat_dark_0p80": 0.0,
+    "feat_dark_0p60": 0.0,
+    "feat_dark_0p40": 0.0,
+    "feat_dark_0p25": 0.0,
+    "feat_fog_0p15": 0.0,
+    "feat_fog_0p30": 0.0,
+    "feat_fog_0p45": 0.0,
+    "feat_fog_0p60": 0.0,
+    "feat_fapk_0p90": 0.0,
+    "feat_fapk_0p70": 0.0,
+    "feat_fapk_0p50": 0.0,
+    "feat_fapk_0p30": 0.0
+  },
+  "metadata_identical": true,
+  "all_pass": true
+}

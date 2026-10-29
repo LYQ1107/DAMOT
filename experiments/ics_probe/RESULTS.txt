@@ -1,0 +1,63 @@
+DAMOT ICS 子空间探针：BDD 冻结检查点真实结果
+生成时间（北京时间）：2026-10-29T01:56:16.057048+08:00
+
+已完成 BDD P1–P5；未训练 R2；未执行可选 VKITTI2 P6。
+主模型：F_stage4_e5。阶段：F_stage1–4_e5。D=256，m=2。
+模型权重冻结；仅离线天气线性分类器在 fit 视频上拟合。
+抽样：每域最多40视频，每视频前30帧、步长2、每帧最多40个car框，最小边16像素。
+Clear 使用独立45视频holdout中的40视频；四个目标域来自原适应池。
+计划抽样共148视频、4440帧；输出仅保留通过car/ignore/min-box筛选的RoI。
+主模型共 33839 RoI；fit=15820，test=18019。
+
+P1：测试视频上的投影能量占比
+类别内真实域均值相对Clear的偏移；BDD未配对，域差异不等价于纯天气变化。
+Real weather shift: ICS=14.6396%; Random=0.8179%; chance=0.7812%; ICS/chance=18.739x
+FAP residual: ICS=4.1823%; Random=0.7720%; chance=0.7812%; ICS/chance=5.353x
+Photometric residual: ICS=3.6584%; Random=0.7779%; chance=0.7812%; ICS/chance=4.683x
+Student-view residual: ICS=4.1561%; Random=0.7730%; chance=0.7812%; ICS/chance=5.320x
+Identity: ICS=28.9573%; Random=0.7911%; chance=0.7812%; ICS/chance=37.065x
+Temporal (same ID): ICS=17.5698%; Random=0.7884%; chance=0.7812%; ICS/chance=22.489x
+Weather/Identity=0.5056
+天气能量是否达到预设10×chance阈值：达到
+
+P2：按视频划分的天气线性探针与测试视频内身份检索
+E only (2-d): weather balanced accuracy=20.5603%; ID mAP=33.5013%
+E-perp (254-d): weather balanced accuracy=34.6681%; ID mAP=57.7297%
+Full (256-d): weather balanced accuracy=34.5126%; ID mAP=57.3140%
+Random 2-d: weather balanced accuracy=20.4013%; ID mAP=28.5755%
+Identity oracle 2-d: weather balanced accuracy=22.3772%; ID mAP=33.3730%
+检索查询数：4000；天气随机准确率：20.0%
+
+P3：离线特征干预；每档重拟合天气分类器，未重新跑跟踪器/HOTA。
+下列差值均为百分点（pp）；不应把部分可逆缩放视为必然删除信息。
+ICS beta=0.10: weather 34.5646% (+0.0487 pp), ID mAP 57.4596% (+0.1456 pp), domain-centroid gap 0.166527 -> 0.167987
+ICS beta=1.00: weather 34.9160% (+0.4002 pp), ID mAP 57.7297% (+0.4157 pp), domain-centroid gap 0.166527 -> 0.174716
+Random beta=0.10: weather 34.5121% (-0.0037 pp), ID mAP 57.3181% (+0.0041 pp), domain-centroid gap 0.166527 -> 0.166553
+Random beta=1.00: weather 34.5943% (+0.0784 pp), ID mAP 57.3243% (+0.0103 pp), domain-centroid gap 0.166527 -> 0.166662
+Identity oracle beta=0.10: weather 34.5234% (+0.0075 pp), ID mAP 57.7401% (+0.4262 pp), domain-centroid gap 0.166527 -> 0.168275
+Identity oracle beta=1.00: weather 34.4635% (-0.0524 pp), ID mAP 59.3457% (+2.0317 pp), domain-centroid gap 0.166527 -> 0.180141
+
+P4：剂量响应（仅测试视频、默认每视频前三个抽样帧）
+dark: 子空间内变化是否单调增加=是；能量占比 3.2939%–4.1965%
+fapk: 子空间内变化是否单调增加=是；能量占比 4.1840%–4.3037%
+fog: 子空间内变化是否单调增加=是；能量占比 3.7034%–3.8293%
+
+P5：每阶段使用自身嵌入与ICS子空间，全部相同抽样RoI。
+After overcast: peak=rainy (26.2262%); adapted-domain share=0.6803%
+After rainy: peak=rainy (20.2130%); adapted-domain share=20.2130%
+After dawn_dusk: peak=dawn_dusk (33.2348%); adapted-domain share=33.2348%
+After night: peak=dawn_dusk (28.5826%); adapted-domain share=8.0131%
+
+验证与证据
+合成数据7项自检全部PASS；16视图的串行/多进程特征最大差值全部为0。
+全部20个(阶段,域)特征文件逐项校验；跨阶段video/ID/frame/image/category/bbox完全相同。
+每个检查点的参数/buffer匹配情况、ICS初始化与更新数见feats/*/*meta.json。
+图表可读性检查见readability_review.json；全部图见analysis_F_stage4_e5/figs/all_figures.pdf。
+表格、完整CSV和summary.json保留全部结果，不根据结论筛选样本或种子。
+
+解释范围
+BDD域差异同时包含天气、场景、相机和车辆组成变化；本实验不单独识别纯天气因果效应。
+student探针固定几何，仅保留颜色与FAP；训练的另一对比视图还包含翻转、裁剪等几何变化。
+低维探针不能证明任何身份信息绝对不存在；应结合能量、检索和负对照共同判断。
+R2配置已修正并验证为只更换估计方式，保留min_samples=96。训练仍需单独执行。
+原始npz留在服务器feats/供复画；本交付包只含meta，不重复传输npz。

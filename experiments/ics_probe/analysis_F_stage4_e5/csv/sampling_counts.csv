@@ -1,0 +1,6 @@
+domain,retained_videos,frames_with_retained_rois,identities,rois,dose_frames,dose_rois
+clear_holdout_45v,40,1172,900,7956,119,816
+overcast,22,647,699,5281,63,553
+rainy,17,496,358,4279,50,426
+dawn_dusk,33,959,727,6683,95,665
+night,36,1057,844,9640,105,1020

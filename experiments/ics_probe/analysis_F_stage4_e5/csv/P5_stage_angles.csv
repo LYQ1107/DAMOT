@@ -1,0 +1,4 @@
+from,to,max_angle_deg
+F_stage1_e5,F_stage2_e5,25.90301916539067
+F_stage2_e5,F_stage3_e5,32.61635607057584
+F_stage3_e5,F_stage4_e5,31.00086166355848

@@ -1,0 +1,3 @@
+[plan] clear_holdout_45v  videos=40 frames=1200 dose_frames=120 missing(first50)=0
+[plan] overcast           videos=22 frames=660 dose_frames=66 missing(first50)=41
+image not found, e.g. /data1/liuyeqiang/damot_rebuttal_20261026/cache/images/overcast/b1c66a42-6f7d68ca/b1c66a42-6f7d68ca-0000003.jpg

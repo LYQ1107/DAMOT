@@ -1,0 +1,413 @@
+{
+  "clear_source": {
+    "source_annotation": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/box_track_clear_all_cocofmt.json",
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/clear_source.json",
+    "sha256": "e974fc20f810381543b20f66f87baaed790bb979834bce72c310a7e0e15bbfeb",
+    "videos": 36,
+    "frames": 7190,
+    "annotations": 87841,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian"
+      },
+      {
+        "id": 2,
+        "name": "car"
+      },
+      {
+        "id": 3,
+        "name": "truck"
+      },
+      {
+        "id": 4,
+        "name": "bus"
+      },
+      {
+        "id": 5,
+        "name": "motorcycle"
+      },
+      {
+        "id": 6,
+        "name": "bicycle"
+      }
+    ],
+    "image_view": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_source",
+    "split_by_video": {
+      "b1cebfb7-284f5117": "val",
+      "b1d10d08-c35503b8": "val",
+      "b1d7b3ac-36f2d3b7": "val",
+      "b1d7b3ac-5744370e": "val",
+      "b1d7b3ac-995f9d8a": "val",
+      "b1dac7f7-6b2e0382": "val",
+      "b1dce572-c6a8cb5e": "val",
+      "b1df722f-57d21f3f": "val",
+      "b1df722f-5bcc3db7": "val",
+      "b1e3e9f5-92377424": "val",
+      "b1e8ad72-c3c79240": "val",
+      "b1f0efd9-e900c6e5": "val",
+      "b1f4491b-97465266": "val",
+      "b1ff4656-94ee8536": "val",
+      "b202cae2-672e61c5": "val",
+      "b202cae2-f46c74a6": "val",
+      "b205eb4d-f84aaa1a": "val",
+      "b20841f9-cef732d5": "val",
+      "b20b69d2-64b9cdb8": "val",
+      "b20b69d2-650e674d": "val",
+      "b20b69d2-6e2b9e73": "val",
+      "b20b69d2-7767e6b6": "val",
+      "b20b69d2-bd242bf0": "val",
+      "b20b69d2-ca16c907": "val",
+      "b20b69d2-e31380a7": "val",
+      "b20b69d2-ffc1d6af": "val",
+      "b20d494a-cdebe83e": "val",
+      "b20e291a-6012d836": "val",
+      "b20ff95c-b9444127": "val",
+      "b2169b74-fa197951": "val",
+      "b2208b0f-2796a692": "val",
+      "b231a630-c4522992": "val",
+      "b2331b83-a28e6b57": "val",
+      "b24f7455-e8c55d6a": "val",
+      "b250fb0c-01a1b8d3": "val",
+      "b251064f-8d92db81": "val"
+    }
+  },
+  "overcast": {
+    "source_annotation": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/box_track_overcast_all_cocofmt.json",
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
+    "sha256": "b95d22fd44142d15d637536938ac4dd4d0e160dee50ca530e5fe260711be8e33",
+    "videos": 22,
+    "frames": 4448,
+    "annotations": 58849,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian"
+      },
+      {
+        "id": 2,
+        "name": "car"
+      },
+      {
+        "id": 3,
+        "name": "truck"
+      },
+      {
+        "id": 4,
+        "name": "bus"
+      },
+      {
+        "id": 5,
+        "name": "motorcycle"
+      },
+      {
+        "id": 6,
+        "name": "bicycle"
+      }
+    ],
+    "image_view": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/overcast",
+    "split_by_video": {
+      "b1c66a42-6f7d68ca": "val",
+      "b1d0091f-f2c2d2ae": "val",
+      "b1d968b9-563405f4": "val",
+      "b1d971b4-ac67ca0d": "val",
+      "b1e0c01d-dd9e6e2f": "val",
+      "b1f4491b-cf446195": "val",
+      "b1f4491b-dd8dfed5": "val",
+      "b1f85377-44885085": "val",
+      "b1fc95c9-cb2882c7": "val",
+      "b1ff4656-0435391e": "val",
+      "b1ff4656-ebcfeb35": "val",
+      "b200e97a-bf074435": "val",
+      "b20b9c19-91e01a50": "val",
+      "b22f385b-5d7e5202": "val",
+      "b23b2649-6af03cd5": "val",
+      "b23b2649-8349d2a1": "val",
+      "b24071b8-b3ee1196": "val",
+      "b2408e45-984ba5aa": "val",
+      "b24d283f-33783d1b": "val",
+      "b251064f-30002542": "val",
+      "b251064f-4696b75e": "val",
+      "b251064f-5f6b663e": "val"
+    }
+  },
+  "rainy": {
+    "source_annotation": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/box_track_rainy_all_cocofmt.json",
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/rainy.json",
+    "sha256": "c4263a48d75ee9454f60f17cc3b418568b8728132c1b4e8013853dda83aa6f59",
+    "videos": 17,
+    "frames": 3150,
+    "annotations": 41288,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian"
+      },
+      {
+        "id": 2,
+        "name": "car"
+      },
+      {
+        "id": 3,
+        "name": "truck"
+      },
+      {
+        "id": 4,
+        "name": "bus"
+      },
+      {
+        "id": 5,
+        "name": "motorcycle"
+      },
+      {
+        "id": 6,
+        "name": "bicycle"
+      }
+    ],
+    "image_view": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/rainy",
+    "split_by_video": {
+      "0010bf16-9ee17cd9": "train",
+      "0024b742-acbed4fb": "train",
+      "0051e391-d32a618e": "train",
+      "0062e803-38c0a33a": "train",
+      "00690c26-e4bbbd72": "train",
+      "00699de6-58847872": "train",
+      "006dd004-34630e8d": "train",
+      "00810e80-37641274": "train",
+      "0081da60-27997c07": "train",
+      "0081da60-5fa22cc6": "train",
+      "b1cac6a7-04e33135": "val",
+      "b1d0091f-75824d0d": "val",
+      "b1e1a7b8-65ec7612": "val",
+      "b1e1a7b8-a7426a97": "val",
+      "b1e1a7b8-b397c445": "val",
+      "b1e9ee0e-67e26f2e": "val",
+      "b2156f8e-72e1547c": "val"
+    }
+  },
+  "dawn_dusk": {
+    "source_annotation": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/box_track_dawn_dusk_all_cocofmt.json",
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+    "sha256": "13538196138661da77d41f60cad469ac6260e9be7c27b5919e1458be5d0cb6d7",
+    "videos": 33,
+    "frames": 6476,
+    "annotations": 59836,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian"
+      },
+      {
+        "id": 2,
+        "name": "car"
+      },
+      {
+        "id": 3,
+        "name": "truck"
+      },
+      {
+        "id": 4,
+        "name": "bus"
+      },
+      {
+        "id": 5,
+        "name": "motorcycle"
+      },
+      {
+        "id": 6,
+        "name": "bicycle"
+      }
+    ],
+    "image_view": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/dawn_dusk",
+    "split_by_video": {
+      "0000f77c-62c2a288": "train",
+      "0000f77c-cb820c98": "train",
+      "00067cfb-e535423e": "train",
+      "0008a165-c48f4b3e": "train",
+      "00091078-84635cf2": "train",
+      "00091078-c1d32eea": "train",
+      "00091078-f32de4d2": "train",
+      "00391a82-8be5b76d": "train",
+      "00391a82-d1428e56": "train",
+      "00417c23-220bbc98": "train",
+      "005c4fd3-cb4d6287": "train",
+      "0062ab5a-54bb129b": "train",
+      "006676e5-624162a7": "train",
+      "b1ceb32e-51852abe": "val",
+      "b1d10d08-5b108225": "val",
+      "b1d10d08-da110fcb": "val",
+      "b1d4b62c-60aab822": "val",
+      "b1d59b1f-a38aec79": "val",
+      "b1d7b3ac-0bdb47dc": "val",
+      "b1d7b3ac-9e14f05f": "val",
+      "b1d7b3ac-afa57f22": "val",
+      "b1d968b9-ce42734f": "val",
+      "b1dd58c1-8b546ba7": "val",
+      "b1e1a7b8-0aec80e8": "val",
+      "b1eb9133-5cc75c18": "val",
+      "b1f0efd9-37a14dda": "val",
+      "b1fbaab8-68db7df7": "val",
+      "b2036451-aa924fd1": "val",
+      "b216243d-ad4306b9": "val",
+      "b21c86ac-0dc77d82": "val",
+      "b21c86ac-2eb7ba16": "val",
+      "b21c86ac-71205084": "val",
+      "b23a79d1-e434acaa": "val"
+    }
+  },
+  "night": {
+    "source_annotation": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/box_track_night_all_cocofmt.json",
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+    "sha256": "002cf995f0b4972d6d7024df452e67d4fe2baf032ccb127a81296e6a13c9fc75",
+    "videos": 36,
+    "frames": 7286,
+    "annotations": 80413,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian"
+      },
+      {
+        "id": 2,
+        "name": "car"
+      },
+      {
+        "id": 3,
+        "name": "truck"
+      },
+      {
+        "id": 4,
+        "name": "bus"
+      },
+      {
+        "id": 5,
+        "name": "motorcycle"
+      },
+      {
+        "id": 6,
+        "name": "bicycle"
+      }
+    ],
+    "image_view": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night",
+    "split_by_video": {
+      "b1db7e22-cfa74dc3": "val",
+      "b1e62c91-eca210a9": "val",
+      "b1e88fd2-c1e4fd2b": "val",
+      "b1ebfc3c-740ec84a": "val",
+      "b1ebfc3c-cc9c2bb8": "val",
+      "b1ee702d-4a193906": "val",
+      "b1f20aa0-3401c3bf": "val",
+      "b1f20aa0-50213047": "val",
+      "b1f6c103-8b75ea3e": "val",
+      "b1fbf878-b31a8293": "val",
+      "b200b84e-4a792877": "val",
+      "b20234fd-822029be": "val",
+      "b2064e61-2beadd45": "val",
+      "b206a78b-99f405ab": "val",
+      "b20eae11-6817ba7a": "val",
+      "b2102d00-5eb86b71": "val",
+      "b2102d00-a8c09be1": "val",
+      "b214d1e1-f248c616": "val",
+      "b21547c1-73e457f8": "val",
+      "b21547c1-796757ac": "val",
+      "b2194b15-1825056a": "val",
+      "b21bfb83-ea32f716": "val",
+      "b21c68e6-65674a17": "val",
+      "b21d5efb-5e2cd743": "val",
+      "b229488e-e4714bb7": "val",
+      "b230132b-ff8f2719": "val",
+      "b23a79d1-43dfeecd": "val",
+      "b23f7012-32d284ce": "val",
+      "b23f7012-fab06dac": "val",
+      "b242f6b2-0033bdfb": "val",
+      "b242f6b2-99d2f2c1": "val",
+      "b242f6b2-f5da110f": "val",
+      "b24380ab-6dbeb908": "val",
+      "b2505382-1423f56a": "val",
+      "b2505382-272e7823": "val",
+      "b251b746-00138418": "val"
+    }
+  },
+  "clear_holdout_45v": {
+    "source_annotation": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/bdd_da/annotations/box_track_20/backup_all_splits_20260627_160444/box_track_clear_train_cocofmt.json",
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/clear_holdout_45v.json",
+    "sha256": "5afd6fafb2f9c6f3c8a48852b6841eefafabfc4e8877a5c4ffa52d1b6a6e31bd",
+    "videos": 45,
+    "frames": 9103,
+    "annotations": 83822,
+    "categories": [
+      {
+        "id": 1,
+        "name": "pedestrian"
+      },
+      {
+        "id": 2,
+        "name": "car"
+      },
+      {
+        "id": 3,
+        "name": "truck"
+      },
+      {
+        "id": 4,
+        "name": "bus"
+      },
+      {
+        "id": 5,
+        "name": "motorcycle"
+      },
+      {
+        "id": 6,
+        "name": "bicycle"
+      }
+    ],
+    "image_view": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_holdout_45v",
+    "split_by_video": {
+      "0000f77c-6257be58": "train",
+      "00054602-3bf57337": "train",
+      "00067cfb-5443fe39": "train",
+      "00067cfb-caba8a02": "train",
+      "00067cfb-f1b91e3c": "train",
+      "000d4f89-3bcbe37a": "train",
+      "000e0252-8523a4a9": "train",
+      "00207869-046fa443": "train",
+      "00207869-902288d1": "train",
+      "002d290d-89f4e5c0": "train",
+      "002d290d-90f2bab2": "train",
+      "002d290d-f9108a13": "train",
+      "00390995-49d9a01e": "train",
+      "003baca5-aab2e274": "train",
+      "003baca5-ad660439": "train",
+      "003baca5-d6cd84e5": "train",
+      "003e23ee-07d32feb": "train",
+      "004071a4-4e8a363a": "train",
+      "004071a4-a45d905f": "train",
+      "004071a4-ef4bf541": "train",
+      "004855fc-ff3946ad": "train",
+      "0048f391-2c5344eb": "train",
+      "0048f391-8eb40ca6": "train",
+      "0048f391-e9bfaf62": "train",
+      "0048f391-eae6a189": "train",
+      "0049e5b8-725e21a0": "train",
+      "0049e5b8-afda7206": "train",
+      "0052b279-87c692aa": "train",
+      "00618cec-3bc5573e": "train",
+      "00618cec-a7f7e470": "train",
+      "00618cec-ef92ac05": "train",
+      "0065fe83-c80cf6c3": "train",
+      "006a4209-4f3bf6cf": "train",
+      "006c0799-964a2695": "train",
+      "006fdb67-f4820206": "train",
+      "007693e6-2535e7bf": "train",
+      "007693e6-bc55f0e4": "train",
+      "00779058-517a4591": "train",
+      "00787a90-b350f376": "train",
+      "007ae77f-79995643": "train",
+      "007aeb45-9330e852": "train",
+      "007aeb45-f9f5ac8c": "train",
+      "007da0eb-e1f588e8": "train",
+      "0081c36b-30bff234": "train",
+      "0081e27b-17bf4a9e": "train"
+    }
+  }
+}

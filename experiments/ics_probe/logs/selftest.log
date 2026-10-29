@@ -1,0 +1,68 @@
+[data] rois=3840 fit=2400 test=1440 D=256 weathers=['clear', 'night', 'overcast', 'rainy']
+[P3] ICS              beta=0.00 {"weather_bacc": 0.9646, "weather_gap": 0.4762, "id_mAP": 1.0, "beta": 0.0}
+[P3] ICS              beta=0.10 {"weather_bacc": 0.9542, "weather_gap": 0.4398, "id_mAP": 1.0, "beta": 0.1}
+[P3] ICS              beta=0.25 {"weather_bacc": 0.9396, "weather_gap": 0.3835, "id_mAP": 1.0, "beta": 0.25}
+[P3] ICS              beta=0.50 {"weather_bacc": 0.8931, "weather_gap": 0.2879, "id_mAP": 1.0, "beta": 0.5}
+[P3] ICS              beta=0.75 {"weather_bacc": 0.7842, "weather_gap": 0.2008, "id_mAP": 1.0, "beta": 0.75}
+[P3] ICS              beta=1.00 {"weather_bacc": 0.3698, "weather_gap": 0.1576, "id_mAP": 1.0, "beta": 1.0}
+[P3] Random           beta=0.00 {"weather_bacc": 0.9646, "weather_gap": 0.4762, "id_mAP": 1.0, "beta": 0.0}
+[P3] Random           beta=0.10 {"weather_bacc": 0.9644, "weather_gap": 0.4763, "id_mAP": 1.0, "beta": 0.1}
+[P3] Random           beta=0.25 {"weather_bacc": 0.9644, "weather_gap": 0.4763, "id_mAP": 1.0, "beta": 0.25}
+[P3] Random           beta=0.50 {"weather_bacc": 0.9641, "weather_gap": 0.4763, "id_mAP": 1.0, "beta": 0.5}
+[P3] Random           beta=0.75 {"weather_bacc": 0.9637, "weather_gap": 0.4764, "id_mAP": 1.0, "beta": 0.75}
+[P3] Random           beta=1.00 {"weather_bacc": 0.9636, "weather_gap": 0.4764, "id_mAP": 1.0, "beta": 1.0}
+[P3] Identity oracle  beta=0.00 {"weather_bacc": 0.9646, "weather_gap": 0.4762, "id_mAP": 1.0, "beta": 0.0}
+[P3] Identity oracle  beta=0.10 {"weather_bacc": 0.9641, "weather_gap": 0.4762, "id_mAP": 1.0, "beta": 0.1}
+[P3] Identity oracle  beta=0.25 {"weather_bacc": 0.9641, "weather_gap": 0.4762, "id_mAP": 1.0, "beta": 0.25}
+[P3] Identity oracle  beta=0.50 {"weather_bacc": 0.9641, "weather_gap": 0.4762, "id_mAP": 1.0, "beta": 0.5}
+[P3] Identity oracle  beta=0.75 {"weather_bacc": 0.9651, "weather_gap": 0.4763, "id_mAP": 1.0, "beta": 0.75}
+[P3] Identity oracle  beta=1.00 {"weather_bacc": 0.9651, "weather_gap": 0.4763, "id_mAP": 1.0, "beta": 1.0}
+[done] wrote /data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/selftest/res_GOOD
+[data] rois=3840 fit=2400 test=1440 D=256 weathers=['clear', 'night', 'overcast', 'rainy']
+[P3] ICS              beta=0.00 {"weather_bacc": 0.9995, "weather_gap": 0.4409, "id_mAP": 1.0, "beta": 0.0}
+[P3] ICS              beta=0.10 {"weather_bacc": 0.9995, "weather_gap": 0.4411, "id_mAP": 1.0, "beta": 0.1}
+[P3] ICS              beta=0.25 {"weather_bacc": 0.999, "weather_gap": 0.4413, "id_mAP": 1.0, "beta": 0.25}
+[P3] ICS              beta=0.50 {"weather_bacc": 0.999, "weather_gap": 0.4415, "id_mAP": 1.0, "beta": 0.5}
+[P3] ICS              beta=0.75 {"weather_bacc": 0.999, "weather_gap": 0.4417, "id_mAP": 1.0, "beta": 0.75}
+[P3] ICS              beta=1.00 {"weather_bacc": 0.999, "weather_gap": 0.4417, "id_mAP": 1.0, "beta": 1.0}
+[P3] Random           beta=0.00 {"weather_bacc": 0.9995, "weather_gap": 0.4409, "id_mAP": 1.0, "beta": 0.0}
+[P3] Random           beta=0.10 {"weather_bacc": 0.9995, "weather_gap": 0.4411, "id_mAP": 1.0, "beta": 0.1}
+[P3] Random           beta=0.25 {"weather_bacc": 0.9995, "weather_gap": 0.4412, "id_mAP": 1.0, "beta": 0.25}
+[P3] Random           beta=0.50 {"weather_bacc": 0.9995, "weather_gap": 0.4414, "id_mAP": 1.0, "beta": 0.5}
+[P3] Random           beta=0.75 {"weather_bacc": 0.9995, "weather_gap": 0.4415, "id_mAP": 1.0, "beta": 0.75}
+[P3] Random           beta=1.00 {"weather_bacc": 0.9993, "weather_gap": 0.4416, "id_mAP": 1.0, "beta": 1.0}
+[P3] Identity oracle  beta=0.00 {"weather_bacc": 0.9995, "weather_gap": 0.4409, "id_mAP": 1.0, "beta": 0.0}
+[P3] Identity oracle  beta=0.10 {"weather_bacc": 0.9995, "weather_gap": 0.441, "id_mAP": 1.0, "beta": 0.1}
+[P3] Identity oracle  beta=0.25 {"weather_bacc": 0.9995, "weather_gap": 0.4411, "id_mAP": 1.0, "beta": 0.25}
+[P3] Identity oracle  beta=0.50 {"weather_bacc": 0.9995, "weather_gap": 0.4413, "id_mAP": 1.0, "beta": 0.5}
+[P3] Identity oracle  beta=0.75 {"weather_bacc": 0.9995, "weather_gap": 0.4414, "id_mAP": 1.0, "beta": 0.75}
+[P3] Identity oracle  beta=1.00 {"weather_bacc": 0.9995, "weather_gap": 0.4414, "id_mAP": 1.0, "beta": 1.0}
+[done] wrote /data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/selftest/res_RANDOMBANK
+[PASS] planted bank captures weather shift (>0.8)
+[PASS] planted bank carries little identity (<0.05)
+[PASS] random bank near chance (<0.1)
+[PASS] random baseline near m/D (<0.05)
+[PASS] E-only weather probe > E-perp
+[PASS] E-perp ID mAP > E-only
+[data] rois=2880 fit=1800 test=1080 D=256 weathers=['clone', 'fog', 'rain']
+[paired] 720 matched (object, frame) pairs vs clone
+[P3] ICS              beta=0.00 {"weather_bacc": 1.0, "weather_gap": 0.5045, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.0}
+[P3] ICS              beta=0.10 {"weather_bacc": 1.0, "weather_gap": 0.4592, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.1}
+[P3] ICS              beta=0.25 {"weather_bacc": 1.0, "weather_gap": 0.389, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.25}
+[P3] ICS              beta=0.50 {"weather_bacc": 1.0, "weather_gap": 0.267, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.5}
+[P3] ICS              beta=0.75 {"weather_bacc": 1.0, "weather_gap": 0.143, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.75}
+[P3] ICS              beta=1.00 {"weather_bacc": 0.5444, "weather_gap": 0.0545, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 1.0}
+[P3] Random           beta=0.00 {"weather_bacc": 1.0, "weather_gap": 0.5045, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.0}
+[P3] Random           beta=0.10 {"weather_bacc": 1.0, "weather_gap": 0.5045, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.1}
+[P3] Random           beta=0.25 {"weather_bacc": 1.0, "weather_gap": 0.5046, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.25}
+[P3] Random           beta=0.50 {"weather_bacc": 1.0, "weather_gap": 0.5047, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.5}
+[P3] Random           beta=0.75 {"weather_bacc": 1.0, "weather_gap": 0.5047, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.75}
+[P3] Random           beta=1.00 {"weather_bacc": 1.0, "weather_gap": 0.5047, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 1.0}
+[P3] Identity oracle  beta=0.00 {"weather_bacc": 1.0, "weather_gap": 0.5045, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.0}
+[P3] Identity oracle  beta=0.10 {"weather_bacc": 1.0, "weather_gap": 0.5046, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.1}
+[P3] Identity oracle  beta=0.25 {"weather_bacc": 1.0, "weather_gap": 0.5047, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.25}
+[P3] Identity oracle  beta=0.50 {"weather_bacc": 1.0, "weather_gap": 0.5048, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.5}
+[P3] Identity oracle  beta=0.75 {"weather_bacc": 1.0, "weather_gap": 0.5049, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 0.75}
+[P3] Identity oracle  beta=1.00 {"weather_bacc": 1.0, "weather_gap": 0.5049, "id_mAP": 1.0, "cross_weather_mAP": 1.0, "beta": 1.0}
+[done] wrote /data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/selftest/res_PAIRED
+[PASS] paired weather residual: planted bank 0.517 vs random 0.008 (>5x)

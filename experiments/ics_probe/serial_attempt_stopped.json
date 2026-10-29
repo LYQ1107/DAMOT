@@ -1,0 +1,8 @@
+{
+  "stopped_utc": "2026-10-28T16:36:07.688882+00:00",
+  "pids": [
+    793,
+    7685
+  ],
+  "reason": "Validated process prefetch has identical 16-view output (maximum error 0); restart the incomplete single-domain run with CPU prefetch. Original logs retained."
+}

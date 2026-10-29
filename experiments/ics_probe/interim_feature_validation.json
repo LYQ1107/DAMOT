@@ -1,0 +1,96 @@
+{
+  "validated_files": [
+    {
+      "label": "F_stage1_e5",
+      "domain": "clear_holdout_45v",
+      "rois": 7956,
+      "dose_rois": 0,
+      "bank_num_updates": 219
+    },
+    {
+      "label": "F_stage1_e5",
+      "domain": "overcast",
+      "rois": 5281,
+      "dose_rois": 0,
+      "bank_num_updates": 219
+    },
+    {
+      "label": "F_stage1_e5",
+      "domain": "rainy",
+      "rois": 4279,
+      "dose_rois": 0,
+      "bank_num_updates": 219
+    },
+    {
+      "label": "F_stage1_e5",
+      "domain": "dawn_dusk",
+      "rois": 6683,
+      "dose_rois": 0,
+      "bank_num_updates": 219
+    },
+    {
+      "label": "F_stage1_e5",
+      "domain": "night",
+      "rois": 9640,
+      "dose_rois": 0,
+      "bank_num_updates": 219
+    },
+    {
+      "label": "F_stage3_e5",
+      "domain": "clear_holdout_45v",
+      "rois": 7956,
+      "dose_rois": 0,
+      "bank_num_updates": 664
+    },
+    {
+      "label": "F_stage3_e5",
+      "domain": "overcast",
+      "rois": 5281,
+      "dose_rois": 0,
+      "bank_num_updates": 664
+    },
+    {
+      "label": "F_stage3_e5",
+      "domain": "rainy",
+      "rois": 4279,
+      "dose_rois": 0,
+      "bank_num_updates": 664
+    },
+    {
+      "label": "F_stage3_e5",
+      "domain": "dawn_dusk",
+      "rois": 6683,
+      "dose_rois": 0,
+      "bank_num_updates": 664
+    },
+    {
+      "label": "F_stage3_e5",
+      "domain": "night",
+      "rois": 9640,
+      "dose_rois": 0,
+      "bank_num_updates": 664
+    },
+    {
+      "label": "F_stage4_e5",
+      "domain": "clear_holdout_45v",
+      "rois": 7956,
+      "dose_rois": 816,
+      "bank_num_updates": 830
+    },
+    {
+      "label": "F_stage4_e5",
+      "domain": "overcast",
+      "rois": 5281,
+      "dose_rois": 553,
+      "bank_num_updates": 830
+    },
+    {
+      "label": "F_stage4_e5",
+      "domain": "rainy",
+      "rois": 4279,
+      "dose_rois": 426,
+      "bank_num_updates": 830
+    }
+  ],
+  "shared_domain_metadata_identical": true
+}

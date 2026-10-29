@@ -1,0 +1,14 @@
+2026-10-28 16:31:29,461 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-28 16:31:29,461 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-28 16:31:29,461 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-28 16:31:30,015 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-28 16:31:30,015 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-28 16:31:30,015 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+load 8.733441829681396
+read_resize 0.13565564155578613
+views 0 3.4021763801574707
+tensor 0 0.2147831916809082
+embed 0 2.4956369400024414 (4, 20, 256)
+views 1 6.786748886108398
+tensor 1 0.23503351211547852
+embed 1 0.09292721748352051 (4, 20, 256)

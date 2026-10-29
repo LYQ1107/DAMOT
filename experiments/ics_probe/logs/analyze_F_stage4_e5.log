@@ -1,0 +1,20 @@
+[data] rois=33839 fit=15820 test=18019 D=256 weathers=['clear_holdout_45v', 'dawn_dusk', 'night', 'overcast', 'rainy']
+[P3] ICS              beta=0.00 {"weather_bacc": 0.3452, "weather_gap": 0.1665, "id_mAP": 0.5731, "beta": 0.0}
+[P3] ICS              beta=0.10 {"weather_bacc": 0.3456, "weather_gap": 0.168, "id_mAP": 0.5746, "beta": 0.1}
+[P3] ICS              beta=0.25 {"weather_bacc": 0.3455, "weather_gap": 0.17, "id_mAP": 0.5767, "beta": 0.25}
+[P3] ICS              beta=0.50 {"weather_bacc": 0.3463, "weather_gap": 0.1727, "id_mAP": 0.5785, "beta": 0.5}
+[P3] ICS              beta=0.75 {"weather_bacc": 0.3471, "weather_gap": 0.1743, "id_mAP": 0.5785, "beta": 0.75}
+[P3] ICS              beta=1.00 {"weather_bacc": 0.3492, "weather_gap": 0.1747, "id_mAP": 0.5773, "beta": 1.0}
+[P3] Random           beta=0.00 {"weather_bacc": 0.3452, "weather_gap": 0.1665, "id_mAP": 0.5731, "beta": 0.0}
+[P3] Random           beta=0.10 {"weather_bacc": 0.3451, "weather_gap": 0.1666, "id_mAP": 0.5732, "beta": 0.1}
+[P3] Random           beta=0.25 {"weather_bacc": 0.3452, "weather_gap": 0.1666, "id_mAP": 0.5732, "beta": 0.25}
+[P3] Random           beta=0.50 {"weather_bacc": 0.3452, "weather_gap": 0.1666, "id_mAP": 0.5732, "beta": 0.5}
+[P3] Random           beta=0.75 {"weather_bacc": 0.3454, "weather_gap": 0.1667, "id_mAP": 0.5732, "beta": 0.75}
+[P3] Random           beta=1.00 {"weather_bacc": 0.3459, "weather_gap": 0.1667, "id_mAP": 0.5732, "beta": 1.0}
+[P3] Identity oracle  beta=0.00 {"weather_bacc": 0.3452, "weather_gap": 0.1665, "id_mAP": 0.5731, "beta": 0.0}
+[P3] Identity oracle  beta=0.10 {"weather_bacc": 0.3452, "weather_gap": 0.1683, "id_mAP": 0.5774, "beta": 0.1}
+[P3] Identity oracle  beta=0.25 {"weather_bacc": 0.345, "weather_gap": 0.1709, "id_mAP": 0.583, "beta": 0.25}
+[P3] Identity oracle  beta=0.50 {"weather_bacc": 0.3458, "weather_gap": 0.1753, "id_mAP": 0.5911, "beta": 0.5}
+[P3] Identity oracle  beta=0.75 {"weather_bacc": 0.3457, "weather_gap": 0.1787, "id_mAP": 0.5949, "beta": 0.75}
+[P3] Identity oracle  beta=1.00 {"weather_bacc": 0.3446, "weather_gap": 0.1801, "id_mAP": 0.5935, "beta": 1.0}
+[done] wrote /data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/analysis_F_stage4_e5

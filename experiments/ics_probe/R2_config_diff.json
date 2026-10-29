@@ -1,0 +1,6 @@
+{
+  ".model.track_head.causal_pca_mode": {
+    "base": "proto_shrinkage_cov_ema",
+    "control": "pairwise_residual"
+  }
+}

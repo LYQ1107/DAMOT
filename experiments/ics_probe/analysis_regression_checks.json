@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "dose_control": {
+    "expected_in": 0.5,
+    "actual_in": 0.5,
+    "expected_out": 1.5,
+    "actual_out": 1.5,
+    "reference_pairs": 10
+  },
+  "clear_reference_energy": {
+    "expected": 0.8333333333333334,
+    "actual": 0.8333333333333194,
+    "pooled_centering_energy": 0.7499999999999719
+  },
+  "zero_beta_subspace_independent": true
+}

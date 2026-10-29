@@ -1,0 +1,686 @@
+{
+  "overcast": {
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
+    "annotation_sha256": "b95d22fd44142d15d637536938ac4dd4d0e160dee50ca530e5fe260711be8e33",
+    "frames": 4448,
+    "videos": 22,
+    "image_view": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/overcast",
+    "by_video": {
+      "b1c66a42-6f7d68ca": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1c66a42-6f7d68ca",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1d0091f-f2c2d2ae": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d0091f-f2c2d2ae",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1d968b9-563405f4": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d968b9-563405f4",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1d971b4-ac67ca0d": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d971b4-ac67ca0d",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 199
+      },
+      "b1e0c01d-dd9e6e2f": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e0c01d-dd9e6e2f",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1f4491b-cf446195": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f4491b-cf446195",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1f4491b-dd8dfed5": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f4491b-dd8dfed5",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1f85377-44885085": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f85377-44885085",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1fc95c9-cb2882c7": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1fc95c9-cb2882c7",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1ff4656-0435391e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ff4656-0435391e",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1ff4656-ebcfeb35": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ff4656-ebcfeb35",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b200e97a-bf074435": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b200e97a-bf074435",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b20b9c19-91e01a50": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b20b9c19-91e01a50",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b22f385b-5d7e5202": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b22f385b-5d7e5202",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b23b2649-6af03cd5": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23b2649-6af03cd5",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b23b2649-8349d2a1": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23b2649-8349d2a1",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b24071b8-b3ee1196": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b24071b8-b3ee1196",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2408e45-984ba5aa": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2408e45-984ba5aa",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b24d283f-33783d1b": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b24d283f-33783d1b",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b251064f-30002542": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-30002542",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b251064f-4696b75e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-4696b75e",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b251064f-5f6b663e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-5f6b663e",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      }
+    }
+  },
+  "rainy": {
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/rainy.json",
+    "annotation_sha256": "c4263a48d75ee9454f60f17cc3b418568b8728132c1b4e8013853dda83aa6f59",
+    "frames": 3150,
+    "videos": 17,
+    "image_view": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/rainy",
+    "by_video": {
+      "0010bf16-9ee17cd9": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0010bf16-9ee17cd9",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "0024b742-acbed4fb": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0024b742-acbed4fb",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 102
+      },
+      "0051e391-d32a618e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0051e391-d32a618e",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 208
+      },
+      "0062e803-38c0a33a": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0062e803-38c0a33a",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 103
+      },
+      "00690c26-e4bbbd72": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00690c26-e4bbbd72",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "00699de6-58847872": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00699de6-58847872",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "006dd004-34630e8d": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/006dd004-34630e8d",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "00810e80-37641274": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00810e80-37641274",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "0081da60-27997c07": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0081da60-27997c07",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "0081da60-5fa22cc6": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0081da60-5fa22cc6",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "b1cac6a7-04e33135": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1cac6a7-04e33135",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 106
+      },
+      "b1d0091f-75824d0d": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d0091f-75824d0d",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1e1a7b8-65ec7612": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-65ec7612",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1e1a7b8-a7426a97": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-a7426a97",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1e1a7b8-b397c445": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-b397c445",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1e9ee0e-67e26f2e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e9ee0e-67e26f2e",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b2156f8e-72e1547c": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2156f8e-72e1547c",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      }
+    }
+  },
+  "dawn_dusk": {
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+    "annotation_sha256": "13538196138661da77d41f60cad469ac6260e9be7c27b5919e1458be5d0cb6d7",
+    "frames": 6476,
+    "videos": 33,
+    "image_view": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/dawn_dusk",
+    "by_video": {
+      "0000f77c-62c2a288": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0000f77c-62c2a288",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "0000f77c-cb820c98": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0000f77c-cb820c98",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "00067cfb-e535423e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00067cfb-e535423e",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "0008a165-c48f4b3e": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0008a165-c48f4b3e",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "00091078-84635cf2": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-84635cf2",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 103
+      },
+      "00091078-c1d32eea": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-c1d32eea",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "00091078-f32de4d2": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-f32de4d2",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "00391a82-8be5b76d": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00391a82-8be5b76d",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "00391a82-d1428e56": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00391a82-d1428e56",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "00417c23-220bbc98": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00417c23-220bbc98",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 203
+      },
+      "005c4fd3-cb4d6287": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/005c4fd3-cb4d6287",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "0062ab5a-54bb129b": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0062ab5a-54bb129b",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "006676e5-624162a7": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/006676e5-624162a7",
+        "local_cache": false,
+        "original_split": "train",
+        "frames": 202
+      },
+      "b1ceb32e-51852abe": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ceb32e-51852abe",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1d10d08-5b108225": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d10d08-5b108225",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1d10d08-da110fcb": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d10d08-da110fcb",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1d4b62c-60aab822": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d4b62c-60aab822",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1d59b1f-a38aec79": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d59b1f-a38aec79",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1d7b3ac-0bdb47dc": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-0bdb47dc",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1d7b3ac-9e14f05f": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-9e14f05f",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1d7b3ac-afa57f22": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-afa57f22",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1d968b9-ce42734f": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d968b9-ce42734f",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1dd58c1-8b546ba7": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1dd58c1-8b546ba7",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 197
+      },
+      "b1e1a7b8-0aec80e8": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-0aec80e8",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1eb9133-5cc75c18": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1eb9133-5cc75c18",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1f0efd9-37a14dda": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f0efd9-37a14dda",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1fbaab8-68db7df7": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1fbaab8-68db7df7",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2036451-aa924fd1": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2036451-aa924fd1",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b216243d-ad4306b9": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b216243d-ad4306b9",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 103
+      },
+      "b21c86ac-0dc77d82": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-0dc77d82",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b21c86ac-2eb7ba16": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-2eb7ba16",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b21c86ac-71205084": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-71205084",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b23a79d1-e434acaa": {
+        "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23a79d1-e434acaa",
+        "local_cache": false,
+        "original_split": "val",
+        "frames": 203
+      }
+    }
+  },
+  "night": {
+    "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+    "annotation_sha256": "002cf995f0b4972d6d7024df452e67d4fe2baf032ccb127a81296e6a13c9fc75",
+    "frames": 7286,
+    "videos": 36,
+    "image_view": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/night",
+    "by_video": {
+      "b1db7e22-cfa74dc3": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1db7e22-cfa74dc3",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1e62c91-eca210a9": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1e62c91-eca210a9",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1e88fd2-c1e4fd2b": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1e88fd2-c1e4fd2b",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1ebfc3c-740ec84a": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ebfc3c-740ec84a",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1ebfc3c-cc9c2bb8": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ebfc3c-cc9c2bb8",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1ee702d-4a193906": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ee702d-4a193906",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1f20aa0-3401c3bf": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f20aa0-3401c3bf",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1f20aa0-50213047": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f20aa0-50213047",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b1f6c103-8b75ea3e": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f6c103-8b75ea3e",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b1fbf878-b31a8293": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1fbf878-b31a8293",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b200b84e-4a792877": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b200b84e-4a792877",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b20234fd-822029be": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b20234fd-822029be",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2064e61-2beadd45": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2064e61-2beadd45",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b206a78b-99f405ab": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b206a78b-99f405ab",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b20eae11-6817ba7a": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b20eae11-6817ba7a",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2102d00-5eb86b71": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2102d00-5eb86b71",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2102d00-a8c09be1": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2102d00-a8c09be1",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b214d1e1-f248c616": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b214d1e1-f248c616",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 200
+      },
+      "b21547c1-73e457f8": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21547c1-73e457f8",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b21547c1-796757ac": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21547c1-796757ac",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2194b15-1825056a": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2194b15-1825056a",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b21bfb83-ea32f716": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21bfb83-ea32f716",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b21c68e6-65674a17": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21c68e6-65674a17",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b21d5efb-5e2cd743": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21d5efb-5e2cd743",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b229488e-e4714bb7": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b229488e-e4714bb7",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b230132b-ff8f2719": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b230132b-ff8f2719",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b23a79d1-43dfeecd": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23a79d1-43dfeecd",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b23f7012-32d284ce": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23f7012-32d284ce",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b23f7012-fab06dac": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23f7012-fab06dac",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b242f6b2-0033bdfb": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-0033bdfb",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b242f6b2-99d2f2c1": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-99d2f2c1",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      },
+      "b242f6b2-f5da110f": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-f5da110f",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b24380ab-6dbeb908": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b24380ab-6dbeb908",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2505382-1423f56a": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2505382-1423f56a",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b2505382-272e7823": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2505382-272e7823",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 202
+      },
+      "b251b746-00138418": {
+        "source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b251b746-00138418",
+        "local_cache": true,
+        "original_split": "val",
+        "frames": 203
+      }
+    }
+  }
+}

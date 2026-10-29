@@ -1,0 +1,26 @@
+{
+  "source_checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage03_after_dawn_dusk/epoch_5.pth",
+  "checkpoint_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "history_path": "/data1/liuyeqiang/damot_ics_followup_20261029/cache/HF_stage3_history.pth",
+  "history_sha256": "a8c2ea74e8d0d9aed6e069f9a7cb338bd0f39599a2e9f455dc07f8a6d2cf74bc",
+  "source_history_sidecar": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank0.pth",
+  "source_sidecar_sha256": "a251ee49ce8968a0595de6e0c50070da9f1d0465d21c7d1ae1e36fb94255cd06",
+  "prototypes": 300,
+  "method": "Exact saved stage3 APR history (rank0) shared by all groups and all ranks",
+  "deviation": "No <stage>_roi_proto.pth filename exists. Exact APR histories were saved in stage3_final_rank*.pth; no approximate reconstruction is needed.",
+  "rank_rng_sources": {
+    "0": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank0.pth",
+    "1": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank1.pth",
+    "2": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank2.pth",
+    "3": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/state/stage3_final_rank3.pth"
+  },
+  "rank_rng_sha256": {
+    "0": "a251ee49ce8968a0595de6e0c50070da9f1d0465d21c7d1ae1e36fb94255cd06",
+    "1": "c953a7e44aeed5e113c11e72a35179985c424ec93ca6c753ff19879aede768e9",
+    "2": "85b456aa24a16ef133c19ebebe471a842acf5d20eb16e3a022e2caf15634bec6",
+    "3": "0dab501913e6994f0a07eddde1ce09d3a1c2cb72549e8259a8a8137ef9bd1071"
+  },
+  "group": "b",
+  "seed": 1790355234,
+  "epochs": 2
+}

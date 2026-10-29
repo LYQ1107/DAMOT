@@ -1,20 +1,18 @@
 {
-  "running": [
-    "S4_HF_baseline"
-  ],
+  "running": [],
   "observed": {
     "adopted_S1_HF": false,
     "adopted_S4_F": false
   },
   "failures": {},
-  "time": 1793273214.9454758,
+  "time": 1793314521.829845,
   "features": {
     "HF": true,
-    "NOGEOM": false
+    "NOGEOM": true
   },
   "S4": {
     "F": true,
-    "HF": false
+    "HF": true
   },
-  "NOGEOM_complete": false
+  "NOGEOM_complete": true
 }

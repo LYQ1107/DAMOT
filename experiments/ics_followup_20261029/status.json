@@ -1,9 +1,13 @@
 {
+  "status": "complete",
+  "S1": true,
+  "S2": true,
+  "S3": true,
+  "S4": true,
+  "S5_primary_four_groups": true,
+  "optional_NOGEOM_short_repeat": "not run",
   "run": "/data1/liuyeqiang/damot_ics_followup_20261029",
-  "F_S1_S2_S3_S4": "complete",
-  "HF_S1_S2_S3": "complete",
-  "HF_S4": "pending GPU",
-  "NOGEOM_S1_S2_S3": "pending original run completion",
-  "S5": "prepared, not trained",
+  "method_source_commit": "7aa3fd8da73aa62bda54485baa60aa70efc70445",
+  "completed_UTC": "2026-10-29 22:55:36",
   "selection_by_metric": false
 }

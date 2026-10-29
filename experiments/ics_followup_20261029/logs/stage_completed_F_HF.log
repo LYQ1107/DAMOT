@@ -1,1 +1,3 @@
 S3 report generated for ['F', 'HF']
+No CUDA runtime is found, using CUDA_HOME='/usr'
+Staged complete F/HF offline blocks and complete F tracking; remaining tasks explicitly pending

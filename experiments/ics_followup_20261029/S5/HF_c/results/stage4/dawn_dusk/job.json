@@ -1,0 +1,16 @@
+{
+  "pid": 28219,
+  "stage": 4,
+  "domain": "dawn_dusk",
+  "checkpoint": "/data1/liuyeqiang/damot_ics_followup_20261029/results/S5/HF_c/episode/stage_snapshots/stage04_after_night.pth",
+  "sha256": "9d8157d704bbe2d228d2e80fa05be5ee4239858742cfd308db0cf7111d952186",
+  "gpu": "8",
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/run/ics_short_stage_eval.py",
+    "--root",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/results/S5/HF_c",
+    "--domain",
+    "dawn_dusk"
+  ],
+  "start": 1793309351.057705
+}

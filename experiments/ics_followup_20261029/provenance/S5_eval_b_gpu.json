@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    8
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/s5_eval_group.py",
+    "b"
+  ],
+  "pid": 9482,
+  "time": 1793306070.4853106
+}

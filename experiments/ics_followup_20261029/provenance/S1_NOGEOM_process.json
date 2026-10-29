@@ -1,0 +1,22 @@
+{
+  "pid": 19221,
+  "exit_code": 0,
+  "command": [
+    "/usr/bin/python3",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/gpu_slot.py",
+    "--name",
+    "S1_NOGEOM",
+    "--count",
+    "1",
+    "--prefer",
+    "8,9,7,2,3,4,5,6",
+    "--",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/run_probe_group.py",
+    "NOGEOM",
+    "/data1/liuyeqiang/damot_apr_complement_hf_nogeom_20261029_1443",
+    "{GPU}"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/S1_NOGEOM_1793295693215771392.log",
+  "end": 1793304912.5424027
+}

@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "stage": 4,
+  "epochs": 2,
+  "checkpoint": "/data1/liuyeqiang/damot_ics_followup_20261029/results/S5/HF_c/episode/adapt/stage04_after_night/epoch_2.pth",
+  "checkpoint_sha256": "9d8157d704bbe2d228d2e80fa05be5ee4239858742cfd308db0cf7111d952186",
+  "seed": 1790355234
+}

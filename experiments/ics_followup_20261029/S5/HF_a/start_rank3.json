@@ -1,0 +1,55 @@
+{
+  "num_updates": 660,
+  "history_sha256": "a8c2ea74e8d0d9aed6e069f9a7cb338bd0f39599a2e9f455dc07f8a6d2cf74bc",
+  "checkpoint_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "rng_sidecar_sha256": "0dab501913e6994f0a07eddde1ce09d3a1c2cb72549e8259a8a8137ef9bd1071",
+  "all_loaded_tensors_exact": true,
+  "bank_reset": false,
+  "activity": {
+    "bank_initialized": true,
+    "ICS_num_updates": 660,
+    "ICS_last_effective_rois": 119,
+    "ICS_last_update_ok": true,
+    "APR_calls": 1080,
+    "APR_basis_ready_calls": 1079,
+    "APR_coupled_loss_active_calls": 740,
+    "APR_memory": {
+      "history_domains": [
+        "overcast",
+        "rainy",
+        "dawn_dusk"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        },
+        "rainy": {
+          "1": 100
+        },
+        "dawn_dusk": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 0
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {}
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 0
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 0
+      }
+    ],
+    "allocated_MiB": 881.681640625,
+    "reserved_MiB": 1116.0
+  },
+  "time": 1793295715.1849241
+}

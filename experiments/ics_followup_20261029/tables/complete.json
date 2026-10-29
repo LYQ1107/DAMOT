@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "selection_by_metric": false,
+  "all_seven_model_subspaces": true,
+  "all_234_scan_cells": true,
+  "all_72_S4_cells": true,
+  "all_four_S5_groups": true
+}

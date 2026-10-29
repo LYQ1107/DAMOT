@@ -1,0 +1,11 @@
+{
+  "pid": 17240,
+  "exit_code": 0,
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/s5_probe_analyze.py",
+    "a"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/S5_probeCPU_a_1793301236891732992.log",
+  "end": 1793301267.1103673
+}

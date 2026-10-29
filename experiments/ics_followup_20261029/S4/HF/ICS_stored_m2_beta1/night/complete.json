@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "frames": 7286,
+  "beta0_native_outputs_exact": false,
+  "beta0_reference_metrics_exact": false,
+  "reference": "frozen archived metrics",
+  "reference_categories_checked": [
+    "car",
+    "OVERALL"
+  ]
+}

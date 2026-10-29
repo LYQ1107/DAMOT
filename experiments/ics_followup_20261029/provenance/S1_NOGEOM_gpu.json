@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    9
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/run_probe_group.py",
+    "NOGEOM",
+    "/data1/liuyeqiang/damot_apr_complement_hf_nogeom_20261029_1443",
+    "9"
+  ],
+  "pid": 19221,
+  "time": 1793304903.8251688
+}

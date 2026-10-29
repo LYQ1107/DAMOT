@@ -1,0 +1,21 @@
+{
+  "pid": 4396,
+  "exit_code": 0,
+  "command": [
+    "/usr/bin/python3",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/gpu_slot.py",
+    "--name",
+    "S5_probe_c",
+    "--count",
+    "1",
+    "--prefer",
+    "8,9,7,2,3,4,5,6",
+    "--",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/s5_probe.py",
+    "c",
+    "{GPU}"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/S5_probe_c_1793308708261318144.log",
+  "end": 1793310003.6268988
+}

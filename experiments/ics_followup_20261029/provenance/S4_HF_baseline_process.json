@@ -1,5 +1,6 @@
 {
   "pid": 30455,
+  "exit_code": 0,
   "command": [
     "/usr/bin/python3",
     "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/gpu_slot.py",
@@ -18,5 +19,5 @@
     "--baseline-only"
   ],
   "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/S4_HF_baseline_1793271617536241152.log",
-  "start": 1793271617.787767
+  "end": 1793276378.150838
 }

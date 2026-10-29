@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    2
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/s5_probe.py",
+    "a",
+    "2"
+  ],
+  "pid": 2774,
+  "time": 1793301219.6982808
+}

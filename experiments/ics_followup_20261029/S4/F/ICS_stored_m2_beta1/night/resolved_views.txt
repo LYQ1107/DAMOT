@@ -196,7 +196,8 @@
   },
   "track_head_defaults_resolved": true,
   "execution_notes": {
-    "inference": "exact FP32 cache replay through native tracker",
-    "projection": "unrenormalized; ICS basis uses QR span of stored PCS"
+    "inference": "native tracker; cached FP32 detections/embeddings",
+    "projection_no_renormalization": true,
+    "cell_configuration": "resolved_config.py or audit metadata"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "pid": 28912,
+  "exit_code": 0,
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/scripts/analyze_group.py",
+    "NOGEOM"
+  ],
+  "log": "/data1/liuyeqiang/damot_ics_followup_20261029/logs/CPU_NOGEOM_1793304912543575552.log",
+  "end": 1793305876.6835856
+}

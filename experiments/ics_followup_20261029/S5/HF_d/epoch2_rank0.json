@@ -1,0 +1,63 @@
+{
+  "activity": {
+    "bank_initialized": true,
+    "ICS_num_updates": 715,
+    "ICS_last_effective_rois": 124,
+    "ICS_last_update_ok": true,
+    "APR_calls": 1308,
+    "APR_basis_ready_calls": 1077,
+    "APR_coupled_loss_active_calls": 740,
+    "APR_memory": {
+      "history_domains": [
+        "overcast",
+        "rainy",
+        "dawn_dusk"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        },
+        "rainy": {
+          "1": 100
+        },
+        "dawn_dusk": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 1000
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {
+        "selected_rois": 57,
+        "prototypes": 300,
+        "mean_topk_sim": 0.6623141169548035,
+        "loss": 0.3376859128475189,
+        "gate_enabled": false,
+        "sim_gate_thr": 0.5,
+        "gate_selected_rois": 57,
+        "gate_total_rois": 57,
+        "gate_ratio": 1.0,
+        "coupled": false,
+        "couple_beta": 0.0,
+        "coupled_metric": "projected_cosine"
+      }
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 3648
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 3648
+      }
+    ],
+    "allocated_MiB": 22631.0439453125,
+    "reserved_MiB": 30788.0
+  },
+  "insufficient_pairs": 173,
+  "pair_checks": 228
+}

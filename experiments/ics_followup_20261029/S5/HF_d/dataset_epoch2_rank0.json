@@ -1,0 +1,9 @@
+{
+  "domain": "night",
+  "training_samples": 7274,
+  "batch_capacity_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "sampler_type": "DistributedGroupSampler",
+  "sampler_seed": 0,
+  "same_number_of_samples_as_frozen_HF": true
+}

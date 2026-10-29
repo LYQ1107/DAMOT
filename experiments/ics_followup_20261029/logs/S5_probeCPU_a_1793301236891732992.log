@@ -1,0 +1,2 @@
+[data] rois=33839 fit=15820 test=18019 D=256 weathers=['clear_holdout_45v', 'dawn_dusk', 'night', 'overcast', 'rainy']
+[done] P1/P2/binary probes only: /data1/liuyeqiang/damot_ics_followup_20261029/results/analysis_S5_HF_a_v2

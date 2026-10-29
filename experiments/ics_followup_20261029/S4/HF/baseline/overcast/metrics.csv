@@ -1,0 +1,3 @@
+checkpoint,domain,basis,beta,category,frames,HOTA_percent,delta_HOTA_pp,DetA_percent,delta_DetA_pp,IDF1_percent,delta_IDF1_pp,AssA_percent,delta_AssA_pp
+HF,overcast,baseline,0.0,car,4448,41.42043590012763,0.0,35.04944909144652,0.0,48.05210113750221,0.0,49.203985962676384,0.0
+HF,overcast,baseline,0.0,OVERALL,4448,37.58474556428468,0.0,30.26599688022713,0.0,42.36281263002173,0.0,46.987987426408516,0.0

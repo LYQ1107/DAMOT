@@ -1,0 +1,11 @@
+{
+  "training_config": "/data1/liuyeqiang/damot_ics_followup_20261029/results/S5/HF_b/config.py",
+  "epochs": 2,
+  "metric_protocol": "identical to frozen HF evaluation; no subspace intervention",
+  "thresholds": [
+    0.05,
+    0.3,
+    0.2
+  ],
+  "all_frame_HOTA": true
+}

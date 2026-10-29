@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    8
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/run/ics_validate_native_projection.py",
+    "--model",
+    "HF"
+  ],
+  "pid": 21742,
+  "time": 1793278928.907931
+}

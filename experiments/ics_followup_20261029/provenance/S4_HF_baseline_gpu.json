@@ -1,6 +1,17 @@
 {
-  "status": "waiting_for_idle_gpus",
-  "required": 1,
-  "available": [],
-  "pid": 30455
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    9
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_ics_followup_20261029/env/bin/python",
+    "-u",
+    "/data1/liuyeqiang/damot_ics_followup_20261029/code/tools/run/ics_tracking_intervention.py",
+    "--model",
+    "HF",
+    "--baseline-only"
+  ],
+  "pid": 30455,
+  "time": 1793276375.914936
 }

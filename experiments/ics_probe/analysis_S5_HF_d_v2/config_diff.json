@@ -1,0 +1,10 @@
+{
+  "model_config": "/data1/liuyeqiang/damot_ics_followup_20261029/results/S5/HF_d/config.py",
+  "analysis": "P1/P2 plus night binary probes",
+  "views": [
+    "clean",
+    "fap"
+  ],
+  "seed": 0,
+  "full_P3_scan_requested": false
+}

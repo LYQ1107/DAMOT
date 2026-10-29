@@ -1,0 +1,144 @@
+{
+  "teacher_pipeline": [],
+  "student_pipeline": [
+    {
+      "type": "SeqPhotoMetricDistortion",
+      "share_params": true
+    },
+    {
+      "type": "SeqSPAFrequencyTransform",
+      "mode": "low_freq_mask",
+      "low_ratio": 0.1,
+      "keep_prob": 0.9,
+      "apply_noise": false,
+      "noise_ratio": 0.0
+    }
+  ],
+  "contrastive_pipeline": [
+    {
+      "type": "SeqPhotoMetricDistortion",
+      "share_params": true
+    },
+    {
+      "type": "SeqSPAFrequencyTransform",
+      "mode": "high_freq_noise",
+      "apply_noise": true,
+      "noise_ratio": 0.03
+    }
+  ],
+  "data_train": [
+    {
+      "type": "BDDTrackingDataset",
+      "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+      "img_prefix": "/data1/liuyeqiang/damot_apr_complement_hf_nogeom_20261029_1443/data/images/night/",
+      "key_img_sampler": {
+        "interval": 1
+      },
+      "ref_img_sampler": {
+        "num_ref_imgs": 1,
+        "frame_range": 3,
+        "method": "uniform"
+      },
+      "pipeline": [
+        {
+          "type": "LoadMultiImagesFromFile",
+          "to_float32": true
+        },
+        {
+          "type": "SeqLoadAnnotations",
+          "with_bbox": true,
+          "with_track": true
+        },
+        {
+          "type": "SeqResize",
+          "img_scale": [
+            1296,
+            720
+          ],
+          "share_params": true,
+          "keep_ratio": true,
+          "bbox_clip_border": false
+        },
+        {
+          "type": "MatchInstances",
+          "skip_nomatch": true
+        },
+        {
+          "type": "VideoCollect",
+          "keys": [
+            "img",
+            "gt_bboxes",
+            "gt_labels",
+            "gt_match_indices",
+            "gt_instance_ids"
+          ]
+        },
+        {
+          "type": "SeqDefaultFormatBundle",
+          "ref_prefix": "ref"
+        }
+      ],
+      "classes": [
+        "pedestrian",
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle"
+      ]
+    }
+  ],
+  "track_head": {
+    "use_causal_direction_bank": true,
+    "causal_num_pcs": 2,
+    "causal_start_pc": 0,
+    "causal_trim_alpha": 0.1,
+    "causal_loss_weight": 0.025,
+    "causal_min_samples": 96,
+    "causal_update_momentum": 0.9,
+    "causal_normalize_feats": true,
+    "causal_bank_scope": "global",
+    "causal_feat_dim": 256,
+    "use_roi_proto_memory": true,
+    "roi_proto_memory_mode": "stage",
+    "roi_proto_class_ids": [
+      1
+    ],
+    "roi_proto_score_thr": 0.75,
+    "roi_proto_k_per_domain_class": 100,
+    "roi_proto_max_candidates_per_domain": 1000,
+    "roi_proto_topk": 3,
+    "roi_proto_loss_weight": 0.005,
+    "roi_proto_max_rois_per_batch": 64,
+    "roi_proto_diverse_select": false,
+    "roi_proto_diverse_preselect_top": 500,
+    "roi_proto_diverse_alpha": 0.5,
+    "roi_proto_feature_source": "student",
+    "roi_proto_log_interval": 50,
+    "roi_proto_use_sim_gate": false,
+    "roi_proto_sim_gate_thr": 0.5,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_update_by_covariance": true,
+    "causal_cov_momentum": 0.98,
+    "causal_qr_orthogonalize": true,
+    "causal_log_interval": 50,
+    "causal_debug_stats": true,
+    "causal_class_ids": null,
+    "causal_score_thr": 0.7,
+    "causal_use_scores": false,
+    "causal_residual_source": "key_ref_match",
+    "causal_residual_normalize_before_delta": true,
+    "causal_covariance_shrinkage": 0.15,
+    "causal_proto_center_momentum": 0.95,
+    "causal_proto_center_min_count": 8,
+    "roi_proto_couple_ics": true,
+    "roi_proto_couple_beta": 1.0,
+    "roi_proto_couple_basis": "ics",
+    "roi_proto_couple_metric": "projected_cosine"
+  },
+  "track_head_defaults_resolved": true,
+  "execution_notes": {
+    "offline_feature_geometry": "fixed",
+    "training_pipelines_are_provenance": true
+  }
+}

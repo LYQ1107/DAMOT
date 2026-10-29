@@ -1,0 +1,230 @@
+{
+  "protocol": {
+    "args": {
+      "feat_root": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats",
+      "label": "S5_HF_b",
+      "domains": [
+        "clear_holdout_45v",
+        "overcast",
+        "rainy",
+        "dawn_dusk",
+        "night"
+      ],
+      "ref_domain": "clear_holdout_45v",
+      "stage_labels": [],
+      "stage_domains": [],
+      "compare_labels": [],
+      "classes": "1",
+      "m": 0,
+      "betas": "0,0.1,0.25,0.5,0.75,1.0",
+      "residual_view": "fap",
+      "paired": false,
+      "ref_variant": "clone",
+      "gap": 4,
+      "window": 30,
+      "max_queries": 4000,
+      "n_random": 50,
+      "montage": false,
+      "seed": 0,
+      "v2": true,
+      "probe_only": true,
+      "out": "/data1/liuyeqiang/damot_ics_followup_20261029/results/analysis_S5_HF_b_v2"
+    },
+    "rois": 33839,
+    "fit_rois": 15820,
+    "test_rois": 18019,
+    "fit_videos": 71,
+    "test_videos": 77,
+    "domain_shift_reference": "clear_holdout_45v",
+    "weather_probe": "refitted logistic regression after each transformation",
+    "interpretation": "BDD domain labels also encode scene and identity differences; these unpaired probes do not identify a pure weather cause.",
+    "fisher_features": "Z - beta * Z E E^T, without L2 renormalization; car test split",
+    "classifier_features": "L2 renormalized as v1; refitted at each intervention",
+    "covariance_scan_equivalent_to_bank_pcs": false
+  },
+  "P1": [
+    {
+      "subspace": "ICS (checkpoint)",
+      "m": 2,
+      "Real weather shift": 0.13347098329989002,
+      "Identity": 0.30743329953478815,
+      "Temporal (same ID)": 0.18642390544259793,
+      "FAP residual": 0.0389461078566001,
+      "Weather/Identity": 0.4341461497548438,
+      "FAP/Identity": 0.12668148803466361
+    },
+    {
+      "subspace": "FAP-residual PCA",
+      "m": 2,
+      "Real weather shift": 0.2180389434025921,
+      "Identity": 0.10684940266522096,
+      "Temporal (same ID)": 0.09093357835718291,
+      "FAP residual": 0.05809082539110326,
+      "Weather/Identity": 2.040619207612307,
+      "FAP/Identity": 0.5436700996127133
+    },
+    {
+      "subspace": "Feature PCA",
+      "m": 2,
+      "Real weather shift": 0.2351484908596416,
+      "Identity": 0.3295330715291283,
+      "Temporal (same ID)": 0.23780702821852434,
+      "FAP residual": 0.04386999588182771,
+      "Weather/Identity": 0.713580854776643,
+      "FAP/Identity": 0.13312774853863735
+    },
+    {
+      "subspace": "Oracle weather (labels)",
+      "m": 2,
+      "Real weather shift": 0.4465696000676524,
+      "Identity": 0.1597780697305269,
+      "Temporal (same ID)": 0.08011345390426705,
+      "FAP residual": 0.033840766940378644,
+      "Weather/Identity": 2.7949367570782253,
+      "FAP/Identity": 0.21179857158895998
+    },
+    {
+      "subspace": "Oracle identity (labels)",
+      "m": 2,
+      "Real weather shift": 0.061055477239804035,
+      "Identity": 0.32890851908919316,
+      "Temporal (same ID)": 0.19051772005927597,
+      "FAP residual": 0.041196234492163,
+      "Weather/Identity": 0.18563057414472572,
+      "FAP/Identity": 0.12525134528627455
+    },
+    {
+      "subspace": "Random (mean)",
+      "m": 2,
+      "Real weather shift": 0.00876879745955583,
+      "Identity": 0.007909991639549242,
+      "Temporal (same ID)": 0.007868411939637082,
+      "FAP residual": 0.007749719570265491,
+      "Weather/Identity": 1.1085722789647543,
+      "FAP/Identity": 0.9797380227986408
+    },
+    {
+      "subspace": "Chance m/D",
+      "m": 2,
+      "Real weather shift": 0.0078125,
+      "Identity": 0.0078125,
+      "Temporal (same ID)": 0.0078125,
+      "FAP residual": 0.0078125
+    }
+  ],
+  "angles_to_ICS_deg": {
+    "ICS (checkpoint)": [
+      4.481007620043212e-16,
+      1.2134561647492235e-14
+    ],
+    "FAP-residual PCA": [
+      63.875360731131416,
+      79.04518529681127
+    ],
+    "Feature PCA": [
+      10.972914613215224,
+      83.31187619065471
+    ],
+    "Oracle weather (labels)": [
+      48.434927237445606,
+      83.80940817268937
+    ],
+    "Oracle identity (labels)": [
+      17.159852689368442,
+      45.5843109767806
+    ]
+  },
+  "P2_full_confusion": {
+    "domains": [
+      "clear_holdout_45v",
+      "dawn_dusk",
+      "night",
+      "overcast",
+      "rainy"
+    ],
+    "counts": [
+      [
+        1368,
+        450,
+        306,
+        691,
+        382
+      ],
+      [
+        1065,
+        894,
+        697,
+        886,
+        436
+      ],
+      [
+        465,
+        912,
+        4350,
+        519,
+        459
+      ],
+      [
+        622,
+        272,
+        153,
+        526,
+        240
+      ],
+      [
+        556,
+        416,
+        369,
+        556,
+        429
+      ]
+    ]
+  },
+  "P2": [
+    {
+      "space": "E only (2-d)",
+      "weather_bacc": 0.23010566813039873,
+      "chance": 0.2,
+      "id_mAP": 0.33982868403307465,
+      "night_vs_clear_bacc": 0.5862778000535085,
+      "night_vs_rest_bacc": 0.5083420236415931
+    },
+    {
+      "space": "E-perp (254-d)",
+      "weather_bacc": 0.35405142905433395,
+      "chance": 0.2,
+      "id_mAP": 0.5833844043214259,
+      "night_vs_clear_bacc": 0.8238574707785566,
+      "night_vs_rest_bacc": 0.7870764537531256
+    },
+    {
+      "space": "Full (256-d)",
+      "weather_bacc": 0.3551940886951437,
+      "chance": 0.2,
+      "id_mAP": 0.5735877180684639,
+      "night_vs_clear_bacc": 0.8204126864834365,
+      "night_vs_rest_bacc": 0.7871401035876835
+    },
+    {
+      "space": "Random 2-d",
+      "weather_bacc": 0.20023942608188605,
+      "chance": 0.2,
+      "id_mAP": 0.2866689670771165,
+      "night_vs_clear_bacc": 0.5038872666092395,
+      "night_vs_rest_bacc": 0.49400403003570903
+    },
+    {
+      "space": "Identity oracle 2-d",
+      "weather_bacc": 0.20973464088525334,
+      "chance": 0.2,
+      "id_mAP": 0.35670406352922807,
+      "night_vs_clear_bacc": 0.4703203763222279,
+      "night_vs_rest_bacc": 0.48525192402831674
+    }
+  ],
+  "n_retrieval_queries": 4000,
+  "P3": [],
+  "P4": [],
+  "P5": [],
+  "probe_only": true
+}

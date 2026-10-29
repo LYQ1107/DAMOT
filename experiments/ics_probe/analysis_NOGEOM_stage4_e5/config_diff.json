@@ -1,0 +1,12 @@
+{
+  "model_changes": [],
+  "analysis_version": "v1",
+  "covariance_vs_bank_pcs": "separate families per user approval; actual angles retained",
+  "v2_changes": [
+    "k scan 2,4,8,16,32; beta 0,.5,1; random10",
+    "Fisher on raw projected features",
+    "night binary probes and Full confusion"
+  ],
+  "original_v1_preserved": true,
+  "seed": 0
+}

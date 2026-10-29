@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "S5_HF_a",
+      "domain": "clear_holdout_45v",
+      "rois": 7956,
+      "same_metadata_fields": [
+        "video",
+        "instance_id",
+        "frame_id",
+        "image_id",
+        "category",
+        "bbox",
+        "weather"
+      ]
+    },
+    {
+      "label": "S5_HF_a",
+      "domain": "overcast",
+      "rois": 5281,
+      "same_metadata_fields": [
+        "video",
+        "instance_id",
+        "frame_id",
+        "image_id",
+        "category",
+        "bbox",
+        "weather"
+      ]
+    },
+    {
+      "label": "S5_HF_a",
+      "domain": "rainy",
+      "rois": 4279,
+      "same_metadata_fields": [
+        "video",
+        "instance_id",
+        "frame_id",
+        "image_id",
+        "category",
+        "bbox",
+        "weather"
+      ]
+    },
+    {
+      "label": "S5_HF_a",
+      "domain": "dawn_dusk",
+      "rois": 6683,
+      "same_metadata_fields": [
+        "video",
+        "instance_id",
+        "frame_id",
+        "image_id",
+        "category",
+        "bbox",
+        "weather"
+      ]
+    },
+    {
+      "label": "S5_HF_a",
+      "domain": "night",
+      "rois": 9640,
+      "same_metadata_fields": [
+        "video",
+        "instance_id",
+        "frame_id",
+        "image_id",
+        "category",
+        "bbox",
+        "weather"
+      ]
+    }
+  ]
+}

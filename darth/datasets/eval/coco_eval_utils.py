@@ -43,7 +43,7 @@ def get_default_trackeval_config():
         "OUTPUT_SUMMARY": True,
         "OUTPUT_EMPTY_CLASSES": True,
         "OUTPUT_DETAILED": True,
-        "PLOT_CURVES": True,
+        "PLOT_CURVES": False,
     }
     return default_config
 

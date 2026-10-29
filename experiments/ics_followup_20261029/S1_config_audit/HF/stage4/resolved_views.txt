@@ -85,7 +85,7 @@
       "noise_ratio": 0.03
     }
   ],
-  "data.train": [
+  "data_train": [
     {
       "type": "BDDTrackingDataset",
       "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
@@ -187,5 +187,94 @@
     "roi_proto_couple_beta": 1.0,
     "roi_proto_couple_basis": "ics",
     "roi_proto_couple_metric": "projected_cosine"
+  },
+  "execution_notes": {
+    "effective_model_pipelines": true,
+    "active_stochastic_geometry": [
+      {
+        "path": ".teacher_pipeline[0]",
+        "transform": {
+          "type": "SeqRandomFlip",
+          "share_params": true,
+          "flip_ratio": 0.5
+        }
+      },
+      {
+        "path": ".teacher_pipeline[1]",
+        "transform": {
+          "type": "SeqResize",
+          "img_scale": [
+            1088,
+            1088
+          ],
+          "share_params": true,
+          "ratio_range": [
+            0.8,
+            1.2
+          ],
+          "keep_ratio": true,
+          "bbox_clip_border": false
+        }
+      },
+      {
+        "path": ".teacher_pipeline[2]",
+        "transform": {
+          "type": "SeqRandomCrop",
+          "share_params": false,
+          "crop_size": [
+            1088,
+            1088
+          ],
+          "bbox_clip_border": false,
+          "allow_negative_crop": true
+        }
+      },
+      {
+        "path": ".contrastive_pipeline[0]",
+        "transform": {
+          "type": "SeqRandomFlip",
+          "share_params": true,
+          "flip_ratio": 0.5
+        }
+      },
+      {
+        "path": ".contrastive_pipeline[1]",
+        "transform": {
+          "type": "SeqResize",
+          "img_scale": [
+            1088,
+            1088
+          ],
+          "share_params": true,
+          "ratio_range": [
+            0.8,
+            1.2
+          ],
+          "keep_ratio": true,
+          "bbox_clip_border": false
+        }
+      },
+      {
+        "path": ".contrastive_pipeline[2]",
+        "transform": {
+          "type": "SeqRandomCrop",
+          "share_params": false,
+          "crop_size": [
+            1088,
+            1088
+          ],
+          "bbox_clip_border": false,
+          "allow_negative_crop": true
+        }
+      },
+      {
+        "path": ".data_train[0].pipeline[2]",
+        "transform": {
+          "type": "SeqRandomFlip",
+          "share_params": true,
+          "flip_ratio": 0.5
+        }
+      }
+    ]
   }
 }

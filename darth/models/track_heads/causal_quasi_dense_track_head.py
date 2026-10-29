@@ -93,6 +93,10 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                  causal_covariance_shrinkage=0.0,
                  causal_proto_center_momentum=0.95,
                  causal_proto_center_min_count=4,
+                 roi_proto_couple_ics=False,
+                 roi_proto_couple_beta=None,
+                 roi_proto_couple_basis='ics',
+                 roi_proto_couple_metric='projected_l2',
                  *args,
                  **kwargs):
         super().__init__(*args, **kwargs)
@@ -132,6 +136,21 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
         self.causal_covariance_shrinkage = float(causal_covariance_shrinkage)
         self.causal_proto_center_momentum = float(causal_proto_center_momentum)
         self.causal_proto_center_min_count = int(causal_proto_center_min_count)
+        self.roi_proto_couple_ics = bool(roi_proto_couple_ics)
+        self.roi_proto_couple_beta = (None if roi_proto_couple_beta is None
+                                      else float(roi_proto_couple_beta))
+        self.roi_proto_couple_metric = str(roi_proto_couple_metric)
+        self.roi_proto_couple_basis = str(roi_proto_couple_basis)
+        if self.roi_proto_couple_basis not in ('ics', 'feature_pca'):
+            raise ValueError('Unsupported roi_proto_couple_basis')
+        if (self.roi_proto_couple_beta is not None
+                and not 0.0 <= self.roi_proto_couple_beta <= 1.0):
+            raise ValueError('roi_proto_couple_beta must lie in [0, 1]')
+        if self.roi_proto_couple_metric not in ('projected_l2', 'projected_cosine'):
+            raise ValueError('Unsupported roi_proto_couple_metric')
+        self._apr_couple_calls = 0
+        self._apr_couple_basis_ready = 0
+        self._apr_couple_loss_active = 0
 
         self._causal_logged_init = False
         self._causal_forward_count = 0
@@ -151,6 +170,16 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                 covariance_shrinkage=self.causal_covariance_shrinkage)
         else:
             self.causal_bank = None
+
+        self.apr_feat_bank = None
+        if (use_roi_proto_memory and self.roi_proto_couple_ics
+                and self.roi_proto_couple_basis == 'feature_pca'):
+            self.apr_feat_bank = CausalDirectionBank(
+                feat_dim=causal_feat_dim, num_pcs=causal_num_pcs,
+                momentum=causal_update_momentum, cov_momentum=causal_cov_momentum,
+                min_samples=causal_min_samples, normalize=True,
+                pca_mode='cov_ema', qr_orthogonalize=True,
+                log_interval=causal_log_interval, debug_stats=False)
 
         self.register_buffer(
             "causal_proto_centers",
@@ -485,6 +514,12 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                 key_sampling_results, ref_sampling_results,
                 asso_targets, gt_labels, gt_match_indices)
 
+        if (self.apr_feat_bank is not None and key_feats is not None
+                and ref_feats is not None and key_feats.numel() > 0):
+            self.apr_feat_bank.update(torch.cat(
+                [key_feats.detach(), ref_feats.detach()], dim=0),
+                domain=self.current_domain)
+
         # ── RoI prototype memory (default OFF) ───────────────────────────────
         if self.use_roi_proto_memory:
             if self.roi_proto_memory is not None:
@@ -608,6 +643,10 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
         try:
             if key_feats is None or key_feats.numel() == 0:
                 return
+            if self.roi_proto_couple_ics:
+                # Keep distributed log/reduction keys identical even when one
+                # rank has no eligible car/history. The zero adds no force.
+                losses['loss_roi_proto'] = key_feats.sum() * 0.0
             pos_labels = []
             pos_scores = []
             for i, res in enumerate(key_sampling_results):
@@ -623,9 +662,22 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
             scores_available = key_scores is not None and key_scores.numel() == key_labels.numel()
             mem = self.roi_proto_memory
 
-            proto_loss = mem.compute_loss(
-                feats=key_feats, labels=key_labels,
-                scores=key_scores if scores_available else None)
+            basis, beta = self._get_apr_basis()
+            self._apr_couple_calls += 1
+            if basis is not None:
+                self._apr_couple_basis_ready += 1
+            if self.roi_proto_couple_ics and beta > 0.0 and basis is None:
+                # A complement-only experiment must not silently lock the full
+                # space while the ICS bank is uninitialized. Still collect.
+                proto_loss = None
+            else:
+                proto_loss = mem.compute_loss(
+                    feats=key_feats, labels=key_labels,
+                    scores=key_scores if scores_available else None,
+                    basis=basis, beta=beta,
+                    coupled_metric=self.roi_proto_couple_metric)
+            if proto_loss is not None and basis is not None:
+                self._apr_couple_loss_active += 1
             if proto_loss is not None:
                 losses['loss_roi_proto'] = self.roi_proto_loss_weight * proto_loss
 
@@ -635,6 +687,19 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                 scores=key_scores if scores_available else None)
 
             self._proto_iter += 1
+            if (self.roi_proto_couple_ics
+                    and self._proto_iter % self.roi_proto_log_interval == 0):
+                logger.info(
+                    '[ROI_PROTO_COUPLE][rank=%d] domain=%s beta=%.3f '
+                    'metric=%s basis_dim=%d basis_ready_calls=%d '
+                    'coupled_loss_active_calls=%d total_calls=%d '
+                    'loss_active_now=%s history_domains=%s',
+                    _rank(), self.current_domain, beta,
+                    self.roi_proto_couple_metric,
+                    0 if basis is None else basis.shape[1],
+                    self._apr_couple_basis_ready, self._apr_couple_loss_active,
+                    self._apr_couple_calls, proto_loss is not None,
+                    list(mem._history.keys()))
             if (proto_loss is not None
                     and self._proto_iter % self.roi_proto_log_interval == 0):
                 st = mem.last_stats
@@ -656,8 +721,24 @@ class CausalQuasiDenseTrackHead(QuasiDenseTrackHead):
                     st.get('gate_selected_rois'), st.get('gate_total_rois'),
                     st.get('gate_ratio'))
         except Exception as e:
+            if self.roi_proto_couple_ics:
+                raise
             warnings.warn(f"[CausalQuasiDenseTrackHead] stage roi proto loss "
                           f"failed ({e}); skipping.")
+
+    def _get_apr_basis(self):
+        if not self.roi_proto_couple_ics:
+            return None, 0.0
+        beta = (float(self.causal_trim_alpha)
+                if self.roi_proto_couple_beta is None
+                else self.roi_proto_couple_beta)
+        bank = (self.apr_feat_bank if self.roi_proto_couple_basis == 'feature_pca'
+                else self.causal_bank)
+        if beta == 0.0 or bank is None:
+            return None, beta
+        return bank.orthonormal_basis(
+            start_pc=self.causal_start_pc,
+            num_pcs=self.causal_num_pcs), beta
 
     def _add_memory_loss(self, losses, key_feats, key_sampling_results,
                          gt_labels):

@@ -1,0 +1,189 @@
+loading annotations into memory...
+Done (t=0.42s)
+creating index...
+index created!
+CAPTURE F overcast 1 202
+CAPTURE F overcast 2 202
+CAPTURE F overcast 3 203
+CAPTURE F overcast 4 199
+CAPTURE F overcast 5 202
+CAPTURE F overcast 6 202
+CAPTURE F overcast 7 203
+CAPTURE F overcast 8 203
+CAPTURE F overcast 9 202
+CAPTURE F overcast 10 202
+CAPTURE F overcast 11 203
+CAPTURE F overcast 12 202
+CAPTURE F overcast 13 202
+CAPTURE F overcast 14 202
+CAPTURE F overcast 15 203
+CAPTURE F overcast 16 202
+CAPTURE F overcast 17 202
+CAPTURE F overcast 18 203
+CAPTURE F overcast 19 202
+CAPTURE F overcast 20 202
+CAPTURE F overcast 21 202
+CAPTURE F overcast 22 203
+loading annotations into memory...
+Done (t=0.29s)
+creating index...
+index created!
+CAPTURE F rainy 1 202
+CAPTURE F rainy 2 102
+CAPTURE F rainy 3 208
+CAPTURE F rainy 4 103
+CAPTURE F rainy 5 203
+CAPTURE F rainy 6 202
+CAPTURE F rainy 7 203
+CAPTURE F rainy 8 202
+CAPTURE F rainy 9 203
+CAPTURE F rainy 10 202
+CAPTURE F rainy 11 106
+CAPTURE F rainy 12 202
+CAPTURE F rainy 13 202
+CAPTURE F rainy 14 203
+CAPTURE F rainy 15 202
+CAPTURE F rainy 16 203
+CAPTURE F rainy 17 202
+loading annotations into memory...
+Done (t=0.42s)
+creating index...
+index created!
+CAPTURE F dawn_dusk 1 203
+CAPTURE F dawn_dusk 2 203
+CAPTURE F dawn_dusk 3 202
+CAPTURE F dawn_dusk 4 202
+CAPTURE F dawn_dusk 5 103
+CAPTURE F dawn_dusk 6 202
+CAPTURE F dawn_dusk 7 202
+CAPTURE F dawn_dusk 8 203
+CAPTURE F dawn_dusk 9 202
+CAPTURE F dawn_dusk 10 203
+CAPTURE F dawn_dusk 11 202
+CAPTURE F dawn_dusk 12 202
+CAPTURE F dawn_dusk 13 202
+CAPTURE F dawn_dusk 14 203
+CAPTURE F dawn_dusk 15 202
+CAPTURE F dawn_dusk 16 203
+CAPTURE F dawn_dusk 17 203
+CAPTURE F dawn_dusk 18 203
+CAPTURE F dawn_dusk 19 202
+CAPTURE F dawn_dusk 20 202
+CAPTURE F dawn_dusk 21 202
+CAPTURE F dawn_dusk 22 203
+CAPTURE F dawn_dusk 23 197
+CAPTURE F dawn_dusk 24 203
+CAPTURE F dawn_dusk 25 202
+CAPTURE F dawn_dusk 26 203
+CAPTURE F dawn_dusk 27 202
+CAPTURE F dawn_dusk 28 202
+CAPTURE F dawn_dusk 29 103
+CAPTURE F dawn_dusk 30 202
+CAPTURE F dawn_dusk 31 203
+CAPTURE F dawn_dusk 32 202
+CAPTURE F dawn_dusk 33 203
+loading annotations into memory...
+Done (t=0.42s)
+creating index...
+index created!
+CAPTURE F night 9 203
+CAPTURE F night 11 203
+CAPTURE F night 12 202
+CAPTURE F night 13 203
+CAPTURE F night 14 202
+CAPTURE F night 16 203
+CAPTURE F night 17 202
+CAPTURE F night 18 203
+CAPTURE F night 21 202
+CAPTURE F night 23 203
+CAPTURE F night 24 203
+CAPTURE F night 25 202
+CAPTURE F night 26 203
+CAPTURE F night 27 202
+CAPTURE F night 31 202
+CAPTURE F night 32 202
+CAPTURE F night 33 202
+CAPTURE F night 35 200
+CAPTURE F night 36 203
+CAPTURE F night 37 202
+CAPTURE F night 39 203
+CAPTURE F night 40 202
+CAPTURE F night 41 203
+CAPTURE F night 42 202
+CAPTURE F night 43 202
+CAPTURE F night 45 203
+CAPTURE F night 48 203
+CAPTURE F night 52 203
+CAPTURE F night 53 202
+CAPTURE F night 55 202
+CAPTURE F night 56 203
+CAPTURE F night 58 202
+CAPTURE F night 60 202
+CAPTURE F night 64 202
+CAPTURE F night 65 202
+CAPTURE F night 69 203
+loading annotations into memory...
+Done (t=0.63s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 18.42 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 22 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 8.82 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  28.9   9.9  75.6  1325   3766   450  38.8  64.3   55  119   179   222
+car         47.9  37.6  82.1  1290  26455  1154  42.9  93.9  239  600  1133   787
+truck        8.4   3.0  81.3    88   4175    19   5.5  73.3    0    6   135    33
+bus         22.6 -94.6  78.6  1297    707    10  31.7  20.2    2    8    17     8
+motorcycle   0.0   0.0    -      0    186     0   0.0    -     0    0     5     0
+bicycle      0.3   0.1  65.1     0    723     0   0.1 100.0    0    0    34     0
+---------------------------------------------------------------------------------
+OVERALL     42.2  29.2  81.3  4000  36012  1633  38.8  85.1  296  733  1503  1050
+AVERAGE     18.0  -7.3  63.8  4000  36012  1633  19.8  58.6  296  733  1503  1050
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+car          54.6   72.9  49.1  84.0   36.2   79.3  34.6  41.1  21173  1192
+bicycle       9.5   47.4   9.5  74.4    0.1   47.4   0.1   0.8      1     1
+bus          53.5   79.2  51.5  81.2   25.6   16.3  11.3  24.1   1625   197
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+pedestrian   30.1   70.1  26.8  78.6   30.7   50.9  25.0  25.6   3709  1058
+truck        27.1   83.7  26.6  83.5    4.5   61.0   4.4  10.9    329    80
+---------------------------------------------------------------------------
+AVERAGE      29.1   58.9  27.3  83.6   16.2   42.5  12.6  17.1  26837  2528
+OVERALL      52.0   72.9  46.8  83.4   32.5   71.3  30.0  37.3  26837  2528
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+car         84.0  34.6  37.6  41.1  47.9  49.1
+bicycle     74.4   0.1   0.1   0.8   0.3   9.5
+bus         81.2  11.3 -94.6  24.1  22.6  51.5
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+pedestrian  78.6  25.0   9.9  25.6  28.9  26.8
+truck       83.5   4.4   3.0  10.9   8.4  26.6
+----------------------------------------------
+AVERAGE     83.6  12.6  -7.3  17.1  18.0  27.3
+OVERALL     83.4  30.0  29.2  37.3  42.2  46.8
+
+Traceback (most recent call last):
+  File "tools/run/ics_tracking_intervention.py", line 135, in <module>
+    if __name__=='__main__':main()
+  File "tools/run/ics_tracking_intervention.py", line 130, in main
+    for d in STAGES:replay(args.model,d,'baseline',0.)
+  File "tools/run/ics_tracking_intervention.py", line 121, in replay
+    if beta==0:assert abs(val-base)<1e-6,(name,domain,category,m,val,base)
+AssertionError: ('F', 'overcast', 'car', 'HOTA', 41.13807336342909, 41.091150021156864)

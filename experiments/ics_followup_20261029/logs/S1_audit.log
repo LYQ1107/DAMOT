@@ -1,0 +1,55 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+[
+  {
+    "model": "HF",
+    "stage": 1,
+    "active_geometry": 7,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_num_pcs": 2,
+    "causal_trim_alpha": 0.1,
+    "roi_proto_couple_ics": true,
+    "roi_proto_couple_beta": 1.0,
+    "roi_proto_couple_basis": "ics",
+    "student_frequency": "[{\"apply_noise\": false, \"keep_prob\": 0.9, \"low_ratio\": 0.1, \"mode\": \"low_freq_mask\", \"noise_ratio\": 0.0, \"type\": \"SeqSPAFrequencyTransform\"}]",
+    "contrastive_frequency": "[{\"apply_noise\": true, \"mode\": \"high_freq_noise\", \"noise_ratio\": 0.03, \"type\": \"SeqSPAFrequencyTransform\"}]"
+  },
+  {
+    "model": "HF",
+    "stage": 4,
+    "active_geometry": 7,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_num_pcs": 2,
+    "causal_trim_alpha": 0.1,
+    "roi_proto_couple_ics": true,
+    "roi_proto_couple_beta": 1.0,
+    "roi_proto_couple_basis": "ics",
+    "student_frequency": "[{\"apply_noise\": false, \"keep_prob\": 0.9, \"low_ratio\": 0.1, \"mode\": \"low_freq_mask\", \"noise_ratio\": 0.0, \"type\": \"SeqSPAFrequencyTransform\"}]",
+    "contrastive_frequency": "[{\"apply_noise\": true, \"mode\": \"high_freq_noise\", \"noise_ratio\": 0.03, \"type\": \"SeqSPAFrequencyTransform\"}]"
+  },
+  {
+    "model": "NOGEOM",
+    "stage": 1,
+    "active_geometry": 0,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_num_pcs": 2,
+    "causal_trim_alpha": 0.1,
+    "roi_proto_couple_ics": true,
+    "roi_proto_couple_beta": 1.0,
+    "roi_proto_couple_basis": "ics",
+    "student_frequency": "[{\"apply_noise\": false, \"keep_prob\": 0.9, \"low_ratio\": 0.1, \"mode\": \"low_freq_mask\", \"noise_ratio\": 0.0, \"type\": \"SeqSPAFrequencyTransform\"}]",
+    "contrastive_frequency": "[{\"apply_noise\": true, \"mode\": \"high_freq_noise\", \"noise_ratio\": 0.03, \"type\": \"SeqSPAFrequencyTransform\"}]"
+  },
+  {
+    "model": "NOGEOM",
+    "stage": 4,
+    "active_geometry": 0,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_num_pcs": 2,
+    "causal_trim_alpha": 0.1,
+    "roi_proto_couple_ics": true,
+    "roi_proto_couple_beta": 1.0,
+    "roi_proto_couple_basis": "ics",
+    "student_frequency": "[{\"apply_noise\": false, \"keep_prob\": 0.9, \"low_ratio\": 0.1, \"mode\": \"low_freq_mask\", \"noise_ratio\": 0.0, \"type\": \"SeqSPAFrequencyTransform\"}]",
+    "contrastive_frequency": "[{\"apply_noise\": true, \"mode\": \"high_freq_noise\", \"noise_ratio\": 0.03, \"type\": \"SeqSPAFrequencyTransform\"}]"
+  }
+]

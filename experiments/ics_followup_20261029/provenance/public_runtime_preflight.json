@@ -1,0 +1,14 @@
+{
+  "a": {
+    "keys": 752,
+    "all_tensors_exact": true,
+    "bank_updates": 660,
+    "mode": "proto_shrinkage_cov_ema"
+  },
+  "c": {
+    "keys": 752,
+    "all_tensors_exact": true,
+    "bank_updates": 660,
+    "mode": "pairwise_residual"
+  }
+}

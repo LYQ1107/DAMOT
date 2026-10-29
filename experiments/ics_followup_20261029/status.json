@@ -4,8 +4,8 @@
   "completed_analyses": [
     "analysis_F_stage4_e5_v2"
   ],
-  "S4": "pending full-domain baseline identity checks and interventions",
-  "S5": "prepared only; no new short training yet; waiting for NOGEOM controller_complete.json",
+  "S4": "F fresh V100 beta0 approved by user; native/cache equality and fresh baseline metrics passed on all four domains; nonzero grid is running. Historical metrics and all differences preserved.",
+  "S5": "prepared and checked on CPU; waiting for original NOGEOM completion and S4; only Night 2 epochs will execute",
   "NOGEOM": "original run resumed after transient NAS outage; never treated as complete because GPUs were temporarily idle",
   "updated_UTC": "2026-10-29 08:41:32"
 }

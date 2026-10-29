@@ -26,7 +26,7 @@
       "noise_ratio": 0.03
     }
   ],
-  "data.train": [
+  "data_train": [
     {
       "type": "BDDTrackingDataset",
       "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
@@ -123,5 +123,9 @@
     "roi_proto_couple_beta": 1.0,
     "roi_proto_couple_basis": "ics",
     "roi_proto_couple_metric": "projected_cosine"
+  },
+  "execution_notes": {
+    "effective_model_pipelines": true,
+    "active_stochastic_geometry": []
   }
 }

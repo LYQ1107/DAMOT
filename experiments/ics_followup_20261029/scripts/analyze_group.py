@@ -5,6 +5,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'code/tools/
 from apr_complement_experiment import Config
 from protocol import write_views,write_json
 name=sys.argv[1];py=str(ROOT/'env/bin/python');label=name+'_stage4_e5'
+from check_roi_alignment import check
+check(name)
 source=Path('/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420' if name=='HF' else '/data1/liuyeqiang/damot_apr_complement_hf_nogeom_20261029_1443')
 base=[py,'-u',str(ROOT/'code/tools/analysis/ics_probe_analyze.py'),'--feat-root',str(ROOT/'results/feats'),'--label',label,'--domains','clear_holdout_45v','overcast','rainy','dawn_dusk','night','--ref-domain','clear_holdout_45v','--stage-labels']+[name+'_stage%d_e5'%k for k in range(1,5)]+['--stage-domains','overcast','rainy','dawn_dusk','night','--classes','1','--montage']
 env=dict(os.environ,CUDA_VISIBLE_DEVICES='',OMP_NUM_THREADS='2',MKL_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',MKL_THREADING_LAYER='GNU')

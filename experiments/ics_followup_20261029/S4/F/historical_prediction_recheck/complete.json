@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "prediction": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/historical_predictions/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260708_045822/track_coco.json",
+  "prediction_sha256": "9a299bcf9bfe329be3b087ba7ac3d3c15be3321f894c0b998576622b6a9b847a",
+  "current_evaluator_reproduces_frozen_metrics": true
+}

@@ -290,6 +290,29 @@ class CausalDirectionBank(nn.Module):
         return out
 
     @torch.no_grad()
+    def orthonormal_basis(self, start_pc=0, num_pcs=None):
+        """Return detached orthonormal columns spanning the stored directions.
+
+        Unlike trim(), using an established basis does not require another
+        min_samples RoIs. QR is applied after PC EMA, which need not preserve
+        orthogonality. This helper does not change the original ICS operator.
+        """
+        if not bool(self.initialized.item()):
+            return None
+        start = int(start_pc)
+        n = self.num_pcs if num_pcs is None else int(num_pcs)
+        end = min(start + n, self.num_pcs)
+        if start < 0 or end <= start:
+            return None
+        pcs = self.pcs[start:end].detach().float()
+        if not torch.isfinite(pcs).all():
+            return None
+        q, r = torch.linalg.qr(pcs.t(), mode='reduced')
+        if (r.diagonal().abs() < 1e-6).any():
+            return None
+        return q.contiguous()
+
+    @torch.no_grad()
     def pc_norm(self):
         if not bool(self.initialized.item()):
             return 0.0

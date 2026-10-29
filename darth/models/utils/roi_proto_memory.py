@@ -40,14 +40,40 @@ def roi_proto_loss(feats, prototypes, topk=3):
     return loss, per_roi
 
 
-def roi_proto_loss_with_gate(feats, prototypes, topk=3, sim_gate_thr=None):
-    """Positive nearest-prototype loss, optionally similarity-gated."""
+def roi_proto_loss_with_gate(feats, prototypes, topk=3, sim_gate_thr=None,
+                             basis=None, beta=0.0,
+                             coupled_metric='projected_l2'):
+    """History alignment, optionally measured outside an ICS subspace.
+
+    beta=0 takes the unchanged original cosine branch. projected_l2 follows
+    the reference shrinkage-distance construction on unit features.
+    projected_cosine normalizes *after* projection; for beta=1 its gradient
+    w.r.t. the raw embedding has no component in span(basis). No claim is
+    made that the ICS subspace contains weather alone.
+    """
     feats = F.normalize(feats, dim=1)
     prototypes = F.normalize(prototypes, dim=1).detach()
-    sim = torch.matmul(feats, prototypes.t())
-    k = min(topk, sim.size(1))
-    topk_sim = sim.topk(k=k, dim=1).values
-    per_roi = topk_sim.mean(dim=1)
+    if basis is None or float(beta) == 0.0:
+        sim = torch.matmul(feats, prototypes.t())
+        k = min(topk, sim.size(1))
+        topk_sim = sim.topk(k=k, dim=1).values
+        per_roi = topk_sim.mean(dim=1)
+    else:
+        e = basis.detach().to(device=feats.device, dtype=feats.dtype)
+        z = feats - float(beta) * ((feats @ e) @ e.t())
+        p = prototypes - float(beta) * ((prototypes @ e) @ e.t())
+        k = min(topk, p.shape[0])
+        if coupled_metric == 'projected_cosine':
+            sim = F.normalize(z, dim=1) @ F.normalize(p, dim=1).t()
+            per_roi = sim.topk(k=k, dim=1).values.mean(dim=1)
+        elif coupled_metric == 'projected_l2':
+            d2 = (z.square().sum(dim=1, keepdim=True)
+                  + p.square().sum(dim=1).unsqueeze(0)
+                  - 2.0 * (z @ p.t())).clamp_min(0.0)
+            per_roi = 1.0 - 0.5 * d2.topk(
+                k=k, dim=1, largest=False).values.mean(dim=1)
+        else:
+            raise ValueError('Unknown coupled APR metric: ' + coupled_metric)
     if sim_gate_thr is None:
         gate_mask = torch.ones_like(per_roi, dtype=torch.bool)
     else:
@@ -222,7 +248,8 @@ class RoIPrototypeMemory(nn.Module):
             return None
         return torch.cat(mats, dim=0)
 
-    def compute_loss(self, feats, labels, scores=None):
+    def compute_loss(self, feats, labels, scores=None, basis=None, beta=0.0,
+                     coupled_metric='projected_l2'):
         """History-guided prototype loss for the current batch.
 
         Returns None when history memory is empty or no valid RoI in batch.
@@ -256,7 +283,8 @@ class RoIPrototypeMemory(nn.Module):
             protos = protos.to(device, feats.dtype)
             loss_c, per_roi, gate_mask = roi_proto_loss_with_gate(
                 cf, protos, topk=self.topk,
-                sim_gate_thr=self.sim_gate_thr if self.use_sim_gate else None)
+                sim_gate_thr=self.sim_gate_thr if self.use_sim_gate else None,
+                basis=basis, beta=beta, coupled_metric=coupled_metric)
             if loss_c is None:
                 gate_total += int(cf.shape[0])
                 proto_total += protos.shape[0]
@@ -295,6 +323,9 @@ class RoIPrototypeMemory(nn.Module):
             gate_selected_rois=gate_selected_total,
             gate_total_rois=gate_total,
             gate_ratio=(gate_selected_total / max(gate_total, 1)),
+            coupled=basis is not None and float(beta) > 0.0,
+            couple_beta=float(beta),
+            coupled_metric=coupled_metric,
         )
         return loss
 
@@ -331,3 +362,19 @@ class RoIPrototypeMemory(nn.Module):
             return
         self._history = {dom: {int(c): v for c, v in protos.items()}
                          for dom, protos in state.items()}
+
+    def runtime_state_dict(self):
+        """Rank-local state for epoch recovery, including current candidates."""
+        return dict(version=1, history=self.state_dict_memory(),
+                    candidates=self._cand, candidate_scores=self._cand_scores,
+                    current_domain=self.current_domain,
+                    last_stats=self.last_stats)
+
+    def load_runtime_state_dict(self, state):
+        self._history = {}
+        self.load_state_dict_memory(state['history'])
+        self._cand = {int(c): v for c, v in state['candidates'].items()}
+        self._cand_scores = {int(c): v for c, v in
+                             state['candidate_scores'].items()}
+        self.current_domain = state['current_domain']
+        self.last_stats = state.get('last_stats', {})

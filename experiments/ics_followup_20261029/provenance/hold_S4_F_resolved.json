@@ -1,0 +1,1 @@
+{"reason":"Archived beta0 gate failed on F/overcast/car HOTA","current":41.13807336342909,"archived":41.091150021156864,"native_cached_per_frame_output_equality_passed":true,"nonzero_interventions_executed":false,"action":"Investigate inputs and metric implementations without changing thresholds or seeds"}

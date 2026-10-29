@@ -1,0 +1,8 @@
+{
+  "authorization": "使用本轮 F 基线，公开差异（推荐）",
+  "scope": "Use the native FP32 beta0 from this V100 environment as the F intervention reference for all four domains; publish every difference from historical frozen metrics",
+  "historical_metrics_preserved": true,
+  "threshold_or_seed_changes": false,
+  "native_vs_cache_output_equality_required": true,
+  "fresh_beta0_metric_equality_required": true
+}

@@ -13,3 +13,17 @@ S3 uses F stage1 fit videos as the common basis reference, literally as requeste
 Two protocol details are explicitly disclosed: the stored bank is not the exact eigenspace of the saved covariance; and HF saved exact APR histories in `stage3_final_rank*.pth`, despite lacking a `<stage>_roi_proto.pth` filename. S5 will use the same exact rank0 history file for all groups rather than approximate reconstruction. Its hash is in provenance.
 
 Source data, features, and checkpoints remain on the server. No `.npz` or model weights are committed. `.npy` files contain the requested small projection bases only.
+
+## Approved F tracking baseline
+
+The historical A100 F metrics are not exactly reproduced by new V100 inference. Re-evaluating the historical prediction file with the current evaluator exactly reproduces its HOTA/DetA/AssA, while the newly generated predictions differ slightly. The precise cause is not fully isolated; the historical environment differs and its checkpoint binary hash was not recorded at evaluation time.
+
+The user explicitly approved using this run's native FP32 beta0 as the F intervention reference and publishing every old/new difference. See `S4/F/fresh_vs_historical_baseline.csv`, the audit, preserved failed gate and authorization. New beta0 replay is checked against every native frame and against all eight car/OVERALL reference metrics per domain. HF retains its own frozen V100 reference. Nonzero result aggregation remains pending until every cell completes.
+
+## Runtime source and short training
+
+The causal head, bank and prototype-memory support files are unchanged copies of the already trained HF runtime. They are mirrored into the repository for checkpoint and APR-history compatibility. The short-stage entrypoint asserts resume stage4, two epochs, four GPUs, batch capacity16 and the original seed; it skips stages1–3. The historical full-episode helper supplies shared APIs; this follow-up does not invoke its full-training mode. Small saved optimizer-serialization and checkpoint-retention changes affect storage only.
+
+Operational scripts assume the documented RUN/code and RUN/scripts layout and retain explicit read-only input paths. Source fingerprints and per-job launch records are retained on the server. Unrelated runtime modules are not copied into the repository.
+
+S4 caches original FP32 detections and association embeddings once, then uses the unchanged native tracker for every projection. Projection applies to every native association embedding; bases are estimated from car RoIs. The enabled native head is independently compared against replay on the predeclared first Overcast video (ICS2 beta.5 and identity16 beta1). No normalization is added. Detector outputs are fixed; native track acceptance can still change tracking DetA.

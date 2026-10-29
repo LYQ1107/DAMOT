@@ -1,0 +1,240 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+
+Evaluating 1 tracker(s) on 22 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+HISTORICAL PREDICTION RECHECK PASS
+loading annotations into memory...
+Done (t=0.49s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 23.75 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 22 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 9.86 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  28.9   9.9  75.6  1325   3766   450  38.8  64.3   55  119   179   222
+car         47.9  37.6  82.1  1290  26455  1154  42.9  93.9  239  600  1133   787
+truck        8.4   3.0  81.3    88   4175    19   5.5  73.3    0    6   135    33
+bus         22.6 -94.6  78.6  1297    707    10  31.7  20.2    2    8    17     8
+motorcycle   0.0   0.0    -      0    186     0   0.0    -     0    0     5     0
+bicycle      0.3   0.1  65.1     0    723     0   0.1 100.0    0    0    34     0
+---------------------------------------------------------------------------------
+OVERALL     42.2  29.2  81.3  4000  36012  1633  38.8  85.1  296  733  1503  1050
+AVERAGE     18.0  -7.3  63.8  4000  36012  1633  19.8  58.6  296  733  1503  1050
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+pedestrian   30.1   70.1  26.8  78.6   30.7   50.9  25.0  25.6   3709  1058
+car          54.6   72.9  49.1  84.0   36.2   79.3  34.6  41.1  21173  1192
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        27.1   83.7  26.6  83.5    4.5   61.0   4.4  10.9    329    80
+bicycle       9.5   47.4   9.5  74.4    0.1   47.4   0.1   0.8      1     1
+bus          53.5   79.2  51.5  81.2   25.6   16.3  11.3  24.1   1625   197
+---------------------------------------------------------------------------
+AVERAGE      29.1   58.9  27.3  83.6   16.2   42.5  12.6  17.1  26837  2528
+OVERALL      52.0   72.9  46.8  83.4   32.5   71.3  30.0  37.3  26837  2528
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+pedestrian  78.6  25.0   9.9  25.6  28.9  26.8
+car         84.0  34.6  37.6  41.1  47.9  49.1
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+truck       83.5   4.4   3.0  10.9   8.4  26.6
+bicycle     74.4   0.1   0.1   0.8   0.3   9.5
+bus         81.2  11.3 -94.6  24.1  22.6  51.5
+----------------------------------------------
+AVERAGE     83.6  12.6  -7.3  17.1  18.0  27.3
+OVERALL     83.4  30.0  29.2  37.3  42.2  46.8
+
+NATIVE BETA0 AUDIT overcast [{'checkpoint': 'F_stage4_e5', 'domain': 'overcast', 'category': 'car', 'frames': 4448, 'HOTA_percent': 41.13807336342909, 'archived_HOTA_percent': 41.091150021156864, 'difference_HOTA_pp': 0.04692334227222972, 'DetA_percent': 34.618989914334314, 'archived_DetA_percent': 34.61895234363809, 'difference_DetA_pp': 3.757069622167819e-05, 'AssA_percent': 49.13720605468974, 'archived_AssA_percent': 49.02651836195508, 'difference_AssA_pp': 0.11068769273466472, 'IDF1_percent': 47.85886744382397, 'archived_IDF1_percent': 47.72484891574831, 'difference_IDF1_pp': 0.13401852807565717}, {'checkpoint': 'F_stage4_e5', 'domain': 'overcast', 'category': 'OVERALL', 'frames': 4448, 'HOTA_percent': 37.33309425458744, 'archived_HOTA_percent': 37.2910549158449, 'difference_HOTA_pp': 0.042039338742533516, 'DetA_percent': 29.968486500300106, 'archived_DetA_percent': 29.971056214367387, 'difference_DetA_pp': -0.002569714067281126, 'AssA_percent': 46.81584826682858, 'archived_AssA_percent': 46.70838434851451, 'difference_AssA_pp': 0.10746391831407465, 'IDF1_percent': 42.19825875872371, 'archived_IDF1_percent': 42.08327498482939, 'difference_IDF1_pp': 0.11498377389432335}]
+loading annotations into memory...
+Done (t=0.51s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 17.09 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 17 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 6.10 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT   ML   FM
+-------------------------------------------------------------------------------
+pedestrian  23.0   5.4  72.5   852   4343   255  24.6  62.5   22  128  260  177
+car         52.2  37.9  80.2  2317  16066   871  48.2  86.6  171  352  423  631
+truck       12.3   3.8  80.5   159   3181    22   9.0  66.4    0    9   70   70
+bus         18.6 -75.9  80.4   864    481    18  37.9  25.4    2    3    8   16
+motorcycle   0.0   0.0    -      0     25     0   0.0    -     0    0    2    0
+bicycle      0.0   0.0    -      0    212     0   0.0    -     0    0    7    0
+-------------------------------------------------------------------------------
+OVERALL     44.6  28.1  79.6  4192  24308  1166  41.1  80.2  195  492  770  894
+AVERAGE     17.7  -4.8  52.3  4192  24308  1166  20.0  40.1  195  492  770  894
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+pedestrian   29.7   65.8  25.9  75.3   19.9   50.6  17.5  21.0   2272   591
+car          59.1   75.4  54.1  81.9   40.9   73.5  37.8  44.8  17269   851
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        23.4   86.4  23.0  82.4    7.5   55.6   7.2  12.8    473    87
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+bus          31.5   82.4  30.8  82.7   31.3   20.9  14.7  21.2   1158   165
+---------------------------------------------------------------------------
+AVERAGE      24.0   51.6  22.3  87.1   16.6   33.4  12.9  16.6  21172  1694
+OVERALL      55.8   75.2  51.1  81.4   34.7   67.7  31.4  39.6  21172  1694
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+pedestrian  75.3  17.5   5.4  21.0  23.0  25.9
+car         81.9  37.8  37.9  44.8  52.2  54.1
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+truck       82.4   7.2   3.8  12.8  12.3  23.0
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+bus         82.7  14.7 -75.9  21.2  18.6  30.8
+----------------------------------------------
+AVERAGE     87.1  12.9  -4.8  16.6  17.7  22.3
+OVERALL     81.4  31.4  28.1  39.6  44.6  51.1
+
+NATIVE BETA0 AUDIT rainy [{'checkpoint': 'F_stage4_e5', 'domain': 'rainy', 'category': 'car', 'frames': 3150, 'HOTA_percent': 44.77892166208445, 'archived_HOTA_percent': 44.751815977566025, 'difference_HOTA_pp': 0.027105684518424766, 'DetA_percent': 37.787644193545646, 'archived_DetA_percent': 37.764630277507635, 'difference_DetA_pp': 0.023013916038010507, 'AssA_percent': 54.145556402103054, 'archived_AssA_percent': 54.114083099277664, 'difference_AssA_pp': 0.03147330282538974, 'IDF1_percent': 52.171391886014874, 'archived_IDF1_percent': 52.11016773659143, 'difference_IDF1_pp': 0.06122414942344534}, {'checkpoint': 'F_stage4_e5', 'domain': 'rainy', 'category': 'OVERALL', 'frames': 3150, 'HOTA_percent': 39.584433233303784, 'archived_HOTA_percent': 39.56095569958777, 'difference_HOTA_pp': 0.023477533716011578, 'DetA_percent': 31.353499198699925, 'archived_DetA_percent': 31.339974446210228, 'difference_DetA_pp': 0.013524752489697534, 'AssA_percent': 51.0851435571656, 'archived_AssA_percent': 51.046561213337284, 'difference_AssA_pp': 0.03858234382831682, 'IDF1_percent': 44.649375600384246, 'archived_IDF1_percent': 44.59600083249284, 'difference_IDF1_pp': 0.053374767891405384}]
+loading annotations into memory...
+Done (t=0.82s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 30.16 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 33 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 8.16 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  29.2   3.4  74.2  1713   4035   571  38.3  59.4   47  146   215   258
+car         54.8  45.4  81.7  2596  22250  1891  54.6  91.1  489  707   808   887
+truck       14.7   6.2  79.4   103   2087    30  11.8  73.1    0    5    67    19
+bus         36.3 -30.8  79.7  1183    952    25  42.4  37.2    3   11    20    40
+motorcycle   0.0   0.0    -      0     31     0   0.0    -     0    0     2     0
+bicycle      0.0   0.0    -      0    288     0   0.0    -     0    0    17     0
+---------------------------------------------------------------------------------
+OVERALL     49.9  36.9  81.0  5595  29643  2517  50.5  84.4  539  869  1129  1204
+AVERAGE     22.5   4.0  52.5  5595  29643  2517  24.5  43.5  539  869  1129  1204
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+pedestrian   31.0   66.5  26.5  77.5   30.0   46.5  23.6  24.8   4219  1097
+car          55.9   70.4  49.2  83.7   46.0   76.8  42.7  45.7  29303  1818
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        31.9   88.9  31.1  81.7    9.7   59.8   9.2  16.9    383    86
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+bus          53.2   80.1  50.2  81.7   35.2   30.9  20.3  31.9   1883   264
+---------------------------------------------------------------------------
+AVERAGE      28.7   51.0  26.2  87.4   20.1   35.7  16.0  19.9  35788  3265
+OVERALL      53.8   70.6  47.4  83.2   42.2   70.6  37.9  42.2  35788  3265
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+pedestrian  77.5  23.6   3.4  24.8  29.2  26.5
+car         83.7  42.7  45.4  45.7  54.8  49.2
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+truck       81.7   9.2   6.2  16.9  14.7  31.1
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+bus         81.7  20.3 -30.8  31.9  36.3  50.2
+----------------------------------------------
+AVERAGE     87.4  16.0   4.0  19.9  22.5  26.2
+OVERALL     83.2  37.9  36.9  42.2  49.9  47.4
+
+NATIVE BETA0 AUDIT dawn_dusk [{'checkpoint': 'F_stage4_e5', 'domain': 'dawn_dusk', 'category': 'car', 'frames': 6476, 'HOTA_percent': 45.70396251864007, 'archived_HOTA_percent': 45.71860975438861, 'difference_HOTA_pp': -0.014647235748540766, 'DetA_percent': 42.72101225662882, 'archived_DetA_percent': 42.71577967024996, 'difference_DetA_pp': 0.005232586378859594, 'AssA_percent': 49.196511183773225, 'archived_AssA_percent': 49.23346313966688, 'difference_AssA_pp': -0.03695195589365596, 'IDF1_percent': 54.789164324048045, 'archived_IDF1_percent': 54.79382036111785, 'difference_IDF1_pp': -0.004656037069807439}, {'checkpoint': 'F_stage4_e5', 'domain': 'dawn_dusk', 'category': 'OVERALL', 'frames': 6476, 'HOTA_percent': 42.216912625761225, 'archived_HOTA_percent': 42.21621858126972, 'difference_HOTA_pp': 0.0006940444915031208, 'DetA_percent': 37.88412750514654, 'archived_DetA_percent': 37.87712194867241, 'difference_DetA_pp': 0.007005556474126706, 'AssA_percent': 47.40187546955069, 'archived_AssA_percent': 47.409261687376905, 'difference_AssA_pp': -0.007386217826216068, 'IDF1_percent': 49.889149167572995, 'archived_IDF1_percent': 49.86928241273294, 'difference_IDF1_pp': 0.01986675484005218}]
+loading annotations into memory...
+Done (t=0.99s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 35.99 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 36 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 10.54 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT    PT    ML    FM
+----------------------------------------------------------------------------------
+pedestrian  23.0   4.4  72.3  1170   5777   342  24.3  61.3   20   150   230   315
+car         44.5  31.4  77.8  4460  40258  2480  41.5  86.5  262  1028   931  2063
+truck        4.1 -27.8  79.1   582   1860     7   3.0   8.9    0     4    33     7
+bus          9.6 -31.4  74.9   549   1244     7   9.2  18.7    0     4    20    12
+motorcycle   0.0   0.0    -      0     77     0   0.0    -     0     0     5     0
+bicycle      0.0   0.0    -      0    608     0   0.0    -     0     0    26     0
+----------------------------------------------------------------------------------
+OVERALL     40.8  26.1  77.5  6761  49824  2836  38.0  81.9  282  1186  1245  2397
+AVERAGE     13.5  -3.9  50.7  6761  49824  2836  13.0  29.2  282  1186  1245  2397
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+pedestrian   24.5   64.3  21.4  75.9   18.8   47.5  16.3  18.5   3021   833
+car          48.3   68.0  43.3  80.2   34.0   70.9  31.6  36.8  33015  2458
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        22.5   77.8  21.6  81.3    2.4    7.3   1.9   6.3    639   174
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+bus          18.6   68.9  15.8  78.6    7.1   14.5   5.1   9.0    675   130
+---------------------------------------------------------------------------
+AVERAGE      19.0   46.5  17.0  86.0   10.4   23.4   9.1  11.8  37350  3595
+OVERALL      46.9   67.9  42.0  79.9   31.1   66.9  28.4  34.3  37350  3595
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+pedestrian  75.9  16.3   4.4  18.5  23.0  21.4
+car         80.2  31.6  31.4  36.8  44.5  43.3
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+truck       81.3   1.9 -27.8   6.3   4.1  21.6
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+bus         78.6   5.1 -31.4   9.0   9.6  15.8
+----------------------------------------------
+AVERAGE     86.0   9.1  -3.9  11.8  13.5  17.0
+OVERALL     79.9  28.4  26.1  34.3  40.8  42.0
+
+NATIVE BETA0 AUDIT night [{'checkpoint': 'F_stage4_e5', 'domain': 'night', 'category': 'car', 'frames': 7286, 'HOTA_percent': 36.762561382355905, 'archived_HOTA_percent': 36.775753120737534, 'difference_HOTA_pp': -0.013191738381628682, 'DetA_percent': 31.614734858452938, 'archived_DetA_percent': 31.610351690362965, 'difference_DetA_pp': 0.004383168089972855, 'AssA_percent': 43.33062828017232, 'archived_AssA_percent': 43.36648939118952, 'difference_AssA_pp': -0.0358611110171978, 'IDF1_percent': 44.45535609066268, 'archived_IDF1_percent': 44.47740085250152, 'difference_IDF1_pp': -0.02204476183883486}, {'checkpoint': 'F_stage4_e5', 'domain': 'night', 'category': 'OVERALL', 'frames': 7286, 'HOTA_percent': 34.28007344130224, 'archived_HOTA_percent': 34.29042075503625, 'difference_HOTA_pp': -0.010347313734008878, 'DetA_percent': 28.392946578503814, 'archived_DetA_percent': 28.38747364765199, 'difference_DetA_pp': 0.005472930851823321, 'AssA_percent': 41.99050474012931, 'archived_AssA_percent': 42.02299075297801, 'difference_AssA_pp': -0.03248601284870034, 'IDF1_percent': 40.773417796761294, 'archived_IDF1_percent': 40.78263527973097, 'difference_IDF1_pp': -0.009217482969674506}]

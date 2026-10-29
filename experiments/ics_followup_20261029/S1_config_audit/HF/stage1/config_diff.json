@@ -1,14 +1,366 @@
 {
   "source": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/configs/stage1.py",
-  "changed_fields": [],
-  "audit_only": true,
-  "active_geometry": [
-    ".teacher_pipeline[0]:{'type': 'SeqRandomFlip', 'share_params': True, 'flip_ratio': 0.5}",
-    ".teacher_pipeline[1]:{'type': 'SeqResize', 'img_scale': (1088, 1088), 'share_params': True, 'ratio_range': (0.8, 1.2), 'keep_ratio': True, 'bbox_clip_border': False}",
-    ".teacher_pipeline[2]:{'type': 'SeqRandomCrop', 'share_params': False, 'crop_size': (1088, 1088), 'bbox_clip_border': False, 'allow_negative_crop': True}",
-    ".contrastive_pipeline[0]:{'type': 'SeqRandomFlip', 'share_params': True, 'flip_ratio': 0.5}",
-    ".contrastive_pipeline[1]:{'type': 'SeqResize', 'img_scale': (1088, 1088), 'share_params': True, 'ratio_range': (0.8, 1.2), 'keep_ratio': True, 'bbox_clip_border': False}",
-    ".contrastive_pipeline[2]:{'type': 'SeqRandomCrop', 'share_params': False, 'crop_size': (1088, 1088), 'bbox_clip_border': False, 'allow_negative_crop': True}",
-    ".data.train[0].pipeline[2]:{'type': 'SeqRandomFlip', 'share_params': True, 'flip_ratio': 0.5}"
+  "reference": "/data1/liuyeqiang/damot_rebuttal_20261026/configs/F_stage1_e5_embedded.py",
+  "model_differences": [
+    {
+      "field": "model.contrastive_pipeline",
+      "before": [
+        {
+          "type": "SeqRandomFlip",
+          "share_params": true,
+          "flip_ratio": 0.5
+        },
+        {
+          "type": "SeqResize",
+          "img_scale": [
+            1088,
+            1088
+          ],
+          "share_params": true,
+          "ratio_range": [
+            0.8,
+            1.2
+          ],
+          "keep_ratio": true,
+          "bbox_clip_border": false
+        },
+        {
+          "type": "SeqRandomCrop",
+          "share_params": false,
+          "crop_size": [
+            1088,
+            1088
+          ],
+          "bbox_clip_border": false,
+          "allow_negative_crop": true
+        },
+        {
+          "type": "SeqPhotoMetricDistortion",
+          "share_params": true
+        }
+      ],
+      "after": [
+        {
+          "type": "SeqRandomFlip",
+          "share_params": true,
+          "flip_ratio": 0.5
+        },
+        {
+          "type": "SeqResize",
+          "img_scale": [
+            1088,
+            1088
+          ],
+          "share_params": true,
+          "ratio_range": [
+            0.8,
+            1.2
+          ],
+          "keep_ratio": true,
+          "bbox_clip_border": false
+        },
+        {
+          "type": "SeqRandomCrop",
+          "share_params": false,
+          "crop_size": [
+            1088,
+            1088
+          ],
+          "bbox_clip_border": false,
+          "allow_negative_crop": true
+        },
+        {
+          "type": "SeqPhotoMetricDistortion",
+          "share_params": true
+        },
+        {
+          "type": "SeqSPAFrequencyTransform",
+          "mode": "high_freq_noise",
+          "apply_noise": true,
+          "noise_ratio": 0.03
+        }
+      ]
+    },
+    {
+      "field": "model.detector.backbone.init_cfg",
+      "before": {
+        "type": "Pretrained",
+        "checkpoint": "torchvision://resnet50"
+      },
+      "after": "<missing>"
+    },
+    {
+      "field": "model.detector.backbone.with_cp",
+      "before": "<missing>",
+      "after": true
+    },
+    {
+      "field": "model.detector.init_cfg",
+      "before": {
+        "type": "Pretrained",
+        "checkpoint": "https://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_fpn_1x_coco-person/faster_rcnn_r50_fpn_1x_coco-person_20201216_175929-d022e227.pth"
+      },
+      "after": "<missing>"
+    },
+    {
+      "field": "model.detector.roi_head.pretrained",
+      "before": null,
+      "after": "<missing>"
+    },
+    {
+      "field": "model.init_cfg",
+      "before": {
+        "type": "KDPretrained",
+        "checkpoint": "https://download.openmmlab.com/mmtracking/mot/qdtrack/mot_dataset/qdtrack_faster-rcnn_r50_fpn_4e_mot17_20220315_145635-76f295ef.pth",
+        "map_location": "cpu"
+      },
+      "after": "<missing>"
+    },
+    {
+      "field": "model.track_head.roi_proto_couple_basis",
+      "before": "<missing>",
+      "after": "ics"
+    },
+    {
+      "field": "model.track_head.roi_proto_couple_beta",
+      "before": "<missing>",
+      "after": 1.0
+    },
+    {
+      "field": "model.track_head.roi_proto_couple_ics",
+      "before": "<missing>",
+      "after": true
+    },
+    {
+      "field": "model.track_head.roi_proto_couple_metric",
+      "before": "<missing>",
+      "after": "projected_cosine"
+    }
+  ],
+  "dataset_differences": [
+    {
+      "field": "data.train",
+      "before": [
+        {
+          "type": "BDDTrackingDataset",
+          "ann_file": "data/bdd_da/annotations/box_track_20/box_track_overcast_all_cocofmt.json",
+          "img_prefix": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/BDD100K_overcast/",
+          "key_img_sampler": {
+            "interval": 1
+          },
+          "ref_img_sampler": {
+            "num_ref_imgs": 1,
+            "frame_range": 3,
+            "method": "uniform"
+          },
+          "pipeline": [
+            {
+              "type": "LoadMultiImagesFromFile",
+              "to_float32": true
+            },
+            {
+              "type": "SeqLoadAnnotations",
+              "with_bbox": true,
+              "with_track": true
+            },
+            {
+              "type": "SeqRandomFlip",
+              "share_params": true,
+              "flip_ratio": 0.5
+            },
+            {
+              "type": "SeqResize",
+              "img_scale": [
+                1296,
+                720
+              ],
+              "share_params": true,
+              "keep_ratio": true,
+              "bbox_clip_border": false
+            },
+            {
+              "type": "MatchInstances",
+              "skip_nomatch": true
+            },
+            {
+              "type": "VideoCollect",
+              "keys": [
+                "img",
+                "gt_bboxes",
+                "gt_labels",
+                "gt_match_indices",
+                "gt_instance_ids"
+              ]
+            },
+            {
+              "type": "SeqDefaultFormatBundle",
+              "ref_prefix": "ref"
+            }
+          ],
+          "classes": [
+            "pedestrian",
+            "car",
+            "truck",
+            "bus",
+            "motorcycle",
+            "bicycle"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "type": "BDDTrackingDataset",
+          "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
+          "img_prefix": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/overcast/",
+          "key_img_sampler": {
+            "interval": 1
+          },
+          "ref_img_sampler": {
+            "num_ref_imgs": 1,
+            "frame_range": 3,
+            "method": "uniform"
+          },
+          "pipeline": [
+            {
+              "type": "LoadMultiImagesFromFile",
+              "to_float32": true
+            },
+            {
+              "type": "SeqLoadAnnotations",
+              "with_bbox": true,
+              "with_track": true
+            },
+            {
+              "type": "SeqRandomFlip",
+              "share_params": true,
+              "flip_ratio": 0.5
+            },
+            {
+              "type": "SeqResize",
+              "img_scale": [
+                1296,
+                720
+              ],
+              "share_params": true,
+              "keep_ratio": true,
+              "bbox_clip_border": false
+            },
+            {
+              "type": "MatchInstances",
+              "skip_nomatch": true
+            },
+            {
+              "type": "VideoCollect",
+              "keys": [
+                "img",
+                "gt_bboxes",
+                "gt_labels",
+                "gt_match_indices",
+                "gt_instance_ids"
+              ]
+            },
+            {
+              "type": "SeqDefaultFormatBundle",
+              "ref_prefix": "ref"
+            }
+          ],
+          "classes": [
+            "pedestrian",
+            "car",
+            "truck",
+            "bus",
+            "motorcycle",
+            "bicycle"
+          ]
+        }
+      ]
+    }
+  ],
+  "audit_mutations": [],
+  "active_stochastic_geometry": [
+    {
+      "path": ".teacher_pipeline[0]",
+      "transform": {
+        "type": "SeqRandomFlip",
+        "share_params": true,
+        "flip_ratio": 0.5
+      }
+    },
+    {
+      "path": ".teacher_pipeline[1]",
+      "transform": {
+        "type": "SeqResize",
+        "img_scale": [
+          1088,
+          1088
+        ],
+        "share_params": true,
+        "ratio_range": [
+          0.8,
+          1.2
+        ],
+        "keep_ratio": true,
+        "bbox_clip_border": false
+      }
+    },
+    {
+      "path": ".teacher_pipeline[2]",
+      "transform": {
+        "type": "SeqRandomCrop",
+        "share_params": false,
+        "crop_size": [
+          1088,
+          1088
+        ],
+        "bbox_clip_border": false,
+        "allow_negative_crop": true
+      }
+    },
+    {
+      "path": ".contrastive_pipeline[0]",
+      "transform": {
+        "type": "SeqRandomFlip",
+        "share_params": true,
+        "flip_ratio": 0.5
+      }
+    },
+    {
+      "path": ".contrastive_pipeline[1]",
+      "transform": {
+        "type": "SeqResize",
+        "img_scale": [
+          1088,
+          1088
+        ],
+        "share_params": true,
+        "ratio_range": [
+          0.8,
+          1.2
+        ],
+        "keep_ratio": true,
+        "bbox_clip_border": false
+      }
+    },
+    {
+      "path": ".contrastive_pipeline[2]",
+      "transform": {
+        "type": "SeqRandomCrop",
+        "share_params": false,
+        "crop_size": [
+          1088,
+          1088
+        ],
+        "bbox_clip_border": false,
+        "allow_negative_crop": true
+      }
+    },
+    {
+      "path": ".data_train[0].pipeline[2]",
+      "transform": {
+        "type": "SeqRandomFlip",
+        "share_params": true,
+        "flip_ratio": 0.5
+      }
+    }
   ]
 }

@@ -1,0 +1,17 @@
+tag,rank,epoch,iteration,history_domains,history_domain_names,num_updates,num_updates_start,initialized,total_batches,trim_triggered_batches,trim_trigger_ratio,causal_freeze_random_basis,group
+end,0,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",712,660,True,228,228,1.0,False,X3-0
+end,1,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",703,660,True,228,228,1.0,False,X3-0
+end,3,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",714,660,True,228,228,1.0,False,X3-0
+end,2,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",715,660,True,228,228,1.0,False,X3-0
+end,0,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",,,,228,0,0.0,False,X3-1
+end,1,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",,,,228,0,0.0,False,X3-1
+end,3,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",,,,228,0,0.0,False,X3-1
+end,2,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",,,,228,0,0.0,False,X3-1
+end,0,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",711,660,True,228,228,1.0,False,X3-2
+end,1,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",703,660,True,228,228,1.0,False,X3-2
+end,3,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",715,660,True,228,228,1.0,False,X3-2
+end,2,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",716,660,True,228,228,1.0,False,X3-2
+end,0,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",660,660,True,228,228,1.0,True,X3-3
+end,1,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",660,660,True,228,228,1.0,True,X3-3
+end,3,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",660,660,True,228,228,1.0,True,X3-3
+end,2,2,228,3,"['overcast', 'rainy', 'dawn_dusk']",660,660,True,228,228,1.0,True,X3-3

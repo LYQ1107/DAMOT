@@ -1,0 +1,8 @@
+{
+  "authorized_by": "Direct human reply in current chat",
+  "user_answer": "授权发送 GPU 轮换建议（推荐）",
+  "target_thread": "01a1834e-f516-71e2-9434-666803faf50f",
+  "scope": "GPU rotation only; experiments/configs/directories/results remain independent; finish current evaluation before yielding four idle GPUs",
+  "current_thread": "01a186b1-f36c-7841-8c0d-1f4db8dbdfb9",
+  "time": "2026-10-29T12:44:29.169489+00:00"
+}

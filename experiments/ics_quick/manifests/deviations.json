@@ -12,7 +12,7 @@
   {
     "scope": "X1",
     "change": "Report loss-key activation separately from key RoI sample threshold",
-    "reason": "The implementation emits loss_track_trim even when key RoIs <96; in this case key trim is identity but reference trim may still be active. Task text conflated this with the absence of the trim loss."
+    "reason": "The implementation emits loss_track_trim even when key RoIs <96; in this case key trim is identity but reference trim may still be active. Loss computation and effective key shrinkage are distinct events in the implementation, so both are reported."
   },
   {
     "scope": "X2",
@@ -32,7 +32,7 @@
   {
     "scope": "X3 storage",
     "change": "After a group finishes both evaluations, remove only its generated epoch1 and stage00 source copies; retain epoch2, final endpoint and stage3 starting copy",
-    "reason": "The shared /data1 filesystem currently has about 18 GiB free. This does not change training or reported checkpoints and avoids accumulating redundant weights. No other task files are modified."
+    "reason": "Storage was limited when the run was prepared (about 18 GiB free). This does not change training or reported checkpoints and avoids accumulating redundant weights. No other task files are modified."
   },
   {
     "scope": "Input image access",
@@ -41,13 +41,13 @@
   },
   {
     "scope": "X2 F first baseline",
-    "change": "First F beta0 used cuDNN benchmark=False and found a small mismatch with archived metrics; F beta1 was not run",
-    "reason": "The archived F command explicitly uses cuDNN benchmark=True. A separate corrected beta0_cudnn_true run now tests this setting; the first baseline and all mismatch metrics are preserved. The archival F reference only lists OVERALL and car, so parity is checked for those available categories. HF has all six categories and passes all of them."
+    "change": "First F beta0 used cuDNN benchmark=False and found a small mismatch with archived metrics; F beta1 was held until the discrepancy was investigated",
+    "reason": "The archived F command explicitly uses cuDNN benchmark=True. A separate corrected full-domain run used this setting, with the same discrepancy. The first baseline and all mismatch metrics are preserved. The archival F reference only lists OVERALL and car, so parity is checked for those available categories. HF has all six categories and passes all of them."
   },
   {
     "scope": "X2 F historical reproducibility gate",
-    "change": "Corrected full-domain F beta0 still differs from the historical frozen scores; F beta1 remains gated pending the user decision",
-    "reason": "Restoring cuDNN benchmark=True leaves the reported metrics unchanged. Disabled intervention output is bitwise identical to the native class, yet archived detections already differ slightly before association. A cross-runtime numerical difference or historical provenance gap remains possible, not established. All results and parity deltas are retained; no values are adjusted to match the archive."
+    "change": "Corrected full-domain F beta0 still differed from the historical frozen scores; F beta1 was paused until the user approved the current-environment paired baseline",
+    "reason": "Restoring cuDNN benchmark=True left the reported metrics unchanged. Disabled intervention output is bitwise identical to the native class, yet archived detections already differ slightly before association. A cross-runtime numerical difference or historical provenance gap remains possible, not established. All results and parity deltas are retained; no values are adjusted to match the archive."
   },
   {
     "scope": "X2 F user-approved protocol change",

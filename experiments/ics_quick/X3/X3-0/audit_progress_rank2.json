@@ -1,0 +1,19 @@
+{
+  "tag": "progress",
+  "rank": 2,
+  "epoch": 1,
+  "iteration": 219,
+  "history_domains": 3,
+  "history_domain_names": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "num_updates": 711,
+  "num_updates_start": 660,
+  "initialized": true,
+  "total_batches": 220,
+  "trim_triggered_batches": 220,
+  "trim_trigger_ratio": 1.0,
+  "causal_freeze_random_basis": false
+}

@@ -10,6 +10,7 @@ for top in ['X1','X2','X3','configs','logs','manifests','scripts','feats']:
     for source in sorted((Q/top).rglob('*')):
         if not source.is_file() or source.is_symlink() or source.suffix not in allowed:continue
         if '__pycache__' in source.parts:continue
+        if top=='manifests' and (source.name.startswith('github_') or source.name=='publication_staging.json'):continue
         # Detailed tracker curves and per-frame predictions remain local;
         # the report includes all aggregate CSVs, logs, bases and configs.
         if any(p in source.parts for p in ['predictions','evaluation/track']):continue

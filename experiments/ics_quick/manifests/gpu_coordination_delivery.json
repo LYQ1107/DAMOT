@@ -1,0 +1,9 @@
+{
+  "status": "not_delivered",
+  "attempts": 3,
+  "error": "tool call error: tool call failed for `codex_app/send_message_to_thread`\n\nCaused by:\n    Transport send error: Transport [codex_rmcp_client::tool_list_changes::ToolListChanges<codex_rmcp_client::event_notification_transport::EventNotificationTransport<rmcp::transport::worker::WorkerTransport<rmcp::transport::streamable_http_client::StreamableHttpClientWorker<codex_rmcp_client::http_client_adapter::StreamableHttpClientAdapter>>>>] error: Client error: HTTP request failed: http/request failed: error sending request for url (http://127.0.0.1:2278/mcp)",
+  "reason": "App MCP sender points to 127.0.0.1:2278 with no listener; native thread read tools work; no local configured service can be restarted",
+  "manual_message_path": "/data1/liuyeqiang/ics_quick_20261029_160807/GPU_COORDINATION_MESSAGE.txt",
+  "last_attempt_utc": "2026-10-29T14:12:28.303553+00:00",
+  "last_attempt_context": "Retry after more than an hour, using current X3-1 running status and future X3-2/X3-3 rotation proposal; same connection-refused transport failure, no delivery."
+}

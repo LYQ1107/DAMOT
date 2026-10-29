@@ -55,7 +55,9 @@ for root in sorted((Q/'X3').glob('X3-*')):
     for path in root.glob('audit_end_rank*.json'):
         r=json.loads(path.read_text());r['group']=root.name;audits.append(r)
 csv_union(Q/'X3/x3_training_audit.csv',audits)
-lines=['# ICS mechanism experiments','', 'Run: `%s`'%Q,'','All metric values and differences are percentage points. Results below are fixed protocol; missing cells remain pending.','', '## Table 1 — X1 gradients','', '| Model | Domain | Loss key present | Key RoIs ≥96 | Parameter cosine, mean ± SD | Norm ratio, mean ± SD | Total vs original cosine | Key difference energy in E |','|---|---|---:|---:|---:|---:|---:|---:|']
+complete=len(summaries)==4 and len(intervention)==expected_x2_rows and len(x3)==56
+status_note='All mandatory X1, X2 and X3 cells are complete.' if complete else 'Missing cells remain pending.'
+lines=['# ICS mechanism experiments','', 'Run: `%s`'%Q,'','All metric values and differences are percentage points. '+status_note,'', '## Table 1 — X1 gradients','', '| Model | Domain | Loss key present | Key RoIs ≥96 | Parameter cosine, mean ± SD | Norm ratio, mean ± SD | Total vs original cosine | Key difference energy in E |','|---|---|---:|---:|---:|---:|---:|---:|']
 index={(r['model'],r['domain']):r for r in summaries}
 for model in ['F','HF']:
     for domain in ['night','overcast']:
@@ -69,6 +71,7 @@ if len(summaries)==4:
     lines+=['','Interpretation under the prespecified ≥0.99 cosine rule: '+('甲 in '+', '.join(passing)+'. ' if passing else '')+('Below the 甲 threshold in '+', '.join(failing)+'. ' if failing else '')+'This is a local gradient test and does not establish equivalence of trained models.']
 else:lines+=['','Interpretation: pending all four prespecified cells.']
 lines+=['','Loss-key activation and a non-identity trim are different in this implementation: it still computes the additional loss when the key batch has fewer than 96 RoIs. Key trimming is then the identity, although reference trimming may remain active. All 20 batches per cell are retained; none are filtered by the measured cosine or RoI threshold.']
+lines+=['','[Per-batch gradients](X1/grad_compare.csv) and [full gradient summaries](X1/grad_summary.csv) include both parameter and key-embedding measurements, with means and standard deviations.']
 lines+=['','## Table 2 — X2 inference intervention','','| Model | Domain | β | HOTA | DetA | IDF1 | AssA | ΔAssA |','|---|---|---:|---:|---:|---:|---:|---:|']
 for r in intervention:
     if r['category']!='OVERALL':continue
@@ -85,6 +88,11 @@ for model in ['F','HF']:
     if path.exists():
         b=json.loads(path.read_text());basis_notes.append('%s: %.3f° and %.3f° (%d clean car embeddings)'%(model,*b['principal_angles_degrees'],b['N']))
 if basis_notes:lines+=['','Principal angles between each Clear PCA basis and its checkpoint bank: '+'; '.join(basis_notes)+'.']
+control_check=Q/'X2/detector_output_control_check.json'
+if control_check.exists():
+    checks=json.loads(control_check.read_text())
+    if all(r['frames']==r['det_outputs_bitwise_equal_frames'] and r['det_shape_mismatch_frames']==0 for r in checks):
+        lines+=['','Detector control: β=0 and β=1 have bitwise identical detector outputs for every Overcast frame (4448/4448 for each model); the intervention changes the association embeddings.']
 if policy.get('mode')=='use_current_environment':
     lines+=['','F uses the user-approved current-environment β=0 baseline for paired intervention differences. The historical baseline mismatch is retained below; it is not counted as an exact historical reproduction.']
 elif policy.get('mode')=='skip_F_interventions':
@@ -98,26 +106,40 @@ if diags:
     lines+=['','F historical-baseline checks (using the archived cuDNN benchmark setting):','','| Domain | Metric | Archived F | Current V100 F | Difference |','|---|---|---:|---:|---:|']
     for r in diags:
         if r['category']=='OVERALL':lines.append('| %s | %s | %.9f | %.9f | %+.9f |'%(r['domain'],r['metric'],float(r['reference']),float(r['observed']),float(r['delta'])))
-lines+=['','## Table 3 — X3 Night adaptation (2 epochs)','','| Group | Seed | Domain | HOTA | DetA | IDF1 | AssA | Old-domain HOTA forgetting |','|---|---:|---|---:|---:|---:|---:|---:|']
+lines+=['','Full X2 metrics and intervention differences, including car and the other classes: [intervention.csv](X2/intervention.csv).']
+lines+=['','## Table 3 — X3 Night adaptation (2 epochs)','','X3-0 uses the original ICS setting; X3-1 disables ICS; X3-2 sets α=0 while retaining the extra loss; X3-3 freezes a random orthogonal two-dimensional basis generated with seed 0. All four groups disable APR–ICS coupling, restore the same three-domain APR history and use the same training seed.','','| Group | Seed | Domain | HOTA | DetA | IDF1 | AssA | Old-domain HOTA forgetting |','|---|---:|---|---:|---:|---:|---:|---:|']
 for r in x3:
     if r['category']!='OVERALL':continue
     f='%.6f'%float(r['forgetting_HOTA_percent']) if r['forgetting_HOTA_percent']!='' else '—'
     lines.append('| %s | %s | %s | %.6f | %.6f | %.6f | %.6f | %s |'%(r['group'],r['seed'],r['domain'],*[float(r[m]) for m in METRICS],f))
 if len(x3)==56:
     ix={(r['group'],r['domain']):float(r['HOTA_percent']) for r in x3 if r['category']=='OVERALL'}
-    outcomes=[]
+    outcomes=[];threshold_notes=[]
+    lines+=['','Pairwise HOTA differences (X3-0 minus each alternative):','','| Domain | vs ICS off (X3-1) | vs α=0 (X3-2) | vs random (X3-3) |','|---|---:|---:|---:|']
     for d in ['night','dawn_dusk']:
         control=ix[('X3-0',d)];off=ix[('X3-1',d)];weight=ix[('X3-2',d)];rand=ix[('X3-3',d)]
-        if abs(control-weight)<=.3:result='甲 / no difference from α=0 within 0.3 HOTA'
-        elif abs(control-rand)<=.3 and control-off>.3 and rand-off>.3:result='乙'
-        elif control-weight>.3 and control-rand>.3:result='丙'
-        else:result='no clear difference / mixed'
+        lines.append('| %s | %+.6f | %+.6f | %+.6f |'%(d,control-off,control-weight,control-rand))
+        for label,value in [('ICS off',off),('α=0',weight),('frozen random',rand)]:
+            if abs(value-control)>.3:
+                threshold_notes.append('%s: %s is %+.6f HOTA relative to original ICS'%(d,label,value-control))
+        supported=[]
+        if abs(control-weight)<=.3:supported.append('甲 (X3-0 and α=0 differ by at most 0.3 HOTA)')
+        if abs(control-rand)<=.3 and control-off>.3 and rand-off>.3:supported.append('乙')
+        if control-weight>.3 and control-rand>.3:supported.append('丙')
+        result='; '.join(supported) if supported else 'no prescribed mechanism pattern'
+        if max(control,off,weight,rand)-min(control,off,weight,rand)<=.3:
+            result='无差异 across all four groups; compatible with 甲, without evidence of an ICS gain'
         outcomes.append(d+': '+result)
-    lines+=['','Interpretation under the prespecified single-seed rule: '+ '; '.join(outcomes)+'.']
+    lines+=['','Interpretation under the prespecified single-seed rule: '+ '; '.join(outcomes)+'. Conditions are checked independently; overlapping patterns do not uniquely identify a mechanism. Differences within ±0.3 HOTA are treated as no difference.']
+    if threshold_notes:lines+=['','Comparisons exceeding the 0.3 HOTA threshold: '+'; '.join(threshold_notes)+'. These are single-seed observations.']
+    if all(abs(ix[('X3-0',d)]-ix[('X3-1',d)])<=.3 for d in ['night','dawn_dusk']):
+        lines+=['','Original ICS and ICS off also differ by at most 0.3 HOTA in both domains. Compatibility with 甲 therefore does not establish that adding the extra loss provides a gain over disabling ICS.']
 else:lines+=['','Interpretation: pending all four groups. Single-seed differences within ±0.3 HOTA are treated as no difference.']
+old_overall=old['OVERALL']
+lines+=['','The HF stage3 Dawn/Dusk baseline (OVERALL) is HOTA %.6f, DetA %.6f, IDF1 %.6f and AssA %.6f. Forgetting is baseline minus the final value; negative values are retained and indicate improvement. Full per-class metrics and forgetting values are in [x3_summary.csv](X3/x3_summary.csv).'%tuple(float(old_overall[m]) for m in METRICS)]
 lines+=['', 'The optional second seed has not been run; the mandatory four groups take priority under shared GPU availability.','', '## Protocol details and deviations','', 'Both OVERALL and car metrics are preserved in the CSV files; the compact tables above display OVERALL. X1 records bank initialization and updates, alpha, dimension and loss activation in per-batch CSVs. X2 uses full videos and checks β=0 against the historical frozen metrics before β=1. X3 uses identical SHA256-identified archived APR history with three domains.','']
 for r in json.loads((Q/'manifests/deviations.json').read_text()):lines.append('- **%s:** %s. %s'%(r['scope'],r['change'],r['reason']))
 lines+=['','## Provenance','','See `inputs.txt`, `manifests/`, per-cell resolved configs, `X3/*/config_diff.json`, and `logs/`. Checkpoints and feature NPZ files stay on the server and are excluded from GitHub.','']
 (Q/'SUMMARY.md').write_text('\n'.join(lines))
-dump(Q/'manifests/result_status.json',dict(X1_complete_cells=len(summaries),X2_complete_cells=len(intervention)//7,X2_required_cells=expected_x2_rows//7,X3_complete_cells=len(x3)//7,F_baseline_policy=policy.get('mode','require_exact_historical_parity'),complete=len(summaries)==4 and len(intervention)==expected_x2_rows and len(x3)==56))
+dump(Q/'manifests/result_status.json',dict(X1_complete_cells=len(summaries),X2_complete_cells=len(intervention)//7,X2_required_cells=expected_x2_rows//7,X3_complete_cells=len(x3)//7,F_baseline_policy=policy.get('mode','require_exact_historical_parity'),complete=complete))
 print('SUMMARY',len(summaries),len(intervention)//7,len(x3)//7,flush=True)

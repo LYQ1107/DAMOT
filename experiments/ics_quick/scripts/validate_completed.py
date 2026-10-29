@@ -30,7 +30,11 @@ for group in ['X3-0','X3-1','X3-2','X3-3']:
     assert json.loads((root/'config_diff.json').read_text())['shared_apr_history_sha256']==history['shared_history_sha256']
     for rank in range(4):
         start=json.loads((root/('audit_start_rank%d.json'%rank)).read_text());end=json.loads((root/('audit_end_rank%d.json'%rank)).read_text())
-        assert start['history_domains']==3
+        assert start['history_domains']==end['history_domains']==3
+        assert end['epoch']==2 and end['iteration']==228 and end['total_batches']==228
+        if group=='X3-1':
+            assert start['num_updates'] is None and end['num_updates'] is None
+            assert end['trim_triggered_batches']==0
         if group=='X3-3':assert start['num_updates']==end['num_updates']
         if group in ['X3-2','X3-3']:assert end['total_batches']>0 and end['trim_triggered_batches']>0
     if group=='X3-3':
@@ -43,6 +47,6 @@ for group in ['X3-0','X3-1','X3-2','X3-3']:
         done=json.loads((root/'evaluation'/domain/'complete.json').read_text())
         assert done['status']=='complete'
         assert (done['videos'],done['frames'])==((36,7286) if domain=='night' else (33,6476))
-    records.append(dict(kind='X3',group=group,history_domains_start=3,four_rank_audits=True,passed=True))
+    records.append(dict(kind='X3',group=group,history_domains_start=3,epochs=2,batches_per_rank=228,four_rank_audits=True,passed=True))
 dump(Q/'manifests/final_validation.json',dict(status='passed',checks=records))
 print('FINAL_VALIDATION_PASSED',len(records),flush=True)

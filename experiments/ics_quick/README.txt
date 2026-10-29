@@ -29,9 +29,13 @@ code/code_hf snapshots and adjust input locations on another machine):
    options; the exact initial command is in manifests/X2_HF_extract.json.
    Run scripts/basis.py --model F and --model HF, then scripts/evaluate.py
    --model F|HF --domain night|overcast --beta 0 --check-disabled.
-   A failed frozen baseline assertion blocks beta1. Once beta0 passes, run
-   the same cell with --beta 1. Completed video predictions are reused when
-   a transient input connection failure is retried.
+   A failed frozen baseline assertion initially blocks beta1. HF passes the
+   exact archived metric gate in both domains. F retains its historical
+   discrepancy CSVs and uses a current-environment paired beta0 after explicit
+   user approval, recorded in manifests/F_baseline_policy.json; this exception
+   is handled in controller_v2.py, not by changing the archived numbers.
+   Completed video predictions are reused when a transient input connection
+   failure is retried.
 
 3. X3: scripts/prepare_x3.py creates the four base configs and copies the
    fixed stage3 checkpoint. Shared original APR prototypes come from the
@@ -44,9 +48,14 @@ code/code_hf snapshots and adjust input locations on another machine):
 
 scripts/gpu_job.py rechecks nvidia-smi before each launch and waits for the
 full requested number of wholly idle GPUs. It never kills another process.
-scripts/controller.py records orchestration for this live run; its adopted
-PIDs are session-specific and should not be reused for a fresh reproduction.
+scripts/controller_v2.py is the resumed controller for this run and imports
+the launch helpers from controller.py. Earlier controller failure records are
+retained as diagnostics; final completion is determined by result_status.json
+and final_validation.json. Adopted PIDs are session-specific and should not be
+reused for a fresh reproduction.
 For fresh reproduction, use the core commands and the recorded final commands.
+After all four groups finish, scripts/validate_completed.py checks the saved
+artifacts without new GPU runs, and scripts/summarize.py rebuilds the tables.
 
 Checkpoints, feature NPZ files, raw prediction pickle files and the private
 mount are server-only. The publication bundle contains CSV results, bases,

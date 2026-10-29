@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0/episode/stage_snapshots/stage00_source_only.pth",
+    "bytes": 455981537,
+    "sha256": "ce87a1a76fb6f830c21f6d2e022f59568b88e9de6b672ff23cc43c39d2f8eda3",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0/episode/adapt/stage04_after_night/epoch_1.pth",
+    "bytes": 682303409,
+    "sha256": "1374c2d328efdb1158721cc986419152faf9fa36f71f1acb8868ab816c5a7c38",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-1/episode/stage_snapshots/stage00_source_only.pth",
+    "bytes": 455446729,
+    "sha256": "265ef3460fb9648261969a47537d5dc5f3d17d0146700f9863861ae83fa0ba8e",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-1/episode/adapt/stage04_after_night/epoch_1.pth",
+    "bytes": 681768729,
+    "sha256": "4c0d1420298991d42e6a62571ca2ccd3e2a99f5a28d2197c8464cb07dcf2db52",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/stage_snapshots/stage00_source_only.pth",
+    "bytes": 455981537,
+    "sha256": "f3af78adc8fb0c922488f4222ff8bbbdc52bb3d6d8ba2218912c64969d6ecbc2",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/adapt/stage04_after_night/epoch_1.pth",
+    "bytes": 682303409,
+    "sha256": "261d939f704650467e8a4965ad92ed96e165be5cc942cbefa7cb09385d51bc92",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-3/episode/stage_snapshots/stage00_source_only.pth",
+    "bytes": 455981537,
+    "sha256": "2591ec82a85faa47ccf3204bb63b0cd367ab52daee18558abae7205a5ce5b5a7",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-3/episode/adapt/stage04_after_night/epoch_1.pth",
+    "bytes": 682303473,
+    "sha256": "1095c32d788ccd680aa8194ad3747c313af3f11a4a8eefdfa3f28cd76d1b911f",
+    "reason": "Redundant generated weight; group fully trained and both domain evaluations completed; epoch2 and endpoint retained"
+  }
+]

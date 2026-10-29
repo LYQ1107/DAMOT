@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "kind": "X1",
+      "model": "F",
+      "domain": "night",
+      "batches": 20,
+      "passed": true
+    },
+    {
+      "kind": "X1",
+      "model": "F",
+      "domain": "overcast",
+      "batches": 20,
+      "passed": true
+    },
+    {
+      "kind": "X1",
+      "model": "HF",
+      "domain": "night",
+      "batches": 20,
+      "passed": true
+    },
+    {
+      "kind": "X1",
+      "model": "HF",
+      "domain": "overcast",
+      "batches": 20,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "F",
+      "domain": "night",
+      "beta": 0,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "F",
+      "domain": "night",
+      "beta": 1,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "F",
+      "domain": "overcast",
+      "beta": 0,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "F",
+      "domain": "overcast",
+      "beta": 1,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "HF",
+      "domain": "night",
+      "beta": 0,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "HF",
+      "domain": "night",
+      "beta": 1,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "HF",
+      "domain": "overcast",
+      "beta": 0,
+      "passed": true
+    },
+    {
+      "kind": "X2",
+      "model": "HF",
+      "domain": "overcast",
+      "beta": 1,
+      "passed": true
+    },
+    {
+      "kind": "X3",
+      "group": "X3-0",
+      "history_domains_start": 3,
+      "epochs": 2,
+      "batches_per_rank": 228,
+      "four_rank_audits": true,
+      "passed": true
+    },
+    {
+      "kind": "X3",
+      "group": "X3-1",
+      "history_domains_start": 3,
+      "epochs": 2,
+      "batches_per_rank": 228,
+      "four_rank_audits": true,
+      "passed": true
+    },
+    {
+      "kind": "X3",
+      "group": "X3-2",
+      "history_domains_start": 3,
+      "epochs": 2,
+      "batches_per_rank": 228,
+      "four_rank_audits": true,
+      "passed": true
+    },
+    {
+      "kind": "X3",
+      "group": "X3-3",
+      "history_domains_start": 3,
+      "epochs": 2,
+      "batches_per_rank": 228,
+      "four_rank_audits": true,
+      "passed": true
+    }
+  ]
+}

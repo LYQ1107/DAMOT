@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    8
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/scripts/evaluate.py",
+    "--model",
+    "HF",
+    "--domain",
+    "night",
+    "--checkpoint",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/adapt/stage04_after_night/epoch_2.pth",
+    "--out",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/evaluation/night",
+    "--beta",
+    "0"
+  ],
+  "time": 1793292183.5054743,
+  "pid": 24910
+}

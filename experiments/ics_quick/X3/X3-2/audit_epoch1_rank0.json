@@ -1,0 +1,19 @@
+{
+  "tag": "epoch1",
+  "rank": 0,
+  "epoch": 0,
+  "iteration": 114,
+  "history_domains": 3,
+  "history_domain_names": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "num_updates": 681,
+  "num_updates_start": 660,
+  "initialized": true,
+  "total_batches": 114,
+  "trim_triggered_batches": 114,
+  "trim_trigger_ratio": 1.0,
+  "causal_freeze_random_basis": false
+}

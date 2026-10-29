@@ -1,0 +1,8 @@
+clear continuous DARTH episode
+source_ckpt: /data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/S.pth
+target_order: overcast -> rainy -> dawn_dusk -> night
+normal flow loads source checkpoint once; stage snapshots are not next-stage inputs.
+stage01_after_overcast: start=in_memory_source_checkpoint snapshot=/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/stage_snapshots/stage01_after_overcast.pth
+stage02_after_rainy: start=in_memory_previous_stage snapshot=/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/stage_snapshots/stage02_after_rainy.pth
+stage03_after_dawn_dusk: start=in_memory_previous_stage snapshot=/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/stage_snapshots/stage03_after_dawn_dusk.pth
+stage04_after_night: start=in_memory_previous_stage snapshot=/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-2/episode/stage_snapshots/stage04_after_night.pth

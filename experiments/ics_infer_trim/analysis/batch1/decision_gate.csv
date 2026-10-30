@@ -1,0 +1,7 @@
+domain,category,both_AssA_CI_strictly_positive,C2_trim_vs_C0_ci_low,C2_trim_vs_C4_trim_ci_low
+night,OVERALL,False,-0.6977457320205833,-0.5541599357690489
+night,car,False,-0.732352078877699,-0.4987997031742541
+dawn_dusk,OVERALL,False,-0.6412256056583355,-1.0034475201228892
+dawn_dusk,car,False,-0.7426815502069493,-0.8306841474967018
+pooled_test_videos,OVERALL,False,-0.45300592678017204,-0.5308344163351841
+pooled_test_videos,car,False,-0.5258138517006935,-0.42441293543354985

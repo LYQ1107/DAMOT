@@ -1,0 +1,38 @@
+loading annotations into memory...
+Done (t=0.38s)
+creating index...
+index created!
+VIDEO_COMPLETE C2 dawn_dusk 1 203 elapsed 25.7
+VIDEO_COMPLETE C2 dawn_dusk 2 203 elapsed 48.1
+VIDEO_COMPLETE C2 dawn_dusk 3 202 elapsed 73.8
+VIDEO_COMPLETE C2 dawn_dusk 4 202 elapsed 95.7
+VIDEO_COMPLETE C2 dawn_dusk 5 103 elapsed 108.6
+VIDEO_COMPLETE C2 dawn_dusk 6 202 elapsed 130.8
+VIDEO_COMPLETE C2 dawn_dusk 7 202 elapsed 152.7
+VIDEO_COMPLETE C2 dawn_dusk 8 203 elapsed 174.1
+VIDEO_COMPLETE C2 dawn_dusk 9 202 elapsed 198.2
+VIDEO_COMPLETE C2 dawn_dusk 10 203 elapsed 220.3
+VIDEO_COMPLETE C2 dawn_dusk 11 202 elapsed 247.0
+VIDEO_COMPLETE C2 dawn_dusk 12 202 elapsed 269.9
+VIDEO_COMPLETE C2 dawn_dusk 13 202 elapsed 290.9
+VIDEO_COMPLETE C2 dawn_dusk 14 203 elapsed 312.3
+VIDEO_COMPLETE C2 dawn_dusk 15 202 elapsed 330.6
+VIDEO_COMPLETE C2 dawn_dusk 16 203 elapsed 350.2
+VIDEO_COMPLETE C2 dawn_dusk 17 203 elapsed 368.4
+VIDEO_COMPLETE C2 dawn_dusk 18 203 elapsed 387.7
+VIDEO_COMPLETE C2 dawn_dusk 19 202 elapsed 405.9
+VIDEO_COMPLETE C2 dawn_dusk 20 202 elapsed 423.7
+VIDEO_COMPLETE C2 dawn_dusk 21 202 elapsed 442.5
+VIDEO_COMPLETE C2 dawn_dusk 22 203 elapsed 463.6
+VIDEO_COMPLETE C2 dawn_dusk 23 197 elapsed 484.4
+VIDEO_COMPLETE C2 dawn_dusk 24 203 elapsed 505.4
+VIDEO_COMPLETE C2 dawn_dusk 25 202 elapsed 523.9
+VIDEO_COMPLETE C2 dawn_dusk 26 203 elapsed 543.5
+VIDEO_COMPLETE C2 dawn_dusk 27 202 elapsed 561.9
+VIDEO_COMPLETE C2 dawn_dusk 28 202 elapsed 581.1
+VIDEO_COMPLETE C2 dawn_dusk 29 103 elapsed 590.5
+VIDEO_COMPLETE C2 dawn_dusk 30 202 elapsed 610.8
+VIDEO_COMPLETE C2 dawn_dusk 31 203 elapsed 629.1
+VIDEO_COMPLETE C2 dawn_dusk 32 202 elapsed 647.7
+VIDEO_COMPLETE C2 dawn_dusk 33 203 elapsed 667.1
+INFERENCE_COMPLETE /data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/jobs/C2/dawn_dusk

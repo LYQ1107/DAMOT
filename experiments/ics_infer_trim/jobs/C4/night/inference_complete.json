@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "frames": 7286,
+  "videos": 36,
+  "beta0_bitwise_equal_to_frozen_all_frames": true,
+  "detector_calls_this_invocation": {
+    "extract_feat": 7286,
+    "simple_test_rpn": 7286,
+    "simple_test": 7286
+  },
+  "trimmed_embedding_calls": 7286,
+  "min_trimmed_roi_count": 3,
+  "elapsed_seconds": 837.7785058021545,
+  "checkpoint_sha256": "3c37586c9ed97a70fd110e482c5f97e6c8cf324318259433408f1dc841e2c7cf",
+  "bytewise_audit": "PASS: dtype, shape and array bytes; entire domain"
+}

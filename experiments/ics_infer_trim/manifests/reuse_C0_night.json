@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "frames_per_case": 16,
+  "cases": [
+    "C0_b0",
+    "C0_INT_b025",
+    "C0_RAND_b025"
+  ],
+  "comparison": "Independent native detector forward per case vs saved detector-reuse outputs; dtype/shape/bytes"
+}

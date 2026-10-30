@@ -1,0 +1,20 @@
+{
+  "root": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136",
+  "requested_alias": "/data1/liuyeqiang/ics_infer_trim_20261031_022136",
+  "storage": "NAS",
+  "task": "inference-only raw-embedding ICS shrinkage",
+  "training": false,
+  "resource_policy": {
+    "allow_shared_0_1": true,
+    "authorization": "direct human reply: \u5141\u8bb8\u5171\u4eab0/1\uff0c\u4f18\u5148\u65b0\u8bad\u7ec3\uff08\u63a8\u8350\uff09",
+    "reserve_training_gpus": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "allocator_fraction": 0.35
+  },
+  "source_C_root": "/data1/liuyeqiang/ics_v2_20261030_184026",
+  "source_new_full_run": "/data1/liuyeqiang/damot_hf_intics_20261031_004258"
+}

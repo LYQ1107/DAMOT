@@ -1,0 +1,41 @@
+loading annotations into memory...
+Done (t=0.47s)
+creating index...
+index created!
+VIDEO_COMPLETE C2 night 9 203 elapsed 29.6
+VIDEO_COMPLETE C2 night 11 203 elapsed 54.6
+VIDEO_COMPLETE C2 night 12 202 elapsed 79.6
+VIDEO_COMPLETE C2 night 13 203 elapsed 107.1
+VIDEO_COMPLETE C2 night 14 202 elapsed 133.5
+VIDEO_COMPLETE C2 night 16 203 elapsed 157.8
+VIDEO_COMPLETE C2 night 17 202 elapsed 182.4
+VIDEO_COMPLETE C2 night 18 203 elapsed 210.0
+VIDEO_COMPLETE C2 night 21 202 elapsed 234.9
+VIDEO_COMPLETE C2 night 23 203 elapsed 260.8
+VIDEO_COMPLETE C2 night 24 203 elapsed 281.6
+VIDEO_COMPLETE C2 night 25 202 elapsed 301.3
+VIDEO_COMPLETE C2 night 26 203 elapsed 320.3
+VIDEO_COMPLETE C2 night 27 202 elapsed 352.6
+VIDEO_COMPLETE C2 night 31 202 elapsed 402.1
+VIDEO_COMPLETE C2 night 32 202 elapsed 423.2
+VIDEO_COMPLETE C2 night 33 202 elapsed 443.7
+VIDEO_COMPLETE C2 night 35 200 elapsed 464.1
+VIDEO_COMPLETE C2 night 36 203 elapsed 483.7
+VIDEO_COMPLETE C2 night 37 202 elapsed 502.9
+VIDEO_COMPLETE C2 night 39 203 elapsed 522.3
+VIDEO_COMPLETE C2 night 40 202 elapsed 545.0
+VIDEO_COMPLETE C2 night 41 203 elapsed 564.1
+VIDEO_COMPLETE C2 night 42 202 elapsed 582.7
+VIDEO_COMPLETE C2 night 43 202 elapsed 602.1
+VIDEO_COMPLETE C2 night 45 203 elapsed 621.2
+VIDEO_COMPLETE C2 night 48 203 elapsed 640.8
+VIDEO_COMPLETE C2 night 52 203 elapsed 661.0
+VIDEO_COMPLETE C2 night 53 202 elapsed 680.1
+VIDEO_COMPLETE C2 night 55 202 elapsed 699.3
+VIDEO_COMPLETE C2 night 56 203 elapsed 717.9
+VIDEO_COMPLETE C2 night 58 202 elapsed 736.9
+VIDEO_COMPLETE C2 night 60 202 elapsed 755.2
+VIDEO_COMPLETE C2 night 64 202 elapsed 774.4
+VIDEO_COMPLETE C2 night 65 202 elapsed 793.2
+VIDEO_COMPLETE C2 night 69 203 elapsed 812.6
+INFERENCE_COMPLETE /data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/jobs/C2/night

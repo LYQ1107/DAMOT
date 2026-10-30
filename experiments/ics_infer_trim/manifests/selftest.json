@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": [
+    "default disabled is exact identity",
+    "beta0 returns same tensor object",
+    "one RoI shrinks by raw matrix operator without min_samples gate",
+    "no feature normalization",
+    "training path unchanged",
+    "checkpoint row PCs QR and actual config alpha default",
+    "empty embedding exact identity"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "allow_shared_0_1": true,
+  "priority": "independent full training",
+  "max_memory_fraction": 0.35,
+  "min_free_mib": 12000,
+  "storage": "NAS",
+  "actual_root": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136",
+  "local_alias": "/data1/liuyeqiang/ics_infer_trim_20261031_022136",
+  "code_cache": "/data1/liuyeqiang/ics_infer_trim_code_20261031_022136",
+  "additional_wholly_idle_gpus": [
+    7,
+    9
+  ],
+  "additional_idle_authorization": "\u5176\u4ed6\u5361\u7a7a\u51fa\u6765\u4e86\u4e5f\u53ef\u4ee5\u7528"
+}

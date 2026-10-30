@@ -1,0 +1,19 @@
+{
+  "reason": "NAS path exceeds AF_UNIX socket length in multiprocessing resource_sharer",
+  "resolution": "Short local TMPDIR; large artifacts remain on NAS",
+  "failed_attempts": [
+    "C2_night_preflight_attempt1.log",
+    "C4_night_preflight_attempt1.log"
+  ],
+  "no_predictions_accepted": true,
+  "cpu_monitor_retry": {
+    "reason": "Transient missing manifest while SFTP replaces status file",
+    "resolution": "Retry status reads; restart idle CPU controller",
+    "no_metric_job_started_in_failed_attempt": true
+  },
+  "native_json_fix": {
+    "reason": "Native optional MOTP metrics are undefined for classes with no matches; strict JSON rejects NaN",
+    "resolution": "Native CSVs unchanged; supplementary JSON null for undefined optional metrics",
+    "completed_native_evaluations_reused_without_rerunning": true
+  }
+}

@@ -1,0 +1,76 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+loading annotations into memory...
+Done (t=0.48s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 28.39 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 36 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 10.86 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT    PT    ML    FM
+----------------------------------------------------------------------------------
+pedestrian  23.8  -4.9  72.2  2102   5389   512  29.4  51.6   25   179   196   365
+car         43.3  29.6  77.0  6331  39247  2880  43.0  82.4  278  1065   878  2333
+truck        4.7 -41.6  78.1   866   1839    10   4.1   8.3    0     5    32    11
+bus         10.2 -34.5  74.9   587   1245    10   9.1  17.6    0     3    21    17
+motorcycle   0.0   0.0    -      0     77     0   0.0    -     0     0     5     0
+bicycle      0.0   0.0    -      0    608     0   0.0    -     0     0    26     0
+----------------------------------------------------------------------------------
+OVERALL     39.7  23.3  76.7  9886  48405  3412  39.8  76.4  303  1252  1158  2726
+AVERAGE     13.7  -8.6  50.4  9886  48405  3412  14.3  26.6  303  1252  1158  2726
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+car          46.0   66.2  40.7  79.4   35.1   67.4  32.0  35.8  35897  2986
+pedestrian   23.9   66.6  21.2  75.7   22.7   40.0  17.8  19.2   4341  1400
+truck        19.1   79.5  18.6  80.6    3.3    6.7   2.3   6.5    944   265
+bus          21.5   76.0  20.3  78.6    7.1   13.6   4.9  10.0    712   150
+---------------------------------------------------------------------------
+AVERAGE      18.4   48.1  16.8  85.7   11.4   21.3   9.5  11.9  41894  4801
+OVERALL      44.4   66.3  39.4  79.1   32.4   62.3  28.7  33.3  41894  4801
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+car         79.4  32.0  29.6  35.8  43.3  40.7
+pedestrian  75.7  17.8  -4.9  19.2  23.8  21.2
+truck       80.6   2.3 -41.6   6.5   4.7  18.6
+bus         78.6   4.9 -34.5  10.0  10.2  20.3
+----------------------------------------------
+AVERAGE     85.7   9.5  -8.6  11.9  13.7  16.8
+OVERALL     79.1  28.7  23.3  33.3  39.7  39.4
+
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/scripts/metrics.py", line 98, in <module>
+    if __name__=='__main__':main()
+  File "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/scripts/metrics.py", line 49, in main
+    dump(out/'evaluation_flat_metrics.json',metrics)
+  File "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/scripts/common.py", line 31, in dump
+    temp.write_text(json.dumps(obj,indent=2,ensure_ascii=False,allow_nan=False)+'\n');temp.replace(path)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/json/encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/json/encoder.py", line 241, in floatstr
+    repr(o))
+ValueError: Out of range float values are not JSON compliant: nan

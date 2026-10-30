@@ -1,0 +1,24 @@
+{
+  "checkpoint": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C4/episode/adapt/stage04_after_night/epoch_2.pth",
+  "checkpoint_sha256": "3c37586c9ed97a70fd110e482c5f97e6c8cf324318259433408f1dc841e2c7cf",
+  "pcs_key": "track_head.causal_bank.pcs",
+  "rows": 2,
+  "dimension": 256,
+  "training_alpha": 0.25,
+  "causal_pca_mode": "proto_shrinkage_cov_ema",
+  "causal_fixed_basis_path": "/data1/liuyeqiang/ics_v2_20261030_184026/basis/X3_seed0_random_k2.npy",
+  "row_gram": [
+    [
+      1.0000001066359507,
+      3.573447536139862e-09
+    ],
+    [
+      3.573447536139862e-09,
+      0.9999998830885932
+    ]
+  ],
+  "QR_orthogonality_error": 4.441223609525768e-16,
+  "sequential_training_vs_QR_operator_frobenius": 3.957544644511855e-08,
+  "relative_to_training_removed_operator": 1.119362667744108e-07,
+  "note": "Requested QR subspace projection; sequential training trim is identical only for orthonormal stored PCs (up to rounding)."
+}

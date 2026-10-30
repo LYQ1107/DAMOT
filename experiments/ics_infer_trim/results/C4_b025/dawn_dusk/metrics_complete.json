@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "frames": 6476,
+  "videos": 33,
+  "test_videos": 17,
+  "all_frame_hota": true,
+  "aggregate_parity": true,
+  "original_prediction_sha256": "85dbcf91c31d69ca3f54f858a365448c24fec3e2a6dc49e3096075cf0e6c1c8f"
+}

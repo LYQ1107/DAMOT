@@ -1,0 +1,11 @@
+START 0 C2 night preflight 10237
+START 1 C4 night preflight 10241
+START 0 C2 night preflight 12484
+START 1 C4 night preflight 12488
+START 0 C2 night full 13566
+START 1 C4 night full 13581
+START 0 C0 night preflight 35106
+START 1 C2 dawn_dusk preflight 35111
+START 0 C0 night full 36128
+START 1 C2 dawn_dusk full 36142
+BATCH1_INFERENCE_COMPLETE

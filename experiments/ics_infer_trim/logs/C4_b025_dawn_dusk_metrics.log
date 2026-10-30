@@ -1,0 +1,59 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+loading annotations into memory...
+Done (t=0.37s)
+creating index...
+index created!
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 21.21 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 33 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 7.35 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  27.3 -11.2  73.5  2797   3778   699  42.2  49.7   59  158   191   298
+car         55.1  45.4  81.5  3005  21836  1903  55.4  90.0  497  726   781   929
+truck       20.2   4.1  80.0   217   2014    38  14.9  61.9    0    9    63    33
+bus         35.1 -25.1  79.7  1077    966    24  41.5  38.9    4   11    19    33
+motorcycle   0.0   0.0    -      0     31     0   0.0    -     0    0     2     0
+bicycle      0.0   0.0    -      0    288     0   0.0    -     0    0    17     0
+---------------------------------------------------------------------------------
+OVERALL     49.8  35.4  80.7  7096  28913  2664  51.7  81.3  560  904  1073  1293
+AVERAGE     23.0   2.2  52.4  7096  28913  2664  25.7  40.1  560  904  1073  1293
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+car          56.3   70.5  49.4  83.5   46.6   75.7  43.0  45.9  30126  1936
+pedestrian   29.6   70.4  26.4  77.1   32.9   38.7  22.9  24.3   5560  1717
+bus          48.2   81.4  46.2  81.7   34.4   32.2  20.6  30.8   1763   282
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        38.4   80.2  37.3  82.3   12.3   51.0  11.2  20.4    570   123
+---------------------------------------------------------------------------
+AVERAGE      28.7   50.4  26.6  87.4   21.0   32.9  16.3  20.2  38019  4058
+OVERALL      53.9   71.0  47.4  82.9   43.2   67.9  37.8  42.1  38019  4058
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+car         83.5  43.0  45.4  45.9  55.1  49.4
+pedestrian  77.1  22.9 -11.2  24.3  27.3  26.4
+bus         81.7  20.6 -25.1  30.8  35.1  46.2
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+truck       82.3  11.2   4.1  20.4  20.2  37.3
+----------------------------------------------
+AVERAGE     87.4  16.3   2.2  20.2  23.0  26.6
+OVERALL     82.9  37.8  35.4  42.1  49.8  47.4
+
+METRICS_COMPLETE C4_b025 dawn_dusk

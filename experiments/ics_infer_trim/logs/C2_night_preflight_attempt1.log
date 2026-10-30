@@ -1,0 +1,84 @@
+loading annotations into memory...
+Done (t=0.53s)
+creating index...
+index created!
+Traceback (most recent call last):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 359, in reduce_storage
+    df = multiprocessing.reduction.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 194, in DupFd
+    return resource_sharer.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 53, in __init__
+    self._id = _resource_sharer.register(send, close)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 77, in register
+    self._start()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 130, in _start
+    self._listener = Listener(authkey=process.current_process().authkey)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 438, in __init__
+    self._listener = SocketListener(address, family, backlog)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 581, in __init__
+    self._socket.bind(address)
+OSError: AF_UNIX path too long
+Traceback (most recent call last):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 359, in reduce_storage
+    df = multiprocessing.reduction.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 194, in DupFd
+    return resource_sharer.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 53, in __init__
+    self._id = _resource_sharer.register(send, close)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 77, in register
+    self._start()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 130, in _start
+    self._listener = Listener(authkey=process.current_process().authkey)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 438, in __init__
+    self._listener = SocketListener(address, family, backlog)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 581, in __init__
+    self._socket.bind(address)
+OSError: AF_UNIX path too long
+Traceback (most recent call last):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 359, in reduce_storage
+    df = multiprocessing.reduction.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 194, in DupFd
+    return resource_sharer.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 53, in __init__
+    self._id = _resource_sharer.register(send, close)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 77, in register
+    self._start()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 130, in _start
+    self._listener = Listener(authkey=process.current_process().authkey)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 438, in __init__
+    self._listener = SocketListener(address, family, backlog)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 581, in __init__
+    self._socket.bind(address)
+OSError: AF_UNIX path too long
+Traceback (most recent call last):
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/queues.py", line 236, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/multiprocessing/reductions.py", line 359, in reduce_storage
+    df = multiprocessing.reduction.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/reduction.py", line 194, in DupFd
+    return resource_sharer.DupFd(fd)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 53, in __init__
+    self._id = _resource_sharer.register(send, close)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 77, in register
+    self._start()
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/resource_sharer.py", line 130, in _start
+    self._listener = Listener(authkey=process.current_process().authkey)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 438, in __init__
+    self._listener = SocketListener(address, family, backlog)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/connection.py", line 581, in __init__
+    self._socket.bind(address)
+OSError: AF_UNIX path too long

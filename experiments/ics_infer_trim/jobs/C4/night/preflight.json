@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "frames": 16,
+  "det_and_track_bitwise_equal_to_frozen": true,
+  "all_frame_proof_pending": true
+}

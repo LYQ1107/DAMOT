@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "models": [
+    {
+      "model": "C2",
+      "basis_file": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/inputs/C2_basis.npy",
+      "basis_sha256": "431605fa763d13387a8e777f9bf95190b27aa62b1cc1b3256bcad26d225bc652",
+      "checkpoint_sha256": "dbc2e689f140be0d8db38ff33012f98e04c8bc2b31ccebf14711d2fa4e1b0233",
+      "max_principal_angle_deg": 1.465992994337495e-06,
+      "training_alpha": 0.25,
+      "mode": "proto_shrinkage_cov_ema"
+    },
+    {
+      "model": "C4",
+      "basis_file": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/inputs/C4_basis.npy",
+      "basis_sha256": "b95a1f4ce3b93405ca9f94d389bca68d55493ab3ff83ec7f90315dbd7e42a6cf",
+      "checkpoint_sha256": "3c37586c9ed97a70fd110e482c5f97e6c8cf324318259433408f1dc841e2c7cf",
+      "max_principal_angle_deg": 2.5151370130514946e-14,
+      "training_alpha": 0.25,
+      "mode": "proto_shrinkage_cov_ema"
+    }
+  ]
+}

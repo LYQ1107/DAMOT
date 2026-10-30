@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "bitwise_checked_model_frames": 41286,
+  "inference_jobs": 6,
+  "aggregate_cells": 98,
+  "native_aggregate_parity_checks": 140,
+  "paired_effects": 120,
+  "paired_video_rows": 336,
+  "expected_test_videos": {
+    "night": 25,
+    "dawn_dusk": 17
+  },
+  "single_training_seed": true
+}

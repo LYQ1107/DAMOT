@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "model_frames": 41286,
+  "jobs": [
+    {
+      "model": "C0",
+      "domain": "night",
+      "frames": 7286,
+      "arrays_dtype_shape_and_bytes_equal": true,
+      "original_pickle_sha256": "4fa553fea065fd63accf9abae752df284e13d31aec14c0548b15ee8639c9b03a",
+      "new_pickle_sha256": "4fa553fea065fd63accf9abae752df284e13d31aec14c0548b15ee8639c9b03a",
+      "original_evaluation_config_sha256": "eb7269876e045ad1fe60ccfc151ed2237ee95b351b8e52a80879af1f9cc03d9b",
+      "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+      "annotation_sha256": "002cf995f0b4972d6d7024df452e67d4fe2baf032ccb127a81296e6a13c9fc75"
+    },
+    {
+      "model": "C0",
+      "domain": "dawn_dusk",
+      "frames": 6476,
+      "arrays_dtype_shape_and_bytes_equal": true,
+      "original_pickle_sha256": "76bc2c30d6ce07e7e6421f68994f427b754140f240d0cf5a8b955285702e6008",
+      "new_pickle_sha256": "76bc2c30d6ce07e7e6421f68994f427b754140f240d0cf5a8b955285702e6008",
+      "original_evaluation_config_sha256": "82163a7a1b72a7cecc30721bd2a513b3567f8e009f01092d4f718532f9e74c1c",
+      "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+      "annotation_sha256": "13538196138661da77d41f60cad469ac6260e9be7c27b5919e1458be5d0cb6d7"
+    },
+    {
+      "model": "C2",
+      "domain": "night",
+      "frames": 7286,
+      "arrays_dtype_shape_and_bytes_equal": true,
+      "original_pickle_sha256": "e855e3e9b9ab6188737e42fc9a32e0449398d1ee38785665d8457b34ac957113",
+      "new_pickle_sha256": "e855e3e9b9ab6188737e42fc9a32e0449398d1ee38785665d8457b34ac957113",
+      "original_evaluation_config_sha256": "eb7269876e045ad1fe60ccfc151ed2237ee95b351b8e52a80879af1f9cc03d9b",
+      "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+      "annotation_sha256": "002cf995f0b4972d6d7024df452e67d4fe2baf032ccb127a81296e6a13c9fc75"
+    },
+    {
+      "model": "C2",
+      "domain": "dawn_dusk",
+      "frames": 6476,
+      "arrays_dtype_shape_and_bytes_equal": true,
+      "original_pickle_sha256": "c51f84bd26033e53e4d31439a48083e80f615ae58e361184e43ec61d23eb02f0",
+      "new_pickle_sha256": "c51f84bd26033e53e4d31439a48083e80f615ae58e361184e43ec61d23eb02f0",
+      "original_evaluation_config_sha256": "82163a7a1b72a7cecc30721bd2a513b3567f8e009f01092d4f718532f9e74c1c",
+      "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+      "annotation_sha256": "13538196138661da77d41f60cad469ac6260e9be7c27b5919e1458be5d0cb6d7"
+    },
+    {
+      "model": "C4",
+      "domain": "night",
+      "frames": 7286,
+      "arrays_dtype_shape_and_bytes_equal": true,
+      "original_pickle_sha256": "2adf55cce9b5b85491ff2a81a9b9c6253c99c386b70d61eabac9fb899ac56696",
+      "new_pickle_sha256": "2adf55cce9b5b85491ff2a81a9b9c6253c99c386b70d61eabac9fb899ac56696",
+      "original_evaluation_config_sha256": "eb7269876e045ad1fe60ccfc151ed2237ee95b351b8e52a80879af1f9cc03d9b",
+      "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+      "annotation_sha256": "002cf995f0b4972d6d7024df452e67d4fe2baf032ccb127a81296e6a13c9fc75"
+    },
+    {
+      "model": "C4",
+      "domain": "dawn_dusk",
+      "frames": 6476,
+      "arrays_dtype_shape_and_bytes_equal": true,
+      "original_pickle_sha256": "b0365fca5df002aad5dbe4f6a2fe7ce796bdb33e37da0973567e393fd4780c90",
+      "new_pickle_sha256": "b0365fca5df002aad5dbe4f6a2fe7ce796bdb33e37da0973567e393fd4780c90",
+      "original_evaluation_config_sha256": "82163a7a1b72a7cecc30721bd2a513b3567f8e009f01092d4f718532f9e74c1c",
+      "annotation": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+      "annotation_sha256": "13538196138661da77d41f60cad469ac6260e9be7c27b5919e1458be5d0cb6d7"
+    }
+  ],
+  "inference_head_sha256": "36a950c9ee1c60c6769903c5d02a7b0aa1a739e883f824ea5190e92fb09a9418",
+  "comparison": "All detection/track output array dtypes, shapes and byte representations, independent of pickle metadata or serialization sharing"
+}

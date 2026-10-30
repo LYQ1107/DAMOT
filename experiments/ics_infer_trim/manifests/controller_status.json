@@ -1,0 +1,33 @@
+{
+  "status": "inference_done",
+  "pending": [],
+  "active": [],
+  "completed": [
+    {
+      "model": "C2",
+      "domain": "night"
+    },
+    {
+      "model": "C4",
+      "domain": "night"
+    },
+    {
+      "model": "C2",
+      "domain": "dawn_dusk"
+    },
+    {
+      "model": "C4",
+      "domain": "dawn_dusk"
+    },
+    {
+      "model": "C0",
+      "domain": "dawn_dusk"
+    },
+    {
+      "model": "C0",
+      "domain": "night"
+    }
+  ],
+  "failures": [],
+  "updated_unix": 1793386992.977167
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_infer_trim_20261031_022136/scripts/cpu_controller.py", line 24, in <module>
+    s=json.loads(status.read_text())
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/pathlib.py", line 1221, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/pathlib.py", line 1208, in open
+    opener=self._opener)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/pathlib.py", line 1063, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/manifests/controller_status.json'

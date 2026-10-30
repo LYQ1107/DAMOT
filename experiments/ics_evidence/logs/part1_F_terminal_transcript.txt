@@ -1,0 +1,22 @@
+Execution was captured by the interactive command session rather than redirected to part1_F.log.
+Command: OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 /data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python -u /data1/liuyeqiang/ics_evidence_20261030_215311/scripts/evidence_cpu.py --model F
+Observed terminal output, in order:
+load
+ICC
+deletion_baseline
+delete_INT_0
+delete_ICS_0
+delete_W_0
+delete_ID_0
+delete_R_0
+delete_R_1
+delete_R_2
+delete_R_3
+delete_R_4
+delete_R_5
+delete_R_6
+delete_R_7
+delete_R_8
+delete_R_9
+plots
+complete

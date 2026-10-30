@@ -1,0 +1,6 @@
+check,status
+weighted ICC known shared/independent examples,PASS
+F INT agrees with original idAPR stage4 fit basis; max angle 9.5746525e-15 deg,PASS
+F fit/test disjoint; input hashes unchanged; all plots exist,PASS
+HF INT agrees with original idAPR stage4 fit basis; max angle 2.5008469e-14 deg,PASS
+HF fit/test disjoint; input hashes unchanged; all plots exist,PASS

@@ -1,0 +1,87 @@
+{
+  "domains": [
+    {
+      "domain": "clone",
+      "config": "/data1/liuyeqiang/damot_rebuttal_20261026/code/configs/_base_/datasets/vkitti2_clone.py",
+      "annotation_original": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/annotations/vkitti2_clone_cocofmt.json",
+      "annotation_sha256": "0bffaf3fb9486159c2e61180ef48765781a99bcab9b0cbf1a9fb53b399b39a73",
+      "annotation_sampled": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/clone.json",
+      "img_prefix_config": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/images/",
+      "resolved_raw_prefix": "/data1/liuyeqiang/nas/A100/testdata/vranlee/.MOTSynth.partial/VKITTI2/vkitti_2.0.3_rgb",
+      "resolved_sampled_prefix": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+      "videos": 10,
+      "sampled_frames": 600,
+      "sampled_car_boxes": 9081
+    },
+    {
+      "domain": "fog",
+      "config": "/data1/liuyeqiang/damot_rebuttal_20261026/code/configs/_base_/datasets/vkitti2_fog_eval.py",
+      "annotation_original": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/annotations/vkitti2_fog_cocofmt.json",
+      "annotation_sha256": "cd098388d7df8a389b95cb34f14a33ef5d9896cbd8dd1641a64149b0abbd7396",
+      "annotation_sampled": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/fog.json",
+      "img_prefix_config": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/images/",
+      "resolved_raw_prefix": "/data1/liuyeqiang/nas/A100/testdata/vranlee/.MOTSynth.partial/VKITTI2/vkitti_2.0.3_rgb",
+      "resolved_sampled_prefix": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+      "videos": 10,
+      "sampled_frames": 600,
+      "sampled_car_boxes": 9081
+    },
+    {
+      "domain": "morning",
+      "config": "/data1/liuyeqiang/damot_rebuttal_20261026/code/configs/_base_/datasets/vkitti2_morning_eval.py",
+      "annotation_original": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/annotations/vkitti2_morning_cocofmt.json",
+      "annotation_sha256": "f7bc00c5a7c5ad37f43aef57469166e59a4d9fdae8dad608dfc61dc7bb679cfc",
+      "annotation_sampled": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/morning.json",
+      "img_prefix_config": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/images/",
+      "resolved_raw_prefix": "/data1/liuyeqiang/nas/A100/testdata/vranlee/.MOTSynth.partial/VKITTI2/vkitti_2.0.3_rgb",
+      "resolved_sampled_prefix": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+      "videos": 10,
+      "sampled_frames": 600,
+      "sampled_car_boxes": 9081
+    },
+    {
+      "domain": "overcast",
+      "config": "/data1/liuyeqiang/damot_rebuttal_20261026/code/configs/_base_/datasets/vkitti2_overcast_eval.py",
+      "annotation_original": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/annotations/vkitti2_overcast_cocofmt.json",
+      "annotation_sha256": "f8bf52451f1b8589350d1438a3f4ccd574e182e2add2b31e4b64026ff07fe875",
+      "annotation_sampled": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/overcast.json",
+      "img_prefix_config": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/images/",
+      "resolved_raw_prefix": "/data1/liuyeqiang/nas/A100/testdata/vranlee/.MOTSynth.partial/VKITTI2/vkitti_2.0.3_rgb",
+      "resolved_sampled_prefix": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+      "videos": 10,
+      "sampled_frames": 600,
+      "sampled_car_boxes": 9081
+    },
+    {
+      "domain": "rain",
+      "config": "/data1/liuyeqiang/damot_rebuttal_20261026/code/configs/_base_/datasets/vkitti2_rain_eval.py",
+      "annotation_original": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/annotations/vkitti2_rain_cocofmt.json",
+      "annotation_sha256": "51f87fc5a3ebda982d6c2e1b6d8f6fd61dcf608a7b6dfae924efd68f9b40e3a5",
+      "annotation_sampled": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/rain.json",
+      "img_prefix_config": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/images/",
+      "resolved_raw_prefix": "/data1/liuyeqiang/nas/A100/testdata/vranlee/.MOTSynth.partial/VKITTI2/vkitti_2.0.3_rgb",
+      "resolved_sampled_prefix": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+      "videos": 10,
+      "sampled_frames": 600,
+      "sampled_car_boxes": 9081
+    },
+    {
+      "domain": "sunset",
+      "config": "/data1/liuyeqiang/damot_rebuttal_20261026/code/configs/_base_/datasets/vkitti2_sunset_eval.py",
+      "annotation_original": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/annotations/vkitti2_sunset_cocofmt.json",
+      "annotation_sha256": "29a98018e81d8d5301883b003017e9897be714d8fc91a805a9dd5c54cd7745ae",
+      "annotation_sampled": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/sunset.json",
+      "img_prefix_config": "/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/data/vkitti2/images/",
+      "resolved_raw_prefix": "/data1/liuyeqiang/nas/A100/testdata/vranlee/.MOTSynth.partial/VKITTI2/vkitti_2.0.3_rgb",
+      "resolved_sampled_prefix": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+      "videos": 10,
+      "sampled_frames": 600,
+      "sampled_car_boxes": 9081
+    }
+  ],
+  "pairing_rule": "same scene, same camera, same frame; maximum-cardinality IoU>=0.9 matching, then maximum IoU",
+  "sampling": "all five scenes, both cameras, every third frame starting at 0, first60 per video",
+  "min_box": 0,
+  "max_rois": "all GT cars",
+  "paired_identity_definition": "clone identity obtained exclusively by IoU matches; no assumption of cross-weather ID consistency"
+}

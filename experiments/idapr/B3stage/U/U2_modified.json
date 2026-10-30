@@ -1,0 +1,19 @@
+{
+  "implementation": "modified",
+  "history_domains": 3,
+  "log_vars": {
+    "rpn_distillation_loss": 0.7042283415794373,
+    "roi_distillation_loss": 0.033815693110227585,
+    "loss_track": 0.1394510716199875,
+    "loss_track_aux": 0.07203791290521622,
+    "loss_track_trim": 0.003542877035215497,
+    "loss_track_aux_trim": 0.0018007835606113076,
+    "loss_roi_proto": 0.0024747541174292564,
+    "loss": 0.9573514461517334
+  },
+  "train_mode": true,
+  "teacher_eval": true,
+  "no_grad": true,
+  "source_snapshot": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+  "full_state_strict_load": true
+}

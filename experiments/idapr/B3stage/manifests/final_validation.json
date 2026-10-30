@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "kind": "quick_verification",
+      "name": "U1",
+      "passed": true
+    },
+    {
+      "kind": "quick_verification",
+      "name": "U2",
+      "passed": true
+    },
+    {
+      "kind": "quick_verification",
+      "name": "U3",
+      "passed": true
+    },
+    {
+      "kind": "quick_verification",
+      "name": "extractor_parity",
+      "passed": true
+    },
+    {
+      "kind": "quick_verification",
+      "name": "warmstart",
+      "passed": true
+    },
+    {
+      "kind": "quick_verification",
+      "name": "all_passed",
+      "passed": true
+    },
+    {
+      "kind": "quick_verification",
+      "name": "checkpoint_serialization",
+      "passed": true
+    },
+    {
+      "kind": "formal_training",
+      "group": "B3",
+      "epochs": 2,
+      "four_ranks": true,
+      "batches_per_rank": 228,
+      "history_domains": 3,
+      "passed": true
+    },
+    {
+      "kind": "formal_training",
+      "group": "R",
+      "epochs": 2,
+      "four_ranks": true,
+      "batches_per_rank": 228,
+      "history_domains": 3,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B0",
+      "domain": "night",
+      "videos": 36,
+      "frames": 7286,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B0",
+      "domain": "overcast",
+      "videos": 22,
+      "frames": 4448,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B0",
+      "domain": "rainy",
+      "videos": 17,
+      "frames": 3150,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B0",
+      "domain": "dawn_dusk",
+      "videos": 33,
+      "frames": 6476,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "R",
+      "domain": "night",
+      "videos": 36,
+      "frames": 7286,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "R",
+      "domain": "overcast",
+      "videos": 22,
+      "frames": 4448,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "R",
+      "domain": "rainy",
+      "videos": 17,
+      "frames": 3150,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "R",
+      "domain": "dawn_dusk",
+      "videos": 33,
+      "frames": 6476,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B3",
+      "domain": "night",
+      "videos": 36,
+      "frames": 7286,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B3",
+      "domain": "overcast",
+      "videos": 22,
+      "frames": 4448,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B3",
+      "domain": "rainy",
+      "videos": 17,
+      "frames": 3150,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "B3",
+      "domain": "dawn_dusk",
+      "videos": 33,
+      "frames": 6476,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "HF_stage3",
+      "domain": "overcast",
+      "videos": 22,
+      "frames": 4448,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "HF_stage3",
+      "domain": "rainy",
+      "videos": 17,
+      "frames": 3150,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "HF_stage3",
+      "domain": "dawn_dusk",
+      "videos": 33,
+      "frames": 6476,
+      "passed": true
+    }
+  ],
+  "single_training_seed": 1790355234,
+  "formal_groups": [
+    "B3",
+    "R"
+  ],
+  "B0_training_reused": true,
+  "nuisance_basis_sha256": "9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba",
+  "historical_stage3_parity_exact": true
+}

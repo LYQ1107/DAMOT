@@ -1,0 +1,245 @@
+CLASSES: !!python/tuple
+- pedestrian
+- car
+- truck
+- bus
+- motorcycle
+- bicycle
+cat_name_to_label: null
+config: "dataset_type = 'BDDTrackingDataset'\nimg_prefix = '/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/BDD100K_overcast/'\n\
+  ann_root = 'data/bdd_da/annotations/box_track_20/'\nclasses = ('pedestrian', 'car',\
+  \ 'truck', 'bus', 'motorcycle', 'bicycle')\nimg_norm_cfg = dict(\n    mean=[123.675,\
+  \ 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)\ntrain_pipeline = [\n\
+  \    dict(type='LoadMultiImagesFromFile', to_float32=True),\n    dict(type='SeqLoadAnnotations',\
+  \ with_bbox=True, with_track=True),\n    dict(type='SeqRandomFlip', share_params=True,\
+  \ flip_ratio=0.5),\n    dict(\n        type='SeqResize',\n        img_scale=(1296,\
+  \ 720),\n        share_params=True,\n        keep_ratio=True,\n        bbox_clip_border=False),\n\
+  \    dict(type='MatchInstances', skip_nomatch=True),\n    dict(\n        type='VideoCollect',\n\
+  \        keys=[\n            'img', 'gt_bboxes', 'gt_labels', 'gt_match_indices',\n\
+  \            'gt_instance_ids'\n        ]),\n    dict(type='SeqDefaultFormatBundle',\
+  \ ref_prefix='ref')\n]\ntest_pipeline = [\n    dict(type='LoadImageFromFile', to_float32=True),\n\
+  \    dict(\n        type='MultiScaleFlipAug',\n        img_scale=(1296, 720),\n\
+  \        flip=False,\n        transforms=[\n            dict(type='Resize', keep_ratio=True),\n\
+  \            dict(type='RandomFlip'),\n            dict(\n                type='Normalize',\n\
+  \                mean=[123.675, 116.28, 103.53],\n                std=[58.395, 57.12,\
+  \ 57.375],\n                to_rgb=True),\n            dict(type='Pad', size_divisor=32),\n\
+  \            dict(type='ImageToTensor', keys=['img']),\n            dict(type='VideoCollect',\
+  \ keys=['img'])\n        ])\n]\ndata = dict(\n    samples_per_gpu=16,\n    workers_per_gpu=2,\n\
+  \    persistent_workers=True,\n    train=[\n        dict(\n            type='BDDTrackingDataset',\n\
+  \            ann_file=\n            '/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json',\n\
+  \            img_prefix=\n            '/data1/liuyeqiang/idapr_20261030_153059/B3stage/data_views/night/',\n\
+  \            key_img_sampler=dict(interval=1),\n            ref_img_sampler=dict(\n\
+  \                num_ref_imgs=1, frame_range=3, method='uniform'),\n           \
+  \ pipeline=[\n                dict(type='LoadMultiImagesFromFile', to_float32=True),\n\
+  \                dict(\n                    type='SeqLoadAnnotations', with_bbox=True,\n\
+  \                    with_track=True),\n                dict(type='SeqRandomFlip',\
+  \ share_params=True, flip_ratio=0.5),\n                dict(\n                 \
+  \   type='SeqResize',\n                    img_scale=(1296, 720),\n            \
+  \        share_params=True,\n                    keep_ratio=True,\n            \
+  \        bbox_clip_border=False),\n                dict(type='MatchInstances', skip_nomatch=True),\n\
+  \                dict(\n                    type='VideoCollect',\n             \
+  \       keys=[\n                        'img', 'gt_bboxes', 'gt_labels', 'gt_match_indices',\n\
+  \                        'gt_instance_ids'\n                    ]),\n          \
+  \      dict(type='SeqDefaultFormatBundle', ref_prefix='ref')\n            ],\n \
+  \           classes=('pedestrian', 'car', 'truck', 'bus', 'motorcycle',\n      \
+  \               'bicycle'))\n    ],\n    val=dict(\n        type='BDDTrackingDataset',\n\
+  \        ann_file=\n        'data/bdd_da/annotations/box_track_20/box_track_overcast_all_cocofmt.json',\n\
+  \        img_prefix=\n        '/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/BDD100K_overcast/',\n\
+  \        ref_img_sampler=None,\n        pipeline=[\n            dict(type='LoadImageFromFile',\
+  \ to_float32=True),\n            dict(\n                type='MultiScaleFlipAug',\n\
+  \                img_scale=(1296, 720),\n                flip=False,\n         \
+  \       transforms=[\n                    dict(type='Resize', keep_ratio=True),\n\
+  \                    dict(type='RandomFlip'),\n                    dict(\n     \
+  \                   type='Normalize',\n                        mean=[123.675, 116.28,\
+  \ 103.53],\n                        std=[58.395, 57.12, 57.375],\n             \
+  \           to_rgb=True),\n                    dict(type='Pad', size_divisor=32),\n\
+  \                    dict(type='ImageToTensor', keys=['img']),\n               \
+  \     dict(type='VideoCollect', keys=['img'])\n                ])\n        ],\n\
+  \        classes=('pedestrian', 'car', 'truck', 'bus', 'motorcycle',\n         \
+  \        'bicycle')),\n    test=dict(\n        type='BDDTrackingDataset',\n    \
+  \    ann_file=\n        'data/bdd_da/annotations/box_track_20/box_track_overcast_all_cocofmt.json',\n\
+  \        img_prefix=\n        '/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/BDD100K_overcast/',\n\
+  \        ref_img_sampler=None,\n        pipeline=[\n            dict(type='LoadImageFromFile',\
+  \ to_float32=True),\n            dict(\n                type='MultiScaleFlipAug',\n\
+  \                img_scale=(1296, 720),\n                flip=False,\n         \
+  \       transforms=[\n                    dict(type='Resize', keep_ratio=True),\n\
+  \                    dict(type='RandomFlip'),\n                    dict(\n     \
+  \                   type='Normalize',\n                        mean=[123.675, 116.28,\
+  \ 103.53],\n                        std=[58.395, 57.12, 57.375],\n             \
+  \           to_rgb=True),\n                    dict(type='Pad', size_divisor=32),\n\
+  \                    dict(type='ImageToTensor', keys=['img']),\n               \
+  \     dict(type='VideoCollect', keys=['img'])\n                ])\n        ],\n\
+  \        classes=('pedestrian', 'car', 'truck', 'bus', 'motorcycle',\n         \
+  \        'bicycle')))\nmodel = dict(\n    detector=dict(\n        type='FasterRCNN',\n\
+  \        backbone=dict(\n            type='ResNet',\n            depth=50,\n   \
+  \         num_stages=4,\n            out_indices=(0, 1, 2, 3),\n            frozen_stages=1,\n\
+  \            norm_cfg=dict(type='BN', requires_grad=False),\n            norm_eval=True,\n\
+  \            style='caffe',\n            with_cp=True),\n        neck=dict(\n  \
+  \          type='FPN',\n            in_channels=[256, 512, 1024, 2048],\n      \
+  \      out_channels=256,\n            num_outs=5),\n        rpn_head=dict(\n   \
+  \         type='RPNHead',\n            in_channels=256,\n            feat_channels=256,\n\
+  \            anchor_generator=dict(\n                type='AnchorGenerator',\n \
+  \               scales=[8],\n                ratios=[0.5, 1.0, 2.0],\n         \
+  \       strides=[4, 8, 16, 32, 64]),\n            bbox_coder=dict(\n           \
+  \     type='DeltaXYWHBBoxCoder',\n                target_means=[0.0, 0.0, 0.0, 0.0],\n\
+  \                target_stds=[1.0, 1.0, 1.0, 1.0],\n                clip_border=False),\n\
+  \            loss_cls=dict(\n                type='CrossEntropyLoss', use_sigmoid=True,\
+  \ loss_weight=1.0),\n            loss_bbox=dict(\n                type='SmoothL1Loss',\
+  \ beta=0.1111111111111111,\n                loss_weight=1.0)),\n        roi_head=dict(\n\
+  \            type='StandardRoIHead',\n            bbox_roi_extractor=dict(\n   \
+  \             type='SingleRoIExtractor',\n                roi_layer=dict(\n    \
+  \                type='RoIAlign', output_size=7, sampling_ratio=0),\n          \
+  \      out_channels=256,\n                featmap_strides=[4, 8, 16, 32]),\n   \
+  \         bbox_head=dict(\n                type='Shared2FCBBoxHead',\n         \
+  \       in_channels=256,\n                fc_out_channels=1024,\n              \
+  \  roi_feat_size=7,\n                num_classes=6,\n                bbox_coder=dict(\n\
+  \                    type='DeltaXYWHBBoxCoder',\n                    target_means=[0.0,\
+  \ 0.0, 0.0, 0.0],\n                    target_stds=[0.1, 0.1, 0.2, 0.2],\n     \
+  \               clip_border=False),\n                reg_class_agnostic=False,\n\
+  \                loss_cls=dict(\n                    type='CrossEntropyLoss',\n\
+  \                    use_sigmoid=False,\n                    loss_weight=1.0),\n\
+  \                loss_bbox=dict(type='L1Loss', loss_weight=1.0)),\n            train_cfg=dict(\n\
+  \                assigner=dict(\n                    type='MaxIoUAssigner',\n  \
+  \                  pos_iou_thr=0.5,\n                    neg_iou_thr=0.5,\n    \
+  \                min_pos_iou=0.5,\n                    match_low_quality=False,\n\
+  \                    ignore_iof_thr=-1),\n                sampler=dict(\n      \
+  \              type='RandomSampler',\n                    num=512,\n           \
+  \         pos_fraction=0.25,\n                    neg_pos_ub=-1,\n             \
+  \       add_gt_as_proposals=True),\n                pos_weight=-1,\n           \
+  \     debug=False),\n            test_cfg=dict(\n                score_thr=0.05,\n\
+  \                nms=dict(type='nms', iou_threshold=0.5),\n                max_per_img=100),\n\
+  \            pretrained=None),\n        train_cfg=dict(\n            rpn=dict(\n\
+  \                assigner=dict(\n                    type='MaxIoUAssigner',\n  \
+  \                  pos_iou_thr=0.7,\n                    neg_iou_thr=0.3,\n    \
+  \                min_pos_iou=0.3,\n                    match_low_quality=True,\n\
+  \                    ignore_iof_thr=-1),\n                sampler=dict(\n      \
+  \              type='RandomSampler',\n                    num=256,\n           \
+  \         pos_fraction=0.5,\n                    neg_pos_ub=-1,\n              \
+  \      add_gt_as_proposals=False),\n                allowed_border=-1,\n       \
+  \         pos_weight=-1,\n                debug=False),\n            rpn_proposal=dict(\n\
+  \                nms_pre=2000,\n                max_per_img=1000,\n            \
+  \    nms=dict(type='nms', iou_threshold=0.7),\n                min_bbox_size=0),\n\
+  \            rcnn=dict(\n                assigner=dict(\n                    type='MaxIoUAssigner',\n\
+  \                    pos_iou_thr=0.5,\n                    neg_iou_thr=0.5,\n  \
+  \                  min_pos_iou=0.5,\n                    match_low_quality=False,\n\
+  \                    ignore_iof_thr=-1),\n                sampler=dict(\n      \
+  \              type='RandomSampler',\n                    num=512,\n           \
+  \         pos_fraction=0.25,\n                    neg_pos_ub=-1,\n             \
+  \       add_gt_as_proposals=True),\n                pos_weight=-1,\n           \
+  \     debug=False)),\n        test_cfg=dict(\n            rpn=dict(\n          \
+  \      nms_pre=1000,\n                max_per_img=1000,\n                nms=dict(type='nms',\
+  \ iou_threshold=0.7),\n                min_bbox_size=0),\n            rcnn=dict(\n\
+  \                score_thr=0.05,\n                nms=dict(type='nms', iou_threshold=0.5),\n\
+  \                max_per_img=100))),\n    type='DARTHQDTrack',\n    track_head=dict(\n\
+  \        type='CausalQuasiDenseTrackHead',\n        roi_extractor=dict(\n      \
+  \      type='SingleRoIExtractor',\n            roi_layer=dict(type='RoIAlign', output_size=7,\
+  \ sampling_ratio=0),\n            out_channels=256,\n            featmap_strides=[4,\
+  \ 8, 16, 32]),\n        embed_head=dict(\n            type='QuasiDenseEmbedHead',\n\
+  \            num_convs=4,\n            num_fcs=1,\n            embed_channels=256,\n\
+  \            norm_cfg=dict(type='GN', num_groups=32),\n            loss_track=dict(type='MultiPosCrossEntropyLoss',\
+  \ loss_weight=0.25),\n            loss_track_aux=dict(\n                type='L2Loss',\n\
+  \                neg_pos_ub=3,\n                pos_margin=0,\n                neg_margin=0.1,\n\
+  \                hard_mining=True,\n                loss_weight=1.0)),\n       \
+  \ loss_bbox=dict(type='L1Loss', loss_weight=1.0),\n        train_cfg=dict(\n   \
+  \         assigner=dict(\n                type='MaxIoUAssigner',\n             \
+  \   pos_iou_thr=0.7,\n                neg_iou_thr=0.3,\n                min_pos_iou=0.5,\n\
+  \                match_low_quality=False,\n                ignore_iof_thr=-1),\n\
+  \            sampler=dict(\n                type='CombinedSampler',\n          \
+  \      num=256,\n                pos_fraction=0.5,\n                neg_pos_ub=3,\n\
+  \                add_gt_as_proposals=True,\n                pos_sampler=dict(type='InstanceBalancedPosSampler'),\n\
+  \                neg_sampler=dict(\n                    type='IoUBalancedNegSampler',\n\
+  \                    floor_thr=-1,\n                    floor_fraction=0,\n    \
+  \                num_bins=3))),\n        use_causal_direction_bank=True,\n     \
+  \   causal_pca_mode='proto_shrinkage_cov_ema',\n        causal_num_pcs=2,\n    \
+  \    causal_start_pc=0,\n        causal_trim_alpha=0.1,\n        causal_loss_weight=0.025,\n\
+  \        causal_min_samples=96,\n        causal_update_momentum=0.9,\n        causal_normalize_feats=True,\n\
+  \        causal_bank_scope='global',\n        causal_feat_dim=256,\n        use_roi_proto_memory=True,\n\
+  \        roi_proto_memory_mode='stage',\n        roi_proto_class_ids=(1, ),\n  \
+  \      roi_proto_score_thr=0.75,\n        roi_proto_k_per_domain_class=100,\n  \
+  \      roi_proto_max_candidates_per_domain=1000,\n        roi_proto_topk=3,\n  \
+  \      roi_proto_loss_weight=0.005,\n        roi_proto_max_rois_per_batch=64,\n\
+  \        roi_proto_diverse_select=False,\n        roi_proto_feature_source='student',\n\
+  \        roi_proto_log_interval=50,\n        causal_update_by_covariance=True,\n\
+  \        causal_cov_momentum=0.98,\n        causal_qr_orthogonalize=True,\n    \
+  \    causal_class_ids=None,\n        causal_covariance_shrinkage=0.15,\n       \
+  \ causal_proto_center_momentum=0.95,\n        causal_proto_center_min_count=8,\n\
+  \        roi_proto_couple_ics=False,\n        roi_proto_couple_beta=1.0,\n     \
+  \   roi_proto_couple_basis='ics',\n        roi_proto_couple_metric='projected_cosine',\n\
+  \        roi_proto_space_mode='release',\n        roi_proto_space_basis_path=\n\
+  \        '/data1/liuyeqiang/idapr_20261030_153059/B3stage/basis/E_n_k2.npy'),\n\
+  \    tracker=dict(\n        type='QDTracker',\n        init_score_thr=0.5,\n   \
+  \     obj_score_thr=0.3,\n        match_score_thr=0.5,\n        memo_tracklet_frames=10,\n\
+  \        memo_backdrop_frames=1,\n        memo_momentum=0.8,\n        nms_conf_thr=0.5,\n\
+  \        nms_backdrop_iou_thr=0.3,\n        nms_class_iou_thr=0.7,\n        with_cats=True,\n\
+  \        match_metric='bisoftmax'),\n    teacher=dict(eval_teacher_preds=False,\
+  \ eval_mode_teacher=True),\n    loss_rpn_distillation=dict(\n        type='RPNDistillationLoss',\
+  \ loss_weight=0.1, reg_valid_threshold=0.1),\n    loss_roi_distillation=dict(type='ROIDistillationLoss',\
+  \ loss_weight=0.1),\n    teacher_pipeline=[\n        dict(type='SeqRandomFlip',\
+  \ share_params=True, flip_ratio=0.5),\n        dict(\n            type='SeqResize',\n\
+  \            img_scale=(1088, 1088),\n            share_params=True,\n         \
+  \   ratio_range=(0.8, 1.2),\n            keep_ratio=True,\n            bbox_clip_border=False),\n\
+  \        dict(\n            type='SeqRandomCrop',\n            share_params=False,\n\
+  \            crop_size=(1088, 1088),\n            bbox_clip_border=False,\n    \
+  \        allow_negative_crop=True)\n    ],\n    student_pipeline=[\n        dict(type='SeqPhotoMetricDistortion',\
+  \ share_params=True),\n        dict(\n            type='SeqSPAFrequencyTransform',\n\
+  \            mode='low_freq_mask',\n            low_ratio=0.1,\n            keep_prob=0.9,\n\
+  \            apply_noise=False,\n            noise_ratio=0.0)\n    ],\n    contrastive_pipeline=[\n\
+  \        dict(type='SeqRandomFlip', share_params=True, flip_ratio=0.5),\n      \
+  \  dict(\n            type='SeqResize',\n            img_scale=(1088, 1088),\n \
+  \           share_params=True,\n            ratio_range=(0.8, 1.2),\n          \
+  \  keep_ratio=True,\n            bbox_clip_border=False),\n        dict(\n     \
+  \       type='SeqRandomCrop',\n            share_params=False,\n            crop_size=(1088,\
+  \ 1088),\n            bbox_clip_border=False,\n            allow_negative_crop=True),\n\
+  \        dict(type='SeqPhotoMetricDistortion', share_params=True),\n        dict(\n\
+  \            type='SeqSPAFrequencyTransform',\n            mode='high_freq_noise',\n\
+  \            apply_noise=True,\n            noise_ratio=0.03)\n    ],\n    out_pipeline=[\n\
+  \        dict(\n            type='SeqNormalize',\n            mean=[123.675, 116.28,\
+  \ 103.53],\n            std=[58.395, 57.12, 57.375],\n            to_rgb=True),\n\
+  \        dict(type='SeqPad', size_divisor=32),\n        dict(type='MatchInstances',\
+  \ skip_nomatch=False),\n        dict(\n            type='VideoCollect',\n      \
+  \      keys=[\n                'img', 'gt_bboxes', 'gt_labels', 'gt_scores',\n \
+  \               'gt_match_indices', 'gt_instance_ids'\n            ])\n    ],\n\
+  \    conf_thr=0.7,\n    use_spa_frequency_aug=False,\n    log_view_stats=True)\n\
+  optimizer = dict(type='SGD', lr=0.002, momentum=0.9, weight_decay=0.0001)\noptimizer_config\
+  \ = dict(\n    type='CustomOptimizerHook', grad_clip=dict(max_norm=35.0, norm_type=2))\n\
+  checkpoint_config = dict(\n    interval=1, max_keep_ckpts=-1, save_optimizer=True,\
+  \ sync_buffer=False)\nlog_config = dict(interval=20, hooks=[dict(type='TextLoggerHook')])\n\
+  dist_params = dict(backend='nccl')\nfind_unused_parameters = True\nlog_level = 'INFO'\n\
+  load_from = None\nresume_from = None\nworkflow = [('train', 1)]\nopencv_num_threads\
+  \ = 0\nmp_start_method = 'fork'\nlr_config = dict(\n    policy='step',\n    step=[8,\
+  \ 11],\n    warmup='linear',\n    warmup_iters=1000,\n    warmup_ratio=0.001)\n\
+  total_epochs = 2\nevaluation = dict(\n    metric=['bbox', 'track'],\n    interval=3,\n\
+  \    results_kwargs=dict(\n        results_path=None, scalabel=False, append_empty_preds=True),\n\
+  \    track_kwargs=dict(\n        iou_thr=0.5,\n        ignore_iof_thr=0.5,\n   \
+  \     ignore_by_classes=False,\n        nproc=1,\n        majority_voting=False))\n\
+  teacher_pipeline = [\n    dict(type='SeqRandomFlip', share_params=True, flip_ratio=0.5),\n\
+  \    dict(\n        type='SeqResize',\n        img_scale=(1088, 1088),\n       \
+  \ share_params=True,\n        ratio_range=(0.8, 1.2),\n        keep_ratio=True,\n\
+  \        bbox_clip_border=False),\n    dict(\n        type='SeqRandomCrop',\n  \
+  \      share_params=False,\n        crop_size=(1088, 1088),\n        bbox_clip_border=False,\n\
+  \        allow_negative_crop=True)\n]\nstudent_pipeline = [dict(type='SeqPhotoMetricDistortion',\
+  \ share_params=True)]\ncontrastive_pipeline = [\n    dict(type='SeqRandomFlip',\
+  \ share_params=True, flip_ratio=0.5),\n    dict(\n        type='SeqResize',\n  \
+  \      img_scale=(1088, 1088),\n        share_params=True,\n        ratio_range=(0.8,\
+  \ 1.2),\n        keep_ratio=True,\n        bbox_clip_border=False),\n    dict(\n\
+  \        type='SeqRandomCrop',\n        share_params=False,\n        crop_size=(1088,\
+  \ 1088),\n        bbox_clip_border=False,\n        allow_negative_crop=True),\n\
+  \    dict(type='SeqPhotoMetricDistortion', share_params=True)\n]\nnorm_cfg = dict(\n\
+  \    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)\n\
+  out_pipeline = [\n    dict(\n        type='SeqNormalize',\n        mean=[123.675,\
+  \ 116.28, 103.53],\n        std=[58.395, 57.12, 57.375],\n        to_rgb=True),\n\
+  \    dict(type='SeqPad', size_divisor=32),\n    dict(type='MatchInstances', skip_nomatch=False),\n\
+  \    dict(\n        type='VideoCollect',\n        keys=[\n            'img', 'gt_bboxes',\
+  \ 'gt_labels', 'gt_match_indices',\n            'gt_instance_ids'\n        ])\n\
+  ]\ncustom_hooks = [\n    dict(type='EMATrainHook', momentum=0.002, interval=1, warm_up=100),\n\
+  \    dict(type='APRFiniteLossHook', priority='HIGH'),\n    dict(\n        type='ICSQuickAuditHook',\n\
+  \        root='/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/B3',\n     \
+  \   priority='LOW'),\n    dict(\n        type='APRSpaceAuditHook',\n        root='/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/B3',\n\
+  \        expected_mode='release',\n        expected_coupling=False,\n        priority='LOW')\n\
+  ]\nspa_student_pipeline = [\n    dict(type='SeqPhotoMetricDistortion', share_params=True),\n\
+  \    dict(\n        type='SeqSPAFrequencyTransform',\n        mode='low_freq_mask',\n\
+  \        low_ratio=0.1,\n        keep_prob=0.9,\n        apply_noise=False,\n  \
+  \      noise_ratio=0.0)\n]\nseed = 1790355234\ngpu_ids = range(0, 4)\nwork_dir =\
+  \ '/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/B3/episode/adapt/stage04_after_night'\n\
+  cudnn_benchmark = False\n"
+mmtrack_version: 0.14.0

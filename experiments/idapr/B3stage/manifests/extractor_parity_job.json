@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    7
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/check_extractor_parity.py"
+  ],
+  "time": 1793349241.8467865,
+  "pid": 37284
+}

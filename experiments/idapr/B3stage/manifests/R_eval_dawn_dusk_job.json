@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    9
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/evaluate.py",
+    "--model",
+    "HF",
+    "--domain",
+    "dawn_dusk",
+    "--checkpoint",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/R/episode/adapt/stage04_after_night/epoch_2.pth",
+    "--out",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/evaluation/R/dawn_dusk",
+    "--beta",
+    "0"
+  ],
+  "time": 1793355142.3269548,
+  "pid": 32782
+}

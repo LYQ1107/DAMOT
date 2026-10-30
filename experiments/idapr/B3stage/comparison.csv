@@ -1,0 +1,11 @@
+reference,scope,B3_minus_reference_HOTA,interpretation
+B0,night,0.40610712929597526,B3 higher
+B0,overcast,-0.11943237670108431,no difference
+B0,rainy,0.3005458704970465,B3 higher
+B0,dawn_dusk,0.006627567083491215,no difference
+B0,mean_old_forgetting_reduction,0.06258035362648445,no difference
+R,night,0.20025419346043094,no difference
+R,overcast,-0.12394167527413913,no difference
+R,rainy,0.2942843637204078,no difference
+R,dawn_dusk,-0.3154070124207209,B3 lower
+R,mean_old_forgetting_reduction,-0.04835477465815076,no difference

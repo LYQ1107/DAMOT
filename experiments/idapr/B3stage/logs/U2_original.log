@@ -1,0 +1,25 @@
+2026-10-30 08:22:38,077 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 08:22:38,077 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 08:22:38,077 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 08:22:38,844 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 08:22:38,844 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 08:22:38,844 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 08:22:39,707 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage night, history_domains=[]
+2026-10-30 08:23:03,431 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=-1.1338 std=0.8099 min=-2.1179 max=2.6400
+2026-10-30 08:23:03,432 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-1.2133 std=0.7824 min=-2.1179 max=2.6400
+2026-10-30 08:23:03,433 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=-1.0139 std=0.8071 min=-2.1179 max=2.6400
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] enabled=True
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] mode=proto_shrinkage_cov_ema
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] cov_momentum=0.98
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] qr_orthogonalize=True
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] num_pcs=2
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] trim_alpha=0.1
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] loss_weight=0.025
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] min_samples=96
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] normalize_feats=True
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] class_ids=None
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] score_thr=0.7
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] use_scores=False
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] normalized_tensor_spa=False
+2026-10-30 08:23:04,853 - mmtrack - INFO - [CAUSAL_PCA] use_roi_proto_memory=True mode=stage
+U2_FORWARD_COMPLETE original OrderedDict([('rpn_distillation_loss', 0.7042283415794373), ('roi_distillation_loss', 0.033815693110227585), ('loss_track', 0.1394510716199875), ('loss_track_aux', 0.07203791290521622), ('loss_track_trim', 0.003542877035215497), ('loss_track_aux_trim', 0.0018007835606113076), ('loss_roi_proto', 0.0024747541174292564), ('loss', 0.9573514461517334)])

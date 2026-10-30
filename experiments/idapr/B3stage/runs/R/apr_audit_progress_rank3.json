@@ -1,0 +1,23 @@
+{
+  "tag": "progress",
+  "rank": 3,
+  "epoch": 1,
+  "iteration": 219,
+  "total_batches": 220,
+  "history_domains": 3,
+  "history_names": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "mode": "full",
+  "coupling": true,
+  "coupling_beta": 1.0,
+  "coupling_basis": "ics",
+  "coupling_metric": "projected_cosine",
+  "basis_sha256": null,
+  "fixed_basis_unchanged": true,
+  "basis_not_persisted_in_checkpoint": true,
+  "num_updates_start": 660,
+  "num_updates": 712
+}

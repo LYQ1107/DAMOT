@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "names": [
+    "U1",
+    "U2",
+    "U3",
+    "extractor_parity",
+    "warmstart"
+  ],
+  "seed": 1790355234,
+  "formal_training_may_start": true,
+  "time": 1793349862.0923805
+}

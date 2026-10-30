@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "same_serialized_batch": {
+    "sha256": "b23f43b0affacdcf506f2185798c2da5c0d9073c08c92735310590e7ed167d63",
+    "bytes": 353959677,
+    "samples_per_gpu": 16,
+    "workers_per_gpu": 2,
+    "seed": 1790355234,
+    "pipeline": "unaltered archived HF Night train pipeline",
+    "cuda_visible_devices": "7"
+  },
+  "full_mode": true,
+  "original_HF_coupling": true,
+  "checks": [
+    {
+      "name": "rpn_distillation_loss",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "roi_distillation_loss",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "loss_track",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "loss_track_aux",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "loss_track_trim",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "loss_track_aux_trim",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "loss_roi_proto",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    },
+    {
+      "name": "TOTAL_LOSS",
+      "bitwise_equal": true,
+      "max_abs_delta": 0.0
+    }
+  ],
+  "APR_loss_original": 0.0024747541174292564,
+  "APR_loss_modified": 0.0024747541174292564,
+  "total_original": 0.9573514461517334,
+  "total_modified": 0.9573514461517334
+}

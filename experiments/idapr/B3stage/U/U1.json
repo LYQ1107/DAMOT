@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "tests": [
+    "U1c",
+    "U1d",
+    "U1e"
+  ],
+  "records": [
+    {
+      "dtype": "torch.float32",
+      "k": 2,
+      "empty_basis_bitwise_full": true,
+      "normalized_node_gradient_in_E_max": 1.190408549511801e-09,
+      "normalized_node_gradient_in_E_relative_norm": 2.8602801904753505e-08,
+      "all_gradients_finite": true,
+      "full_function_bitwise_original": true
+    },
+    {
+      "dtype": "torch.float32",
+      "k": 16,
+      "empty_basis_bitwise_full": true,
+      "normalized_node_gradient_in_E_max": 1.6892167664650515e-09,
+      "normalized_node_gradient_in_E_relative_norm": 7.865411078000761e-08,
+      "all_gradients_finite": true,
+      "full_function_bitwise_original": true
+    },
+    {
+      "dtype": "torch.float64",
+      "k": 2,
+      "empty_basis_bitwise_full": true,
+      "normalized_node_gradient_in_E_max": 1.734723475976807e-18,
+      "normalized_node_gradient_in_E_relative_norm": 4.1176054697203624e-17,
+      "all_gradients_finite": true,
+      "full_function_bitwise_original": true
+    },
+    {
+      "dtype": "torch.float64",
+      "k": 16,
+      "empty_basis_bitwise_full": true,
+      "normalized_node_gradient_in_E_max": 2.2293907171733185e-18,
+      "normalized_node_gradient_in_E_relative_norm": 1.2923732693487732e-16,
+      "all_gradients_finite": true,
+      "full_function_bitwise_original": true
+    }
+  ],
+  "gradient_node": "after L2 normalization, before its Jacobian (as requested)"
+}

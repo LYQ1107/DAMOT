@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "gpus": [
+    2
+  ],
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/code_hf/tools/analysis/ics_probe_extract.py",
+    "--box-source",
+    "teacher",
+    "--checkpoint",
+    "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+    "--config",
+    "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/configs/stage3.py",
+    "--label",
+    "HF_stage3_teacher",
+    "--domain",
+    "dawn_dusk",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/data_views/dawn_dusk",
+    "--views",
+    "clean,fap,photo,student",
+    "--dose-frames-per-video",
+    "0",
+    "--max-videos",
+    "0",
+    "--out-dir",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/feats"
+  ],
+  "time": 1793348757.3391378,
+  "pid": 30856
+}

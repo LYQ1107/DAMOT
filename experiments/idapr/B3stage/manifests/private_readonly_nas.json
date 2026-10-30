@@ -1,0 +1,26 @@
+{
+  "pid": 27033,
+  "mount": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100",
+  "read_only": true,
+  "shared_mount_unchanged": true,
+  "same_first_image_sha256": "1b74c04f4ee7a0122b8566ebbd1533751662c4f3b3fac459cc4583320a6b8ab8",
+  "source": "Existing authenticated NAS endpoint, independent read-only SSHFS session",
+  "domains": [
+    {
+      "domain": "night",
+      "videos": 36
+    },
+    {
+      "domain": "overcast",
+      "videos": 22
+    },
+    {
+      "domain": "rainy",
+      "videos": 17
+    },
+    {
+      "domain": "dawn_dusk",
+      "videos": 33
+    }
+  ]
+}

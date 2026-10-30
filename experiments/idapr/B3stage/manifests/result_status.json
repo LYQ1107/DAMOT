@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "metric_rows": 84,
+  "formal_groups": [
+    "B3",
+    "R"
+  ],
+  "seed": 1790355234,
+  "B0_reused": true,
+  "completed_evaluation_cells": 15,
+  "required_evaluation_cells": 15
+}

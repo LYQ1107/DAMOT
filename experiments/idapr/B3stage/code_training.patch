@@ -1,0 +1,1703 @@
+--- a/darth/models/utils/roi_proto_memory.py
++++ b/darth/models/utils/roi_proto_memory.py
+@@ -40,9 +40,45 @@
+     return loss, per_roi
+ 
+ 
++def roi_proto_release_normalized(feats, prototypes, space_basis, topk=3,
++                                 sim_gate_thr=None, space_stats=None):
++    """Release a fixed subspace; inputs are the normalized feature nodes.
++
++    Neighbors and gating are selected by the unchanged full-space cosine.
++    Keeping this helper at the normalized nodes also makes the geometric
++    gradient condition directly testable, before the normalization Jacobian.
++    """
++    e = space_basis.detach().to(device=feats.device, dtype=feats.dtype)
++    if e.ndim != 2 or e.shape[0] != feats.shape[1]:
++        raise ValueError('APR space basis must have shape [D,k]')
++    sim = feats @ prototypes.t()
++    k = min(topk, sim.size(1))
++    topv, topi = sim.topk(k=k, dim=1)
++    d = feats.unsqueeze(1) - prototypes[topi]
++    full2 = d.square().sum(-1)
++    in2 = (d @ e).square().sum(-1)
++    dist = 0.5 * (full2 - in2)
++    per_roi = 1.0 - dist.mean(dim=1)
++    cos_roi = topv.mean(dim=1)
++    gate_mask = (torch.ones_like(cos_roi, dtype=torch.bool)
++                 if sim_gate_thr is None else cos_roi.detach() >= float(sim_gate_thr))
++    if space_stats is not None:
++        space_stats.update(space_mode='release',
++                           mean_in_share=float((in2.sum() / full2.sum().clamp_min(1e-20)).detach()),
++                           in_energy_sum=float(in2.sum().detach()),
++                           full_energy_sum=float(full2.sum().detach()),
++                           full_reference_loss=(float((1.0 - cos_roi[gate_mask]).mean().detach())
++                                                if gate_mask.any() else None))
++    if gate_mask.sum() == 0:
++        return None, cos_roi, gate_mask
++    loss = (1.0 - per_roi[gate_mask]).mean()
++    return loss, cos_roi, gate_mask
++
++
+ def roi_proto_loss_with_gate(feats, prototypes, topk=3, sim_gate_thr=None,
+                              basis=None, beta=0.0,
+-                             coupled_metric='projected_l2'):
++                             coupled_metric='projected_l2', space_mode='full',
++                             space_basis=None, space_gamma=1.0, space_stats=None):
+     """History alignment, optionally measured outside an ICS subspace.
+ 
+     beta=0 takes the unchanged original cosine branch. projected_l2 follows
+@@ -53,6 +89,18 @@
+     """
+     feats = F.normalize(feats, dim=1)
+     prototypes = F.normalize(prototypes, dim=1).detach()
++    if space_mode not in ('full', 'release'):
++        raise ValueError('Unsupported APR space mode: ' + str(space_mode))
++    if space_mode != 'full':
++        assert basis is None or float(beta) == 0.0, 'APR space mode and ICS coupling cannot both be enabled'
++        if space_basis is None:
++            raise ValueError('release requires a space basis')
++        if space_basis.shape[1] != 0:
++            return roi_proto_release_normalized(feats, prototypes, space_basis,
++                topk=topk, sim_gate_thr=sim_gate_thr, space_stats=space_stats)
++        # An empty released space is the exact original full-space branch.
++        if space_stats is not None:
++            space_stats.update(space_mode='release', mean_in_share=0.0)
+     if basis is None or float(beta) == 0.0:
+         sim = torch.matmul(feats, prototypes.t())
+         k = min(topk, sim.size(1))
+@@ -81,6 +129,8 @@
+     if gate_mask.sum() == 0:
+         return None, per_roi, gate_mask
+     loss = (1.0 - per_roi[gate_mask]).mean()
++    if space_mode == 'release' and space_stats is not None:
++        space_stats['full_reference_loss'] = float(loss.detach())
+     return loss, per_roi, gate_mask
+ 
+ 
+@@ -249,7 +299,8 @@
+         return torch.cat(mats, dim=0)
+ 
+     def compute_loss(self, feats, labels, scores=None, basis=None, beta=0.0,
+-                     coupled_metric='projected_l2'):
++                     coupled_metric='projected_l2', space_mode='full',
++                     space_basis=None, space_gamma=1.0):
+         """History-guided prototype loss for the current batch.
+ 
+         Returns None when history memory is empty or no valid RoI in batch.
+@@ -266,6 +317,7 @@
+         sim_accum = 0.0
+         gate_selected_total = 0
+         gate_total = 0
++        space_records = []
+         for c in self.class_ids:
+             protos = self.get_history_prototypes(c, exclude_current=True)
+             if protos is None or protos.shape[0] == 0:
+@@ -281,10 +333,14 @@
+                     :self.max_rois_per_batch]
+                 cf = cf[idx]
+             protos = protos.to(device, feats.dtype)
++            space_stats = {}
+             loss_c, per_roi, gate_mask = roi_proto_loss_with_gate(
+                 cf, protos, topk=self.topk,
+                 sim_gate_thr=self.sim_gate_thr if self.use_sim_gate else None,
+-                basis=basis, beta=beta, coupled_metric=coupled_metric)
++                basis=basis, beta=beta, coupled_metric=coupled_metric,
++                space_mode=space_mode, space_basis=space_basis,
++                space_gamma=space_gamma, space_stats=space_stats)
++            space_records.append(space_stats)
+             if loss_c is None:
+                 gate_total += int(cf.shape[0])
+                 proto_total += protos.shape[0]
+@@ -326,6 +382,13 @@
+             coupled=basis is not None and float(beta) > 0.0,
+             couple_beta=float(beta),
+             coupled_metric=coupled_metric,
++            space_mode=space_mode,
++            mean_in_share=(sum(r.get('in_energy_sum', 0.0) for r in space_records) /
++                           max(sum(r.get('full_energy_sum', 0.0) for r in space_records), 1e-20)
++                           if space_mode == 'release' else None),
++            full_reference_loss=(sum(r['full_reference_loss'] for r in space_records
++                                     if r.get('full_reference_loss') is not None) / n_classes
++                                 if space_mode == 'release' else float(loss.item())),
+         )
+         return loss
+ 
+--- a/darth/models/track_heads/causal_quasi_dense_track_head.py
++++ b/darth/models/track_heads/causal_quasi_dense_track_head.py
+@@ -20,6 +20,9 @@
+ """
+ import logging
+ import warnings
++import hashlib
++
++import numpy as np
+ 
+ import torch
+ import torch.nn.functional as F
+@@ -99,6 +102,9 @@
+                  roi_proto_couple_beta=None,
+                  roi_proto_couple_basis='ics',
+                  roi_proto_couple_metric='projected_l2',
++                 roi_proto_space_mode='full',
++                 roi_proto_space_basis_path=None,
++                 roi_proto_space_gamma=1.0,
+                  *args,
+                  **kwargs):
+         super().__init__(*args, **kwargs)
+@@ -145,6 +151,25 @@
+                                       else float(roi_proto_couple_beta))
+         self.roi_proto_couple_metric = str(roi_proto_couple_metric)
+         self.roi_proto_couple_basis = str(roi_proto_couple_basis)
++        self.roi_proto_space_mode = str(roi_proto_space_mode)
++        self.roi_proto_space_gamma = float(roi_proto_space_gamma)
++        self.roi_proto_space_basis_path = roi_proto_space_basis_path
++        self.roi_proto_space_basis_sha256 = None
++        if self.roi_proto_space_mode not in ('full', 'release'):
++            raise ValueError('Unsupported roi_proto_space_mode')
++        if self.roi_proto_space_mode != 'full':
++            assert not self.roi_proto_couple_ics, 'APR space mode cannot be combined with ICS coupling'
++            if roi_proto_space_basis_path is None:
++                raise ValueError('release requires roi_proto_space_basis_path')
++            E = torch.from_numpy(np.load(roi_proto_space_basis_path)).float()
++            assert E.ndim == 2 and E.shape[0] == causal_feat_dim
++            assert torch.allclose(E.t() @ E, torch.eye(E.shape[1]), atol=1e-4)
++            self.register_buffer('roi_proto_space_basis', E, persistent=False)
++            with open(roi_proto_space_basis_path, 'rb') as f:
++                self.roi_proto_space_basis_sha256 = hashlib.sha256(f.read()).hexdigest()
++            logger.info('[APR_SPACE] mode=%s k=%d gamma=%s basis=%s sha256=%s',
++                        self.roi_proto_space_mode, E.shape[1], self.roi_proto_space_gamma,
++                        roi_proto_space_basis_path, self.roi_proto_space_basis_sha256)
+         if self.roi_proto_couple_basis not in ('ics', 'feature_pca'):
+             raise ValueError('Unsupported roi_proto_couple_basis')
+         if (self.roi_proto_couple_beta is not None
+@@ -681,7 +706,10 @@
+                     feats=key_feats, labels=key_labels,
+                     scores=key_scores if scores_available else None,
+                     basis=basis, beta=beta,
+-                    coupled_metric=self.roi_proto_couple_metric)
++                    coupled_metric=self.roi_proto_couple_metric,
++                    space_mode=self.roi_proto_space_mode,
++                    space_basis=getattr(self, 'roi_proto_space_basis', None),
++                    space_gamma=self.roi_proto_space_gamma)
+             if proto_loss is not None and basis is not None:
+                 self._apr_couple_loss_active += 1
+             if proto_loss is not None:
+@@ -693,6 +721,12 @@
+                 scores=key_scores if scores_available else None)
+ 
+             self._proto_iter += 1
++            if (self.roi_proto_space_mode != 'full'
++                    and self._proto_iter % self.roi_proto_log_interval == 0):
++                logger.info('[APR_SPACE] mode=%s k=%d loss=%s mean_in_share=%s sha256=%s',
++                            self.roi_proto_space_mode, self.roi_proto_space_basis.shape[1],
++                            None if proto_loss is None else float(proto_loss.detach()),
++                            mem.last_stats.get('mean_in_share'), self.roi_proto_space_basis_sha256)
+             if (self.roi_proto_couple_ics
+                     and self._proto_iter % self.roi_proto_log_interval == 0):
+                 logger.info(
+@@ -727,7 +761,7 @@
+                     st.get('gate_selected_rois'), st.get('gate_total_rois'),
+                     st.get('gate_ratio'))
+         except Exception as e:
+-            if self.roi_proto_couple_ics:
++            if self.roi_proto_couple_ics or self.roi_proto_space_mode != 'full':
+                 raise
+             warnings.warn(f"[CausalQuasiDenseTrackHead] stage roi proto loss "
+                           f"failed ({e}); skipping.")
+--- a/tools/analysis/ics_probe_extract.py
++++ b/tools/analysis/ics_probe_extract.py
+@@ -61,6 +61,9 @@
+                    metavar=('NAME', 'ANN_JSON', 'IMG_PREFIX'),
+                    help='repeatable; NAME is used as the weather label')
+     p.add_argument('--out-dir', required=True)
++    p.add_argument('--box-source', choices=['gt', 'teacher'], default='gt')
++    p.add_argument('--teacher-score-thr', type=float, default=None,
++                   help='default: the checkpoint APR memory score threshold')
+     p.add_argument('--views', default='clean,fap,photo,student',
+                    help='comma list from %s' % (BASE_VIEWS,))
+     p.add_argument('--dose-frames-per-video', type=int, default=3,
+@@ -93,14 +96,14 @@
+ # --------------------------------------------------------------------------- #
+ # annotations
+ # --------------------------------------------------------------------------- #
+-def load_coco_video(ann_file):
++def load_coco_video(ann_file, read_annotations=True):
+     with open(ann_file) as f:
+         d = json.load(f)
+     cats = {c['id']: c['name'] for c in d['categories']}
+     videos = {v['id']: v.get('name', str(v['id'])) for v in d.get('videos', [])}
+     imgs = {im['id']: im for im in d['images']}
+     anns = {}
+-    for a in d['annotations']:
++    for a in (d['annotations'] if read_annotations else []):
+         anns.setdefault(a['image_id'], []).append(a)
+     return cats, videos, imgs, anns
+ 
+@@ -287,12 +290,20 @@
+             if k.startswith('detector.') or k.startswith('track_head.embed_head')
+             or k.startswith('track_head.roi_extractor')
+             or k.startswith('track_head.causal_bank.')]
++    if args.box_source == 'teacher':
++        if not hasattr(model, 'teacher_detector'):
++            raise SystemExit('teacher box mode requires the full adaptation model')
++        need.extend(k for k in missing if k.startswith('teacher_detector.'))
+     if need:
+         raise SystemExit('checkpoint lacks required keys, e.g. %s' % need[:5])
+     model.load_state_dict(chosen, strict=False)
+     model = model.to(args.device)
+     # DarthQDTrack overrides train()/eval() without returning self.
+     model.eval()
++    if args.box_source == 'teacher':
++        model.teacher_detector.eval()
++        if args.teacher_score_thr is None:
++            args.teacher_score_thr = float(model.track_head.roi_proto_memory.score_thr)
+ 
+     # ICS bank of the STUDENT track head, read straight from the checkpoint.
+     bank = {}
+@@ -349,6 +360,25 @@
+     return feats.view(imgs_t.shape[0], boxes_t.shape[0], -1).float().cpu().numpy()
+ 
+ 
++def teacher_boxes(model, clean, img_shape, scale, im, path, args):
++    """Return scaled clean-image teacher car boxes; never rescale them again."""
++    import torch
++    tensor = to_tensor([clean], args.device)
++    meta = dict(img_shape=tuple(img_shape) + (3,),
++                ori_shape=(int(im['height']), int(im['width']), 3),
++                pad_shape=(int(tensor.shape[-2]), int(tensor.shape[-1]), 3),
++                scale_factor=np.array([scale] * 4, dtype=np.float32),
++                flip=False, filename=path, ori_filename=im['file_name'],
++                img_norm_cfg=dict(mean=NORM_MEAN, std=NORM_STD, to_rgb=True))
++    with torch.no_grad():
++        result = model.teacher_detector.simple_test(tensor, [meta], rescale=False)[0]
++    if isinstance(result, tuple):
++        result = result[0]
++    cars = np.asarray(result[CLASSES.index('car')], dtype=np.float32)
++    cars = cars[cars[:, 4] >= float(args.teacher_score_thr)]
++    return cars[:, :4].copy(), cars[:, 4].copy()
++
++
+ # --------------------------------------------------------------------------- #
+ def main():
+     args = parse_args()
+@@ -363,7 +393,7 @@
+ 
+     plans = {}
+     for name, ann_file, prefix in args.domain:
+-        cats, videos, imgs, anns = load_coco_video(ann_file)
++        cats, videos, imgs, anns = load_coco_video(ann_file, read_annotations=args.box_source == 'gt')
+         plan = sample_frames(imgs, videos, args)
+         missing = [im['file_name'] for im, _ in plan
+                    if not osp.exists(osp.join(prefix, im['file_name']))]
+@@ -396,26 +426,35 @@
+         t0 = time.time()
+         rec = {k: [] for k in ('video', 'scene', 'variant', 'instance_id',
+                                'frame_id', 'image_id', 'category', 'bbox', 'img_path')}
++        if args.box_source == 'teacher':
++            rec['teacher_score'] = []
++            rec['bbox_resized'] = []
+         feats = {}
+         for n_done, im, do_dose, prepared in prepared_frames(
+                 plan, name, prefix, views, args, pool):
++            path = osp.join(prefix, im['file_name'])
++            img_shape, s, prepared_views = prepared
+             boxes, metas = [], []
+-            for a in anns.get(im['id'], []):
+-                cname = cats.get(a['category_id'], str(a['category_id']))
+-                if keep_cls is not None and cname not in keep_cls:
+-                    continue
+-                if a.get('iscrowd', 0) or a.get('ignore', 0) or a.get('instance_id', -1) < 0:
+-                    continue
+-                x, y, w, h = a['bbox']
+-                boxes.append([x, y, x + w, y + h])
+-                cl = cname.lower()
+-                metas.append((a['instance_id'], CLASSES.index(cl)
+-                              if cl in CLASSES else -1))
++            if args.box_source == 'teacher':
++                b, teacher_scores = teacher_boxes(model, prepared_views[views.index('clean')],
++                                                  img_shape, s, im, path, args)
++                boxes = (b / s).tolist()  # metadata only, original-image coordinates
++                metas = [(-1, CLASSES.index('car')) for _ in boxes]
++            else:
++                for a in anns.get(im['id'], []):
++                    cname = cats.get(a['category_id'], str(a['category_id']))
++                    if keep_cls is not None and cname not in keep_cls:
++                        continue
++                    if a.get('iscrowd', 0) or a.get('ignore', 0) or a.get('instance_id', -1) < 0:
++                        continue
++                    x, y, w, h = a['bbox']
++                    boxes.append([x, y, x + w, y + h])
++                    cl = cname.lower()
++                    metas.append((a['instance_id'], CLASSES.index(cl)
++                                  if cl in CLASSES else -1))
++                b = np.array(boxes, dtype=np.float32) * s
+             if not boxes:
+                 continue
+-            path = osp.join(prefix, im['file_name'])
+-            img_shape, s, prepared_views = prepared
+-            b = np.array(boxes, dtype=np.float32) * s
+             b[:, [0, 2]] = b[:, [0, 2]].clip(0, img_shape[1] - 1)
+             b[:, [1, 3]] = b[:, [1, 3]].clip(0, img_shape[0] - 1)
+             keep = np.where(((b[:, 2] - b[:, 0]) >= args.min_box) &
+@@ -452,7 +491,11 @@
+                 rec['frame_id'].append(int(im['frame_id']))
+                 rec['image_id'].append(int(im['id']))
+                 rec['img_path'].append(path)
++                if args.box_source == 'teacher':
++                    rec['teacher_score'].append(float(teacher_scores[kk]))
+             rec['bbox'].append(np.array(boxes, dtype=np.float32)[keep])
++            if args.box_source == 'teacher':
++                rec['bbox_resized'].append(b.copy())
+             if (n_done + 1) % 50 == 0:
+                 print('[%s] %d/%d frames  %.1fs' % (name, n_done + 1, len(plan),
+                                                    time.time() - t0), flush=True)
+@@ -461,6 +504,9 @@
+             continue
+         arrays = {k: np.concatenate(v, 0) for k, v in feats.items()}
+         arrays['bbox'] = np.concatenate(rec['bbox'], 0)
++        if args.box_source == 'teacher':
++            arrays['teacher_score'] = np.asarray(rec['teacher_score'], dtype=np.float32)
++            arrays['bbox_resized'] = np.concatenate(rec['bbox_resized'], 0)
+         for k in ('video', 'scene', 'variant', 'img_path'):
+             arrays[k] = np.array(rec[k])
+         for k in ('instance_id', 'frame_id', 'image_id', 'category'):
+--- /dev/null
++++ b/tools/analysis/idapr_basis.py
+@@ -0,0 +1,60 @@
++"""Label-free identity/nuisance bases shared by offline and teacher-box fits.
++
++Only image membership and paired views are consumed; identity/weather labels
++must not be passed into this estimator. Inputs are already L2-normalized.
++"""
++import numpy as np
++
++try:
++    from .ics_probe_analyze import top_eig
++except ImportError:
++    from ics_probe_analyze import top_eig
++
++
++def label_free_bases(Z, image_id, views, k_id, k_nuis, eps_ratio=0.1):
++    Z = np.asarray(Z, dtype=np.float64)
++    image_id = np.asarray(image_id)
++    views = [np.asarray(v, dtype=np.float64) for v in views]
++    if Z.ndim != 2 or len(Z) == 0 or image_id.shape != (len(Z),):
++        raise ValueError('Expected nonempty [N,D] features and [N] image IDs')
++    n, dim = Z.shape
++    if not views or any(v.shape != Z.shape for v in views):
++        raise ValueError('At least one aligned view is required')
++    if not (1 <= k_id <= dim and 1 <= k_nuis <= dim and eps_ratio > 0):
++        raise ValueError('Invalid dimensions or regularization')
++    if any(not np.isfinite(v).all() for v in [Z] + views):
++        raise ValueError('Non-finite embeddings; rows are never silently dropped')
++    if any(not np.allclose(np.linalg.norm(v, axis=1), 1., atol=1e-6)
++           for v in [Z] + views):
++        raise ValueError('Inputs must already be L2-normalized')
++
++    between = []
++    multi_images = 0
++    for im in np.unique(image_id):
++        idx = np.where(image_id == im)[0]
++        if len(idx) >= 2:
++            between.append(Z[idx] - Z[idx].mean(0))
++            multi_images += 1
++    if not between:
++        raise ValueError('No image contains two or more car boxes')
++    Xb = np.concatenate(between, axis=0)
++    Sb = Xb.T @ Xb / len(Xb)
++    # Deliberately uncentered: systematic paired-view shifts are nuisance.
++    residual = np.concatenate([v - Z for v in views], axis=0)
++    Sw = residual.T @ residual / len(residual)
++    epsilon = float(eps_ratio * np.trace(Sw) / dim)
++    if not epsilon > 0:
++        raise ValueError('Within-view scatter has zero trace')
++    L = np.linalg.cholesky(Sw + epsilon * np.eye(dim))
++    M = np.linalg.solve(L, np.linalg.solve(L, Sb).T).T
++    eigvals, U = np.linalg.eigh(M)
++    order = np.argsort(eigvals)[::-1]
++    V = np.linalg.solve(L.T, U[:, order[:k_id]])
++    E_id = np.linalg.qr(V)[0]
++    E_n = top_eig(Sw, k_nuis)
++    stats = dict(n_fit_rois=n, n_fit_images=int(len(np.unique(image_id))),
++                 n_multi_box_images=multi_images, n_between=len(Xb),
++                 n_within=len(residual), eps=epsilon, eps_ratio=float(eps_ratio),
++                 within_trace=float(np.trace(Sw)),
++                 top_eigs=eigvals[order[:k_id]].tolist())
++    return E_id, E_n, stats
+--- /dev/null
++++ b/tools/analysis/test_idapr.py
+@@ -0,0 +1,72 @@
++"""Requested CPU release-space checks; torch and the standard library only."""
++import argparse
++import importlib.util
++import json
++from pathlib import Path
++
++import torch
++import torch.nn.functional as F
++
++
++def module(path, name):
++    spec = importlib.util.spec_from_file_location(name, str(path))
++    obj = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(obj)
++    return obj
++
++
++def main():
++    parser = argparse.ArgumentParser()
++    parser.add_argument('--out', required=True)
++    args = parser.parse_args()
++    code = Path(__file__).resolve().parents[2]
++    new = module(code / 'darth/models/utils/roi_proto_memory.py', 'release_memory_test')
++    old = module(code.parent / 'code_original/darth/models/utils/roi_proto_memory.py', 'old_memory_test')
++    torch.set_num_threads(2)
++    torch.manual_seed(0)
++    records = []
++    for dtype in [torch.float32, torch.float64]:
++        raw = torch.randn(64, 256, dtype=dtype, requires_grad=True)
++        prototypes = torch.randn(300, 256, dtype=dtype)
++        full, _, _ = new.roi_proto_loss_with_gate(raw, prototypes)
++        empty, _, _ = new.roi_proto_loss_with_gate(raw, prototypes,
++                            space_mode='release', space_basis=torch.empty(256, 0, dtype=dtype))
++        assert torch.equal(full, empty), 'Empty released basis must use the exact full branch'
++        for k in [2, 16]:
++            E = torch.linalg.qr(torch.randn(256, k, dtype=dtype), mode='reduced')[0]
++            normalized = F.normalize(raw.detach(), dim=1).requires_grad_()
++            proto_unit = F.normalize(prototypes, dim=1).detach()
++            loss, _, _ = new.roi_proto_release_normalized(normalized, proto_unit, E)
++            gradient = torch.autograd.grad(loss, normalized)[0]
++            in_component = gradient @ E
++            max_component = float(in_component.abs().max())
++            relative_norm = float(in_component.norm() / gradient.norm())
++            assert max_component <= 1e-6 and relative_norm <= 1e-6
++            assert torch.isfinite(gradient).all() and torch.isfinite(loss)
++            training_loss, _, _ = new.roi_proto_loss_with_gate(raw, prototypes,
++                                                space_mode='release', space_basis=E)
++            raw_gradient = torch.autograd.grad(training_loss, raw, retain_graph=True)[0]
++            assert torch.isfinite(raw_gradient).all()
++            # Default-off function equality supplements the full-model U2.
++            for beta in [0., 1.]:
++                for metric in ['projected_l2', 'projected_cosine']:
++                    ref = old.roi_proto_loss_with_gate(raw, prototypes, basis=E,
++                                                       beta=beta, coupled_metric=metric)
++                    actual = new.roi_proto_loss_with_gate(raw, prototypes, basis=E,
++                                                          beta=beta, coupled_metric=metric,
++                                                          space_mode='full')
++                    assert all(torch.equal(a, b) for a, b in zip(ref, actual))
++            records.append(dict(dtype=str(dtype), k=k, empty_basis_bitwise_full=True,
++                                normalized_node_gradient_in_E_max=max_component,
++                                normalized_node_gradient_in_E_relative_norm=relative_norm,
++                                all_gradients_finite=True, full_function_bitwise_original=True))
++    result = dict(status='passed', tests=['U1c', 'U1d', 'U1e'], records=records,
++                  gradient_node='after L2 normalization, before its Jacobian (as requested)')
++    out = Path(args.out)
++    out.parent.mkdir(parents=True, exist_ok=True)
++    out.write_text(json.dumps(result, indent=2) + '\n')
++    print(json.dumps(result), flush=True)
++
++
++if __name__ == '__main__':
++    main()
+--- a/tools/run/train_seq3_episode.py
++++ b/tools/run/train_seq3_episode.py
+@@ -17,6 +17,7 @@
+ from darth.models import build_model
+ from apr_complement_experiment import install_checkpointing, APRFiniteLossHook
+ import ics_quick_hooks
++import idapr_hooks
+ 
+ 
+ def parse_args():
+--- /dev/null
++++ b/tools/run/idapr_hooks.py
+@@ -0,0 +1,124 @@
++"""Read-only loss/basis audits, plus the explicitly requested 50-step smoke stop."""
++import csv
++import json
++from pathlib import Path
++
++import numpy as np
++import torch
++from mmcv.parallel import is_module_wrapper
++from mmcv.runner import HOOKS, Hook, get_dist_info
++
++
++class SmokeComplete(Exception):
++    pass
++
++
++@HOOKS.register_module()
++class APRSpaceAuditHook(Hook):
++    def __init__(self, root, require_nonzero=False, expected_mode=None, expected_coupling=None):
++        self.root = Path(root)
++        self.require_nonzero = bool(require_nonzero)
++        self.expected_mode = expected_mode
++        self.expected_coupling = expected_coupling
++        self.rows = []
++
++    def before_run(self, runner):
++        self.model = runner.model.module if is_module_wrapper(runner.model) else runner.model
++        self.head = self.model.track_head
++        self.rank = get_dist_info()[0]
++        self.root.mkdir(parents=True, exist_ok=True)
++        self.path = self.root / ('apr_iterations_rank%d.csv' % self.rank)
++        self.path.write_text('')
++        self.initial_updates = int(self.head.causal_bank.num_updates.item())
++        self.initial_basis = (self.head.roi_proto_space_basis.detach().clone()
++                              if hasattr(self.head, 'roi_proto_space_basis') else None)
++        assert len(self.head.roi_proto_memory._history) == 3
++        if self.expected_mode is not None:
++            assert self.head.roi_proto_space_mode == self.expected_mode
++        if self.expected_coupling is not None:
++            assert self.head.roi_proto_couple_ics == self.expected_coupling
++        assert not any('roi_proto_space_basis' in key for key in self.model.state_dict())
++        original = self.head.forward_train
++        self.latest = None
++        def call(*args, **kwargs):
++            losses = original(*args, **kwargs)
++            value = losses.get('loss_roi_proto')
++            value = None if value is None else float(value.detach())
++            self.latest = dict(weighted_APR_loss=value,
++                               trim_loss_present='loss_track_trim' in losses,
++                               stats=dict(self.head.roi_proto_memory.last_stats))
++            return losses
++        self.head.forward_train = call
++        self.save('start', runner)
++
++    def save(self, tag, runner):
++        h = self.head
++        unchanged = (self.initial_basis is None or
++                     torch.equal(h.roi_proto_space_basis.detach(), self.initial_basis))
++        assert unchanged, 'The fixed released basis changed'
++        record = dict(tag=tag, rank=self.rank, epoch=runner.epoch,
++                      iteration=runner.iter, total_batches=len(self.rows),
++                      history_domains=len(h.roi_proto_memory._history),
++                      history_names=list(h.roi_proto_memory._history),
++                      mode=h.roi_proto_space_mode, coupling=h.roi_proto_couple_ics,
++                      coupling_beta=h.roi_proto_couple_beta,
++                      coupling_basis=h.roi_proto_couple_basis,
++                      coupling_metric=h.roi_proto_couple_metric,
++                      basis_sha256=h.roi_proto_space_basis_sha256,
++                      fixed_basis_unchanged=unchanged,
++                      basis_not_persisted_in_checkpoint=True,
++                      num_updates_start=self.initial_updates,
++                      num_updates=int(h.causal_bank.num_updates.item()))
++        path = self.root / ('apr_audit_%s_rank%d.json' % (tag, self.rank))
++        temp = path.with_suffix('.tmp')
++        temp.write_text(json.dumps(record, indent=2) + '\n')
++        temp.replace(path)
++        runner.logger.info('[APR_SPACE_AUDIT] %s', record)
++
++    def after_train_iter(self, runner):
++        assert self.latest is not None
++        h = self.head
++        value = self.latest['weighted_APR_loss']
++        if self.require_nonzero:
++            assert value is not None and np.isfinite(value) and value != 0.0, self.latest
++        if value is not None:
++            assert np.isfinite(value)
++        st = self.latest['stats']
++        reference = st.get('full_reference_loss') if h.roi_proto_space_mode == 'release' else None
++        row = dict(iteration=runner.iter + 1, epoch=runner.epoch + 1,
++                   weighted_APR_loss=value, raw_APR_loss=st.get('loss') if value is not None else None,
++                   paired_full_reference_weighted=(float(reference) * h.roi_proto_loss_weight
++                                                   if reference is not None and value is not None else None),
++                   mean_in_share=st.get('mean_in_share'),
++                   selected_rois=st.get('selected_rois'), prototypes=st.get('prototypes'),
++                   history_domains=len(h.roi_proto_memory._history),
++                   total_loss=float(runner.outputs['loss'].detach()),
++                   trim_loss_present=self.latest['trim_loss_present'],
++                   num_updates=int(h.causal_bank.num_updates.item()))
++        self.rows.append(row)
++        with self.path.open('a', newline='') as f:
++            writer = csv.DictWriter(f, fieldnames=list(row))
++            if len(self.rows) == 1:
++                writer.writeheader()
++            writer.writerow(row)
++        if (runner.iter + 1) % 20 == 0:
++            self.save('progress', runner)
++
++    def after_train_epoch(self, runner):
++        self.save('epoch%d' % (runner.epoch + 1), runner)
++
++    def after_run(self, runner):
++        self.save('end', runner)
++
++
++@HOOKS.register_module()
++class StopSmokeAfterIterationsHook(Hook):
++    def __init__(self, iterations=50):
++        self.iterations = int(iterations)
++
++    def after_train_iter(self, runner):
++        if runner.iter + 1 >= self.iterations:
++            for hook in runner.hooks:
++                if isinstance(hook, APRSpaceAuditHook):
++                    hook.save('smoke_end', runner)
++            raise SmokeComplete('Requested smoke run completed %d updates' % self.iterations)
+--- /dev/null
++++ b/tools/analysis/ics_probe_analyze.py
+@@ -0,0 +1,1061 @@
++#!/usr/bin/env python
++"""Offline analysis for the ICS subspace probe (CPU only, no mmcv/torch).
++
++Question: is the subspace that ICS shrinks dominated by weather, and does it
++carry little identity information?
++
++Reads the npz files written by ics_probe_extract.py and produces
++    <out>/csv/*.csv                 every number
++    <out>/tables/*.tex              LaTeX tables (paper / supplementary)
++    <out>/figs/*.pdf|png            figures
++    <out>/summary.json
++
++Experiments
++    P1  energy share   : how much weather / FAP / identity variation falls in E
++    P2  double dissoc. : weather probe and identity retrieval on E vs. E-perp
++    P3  intervention   : shrink E (beta grid) vs. random / identity subspaces
++    P4  dose response  : graded darkening / fog / FAP strength (Fig. 4)
++    P5  stage evolution: ICS basis after each stage vs. each domain shift
++    P6  paired weather : (VKITTI2 only) same object, same frame, other weather
++Python 3.7 compatible (server: numpy 1.21, scipy 1.4, sklearn 0.22, mpl 3.5).
++"""
++import argparse
++import csv
++import hashlib
++import json
++import os
++import os.path as osp
++import sys
++
++import numpy as np
++
++EPS = 1e-12
++
++
++def parse_args():
++    p = argparse.ArgumentParser(description=__doc__,
++                                formatter_class=argparse.RawDescriptionHelpFormatter)
++    p.add_argument('--feat-root', required=True,
++                   help='the --out-dir given to ics_probe_extract.py')
++    p.add_argument('--label', required=True, help='main checkpoint label')
++    p.add_argument('--domains', nargs='+', required=True,
++                   help='domain names in display order (weather labels)')
++    p.add_argument('--ref-domain', default=None,
++                   help='reference weather for shift vectors (e.g. clear_holdout_45v)')
++    p.add_argument('--stage-labels', nargs='*', default=[],
++                   help='checkpoint label after each stage, in order (P5)')
++    p.add_argument('--stage-domains', nargs='*', default=[],
++                   help='domain adapted at each stage, same order (P5)')
++    p.add_argument('--compare-labels', nargs='*', default=[],
++                   help='other checkpoints whose ICS bank is compared on the '
++                        'main features (e.g. a pairwise_residual run)')
++    p.add_argument('--classes', default='1', help='category ids, e.g. "1" = car')
++    p.add_argument('--m', type=int, default=0,
++                   help='subspace dim; 0 = use the bank size of the checkpoint')
++    p.add_argument('--betas', default='0,0.1,0.25,0.5,0.75,1.0')
++    p.add_argument('--residual-view', default='fap',
++                   help='view whose paired residual defines the offline FAP-PCA')
++    p.add_argument('--paired', action='store_true',
++                   help='VKITTI2 mode: pair RoIs by (scene, frame, instance) '
++                        'across variants')
++    p.add_argument('--ref-variant', default='clone')
++    p.add_argument('--gap', type=int, default=4, help='min frame gap query->gallery')
++    p.add_argument('--window', type=int, default=30, help='gallery frame window')
++    p.add_argument('--max-queries', type=int, default=4000)
++    p.add_argument('--n-random', type=int, default=50)
++    p.add_argument('--montage', action='store_true',
++                   help='read image crops for Fig. 3 (needs image paths)')
++    p.add_argument('--seed', type=int, default=0)
++    p.add_argument('--v2', action='store_true', help='S2 multidimensional controls and Fisher ratio')
++    p.add_argument('--probe-only', action='store_true', help='P1/P2 and binary probes only (S5)')
++    p.add_argument('--out', required=True)
++    return p.parse_args()
++
++
++# --------------------------------------------------------------------------- #
++# io
++# --------------------------------------------------------------------------- #
++def load_label(root, label, domains, classes):
++    parts = []
++    bank = None
++    for d in domains:
++        f = osp.join(root, label, d + '.npz')
++        if not osp.exists(f):
++            print('[warn] missing %s' % f)
++            continue
++        z = np.load(f, allow_pickle=False)
++        keep = np.isin(z['category'], classes)
++        part = {k: z[k][keep] for k in z.files
++                if not k.startswith('bank_') and z[k].ndim >= 1 and
++                z[k].shape[0] == z['category'].shape[0]}
++        parts.append(part)
++        if bank is None and 'bank_pcs' in z.files:
++            bank = {k[5:]: z[k] for k in z.files if k.startswith('bank_')}
++    if not parts:
++        raise SystemExit('no features for label %s' % label)
++    keys = set(parts[0])
++    for p in parts[1:]:
++        keys &= set(p)
++    data = {k: np.concatenate([p[k] for p in parts], 0) for k in keys}
++    return data, bank
++
++
++def normalize(x):
++    return x / (np.linalg.norm(x, axis=-1, keepdims=True) + EPS)
++
++
++def orth(a):
++    q, _ = np.linalg.qr(a)
++    return q
++
++
++def split_mask(groups, seed=0):
++    """Deterministic 50/50 split on group names (video or scene)."""
++    u = np.unique(groups)
++    fit = set(g for g in u if int(hashlib.md5(('%s/%d' % (g, seed)).encode())
++                                  .hexdigest()[:8], 16) % 2 == 0)
++    if len(fit) in (0, len(u)):           # degenerate: alternate
++        fit = set(u[::2])
++    return np.array([g in fit for g in groups])
++
++
++# --------------------------------------------------------------------------- #
++# subspaces
++# --------------------------------------------------------------------------- #
++def top_eig(cov, m):
++    w, v = np.linalg.eigh((cov + cov.T) / 2)
++    return v[:, np.argsort(w)[::-1][:m]]
++
++
++def cov_of(rows, center=True):
++    x = rows - rows.mean(0, keepdims=True) if center else rows
++    return x.T @ x / max(len(x), 1)
++
++
++def between_weather_rows(Z, weather, cls):
++    """sqrt(n) * (mean_{c,w} - mean_c) for every class c and weather w."""
++    rows = []
++    for c in np.unique(cls):
++        mc = cls == c
++        mu_c = Z[mc].mean(0)
++        for w in np.unique(weather[mc]):
++            m = mc & (weather == w)
++            if m.sum() < 10:
++                continue
++            rows.append(np.sqrt(m.sum()) * (Z[m].mean(0) - mu_c))
++    return np.array(rows)
++
++
++def identity_rows(Z, video, inst, cls, min_obs=3):
++    """sqrt(n_i) * (mean_i - mean_{video,class}): stable identity signal."""
++    rows = []
++    key_vc = np.char.add(np.char.add(video.astype(str), '|'), cls.astype(str))
++    for vc in np.unique(key_vc):
++        m = key_vc == vc
++        ids = inst[m]
++        zz = Z[m]
++        u, cnt = np.unique(ids, return_counts=True)
++        u = u[cnt >= min_obs]
++        if len(u) < 2:
++            continue
++        means = np.array([zz[ids == i].mean(0) for i in u])
++        ns = np.array([(ids == i).sum() for i in u])
++        mu = (means * ns[:, None]).sum(0) / ns.sum()
++        rows.append(np.sqrt(ns)[:, None] * (means - mu))
++    return np.concatenate(rows, 0) if rows else np.zeros((0, Z.shape[1]))
++
++
++def temporal_rows(Z, video, inst, min_obs=3):
++    key = np.char.add(np.char.add(video.astype(str), '|'), inst.astype(str))
++    out = []
++    for k in np.unique(key):
++        m = key == k
++        if m.sum() >= min_obs:
++            out.append(Z[m] - Z[m].mean(0))
++    return np.concatenate(out, 0) if out else np.zeros((0, Z.shape[1]))
++
++
++def energy(rows, E):
++    if rows is None or len(rows) == 0:
++        return float('nan')
++    tot = (rows ** 2).sum()
++    return float(((rows @ E) ** 2).sum() / (tot + EPS))
++
++
++def principal_angles_deg(A, B):
++    try:
++        from scipy.linalg import subspace_angles
++        return np.degrees(np.sort(subspace_angles(A, B)))
++    except Exception:
++        s = np.linalg.svd(orth(A).T @ orth(B), compute_uv=False)
++        return np.degrees(np.arccos(np.clip(s, -1, 1)))[::-1]
++
++
++# --------------------------------------------------------------------------- #
++# probes
++# --------------------------------------------------------------------------- #
++def weather_probe(Xfit, yfit, Xte, yte, seed=0, max_fit=20000):
++    from sklearn.linear_model import LogisticRegression
++    from sklearn.metrics import balanced_accuracy_score
++    rng = np.random.RandomState(seed)
++    if len(Xfit) > max_fit:
++        idx = rng.choice(len(Xfit), max_fit, replace=False)
++        Xfit, yfit = Xfit[idx], yfit[idx]
++    mu, sd = Xfit.mean(0), Xfit.std(0) + 1e-6
++    clf = LogisticRegression(C=1.0, max_iter=2000, solver='lbfgs',
++                             class_weight='balanced')   # multinomial by default
++    clf.fit((Xfit - mu) / sd, yfit)
++    return float(balanced_accuracy_score(yte, clf.predict((Xte - mu) / sd)))
++
++
++def average_precision(scores, pos):
++    order = np.argsort(-scores)
++    p = pos[order]
++    if p.sum() == 0:
++        return np.nan
++    hits = np.cumsum(p)
++    prec = hits / (np.arange(len(p)) + 1.0)
++    return float((prec * p).sum() / p.sum())
++
++
++def build_retrieval(video, frame, inst, gap, window, max_q, seed=0):
++    """Within-video re-identification: query at frame f, gallery in
++    (f+gap, f+gap+window]. Returns list of (query_idx, gallery_idx, pos)."""
++    rng = np.random.RandomState(seed)
++    tasks = []
++    for v in np.unique(video):
++        idx = np.where(video == v)[0]
++        fr = frame[idx]
++        for q in idx:
++            g = idx[(fr > frame[q] + gap) & (fr <= frame[q] + gap + window)]
++            if len(g) < 2:
++                continue
++            pos = inst[g] == inst[q]
++            if pos.any() and (~pos).any():
++                tasks.append((q, g, pos))
++    if len(tasks) > max_q:
++        sel = rng.choice(len(tasks), max_q, replace=False)
++        tasks = [tasks[i] for i in sorted(sel)]
++    return tasks
++
++
++def build_cross_weather(scene, variant, frame, inst, ref, window, max_q, seed=0):
++    """VKITTI2: query in variant w != ref, gallery = ref variant, same scene,
++    |frame - f| <= window. Positive = same instance id."""
++    rng = np.random.RandomState(seed)
++    tasks = []
++    for s in np.unique(scene):
++        gi = np.where((scene == s) & (variant == ref))[0]
++        qi = np.where((scene == s) & (variant != ref))[0]
++        for q in qi:
++            g = gi[np.abs(frame[gi] - frame[q]) <= window]
++            if len(g) < 2:
++                continue
++            pos = inst[g] == inst[q]
++            if pos.any() and (~pos).any():
++                tasks.append((q, g, pos))
++    if len(tasks) > max_q:
++        sel = rng.choice(len(tasks), max_q, replace=False)
++        tasks = [tasks[i] for i in sorted(sel)]
++    return tasks
++
++
++def retrieval_map(X, tasks):
++    if not tasks:
++        return float('nan')
++    Xn = normalize(X)
++    aps = [average_precision(Xn[g] @ Xn[q], pos) for q, g, pos in tasks]
++    return float(np.nanmean(aps))
++
++
++def shrink(Z, E, beta):
++    return normalize(Z - beta * (Z @ E) @ E.T)
++
++
++def complement(Z, E):
++    return Z - (Z @ E) @ E.T
++
++
++# --------------------------------------------------------------------------- #
++# output helpers
++# --------------------------------------------------------------------------- #
++def write_csv(path, rows):
++    if not rows:
++        return
++    os.makedirs(osp.dirname(path), exist_ok=True)
++    keys = []
++    for r in rows:
++        for k in r:
++            if k not in keys:
++                keys.append(k)
++    with open(path, 'w', newline='') as f:
++        w = csv.DictWriter(f, fieldnames=keys)
++        w.writeheader()
++        w.writerows(rows)
++
++
++def fmt(x, nd=3):
++    if x is None or (isinstance(x, float) and not np.isfinite(x)):
++        return '--'
++    return ('%.' + str(nd) + 'f') % x
++
++
++def write_tex(path, text):
++    os.makedirs(osp.dirname(path), exist_ok=True)
++    with open(path, 'w') as f:
++        f.write(text)
++
++
++def rank_basis(rows, k, center=False):
++    cov = cov_of(rows, center=center)
++    w, v = np.linalg.eigh((cov + cov.T) / 2)
++    order = np.argsort(w)[::-1]
++    rank = int((w > max(float(w.max()), EPS) * 1e-9).sum())
++    return v[:, order[:min(k, rank)]]
++
++
++def fisher_ratio(X, weather, cls):
++    """Trace ratio on raw projected features; no row renormalization."""
++    between, within = 0.0, 0.0
++    for c in np.unique(cls):
++        m = cls == c
++        mu = X[m].mean(0)
++        for d in np.unique(weather[m]):
++            a = m & (weather == d)
++            md = X[a].mean(0)
++            between += a.sum() * float(((md - mu) ** 2).sum())
++            within += float(((X[a] - md) ** 2).sum())
++    return between / (within + EPS)
++
++
++def probe_predictions(Xf, yf, Xt, yt, seed):
++    from sklearn.linear_model import LogisticRegression
++    from sklearn.metrics import balanced_accuracy_score
++    if len(Xf) > 20000:
++        ii = np.random.RandomState(seed).choice(len(Xf), 20000, replace=False)
++        Xf, yf = Xf[ii], yf[ii]
++    mu, sd = Xf.mean(0), Xf.std(0) + 1e-6
++    clf = LogisticRegression(C=1., max_iter=2000, solver='lbfgs', class_weight='balanced')
++    clf.fit((Xf - mu) / sd, yf)
++    pred = clf.predict((Xt - mu) / sd)
++    return float(balanced_accuracy_score(yt, pred)), pred
++
++
++def binary_probes(Xf, Xt, wf, wt, seed):
++    a, b = np.isin(wf, ['night', 'clear_holdout_45v']), np.isin(wt, ['night', 'clear_holdout_45v'])
++    return dict(night_vs_clear_bacc=probe_predictions(Xf[a], (wf[a] == 'night').astype(int), Xt[b], (wt[b] == 'night').astype(int), seed)[0],
++                night_vs_rest_bacc=probe_predictions(Xf, (wf == 'night').astype(int), Xt, (wt == 'night').astype(int), seed)[0])
++
++
++def v2_interventions(args, data, bank, Z, fit, te, weather, cls, wlab, tasks):
++    E = orth(bank['pcs'].T.astype(float))
++    angles = principal_angles_deg(E, top_eig(bank['cov_bank'].astype(float), 2))
++    try:
++        assert float(angles.max()) < 1., 'covariance/PCS max principal angle %.6f deg' % angles.max()
++        equivalent = True
++    except AssertionError as error:
++        equivalent = False
++        print('[S2 assertion failed; approved separate labels] %s' % error, flush=True)
++    with open(osp.join(args.out, 'covariance_bank_equivalence.json'), 'w') as f:
++        json.dump(dict(angles_deg=angles.tolist(),threshold_deg=1,passed=equivalent,
++                       user_approved_resolution='Report stored bank_pcs separately from covariance eigenvector scans; never assert equivalence.'), f, indent=2)
++    iw = identity_rows(Z[fit], data['video'][fit], data['instance_id'][fit], cls[fit])
++    ww = between_weather_rows(Z[fit], weather[fit], cls[fit])
++    residual = normalize(data['feat_fap'].astype(float)) - Z
++    fap = residual[fit & np.isfinite(residual).all(1)]
++    rng = np.random.RandomState(args.seed + 9973)
++    def measure(B, beta):
++        raw = Z - beta * (Z @ B) @ B.T
++        scaled = normalize(raw)
++        return dict(id_mAP=retrieval_map(raw[te],tasks),weather_bacc=weather_probe(scaled[fit],wlab[fit],scaled[te],wlab[te],args.seed),
++                    weather_fisher=fisher_ratio(raw[te],weather[te],cls[te]))
++    zero = measure(E,0.)
++    rows = []
++    def append(name,k,Bs):
++        for beta in [0.,.5,1.]:
++            values = [zero] if beta == 0 else [measure(B,beta) for B in Bs]
++            r=dict(subspace=name,k_requested=k,k_effective=Bs[0].shape[1],beta=beta,random_repeats=10 if name=='Random' else 1)
++            for key in zero:
++                r[key]=float(np.mean([v[key] for v in values]))
++                r[key+'_std']=float(np.std([v[key] for v in values]))
++            rows.append(r)
++            write_csv(osp.join(args.out,'csv/P3_intervention.csv'),rows)
++            print('[P3-v2] %s k=%d/%d beta=%.1f %s'%(name,k,r['k_effective'],beta,r),flush=True)
++    append('ICS stored bank_pcs',2,[E])
++    for k in [2,4,8,16,32]:
++        append('ICS covariance eigenvectors',k,[top_eig(bank['cov_bank'].astype(float),k)])
++        append('Identity oracle',k,[rank_basis(iw,k)])
++        append('Weather oracle',k,[rank_basis(ww,k)])
++        append('FAP residual PCA',k,[rank_basis(fap,k,True)])
++        append('Random',k,[orth(rng.randn(Z.shape[1],k)) for _ in range(10)])
++    return rows
++
++
++def export_s4_bases(args, data, bank, Z, fit, weather, cls):
++    folder=osp.join(args.out,'bases');os.makedirs(folder,exist_ok=True)
++    R=normalize(data['feat_fap'].astype(float))-Z
++    clear=fit & (weather=='clear_holdout_45v') & np.isfinite(R).all(1)
++    bases={'ICS_stored_m2':orth(bank['pcs'].T.astype(float)),
++           'FAP_clear_fit_m2':rank_basis(R[clear],2,True),
++           'Identity_fit_m16':rank_basis(identity_rows(Z[fit],data['video'][fit],data['instance_id'][fit],cls[fit]),16),
++           'Random_m2':orth(np.random.RandomState(args.seed+9973).randn(Z.shape[1],2))}
++    for name,B in bases.items():np.save(osp.join(folder,name+'.npy'),B.T)
++    with open(osp.join(folder,'provenance.json'),'w') as f:
++        json.dump(dict(label=args.label,fit_videos=np.unique(data['video'][fit]).tolist(),clear_fit_videos=np.unique(data['video'][clear]).tolist(),
++                       FAP_uses_target_labels=False,basis_orientation='rows k x D',random_seed=args.seed+9973),f,indent=2)
++
++
++def v2_table(args, rows):
++    lines=[r'\begin{tabular}{lrrrrrr}',r'\toprule',r'Subspace & $k$ & Effective $k$ & $\beta$ & ID mAP & Weather BAcc & Fisher \\',r'\midrule']
++    for r in rows:
++        lines.append('%s & %d & %d & %.1f & %.5f & %.5f & %.6f \\\\'%(r['subspace'],r['k_requested'],r['k_effective'],r['beta'],r['id_mAP'],r['weather_bacc'],r['weather_fisher']))
++    lines += [r'\bottomrule',r'\end{tabular}']
++    write_tex(osp.join(args.out,'tables/tab_P3_intervention.tex'),'\n'.join(lines)+'\n')
++
++
++# --------------------------------------------------------------------------- #
++def main():
++    args = parse_args()
++    os.makedirs(args.out, exist_ok=True)
++    classes = [int(c) for c in args.classes.split(',')]
++    betas = [float(b) for b in args.betas.split(',')]
++    rng = np.random.RandomState(args.seed + 9973)   # separate stream for random bases
++    summary = {}
++
++    data, bank = load_label(args.feat_root, args.label, args.domains, classes)
++    Z = normalize(data['feat_clean'].astype(np.float64))
++    D = Z.shape[1]
++    weather = data['variant'] if args.paired else data['weather']
++    video, inst, frame = data['video'], data['instance_id'], data['frame_id']
++    cls = data['category']
++    group = data['scene'] if args.paired else video
++    fit = split_mask(group, args.seed)
++    te = ~fit
++    summary['protocol'] = {
++        'args': vars(args), 'rois': len(Z), 'fit_rois': int(fit.sum()),
++        'test_rois': int(te.sum()), 'fit_videos': len(np.unique(group[fit])),
++        'test_videos': len(np.unique(group[te])),
++        'domain_shift_reference': args.ref_domain or 'pooled class mean',
++        'weather_probe': 'refitted logistic regression after each transformation',
++        'interpretation': 'BDD domain labels also encode scene and identity differences; '
++        'these unpaired probes do not identify a pure weather cause.'}
++    write_csv(osp.join(args.out, 'csv', 'split_counts.csv'), [
++        dict(domain=w, split=s, rois=int((mask & (weather == w)).sum()),
++             videos=len(np.unique(group[mask & (weather == w)])))
++        for w in np.unique(weather) for s, mask in [('fit', fit), ('test', te)]])
++    print('[data] rois=%d fit=%d test=%d D=%d weathers=%s' % (
++        len(Z), fit.sum(), te.sum(), D, list(np.unique(weather))))
++
++    # ---------------- subspaces ----------------
++    if bank is None or 'pcs' not in bank or not np.abs(bank['pcs']).sum():
++        raise SystemExit('checkpoint %s has no initialized ICS bank' % args.label)
++    m = args.m or bank['pcs'].shape[0]
++    bases = {'ICS (checkpoint)': orth(bank['pcs'][:m].T.astype(np.float64))}
++    for lab in args.compare_labels:
++        try:
++            _, b2 = load_label(args.feat_root, lab, args.domains[:1], classes)
++            bases['ICS (%s)' % lab] = orth(b2['pcs'][:m].T.astype(np.float64))
++        except SystemExit as e:
++            print('[warn] %s' % e)
++    rkey = 'feat_' + args.residual_view
++    if rkey in data:
++        R = normalize(data[rkey].astype(np.float64)) - Z
++        ok = np.isfinite(R).all(1)
++        bases['FAP-residual PCA'] = top_eig(cov_of(R[fit & ok]), m)
++    cc = Z.copy()
++    for c in np.unique(cls):
++        mm = fit & (cls == c)
++        cc[cls == c] -= Z[mm].mean(0)
++    bases['Feature PCA'] = top_eig(cov_of(cc[fit], center=False), m)
++    bw_fit = between_weather_rows(Z[fit], weather[fit], cls[fit])
++    bases['Oracle weather (labels)'] = top_eig(bw_fit.T @ bw_fit, m)
++    id_fit = identity_rows(Z[fit], video[fit], inst[fit], cls[fit])
++    bases['Oracle identity (labels)'] = top_eig(id_fit.T @ id_fit, m)
++    randoms = [orth(rng.randn(D, m)) for _ in range(args.n_random)]
++    E = bases['ICS (checkpoint)']
++
++    # ---------------- P1 energy shares (test split) ----------------
++    Zt = Z[te]
++    q_rows = {
++        'Real weather shift': between_weather_rows(Zt, weather[te], cls[te]),
++        'Identity': identity_rows(Zt, video[te], inst[te], cls[te]),
++        'Temporal (same ID)': temporal_rows(Zt, video[te], inst[te]),
++    }
++    if args.ref_domain is not None:
++        shifts = [shift_rows(Zt, weather[te], cls[te], d, args.ref_domain)
++                  for d in args.domains if d != args.ref_domain]
++        q_rows['Real weather shift'] = np.concatenate(shifts, axis=0)
++    for view, lab in (('fap', 'FAP residual'), ('photo', 'Photometric residual'),
++                      ('student', 'Student-view residual')):
++        k = 'feat_' + view
++        if k in data:
++            Rv = normalize(data[k][te].astype(np.float64)) - Zt
++            q_rows[lab] = Rv[np.isfinite(Rv).all(1)]
++    if args.paired:
++        q_rows['Paired real weather'] = paired_rows(Z, data, te, args.ref_variant)
++    p1 = []
++    for name, Eb in list(bases.items()) + [('Random (mean)', None)]:
++        row = {'subspace': name, 'm': m}
++        for q, rows in q_rows.items():
++            if Eb is None:
++                row[q] = float(np.mean([energy(rows, r) for r in randoms]))
++            else:
++                row[q] = energy(rows, Eb)
++        w, i = row['Real weather shift'], row['Identity']
++        row['Weather/Identity'] = w / (i + EPS)
++        if 'FAP residual' in row:
++            row['FAP/Identity'] = row['FAP residual'] / (i + EPS)
++        p1.append(row)
++    p1.append(dict(subspace='Chance m/D', m=m, **{q: m / float(D) for q in q_rows}))
++    write_csv(osp.join(args.out, 'csv', 'P1_energy.csv'), p1)
++    summary['P1'] = p1
++    if args.ref_domain is not None:
++        by_domain = []
++        for d in args.domains:
++            if d == args.ref_domain:
++                continue
++            rows = shift_rows(Zt, weather[te], cls[te], d, args.ref_domain)
++            for name, Eb in list(bases.items()) + [('Random (mean)', None)]:
++                share = (float(np.mean([energy(rows, r) for r in randoms]))
++                         if Eb is None else energy(rows, Eb))
++                by_domain.append(dict(domain=d, reference=args.ref_domain,
++                                      subspace=name, energy_share=share))
++        write_csv(osp.join(args.out, 'csv', 'P1_weather_by_domain.csv'), by_domain)
++    ang = {n: principal_angles_deg(E, b).tolist() for n, b in bases.items()}
++    summary['angles_to_ICS_deg'] = ang
++    write_csv(osp.join(args.out, 'csv', 'P1_angles.csv'),
++              [dict(subspace=n, **{'angle%d' % (j + 1): a for j, a in enumerate(v)})
++               for n, v in ang.items()])
++
++    # ---------------- P2 double dissociation ----------------
++    wlab = np.unique(weather, return_inverse=True)[1]
++    tasks = build_retrieval(video[te], frame[te], inst[te], args.gap, args.window,
++                            args.max_queries, args.seed)
++    p2 = []
++    spaces = [('E only (%d-d)' % m, lambda X: X @ E),
++              ('E-perp (%d-d)' % (D - m), lambda X: complement(X, E)),
++              ('Full (%d-d)' % D, lambda X: X)]
++    ri = bases['Oracle identity (labels)']
++    spaces.append(('Random %d-d' % m, lambda X: X @ randoms[0]))
++    spaces.append(('Identity oracle %d-d' % m, lambda X: X @ ri))
++    for name, f in spaces:
++        Xf, Xt = f(Z[fit]), f(Z[te])
++        row = {'space': name,
++                   'weather_bacc': weather_probe(Xf, wlab[fit], Xt, wlab[te], args.seed),
++                   'chance': 1.0 / len(np.unique(wlab)),
++                   'id_mAP': retrieval_map(Xt, tasks)}
++        if args.v2:
++            row.update(binary_probes(Xf,Xt,weather[fit],weather[te],args.seed))
++            if name.startswith('Full'):
++                from sklearn.metrics import confusion_matrix
++                _, pred = probe_predictions(Xf,wlab[fit],Xt,wlab[te],args.seed)
++                names=np.unique(weather);cm=confusion_matrix(wlab[te],pred,labels=np.arange(len(names)))
++                write_csv(osp.join(args.out,'csv/P2_full_confusion_counts.csv'),[dict(true_domain=str(d),**{str(c):int(cm[i,j]) for j,c in enumerate(names)}) for i,d in enumerate(names)])
++                write_csv(osp.join(args.out,'csv/P2_full_confusion_row_normalized.csv'),[dict(true_domain=str(d),**{str(c):float(cm[i,j]/max(cm[i].sum(),1)) for j,c in enumerate(names)}) for i,d in enumerate(names)])
++                summary['P2_full_confusion']=dict(domains=names.tolist(),counts=cm.tolist())
++        p2.append(row)
++    write_csv(osp.join(args.out, 'csv', 'P2_dissociation.csv'), p2)
++    summary['P2'] = p2
++    summary['n_retrieval_queries'] = len(tasks)
++    if args.v2:
++        export_s4_bases(args,data,bank,Z,fit,weather,cls)
++        write_csv(osp.join(args.out,'csv/P2_binary.csv'),[dict(space=r['space'],night_vs_clear_bacc=r['night_vs_clear_bacc'],night_vs_rest_bacc=r['night_vs_rest_bacc'],chance=.5) for r in p2])
++        summary['protocol'].update(fisher_features='Z - beta * Z E E^T, without L2 renormalization; car test split',classifier_features='L2 renormalized as v1; refitted at each intervention',covariance_scan_equivalent_to_bank_pcs=False)
++    if args.probe_only:
++        tables(args,p1,p2,[],m,D)
++        os.remove(osp.join(args.out,'tables/tab_P3_intervention.tex'))
++        summary.update(P3=[],P4=[],P5=[],probe_only=True)
++        with open(osp.join(args.out,'summary.json'),'w') as f:json.dump(summary,f,indent=2,default=float)
++        print('[done] P1/P2/binary probes only: '+args.out,flush=True)
++        return
++
++    # ---------------- P3 intervention ----------------
++    xw_tasks = []
++    if args.paired:
++        xw_tasks = build_cross_weather(data['scene'][te], data['variant'][te],
++                                       frame[te], inst[te], args.ref_variant,
++                                       args.window, args.max_queries, args.seed)
++    p3 = []
++    if args.v2:
++        p3=v2_interventions(args,data,bank,Z,fit,te,weather,cls,wlab,tasks)
++    baseline = intervene(Z, E, 0.0, fit, te, wlab, weather, cls, tasks,
++                         xw_tasks, args.seed)
++    for sname, Eb in ([] if args.v2 else [('ICS', E), ('Random', None),
++                      ('Identity oracle', ri)]):
++        for b in betas:
++            if b == 0:
++                # All subspaces have exactly the same zero-dose features.
++                res = dict(baseline)
++            elif Eb is None:
++                vals = []
++                for r in randoms[:10]:
++                    vals.append(intervene(Z, r, b, fit, te, wlab, weather, cls,
++                                          tasks, xw_tasks, args.seed))
++                res = {k: float(np.nanmean([v[k] for v in vals])) for k in vals[0]}
++            else:
++                res = intervene(Z, Eb, b, fit, te, wlab, weather, cls, tasks,
++                                xw_tasks, args.seed)
++            res.update(subspace=sname, beta=b)
++            p3.append(res)
++            print('[P3] %-16s beta=%.2f %s' % (sname, b, json.dumps(
++                {k: round(v, 4) for k, v in res.items() if isinstance(v, float)})))
++    write_csv(osp.join(args.out, 'csv', 'P3_intervention.csv'), p3)
++    summary['P3'] = p3
++
++    # ---------------- P4 dose response ----------------
++    p4 = dose_response(data, Z, E, te)
++    write_csv(osp.join(args.out, 'csv', 'P4_dose.csv'), p4)
++    summary['P4'] = p4
++
++    # ---------------- P5 stage evolution ----------------
++    p5, p5_ang = [], []
++    if args.stage_labels:
++        prev = None
++        for k, lab in enumerate(args.stage_labels):
++            try:
++                dk, bk = load_label(args.feat_root, lab, args.domains, classes)
++            except SystemExit as e:
++                print('[warn] %s' % e)
++                continue
++            if bk is None or not np.abs(bk['pcs']).sum():
++                print('[warn] %s: ICS bank not initialized' % lab)
++                continue
++            Ek = orth(bk['pcs'][:m].T.astype(np.float64))
++            Zk = normalize(dk['feat_clean'].astype(np.float64))
++            wk = dk['variant'] if args.paired else dk['weather']
++            row = {'stage': k + 1, 'label': lab,
++                   'adapted_domain': args.stage_domains[k]
++                   if k < len(args.stage_domains) else ''}
++            for d in args.domains:
++                if args.ref_domain is None or d == args.ref_domain:
++                    continue
++                row['shift:' + d] = energy(
++                    shift_rows(Zk, wk, dk['category'], d, args.ref_domain), Ek)
++                if 'feat_fap' in dk:
++                    md = wk == d
++                    Rk = normalize(dk['feat_fap'][md].astype(np.float64)) - Zk[md]
++                    row['fap:' + d] = energy(Rk[np.isfinite(Rk).all(1)], Ek)
++            p5.append(row)
++            if prev is not None:
++                p5_ang.append({'from': prev[0], 'to': lab, 'max_angle_deg':
++                               float(principal_angles_deg(prev[1], Ek)[-1])})
++            prev = (lab, Ek)
++        write_csv(osp.join(args.out, 'csv', 'P5_stage_shift_energy.csv'), p5)
++        write_csv(osp.join(args.out, 'csv', 'P5_stage_angles.csv'), p5_ang)
++    summary['P5'] = p5
++    summary['P5_angles'] = p5_ang
++
++    # ---------------- tables and figures ----------------
++    tables(args, p1, p2, p3, m, D)
++    if args.v2:
++        v2_table(args,p3)
++        write_csv(osp.join(args.out,'csv/P2_binary.csv'),[dict(space=r['space'],night_vs_clear_bacc=r['night_vs_clear_bacc'],night_vs_rest_bacc=r['night_vs_rest_bacc'],chance=.5) for r in p2])
++    try:
++        figures(args, data, Z, E, bases, randoms, weather, video, inst, te, p1, p4, p5)
++    except Exception as e:
++        with open(osp.join(args.out, 'summary.json'), 'w') as f:
++            json.dump(summary, f, indent=2, default=float)
++        raise RuntimeError('figure generation failed: %r' % (e,))
++    with open(osp.join(args.out, 'summary.json'), 'w') as f:
++        json.dump(summary, f, indent=2, default=float)
++    print('[done] wrote %s' % args.out)
++
++
++def paired_rows(Z, data, te, ref):
++    key = np.char.add(np.char.add(data['scene'].astype(str), '|'),
++                      np.char.add(np.char.add(data['frame_id'].astype(str), '|'),
++                                  data['instance_id'].astype(str)))
++    ref_idx = {}
++    for i in np.where(te & (data['variant'] == ref))[0]:
++        ref_idx[key[i]] = i
++    rows = [Z[i] - Z[ref_idx[key[i]]] for i in np.where(te & (data['variant'] != ref))[0]
++            if key[i] in ref_idx]
++    print('[paired] %d matched (object, frame) pairs vs %s' % (len(rows), ref))
++    return np.array(rows) if rows else np.zeros((0, Z.shape[1]))
++
++
++def shift_rows(Z, weather, cls, d, ref):
++    rows = []
++    for c in np.unique(cls):
++        a, b = (cls == c) & (weather == d), (cls == c) & (weather == ref)
++        if a.sum() >= 10 and b.sum() >= 10:
++            rows.append(np.sqrt(min(a.sum(), b.sum())) * (Z[a].mean(0) - Z[b].mean(0)))
++    return np.array(rows) if rows else np.zeros((0, Z.shape[1]))
++
++
++def weather_gap(Z, weather, cls):
++    gaps = []
++    for c in np.unique(cls):
++        mus = [Z[(cls == c) & (weather == w)].mean(0) for w in np.unique(weather)
++               if ((cls == c) & (weather == w)).sum() >= 10]
++        for i in range(len(mus)):
++            for j in range(i + 1, len(mus)):
++                gaps.append(np.linalg.norm(mus[i] - mus[j]))
++    return float(np.mean(gaps)) if gaps else float('nan')
++
++
++def intervene(Z, E, beta, fit, te, wlab, weather, cls, tasks, xw_tasks, seed):
++    Zb = shrink(Z, E, beta)
++    out = {'weather_bacc': weather_probe(Zb[fit], wlab[fit], Zb[te], wlab[te], seed),
++           'weather_gap': weather_gap(Zb[te], weather[te], cls[te]),
++           'id_mAP': retrieval_map(Zb[te], tasks)}
++    if xw_tasks:
++        out['cross_weather_mAP'] = retrieval_map(Zb[te], xw_tasks)
++    return out
++
++
++def dose_response(data, Z, E, te):
++    rows = []
++    fams = {}
++    for k in data:
++        if k.startswith('feat_') and '_' in k[5:]:
++            fam, lvl = k[5:].split('_', 1)
++            if fam in ('dark', 'fog', 'fapk'):
++                fams.setdefault(fam, []).append((float(lvl.replace('p', '.')), k))
++    # Match the identity control to the frames used for the dose views.
++    dose_available = np.zeros(len(Z), dtype=bool)
++    for levels in fams.values():
++        for _, k in levels:
++            dose_available |= np.isfinite(data[k]).all(1)
++    ref_mask = te & dose_available
++    # identity reference: two different objects in the same frame
++    # COCO image ids are local to each domain JSON; namespace by video.
++    image_key = np.char.add(np.char.add(data['video'][ref_mask].astype(str), '|'),
++                            data['image_id'][ref_mask].astype(str))
++    ref = identity_pairs(Z[ref_mask], image_key, data['instance_id'][ref_mask])
++    ref_in = float(np.mean(np.linalg.norm(ref @ E, axis=1))) if len(ref) else np.nan
++    ref_out = float(np.mean(np.linalg.norm(complement(ref, E), axis=1))) if len(ref) else np.nan
++    for fam, lv in sorted(fams.items()):
++        for level, k in sorted(lv):
++            X = data[k][te].astype(np.float64)
++            ok = np.isfinite(X).all(1)
++            if ok.sum() < 10:
++                continue
++            Dlt = normalize(X[ok]) - Z[te][ok]
++            strength = (1 - level) if fam in ('dark', 'fapk') else level
++            rows.append({'family': fam, 'level': level, 'strength': strength,
++                         'n': int(ok.sum()),
++                         'n_identity_reference_pairs': len(ref),
++                         'in_E_norm': float(np.mean(np.linalg.norm(Dlt @ E, axis=1))),
++                         'out_E_norm': float(np.mean(np.linalg.norm(complement(Dlt, E), axis=1))),
++                         'share_in_E': energy(Dlt, E),
++                         'identity_ref_in_E_norm': ref_in,
++                         'identity_ref_out_E_norm': ref_out})
++    return rows
++
++
++def identity_pairs(Z, image_id, inst, max_pairs=20000, seed=0):
++    rng = np.random.RandomState(seed)
++    out = []
++    for im in np.unique(image_id):
++        idx = np.where(image_id == im)[0]
++        if len(idx) < 2:
++            continue
++        a, b = rng.choice(idx, 2, replace=False)
++        if inst[a] != inst[b]:
++            out.append(Z[a] - Z[b])
++        if len(out) >= max_pairs:
++            break
++    return np.array(out) if out else np.zeros((0, Z.shape[1]))
++
++
++# --------------------------------------------------------------------------- #
++def tables(args, p1, p2, p3, m, D):
++    qs = [q for q in ('Real weather shift', 'Paired real weather', 'FAP residual',
++                      'Identity', 'Weather/Identity') if q in p1[0]]
++    head = ' & '.join(['Subspace ($m{=}%d$)' % m] + [q.replace('/', '\\,/\\,') for q in qs])
++    lines = ['\\begin{tabular}{l' + 'c' * len(qs) + '}', '\\toprule', head + ' \\\\',
++             '\\midrule']
++    for r in p1:
++        lines.append(' & '.join([r['subspace'].replace('_', r'\_')] + [
++            fmt(r.get(q), 1 if q == 'Weather/Identity' else 3) for q in qs]) + ' \\\\')
++    lines += ['\\bottomrule', '\\end{tabular}']
++    write_tex(osp.join(args.out, 'tables', 'tab_P1_energy.tex'), '\n'.join(lines) + '\n')
++
++    lines = ['\\begin{tabular}{lcc}', '\\toprule',
++             'Features & Weather probe (bal.\\ acc.) & ID retrieval mAP \\\\', '\\midrule']
++    for r in p2:
++        lines.append('%s & %s & %s \\\\' % (r['space'], fmt(r['weather_bacc']),
++                                            fmt(r['id_mAP'])))
++    lines += ['\\midrule', 'Chance & %s & -- \\\\' % fmt(p2[0]['chance']),
++              '\\bottomrule', '\\end{tabular}']
++    write_tex(osp.join(args.out, 'tables', 'tab_P2_dissociation.tex'), '\n'.join(lines) + '\n')
++
++    cols = ['weather_bacc', 'weather_gap', 'id_mAP'] + (
++        ['cross_weather_mAP'] if any('cross_weather_mAP' in r for r in p3) else [])
++    lines = ['\\begin{tabular}{lc' + 'c' * len(cols) + '}', '\\toprule',
++             'Shrunk subspace & $\\beta$ & ' + ' & '.join(c.replace('_', ' ') for c in cols)
++             + ' \\\\', '\\midrule']
++    for r in p3:
++        lines.append('%s & %.2f & %s \\\\' % (r['subspace'], r['beta'],
++                                              ' & '.join(fmt(r.get(c)) for c in cols)))
++    lines += ['\\bottomrule', '\\end{tabular}']
++    write_tex(osp.join(args.out, 'tables', 'tab_P3_intervention.tex'), '\n'.join(lines) + '\n')
++
++
++def figures(args, data, Z, E, bases, randoms, weather, video, inst, te, p1, p4, p5):
++    import matplotlib
++    matplotlib.use('Agg')
++    import matplotlib.pyplot as plt
++    from matplotlib.backends.backend_pdf import PdfPages
++    from matplotlib.lines import Line2D
++    plt.rcParams.update({'font.size': 10, 'axes.titlesize': 11,
++                         'axes.labelsize': 11, 'xtick.labelsize': 9,
++                         'ytick.labelsize': 9, 'pdf.fonttype': 42})
++    fdir = osp.join(args.out, 'figs')
++    os.makedirs(fdir, exist_ok=True)
++    review_pdf = PdfPages(osp.join(fdir, 'all_figures.pdf'))
++    rng = np.random.RandomState(args.seed)
++    wnames = [w for w in args.domains if w in set(weather)] or list(np.unique(weather))
++    if args.paired:
++        wnames = list(np.unique(weather))
++    cmap = plt.get_cmap('tab10')
++    wcol = {w: cmap(i % 10) for i, w in enumerate(wnames)}
++    display = {'clear_holdout_45v': 'Clear (holdout)', 'overcast': 'Overcast',
++               'rainy': 'Rainy', 'dawn_dusk': 'Dawn/Dusk', 'night': 'Night'}
++    pretty = lambda s: display.get(s, s)
++
++    def save(fig, name, rect=None):
++        fig.tight_layout(rect=rect)
++        fig.savefig(osp.join(fdir, name + '.pdf'), bbox_inches='tight')
++        fig.savefig(osp.join(fdir, name + '.png'), dpi=200, bbox_inches='tight')
++        review_pdf.savefig(fig, bbox_inches='tight')
++        plt.close(fig)
++
++    # ---- Fig. 1: 2x2 (E-plane / complement t-SNE) x (weather / identity)
++    ti = np.where(te)[0]
++    sub = rng.choice(ti, min(4000, len(ti)), replace=False)
++    key = np.char.add(np.char.add(video.astype(str), '|'), inst.astype(str))
++    tracks = []
++    for w in wnames:                               # 2 long tracks per weather
++        kk, cnt = np.unique(key[sub][weather[sub] == w], return_counts=True)
++        tracks += list(kk[np.argsort(-cnt)[:2]])
++    tcol = {t: plt.get_cmap('tab20')(i * 2 % 20) for i, t in enumerate(tracks)}
++    A = Z[sub] @ E
++    C = complement(Z[sub], E)
++    try:
++        from sklearn.decomposition import PCA
++        from sklearn.manifold import TSNE
++        Cp = PCA(n_components=min(50, C.shape[1]), random_state=0).fit_transform(C)
++        T = TSNE(n_components=2, perplexity=30, init='pca', random_state=0).fit_transform(Cp)
++        complement_method = 't-SNE'
++    except Exception as e:
++        print('[warn] t-SNE failed (%r); using PCA' % (e,))
++        T = C @ top_eig(cov_of(C), 2)
++        complement_method = 'PCA'
++    fig, ax = plt.subplots(2, 2, figsize=(10.4, 8.2))
++    for col, (P, ttl) in enumerate(((A, 'ICS subspace $(e_1,e_2)$'),
++                                    (T, 'Complement (%s)' % complement_method))):
++        a = ax[0, col]
++        for w in wnames:
++            mw = weather[sub] == w
++            a.scatter(P[mw, 0], P[mw, 1], s=4, alpha=.5, color=wcol[w], label=pretty(w))
++        a.set_title(ttl + ', colored by weather', fontsize=9)
++        a = ax[1, col]
++        a.scatter(P[:, 0], P[:, 1], s=2, color='0.85')
++        for t in tracks:
++            mt = key[sub] == t
++            a.scatter(P[mt, 0], P[mt, 1], s=9, color=tcol[t])
++        a.set_title(ttl + ', colored by identity', fontsize=9)
++    handles, labels = ax[0, 0].get_legend_handles_labels()
++    fig.legend(handles, labels, markerscale=3, fontsize=9, loc='upper center',
++               ncol=len(wnames), frameon=False)
++    fig.legend([Line2D([], [], marker='o', ls='', color=tcol[t]) for t in tracks],
++               ['ID %d' % (i + 1) for i in range(len(tracks))],
++               loc='lower center', ncol=5, fontsize=8, frameon=False,
++               title='Highlighted tracks (video + instance)')
++    for a in ax.ravel():
++        a.set_xticks([])
++        a.set_yticks([])
++    save(fig, 'fig1_quadrant', rect=(0, .11, 1, .95))
++
++    # ---- Fig. 2: perturbation arrows in (e1, top complement PC)
++    c1 = top_eig(cov_of(complement(Z[te], E)), 1)[:, 0]
++    fig, ax = plt.subplots(figsize=(4.6, 4.0))
++    if args.paired:
++        arrows = paired_arrows(Z, data, te, args.ref_variant, rng)
++        for v, (a0, a1) in arrows.items():
++            ax.quiver(a0 @ E[:, 0], a0 @ c1, (a1 - a0) @ E[:, 0], (a1 - a0) @ c1,
++                      angles='xy', scale_units='xy', scale=1, width=.004,
++                      color=wcol.get(v, 'k'), label='%s -> %s' % (args.ref_variant, v))
++            ax.update_datalim(np.column_stack((a1 @ E[:, 0], a1 @ c1)))
++        ax.legend(fontsize=7)
++    elif 'feat_fap' in data:
++        idx = rng.choice(ti, min(60, len(ti)), replace=False)
++        a0 = Z[idx]
++        a1 = normalize(data['feat_fap'][idx].astype(np.float64))
++        ax.quiver(a0 @ E[:, 0], a0 @ c1, (a1 - a0) @ E[:, 0], (a1 - a0) @ c1,
++                  angles='xy', scale_units='xy', scale=1, width=.004,
++                  color=[wcol[w] for w in weather[idx]])
++        ax.set_title('clean $\\rightarrow$ FAP, same object', fontsize=9)
++        ax.scatter(a0 @ E[:, 0], a0 @ c1, s=8,
++                   c=[wcol[w] for w in weather[idx]], zorder=3)
++        ax.update_datalim(np.column_stack((a1 @ E[:, 0], a1 @ c1)))
++        ax.legend([Line2D([], [], color=wcol[w], marker='o', ls='') for w in wnames],
++                  [pretty(w) for w in wnames], fontsize=7, loc='upper left',
++                  bbox_to_anchor=(1.02, 1), frameon=False)
++    ax.set_xlabel('$e_1$ (ICS)')
++    ax.set_ylabel('top complement direction')
++    ax.autoscale_view()
++    ax.set_aspect('equal', adjustable='datalim')
++    save(fig, 'fig2_arrows')
++
++    # ---- Fig. 3: crops at both ends of e1
++    if args.montage:
++        montage(args, data, Z, E, te, fdir, plt, review_pdf)
++
++    # ---- Fig. 4: dose response
++    if p4:
++        fams = sorted(set(r['family'] for r in p4))
++        fig, ax = plt.subplots(1, 2, figsize=(11.0, 4.7))
++        names = {'dark': 'darkening', 'fog': 'fog blend', 'fapk': 'FAP masking'}
++        for i, fam in enumerate(fams):
++            rr = sorted([r for r in p4 if r['family'] == fam], key=lambda r: r['strength'])
++            x = [r['strength'] for r in rr]
++            ax[0].plot(x, [r['in_E_norm'] for r in rr], '-o', color=cmap(i),
++                       label=names.get(fam, fam) + ' (in $E$)')
++            ax[0].plot(x, [r['out_E_norm'] for r in rr], '--o', color=cmap(i),
++                       alpha=.6, label=names.get(fam, fam) + ' (in $E^\\perp$)')
++            ax[1].plot(x, [r['share_in_E'] for r in rr], '-o', color=cmap(i),
++                       label=names.get(fam, fam))
++        ax[0].axhline(p4[0]['identity_ref_in_E_norm'], color='k', lw=1,
++                      label='other object (in $E$)')
++        ax[0].axhline(p4[0]['identity_ref_out_E_norm'], color='k', lw=1, ls='--',
++                      label='other object (in $E^\\perp$)')
++        m = E.shape[1]
++        ax[1].axhline(m / float(Z.shape[1]), color='0.5', ls=':', label='chance $m/D$')
++        ax[0].set_xlabel('perturbation strength')
++        ax[1].set_xlabel('perturbation strength')
++        ax[0].set_ylabel('mean embedding change')
++        ax[1].set_ylabel('share of change inside $E$')
++        handles, labels = ax[0].get_legend_handles_labels()
++        chance_handles, chance_labels = ax[1].get_legend_handles_labels()
++        fig.legend(handles + chance_handles[-1:], labels + chance_labels[-1:],
++                   fontsize=8, loc='upper center', ncol=3, frameon=False)
++        ax[1].set_ylim(bottom=0)
++        save(fig, 'fig4_dose_response', rect=(0, 0, 1, .79))
++
++    # ---- Fig. 5: energy bars
++    qs = [q for q in ('Real weather shift', 'Paired real weather', 'FAP residual',
++                      'Photometric residual', 'Identity') if q in p1[0]]
++    subs = [r for r in p1 if r['subspace'] != 'Chance m/D']
++    fig, ax = plt.subplots(figsize=(11.0, 4.5))
++    wbar = 0.8 / len(subs)
++    for i, r in enumerate(subs):
++        ax.bar(np.arange(len(qs)) + i * wbar, [r[q] for q in qs], wbar, label=r['subspace'])
++    ax.axhline(subs[0]['m'] / float(Z.shape[1]), color='k', ls=':', lw=1, label='chance')
++    ax.set_xticks(np.arange(len(qs)) + 0.4 - wbar / 2)
++    labels = [('Domain shift\n(relative to Clear)' if getattr(args, 'ref_domain', None)
++               else 'Domain mean shift') if q == 'Real weather shift' else q for q in qs]
++    ax.set_xticklabels(labels, fontsize=9)
++    ax.set_ylabel('energy share in subspace')
++    handles, labels = ax.get_legend_handles_labels()
++    fig.legend(handles, labels, fontsize=8, ncol=3, loc='upper center', frameon=False)
++    ax.set_ylim(bottom=0)
++    save(fig, 'fig5_energy_bars', rect=(0, 0, 1, .82))
++
++    # ---- Fig. 6: stage x domain heatmap
++    if p5:
++        cols = [k for k in p5[0] if k.startswith('shift:')]
++        M = np.array([[r.get(c, np.nan) for c in cols] for r in p5])
++        fig, ax = plt.subplots(figsize=(7.2, 4.1))
++        im = ax.imshow(M, cmap='viridis', aspect='auto', vmin=0, vmax=1)
++        ax.set_xticks(range(len(cols)))
++        ax.set_xticklabels([pretty(c[6:]) for c in cols], fontsize=10)
++        ax.set_yticks(range(len(p5)))
++        ax.set_yticklabels(['After %s' % pretty(r['adapted_domain']) for r in p5], fontsize=10)
++        for i in range(M.shape[0]):
++            for j in range(M.shape[1]):
++                ax.text(j, i, fmt(M[i, j], 3), ha='center', va='center',
++                        color='black' if M[i, j] > .5 else 'white', fontsize=10)
++        fig.colorbar(im, ax=ax, label='shift energy in ICS subspace')
++        save(fig, 'fig6_stage_heatmap')
++    page_count = review_pdf.get_pagecount()
++    review_pdf.close()
++    with open(osp.join(args.out, 'figure_manifest.json'), 'w') as stream:
++        json.dump(dict(combined_pdf='figs/all_figures.pdf', page_count=page_count,
++                       complement_visualization=complement_method), stream, indent=2)
++
++
++def paired_arrows(Z, data, te, ref, rng, n=12):
++    key = np.char.add(np.char.add(data['scene'].astype(str), '|'),
++                      np.char.add(np.char.add(data['frame_id'].astype(str), '|'),
++                                  data['instance_id'].astype(str)))
++    ref_idx = {key[i]: i for i in np.where(te & (data['variant'] == ref))[0]}
++    out = {}
++    for v in np.unique(data['variant']):
++        if v == ref:
++            continue
++        cand = [i for i in np.where(te & (data['variant'] == v))[0] if key[i] in ref_idx]
++        if not cand:
++            continue
++        sel = rng.choice(cand, min(n, len(cand)), replace=False)
++        out[v] = (Z[[ref_idx[key[i]] for i in sel]], Z[sel])
++    return out
++
++
++def montage(args, data, Z, E, te, fdir, plt, review_pdf=None):
++    try:
++        import cv2
++        read = lambda p: cv2.imread(p)[:, :, ::-1]
++    except Exception:
++        from matplotlib.image import imread as read
++    ti = np.where(te)[0]
++    records = []
++    names = {'clear_holdout_45v': 'Clear', 'overcast': 'Overcast',
++             'rainy': 'Rainy', 'dawn_dusk': 'Dawn/Dusk', 'night': 'Night'}
++    for j in range(E.shape[1]):
++        proj = Z[ti] @ E[:, j]
++        order = np.argsort(proj)
++        picks = []
++        for side in (order[:400], order[::-1][:400]):
++            seen, chosen = set(), []
++            for k in side:
++                i = ti[k]
++                kk = (data['video'][i], int(data['instance_id'][i]))
++                if kk in seen:
++                    continue
++                seen.add(kk)
++                chosen.append(i)
++                if len(chosen) == 10:
++                    break
++            picks.append(chosen)
++        fig, ax = plt.subplots(2, 10, figsize=(14, 3.6))
++        for r, chosen in enumerate(picks):
++            for c in range(10):
++                a = ax[r, c]
++                a.axis('off')
++                if c >= len(chosen):
++                    continue
++                i = chosen[c]
++                try:
++                    img = read(str(data['img_path'][i]))
++                    x0, y0, x1, y1 = [int(round(v)) for v in data['bbox'][i]]
++                    a.imshow(img[max(y0, 0):y1, max(x0, 0):x1])
++                except Exception:
++                    continue
++                domain = str(data['weather'][i])
++                projection = float(Z[i] @ E[:, j])
++                a.set_title('%s\n%+.3f' % (names.get(domain, domain), projection), fontsize=8)
++                records.append(dict(axis=j + 1, side='low' if r == 0 else 'high',
++                                    column=c + 1, domain=domain, projection=projection,
++                                    video=str(data['video'][i]),
++                                    instance_id=int(data['instance_id'][i]),
++                                    frame_id=int(data['frame_id'][i]),
++                                    img_path=str(data['img_path'][i]),
++                                    bbox=data['bbox'][i].tolist()))
++        ax[0, 0].text(-0.3, 0.5, 'low $e_%d$' % (j + 1), transform=ax[0, 0].transAxes,
++                      ha='right', fontsize=8)
++        ax[1, 0].text(-0.3, 0.5, 'high $e_%d$' % (j + 1), transform=ax[1, 0].transAxes,
++                      ha='right', fontsize=8)
++        fig.tight_layout()
++        fig.savefig(osp.join(fdir, 'fig3_montage_e%d.pdf' % (j + 1)))
++        fig.savefig(osp.join(fdir, 'fig3_montage_e%d.png' % (j + 1)), dpi=200)
++        if review_pdf is not None:
++            review_pdf.savefig(fig, bbox_inches='tight')
++        plt.close(fig)
++    write_csv(osp.join(args.out, 'csv', 'figure3_crop_manifest.csv'), records)
++
++
++if __name__ == '__main__':
++    main()

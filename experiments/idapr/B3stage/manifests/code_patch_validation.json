@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "patch": "code_changes.patch",
+      "sha256": "57465c1e584e4991627dd8a4d7e967c002eb1d6058dbcee7eb0eefa52fe7a357",
+      "git_apply_check_passed": true
+    },
+    {
+      "patch": "code_training.patch",
+      "sha256": "86186d7f77b3a0da8281653a9be33c6271b177d5e5ea64b8d12e54108e1dab45",
+      "git_apply_check_passed": true
+    }
+  ],
+  "baseline": "actual X3 HF runtime",
+  "post_training_difference": "serialization and audit only; exact training patch preserved"
+}

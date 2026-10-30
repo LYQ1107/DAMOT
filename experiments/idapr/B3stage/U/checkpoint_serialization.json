@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "group": "B3",
+      "original_checkpoint": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/B3/episode/adapt/stage04_after_night/epoch_2.pth",
+      "original_sha256": "362cfacc34af71375ce4d3b7ed81444ff5ef9afd4f652b397a6edcac477dc424",
+      "original_basis_keys": [
+        "track_head.roi_proto_space_basis",
+        "teacher_track_head.roi_proto_space_basis"
+      ],
+      "retained_state_keys": 752,
+      "strict_model_load": true,
+      "pytorch_state_equal": true,
+      "mmcv_state_equal": true,
+      "learned_tensors_bitwise_equal": true,
+      "no_training_or_inference_repeated": true,
+      "exported_checkpoint": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/B3/episode/adapt/stage04_after_night/epoch_2_export.pth",
+      "exported_sha256": "d4b99ba9873792624cfda729982a8039cfe8a2138392cdd30a84e99cb450b62c",
+      "all_other_checkpoint_payload_bitwise_equal": true
+    },
+    {
+      "group": "R",
+      "original_checkpoint": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/R/episode/adapt/stage04_after_night/epoch_2.pth",
+      "original_sha256": "7a7f71697d98a7d2c7bc868bd0f9bd1c930f2b0617198fc4643debe50ad5da72",
+      "original_basis_keys": [],
+      "retained_state_keys": 752,
+      "strict_model_load": true,
+      "pytorch_state_equal": true,
+      "mmcv_state_equal": true,
+      "learned_tensors_bitwise_equal": true,
+      "no_training_or_inference_repeated": true,
+      "exported_checkpoint": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/runs/R/episode/adapt/stage04_after_night/epoch_2.pth",
+      "exported_sha256": "7a7f71697d98a7d2c7bc868bd0f9bd1c930f2b0617198fc4643debe50ad5da72",
+      "all_other_checkpoint_payload_bitwise_equal": true
+    }
+  ],
+  "cause": "Old MMCV get_state_dict deliberately saves nonpersistent buffers; the final code adds a release-only state-dict exclusion hook.",
+  "original_training_audit_flag_limit": "The original hook checked torch state_dict only. Its basis_not_persisted_in_checkpoint flag did not verify the MMCV file.",
+  "training_and_evaluation_code_preserved": true,
+  "numerical_training_code_unchanged": true
+}

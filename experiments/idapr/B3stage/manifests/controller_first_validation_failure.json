@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "pid": 19185,
+  "time": 1793355155.4511142,
+  "error": "Traceback (most recent call last):\n  File \"/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/controller.py\", line 98, in <module>\n    main()\n  File \"/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/controller.py\", line 90, in main\n    subprocess.run([PY, str(Q / 'scripts/validate_completed.py')], check=True,\n  File \"/home/liuyeqiang/anaconda3/lib/python3.9/subprocess.py\", line 528, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python', '/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/validate_completed.py']' returned non-zero exit status 1.\n"
+}

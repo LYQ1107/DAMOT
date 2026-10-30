@@ -1,0 +1,16 @@
+{
+  "pid": 31470,
+  "command": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/gpu_job.py",
+    "--name",
+    "U3_smoke",
+    "--gpus",
+    "1",
+    "--prefer",
+    "2,3,4,5,6,7,8,9",
+    "--",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/smoke_B3.py"
+  ]
+}

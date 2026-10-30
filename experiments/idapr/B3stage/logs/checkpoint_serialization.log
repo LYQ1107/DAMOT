@@ -1,0 +1,15 @@
+2026-10-30 10:15:45,318 - mmtrack - INFO - [APR_SPACE] mode=release k=2 gamma=1.0 basis=/data1/liuyeqiang/idapr_20261030_153059/B3stage/basis/E_n_k2.npy sha256=9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba
+2026-10-30 10:15:45,319 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 10:15:45,319 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 10:15:45,319 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 10:15:45,854 - mmtrack - INFO - [APR_SPACE] mode=release k=2 gamma=1.0 basis=/data1/liuyeqiang/idapr_20261030_153059/B3stage/basis/E_n_k2.npy sha256=9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba
+2026-10-30 10:15:45,855 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 10:15:45,855 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 10:15:45,855 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 10:15:53,487 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 10:15:53,487 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 10:15:53,487 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 10:15:54,026 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 10:15:54,026 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 10:15:54,026 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+CHECKPOINT_SERIALIZATION_PASSED

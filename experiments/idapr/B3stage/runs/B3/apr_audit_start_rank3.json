@@ -1,0 +1,23 @@
+{
+  "tag": "start",
+  "rank": 3,
+  "epoch": 0,
+  "iteration": 0,
+  "total_batches": 0,
+  "history_domains": 3,
+  "history_names": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "mode": "release",
+  "coupling": false,
+  "coupling_beta": 1.0,
+  "coupling_basis": "ics",
+  "coupling_metric": "projected_cosine",
+  "basis_sha256": "9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba",
+  "fixed_basis_unchanged": true,
+  "basis_not_persisted_in_checkpoint": true,
+  "num_updates_start": 660,
+  "num_updates": 660
+}

@@ -1,0 +1,16 @@
+{
+  "pid": 37284,
+  "command": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/gpu_job.py",
+    "--name",
+    "extractor_parity",
+    "--gpus",
+    "1",
+    "--prefer",
+    "7,8,9,3,4,5,6,2",
+    "--",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/check_extractor_parity.py"
+  ]
+}

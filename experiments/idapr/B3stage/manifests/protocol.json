@@ -1,0 +1,28 @@
+{
+  "authorized_utc": "2026-10-30T08:06:54.006601+00:00",
+  "scope": "B3 release nuisance2 and R existing HF ICS coupling only; no B1/B2",
+  "formal_groups": [
+    "B3",
+    "R"
+  ],
+  "B0": "reuse X3-0; no formal baseline retraining",
+  "training_seed": 1790355234,
+  "epochs": 2,
+  "gpus_per_group": 4,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "multiseed": false,
+  "requires_U1_U2_U3_pass_before_formal_training": true,
+  "domains": [
+    "night",
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "difference_threshold_HOTA": 0.3,
+  "R": "native HF coupling true, original beta/basis/metric, space full",
+  "B3": "coupling false, release fixed teacher-estimated nuisance2",
+  "code_source": "isolated copy of the actual X3 HF runtime, preserving its warmstart, checkpointing and audit fixes",
+  "new_outputs_only_under": "/data1/liuyeqiang/idapr_20261030_153059/B3stage",
+  "U3_reference": "No B0 training rerun. Report existing B0 first40 logged steps (20-step averages), and an exact 50-step matched full-space counterfactual on B3 features."
+}

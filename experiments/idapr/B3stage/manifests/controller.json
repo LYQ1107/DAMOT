@@ -1,0 +1,12 @@
+{
+  "status": "experiments_complete_awaiting_publication",
+  "pid": 40959,
+  "time": 1793355437.5157666,
+  "groups": [
+    "B3",
+    "R"
+  ],
+  "single_seed": 1790355234,
+  "recovery": "Serialization-only export and MMCV hook verified on CPU; no model run repeated.",
+  "original_failure": "controller_first_validation_failure.json"
+}

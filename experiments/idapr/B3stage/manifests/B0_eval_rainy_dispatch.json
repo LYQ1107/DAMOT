@@ -1,0 +1,26 @@
+{
+  "pid": 30858,
+  "command": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/gpu_job.py",
+    "--name",
+    "B0_eval_rainy",
+    "--gpus",
+    "1",
+    "--prefer",
+    "3,4,5,6,7,8,9,2",
+    "--",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/scripts/evaluate.py",
+    "--model",
+    "HF",
+    "--domain",
+    "rainy",
+    "--checkpoint",
+    "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0/episode/adapt/stage04_after_night/epoch_2.pth",
+    "--out",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/evaluation/B0/rainy",
+    "--beta",
+    "0"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "basis": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/basis/E_n_k2.npy",
+  "sha256": "9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba",
+  "shape": [
+    256,
+    2
+  ],
+  "source_npz": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/feats/HF_stage3_teacher/dawn_dusk.npz",
+  "source_npz_sha256": "8eea0d95ab6b46f9e3a99c281dcee436003c3a7e16ddaa4ec00abfe7d8a1ce8e",
+  "views": [
+    "clean",
+    "fap",
+    "photo",
+    "student"
+  ],
+  "all_Dawn_Dusk_videos_planned": 33,
+  "planned_frames": 990,
+  "frame_sampling": "unchanged extractor defaults: first30frames per video, stride2; all33videos",
+  "teacher_score_thr": 0.75,
+  "identity_basis_discarded": true,
+  "stage_A_reference": "/data1/liuyeqiang/idapr_20261030_153059/A/HF/bases/HF_stage3_nuisance_k2.npy",
+  "stage_A_reference_sha256": "431605fa763d13387a8e777f9bf95190b27aa62b1cc1b3256bcad26d225bc652",
+  "principal_angles_to_A_HF_stage3_nuisance2_deg": [
+    57.923654830807656,
+    76.75648715863181
+  ],
+  "angle_median_deg": 67.34007099471974,
+  "angle_max_deg": 76.75648715863181,
+  "rois": 2851,
+  "images": 870,
+  "videos_with_teacher_rois": 33,
+  "minimum_teacher_score": 0.7505794763565063,
+  "instance_ids": "all -1",
+  "all_boxes_from_teacher": true,
+  "n_fit_rois": 2851,
+  "n_fit_images": 870,
+  "n_multi_box_images": 724,
+  "n_between": 2705,
+  "n_within": 8553,
+  "eps": 2.779107262206291e-05,
+  "eps_ratio": 0.1,
+  "within_trace": 0.07114514591248104,
+  "top_eigs": [
+    196.4886514966837,
+    83.51503594899769,
+    58.89011430997629,
+    30.12146195314143,
+    28.425879953052778,
+    22.651743976869064,
+    19.291246472658646,
+    16.93592077350574,
+    14.932912863012755,
+    14.308516332699465,
+    13.110249746047064,
+    11.997815254930048,
+    11.182025313309065,
+    10.207966352729466,
+    9.956409434454706,
+    9.43611114117214
+  ]
+}

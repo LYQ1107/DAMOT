@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "iterations": 50,
+  "seed": 1790355234,
+  "gpus": 1,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "history_domains": 3,
+  "all_APR_losses_finite_nonzero": true,
+  "APR_loss_mean": 0.0019361446611583233,
+  "paired_full_reference_mean": 0.0020779050529003145,
+  "release_to_paired_full_ratio": 0.9317772525052943,
+  "mean_in_share": 0.06775002201536022,
+  "native_B0_APR_mean": 0.00211,
+  "release_to_native_B0_ratio": 0.9176041048143713,
+  "native_B0_reference_iterations": 40,
+  "native_B0_reference_note": "Existing four-GPU B0 has 20-step averages; first40 available, unpaired. No B0 training rerun.",
+  "paired_reference_note": "Same selected features/prototypes/gate, full-space cosine loss, before release; 50 exact matching steps.",
+  "basis_sha256": "9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba",
+  "smoke_weights_used_for_formal_training": false
+}

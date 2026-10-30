@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "group": "B3",
+      "matched_keys": 752,
+      "all_tensors_bitwise_equal": true,
+      "teacher_and_student_loaded": true,
+      "history_domains": 3,
+      "num_updates": 660,
+      "mode": "release",
+      "coupling": false,
+      "basis_not_in_state_dict": true
+    },
+    {
+      "group": "R",
+      "matched_keys": 752,
+      "all_tensors_bitwise_equal": true,
+      "teacher_and_student_loaded": true,
+      "history_domains": 3,
+      "num_updates": 660,
+      "mode": "full",
+      "coupling": true,
+      "basis_not_in_state_dict": true
+    }
+  ],
+  "stage3_snapshot_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "shared_apr_history_sha256": "a8c2ea74e8d0d9aed6e069f9a7cb338bd0f39599a2e9f455dc07f8a6d2cf74bc"
+}

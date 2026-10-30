@@ -1,0 +1,96 @@
+2026-10-30 08:31:05,101 - mmtrack - INFO - [APR_SPACE] mode=release k=2 gamma=1.0 basis=/data1/liuyeqiang/idapr_20261030_153059/B3stage/basis/E_n_k2.npy sha256=9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba
+2026-10-30 08:31:05,102 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 08:31:05,102 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 08:31:05,102 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 08:31:05,991 - mmtrack - INFO - [APR_SPACE] mode=release k=2 gamma=1.0 basis=/data1/liuyeqiang/idapr_20261030_153059/B3stage/basis/E_n_k2.npy sha256=9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba
+2026-10-30 08:31:05,992 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 08:31:05,992 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 08:31:05,992 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+loading annotations into memory...
+Done (t=0.46s)
+creating index...
+index created!
+2026-10-30 08:31:07,409 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage night, history_domains=[]
+2026-10-30 08:31:07,410 - mmtrack - INFO - [APR_SPACE] smoke stage4 history_domains=3 seed=1790355234
+2026-10-30 08:31:09,222 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/idapr_20261030_153059/B3stage/U/U3
+2026-10-30 08:31:09,223 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) EMATrainHook                       
+(LOW         ) ICSQuickAuditHook                  
+(LOW         ) APRSpaceAuditHook                  
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(LOW         ) ICSQuickAuditHook                  
+(LOW         ) APRSpaceAuditHook                  
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) StopSmokeAfterIterationsHook       
+ -------------------- 
+after_train_epoch:
+(LOW         ) ICSQuickAuditHook                  
+(LOW         ) APRSpaceAuditHook                  
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_epoch:
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(LOW         ) ICSQuickAuditHook                  
+(LOW         ) APRSpaceAuditHook                  
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+2026-10-30 08:31:09,223 - mmtrack - INFO - workflow: [('train', 1)], max: 2 epochs
+2026-10-30 08:31:09,227 - mmtrack - INFO - [ICS_QUICK] {'tag': 'start', 'rank': 0, 'epoch': 0, 'iteration': 0, 'history_domains': 3, 'history_domain_names': ['overcast', 'rainy', 'dawn_dusk'], 'num_updates': 660, 'num_updates_start': 660, 'initialized': True, 'total_batches': 0, 'trim_triggered_batches': 0, 'trim_trigger_ratio': None, 'causal_freeze_random_basis': False}
+2026-10-30 08:31:09,250 - mmtrack - INFO - [APR_SPACE_AUDIT] {'tag': 'start', 'rank': 0, 'epoch': 0, 'iteration': 0, 'total_batches': 0, 'history_domains': 3, 'history_names': ['overcast', 'rainy', 'dawn_dusk'], 'mode': 'release', 'coupling': False, 'coupling_beta': 1.0, 'coupling_basis': 'ics', 'coupling_metric': 'projected_cosine', 'basis_sha256': '9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba', 'fixed_basis_unchanged': True, 'basis_not_persisted_in_checkpoint': True, 'num_updates_start': 660, 'num_updates': 660}
+2026-10-30 08:31:33,145 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=-1.1281 std=0.8174 min=-2.1179 max=2.6400
+2026-10-30 08:31:33,147 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-1.1087 std=0.8012 min=-2.1179 max=2.6400
+2026-10-30 08:31:33,148 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=-1.1142 std=0.8491 min=-2.1179 max=2.6400
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] enabled=True
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] mode=proto_shrinkage_cov_ema
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] cov_momentum=0.98
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] qr_orthogonalize=True
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] num_pcs=2
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] trim_alpha=0.1
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] loss_weight=0.025
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] min_samples=96
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] normalize_feats=True
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] class_ids=None
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] score_thr=0.7
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] use_scores=False
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] normalized_tensor_spa=False
+2026-10-30 08:31:34,552 - mmtrack - INFO - [CAUSAL_PCA] use_roi_proto_memory=True mode=stage
+2026-10-30 08:36:33,263 - mmtrack - INFO - [ICS_QUICK] {'tag': 'progress', 'rank': 0, 'epoch': 0, 'iteration': 19, 'history_domains': 3, 'history_domain_names': ['overcast', 'rainy', 'dawn_dusk'], 'num_updates': 662, 'num_updates_start': 660, 'initialized': True, 'total_batches': 20, 'trim_triggered_batches': 20, 'trim_trigger_ratio': 1.0, 'causal_freeze_random_basis': False}
+2026-10-30 08:36:33,264 - mmtrack - INFO - [APR_SPACE_AUDIT] {'tag': 'progress', 'rank': 0, 'epoch': 0, 'iteration': 19, 'total_batches': 20, 'history_domains': 3, 'history_names': ['overcast', 'rainy', 'dawn_dusk'], 'mode': 'release', 'coupling': False, 'coupling_beta': 1.0, 'coupling_basis': 'ics', 'coupling_metric': 'projected_cosine', 'basis_sha256': '9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba', 'fixed_basis_unchanged': True, 'basis_not_persisted_in_checkpoint': True, 'num_updates_start': 660, 'num_updates': 662}
+2026-10-30 08:36:33,265 - mmtrack - INFO - Epoch [1][20/455]	lr: 3.996e-05, eta: 4:00:18, time: 16.200, data_time: 0.276, memory: 22342, rpn_distillation_loss: 0.4555, roi_distillation_loss: 0.0273, loss_track: 0.2541, loss_track_aux: 0.0952, loss_track_trim: 0.0064, loss_track_aux_trim: 0.0024, loss_roi_proto: 0.0020, loss: 0.8429, grad_norm: 28.7929
+2026-10-30 08:41:42,532 - mmtrack - INFO - [ICS_QUICK] {'tag': 'progress', 'rank': 0, 'epoch': 0, 'iteration': 39, 'history_domains': 3, 'history_domain_names': ['overcast', 'rainy', 'dawn_dusk'], 'num_updates': 666, 'num_updates_start': 660, 'initialized': True, 'total_batches': 40, 'trim_triggered_batches': 40, 'trim_trigger_ratio': 1.0, 'causal_freeze_random_basis': False}
+2026-10-30 08:41:42,533 - mmtrack - INFO - [APR_SPACE_AUDIT] {'tag': 'progress', 'rank': 0, 'epoch': 0, 'iteration': 39, 'total_batches': 40, 'history_domains': 3, 'history_names': ['overcast', 'rainy', 'dawn_dusk'], 'mode': 'release', 'coupling': False, 'coupling_beta': 1.0, 'coupling_basis': 'ics', 'coupling_metric': 'projected_cosine', 'basis_sha256': '9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba', 'fixed_basis_unchanged': True, 'basis_not_persisted_in_checkpoint': True, 'num_updates_start': 660, 'num_updates': 666}
+2026-10-30 08:41:42,534 - mmtrack - INFO - Epoch [1][40/455]	lr: 7.992e-05, eta: 3:49:33, time: 15.463, data_time: 0.088, memory: 22409, rpn_distillation_loss: 0.2978, roi_distillation_loss: 0.0263, loss_track: 0.2335, loss_track_aux: 0.0925, loss_track_trim: 0.0059, loss_track_aux_trim: 0.0023, loss_roi_proto: 0.0019, loss: 0.6601, grad_norm: 15.4142
+2026-10-30 08:44:15,578 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=50 mode=proto_shrinkage_cov_ema domain=night num_feats=56 update_ok=False skip_reason='insufficient_proto_centered(56)' eig1=0.1676 eig_ratio=0.2842 cov_trace=0.9159 pc_norm=1.0000 pc_drift=0.0645 loss_track_trim=0.00594 loss_track_aux_trim=0.00197
+2026-10-30 08:44:15,581 - mmtrack - INFO - [APR_SPACE] mode=release k=2 loss=0.3523024320602417 mean_in_share=0.07015101888010783 sha256=9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba
+2026-10-30 08:44:15,581 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=50 prototypes=300 mean_topk_sim=0.6211 loss=0.3523 weighted_loss=0.0018 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=50 gate_total_rois=50 gate_ratio=1.0
+2026-10-30 08:44:16,745 - mmtrack - INFO - [APR_SPACE_AUDIT] {'tag': 'smoke_end', 'rank': 0, 'epoch': 0, 'iteration': 49, 'total_batches': 50, 'history_domains': 3, 'history_names': ['overcast', 'rainy', 'dawn_dusk'], 'mode': 'release', 'coupling': False, 'coupling_beta': 1.0, 'coupling_basis': 'ics', 'coupling_metric': 'projected_cosine', 'basis_sha256': '9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba', 'fixed_basis_unchanged': True, 'basis_not_persisted_in_checkpoint': True, 'num_updates_start': 660, 'num_updates': 668}
+U3_PASSED {"status": "passed", "iterations": 50, "seed": 1790355234, "gpus": 1, "samples_per_gpu": 16, "workers_per_gpu": 2, "history_domains": 3, "all_APR_losses_finite_nonzero": true, "APR_loss_mean": 0.0019361446611583233, "paired_full_reference_mean": 0.0020779050529003145, "release_to_paired_full_ratio": 0.9317772525052943, "mean_in_share": 0.06775002201536022, "native_B0_APR_mean": 0.00211, "release_to_native_B0_ratio": 0.9176041048143713, "native_B0_reference_iterations": 40, "native_B0_reference_note": "Existing four-GPU B0 has 20-step averages; first40 available, unpaired. No B0 training rerun.", "paired_reference_note": "Same selected features/prototypes/gate, full-space cosine loss, before release; 50 exact matching steps.", "basis_sha256": "9aebdbe0790d5ee4a8f1504cbdcd53b966699666fe601e496c4c7eb9ad34a7ba", "smoke_weights_used_for_formal_training": false}

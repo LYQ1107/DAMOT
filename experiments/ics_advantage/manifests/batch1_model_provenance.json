@@ -1,0 +1,122 @@
+{
+  "training_seed": 1790355234,
+  "checkpoint_weights_published": false,
+  "checkpoints_retained_on_server": true,
+  "models": [
+    {
+      "group": "C0",
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C0/episode/adapt/stage04_after_night/epoch_2.pth",
+      "bytes": 681768729,
+      "sha256": "5e8035dd4e3d6462561e3921d0f713e6ec6d8e24ed0adb7a4b4a0cf63eaaffb8",
+      "epochs": 2,
+      "seed": 1790355234,
+      "config_diff_sha256": "52fab54734b00c1cf9cf409d671298030405b448d72205923d6b300f081d2fc2",
+      "evaluations": [
+        {
+          "domain": "night",
+          "frames": 7286,
+          "videos": 36,
+          "metrics_sha256": "61a208affae48a98ea5e3a5de0e769dd4c7d52bf45f117a39624c12d93ab8c04"
+        },
+        {
+          "domain": "dawn_dusk",
+          "frames": 6476,
+          "videos": 33,
+          "metrics_sha256": "7971e1ad5f05aa8d355cc071ff7a806cec734f875db4ceecd51b68abb86a7db9"
+        }
+      ]
+    },
+    {
+      "group": "C1",
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C1/episode/adapt/stage04_after_night/epoch_2.pth",
+      "bytes": 682301745,
+      "sha256": "11fdf2d00ccd14f834a899d263564e27cac0dcdcb03c5638574a64518bab129f",
+      "epochs": 2,
+      "seed": 1790355234,
+      "config_diff_sha256": "c61fa1fa9a8271f523dcbf5cc65906d748a1d4cf92024600c683fd69e12940d7",
+      "evaluations": [
+        {
+          "domain": "night",
+          "frames": 7286,
+          "videos": 36,
+          "metrics_sha256": "ae5093808b27b6ce842062fa519c3a215010e81df1d02ad3ff8a013e9f7aa2f6"
+        },
+        {
+          "domain": "dawn_dusk",
+          "frames": 6476,
+          "videos": 33,
+          "metrics_sha256": "b867ba965027a19732203218cca7d4878e1ce0ade2a901db21b748eca50b606c"
+        }
+      ]
+    },
+    {
+      "group": "C2",
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/adapt/stage04_after_night/epoch_2.pth",
+      "bytes": 682303601,
+      "sha256": "dbc2e689f140be0d8db38ff33012f98e04c8bc2b31ccebf14711d2fa4e1b0233",
+      "epochs": 2,
+      "seed": 1790355234,
+      "config_diff_sha256": "6b78314e684f5e862a1fe82dc949e38170260177d28f00c8ff1ca63334ddbb60",
+      "evaluations": [
+        {
+          "domain": "night",
+          "frames": 7286,
+          "videos": 36,
+          "metrics_sha256": "2d9f9db545c9a41d407b9725f2686fc8cdaa73d24fbdcfca3e0dab0fe136dd30"
+        },
+        {
+          "domain": "dawn_dusk",
+          "frames": 6476,
+          "videos": 33,
+          "metrics_sha256": "325485469e179c7913d1c185793655c44e0c62fbd394f53b5b1ad431535d0f64"
+        }
+      ]
+    },
+    {
+      "group": "C3",
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C3/episode/adapt/stage04_after_night/epoch_2.pth",
+      "bytes": 682303601,
+      "sha256": "a525d093572c48696a176e75fa2460d1f3f81222ec06f3e1b2592bf03c4dae71",
+      "epochs": 2,
+      "seed": 1790355234,
+      "config_diff_sha256": "52d7a28184bcbf0fa526ae3b7093bf71c031772be4d540568000330fa1f7c40f",
+      "evaluations": [
+        {
+          "domain": "night",
+          "frames": 7286,
+          "videos": 36,
+          "metrics_sha256": "4588ce51c9fca0c9ff342a5d7d6002a97b2ea9a953054bea044ba659d8788f06"
+        },
+        {
+          "domain": "dawn_dusk",
+          "frames": 6476,
+          "videos": 33,
+          "metrics_sha256": "5a41a0e67fe3e6043c3a80a31acdd01272a356393608583ec022997f0259636b"
+        }
+      ]
+    },
+    {
+      "group": "C4",
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C4/episode/adapt/stage04_after_night/epoch_2.pth",
+      "bytes": 682303601,
+      "sha256": "3c37586c9ed97a70fd110e482c5f97e6c8cf324318259433408f1dc841e2c7cf",
+      "epochs": 2,
+      "seed": 1790355234,
+      "config_diff_sha256": "91ea10ca8604469d37888aeac9a947d9b7ddb12b2399540628618845434a81b0",
+      "evaluations": [
+        {
+          "domain": "night",
+          "frames": 7286,
+          "videos": 36,
+          "metrics_sha256": "7ad128d007273e4f1214e664222f287b96d2a5b89141af9f721f85a6bc0fe087"
+        },
+        {
+          "domain": "dawn_dusk",
+          "frames": 6476,
+          "videos": 33,
+          "metrics_sha256": "a17be3a5c07421d2f9746378b5399d08fed818b34f3b72a35b546a42397ba7ee"
+        }
+      ]
+    }
+  ]
+}

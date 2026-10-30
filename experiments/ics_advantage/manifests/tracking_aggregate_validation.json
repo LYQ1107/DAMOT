@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checks": 80,
+  "scope": "C0-C4, Night and Dawn/Dusk, OVERALL and car, four metrics",
+  "max_absolute_delta": 7.105427357601002e-15
+}

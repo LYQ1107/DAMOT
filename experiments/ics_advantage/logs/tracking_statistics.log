@@ -1,0 +1,2 @@
+/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/scipy/stats/morestats.py:2879: UserWarning: Sample size too small for normal approximation.
+  warnings.warn("Sample size too small for normal approximation.")

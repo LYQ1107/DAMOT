@@ -1,0 +1,69 @@
+{
+  "python": "3.7.16",
+  "executable": "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+  "platform": "Linux-4.15.0-197-generic-x86_64-with-debian-buster-sid",
+  "distribution_metadata_versions": {
+    "torch": "1.12.1",
+    "torchvision": "0.13.1",
+    "mmcv-full": "1.6.0",
+    "mmdet": "2.25.3",
+    "mmtrack": "0.14.0",
+    "numpy": "1.21.5",
+    "scipy": "1.4.1",
+    "scikit-learn": "0.22.2",
+    "matplotlib": "3.5.2",
+    "opencv-python": "4.8.0.76",
+    "motmetrics": "1.4.0",
+    "trackeval": "1.0.dev1"
+  },
+  "imported_modules": {
+    "torch": {
+      "version": "1.12.1",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/__init__.py"
+    },
+    "torchvision": {
+      "version": "0.13.1",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torchvision/__init__.py"
+    },
+    "mmcv": {
+      "version": "1.6.0",
+      "file": "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmcv/__init__.py"
+    },
+    "mmdet": {
+      "version": "2.25.3",
+      "file": "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmdet/__init__.py"
+    },
+    "mmtrack": {
+      "version": "0.14.0",
+      "file": "/data1/liuyeqiang/damot_rebuttal_20261026/env/lib/python3.7/site-packages/mmtrack/__init__.py"
+    },
+    "numpy": {
+      "version": "1.21.5",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/numpy/__init__.py"
+    },
+    "scipy": {
+      "version": "1.4.1",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/scipy/__init__.py"
+    },
+    "sklearn": {
+      "version": "0.22.2",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/sklearn/__init__.py"
+    },
+    "matplotlib": {
+      "version": "3.5.2",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/matplotlib/__init__.py"
+    },
+    "cv2": {
+      "version": "4.8.0",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/cv2/__init__.py"
+    },
+    "motmetrics": {
+      "version": "1.4.0",
+      "file": "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/motmetrics/__init__.py"
+    },
+    "trackeval": {
+      "version": null,
+      "file": "/data1/liuyeqiang/trackeval/__init__.py"
+    }
+  }
+}

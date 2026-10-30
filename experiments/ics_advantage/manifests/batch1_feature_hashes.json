@@ -1,0 +1,202 @@
+[
+  {
+    "path": "features/C0/dawn_dusk.npz",
+    "bytes": 20438425,
+    "sha256": "9657186d21196621b9daeeebe6707dccc25671b0ae21cbfb42bad0366a2d6fbc"
+  },
+  {
+    "path": "features/C0/dawn_dusk_meta.json",
+    "bytes": 2488,
+    "sha256": "72b208f91a85c4d085924e4cc80778505f711cf292612b42ee0ebf4424ed1350"
+  },
+  {
+    "path": "features/C0/meta.json",
+    "bytes": 2455,
+    "sha256": "07007a3785553a0631e2466c38fb3ff198274b8e8165824dda3904f9ff5d82f9"
+  },
+  {
+    "path": "features/C0/night.npz",
+    "bytes": 35205725,
+    "sha256": "8a6d761feace28dd0604eb0e431169232a1d2e49b517e5b1a3eca2870a88d449"
+  },
+  {
+    "path": "features/C0/night_meta.json",
+    "bytes": 2483,
+    "sha256": "ba9a0b99559ff9ce34e26a1bfb431d16554637ceaba808b0b67c8418e3c68f4f"
+  },
+  {
+    "path": "features/C1/dawn_dusk.npz",
+    "bytes": 20441941,
+    "sha256": "5a33b5674adef4431e85aa102562bafb6b619d4b6436cbd176831b7a4a62a4ab"
+  },
+  {
+    "path": "features/C1/dawn_dusk_meta.json",
+    "bytes": 2478,
+    "sha256": "3cb03a74ca5d6d7f4728cc93f7c7b728d664245d6593d7e8e76cfecd36051797"
+  },
+  {
+    "path": "features/C1/meta.json",
+    "bytes": 2446,
+    "sha256": "b50dfc88a50ff951330edb0d4c73b8e2d4a8ff0f757d7fa4db1bfa31cb47a865"
+  },
+  {
+    "path": "features/C1/night.npz",
+    "bytes": 35210280,
+    "sha256": "db47372c86237882eae920b0aa1ce2098d342aa7731323e8fa26ac3eafae9159"
+  },
+  {
+    "path": "features/C1/night_meta.json",
+    "bytes": 2474,
+    "sha256": "ae785528942a824a34fff1c33e052e92d18fde5203004298c1cda35b5f3ba071"
+  },
+  {
+    "path": "features/C2/dawn_dusk.npz",
+    "bytes": 20677000,
+    "sha256": "5a015e29354e51c59aec665b15ddcbe1e8ed6a1732a0013166337deb72aabc66"
+  },
+  {
+    "path": "features/C2/dawn_dusk_meta.json",
+    "bytes": 2488,
+    "sha256": "0bb9a4e695c97bdbca66e898080d88c28be1d65e40c0e0590fe5bea24e33745f"
+  },
+  {
+    "path": "features/C2/meta.json",
+    "bytes": 2456,
+    "sha256": "e5f8da758b3b57c808a62b218d6e045febfb2c9938833fcdfd1dbae7a1b87e43"
+  },
+  {
+    "path": "features/C2/night.npz",
+    "bytes": 35444972,
+    "sha256": "e7120be598b5790a8ac5f99192efd109e1445d8b30f9562aa5c5d1bf29f42376"
+  },
+  {
+    "path": "features/C2/night_meta.json",
+    "bytes": 2484,
+    "sha256": "41a4156e0546ae56b0c90d9d64d893fa607e6d10a87e3e59b5e2bbf6deb28394"
+  },
+  {
+    "path": "features/C3/dawn_dusk.npz",
+    "bytes": 20676982,
+    "sha256": "7d04ca68ebc21962b0bd107d851005f0b92f2224bfa61aaca1d8f01015b0a219"
+  },
+  {
+    "path": "features/C3/dawn_dusk_meta.json",
+    "bytes": 2488,
+    "sha256": "7786f55cd08c3bfa5301f121bfccc374745a8904acf85babf7589c5225b9b7e1"
+  },
+  {
+    "path": "features/C3/meta.json",
+    "bytes": 2455,
+    "sha256": "1ae2deb50b0bc73ab28c3ca5b5d661df119a36a6e1670359bc3b05f9721732c6"
+  },
+  {
+    "path": "features/C3/night.npz",
+    "bytes": 35444278,
+    "sha256": "b468e11c39d1bec9cb1990ed120d129e74cf8ccb52d2fb68eff036f25b156f64"
+  },
+  {
+    "path": "features/C3/night_meta.json",
+    "bytes": 2483,
+    "sha256": "9567e6ec7e5440629971c000c8ad208683f7d729aa2422f7eb17ff3229a66baa"
+  },
+  {
+    "path": "features/C4/dawn_dusk.npz",
+    "bytes": 20677475,
+    "sha256": "e16df5c22cee8112354aea01c34fae47e66edb06468e3e6733919d3077b603e1"
+  },
+  {
+    "path": "features/C4/dawn_dusk_meta.json",
+    "bytes": 2489,
+    "sha256": "058656c57fce7d1f5014b052042dd4b51a179fde5c4eb4859a273ec1e6667013"
+  },
+  {
+    "path": "features/C4/meta.json",
+    "bytes": 2456,
+    "sha256": "97535d5d57be1af2bb0637bbb4077a4b11dcff333ea92159fe96ea3b45b85c83"
+  },
+  {
+    "path": "features/C4/night.npz",
+    "bytes": 35445161,
+    "sha256": "95357ba35e744f1bc33800aefd7e9454d6f96edee9e65280c9d15d02af13e194"
+  },
+  {
+    "path": "features/C4/night_meta.json",
+    "bytes": 2484,
+    "sha256": "32ee3c6f9fb1e2d3a0de95438b2d1e5582223ca1ce940e068bb5f33e0b769b4d"
+  },
+  {
+    "path": "tsne_features/C0/meta.json",
+    "bytes": 1983,
+    "sha256": "40ea0b14dfdf3b309f4cb57f5f765592a0b3295859a62f0d612591c06dd75f31"
+  },
+  {
+    "path": "tsne_features/C0/night.npz",
+    "bytes": 156520,
+    "sha256": "00d95855a445420ed8288368c1d0c189c7cdc69639fb5f3152784952e24d049d"
+  },
+  {
+    "path": "tsne_features/C0/night_meta.json",
+    "bytes": 2026,
+    "sha256": "fa26b5b2e9fcacb60463e1aa7d48f20d83fa0b9dc3dae04656a3505d124df5e1"
+  },
+  {
+    "path": "tsne_features/C1/meta.json",
+    "bytes": 1974,
+    "sha256": "c053df580134de283c60dbd40d5a258e2f2a0ab3f0b70e755564b47b94900f2e"
+  },
+  {
+    "path": "tsne_features/C1/night.npz",
+    "bytes": 158626,
+    "sha256": "0d4239bde783d14997a50b3c02f7bb3c46a0b29ddd4c058718d3fa086c9fc432"
+  },
+  {
+    "path": "tsne_features/C1/night_meta.json",
+    "bytes": 2018,
+    "sha256": "2074822429be974356cb51bef6cb7f0f513676eae9327ecb01ce09b8b259f13d"
+  },
+  {
+    "path": "tsne_features/C2/meta.json",
+    "bytes": 1984,
+    "sha256": "3397fda3756102d9a2065d2b63f86505ee195aa80dc0b438d6e1d7c501471de4"
+  },
+  {
+    "path": "tsne_features/C2/night.npz",
+    "bytes": 395693,
+    "sha256": "730111274f8a6cc100c12eade0d2acbc13c919bb8dc905143ce22860acd58b4b"
+  },
+  {
+    "path": "tsne_features/C2/night_meta.json",
+    "bytes": 2028,
+    "sha256": "442e67f853e7e76b416174e31cd1cdf2d61a332a36d28ca9fa28a156e1c1824f"
+  },
+  {
+    "path": "tsne_features/C3/meta.json",
+    "bytes": 1983,
+    "sha256": "3e2de5720e8cbd4aaf5de7ca5bd85e4f64ae952b347e42abc94146d75b0a320f"
+  },
+  {
+    "path": "tsne_features/C3/night.npz",
+    "bytes": 395693,
+    "sha256": "4bea4f1f56413fcba74ce9956cb9150e334af0434d7e70f39a666133cee62e04"
+  },
+  {
+    "path": "tsne_features/C3/night_meta.json",
+    "bytes": 2027,
+    "sha256": "7d3d7a03df8ffdc5a5f9f8ec95377567f1a21f0a960e017eb2bfffa9ae0fb55b"
+  },
+  {
+    "path": "tsne_features/C4/meta.json",
+    "bytes": 1984,
+    "sha256": "c3420c3ea134965fd59e692d2c9ada55ae8d52f2f6ef804ab3f82b0452f78088"
+  },
+  {
+    "path": "tsne_features/C4/night.npz",
+    "bytes": 395743,
+    "sha256": "7e70d1e9e2a8d8689333b7049fb098a7b3b0af6c7513111ea3ea8178829e5e82"
+  },
+  {
+    "path": "tsne_features/C4/night_meta.json",
+    "bytes": 2028,
+    "sha256": "f0f1a4a443d57569974cb4b3c600cb37369e587f61eb53b59a6a712cb66e6b69"
+  }
+]

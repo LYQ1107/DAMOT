@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "models": [
+    "C0",
+    "C2"
+  ],
+  "rois": 11489,
+  "input_GT_annotation_ids_exact": true,
+  "all_metadata_and_view_support_exact": true,
+  "supplemental_clean_embedding_parity_atol": 1e-05
+}

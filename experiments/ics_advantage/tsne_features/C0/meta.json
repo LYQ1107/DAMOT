@@ -1,0 +1,73 @@
+{
+  "checkpoint": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C0/episode/adapt/stage04_after_night/epoch_2.pth",
+  "config": "checkpoint meta",
+  "matched_keys": 732,
+  "target_keys": 732,
+  "missing_keys": 0,
+  "bank_cfg": {
+    "use_causal_direction_bank": false,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_num_pcs": 2,
+    "causal_start_pc": 0,
+    "causal_trim_alpha": 0.1,
+    "causal_normalize_feats": true,
+    "causal_residual_normalize_before_delta": null,
+    "use_roi_proto_memory": false,
+    "roi_proto_class_ids": [
+      1
+    ]
+  },
+  "bank_initialized": false,
+  "bank_num_updates": 0,
+  "missing_key_names": [],
+  "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only",
+  "label": "C0",
+  "views": [
+    "clean"
+  ],
+  "dose_views": [
+    "dark_0.40",
+    "fog_0.45",
+    "fapk_0.50"
+  ],
+  "domains": [
+    "night"
+  ],
+  "args": {
+    "checkpoint": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C0/episode/adapt/stage04_after_night/epoch_2.pth",
+    "config": null,
+    "label": "C0",
+    "domain": [
+      [
+        "night",
+        "/data1/liuyeqiang/ics_advantage_20261031_004629/inputs/tsne_night.json",
+        "/data1/liuyeqiang/ics_v2_20261030_184026/data_views/night"
+      ]
+    ],
+    "out_dir": "/data1/liuyeqiang/ics_advantage_20261031_004629/tsne_features",
+    "views": "clean",
+    "box_source": "gt",
+    "allow_uninitialized_bank": true,
+    "memory_fraction": 0.35,
+    "dose_frames_per_video": 100000,
+    "dose_views": "dark_0.40,fog_0.45,fapk_0.50",
+    "classes": "car",
+    "max_videos": 0,
+    "frames_per_video": 100000,
+    "frame_stride": 1,
+    "max_rois_per_frame": 100000,
+    "min_box": 0.0,
+    "img_scale": [
+      1296,
+      720
+    ],
+    "fap_low_ratio": 0.1,
+    "fap_keep_prob": 0.9,
+    "video_regex": null,
+    "seed": 0,
+    "device": "cuda",
+    "view_batch_size": 3,
+    "workers": 2,
+    "dry_run": false
+  }
+}

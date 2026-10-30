@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "visually_reviewed": [
+    "brightness_AssA",
+    "pooled dose_response",
+    "pooled IR/mAP/silhouette bars",
+    "intervention t-SNE"
+  ],
+  "other_domain_figures": "same plot templates, exported without errors and image/PDF integrity checked",
+  "note": "No outcome-driven limits or sample choices. Nearly overlapping dose curves retained."
+}

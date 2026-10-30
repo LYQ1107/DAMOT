@@ -1,0 +1,17 @@
+[
+  {
+    "path": "inputs/probe_dawn_dusk.json",
+    "bytes": 1191228,
+    "sha256": "b615f9051c8e80474106201a9966773b677216a8a7112c0cdabfced80f7e1f02"
+  },
+  {
+    "path": "inputs/probe_night.json",
+    "bytes": 1997037,
+    "sha256": "6c62a292cc20af3e88dc3d8ab23cef030adb6817085ac2f09a79a44e0961d8a9"
+  },
+  {
+    "path": "inputs/tsne_night.json",
+    "bytes": 17408,
+    "sha256": "32a68c7eee8a382f8b46365b4c74f76ec7c631f04d898de844bac0d70bd7bb6a"
+  }
+]

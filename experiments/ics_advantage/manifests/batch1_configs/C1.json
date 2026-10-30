@@ -1,0 +1,100 @@
+{
+  "relative_to": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/configs/stage4.py",
+  "track_head_changes": {
+    "causal_pca_mode": {
+      "HF": "proto_shrinkage_cov_ema",
+      "value": "global_pc_ema"
+    },
+    "causal_num_pcs": {
+      "HF": 2,
+      "value": 1
+    },
+    "causal_trim_alpha": {
+      "HF": 0.1,
+      "value": 0.25
+    },
+    "causal_loss_weight": {
+      "HF": 0.025,
+      "value": 0.1
+    },
+    "causal_min_samples": {
+      "HF": 96,
+      "value": 32
+    },
+    "use_roi_proto_memory": {
+      "HF": true,
+      "value": false
+    },
+    "causal_update_by_covariance": {
+      "HF": true,
+      "value": false
+    },
+    "causal_cov_momentum": {
+      "HF": 0.98,
+      "value": 0.95
+    },
+    "causal_covariance_shrinkage": {
+      "HF": 0.15,
+      "value": 0.0
+    },
+    "causal_proto_center_min_count": {
+      "HF": 8,
+      "value": 4
+    },
+    "roi_proto_couple_ics": {
+      "HF": true,
+      "value": false
+    },
+    "causal_log_interval": {
+      "HF": "<default>",
+      "value": 50
+    },
+    "causal_debug_stats": {
+      "HF": "<default>",
+      "value": true
+    },
+    "causal_score_thr": {
+      "HF": "<default>",
+      "value": 0.7
+    },
+    "causal_use_scores": {
+      "HF": "<default>",
+      "value": false
+    },
+    "causal_residual_source": {
+      "HF": "<default>",
+      "value": "key_ref_match"
+    },
+    "causal_residual_normalize_before_delta": {
+      "HF": "<default>",
+      "value": true
+    },
+    "causal_freeze_random_basis": {
+      "HF": "<default>",
+      "value": false
+    },
+    "causal_random_basis_seed": {
+      "HF": "<default>",
+      "value": 0
+    },
+    "causal_fixed_basis_path": {
+      "HF": "<default>",
+      "value": null
+    },
+    "causal_reset_bank_on_resume": {
+      "HF": "<default>",
+      "value": true
+    }
+  },
+  "seed": 1790355234,
+  "epochs_per_stage": 2,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "gpus": 4,
+  "APR_enabled": false,
+  "APR_history_loaded": false,
+  "stage3_checkpoint_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "causalOld_config": "/data1/liuyeqiang/ics_v2_20261030_184026/historical/configs/SPA_oldICS/stage04_after_night.py",
+  "checkpoint_compatibility": "C1 resets all20 student/teacher causal_bank buffers to constructor state; no HF PC is cropped. All nonbank state and learned parameters restored bitwise.",
+  "stage3_storage": "Read-only symlink to the identical HF stage3 snapshot; no duplicated input weights."
+}

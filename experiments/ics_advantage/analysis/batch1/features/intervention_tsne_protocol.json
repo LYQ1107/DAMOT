@@ -1,0 +1,77 @@
+[
+  {
+    "model": "C0",
+    "points": 1160,
+    "highlighted_rois": 40,
+    "background": 1000,
+    "PCA_dimensions": 50,
+    "TSNE_params": {
+      "angle": 0.5,
+      "early_exaggeration": 12.0,
+      "init": "pca",
+      "learning_rate": 200.0,
+      "method": "barnes_hut",
+      "metric": "euclidean",
+      "min_grad_norm": 1e-07,
+      "n_components": 2,
+      "n_iter": 1000,
+      "n_iter_without_progress": 300,
+      "n_jobs": 2,
+      "perplexity": 30,
+      "random_state": 0,
+      "verbose": 0
+    },
+    "KL_divergence": 0.5976330637931824,
+    "title_metrics": "Night population, equal mean over14 requested intervention views; not t-SNE point distances"
+  },
+  {
+    "model": "C4",
+    "points": 1160,
+    "highlighted_rois": 40,
+    "background": 1000,
+    "PCA_dimensions": 50,
+    "TSNE_params": {
+      "angle": 0.5,
+      "early_exaggeration": 12.0,
+      "init": "pca",
+      "learning_rate": 200.0,
+      "method": "barnes_hut",
+      "metric": "euclidean",
+      "min_grad_norm": 1e-07,
+      "n_components": 2,
+      "n_iter": 1000,
+      "n_iter_without_progress": 300,
+      "n_jobs": 2,
+      "perplexity": 30,
+      "random_state": 0,
+      "verbose": 0
+    },
+    "KL_divergence": 0.5938501954078674,
+    "title_metrics": "Night population, equal mean over14 requested intervention views; not t-SNE point distances"
+  },
+  {
+    "model": "C2",
+    "points": 1160,
+    "highlighted_rois": 40,
+    "background": 1000,
+    "PCA_dimensions": 50,
+    "TSNE_params": {
+      "angle": 0.5,
+      "early_exaggeration": 12.0,
+      "init": "pca",
+      "learning_rate": 200.0,
+      "method": "barnes_hut",
+      "metric": "euclidean",
+      "min_grad_norm": 1e-07,
+      "n_components": 2,
+      "n_iter": 1000,
+      "n_iter_without_progress": 300,
+      "n_jobs": 2,
+      "perplexity": 30,
+      "random_state": 0,
+      "verbose": 0
+    },
+    "KL_divergence": 0.5915451049804688,
+    "title_metrics": "Night population, equal mean over14 requested intervention views; not t-SNE point distances"
+  }
+]

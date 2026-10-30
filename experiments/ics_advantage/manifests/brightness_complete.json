@@ -1,0 +1,6 @@
+{
+  "status": "complete",
+  "videos": 108,
+  "frames": 21360,
+  "convention": "mean over all full-resolution original-frame OpenCV BGR2GRAY pixel means, then equal frame average within video; no resizing or frame sampling"
+}

@@ -1,0 +1,30 @@
+[plan] night              videos=25 frames=750 dose_frames=125 missing(sampled)=0
+[plan] dawn_dusk          videos=17 frames=510 dose_frames=85 missing(sampled)=0
+[model] {"checkpoint": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/adapt/stage04_after_night/epoch_2.pth", "config": "checkpoint meta", "matched_keys": 752, "target_keys": 752, "missing_keys": 0, "bank_cfg": {"use_causal_direction_bank": true, "causal_pca_mode": "proto_shrinkage_cov_ema", "causal_num_pcs": 2, "causal_start_pc": 0, "causal_trim_alpha": 0.25, "causal_normalize_feats": true, "causal_residual_normalize_before_delta": null, "use_roi_proto_memory": false, "roi_proto_class_ids": [1]}, "bank_initialized": true, "bank_num_updates": 660, "missing_key_names": [], "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only"}
+[night] 50/750 frames  47.7s
+[night] 100/750 frames  87.8s
+[night] 150/750 frames  119.5s
+[night] 200/750 frames  160.7s
+[night] 250/750 frames  202.0s
+[night] 300/750 frames  233.4s
+[night] 350/750 frames  274.7s
+[night] 400/750 frames  315.0s
+[night] 450/750 frames  346.4s
+[night] 500/750 frames  386.9s
+[night] 550/750 frames  428.4s
+[night] 600/750 frames  460.8s
+[night] 650/750 frames  502.3s
+[night] 700/750 frames  542.9s
+[night] 750/750 frames  574.5s
+[done] night rois=7207 dose_rois=1256 577.2s
+[dawn_dusk] 50/510 frames  41.2s
+[dawn_dusk] 100/510 frames  82.0s
+[dawn_dusk] 150/510 frames  113.8s
+[dawn_dusk] 200/510 frames  154.1s
+[dawn_dusk] 250/510 frames  194.8s
+[dawn_dusk] 300/510 frames  226.4s
+[dawn_dusk] 350/510 frames  266.6s
+[dawn_dusk] 400/510 frames  307.1s
+[dawn_dusk] 450/510 frames  339.1s
+[dawn_dusk] 500/510 frames  379.9s
+[done] dawn_dusk rois=4282 dose_rois=703 386.0s

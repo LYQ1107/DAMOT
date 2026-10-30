@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "batch": "1",
+  "models": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "feature_checks": [
+    {
+      "model": "C0",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 1.155132450553209e-06
+    },
+    {
+      "model": "C1",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 9.222108445904736e-07
+    },
+    {
+      "model": "C2",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 9.87828534831925e-07
+    },
+    {
+      "model": "C3",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 9.625376444725303e-07
+    },
+    {
+      "model": "C4",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 9.829122470670151e-07
+    }
+  ],
+  "view_rows": 225,
+  "mean_rows": 15,
+  "paired_feature_rows": 720,
+  "native_aggregate_checks": 80,
+  "figures_pdf_png": 8,
+  "all_bootstrap_intervals_valid10000": true,
+  "source_data_mutation": "none; task-local snapshots and outputs only"
+}

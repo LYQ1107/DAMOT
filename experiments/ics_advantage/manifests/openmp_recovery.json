@@ -1,0 +1,8 @@
+{
+  "cause": "C1 supplemental t-SNE extractor aborted during OpenMP initialization, exit-6, before model load",
+  "mitigation": "MKL_THREADING_LAYER=GNU for new subprocesses; no duplicate-runtime override",
+  "failed_log_retained": "logs/infer_C1_tsne_failed_openmp.log",
+  "C3_pid_retained": 25275,
+  "scope": "only our supervisor PIDs replaced; no inference child or other task controlled",
+  "primary_features": "All five primary model extraction processes used the same inherited default threading environment; C3 stayed running. GNU applied to restarted supervisors/statistics and supplemental retries, with final clean embedding parity below1.2e-6."
+}

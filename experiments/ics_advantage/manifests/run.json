@@ -1,0 +1,10 @@
+{
+  "root": "/data1/liuyeqiang/ics_advantage_20261031_004629",
+  "training": false,
+  "batch1_root": "/data1/liuyeqiang/ics_v2_20261030_184026",
+  "batch2_root": "/data1/liuyeqiang/damot_hf_intics_20261031_004258",
+  "HF_root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+  "seed_statistics": 0,
+  "bootstrap_repetitions": 10000,
+  "GPU_policy": "only fully idle GPUs; never share occupied GPU0/1 in this task; other training allocations preserved"
+}

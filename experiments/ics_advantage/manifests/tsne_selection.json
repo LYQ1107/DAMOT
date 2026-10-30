@@ -1,0 +1,572 @@
+{
+  "rule": "ten longest sampled Night test tracks, count descending then lexical identity tie-break; four uniform frames",
+  "selected": [
+    {
+      "rank": 0,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 708,
+      "annotation_id": 13226,
+      "image_id": 2023,
+      "frame_id": 0,
+      "bbox": [
+        536.98,
+        392.94,
+        21.5,
+        33.06
+      ]
+    },
+    {
+      "rank": 0,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 708,
+      "annotation_id": 13594,
+      "image_id": 2043,
+      "frame_id": 20,
+      "bbox": [
+        531.42,
+        378.4,
+        33.85,
+        53.55
+      ]
+    },
+    {
+      "rank": 0,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 708,
+      "annotation_id": 13797,
+      "image_id": 2061,
+      "frame_id": 38,
+      "bbox": [
+        164.03,
+        343.6,
+        301.29,
+        200.29
+      ]
+    },
+    {
+      "rank": 0,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 708,
+      "annotation_id": 14074,
+      "image_id": 2081,
+      "frame_id": 58,
+      "bbox": [
+        0,
+        401.44,
+        215.83,
+        308.2
+      ]
+    },
+    {
+      "rank": 1,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 711,
+      "annotation_id": 13229,
+      "image_id": 2023,
+      "frame_id": 0,
+      "bbox": [
+        548.78,
+        392.75,
+        26.98,
+        26.72
+      ]
+    },
+    {
+      "rank": 1,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 711,
+      "annotation_id": 13597,
+      "image_id": 2043,
+      "frame_id": 20,
+      "bbox": [
+        549.74,
+        380.75,
+        39.33,
+        41.59
+      ]
+    },
+    {
+      "rank": 1,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 711,
+      "annotation_id": 13798,
+      "image_id": 2061,
+      "frame_id": 38,
+      "bbox": [
+        424.75,
+        363.45,
+        118.27,
+        103.6
+      ]
+    },
+    {
+      "rank": 1,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 711,
+      "annotation_id": 14075,
+      "image_id": 2081,
+      "frame_id": 58,
+      "bbox": [
+        224.46,
+        356.55,
+        309.93,
+        197.7
+      ]
+    },
+    {
+      "rank": 2,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 712,
+      "annotation_id": 13230,
+      "image_id": 2023,
+      "frame_id": 0,
+      "bbox": [
+        576.09,
+        389.73,
+        18.84,
+        22.61
+      ]
+    },
+    {
+      "rank": 2,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 712,
+      "annotation_id": 13598,
+      "image_id": 2043,
+      "frame_id": 20,
+      "bbox": [
+        582.83,
+        378.9,
+        32.45,
+        32.21
+      ]
+    },
+    {
+      "rank": 2,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 712,
+      "annotation_id": 13799,
+      "image_id": 2061,
+      "frame_id": 38,
+      "bbox": [
+        558.56,
+        368.63,
+        31.94,
+        49.21
+      ]
+    },
+    {
+      "rank": 2,
+      "video": "b1e62c91-eca210a9",
+      "instance_id": 712,
+      "annotation_id": 14076,
+      "image_id": 2081,
+      "frame_id": 58,
+      "bbox": [
+        563.74,
+        375.54,
+        44.03,
+        57.84
+      ]
+    },
+    {
+      "rank": 3,
+      "video": "b1e88fd2-c1e4fd2b",
+      "instance_id": 772,
+      "annotation_id": 15227,
+      "image_id": 2226,
+      "frame_id": 0,
+      "bbox": [
+        558.5,
+        431.66,
+        23.15,
+        13.02
+      ]
+    },
+    {
+      "rank": 3,
+      "video": "b1e88fd2-c1e4fd2b",
+      "instance_id": 772,
+      "annotation_id": 15260,
+      "image_id": 2246,
+      "frame_id": 20,
+      "bbox": [
+        560.81,
+        417.38,
+        46.92,
+        16.04
+      ]
+    },
+    {
+      "rank": 3,
+      "video": "b1e88fd2-c1e4fd2b",
+      "instance_id": 772,
+      "annotation_id": 15294,
+      "image_id": 2264,
+      "frame_id": 38,
+      "bbox": [
+        538.49,
+        416.33,
+        45.5,
+        14.96
+      ]
+    },
+    {
+      "rank": 3,
+      "video": "b1e88fd2-c1e4fd2b",
+      "instance_id": 772,
+      "annotation_id": 15321,
+      "image_id": 2284,
+      "frame_id": 58,
+      "bbox": [
+        546.92,
+        423.46,
+        61.41,
+        13.5
+      ]
+    },
+    {
+      "rank": 4,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 804,
+      "annotation_id": 16829,
+      "image_id": 2428,
+      "frame_id": 0,
+      "bbox": [
+        885.95,
+        373.61,
+        393.43,
+        184.97
+      ]
+    },
+    {
+      "rank": 4,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 804,
+      "annotation_id": 17006,
+      "image_id": 2448,
+      "frame_id": 20,
+      "bbox": [
+        888.62,
+        380.75,
+        372.76,
+        169.73
+      ]
+    },
+    {
+      "rank": 4,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 804,
+      "annotation_id": 17159,
+      "image_id": 2466,
+      "frame_id": 38,
+      "bbox": [
+        910.44,
+        379.47,
+        369.56,
+        175.7
+      ]
+    },
+    {
+      "rank": 4,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 804,
+      "annotation_id": 17444,
+      "image_id": 2486,
+      "frame_id": 58,
+      "bbox": [
+        967.55,
+        362.52,
+        312.45,
+        322.97
+      ]
+    },
+    {
+      "rank": 5,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 805,
+      "annotation_id": 16830,
+      "image_id": 2428,
+      "frame_id": 0,
+      "bbox": [
+        599.22,
+        347.19,
+        203.05,
+        164.42
+      ]
+    },
+    {
+      "rank": 5,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 805,
+      "annotation_id": 17007,
+      "image_id": 2448,
+      "frame_id": 20,
+      "bbox": [
+        608.15,
+        356.14,
+        187.93,
+        151.52
+      ]
+    },
+    {
+      "rank": 5,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 805,
+      "annotation_id": 17160,
+      "image_id": 2466,
+      "frame_id": 38,
+      "bbox": [
+        643.13,
+        375.59,
+        110.93,
+        85.63
+      ]
+    },
+    {
+      "rank": 5,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 805,
+      "annotation_id": 17445,
+      "image_id": 2486,
+      "frame_id": 58,
+      "bbox": [
+        648.95,
+        371.99,
+        91.81,
+        80.98
+      ]
+    },
+    {
+      "rank": 6,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 806,
+      "annotation_id": 16831,
+      "image_id": 2428,
+      "frame_id": 0,
+      "bbox": [
+        253.5,
+        321.16,
+        265.46,
+        222.47
+      ]
+    },
+    {
+      "rank": 6,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 806,
+      "annotation_id": 17008,
+      "image_id": 2448,
+      "frame_id": 20,
+      "bbox": [
+        333.65,
+        345.93,
+        195.45,
+        161.55
+      ]
+    },
+    {
+      "rank": 6,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 806,
+      "annotation_id": 17161,
+      "image_id": 2466,
+      "frame_id": 38,
+      "bbox": [
+        485.15,
+        367.61,
+        106.22,
+        99.34
+      ]
+    },
+    {
+      "rank": 6,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 806,
+      "annotation_id": 17446,
+      "image_id": 2486,
+      "frame_id": 58,
+      "bbox": [
+        531.14,
+        359.27,
+        114.09,
+        110.13
+      ]
+    },
+    {
+      "rank": 7,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 809,
+      "annotation_id": 16834,
+      "image_id": 2428,
+      "frame_id": 0,
+      "bbox": [
+        569.59,
+        389.76,
+        27.16,
+        21.29
+      ]
+    },
+    {
+      "rank": 7,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 809,
+      "annotation_id": 17011,
+      "image_id": 2448,
+      "frame_id": 20,
+      "bbox": [
+        579.96,
+        392.63,
+        25.08,
+        22.49
+      ]
+    },
+    {
+      "rank": 7,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 809,
+      "annotation_id": 17163,
+      "image_id": 2466,
+      "frame_id": 38,
+      "bbox": [
+        610.98,
+        396.09,
+        31.71,
+        26.14
+      ]
+    },
+    {
+      "rank": 7,
+      "video": "b1ebfc3c-740ec84a",
+      "instance_id": 809,
+      "annotation_id": 17447,
+      "image_id": 2486,
+      "frame_id": 58,
+      "bbox": [
+        632.44,
+        383.85,
+        28.85,
+        31.04
+      ]
+    },
+    {
+      "rank": 8,
+      "video": "b1ebfc3c-cc9c2bb8",
+      "instance_id": 897,
+      "annotation_id": 19166,
+      "image_id": 2631,
+      "frame_id": 0,
+      "bbox": [
+        38.75,
+        309.96,
+        498.98,
+        319.79
+      ]
+    },
+    {
+      "rank": 8,
+      "video": "b1ebfc3c-cc9c2bb8",
+      "instance_id": 897,
+      "annotation_id": 19582,
+      "image_id": 2651,
+      "frame_id": 20,
+      "bbox": [
+        433.34,
+        337.32,
+        235.42,
+        199.15
+      ]
+    },
+    {
+      "rank": 8,
+      "video": "b1ebfc3c-cc9c2bb8",
+      "instance_id": 897,
+      "annotation_id": 19970,
+      "image_id": 2669,
+      "frame_id": 38,
+      "bbox": [
+        522.18,
+        334.36,
+        226.54,
+        197.67
+      ]
+    },
+    {
+      "rank": 8,
+      "video": "b1ebfc3c-cc9c2bb8",
+      "instance_id": 897,
+      "annotation_id": 20367,
+      "image_id": 2689,
+      "frame_id": 58,
+      "bbox": [
+        457.77,
+        346.95,
+        205.07,
+        181.38
+      ]
+    },
+    {
+      "rank": 9,
+      "video": "b1f20aa0-50213047",
+      "instance_id": 1218,
+      "annotation_id": 27361,
+      "image_id": 3441,
+      "frame_id": 0,
+      "bbox": [
+        436.82,
+        175.66,
+        594.14,
+        395.27
+      ]
+    },
+    {
+      "rank": 9,
+      "video": "b1f20aa0-50213047",
+      "instance_id": 1218,
+      "annotation_id": 27516,
+      "image_id": 3461,
+      "frame_id": 20,
+      "bbox": [
+        436.82,
+        175.66,
+        594.14,
+        390.16
+      ]
+    },
+    {
+      "rank": 9,
+      "video": "b1f20aa0-50213047",
+      "instance_id": 1218,
+      "annotation_id": 27677,
+      "image_id": 3479,
+      "frame_id": 38,
+      "bbox": [
+        436.82,
+        175.66,
+        594.14,
+        390.16
+      ]
+    },
+    {
+      "rank": 9,
+      "video": "b1f20aa0-50213047",
+      "instance_id": 1218,
+      "annotation_id": 27861,
+      "image_id": 3499,
+      "frame_id": 58,
+      "bbox": [
+        484.05,
+        175.66,
+        548.6,
+        395.27
+      ]
+    }
+  ],
+  "views": [
+    "clean",
+    "dark_0.40",
+    "fog_0.45",
+    "fapk_0.50"
+  ],
+  "supplement": "Dedicated extractions provide the three requested dose views at all four selected RoIs, including frames outside the first-five dose pool; never used in primary IR/retrieval/silhouette metrics"
+}

@@ -1,0 +1,39 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+loading annotations into memory...
+Done (t=0.41s)
+creating index...
+index created!
+VIDEO_METRICS C4 dawn_dusk 0000f77c-62c2a288
+VIDEO_METRICS C4 dawn_dusk 0000f77c-cb820c98
+VIDEO_METRICS C4 dawn_dusk 00067cfb-e535423e
+VIDEO_METRICS C4 dawn_dusk 0008a165-c48f4b3e
+VIDEO_METRICS C4 dawn_dusk 00091078-84635cf2
+VIDEO_METRICS C4 dawn_dusk 00091078-c1d32eea
+VIDEO_METRICS C4 dawn_dusk 00091078-f32de4d2
+VIDEO_METRICS C4 dawn_dusk 00391a82-8be5b76d
+VIDEO_METRICS C4 dawn_dusk 00391a82-d1428e56
+VIDEO_METRICS C4 dawn_dusk 00417c23-220bbc98
+VIDEO_METRICS C4 dawn_dusk 005c4fd3-cb4d6287
+VIDEO_METRICS C4 dawn_dusk 0062ab5a-54bb129b
+VIDEO_METRICS C4 dawn_dusk 006676e5-624162a7
+VIDEO_METRICS C4 dawn_dusk b1ceb32e-51852abe
+VIDEO_METRICS C4 dawn_dusk b1d10d08-5b108225
+VIDEO_METRICS C4 dawn_dusk b1d10d08-da110fcb
+VIDEO_METRICS C4 dawn_dusk b1d4b62c-60aab822
+VIDEO_METRICS C4 dawn_dusk b1d59b1f-a38aec79
+VIDEO_METRICS C4 dawn_dusk b1d7b3ac-0bdb47dc
+VIDEO_METRICS C4 dawn_dusk b1d7b3ac-9e14f05f
+VIDEO_METRICS C4 dawn_dusk b1d7b3ac-afa57f22
+VIDEO_METRICS C4 dawn_dusk b1d968b9-ce42734f
+VIDEO_METRICS C4 dawn_dusk b1dd58c1-8b546ba7
+VIDEO_METRICS C4 dawn_dusk b1e1a7b8-0aec80e8
+VIDEO_METRICS C4 dawn_dusk b1eb9133-5cc75c18
+VIDEO_METRICS C4 dawn_dusk b1f0efd9-37a14dda
+VIDEO_METRICS C4 dawn_dusk b1fbaab8-68db7df7
+VIDEO_METRICS C4 dawn_dusk b2036451-aa924fd1
+VIDEO_METRICS C4 dawn_dusk b216243d-ad4306b9
+VIDEO_METRICS C4 dawn_dusk b21c86ac-0dc77d82
+VIDEO_METRICS C4 dawn_dusk b21c86ac-2eb7ba16
+VIDEO_METRICS C4 dawn_dusk b21c86ac-71205084
+VIDEO_METRICS C4 dawn_dusk b23a79d1-e434acaa
+AGGREGATE_PARITY_PASS C4 dawn_dusk

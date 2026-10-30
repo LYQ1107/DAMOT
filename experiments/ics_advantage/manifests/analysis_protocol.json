@@ -1,0 +1,21 @@
+{
+  "seed": 0,
+  "bootstrap_repetitions": 10000,
+  "bootstrap_unit": "video, paired across compared models",
+  "tracking": "Full-pool aggregate parity audit; paired inference uses split_mask seed0 test videos only; OVERALL primary, car supplementary",
+  "IR": "sum paired normalized feature distances divided by sum nearest different-track clean distances, same eligible RoIs; omit single-identity frames only for IR",
+  "retrieval": "P2 gap4 window30 forward (f+4,f+34], max4000 seed0 independently for each domain/pool and finite-view support; paired clean baseline for every dose support",
+  "silhouette": "Exact cosine silhouette on clean/fap/photo plus all available first-five dose views; globally namespace tracks by video and instance; no feature subsampling",
+  "view_aggregation": "equal mean over14 intervention views for summary bars; individual views all retained",
+  "C2_primary_controls": [
+    "C0",
+    "C4"
+  ],
+  "C1_C3": "supplementary only",
+  "CI": "pointwise percentile95%, 10000 replicates, not multiple-comparison adjusted",
+  "tracking_brightness": "Original full-resolution grayscale mean of every annotated video frame; original full all-frame evaluation image pool",
+  "brightness_bins": "Test Night within-domain thirds, stable sort brightness then video ID; batch2 also all four target domains pooled thirds",
+  "tsne": "PCA50 then TSNE perplexity30 init=pca random_state0 per-model; qualitative display only",
+  "single_training_seed": 1790355234,
+  "source_training_task": "Read-only; second batch waits for training and frozen evaluations, or reports an externally stopped run"
+}

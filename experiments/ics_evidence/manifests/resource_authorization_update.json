@@ -1,0 +1,6 @@
+{
+  "source": "direct user messages during this task",
+  "messages": ["0 号卡忙时如果显存能放的开也可以用", "其他卡空出来了也可以用"],
+  "policy": "Prefer any fully idle GPU. Occupied GPU0 may be shared if memory fits, as may originally authorized GPU1. Retain existing processes and allocations. No other occupied training card is used.",
+  "tight_memory_policy": "Single view per forward; CUDA allocator cap at most35% of total and free memory minus1536MiB"
+}

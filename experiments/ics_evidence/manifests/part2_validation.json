@@ -84,6 +84,48 @@
       "rois": 9081,
       "car_frames": 570,
       "all_expected_annotations": true
+    },
+    {
+      "model": "VK_self",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "VK_self",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "VK_self",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "VK_self",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "VK_self",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "VK_self",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
     }
   ],
   "frames_predeclared_before_inference": true,

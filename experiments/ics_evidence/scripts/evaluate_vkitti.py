@@ -144,17 +144,20 @@ def part3():
         else:
             for domain in DOMAINS:
                 for key in keys:assert np.array_equal(ds[domain][key],reference[domain][key]),(label,domain,key)
-        same_aps=[]
+        same_aps=[];clone_missing=0;clone_trivial=0
         for q in np.where(test)[0]:
             delta=np.abs(clone['frame_id']-clone['frame_id'][q])
             gallery=np.where(test&(clone['scene']==clone['scene'][q])&(delta>=4)&(delta<=30))[0]
             pos=clone['instance_id'][gallery]==clone['instance_id'][q]
-            if pos.any() and (~pos).any():same_aps.append(p.average_precision(clone['Z'][gallery]@clone['Z'][q],pos))
+            if pos.any():
+                same_aps.append(p.average_precision(clone['Z'][gallery]@clone['Z'][q],pos))
+                clone_trivial+=int(pos.all())
+            else:clone_missing+=1
         same=100*float(np.mean(same_aps))
         lookup={d:{int(a):i for i,a in enumerate(dd['annotation_id'])} for d,dd in ds.items()}
         cross=[]
         for domain in DOMAINS[1:]:
-            aps=[]
+            aps=[];trivial=0
             for r in pair_rows:
                 if r['weather']!=domain:continue
                 ci=lookup['clone'][int(r['clone_annotation_id'])]
@@ -163,13 +166,17 @@ def part3():
                 gallery=np.where(test&(clone['scene']==r['scene'])&(np.abs(clone['frame_id']-int(r['frame_id']))<=10))[0]
                 # Cross-weather identity originates in the IoU matched clone annotation.
                 pos=clone['instance_id'][gallery]==clone['instance_id'][ci]
-                assert pos.any() and (~pos).any()
+                assert pos.any()
+                trivial+=int(pos.all())
                 aps.append(p.average_precision(clone['Z'][gallery]@ds[domain]['Z'][q],pos))
             value=100*float(np.mean(aps));cross.append(value)
-            all_rows.append(dict(model=label,weather=domain,cross_mAP_pp=value,clone_mAP_pp=same,queries=len(aps),clone_queries=len(same_aps)))
+            all_rows.append(dict(model=label,weather=domain,cross_mAP_pp=value,clone_mAP_pp=same,queries=len(aps),clone_queries=len(same_aps),
+                                 cross_all_positive_queries=trivial,clone_all_positive_queries=clone_trivial,clone_no_positive_rois=clone_missing))
         means[label]=dict(cross=float(np.mean(cross)),same=same)
         all_rows.append(dict(model=label,weather='mean',cross_mAP_pp=means[label]['cross'],clone_mAP_pp=same,
-                             queries=sum(r['queries'] for r in all_rows if r['model']==label),clone_queries=len(same_aps)))
+                             queries=sum(r['queries'] for r in all_rows if r['model']==label),clone_queries=len(same_aps),
+                             cross_all_positive_queries=sum(r['cross_all_positive_queries'] for r in all_rows if r['model']==label),
+                             clone_all_positive_queries=clone_trivial,clone_no_positive_rois=clone_missing))
     contrasts=[]
     for label in ['C1','C2','C3','C4','X3-1']:
         dc=means[label]['cross']-means['C0']['cross'];ds=means[label]['same']-means['C0']['same']
@@ -184,6 +191,7 @@ def part3():
           cross_gallery='clone, same physical scene (both cameras included), abs frame difference <=10',
           clone_gallery='clone, same physical scene (both cameras included), abs frame difference 4 through30 inclusive',
           query_limit='all eligible test-scene IoU pairs, no query cap',
+          trivial_gallery_policy='Include all-positive galleries with AP1; exclude only clone queries with no temporal positive; exact counts retained',
           positive_identity='IoU-matched clone GT instance, then propagated within the clone tracking annotation',
           no_cross_weather_instance_id_assumption=True,metadata_exact_across_all_models=True,
           X3_1_role='APR-on no-ICS reference, C0-C4 APR-off continuation'))
@@ -191,10 +199,12 @@ def part3():
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     plt.rcParams.update({'pdf.fonttype':42,'font.size':10})
-    fig,ax=plt.subplots(figsize=(10,4));models=['C0','C1','C2','C3','C4','X3-1'];width=.13
-    for i,model in enumerate(models):
+    fig,ax=plt.subplots(figsize=(10,4));models=['C0','C1','C2','C3','C4','X3-1'];width=.15
+    for i,model in enumerate(models[:-1]):
         vals=[r['cross_mAP_pp'] for r in all_rows if r['model']==model and r['weather']!='mean']
-        ax.bar(np.arange(5)+(i-2.5)*width,vals,width,label=model)
+        ax.bar(np.arange(5)+(i-2)*width,vals,width,label=model)
+    ref=[r['cross_mAP_pp'] for r in all_rows if r['model']=='X3-1' and r['weather']!='mean']
+    ax.plot(np.arange(5),ref,'kD--',ms=4,lw=1,label='X3-1 reference')
     ax.set_xticks(np.arange(5));ax.set_xticklabels(DOMAINS[1:]);ax.set_ylabel('Cross-weather identity mAP (%)')
     ax.legend(ncol=6,loc='upper center',bbox_to_anchor=(.5,1.15));ax.grid(axis='y',alpha=.2);fig.tight_layout()
     out=ROOT/'part3/figures';out.mkdir(exist_ok=True)

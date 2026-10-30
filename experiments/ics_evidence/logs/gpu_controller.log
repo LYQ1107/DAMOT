@@ -23,3 +23,50 @@ WAIT_GPU VK_self_BDD allowed0,1; no free task slot
 WAIT_GPU VK_self_BDD allowed0,1; no free task slot
 WAIT_GPU VK_self_BDD allowed0,1; no free task slot
 WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+REATTACH VK_self 4155
+START VK_self_BDD GPU 7
+DONE VK_self_BDD seconds 1851.4758279323578
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING

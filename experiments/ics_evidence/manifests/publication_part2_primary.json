@@ -1,0 +1,9 @@
+{
+  "status": "published",
+  "branch": "main",
+  "commit": "dba9dfec80fb65209c894376d5d50262149180eb",
+  "tree": "faab07ce4f62b7b71bc6d46ae9892aaafe05439f",
+  "models": ["F", "HF"],
+  "pending": ["VK_self", "C0-C4 and X3-1 cross-weather retrieval"],
+  "remote_gates_file_verified": true
+}

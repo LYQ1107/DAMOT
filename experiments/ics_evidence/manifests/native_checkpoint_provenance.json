@@ -1,0 +1,8 @@
+{
+  "source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/vkitti2/trimodule_spaP1_causalProtoShrink_roiV1Weak/episode/adapt/stage05_after_sunset/epoch_5.pth",
+  "local": "/data1/liuyeqiang/ics_evidence_20261030_215311/weights/VK_self_stage5_e5.pth",
+  "sha256": "9c4bc71c52a28062c3111fd926ac152e56e25d36c35cad24475d4ed7add2de96",
+  "bytes": 682303345,
+  "source_copy_hashes_equal": true,
+  "selection": "Final proto-shrinkage DAMOT VKITTI stage5 after sunset epoch5, selected before feature evaluation"
+}

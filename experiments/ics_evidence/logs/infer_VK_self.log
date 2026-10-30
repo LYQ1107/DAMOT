@@ -25,3 +25,67 @@
 [clone] 600/600 frames  223.5s
 [done] clone rois=9081 dose_rois=0 225.7s
 [fog] 50/600 frames  18.8s
+[fog] 100/600 frames  37.0s
+[fog] 150/600 frames  54.7s
+[fog] 200/600 frames  73.0s
+[fog] 250/600 frames  91.0s
+[fog] 300/600 frames  109.3s
+[fog] 350/600 frames  127.5s
+[fog] 400/600 frames  145.8s
+[fog] 450/600 frames  164.2s
+[fog] 500/600 frames  182.2s
+[fog] 550/600 frames  200.4s
+[fog] 600/600 frames  218.1s
+[done] fog rois=9081 dose_rois=0 220.3s
+[morning] 50/600 frames  18.5s
+[morning] 100/600 frames  36.6s
+[morning] 150/600 frames  54.8s
+[morning] 200/600 frames  72.8s
+[morning] 250/600 frames  91.0s
+[morning] 300/600 frames  109.0s
+[morning] 350/600 frames  127.1s
+[morning] 400/600 frames  145.4s
+[morning] 450/600 frames  163.8s
+[morning] 500/600 frames  181.9s
+[morning] 550/600 frames  200.3s
+[morning] 600/600 frames  218.4s
+[done] morning rois=9081 dose_rois=0 220.7s
+[overcast] 50/600 frames  18.6s
+[overcast] 100/600 frames  37.4s
+[overcast] 150/600 frames  55.5s
+[overcast] 200/600 frames  73.7s
+[overcast] 250/600 frames  91.7s
+[overcast] 300/600 frames  109.6s
+[overcast] 350/600 frames  127.8s
+[overcast] 400/600 frames  145.9s
+[overcast] 450/600 frames  164.2s
+[overcast] 500/600 frames  182.8s
+[overcast] 550/600 frames  201.1s
+[overcast] 600/600 frames  219.3s
+[done] overcast rois=9081 dose_rois=0 221.6s
+[rain] 50/600 frames  18.4s
+[rain] 100/600 frames  36.9s
+[rain] 150/600 frames  55.1s
+[rain] 200/600 frames  73.5s
+[rain] 250/600 frames  91.7s
+[rain] 300/600 frames  109.7s
+[rain] 350/600 frames  128.1s
+[rain] 400/600 frames  146.4s
+[rain] 450/600 frames  164.5s
+[rain] 500/600 frames  182.5s
+[rain] 550/600 frames  200.9s
+[rain] 600/600 frames  219.9s
+[done] rain rois=9081 dose_rois=0 222.1s
+[sunset] 50/600 frames  19.1s
+[sunset] 100/600 frames  38.7s
+[sunset] 150/600 frames  58.0s
+[sunset] 200/600 frames  77.1s
+[sunset] 250/600 frames  96.5s
+[sunset] 300/600 frames  116.1s
+[sunset] 350/600 frames  134.9s
+[sunset] 400/600 frames  153.8s
+[sunset] 450/600 frames  172.8s
+[sunset] 500/600 frames  193.0s
+[sunset] 550/600 frames  211.8s
+[sunset] 600/600 frames  231.7s
+[done] sunset rois=9081 dose_rois=0 233.9s

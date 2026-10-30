@@ -12,9 +12,12 @@ Reproduce part1 on the recorded server inputs:
     /data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python scripts/evidence_cpu.py --model F
   Repeat for --model HF, then scripts/validate_part1.py and scripts/report.py.
 
-GPU controller: scripts/gpu_controller.py. It uses only physical GPU0/GPU1;
-keeps existing allocations; caps each CUDA allocator at35% of total memory;
-waits for at least16GB free and low activity before starting an inference.
+GPU controller: scripts/gpu_controller.py. Initially used onlyGPU0/GPU1.
+The later explicit user instruction permits any idle GPU and sharing GPU0
+if the remaining memory fits. Idle GPUs are preferred; sharing GPU0/1 keeps
+existing allocations, reserves at least1.5GB beyond the allocator cap, caps
+the CUDA allocator at35% of total memory, and uses view batch1 for tight
+memory slots. Training processes are never controlled by this task.
 Before rerunning a controller, inspect manifests/infer_*.json and running
 processes. A resumed controller attaches to unfinished existing inferences.
 Part3 waits for completed formal C0-C4 training endpoints in the other run.

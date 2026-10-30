@@ -1,0 +1,7 @@
+{
+  "status": "pre-inference query audit; GT metadata only, before C-series VK inference",
+  "test_clone_rois": 1179,
+  "cross_all_positive_queries": 10,
+  "clone_all_positive_queries": 0,
+  "clone_no_positive_queries": 4
+}

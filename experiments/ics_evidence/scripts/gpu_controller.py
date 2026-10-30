@@ -1,4 +1,4 @@
-"""Inference-only queue restricted to GPUs 0/1. Never controls other processes."""
+"""Inference queue: idle GPUs, with explicitly permitted memory-limited sharing on GPU0/1."""
 import json
 import os
 import subprocess
@@ -25,15 +25,21 @@ for manifest in (ROOT/'manifests').glob('infer_*.json'):
 def acquire(preferred,name):
     while True:
         with GPU_LOCK:
-            for gpu in [preferred,1-preferred]:
+            lines=subprocess.check_output(['nvidia-smi',
+                '--query-gpu=index,memory.free,memory.used,utilization.gpu,memory.total',
+                '--format=csv,noheader,nounits']).decode().strip().splitlines()
+            stats={int(a[0]):tuple(map(int,a[1:])) for a in ([v.strip() for v in line.split(',')] for line in lines)}
+            # Newly authorized idle cards take priority over shared occupied cards.
+            idle=[g for g,(free,used,util,total) in stats.items() if used<256 and util<=10]
+            order=sorted(idle,key=lambda g:(g!=preferred,g))+[g for g in [1,0] if g not in idle]
+            for gpu in order:
                 if gpu in RESERVED:continue
-                result=subprocess.check_output(['nvidia-smi','--id='+str(gpu),
-                    '--query-gpu=memory.free,utilization.gpu','--format=csv,noheader,nounits']).decode().strip()
-                free,util=[int(v.strip()) for v in result.split(',')]
-                if free>=16000 and util<=15:
+                free,used,util,total=stats[gpu]
+                if gpu in idle or (gpu==1 and free>=16000) or (gpu==0 and free>=5000):
                     RESERVED.add(gpu)
-                    return gpu
-        print('WAIT_GPU',name,'allowed0,1; no free task slot',flush=True)
+                    fraction=min(.35,(free-1536)/total)
+                    return gpu,fraction
+        print('WAIT_GPU',name,'idle cards or memory-limited sharing0/1 unavailable',flush=True)
         time.sleep(20)
 
 
@@ -83,7 +89,11 @@ def job(label, checkpoint, views, gpu, bdd=False, smoke=False):
         release(record['gpu'])
         return
     args=params(label,checkpoint,views,bdd,smoke)
-    gpu=acquire(gpu,name)
+    gpu,fraction=acquire(gpu,name)
+    args[args.index('--memory-fraction')+1]=str(fraction)
+    if fraction<.25:
+        args[args.index('--view-batch-size')+1]='1'
+        args[args.index('--workers')+1]='1'
     env=dict(os.environ,CUDA_VISIBLE_DEVICES=str(gpu),OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',
              MKL_NUM_THREADS='1',PYTHONDONTWRITEBYTECODE='1',TMPDIR=str(ROOT/'tmp'))
     start=time.time()
@@ -129,11 +139,8 @@ def main():
     for group in ['C0','C1','C2','C3','C4']:
         tasks.append((group,CROOT/'runs'/group/'episode/adapt/stage04_after_night/epoch_2.pth'))
     tasks.append(('X3-1',Path('/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-1/episode/adapt/stage04_after_night/epoch_2.pth')))
-    # One persistent queue per GPU prevents same-card overlap inside this task.
-    def worker(gpu,items):
-        for group,ck in items:job(group,ck,'clean',gpu)
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        fs=[pool.submit(worker,0,tasks[::2]),pool.submit(worker,1,tasks[1::2])]
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        fs=[pool.submit(job,group,ck,'clean',[4,7,8,9,1,0][i]) for i,(group,ck) in enumerate(tasks)]
         for f in fs:f.result()
     dump(ROOT/'manifests/part3_inference_complete.json',dict(status='complete',time=time.time()))
 

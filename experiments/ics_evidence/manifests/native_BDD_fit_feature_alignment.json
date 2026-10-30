@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "domain": "clear_holdout_45v",
+      "rois": 4759,
+      "metadata_exact": true
+    },
+    {
+      "domain": "overcast",
+      "rois": 3468,
+      "metadata_exact": true
+    },
+    {
+      "domain": "rainy",
+      "rois": 1953,
+      "metadata_exact": true
+    },
+    {
+      "domain": "dawn_dusk",
+      "rois": 2705,
+      "metadata_exact": true
+    },
+    {
+      "domain": "night",
+      "rois": 2935,
+      "metadata_exact": true
+    }
+  ],
+  "total_fit_car_rois": 15820
+}

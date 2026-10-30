@@ -1,6 +1,6 @@
 # ICS causal evidence: measured results
 
-Run: `/data1/liuyeqiang/ics_evidence_20261030_215311`. Inference and offline calculations only; no network training. Fixed analysis seed 0. GPU inference uses only physical GPUs 0 and 1 under the user’s explicit instruction. Their pre-existing memory allocations are retained. Training processes on GPUs 2–9 are outside this task.
+Run: `/data1/liuyeqiang/ics_evidence_20261030_215311`. Inference and offline calculations only; no network training. Fixed analysis seed 0. Latest user resource authorization permits any idle GPU and memory-limited sharing on GPU0 when it is busy. Original GPU1 sharing remains permitted. All existing processes and allocations are retained; training processes are never controlled by this task.
 
 All subspaces are fitted on fit videos and metrics use held-out test videos; car only. INT is the uncentered scatter of normalized paired fap/photo/student minus normalized clean features, estimated independently for each BDD checkpoint. ICS is QR of the checkpoint bank_pcs; W and ID are label-based weather and identity oracles. R reports ten seed-0 random 2D bases. The historical video hash split is used unchanged.
 
@@ -76,8 +76,6 @@ Conclusion ④ (HF): **PASS**. INT Fisher drop 34.569% (required ≥30%); identi
 Conclusion ④ (F): **FAIL**. INT Fisher drop 27.795% (required ≥30%); identity mAP change +0.375 pp (required within ±1 pp).
 
 ## Table 3 — Real-weather counterfactual capture (①)
-
-**Staged status: F/HF counterfactual results are complete; native VKITTI-model results remain pending.**
 
 The metric split holds out entire physical scenes across weather and both cameras. Fit scenes are Scene01/Scene06/Scene20 and test scenes are Scene02/Scene18: 9,081 sampled pairs per variant overall, of which 1,179 are held-out test pairs used for CCR. F/HF are BDD-trained with no VKITTI finetuning. The optional VK_self checkpoint is the original VKITTI stage5 after sunset, epoch5; those images may have been part of its earlier network training, so this descriptive in-distribution row is distinct. Its BDD comparator bases use exactly the original HF fit RoIs; INT-vk uses clone fit scenes only. Error bars in Figure A are SD across five variants.
 
@@ -155,10 +153,54 @@ The metric split holds out entire physical scenes across weather and both camera
 | HF | ID | mean | 5895 | 0.0465 | 1764.25044 | 0.29928 | 0.2433 |
 | HF | R | mean | 5895 | 0.0078 | 1764.25044 | 0.29928 | 0.2433 |
 | HF | INT-vk | mean | 5895 | 0.0454 | 1764.25044 | 0.29928 | 0.2433 |
+| VK_self | INT | fog | 1179 | 0.1702 | 562.75028 | 0.47731 | 0.2881 |
+| VK_self | ICS | fog | 1179 | 0.1193 | 562.75028 | 0.47731 | 0.2881 |
+| VK_self | W | fog | 1179 | 0.1351 | 562.75028 | 0.47731 | 0.2881 |
+| VK_self | ID | fog | 1179 | 0.0826 | 562.75028 | 0.47731 | 0.2881 |
+| VK_self | R | fog | 1179 | 0.0078 | 562.75028 | 0.47731 | 0.2881 |
+| VK_self | INT-vk | fog | 1179 | 0.1508 | 562.75028 | 0.47731 | 0.2881 |
+| VK_self | INT | morning | 1179 | 0.0584 | 123.26581 | 0.10455 | 0.0631 |
+| VK_self | ICS | morning | 1179 | 0.0459 | 123.26581 | 0.10455 | 0.0631 |
+| VK_self | W | morning | 1179 | 0.0472 | 123.26581 | 0.10455 | 0.0631 |
+| VK_self | ID | morning | 1179 | 0.0425 | 123.26581 | 0.10455 | 0.0631 |
+| VK_self | R | morning | 1179 | 0.0072 | 123.26581 | 0.10455 | 0.0631 |
+| VK_self | INT-vk | morning | 1179 | 0.0518 | 123.26581 | 0.10455 | 0.0631 |
+| VK_self | INT | overcast | 1179 | 0.0636 | 139.96754 | 0.11872 | 0.0717 |
+| VK_self | ICS | overcast | 1179 | 0.0576 | 139.96754 | 0.11872 | 0.0717 |
+| VK_self | W | overcast | 1179 | 0.0504 | 139.96754 | 0.11872 | 0.0717 |
+| VK_self | ID | overcast | 1179 | 0.0484 | 139.96754 | 0.11872 | 0.0717 |
+| VK_self | R | overcast | 1179 | 0.0071 | 139.96754 | 0.11872 | 0.0717 |
+| VK_self | INT-vk | overcast | 1179 | 0.0661 | 139.96754 | 0.11872 | 0.0717 |
+| VK_self | INT | rain | 1179 | 0.0628 | 206.19637 | 0.17489 | 0.1056 |
+| VK_self | ICS | rain | 1179 | 0.0462 | 206.19637 | 0.17489 | 0.1056 |
+| VK_self | W | rain | 1179 | 0.0541 | 206.19637 | 0.17489 | 0.1056 |
+| VK_self | ID | rain | 1179 | 0.0497 | 206.19637 | 0.17489 | 0.1056 |
+| VK_self | R | rain | 1179 | 0.0071 | 206.19637 | 0.17489 | 0.1056 |
+| VK_self | INT-vk | rain | 1179 | 0.0602 | 206.19637 | 0.17489 | 0.1056 |
+| VK_self | INT | sunset | 1179 | 0.0740 | 148.29648 | 0.12578 | 0.0759 |
+| VK_self | ICS | sunset | 1179 | 0.0534 | 148.29648 | 0.12578 | 0.0759 |
+| VK_self | W | sunset | 1179 | 0.0490 | 148.29648 | 0.12578 | 0.0759 |
+| VK_self | ID | sunset | 1179 | 0.0472 | 148.29648 | 0.12578 | 0.0759 |
+| VK_self | R | sunset | 1179 | 0.0072 | 148.29648 | 0.12578 | 0.0759 |
+| VK_self | INT-vk | sunset | 1179 | 0.0575 | 148.29648 | 0.12578 | 0.0759 |
+| VK_self | INT | mean | 5895 | 0.0858 | 1180.47648 | 0.20025 | 0.1209 |
+| VK_self | ICS | mean | 5895 | 0.0645 | 1180.47648 | 0.20025 | 0.1209 |
+| VK_self | W | mean | 5895 | 0.0672 | 1180.47648 | 0.20025 | 0.1209 |
+| VK_self | ID | mean | 5895 | 0.0541 | 1180.47648 | 0.20025 | 0.1209 |
+| VK_self | R | mean | 5895 | 0.0073 | 1180.47648 | 0.20025 | 0.1209 |
+| VK_self | INT-vk | mean | 5895 | 0.0773 | 1180.47648 | 0.20025 | 0.1209 |
 
 Conclusion ① (F): **PASS**; mean INT CCR 0.0564, random 0.0076 (7.45×), stored ICS 0.0498.
 
 Conclusion ① (HF): **PASS**; mean INT CCR 0.0557, random 0.0078 (7.13×), stored ICS 0.0484.
+
+Conclusion ① (VK_self): **PASS**; mean INT CCR 0.0858, random 0.0073 (11.80×), stored ICS 0.0645.
+
+Variant check (F): both inequalities hold for 3/5 variants; failed variants: morning, sunset. The displayed primary gate uses the predeclared equal mean over five variants and does not imply uniform dominance.
+
+Variant check (HF): both inequalities hold for 4/5 variants; failed variants: sunset. The displayed primary gate uses the predeclared equal mean over five variants and does not imply uniform dominance.
+
+Variant check (VK_self): both inequalities hold for 5/5 variants; failed variants: none. The displayed primary gate uses the predeclared equal mean over five variants and does not imply uniform dominance.
 
 ## Table 4 — Cross-weather and clone retrieval (⑤)
 

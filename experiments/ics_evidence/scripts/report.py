@@ -18,8 +18,9 @@ def table(lines, header, content):
 def main():
     lines = ['# ICS causal evidence: measured results', '',
         'Run: `%s`. Inference and offline calculations only; no network training. Fixed analysis seed 0. '
-        'GPU inference uses only physical GPUs 0 and 1 under the user’s explicit instruction. '
-        'Their pre-existing memory allocations are retained. Training processes on GPUs 2–9 are outside this task.' % ROOT,
+        'Latest user resource authorization permits any idle GPU and memory-limited sharing on GPU0 when it is busy. '
+        'Original GPU1 sharing remains permitted. All existing processes and allocations are retained; '
+        'training processes are never controlled by this task.' % ROOT,
         '', 'All subspaces are fitted on fit videos and metrics use held-out test videos; car only. '
         'INT is the uncentered scatter of normalized paired fap/photo/student minus normalized clean features, '
         'estimated independently for each BDD checkpoint. ICS is QR of the checkpoint bank_pcs; '
@@ -94,6 +95,15 @@ def main():
         for r in rows(ROOT/'part2/gates.csv'):
             lines += ['', 'Conclusion ① (%s): **%s**; mean INT CCR %.4f, random %.4f (%.2f×), stored ICS %.4f.'%
                       (r['model'],r['status'],float(r['INT_CCR']),float(r['R_CCR']),float(r['INT_over_random']),float(r['ICS_CCR']))]
+        per_weather=ROOT/'part2/gates_by_weather.csv'
+        if per_weather.exists():
+            by_weather=rows(per_weather)
+            for model in dict.fromkeys(r['model'] for r in by_weather):
+                group=[r for r in by_weather if r['model']==model]
+                failed=[r['weather'] for r in group if r['pass_both']!='True']
+                lines += ['', 'Variant check (%s): both inequalities hold for %d/5 variants; '
+                          'failed variants: %s. The displayed primary gate uses the predeclared equal mean '
+                          'over five variants and does not imply uniform dominance.'%(model,5-len(failed),', '.join(failed) if failed else 'none')]
     else:
         lines += ['', 'PENDING: F/HF six-weather inference and the separately identified VKITTI-trained checkpoint. '
                   'Input annotations and sample matching are complete: 9,081 GT pairs for each variant. '
@@ -102,6 +112,10 @@ def main():
     retrieval=ROOT/'part3/retrieval.csv'
     if retrieval.exists():
         data=rows(retrieval)
+        lines += ['', 'Query eligibility was audited from GT metadata before C-series inference. '
+                  'All 1,179 cross-weather queries per variant are included, including ten all-positive galleries (AP=1). '
+                  'Clone retrieval uses 1,175 queries; four with no temporal positive are excluded. '
+                  'No query is selected using feature scores. Both cameras from the same scene are in the galleries.']
         table(lines,['Model','Weather','Cross-weather mAP %','Clone mAP %','Queries'],
               [[r['model'],r['weather'],'%.3f'%float(r['cross_mAP_pp']),
                 '%.3f'%float(r['clone_mAP_pp']),r['queries']] for r in data])
@@ -109,6 +123,14 @@ def main():
         if gate.exists():
             g=json.loads(gate.read_text())
             lines += ['', 'Conclusion ⑤: **%s**. Full predeclared contrasts are in `part3/contrasts.csv`.'%g['status']]
+            contrasts=rows(ROOT/'part3/contrasts.csv')
+            table(lines,['Model','Cross-weather Δ vs C0 pp','Clone Δ vs C0 pp','Cross-weather Δ vs C4 pp','All conditions'],
+                  [[r['model'],'%+.3f'%float(r['cross_gain_vs_C0_pp']),
+                    '%+.3f'%float(r['clone_gain_vs_C0_pp']),'%+.3f'%float(r['cross_gain_vs_C4_pp']),
+                    'PASS' if r['pass_all_conditions']=='True' else 'FAIL'] for r in contrasts])
+            lines += ['', 'The gate requires C2 or C3 to gain at least 1.0 pp over C0 in mean cross-weather mAP, '
+                      'exceed C4, and improve cross-weather mAP more than clone mAP. '
+                      'C0–C4 share the same single training seed; these are descriptive effects, not statistical significance claims.']
     else:
         lines += ['', 'PENDING: use final Night epoch-2 checkpoints C0–C4 and X3-1 after C training completes. '
                   'Current C-series implementation uses APR off for C0–C4; X3-1 is the APR-on, no-ICS reference. '

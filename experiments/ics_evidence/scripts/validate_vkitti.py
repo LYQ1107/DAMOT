@@ -40,6 +40,9 @@ def main(part):
     else:
         for r in rows(ROOT/'part3/retrieval.csv'):
             assert 0<=float(r['cross_mAP_pp'])<=100 and int(r['queries'])>0
+            assert int(r['queries'])==(5895 if r['weather']=='mean' else 1179)
+            assert int(r['clone_queries'])==1175 and int(r['clone_no_positive_rois'])==4
+            assert int(r['cross_all_positive_queries'])==(50 if r['weather']=='mean' else 10)
     dump(ROOT/'manifests'/('part%s_validation.json'%part),dict(status='PASS',checks=checks,
         frames_predeclared_before_inference=True,same_metadata_across_models=True))
     print('PASS part',part,len(checks),'domain/model audits')

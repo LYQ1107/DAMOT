@@ -1,0 +1,622 @@
+[
+  {
+    "model": "F",
+    "stage": 1,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/clear_holdout_45v.npz",
+    "sha256": "2cde70061bd835a5248e473b6c248ad887830f31f3496472b4d14a6e2488f749",
+    "bytes": 15583629,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 1,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/overcast.npz",
+    "sha256": "45520f025f33d664faa0fff0a5a1091c572b95aff5ade505c9ca52ae846c9810",
+    "bytes": 10421714,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 1,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/rainy.npz",
+    "sha256": "c30bbc207c5fcf55d7a8b81fbf5d974e6bb45349e226f63527c48bcf1d484dc7",
+    "bytes": 8485538,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 1,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/dawn_dusk.npz",
+    "sha256": "2341d7f24ce002ae945550c3a007cd100c3c30f2e0a7e65068a35bc85b122c63",
+    "bytes": 13123533,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 1,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage1_e5/night.npz",
+    "sha256": "20c22bc71cd03c3d09433850f5525f80cd9218217f5e933ad79931053bdd889e",
+    "bytes": 18806422,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 2,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/clear_holdout_45v.npz",
+    "sha256": "fbe80e65b451df1b35cc493e4d655d21eccf4c752e884b44554221b68dd56466",
+    "bytes": 15583623,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 2,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/overcast.npz",
+    "sha256": "fc50dcf3b8a7c3cc14e8d3ec5aec71fbabdeaf6703fa0c694d12b8af623a6435",
+    "bytes": 10421407,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 2,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/rainy.npz",
+    "sha256": "60418d1ea6bf03ae3ec8220edad28abe5c891007d5ee86d546bdb087b2084897",
+    "bytes": 8486349,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 2,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/dawn_dusk.npz",
+    "sha256": "7e918b62200c69314b66569084e4a49e3318a5d80e5b75714a90ed4e77325300",
+    "bytes": 13122766,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 2,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage2_e5/night.npz",
+    "sha256": "f4a82c2fe5c5ae6e364f9cbe4f25681c56c61ac5c4d4f4f1c01d0f15b3b21f58",
+    "bytes": 18808432,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 3,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/clear_holdout_45v.npz",
+    "sha256": "b006994d41cb88fc444abe6506e01abad138b11e4ca9e85873a8c64c68577a74",
+    "bytes": 15592421,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 3,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/overcast.npz",
+    "sha256": "20bdd4abbe1f5b250c5f9baa7309492bc2ad8150328e52a871524d1d48b1ba06",
+    "bytes": 10427816,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 3,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/rainy.npz",
+    "sha256": "1ff39690c17316d6773b4287492f841dd883beebdfc1c6d78eb4f2008d18b24a",
+    "bytes": 8491384,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 3,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/dawn_dusk.npz",
+    "sha256": "567864b2ff11280594ffda0a1117be662b5fd944cd95a435d576b52fc28d40a3",
+    "bytes": 13131893,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 3,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage3_e5/night.npz",
+    "sha256": "ae6e28e645ccefab1cbc3b1dcb1535a9213b3133ee9e648e712217c3069a4aaa",
+    "bytes": 18817667,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 4,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/clear_holdout_45v.npz",
+    "sha256": "ffa2e70da11f59705b6e56d5feb725038ed940915e03224839cbbb820ec0d0bc",
+    "bytes": 40218614,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 4,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/overcast.npz",
+    "sha256": "0c0ee808c6f428e4d4f5d1ad4a72ac4eae8f77b0b4486464bad9e774fd14ae35",
+    "bytes": 26893004,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 4,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/rainy.npz",
+    "sha256": "2f4c6d47a1f1d5068b0c1e10dae5ce1980fbdec7e76253521d56e20e97aae756",
+    "bytes": 21576040,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 4,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/dawn_dusk.npz",
+    "sha256": "5b53c92a192726de45068506a1b42c0a9bac4586e190f88fce521289ec4f49b1",
+    "bytes": 33584362,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "F",
+    "stage": 4,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/night.npz",
+    "sha256": "7865b0bbaf0e5b9a3f4ba2bdd11f9711c095fe8a62092a269e0d623a0490fc97",
+    "bytes": 48987854,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 1,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/clear_holdout_45v.npz",
+    "sha256": "f4686ecad985ef64149727685422c71c079d432bf21e071c8ddf17709d983955",
+    "bytes": 15581313,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 1,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/overcast.npz",
+    "sha256": "30570f14f4fd8eba82d229247ba9cbed53214862d3ade008904d50ccf0c5b767",
+    "bytes": 10420400,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 1,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/rainy.npz",
+    "sha256": "f5a7c47da8930fafb70a9e2ba628e41a29e4dd3d29bbdb3a38cc60773a84d790",
+    "bytes": 8484383,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 1,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/dawn_dusk.npz",
+    "sha256": "cacf7eb0cb45b52c7358d44fc9041c6384c19dca886bcd84aa223de38f944506",
+    "bytes": 13121685,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 1,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/night.npz",
+    "sha256": "cc338746c225cf31d98c8b4e97f1a53cbb86c8348b729451e5c054d658eeb18a",
+    "bytes": 18805620,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 2,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/clear_holdout_45v.npz",
+    "sha256": "6dcfd0b519433e4c5755fcefe59095f17bd7fdecec64b539122b8ce3c1787a3a",
+    "bytes": 15583894,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 2,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/overcast.npz",
+    "sha256": "aa8c469f932d7421432f29d54a21765286e60275a8555bc8a9eb09039f265b41",
+    "bytes": 10421446,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 2,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/rainy.npz",
+    "sha256": "71b6c98e4f8487ab2dfb9e12ee62b63dee025cf3b09c718f2302ed2dbf021b5e",
+    "bytes": 8485973,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 2,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/dawn_dusk.npz",
+    "sha256": "9a9a3322f3a9ab2f79a5e7dfb030f37da0116969d7b8c48e8155dd8d4ea78f04",
+    "bytes": 13124116,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 2,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/night.npz",
+    "sha256": "30a89c5e5741402dfde1851b441e7581ef58162d02b49623bb9970d54bcd72b7",
+    "bytes": 18809509,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 3,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/clear_holdout_45v.npz",
+    "sha256": "4054648b10995b6484f64dbd1ef1798862d6311f742a32e1cd9ec771ae5cfdc2",
+    "bytes": 15588814,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 3,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/overcast.npz",
+    "sha256": "645a13baa8b4bd2a5077035b3c972e2c7d85b6305278fd0227b95c8cf6ca5d40",
+    "bytes": 10425936,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 3,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/rainy.npz",
+    "sha256": "ea49d701028c4604375e6719cae81991c7d324e9408a4fa8ce1d5e8baca8ee58",
+    "bytes": 8488508,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 3,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/dawn_dusk.npz",
+    "sha256": "c444807e152a6efb121775ec79cc36435e8a5dd761c9695cbf374776a5ecc49e",
+    "bytes": 13128116,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 3,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/night.npz",
+    "sha256": "ce004e3fc1905924f6521fd84ef06192456c5eaa71e39810f50c6e5a490f13ac",
+    "bytes": 18814239,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 4,
+    "domain": "clear_holdout_45v",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/clear_holdout_45v.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/clear_holdout_45v.npz",
+    "sha256": "e890b3f5e6d2f6329dd59c23de7266bf463dbdc132a372bf201073d06626b6de",
+    "bytes": 40195301,
+    "rois": 7956,
+    "car_rois": 7956,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 4,
+    "domain": "overcast",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/overcast.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/overcast.npz",
+    "sha256": "a72d249094860e37cfebe9549cd16cf1c7118c73d06061b71b441a28925d8799",
+    "bytes": 26878681,
+    "rois": 5281,
+    "car_rois": 5281,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 4,
+    "domain": "rainy",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/rainy.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/rainy.npz",
+    "sha256": "187fd90c5e2f01a5947ea9fbb496a0f2f263cb9fe709e840d7c210e006e8ec57",
+    "bytes": 21561451,
+    "rois": 4279,
+    "car_rois": 4279,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 4,
+    "domain": "dawn_dusk",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/dawn_dusk.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/dawn_dusk.npz",
+    "sha256": "b10a95e8f361a9bcde159528cf289ab63e7bbdc1be3023163fb5bc925e9f27c7",
+    "bytes": 33563501,
+    "rois": 6683,
+    "car_rois": 6683,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  },
+  {
+    "model": "HF",
+    "stage": 4,
+    "domain": "night",
+    "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/night.npz",
+    "resolved_path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/night.npz",
+    "sha256": "1f3e155617d06a06c3f960b2bec733aebd0028f399543bf6b98f3ba1eef5ce7b",
+    "bytes": 48964054,
+    "rois": 9640,
+    "car_rois": 9640,
+    "feature_views": [
+      "feat_clean",
+      "feat_fap",
+      "feat_photo",
+      "feat_student"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "independent_reference": "scipy.linalg.eigh(Sb, Sw + eps I)",
+  "max_subspace_angle_deg": 5.395859407149342e-13,
+  "orthogonality_error": 3.3306690738754696e-16,
+  "counts": {
+    "n_fit_rois": 120,
+    "n_fit_images": 30,
+    "n_multi_box_images": 30,
+    "n_between": 120,
+    "n_within": 240,
+    "eps": 0.00207132645516242,
+    "eps_ratio": 0.1,
+    "within_trace": 0.2485591746194904,
+    "top_eigs": [
+      6.237064409636376,
+      5.2056041912953726,
+      4.445943337209311
+    ]
+  }
+}

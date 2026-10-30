@@ -1,0 +1,202 @@
+【任务】身份方向锚定 APR（idAPR）：离线验证 → 代码改动与快速验证 → 只训 Night 的短实验
+不做多种子实验。每一阶段都有过关标准，不过关就停止并提交已有结果。
+
+================================================================
+〇、背景与原则
+================================================================
+已知（experiments/ics_probe/drift_decomposition）：从第 3 阶段到第 4 阶段，旧域特征漂移中，
+  - 2 维"身份 oracle"方向只占约 8% 的漂移能量，但把这部分还原，能恢复 44–53% 的遗忘（stage4←j 跨阶段身份检索 mAP）；
+  - 2 维"FAP 残差"方向占约 6% 的漂移，还原后只恢复 0–6% 的遗忘。
+目标：(1) 不用标签找到"身份方向"；(2) 让 APR 只在（或更重地在）这些方向上对齐历史原型，看能否减少遗忘。
+原则：
+  - 在自己的代码副本中修改：git clone /data1/liuyeqiang/DAMOT $W/code && git -C $W/code checkout <当前 main>；
+    $W = /data1/liuyeqiang/idapr_<时间戳>，所有输出都写在 $W 下；不得修改其他任务的目录；
+  - 只用空闲 GPU（开始前和训练前各用 nvidia-smi 确认一次）；
+  - 所有新开关默认关闭，关闭时必须与原代码逐位一致；
+  - 不按结果筛选；结果（不含权重和 npz）提交到 GitHub experiments/idapr/。
+复用的已有资源：
+  RUN = /data1/liuyeqiang/damot_rebuttal_20261026
+  探针特征：$RUN/results/ics_probe/feats/<标签>/<域>.npz（F_stage1–4_e5、HF_stage1–4_e5；stage4 有 clean/fap/photo/student
+            四个视图，stage1–3 只有 clean/fap）
+  S3 脚本：tools/analysis/ics_probe_drift.py（load、cross_map、恢复测试的写法）
+  X3 实验基础设施：experiments/ics_quick/scripts/（common.py、prepare_x3.py、gpu_job.py、evaluate.py）及其 inputs.txt
+           里记录的 HF base config、HF stage3 快照、共享 APR 历史 shared_apr_history.pth
+  X3-0 的结果：experiments/ics_quick/X3/X3-0（作为对照组 B0，不重跑训练）
+
+================================================================
+一、阶段 A：离线验证（CPU，约 1–2 小时）
+================================================================
+新建 tools/analysis/idapr_offline.py，复用 ics_probe_analyze.py 与 ics_probe_drift.py 中的函数
+（normalize、split_mask、rank_basis、identity_rows、between_weather_rows、build_retrieval、cross_map、orth、top_eig）。
+
+A1 无标签子空间估计函数（B 阶段也用同一个函数，单独放在 tools/analysis/idapr_basis.py 里，供两处 import）：
+
+  def label_free_bases(Z, image_id, views, k_id, k_nuis, eps_ratio=0.1):
+      # Z: [N,D] clean 嵌入（已 L2 归一化）；views: 同一批 RoI 的其他视图嵌入列表（各自 L2 归一化）
+      # 1) 类间散度：同一 image_id 内不同框一定是不同目标
+      Xb = []
+      for im in unique(image_id):
+          idx = where(image_id == im)
+          if len(idx) >= 2: Xb.append(Z[idx] - Z[idx].mean(0))
+      Xb = concat(Xb); S_b = Xb.T @ Xb / len(Xb)
+      # 2) 类内散度：同一个框不同视图之差（不做中心化：系统性偏移本身就是扰动方向）
+      R = concat([V - Z for V in views]); S_w = R.T @ R / len(R)
+      # 3) 广义特征值问题 S_b v = λ (S_w + εI) v
+      eps = eps_ratio * trace(S_w) / D
+      L = cholesky(S_w + eps*I)                  # 下三角
+      M = solve(L, solve(L, S_b).T).T            # = L^{-1} S_b L^{-T}
+      w, U = eigh(M); U = U[:, argsort(w)[::-1][:k_id]]
+      V = solve(L.T, U)                          # = L^{-T} U
+      E_id = qr(V)[0]                            # [D,k_id]，正交列（QR 不改变张成空间）
+      E_n  = top_eig(S_w, k_nuis)                # 无标签扰动子空间 [D,k_nuis]
+      return E_id, E_n, dict(n_between=len(Xb), n_within=len(R), eps=eps, top_eigs=w_sorted[:k_id])
+
+  只用 car、fit 视频（split_mask(video, 0)，与 S3 相同）。
+  估计四次：F_stage1（views=[fap]）、F_stage3（views=[fap]）、HF_stage1（views=[fap]）、HF_stage3（views=[fap]）；
+  另外用 F_stage4、HF_stage4（views=[fap,photo,student]）各估计一次，用来比较"视图种类多少"的影响。
+  k_id ∈ {2,8,16}，k_nuis ∈ {2,8,16}。
+
+  报告 A1 表（每个估计一行）：
+    与身份 oracle、天气 oracle、FAP 残差 PCA（与 S3 相同、用 F_stage1 fit 视频估计）的主角（列出全部角度的中位数和最大值）；
+    在 test 视频上的能量占比（与 P1 同口径）：真实跨域偏移、身份差异（identity_rows）、FAP 残差；
+    stage1 与 stage3 估计的同维子空间之间的主角（稳定性）。
+
+A2 遗忘还原测试（与 ics_probe_drift.py 的 restoration 部分完全同口径）：
+  query_stage = 4，gallery_stage j = 1,2,3，test 视频，gap = 4，window = 30，max_q = 4000，seed = 0；
+  对 E ∈ {无标签身份 E_id（F_stage1 估计）、无标签身份 E_id（stage3 估计）、无标签扰动 E_n（F_stage1 估计）、
+         身份 oracle、FAP 残差 PCA、随机（10 次平均）}，k ∈ {2,8,16}，模型 ∈ {F, HF}：
+    fixed = new − ((new − old) @ E) @ E.T，mAP_restored = cross_map(fixed, old, tasks)；
+    恢复比例 = (mAP_restored − mAP_cross) / (mAP_same − mAP_cross)，先对三个 j 分别算，再对 j 平均。
+  注意：HF 的无标签基用 HF 自己的特征估计；F 的用 F 的。
+
+  自检（必须通过）：用身份 oracle 重新跑 A2，结果必须与 drift_restoration.csv 中已有数值逐项一致（差 < 1e-9）。
+
+【阶段 A 过关标准】
+  (1) 无标签身份子空间 k = 16（用 stage1 或 stage3 估计均可，两者都报告）在 F 和 HF 上的平均恢复比例都 ≥ 40%，
+      且 ≥ 身份 oracle（同 k）恢复比例的 70%；
+  (2) 无标签扰动子空间 k = 2 的平均恢复比例 ≤ 10%。
+  不满足就停止，提交 A 的结果，写明哪一条没过。
+  满足时，记录 B 阶段用哪个 k（默认 16；若 k = 8 已达到 oracle 的 90% 以上，用 8）。
+
+================================================================
+二、代码改动（只在 A 过关后进行）
+================================================================
+1) darth/models/utils/roi_proto_memory.py
+   给 roi_proto_loss_with_gate 增加三个参数（默认值保持原行为）：
+       space_mode='full', space_basis=None, space_gamma=1.0
+   在函数开头（feats、prototypes 归一化之后），在原有 if/else 之前插入：
+
+     if space_mode != 'full':
+         assert basis is None or float(beta) == 0.0, 'space_mode 与 ICS 耦合不能同时开启'
+         E = space_basis.detach().to(device=feats.device, dtype=feats.dtype)   # [D,k]，正交列
+         sim = feats @ prototypes.t()                                        # 近邻仍在全空间用余弦选
+         k = min(topk, sim.size(1))
+         topv, topi = sim.topk(k=k, dim=1)
+         d = feats.unsqueeze(1) - prototypes[topi]                           # [N,k,D]
+         full2 = d.square().sum(-1)                                          # ‖d‖²
+         in2 = (d @ E).square().sum(-1)                                      # ‖Eᵀd‖²
+         if space_mode == 'id_only':       dist = 0.5 * in2
+         elif space_mode == 'id_boost':    dist = 0.5 * (full2 + float(space_gamma) * in2)
+         elif space_mode == 'release':     dist = 0.5 * (full2 - in2)
+         else: raise ValueError(space_mode)
+         per_roi = 1.0 - dist.mean(dim=1)
+         cos_roi = topv.mean(dim=1)                       # 门控仍按原余弦相似度
+         gate_mask = (torch.ones_like(cos_roi, dtype=torch.bool) if sim_gate_thr is None
+                      else cos_roi.detach() >= float(sim_gate_thr))
+         if gate_mask.sum() == 0: return None, cos_roi, gate_mask
+         loss = (1.0 - per_roi[gate_mask]).mean()
+         return loss, cos_roi, gate_mask
+
+   说明：单位向量下 0.5‖z − p‖² = 1 − cos，所以 'full' 与这三种模式的尺度一致。
+   在 compute_loss 的参数中增加 space_mode / space_basis / space_gamma，原样传给 roi_proto_loss_with_gate；
+   last_stats 增加 space_mode 和 mean_in_share（= in2.sum()/full2.sum()，诊断用，需在函数里一起返回或记录）。
+
+2) darth/models/track_heads/causal_quasi_dense_track_head.py
+   __init__ 新增参数（默认关闭）：
+       roi_proto_space_mode='full', roi_proto_space_basis_path=None, roi_proto_space_gamma=1.0
+   初始化时：
+       if roi_proto_space_mode != 'full':
+           assert not roi_proto_couple_ics, '不能与 ICS 耦合同时开启'
+           E = torch.from_numpy(np.load(roi_proto_space_basis_path)).float()   # [D,k]
+           assert E.shape[0] == causal_feat_dim
+           assert torch.allclose(E.t() @ E, torch.eye(E.shape[1]), atol=1e-4)
+           self.register_buffer('roi_proto_space_basis', E, persistent=False)  # 不写入 checkpoint
+       记录一次日志：[APR_SPACE] mode, k, gamma, basis 路径, basis sha256
+   在 _add_stage_proto_loss 调用 compute_loss 的地方，加上
+       space_mode=self.roi_proto_space_mode,
+       space_basis=getattr(self, 'roi_proto_space_basis', None),
+       space_gamma=self.roi_proto_space_gamma
+   每 log_interval 次打印一次 [APR_SPACE] loss 与 mean_in_share。
+
+3) tools/analysis/ics_probe_extract.py：增加教师框模式（B 阶段估计基底用，不用 GT）
+   新参数 --box-source {gt, teacher}（默认 gt），--teacher-score-thr（默认等于 APR 的 roi_proto_score_thr）。
+   teacher 模式：对 clean 图像（同样的 resize/normalize）调用
+       model.teacher_detector.simple_test(img, img_metas, rescale=False)
+   取 car 类、score ≥ 阈值的框（坐标已在缩放后的图像上，不要再乘缩放比例），instance_id 记为 -1，
+   其余流程（视图生成、嵌入提取用学生的 detector + track_head）不变。
+   gt 模式行为必须与现在逐位一致。
+
+================================================================
+三、快速验证（全部通过才开始训练，约 20 分钟）
+================================================================
+U1 单元测试 tools/analysis/test_idapr.py（只需 torch，CPU）：
+   随机 feats [64,256]、prototypes [300,256]，随机正交基 E [256,16]：
+   (a) space_mode='id_boost' 且 space_gamma=0 → loss 与 space_mode='full' 完全相等（atol 1e-6）；
+   (b) space_mode='id_only' 且 E = 单位阵 I_256 → loss 与 'full' 相等；
+   (c) space_mode='release' 且 E 为 [256,0] 的空基 → loss 与 'full' 相等（若空基不支持，用 id_boost γ=0 代替）；
+   (d) 对归一化后的 feats 求 'id_only' 的梯度，梯度在 E 的正交补里的分量 ≤ 1e-6；
+       'release' 的梯度在 E 内的分量 ≤ 1e-6；
+   (e) 所有梯度有限（无 NaN/Inf）。
+U2 默认关闭时逐位一致：用 HF stage3 快照，同一个固定 batch 前向一次，
+   新代码（space_mode='full'）与原代码的 APR 损失、总损失逐位相等。
+U3 冒烟训练：B1、B2、B3 各跑 50 个 iteration（只用 1 张卡，samples_per_gpu 与 HF 相同），检查：
+   - 日志出现 [APR_SPACE]，mode/k/sha256 正确；
+   - 每个 iteration 的 APR 损失有限且不为 0；stage 4 开始时 history_domains = 3；
+   - 记录三组与 B0 的 APR 损失均值之比（预期：B1 约为 B0 的 mean_in_share 倍，B2 > B0，B3 < B0）。
+   任何一项不满足就先修复，不要开始正式训练。
+
+================================================================
+四、阶段 B：只训 Night 的三组短训练（约 3–4 小时）
+================================================================
+B 用基底估计（不用 GT）：
+  python tools/analysis/ics_probe_extract.py --box-source teacher \
+      --checkpoint <HF stage3 epoch_5> --label HF_stage3_teacher \
+      --domain dawn_dusk $RUN/data/annotations/dawn_dusk.json $RUN/data/views/dawn_dusk/ \
+      --views clean,fap,photo,student --dose-frames-per-video 0 --out-dir $W/feats
+  然后用 idapr_basis.label_free_bases（Z = clean，views = [fap, photo, student]，image_id 来自该 npz，
+  使用全部 Dawn/Dusk 训练视频）得到：
+      E_id（k 按 A 阶段确定，默认 16）→ $W/basis/E_id_k16.npy
+      E_n（k = 2）                    → $W/basis/E_n_k2.npy
+  记录 sha256、样本数、ε，以及它们与 A 阶段 HF_stage3 估计结果的主角。
+
+实验搭建：复制 experiments/ics_quick/scripts/prepare_x3.py 为 $W/scripts/prepare_idapr.py，只改 groups：
+    groups = {
+      'B1': {'roi_proto_space_mode': 'id_only',  'roi_proto_space_basis_path': '$W/basis/E_id_k16.npy'},
+      'B2': {'roi_proto_space_mode': 'id_boost', 'roi_proto_space_basis_path': '$W/basis/E_id_k16.npy',
+             'roi_proto_space_gamma': 1.0},
+      'B3': {'roi_proto_space_mode': 'release',  'roi_proto_space_basis_path': '$W/basis/E_n_k2.npy'},
+    }
+  其余全部与 X3 相同：HF stage3 快照、--resume-episode-from-stage 4、epochs-per-stage = 2、4 张 V100、
+  seed 1790355234、同一份 shared_apr_history.pth（sha256 不变）、roi_proto_couple_ics = False、
+  ICS 保持原设置、相同的 custom_hooks（APRFiniteLossHook、审计 hook）。
+  用 ics_quick 的 gpu_job.py/controller 方式启动；4 卡空闲时依次跑，8 卡空闲时可两组并行。
+  每组导出 config_diff.json（相对 HF base config）和 resolved 的 causal_* / roi_proto_* 字段。
+
+评估（复用 experiments/ics_quick/scripts/evaluate.py，协议与 X3 完全相同）：
+  B1/B2/B3：Night、Overcast、Rainy、Dawn/Dusk；
+  X3-0（=B0）：补测 Overcast、Rainy（只推理）；
+  HF stage3 快照：补测 Overcast、Rainy（Dawn/Dusk 已有：HOTA 42.310952），作为遗忘基准。
+  遗忘 = HF stage3 在该旧域的值 − 训练后的值；报告三个旧域各自的值及平均。
+
+【阶段 B 过关标准】
+  B1、B2、B3 中至少一组相对 B0：三个旧域平均遗忘下降 ≥ 0.4 HOTA，且 Night HOTA 下降 ≤ 0.3。
+  结果标注"单种子"。
+
+================================================================
+五、交付（$W/SUMMARY.md，并提交到 GitHub experiments/idapr/）
+================================================================
+表 A1：无标签子空间性质（主角、能量占比、稳定性）
+表 A2：遗忘还原比例（F、HF × 各子空间 × k；含身份 oracle 自检结果）
+表 U ：单元测试与冒烟测试结果（通过/失败，损失比值）
+表 B ：B0/B1/B2/B3 的 Night 与三个旧域 HOTA/DetA/IDF1/AssA、各旧域遗忘与平均遗忘
+每个阶段写明过关与否及原因；列出所有偏离本说明的地方。

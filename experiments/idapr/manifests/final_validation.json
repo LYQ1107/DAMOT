@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "stage_A_gate_passed": false,
+  "row_counts": {
+    "A1_subspaces": 36,
+    "A1_estimates": 54,
+    "A1_stability": 12,
+    "A2_restoration": 108,
+    "A2_summary": 36,
+    "A2_baselines": 6,
+    "A2_random_replicates": 180,
+    "oracle_self_check": 18
+  },
+  "oracle_checks": 18,
+  "oracle_max_abs_delta": 0.0,
+  "orthonormal_label_free_bases": 36,
+  "unchanged_feature_inputs": 40,
+  "tracked_training_code_unchanged": true,
+  "aggregation_ratio_checks_passed": true
+}

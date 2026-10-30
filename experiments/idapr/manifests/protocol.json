@@ -1,0 +1,39 @@
+{
+  "registered_before_result_computation_utc": "2026-10-30T07:35:41.954445+00:00",
+  "dimensions": [
+    2,
+    8,
+    16
+  ],
+  "eps_ratio": 0.1,
+  "A1_label_free_fit": "car only, all five domains, split_mask(video,0)",
+  "A1_oracle_reference": "F_stage1_e5, all S3 fit RoIs/classes, unchanged rank_basis definitions",
+  "A1_energy_test": "car only, test videos, P1 ratio-of-sums energy",
+  "A2_protocol": "S3 exact all-class retrieval and common F_stage1 oracle; model-specific label-free bases",
+  "query_stage": 4,
+  "gallery_stages": [
+    1,
+    2,
+    3
+  ],
+  "gap": 4,
+  "window": 30,
+  "max_q": 4000,
+  "retrieval_seed": 0,
+  "random_basis_seed": 0,
+  "random_replicates": 10,
+  "random_basis_dimensions_order": [
+    2,
+    8,
+    16
+  ],
+  "gate_identity_k": 16,
+  "gate_identity_average_min": 0.4,
+  "gate_identity_fraction_of_oracle_min": 0.7,
+  "gate_nuisance_k2_average_max": 0.1,
+  "gate_rule": "For each model retain both stage1 and stage3; at least one of these two identity estimates must pass. Nuisance k2 must pass in both models. No alternative estimator is introduced.",
+  "B_default_k": 16,
+  "B_k8_rule": "Use k8 only if the same qualifying identity estimate reaches at least 90% of k8 oracle in both F and HF. Prefer a common stage3 estimate; otherwise common stage1; otherwise retain both model-specific gate results explicitly.",
+  "on_stage_A_fail": "Stop before training-code edits and U/B runs; publish A and explicit skipped U/B tables",
+  "no_multiseed_training": true
+}

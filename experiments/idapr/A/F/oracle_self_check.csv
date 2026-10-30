@@ -1,0 +1,10 @@
+model,gallery_stage,domain,k,queries,expected_queries,max_abs_delta,passed,mAP_same_abs_delta,mAP_cross_abs_delta,forgetting_proxy_abs_delta,mAP_restored_abs_delta,forgetting_restored_abs_delta,forgetting_reduction_abs_delta
+F,1,overcast,2,1142,1142,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,1,overcast,8,1142,1142,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,1,overcast,16,1142,1142,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,2,rainy,2,1837,1837,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,2,rainy,8,1837,1837,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,2,rainy,16,1837,1837,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,3,dawn_dusk,2,2866,2866,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,3,dawn_dusk,8,2866,2866,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+F,3,dawn_dusk,16,2866,2866,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0

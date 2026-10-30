@@ -1,0 +1,9 @@
+code_base_commit = fca076135220005f2d2f576fc375c79fca801ac2
+F_feat_root = /data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats
+HF_feat_root = /data1/liuyeqiang/damot_ics_followup_20261029/results/feats
+oracle_reference_label = F_stage1_e5
+historical_restoration_csv = /data1/liuyeqiang/idapr_20261030_153059/code/experiments/ics_probe/drift_decomposition/drift_restoration.csv
+HF_stage3_snapshot = /data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage03_after_dawn_dusk.pth
+X3_run = /data1/liuyeqiang/ics_quick_20261029_160807
+shared_apr_history = /data1/liuyeqiang/ics_quick_20261029_160807/X3/shared_apr_history.pth
+B0_checkpoint = /data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0/episode/adapt/stage04_after_night/epoch_2.pth

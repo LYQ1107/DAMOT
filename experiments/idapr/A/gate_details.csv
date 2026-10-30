@@ -1,0 +1,7 @@
+model,test,estimation_stage,mean_restoration_ratio,fraction_of_oracle,passed,criterion
+F,identity_k16,1,0.3869438893825982,0.6541740091428778,False,mean >= 0.40 and oracle fraction >= 0.70
+F,identity_k16,3,0.396154167995791,0.6697450649239338,False,mean >= 0.40 and oracle fraction >= 0.70
+F,nuisance_k2,1,0.002875706036343314,,True,mean <= 0.10
+HF,identity_k16,1,0.4322297509168609,0.7744447778006065,True,mean >= 0.40 and oracle fraction >= 0.70
+HF,identity_k16,3,0.4459370249316885,0.7990046947340134,True,mean >= 0.40 and oracle fraction >= 0.70
+HF,nuisance_k2,1,0.0068518567270337795,,True,mean <= 0.10

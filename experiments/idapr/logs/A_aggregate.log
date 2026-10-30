@@ -1,0 +1,1 @@
+{"stage": "A", "passed": false, "oracle_self_check_passed": true, "oracle_checks": 18, "oracle_max_abs_delta": 0.0, "eligible_identity_stages": {"F": [], "HF": [1, 3]}, "selected_diagnostic_stage": {}, "selected_B_k": null, "identity_requirement_passed": false, "nuisance_requirement_passed": true, "next_action": "STOP; publish Stage A only"}

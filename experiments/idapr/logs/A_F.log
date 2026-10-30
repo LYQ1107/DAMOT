@@ -1,0 +1,29 @@
+{"phase": "inputs_loaded", "time_utc": "2026-10-30T07:42:33Z", "model": "F", "rois": 33839, "fit_rois": 15820, "test_rois": 18019}
+{"phase": "A1_basis_fit", "time_utc": "2026-10-30T07:42:36Z", "model": "F", "stage": 1, "views": ["fap"], "fit_car_rois": 15820, "grouping": {"raw_image_ids": 1760, "physical_images": 2072, "image_id_namespaced": true}}
+{"phase": "A1_basis_fit", "time_utc": "2026-10-30T07:42:39Z", "model": "F", "stage": 3, "views": ["fap"], "fit_car_rois": 15820, "grouping": {"raw_image_ids": 1760, "physical_images": 2072, "image_id_namespaced": true}}
+{"phase": "A1_basis_fit", "time_utc": "2026-10-30T07:42:42Z", "model": "F", "stage": 4, "views": ["fap", "photo", "student"], "fit_car_rois": 15820, "grouping": {"raw_image_ids": 1760, "physical_images": 2072, "image_id_namespaced": true}}
+{"phase": "oracle_self_check", "time_utc": "2026-10-30T07:42:44Z", "model": "F", "gallery_stage": 1, "checks": 3, "all_passed": true}
+{"phase": "oracle_self_check", "time_utc": "2026-10-30T07:42:45Z", "model": "F", "gallery_stage": 2, "checks": 6, "all_passed": true}
+{"phase": "oracle_self_check", "time_utc": "2026-10-30T07:42:46Z", "model": "F", "gallery_stage": 3, "checks": 9, "all_passed": true}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:47Z", "model": "F", "gallery_stage": 1, "basis": "Label-free identity stage1", "completed_rows": 12}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:47Z", "model": "F", "gallery_stage": 1, "basis": "Label-free identity stage3", "completed_rows": 15}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:47Z", "model": "F", "gallery_stage": 1, "basis": "Label-free nuisance stage1", "completed_rows": 18}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:48Z", "model": "F", "gallery_stage": 1, "basis": "FAP residual PCA", "completed_rows": 21}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:42:48Z", "model": "F", "gallery_stage": 1, "k": 2, "completed_rows": 22, "random_replicates": 10}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:42:49Z", "model": "F", "gallery_stage": 1, "k": 8, "completed_rows": 23, "random_replicates": 20}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:42:50Z", "model": "F", "gallery_stage": 1, "k": 16, "completed_rows": 24, "random_replicates": 30}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:50Z", "model": "F", "gallery_stage": 2, "basis": "Label-free identity stage1", "completed_rows": 27}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:51Z", "model": "F", "gallery_stage": 2, "basis": "Label-free identity stage3", "completed_rows": 30}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:51Z", "model": "F", "gallery_stage": 2, "basis": "Label-free nuisance stage1", "completed_rows": 33}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:52Z", "model": "F", "gallery_stage": 2, "basis": "FAP residual PCA", "completed_rows": 36}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:42:53Z", "model": "F", "gallery_stage": 2, "k": 2, "completed_rows": 37, "random_replicates": 40}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:42:55Z", "model": "F", "gallery_stage": 2, "k": 8, "completed_rows": 38, "random_replicates": 50}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:42:56Z", "model": "F", "gallery_stage": 2, "k": 16, "completed_rows": 39, "random_replicates": 60}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:57Z", "model": "F", "gallery_stage": 3, "basis": "Label-free identity stage1", "completed_rows": 42}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:57Z", "model": "F", "gallery_stage": 3, "basis": "Label-free identity stage3", "completed_rows": 45}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:58Z", "model": "F", "gallery_stage": 3, "basis": "Label-free nuisance stage1", "completed_rows": 48}
+{"phase": "A2_restoration", "time_utc": "2026-10-30T07:42:59Z", "model": "F", "gallery_stage": 3, "basis": "FAP residual PCA", "completed_rows": 51}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:43:01Z", "model": "F", "gallery_stage": 3, "k": 2, "completed_rows": 52, "random_replicates": 70}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:43:03Z", "model": "F", "gallery_stage": 3, "k": 8, "completed_rows": 53, "random_replicates": 80}
+{"phase": "A2_random", "time_utc": "2026-10-30T07:43:06Z", "model": "F", "gallery_stage": 3, "k": 16, "completed_rows": 54, "random_replicates": 90}
+{"phase": "complete", "time_utc": "2026-10-30T07:43:06Z", "model": "F", "A2_rows": 54}

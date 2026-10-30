@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "model": "F",
+  "A1_property_rows": 18,
+  "A1_dimension_combinations": 27,
+  "A2_rows": 54,
+  "random_replicate_rows": 90,
+  "oracle_self_checks": 9,
+  "oracle_self_check_passed": true
+}

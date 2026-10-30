@@ -1,0 +1,343 @@
+--- a/darth/models/track_heads/causal_quasi_dense_track_head.py
++++ b/darth/models/track_heads/causal_quasi_dense_track_head.py
+@@ -95,6 +95,8 @@
+                  causal_proto_center_min_count=4,
+                  causal_freeze_random_basis=False,
+                  causal_random_basis_seed=0,
++                 causal_fixed_basis_path=None,
++                 causal_reset_bank_on_resume=False,
+                  roi_proto_couple_ics=False,
+                  roi_proto_couple_beta=None,
+                  roi_proto_couple_basis='ics',
+@@ -140,6 +142,10 @@
+         self.causal_proto_center_min_count = int(causal_proto_center_min_count)
+         self.causal_freeze_random_basis = bool(causal_freeze_random_basis)
+         self.causal_random_basis_seed = int(causal_random_basis_seed)
++        self.causal_fixed_basis_path = causal_fixed_basis_path
++        self.causal_reset_bank_on_resume = bool(causal_reset_bank_on_resume)
++        if causal_fixed_basis_path is not None:
++            assert self.causal_freeze_random_basis, 'A supplied fixed basis requires the X3 frozen-bank switch'
+         self.roi_proto_couple_ics = bool(roi_proto_couple_ics)
+         self.roi_proto_couple_beta = (None if roi_proto_couple_beta is None
+                                       else float(roi_proto_couple_beta))
+--- a/tools/run/train_seq3_episode.py
++++ b/tools/run/train_seq3_episode.py
+@@ -17,6 +17,8 @@
+ from darth.models import build_model
+ from apr_complement_experiment import install_checkpointing, APRFiniteLossHook
+ import ics_quick_hooks
++import ics_v2_hooks
++from ics_v2_runtime import load_stage3, install_fixed_basis
+ 
+ 
+ def parse_args():
+@@ -35,7 +37,7 @@
+     p.add_argument('--keep-teacher-across-stages',action='store_true',default=True)
+     p.add_argument('--keep-optimizer-across-stages',action='store_true')
+     p.add_argument('--resume-episode-from-stage',type=int,default=0)
+-    p.add_argument('--apr-history', required=True)
++    p.add_argument('--apr-history', default=None)
+     p.add_argument('--cfg-options',nargs='+',action=DictAction)
+     a=p.parse_args(); os.environ.setdefault('LOCAL_RANK',str(a.local_rank)); return a
+ 
+@@ -139,13 +141,19 @@
+     start=max(1,args.resume_episode_from_stage or 1)
+     if args.resume_episode_from_stage:
+         pi=args.resume_episode_from_stage-1; prev='stage00_source_only' if pi==0 else f'stage{pi:02d}_after_{args.target_order[pi-1]}'
+-        rec=osp.join(args.work_dir,'stage_snapshots',prev+'.pth'); logger.warning('[RECOVERY] load snapshot for abnormal recovery only: %s',rec); load_checkpoint(model,rec,map_location='cpu')
++        rec=osp.join(args.work_dir,'stage_snapshots',prev+'.pth'); logger.warning('[RECOVERY] load snapshot for abnormal recovery only: %s',rec)
++        load_stage3(model,rec,Path(args.work_dir).parent,logger)
+     # Checkpoints do not include APR Python history. Load the same archived
+     # stage-3 rank-0 library in every ablation and every rank.
+-    history=torch.load(args.apr_history,map_location='cpu')
+-    assert set(history)=={'overcast','rainy','dawn_dusk'}
+-    unwrap(model).track_head.roi_proto_memory.load_state_dict_memory(history)
+-    logger.info('[ICS_QUICK] Restored APR history_domains=3 file=%s',args.apr_history)
++    if unwrap(model).track_head.use_roi_proto_memory:
++        assert args.apr_history is not None
++        history=torch.load(args.apr_history,map_location='cpu')
++        assert set(history)=={'overcast','rainy','dawn_dusk'}
++        unwrap(model).track_head.roi_proto_memory.load_state_dict_memory(history)
++        logger.info('[ICS_QUICK] Restored APR history_domains=3 file=%s',args.apr_history)
++    else:
++        assert args.apr_history is None, 'APR-off C series must not load an APR library'
++        logger.info('[ICS_V2] APR disabled, no history file opened')
+     for i,t in enumerate(args.target_order,1):
+         if i<start: logger.info('[STAGE %d] skip due to recovery start=%d',i,start); continue
+         name=f'stage{i:02d}_after_{t}'; wdir=osp.join(args.work_dir,'adapt',name); mkdir(wdir)
+@@ -163,15 +171,19 @@
+         if hasattr(mod,'roi_proto_start_stage'): mod.roi_proto_start_stage(t)
+         h=mod.track_head
+         if h.causal_freeze_random_basis:
+-            gen=torch.Generator(device='cpu');gen.manual_seed(h.causal_random_basis_seed)
+-            basis=torch.linalg.qr(torch.randn(h.causal_feat_dim,h.causal_num_pcs,generator=gen),mode='reduced')[0]
+-            h.causal_bank.pcs.copy_(basis.T.to(h.causal_bank.pcs));h.causal_bank.initialized.fill_(True)
+-            if rank0():
+-                import numpy as np
+-                np.save(osp.join(args.work_dir,'random_basis.npy'),basis.numpy())
+-            logger.info('[ICS_QUICK] Fixed random basis initialized, seed=%d updates=%d',h.causal_random_basis_seed,h.causal_bank.num_updates.item())
+-        assert len(h.roi_proto_memory._history)==3
+-        logger.info('[ICS_QUICK] Stage 4 begins history_domains=3 num_updates=%s',None if h.causal_bank is None else h.causal_bank.num_updates.item())
++            if not install_fixed_basis(h,args.work_dir,logger):
++                gen=torch.Generator(device='cpu');gen.manual_seed(h.causal_random_basis_seed)
++                basis=torch.linalg.qr(torch.randn(h.causal_feat_dim,h.causal_num_pcs,generator=gen),mode='reduced')[0]
++                h.causal_bank.pcs.copy_(basis.T.to(h.causal_bank.pcs));h.causal_bank.initialized.fill_(True)
++                if rank0():
++                    import numpy as np
++                    np.save(osp.join(args.work_dir,'random_basis.npy'),basis.numpy())
++                logger.info('[ICS_QUICK] Fixed random basis initialized, seed=%d updates=%d',h.causal_random_basis_seed,h.causal_bank.num_updates.item())
++        if h.use_roi_proto_memory:
++            assert len(h.roi_proto_memory._history)==3
++        else:
++            assert h.roi_proto_memory is None
++        logger.info('[ICS_V2] Stage 4 begins APR=%s num_updates=%s',h.use_roi_proto_memory,None if h.causal_bank is None else h.causal_bank.num_updates.item())
+         train_model(model,[ds],scfg,distributed=distributed,validate=False,timestamp=ts,meta=meta)
+         if hasattr(mod,'roi_proto_finalize_stage'): mod.roi_proto_finalize_stage(t)
+         if hasattr(mod,'roi_proto_memory_summary'):
+--- /dev/null
++++ b/tools/run/ics_v2_hooks.py
+@@ -0,0 +1,150 @@
++"""Read-only loss, actual key/ref trim activity, and frozen-bank audit."""
++import csv
++import json
++from pathlib import Path
++import numpy as np
++import torch
++from mmcv.runner import HOOKS, Hook, get_dist_info
++from mmcv.parallel import is_module_wrapper
++from ics_v2_runtime import file_sha
++
++
++@HOOKS.register_module()
++class ICSv2AuditHook(Hook):
++    def __init__(self, root):
++        self.root = Path(root)
++        self.rows = []
++        self.bank_update_calls = 0
++        self.first_init_iter = None
++        self.trim_calls = []
++        self.active_iteration = 0
++
++    def before_run(self, runner):
++        model = runner.model.module if is_module_wrapper(runner.model) else runner.model
++        self.head = model.track_head
++        self.rank = get_dist_info()[0]
++        h = self.head
++        assert not h.use_roi_proto_memory and h.roi_proto_memory is None
++        assert not h.roi_proto_couple_ics and h.causal_min_samples == 32
++        self.bank = h.causal_bank
++        self.initial_pcs = self.bank.pcs.detach().clone() if self.bank is not None else None
++        self.initial_updates = int(self.bank.num_updates.item()) if self.bank is not None else None
++        self.fixed = h.causal_fixed_basis_path is not None
++        if self.fixed:
++            E = torch.from_numpy(np.load(h.causal_fixed_basis_path)).T.to(self.initial_pcs)
++            assert torch.equal(E, self.initial_pcs) and bool(self.bank.initialized.item())
++        if h.causal_reset_bank_on_resume:
++            assert self.initial_updates == 0 and not bool(self.bank.initialized.item())
++        if self.bank is not None:
++            original_trim = self.bank.trim
++            def trim(feats, *args, **kwargs):
++                result = original_trim(feats, *args, **kwargs)
++                self.trim_calls.append(dict(rois=int(feats.shape[0]), effective=not torch.equal(result, feats)))
++                return result
++            self.bank.trim = trim
++            original_update = self.bank.update
++            def update(*args, **kwargs):
++                self.bank_update_calls += 1
++                assert not self.fixed, 'A fixed bank update was called'
++                before = bool(self.bank.initialized.item())
++                result = original_update(*args, **kwargs)
++                if not before and bool(self.bank.initialized.item()) and self.first_init_iter is None:
++                    self.first_init_iter = self.active_iteration
++                return result
++            self.bank.update = update
++            original_cov_update = self.bank.update_from_covariance
++            def update_cov(*args, **kwargs):
++                assert not self.fixed, 'A fixed covariance update was called'
++                return original_cov_update(*args, **kwargs)
++            self.bank.update_from_covariance = update_cov
++        self.root.mkdir(parents=True, exist_ok=True)
++        self.path = self.root / ('iterations_rank%d.csv' % self.rank)
++        self.path.write_text('')
++        original = h.forward_train
++        self.latest = None
++        def call(*args, **kwargs):
++            losses = original(*args, **kwargs)
++            assert 'loss_roi_proto' not in losses
++            self.latest = {k: float(v.detach()) for k, v in losses.items() if torch.is_tensor(v)}
++            return losses
++        h.forward_train = call
++        self.save('start', runner)
++
++    def before_train_iter(self, runner):
++        self.active_iteration = runner.iter + 1
++        self.trim_calls = []
++
++    def save(self, tag, runner):
++        h = self.head
++        same = self.bank is None or torch.equal(self.bank.pcs, self.initial_pcs)
++        if self.fixed:
++            assert same and int(self.bank.num_updates.item()) == self.initial_updates
++            assert self.bank_update_calls == 0
++        n = len(self.rows)
++        key = sum(int(r['key_trim_effective']) for r in self.rows)
++        ref = sum(int(r['ref_trim_effective']) for r in self.rows)
++        both = sum(int(r['key_trim_effective'] and r['ref_trim_effective']) for r in self.rows)
++        losses = [r['trim_loss'] for r in self.rows if r['trim_loss'] is not None]
++        record = dict(tag=tag, rank=self.rank, epoch=runner.epoch, iteration=runner.iter,
++                      total_batches=n, APR_enabled=False, APR_history_loaded=False,
++                      history_domains=0, coupling=False, ICS_enabled=self.bank is not None,
++                      pca_mode=h.causal_pca_mode, alpha=h.causal_trim_alpha,
++                      loss_weight=h.causal_loss_weight, min_samples=h.causal_min_samples,
++                      num_pcs=h.causal_num_pcs, fixed_basis=self.fixed, fixed_pcs_bitwise_unchanged=same,
++                      basis_path=h.causal_fixed_basis_path,
++                      basis_sha256=file_sha(h.causal_fixed_basis_path) if self.fixed else None,
++                      num_updates_start=self.initial_updates,
++                      num_updates=int(self.bank.num_updates.item()) if self.bank is not None else None,
++                      bank_update_calls=self.bank_update_calls, first_initialized_iteration=self.first_init_iter,
++                      trim_active_batches=sum(int(r['trim_present']) for r in self.rows),
++                      key_effective_batches=key, ref_effective_batches=ref, both_effective_batches=both,
++                      key_effective_ratio=key / n if n else None,
++                      ref_effective_ratio=ref / n if n else None,
++                      both_effective_ratio=both / n if n else None,
++                      loss_track_trim_mean=sum(losses) / len(losses) if losses else None)
++        record['activation_below80_at50'] = n == 50 and self.bank is not None and min(key / n, ref / n) < .8
++        (self.root / ('v2_%s_rank%d.json' % (tag, self.rank))).write_text(json.dumps(record, indent=2))
++        runner.logger.info('[ICS_V2_AUDIT] %s', record)
++        if record['activation_below80_at50']:
++            runner.logger.warning('[ICS_V2_ALERT] key/ref activation below80%% in first50: %s', record)
++
++    def after_train_iter(self, runner):
++        assert self.latest is not None and all(np.isfinite(v) for v in self.latest.values())
++        if self.bank is None:
++            assert 'loss_track_trim' not in self.latest and not self.trim_calls
++        if self.fixed:
++            assert torch.equal(self.bank.pcs, self.initial_pcs)
++            assert int(self.bank.num_updates.item()) == self.initial_updates and self.bank_update_calls == 0
++        loss = float(runner.outputs['loss'].detach())
++        assert np.isfinite(loss)
++        calls = self.trim_calls
++        assert len(calls) in [0, 2], calls
++        row = dict(iteration=runner.iter + 1, epoch=runner.epoch + 1, total_loss=loss,
++                   trim_loss=self.latest.get('loss_track_trim'), trim_aux_loss=self.latest.get('loss_track_aux_trim'),
++                   trim_present='loss_track_trim' in self.latest,
++                   key_rois=calls[0]['rois'] if calls else 0, ref_rois=calls[1]['rois'] if calls else 0,
++                   key_trim_effective=calls[0]['effective'] if calls else False,
++                   ref_trim_effective=calls[1]['effective'] if calls else False,
++                   history_domains=0, APR_enabled=False,
++                   num_updates=int(self.bank.num_updates.item()) if self.bank is not None else None)
++        self.rows.append(row)
++        with self.path.open('a', newline='') as f:
++            writer = csv.DictWriter(f, fieldnames=list(row))
++            if len(self.rows) == 1:
++                writer.writeheader()
++            writer.writerow(row)
++        if (runner.iter + 1) % 10 == 0:
++            self.save('progress', runner)
++        if runner.iter + 1 == 50:
++            self.save('iteration50', runner)
++
++    def after_train_epoch(self, runner):
++        self.save('epoch%d' % (runner.epoch + 1), runner)
++
++    def after_run(self, runner):
++        if self.bank is not None:
++            assert any(r['trim_present'] for r in self.rows)
++        if self.bank is not None and not self.fixed:
++            assert self.initial_updates == 0 and int(self.bank.num_updates.item()) > 0
++            assert self.first_init_iter is not None
++        self.save('end', runner)
+--- /dev/null
++++ b/tools/run/ics_v2_runtime.py
+@@ -0,0 +1,91 @@
++"""ICS-only bank reset and fixed-bank installation; strict remaining state."""
++import hashlib
++import json
++from pathlib import Path
++import numpy as np
++import torch
++from mmcv.runner import get_dist_info
++
++
++def file_sha(path):
++    h = hashlib.sha256()
++    with open(str(path), 'rb') as f:
++        for chunk in iter(lambda: f.read(8 * 1024 * 1024), b''):
++            h.update(chunk)
++    return h.hexdigest()
++
++
++def load_stage3(model, filename, output, logger):
++    checkpoint = torch.load(filename, map_location='cpu')
++    original = checkpoint['state_dict']
++    target = model.state_dict()
++    skipped = sorted(set(original) - set(target))
++    assert not (set(target) - set(original))
++    assert all(k.startswith(('track_head.causal_bank.', 'teacher_track_head.causal_bank.')) for k in skipped)
++    state = {k: v for k, v in original.items() if k in target}
++    reset = bool(model.track_head.causal_reset_bank_on_resume)
++    adaptations = []
++    reset_keys = []
++    for key, value in original.items():
++        if key not in target:
++            continue
++        is_bank = key.startswith(('track_head.causal_bank.', 'teacher_track_head.causal_bank.'))
++        if reset and is_bank:
++            # Constructor defaults: every bank buffer is zero except last_update_ok.
++            state[key] = (torch.ones_like(target[key]) if key.endswith('.last_update_ok')
++                          else torch.zeros_like(target[key]))
++            reset_keys.append(key)
++            adaptations.append(dict(key=key, before=list(value.shape), after=list(state[key].shape),
++                                    rule='fresh constructor bank state; no stage3 PC is retained'))
++        else:
++            assert value.shape == target[key].shape, key
++    model.load_state_dict(state, strict=True)
++    loaded = model.state_dict()
++    assert all(torch.equal(loaded[k], v) for k, v in state.items())
++    assert all(torch.equal(loaded[k], v) for k, v in original.items() if k in target and k not in reset_keys)
++    if reset:
++        assert len(reset_keys) == 20
++        for head in [model.track_head, model.teacher_track_head]:
++            assert not bool(head.causal_bank.initialized.item())
++            assert int(head.causal_bank.num_updates.item()) == 0
++            assert not head.causal_bank.pcs.any() and not head.causal_bank.cov_bank.any()
++    parameters = dict(model.named_parameters())
++    assert all(torch.equal(parameters[k].detach(), original[k]) for k in parameters)
++    record = dict(snapshot=str(filename), snapshot_sha256=file_sha(filename), matched_state_keys=len(state),
++                  learned_parameters_bitwise_equal=True, all_nonbank_state_bitwise_equal=True,
++                  bank_reset=reset, reset_keys=reset_keys, only_bank_keys_replaced=all('.causal_bank.' in k for k in reset_keys),
++                  skipped_keys=skipped, only_bank_keys_skipped=all('.causal_bank.' in k for k in skipped),
++                  shape_adaptations=adaptations, rank=get_dist_info()[0])
++    output = Path(output)
++    output.mkdir(parents=True, exist_ok=True)
++    (output / ('warmstart_rank%d.json' % get_dist_info()[0])).write_text(json.dumps(record, indent=2))
++    logger.info('[ICS_V2] strict HF stage3 warm start: %s', record)
++
++
++def install_fixed_basis(head, output, logger):
++    path = getattr(head, 'causal_fixed_basis_path', None)
++    if path is None:
++        return False
++    assert head.causal_freeze_random_basis and head.causal_bank is not None
++    E = np.load(path)
++    assert E.shape == (head.causal_feat_dim, head.causal_num_pcs) == (256, 2)
++    assert np.isfinite(E).all() and np.allclose(E.T @ E, np.eye(2), atol=1e-6)
++    value = torch.from_numpy(E).T.to(head.causal_bank.pcs)
++    head.causal_bank.pcs.copy_(value)
++    head.causal_bank.initialized.fill_(True)
++    assert torch.equal(head.causal_bank.pcs, value)
++    actual = head.causal_bank.pcs.detach().cpu().double().numpy()
++    orth_error = float(np.max(np.abs(actual @ actual.T - np.eye(2))))
++    actual_q = np.linalg.qr(actual.T)[0]
++    target_q = np.linalg.qr(E.astype(np.float64))[0]
++    angles = np.degrees(np.arccos(np.clip(np.linalg.svd(actual_q.T @ target_q, compute_uv=False), -1., 1.)))
++    assert orth_error < 1e-5 and float(angles.max()) < .01
++    record = dict(path=str(path), sha256=file_sha(path), pcs_shape=list(actual.shape),
++                  max_row_orthonormal_error=orth_error, principal_angles_deg=angles.tolist(),
++                  initialized=True, num_updates=int(head.causal_bank.num_updates.item()), rank=get_dist_info()[0])
++    output = Path(output)
++    output.mkdir(parents=True, exist_ok=True)
++    (output / ('fixed_basis_check_rank%d.json' % get_dist_info()[0])).write_text(json.dumps(record, indent=2))
++    logger.info('[ICS_V2] fixed basis=%s sha256=%s shape=%s updates=%d',
++                path, file_sha(path), E.shape, head.causal_bank.num_updates.item())
++    return True

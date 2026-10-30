@@ -1,0 +1,16 @@
+{
+  "path": "/data1/liuyeqiang/ics_v2_20261030_184026/basis/HF_stage3_A_nuisance_k2.npy",
+  "sha256": "431605fa763d13387a8e777f9bf95190b27aa62b1cc1b3256bcad26d225bc652",
+  "pcs_shape": [
+    2,
+    256
+  ],
+  "max_row_orthonormal_error": 6.223269011229604e-09,
+  "principal_angles_deg": [
+    0.0,
+    1.4787793334710982e-06
+  ],
+  "initialized": true,
+  "num_updates": 660,
+  "rank": 3
+}

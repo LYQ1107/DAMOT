@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "frames": 6476,
+  "videos": 33,
+  "beta": 0.0,
+  "baseline_parity": null,
+  "reference": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage_domain_metrics.csv",
+  "all_frame_hota": true,
+  "time": 1793375828.7849324
+}

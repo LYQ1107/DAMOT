@@ -1,0 +1,15 @@
+{
+  "nuisance": {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/A/HF/bases/HF_stage3_nuisance_k2.npy",
+    "path": "/data1/liuyeqiang/ics_v2_20261030_184026/basis/HF_stage3_A_nuisance_k2.npy",
+    "sha256": "431605fa763d13387a8e777f9bf95190b27aa62b1cc1b3256bcad26d225bc652",
+    "estimation": "HF stage3, A-stage FAP views and GT boxes; not the B3 teacher basis"
+  },
+  "random": {
+    "source": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-3/expected_random_basis.npy",
+    "path": "/data1/liuyeqiang/ics_v2_20261030_184026/basis/X3_seed0_random_k2.npy",
+    "sha256": "b95a1f4ce3b93405ca9f94d389bca68d55493ab3ff83ec7f90315dbd7e42a6cf",
+    "generation": "Existing X3-3 CPU torch Generator seed0; QR of Gaussian [256,2]. No direction resampling."
+  },
+  "training_seed": 1790355234
+}

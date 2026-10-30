@@ -1,0 +1,26 @@
+{
+  "groups": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "APR_enabled": false,
+  "APR_history_loaded": false,
+  "seed": 1790355234,
+  "epochs_per_stage": 2,
+  "gpus_per_group": 4,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "causal_min_samples": 32,
+  "source": "HF stage3 snapshot",
+  "resume_episode_from_stage": 4,
+  "C1": "all student/teacher causal_bank buffers reset to constructor state; all nonbank state retained",
+  "C2_C3": "fixed A/HF stage3 fit-video GT-box FAP nuisance-2",
+  "C4": "fixed X3 random orthogonal k2, basis seed0",
+  "criterion": "C1: Night HOTA OR AssA delta vsC0 >=0.4; C2/C3: same threshold and same qualifying metric greater than C4",
+  "X3_references": "APR-on references only; excluded from the new criterion",
+  "first_historical_table_sent_before_training": true,
+  "supplemental_historical_inference_cells": 12
+}

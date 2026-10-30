@@ -1,0 +1,58 @@
+{
+  "reason": "Reserve disk for final snapshots; remove only task-owned unused stage00 copies and duplicate completed-evaluation COCO exports",
+  "source_and_stage3_weights_untouched": true,
+  "epoch1_recovery_checkpoints_retained": true,
+  "predictions_and_metrics_retained": true,
+  "files": [
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage00_source_only.pth",
+      "bytes": 455981409,
+      "sha256": "7f1ce71f01a27c3dc8b24087b49fe3a23f69a806fd1a597f95c81bfc9c861ae9"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C4/episode/stage_snapshots/stage00_source_only.pth",
+      "bytes": 455981409,
+      "sha256": "c13a8cc0a96a8ac2080002dae403a96dc272979cbb657179b6f1b3a88329aebe"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C0/night/evaluation/track_coco.json",
+      "bytes": 7696557,
+      "sha256": "f4919546c8c0d70c9567288d5cc479a50b944b5f6564563935db715b2580a578"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C0/night/evaluation/bbox_coco.json",
+      "bytes": 33649562,
+      "sha256": "6551bed137969f6ea719afd921d6bc0b102ba6cdd8a9ec7a9face5d3af324f98"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C0/dawn_dusk/evaluation/track_coco.json",
+      "bytes": 7010277,
+      "sha256": "d5dd2227adffc1674b2f0ba9f52c5d380fba651327a745b9ce090bf3a995489c"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C0/dawn_dusk/evaluation/bbox_coco.json",
+      "bytes": 26816797,
+      "sha256": "a1037a8ba984dc2e8631122d42bb90d753f6d6e2df4c1027b4b5b00cc3e3b16e"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C1/night/evaluation/track_coco.json",
+      "bytes": 7667108,
+      "sha256": "1130b930648c8fd3c65b72fd41367b3fd7d4041633023004dfedd7e68ee723bc"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C1/night/evaluation/bbox_coco.json",
+      "bytes": 33380402,
+      "sha256": "bc00b2d92b1614df8c827af285a718a03d9c8f2ceb3564e73f38158fecc11c9a"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C1/dawn_dusk/evaluation/track_coco.json",
+      "bytes": 7001950,
+      "sha256": "cea13a569682ff6b183d916d8399d85d14df1f2b9727682320b258cbffd6f57e"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C1/dawn_dusk/evaluation/bbox_coco.json",
+      "bytes": 26608998,
+      "sha256": "87e7d4b613c3f3dc883112f7bdaaa54f875a8e9e7d8530941d5f43194088b835"
+    }
+  ]
+}

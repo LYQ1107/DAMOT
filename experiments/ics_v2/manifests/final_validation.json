@@ -1,0 +1,264 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "kind": "training_rank",
+      "group": "C0",
+      "rank": 0,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C0",
+      "rank": 1,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C0",
+      "rank": 2,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C0",
+      "rank": 3,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C1",
+      "rank": 0,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C1",
+      "rank": 1,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C1",
+      "rank": 2,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C1",
+      "rank": 3,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C2",
+      "rank": 0,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C2",
+      "rank": 1,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C2",
+      "rank": 2,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C2",
+      "rank": 3,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C3",
+      "rank": 0,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C3",
+      "rank": 1,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C3",
+      "rank": 2,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C3",
+      "rank": 3,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C4",
+      "rank": 0,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C4",
+      "rank": 1,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C4",
+      "rank": 2,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "training_rank",
+      "group": "C4",
+      "rank": 3,
+      "epochs": 2,
+      "batches": 228,
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "X3-0",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "X3-0",
+      "domain": "dawn_dusk",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "X3-1",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "X3-1",
+      "domain": "dawn_dusk",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C0",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C0",
+      "domain": "dawn_dusk",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C1",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C1",
+      "domain": "dawn_dusk",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C2",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C2",
+      "domain": "dawn_dusk",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C3",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C3",
+      "domain": "dawn_dusk",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C4",
+      "domain": "night",
+      "passed": true
+    },
+    {
+      "kind": "evaluation",
+      "group": "C4",
+      "domain": "dawn_dusk",
+      "passed": true
+    }
+  ],
+  "groups": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "training_seed": 1790355234,
+  "APR_enabled": false,
+  "APR_history_loaded": false,
+  "C1_bank_only_reset_verified": true,
+  "fixed_basis_and_zero_updates_verified": true,
+  "actual_key_ref_activation_verified": true,
+  "historical_inference_cells": 12,
+  "evaluation_cells": 14
+}

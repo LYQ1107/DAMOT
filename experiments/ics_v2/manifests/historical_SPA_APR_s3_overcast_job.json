@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "gpus": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "prelaunch_snapshot": "0, 7571, 0\n1, 12133, 0\n2, 2, 0\n3, 2, 0\n4, 2, 0\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 2, 0\n9, 2, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "-m",
+    "torch.distributed.launch",
+    "--nproc_per_node=4",
+    "--master_port=32925",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/code_hf/tools/run/test.py",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/configs/historical_eval_overcast.py",
+    "--checkpoint",
+    "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage03_after_dawn_dusk/epoch_5.pth",
+    "--launcher",
+    "pytorch",
+    "--work-dir",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage3/overcast",
+    "--exp-name",
+    "native",
+    "--version",
+    "epoch5",
+    "--eval",
+    "bbox",
+    "track",
+    "--fuse-conv-bn"
+  ],
+  "pid": 20415,
+  "time": 1793359058.9372482,
+  "exit_code": 0,
+  "finished_time": 1793359240.3156946
+}

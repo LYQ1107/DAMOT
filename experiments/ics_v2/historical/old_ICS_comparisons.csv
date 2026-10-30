@@ -1,0 +1,9 @@
+ICS,no_ICS,metric,same_seed,ICS_seed,control_seed,delta_FinalMean,delta_AvgF,limitation
+SPA_oldICS,SPA_pipeline,HOTA,False,1591423161,1929377231,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+SPA_oldICS,SPA_pipeline,DetA,False,1591423161,1929377231,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+SPA_oldICS,SPA_pipeline,IDF1,False,1591423161,1929377231,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+SPA_oldICS,SPA_pipeline,AssA,False,1591423161,1929377231,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+F_old,SPA_APR,HOTA,False,952475529,1731334941,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+F_old,SPA_APR,DetA,False,952475529,1731334941,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+F_old,SPA_APR,IDF1,False,952475529,1731334941,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.
+F_old,SPA_APR,AssA,False,952475529,1731334941,,,No-ICS controls lack final old-domain evaluations; no results filled. APR strengths may also differ.

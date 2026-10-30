@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "git_apply_check": true,
+  "sha256": "c25d0a0224199b1ed8fadfc86487fcdf422324dd301a4bd906a9e491b8b64625",
+  "baseline": "actual X3 HF runtime"
+}

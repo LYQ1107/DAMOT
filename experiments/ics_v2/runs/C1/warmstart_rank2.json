@@ -1,0 +1,244 @@
+{
+  "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C1/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+  "snapshot_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "matched_state_keys": 752,
+  "learned_parameters_bitwise_equal": true,
+  "all_nonbank_state_bitwise_equal": true,
+  "bank_reset": true,
+  "reset_keys": [
+    "track_head.causal_bank.pcs",
+    "track_head.causal_bank.initialized",
+    "track_head.causal_bank.cov_bank",
+    "track_head.causal_bank.cov_initialized",
+    "track_head.causal_bank.num_updates",
+    "track_head.causal_bank.last_eig1",
+    "track_head.causal_bank.last_eig_ratio",
+    "track_head.causal_bank.last_pc_drift",
+    "track_head.causal_bank.last_num_samples",
+    "track_head.causal_bank.last_update_ok",
+    "teacher_track_head.causal_bank.pcs",
+    "teacher_track_head.causal_bank.initialized",
+    "teacher_track_head.causal_bank.cov_bank",
+    "teacher_track_head.causal_bank.cov_initialized",
+    "teacher_track_head.causal_bank.num_updates",
+    "teacher_track_head.causal_bank.last_eig1",
+    "teacher_track_head.causal_bank.last_eig_ratio",
+    "teacher_track_head.causal_bank.last_pc_drift",
+    "teacher_track_head.causal_bank.last_num_samples",
+    "teacher_track_head.causal_bank.last_update_ok"
+  ],
+  "only_bank_keys_replaced": true,
+  "skipped_keys": [],
+  "only_bank_keys_skipped": true,
+  "shape_adaptations": [
+    {
+      "key": "track_head.causal_bank.pcs",
+      "before": [
+        2,
+        256
+      ],
+      "after": [
+        1,
+        256
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.initialized",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.cov_bank",
+      "before": [
+        256,
+        256
+      ],
+      "after": [
+        256,
+        256
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.cov_initialized",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.num_updates",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.last_eig1",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.last_eig_ratio",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.last_pc_drift",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.last_num_samples",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "track_head.causal_bank.last_update_ok",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.pcs",
+      "before": [
+        2,
+        256
+      ],
+      "after": [
+        1,
+        256
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.initialized",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.cov_bank",
+      "before": [
+        256,
+        256
+      ],
+      "after": [
+        256,
+        256
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.cov_initialized",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.num_updates",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.last_eig1",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.last_eig_ratio",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.last_pc_drift",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.last_num_samples",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    },
+    {
+      "key": "teacher_track_head.causal_bank.last_update_ok",
+      "before": [
+        1
+      ],
+      "after": [
+        1
+      ],
+      "rule": "fresh constructor bank state; no stage3 PC is retained"
+    }
+  ],
+  "rank": 2
+}

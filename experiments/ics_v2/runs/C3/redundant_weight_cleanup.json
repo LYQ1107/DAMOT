@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C3/episode/stage_snapshots/stage00_source_only.pth",
+    "bytes": 455981409,
+    "sha256": "a286a71a9565efa9e7a2463a971c3dc910f6bcdde08de41e35b32f83c24e06b3"
+  },
+  {
+    "path": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C3/episode/adapt/stage04_after_night/epoch_1.pth",
+    "bytes": 682303473,
+    "sha256": "8caf372dfcef09b43559b51a2c8f29092377789186cc7a54742d3ef354e4a51f"
+  }
+]

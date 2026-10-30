@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "gpus": [
+    3
+  ],
+  "prelaunch_snapshot": "0, 27176, 100\n1, 12133, 0\n2, 2, 0\n3, 2, 0\n4, 6018, 3\n5, 2, 0\n6, 2, 0\n7, 5295, 0\n8, 21279, 0\n9, 21279, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/scripts/evaluate.py",
+    "--model",
+    "HF",
+    "--domain",
+    "dawn_dusk",
+    "--checkpoint",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C3/episode/adapt/stage04_after_night/epoch_2.pth",
+    "--out",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C3/dawn_dusk",
+    "--beta",
+    "0"
+  ],
+  "pid": 17707,
+  "time": 1793375200.9783747,
+  "exit_code": 0,
+  "finished_time": 1793375830.9759629
+}

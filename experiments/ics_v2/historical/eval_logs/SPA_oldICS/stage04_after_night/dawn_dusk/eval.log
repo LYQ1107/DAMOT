@@ -1,0 +1,318 @@
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/torch/distributed/launch.py:188: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/mmtrack/core/utils/misc.py:35: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  f'Setting MKL_NUM_THREADS environment variable for each process '
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/mmtrack/core/utils/misc.py:35: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  f'Setting MKL_NUM_THREADS environment variable for each process '
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/mmtrack/core/utils/misc.py:35: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  f'Setting MKL_NUM_THREADS environment variable for each process '
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/mmtrack/core/utils/misc.py:35: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  f'Setting MKL_NUM_THREADS environment variable for each process '
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/mmtrack/core/utils/misc.py:35: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  f'Setting MKL_NUM_THREADS environment variable for each process '
+/home/lwr/anaconda3/envs/DARTH/lib/python3.7/site-packages/mmtrack/core/utils/misc.py:35: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  f'Setting MKL_NUM_THREADS environment variable for each process '
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.29s)
+creating index...
+Done (t=0.30s)
+creating index...
+Done (t=0.32s)
+creating index...
+Done (t=0.32s)
+creating index...
+Done (t=0.32s)
+creating index...
+Done (t=0.34s)
+creating index...
+index created!
+index created!
+index created!
+index created!
+index created!
+index created!
+load checkpoint from local path: work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth
+load checkpoint from local path: work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth
+load checkpoint from local path: work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth
+load checkpoint from local path: work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth
+load checkpoint from local path: work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth
+load checkpoint from local path: work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/epoch_5.pth
+The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: teacher_detector.backbone.conv1.weight, teacher_detector.backbone.bn1.weight, teacher_detector.backbone.bn1.bias, teacher_detector.backbone.bn1.running_mean, teacher_detector.backbone.bn1.running_var, teacher_detector.backbone.bn1.num_batches_tracked, teacher_detector.backbone.layer1.0.conv1.weight, teacher_detector.backbone.layer1.0.bn1.weight, teacher_detector.backbone.layer1.0.bn1.bias, teacher_detector.backbone.layer1.0.bn1.running_mean, teacher_detector.backbone.layer1.0.bn1.running_var, teacher_detector.backbone.layer1.0.bn1.num_batches_tracked, teacher_detector.backbone.layer1.0.conv2.weight, teacher_detector.backbone.layer1.0.bn2.weight, teacher_detector.backbone.layer1.0.bn2.bias, teacher_detector.backbone.layer1.0.bn2.running_mean, teacher_detector.backbone.layer1.0.bn2.running_var, teacher_detector.backbone.layer1.0.bn2.num_batches_tracked, teacher_detector.backbone.layer1.0.conv3.weight, teacher_detector.backbone.layer1.0.bn3.weight, teacher_detector.backbone.layer1.0.bn3.bias, teacher_detector.backbone.layer1.0.bn3.running_mean, teacher_detector.backbone.layer1.0.bn3.running_var, teacher_detector.backbone.layer1.0.bn3.num_batches_tracked, teacher_detector.backbone.layer1.0.downsample.0.weight, teacher_detector.backbone.layer1.0.downsample.1.weight, teacher_detector.backbone.layer1.0.downsample.1.bias, teacher_detector.backbone.layer1.0.downsample.1.running_mean, teacher_detector.backbone.layer1.0.downsample.1.running_var, teacher_detector.backbone.layer1.0.downsample.1.num_batches_tracked, teacher_detector.backbone.layer1.1.conv1.weight, teacher_detector.backbone.layer1.1.bn1.weight, teacher_detector.backbone.layer1.1.bn1.bias, teacher_detector.backbone.layer1.1.bn1.running_mean, teacher_detector.backbone.layer1.1.bn1.running_var, teacher_detector.backbone.layer1.1.bn1.num_batches_tracked, teacher_detector.backbone.layer1.1.conv2.weight, teacher_detector.backbone.layer1.1.bn2.weight, teacher_detector.backbone.layer1.1.bn2.bias, teacher_detector.backbone.layer1.1.bn2.running_mean, teacher_detector.backbone.layer1.1.bn2.running_var, teacher_detector.backbone.layer1.1.bn2.num_batches_tracked, teacher_detector.backbone.layer1.1.conv3.weight, teacher_detector.backbone.layer1.1.bn3.weight, teacher_detector.backbone.layer1.1.bn3.bias, teacher_detector.backbone.layer1.1.bn3.running_mean, teacher_detector.backbone.layer1.1.bn3.running_var, teacher_detector.backbone.layer1.1.bn3.num_batches_tracked, teacher_detector.backbone.layer1.2.conv1.weight, teacher_detector.backbone.layer1.2.bn1.weight, teacher_detector.backbone.layer1.2.bn1.bias, teacher_detector.backbone.layer1.2.bn1.running_mean, teacher_detector.backbone.layer1.2.bn1.running_var, teacher_detector.backbone.layer1.2.bn1.num_batches_tracked, teacher_detector.backbone.layer1.2.conv2.weight, teacher_detector.backbone.layer1.2.bn2.weight, teacher_detector.backbone.layer1.2.bn2.bias, teacher_detector.backbone.layer1.2.bn2.running_mean, teacher_detector.backbone.layer1.2.bn2.running_var, teacher_detector.backbone.layer1.2.bn2.num_batches_tracked, teacher_detector.backbone.layer1.2.conv3.weight, teacher_detector.backbone.layer1.2.bn3.weight, teacher_detector.backbone.layer1.2.bn3.bias, teacher_detector.backbone.layer1.2.bn3.running_mean, teacher_detector.backbone.layer1.2.bn3.running_var, teacher_detector.backbone.layer1.2.bn3.num_batches_tracked, teacher_detector.backbone.layer2.0.conv1.weight, teacher_detector.backbone.layer2.0.bn1.weight, teacher_detector.backbone.layer2.0.bn1.bias, teacher_detector.backbone.layer2.0.bn1.running_mean, teacher_detector.backbone.layer2.0.bn1.running_var, teacher_detector.backbone.layer2.0.bn1.num_batches_tracked, teacher_detector.backbone.layer2.0.conv2.weight, teacher_detector.backbone.layer2.0.bn2.weight, teacher_detector.backbone.layer2.0.bn2.bias, teacher_detector.backbone.layer2.0.bn2.running_mean, teacher_detector.backbone.layer2.0.bn2.running_var, teacher_detector.backbone.layer2.0.bn2.num_batches_tracked, teacher_detector.backbone.layer2.0.conv3.weight, teacher_detector.backbone.layer2.0.bn3.weight, teacher_detector.backbone.layer2.0.bn3.bias, teacher_detector.backbone.layer2.0.bn3.running_mean, teacher_detector.backbone.layer2.0.bn3.running_var, teacher_detector.backbone.layer2.0.bn3.num_batches_tracked, teacher_detector.backbone.layer2.0.downsample.0.weight, teacher_detector.backbone.layer2.0.downsample.1.weight, teacher_detector.backbone.layer2.0.downsample.1.bias, teacher_detector.backbone.layer2.0.downsample.1.running_mean, teacher_detector.backbone.layer2.0.downsample.1.running_var, teacher_detector.backbone.layer2.0.downsample.1.num_batches_tracked, teacher_detector.backbone.layer2.1.conv1.weight, teacher_detector.backbone.layer2.1.bn1.weight, teacher_detector.backbone.layer2.1.bn1.bias, teacher_detector.backbone.layer2.1.bn1.running_mean, teacher_detector.backbone.layer2.1.bn1.running_var, teacher_detector.backbone.layer2.1.bn1.num_batches_tracked, teacher_detector.backbone.layer2.1.conv2.weight, teacher_detector.backbone.layer2.1.bn2.weight, teacher_detector.backbone.layer2.1.bn2.bias, teacher_detector.backbone.layer2.1.bn2.running_mean, teacher_detector.backbone.layer2.1.bn2.running_var, teacher_detector.backbone.layer2.1.bn2.num_batches_tracked, teacher_detector.backbone.layer2.1.conv3.weight, teacher_detector.backbone.layer2.1.bn3.weight, teacher_detector.backbone.layer2.1.bn3.bias, teacher_detector.backbone.layer2.1.bn3.running_mean, teacher_detector.backbone.layer2.1.bn3.running_var, teacher_detector.backbone.layer2.1.bn3.num_batches_tracked, teacher_detector.backbone.layer2.2.conv1.weight, teacher_detector.backbone.layer2.2.bn1.weight, teacher_detector.backbone.layer2.2.bn1.bias, teacher_detector.backbone.layer2.2.bn1.running_mean, teacher_detector.backbone.layer2.2.bn1.running_var, teacher_detector.backbone.layer2.2.bn1.num_batches_tracked, teacher_detector.backbone.layer2.2.conv2.weight, teacher_detector.backbone.layer2.2.bn2.weight, teacher_detector.backbone.layer2.2.bn2.bias, teacher_detector.backbone.layer2.2.bn2.running_mean, teacher_detector.backbone.layer2.2.bn2.running_var, teacher_detector.backbone.layer2.2.bn2.num_batches_tracked, teacher_detector.backbone.layer2.2.conv3.weight, teacher_detector.backbone.layer2.2.bn3.weight, teacher_detector.backbone.layer2.2.bn3.bias, teacher_detector.backbone.layer2.2.bn3.running_mean, teacher_detector.backbone.layer2.2.bn3.running_var, teacher_detector.backbone.layer2.2.bn3.num_batches_tracked, teacher_detector.backbone.layer2.3.conv1.weight, teacher_detector.backbone.layer2.3.bn1.weight, teacher_detector.backbone.layer2.3.bn1.bias, teacher_detector.backbone.layer2.3.bn1.running_mean, teacher_detector.backbone.layer2.3.bn1.running_var, teacher_detector.backbone.layer2.3.bn1.num_batches_tracked, teacher_detector.backbone.layer2.3.conv2.weight, teacher_detector.backbone.layer2.3.bn2.weight, teacher_detector.backbone.layer2.3.bn2.bias, teacher_detector.backbone.layer2.3.bn2.running_mean, teacher_detector.backbone.layer2.3.bn2.running_var, teacher_detector.backbone.layer2.3.bn2.num_batches_tracked, teacher_detector.backbone.layer2.3.conv3.weight, teacher_detector.backbone.layer2.3.bn3.weight, teacher_detector.backbone.layer2.3.bn3.bias, teacher_detector.backbone.layer2.3.bn3.running_mean, teacher_detector.backbone.layer2.3.bn3.running_var, teacher_detector.backbone.layer2.3.bn3.num_batches_tracked, teacher_detector.backbone.layer3.0.conv1.weight, teacher_detector.backbone.layer3.0.bn1.weight, teacher_detector.backbone.layer3.0.bn1.bias, teacher_detector.backbone.layer3.0.bn1.running_mean, teacher_detector.backbone.layer3.0.bn1.running_var, teacher_detector.backbone.layer3.0.bn1.num_batches_tracked, teacher_detector.backbone.layer3.0.conv2.weight, teacher_detector.backbone.layer3.0.bn2.weight, teacher_detector.backbone.layer3.0.bn2.bias, teacher_detector.backbone.layer3.0.bn2.running_mean, teacher_detector.backbone.layer3.0.bn2.running_var, teacher_detector.backbone.layer3.0.bn2.num_batches_tracked, teacher_detector.backbone.layer3.0.conv3.weight, teacher_detector.backbone.layer3.0.bn3.weight, teacher_detector.backbone.layer3.0.bn3.bias, teacher_detector.backbone.layer3.0.bn3.running_mean, teacher_detector.backbone.layer3.0.bn3.running_var, teacher_detector.backbone.layer3.0.bn3.num_batches_tracked, teacher_detector.backbone.layer3.0.downsample.0.weight, teacher_detector.backbone.layer3.0.downsample.1.weight, teacher_detector.backbone.layer3.0.downsample.1.bias, teacher_detector.backbone.layer3.0.downsample.1.running_mean, teacher_detector.backbone.layer3.0.downsample.1.running_var, teacher_detector.backbone.layer3.0.downsample.1.num_batches_tracked, teacher_detector.backbone.layer3.1.conv1.weight, teacher_detector.backbone.layer3.1.bn1.weight, teacher_detector.backbone.layer3.1.bn1.bias, teacher_detector.backbone.layer3.1.bn1.running_mean, teacher_detector.backbone.layer3.1.bn1.running_var, teacher_detector.backbone.layer3.1.bn1.num_batches_tracked, teacher_detector.backbone.layer3.1.conv2.weight, teacher_detector.backbone.layer3.1.bn2.weight, teacher_detector.backbone.layer3.1.bn2.bias, teacher_detector.backbone.layer3.1.bn2.running_mean, teacher_detector.backbone.layer3.1.bn2.running_var, teacher_detector.backbone.layer3.1.bn2.num_batches_tracked, teacher_detector.backbone.layer3.1.conv3.weight, teacher_detector.backbone.layer3.1.bn3.weight, teacher_detector.backbone.layer3.1.bn3.bias, teacher_detector.backbone.layer3.1.bn3.running_mean, teacher_detector.backbone.layer3.1.bn3.running_var, teacher_detector.backbone.layer3.1.bn3.num_batches_tracked, teacher_detector.backbone.layer3.2.conv1.weight, teacher_detector.backbone.layer3.2.bn1.weight, teacher_detector.backbone.layer3.2.bn1.bias, teacher_detector.backbone.layer3.2.bn1.running_mean, teacher_detector.backbone.layer3.2.bn1.running_var, teacher_detector.backbone.layer3.2.bn1.num_batches_tracked, teacher_detector.backbone.layer3.2.conv2.weight, teacher_detector.backbone.layer3.2.bn2.weight, teacher_detector.backbone.layer3.2.bn2.bias, teacher_detector.backbone.layer3.2.bn2.running_mean, teacher_detector.backbone.layer3.2.bn2.running_var, teacher_detector.backbone.layer3.2.bn2.num_batches_tracked, teacher_detector.backbone.layer3.2.conv3.weight, teacher_detector.backbone.layer3.2.bn3.weight, teacher_detector.backbone.layer3.2.bn3.bias, teacher_detector.backbone.layer3.2.bn3.running_mean, teacher_detector.backbone.layer3.2.bn3.running_var, teacher_detector.backbone.layer3.2.bn3.num_batches_tracked, teacher_detector.backbone.layer3.3.conv1.weight, teacher_detector.backbone.layer3.3.bn1.weight, teacher_detector.backbone.layer3.3.bn1.bias, teacher_detector.backbone.layer3.3.bn1.running_mean, teacher_detector.backbone.layer3.3.bn1.running_var, teacher_detector.backbone.layer3.3.bn1.num_batches_tracked, teacher_detector.backbone.layer3.3.conv2.weight, teacher_detector.backbone.layer3.3.bn2.weight, teacher_detector.backbone.layer3.3.bn2.bias, teacher_detector.backbone.layer3.3.bn2.running_mean, teacher_detector.backbone.layer3.3.bn2.running_var, teacher_detector.backbone.layer3.3.bn2.num_batches_tracked, teacher_detector.backbone.layer3.3.conv3.weight, teacher_detector.backbone.layer3.3.bn3.weight, teacher_detector.backbone.layer3.3.bn3.bias, teacher_detector.backbone.layer3.3.bn3.running_mean, teacher_detector.backbone.layer3.3.bn3.running_var, teacher_detector.backbone.layer3.3.bn3.num_batches_tracked, teacher_detector.backbone.layer3.4.conv1.weight, teacher_detector.backbone.layer3.4.bn1.weight, teacher_detector.backbone.layer3.4.bn1.bias, teacher_detector.backbone.layer3.4.bn1.running_mean, teacher_detector.backbone.layer3.4.bn1.running_var, teacher_detector.backbone.layer3.4.bn1.num_batches_tracked, teacher_detector.backbone.layer3.4.conv2.weight, teacher_detector.backbone.layer3.4.bn2.weight, teacher_detector.backbone.layer3.4.bn2.bias, teacher_detector.backbone.layer3.4.bn2.running_mean, teacher_detector.backbone.layer3.4.bn2.running_var, teacher_detector.backbone.layer3.4.bn2.num_batches_tracked, teacher_detector.backbone.layer3.4.conv3.weight, teacher_detector.backbone.layer3.4.bn3.weight, teacher_detector.backbone.layer3.4.bn3.bias, teacher_detector.backbone.layer3.4.bn3.running_mean, teacher_detector.backbone.layer3.4.bn3.running_var, teacher_detector.backbone.layer3.4.bn3.num_batches_tracked, teacher_detector.backbone.layer3.5.conv1.weight, teacher_detector.backbone.layer3.5.bn1.weight, teacher_detector.backbone.layer3.5.bn1.bias, teacher_detector.backbone.layer3.5.bn1.running_mean, teacher_detector.backbone.layer3.5.bn1.running_var, teacher_detector.backbone.layer3.5.bn1.num_batches_tracked, teacher_detector.backbone.layer3.5.conv2.weight, teacher_detector.backbone.layer3.5.bn2.weight, teacher_detector.backbone.layer3.5.bn2.bias, teacher_detector.backbone.layer3.5.bn2.running_mean, teacher_detector.backbone.layer3.5.bn2.running_var, teacher_detector.backbone.layer3.5.bn2.num_batches_tracked, teacher_detector.backbone.layer3.5.conv3.weight, teacher_detector.backbone.layer3.5.bn3.weight, teacher_detector.backbone.layer3.5.bn3.bias, teacher_detector.backbone.layer3.5.bn3.running_mean, teacher_detector.backbone.layer3.5.bn3.running_var, teacher_detector.backbone.layer3.5.bn3.num_batches_tracked, teacher_detector.backbone.layer4.0.conv1.weight, teacher_detector.backbone.layer4.0.bn1.weight, teacher_detector.backbone.layer4.0.bn1.bias, teacher_detector.backbone.layer4.0.bn1.running_mean, teacher_detector.backbone.layer4.0.bn1.running_var, teacher_detector.backbone.layer4.0.bn1.num_batches_tracked, teacher_detector.backbone.layer4.0.conv2.weight, teacher_detector.backbone.layer4.0.bn2.weight, teacher_detector.backbone.layer4.0.bn2.bias, teacher_detector.backbone.layer4.0.bn2.running_mean, teacher_detector.backbone.layer4.0.bn2.running_var, teacher_detector.backbone.layer4.0.bn2.num_batches_tracked, teacher_detector.backbone.layer4.0.conv3.weight, teacher_detector.backbone.layer4.0.bn3.weight, teacher_detector.backbone.layer4.0.bn3.bias, teacher_detector.backbone.layer4.0.bn3.running_mean, teacher_detector.backbone.layer4.0.bn3.running_var, teacher_detector.backbone.layer4.0.bn3.num_batches_tracked, teacher_detector.backbone.layer4.0.downsample.0.weight, teacher_detector.backbone.layer4.0.downsample.1.weight, teacher_detector.backbone.layer4.0.downsample.1.bias, teacher_detector.backbone.layer4.0.downsample.1.running_mean, teacher_detector.backbone.layer4.0.downsample.1.running_var, teacher_detector.backbone.layer4.0.downsample.1.num_batches_tracked, teacher_detector.backbone.layer4.1.conv1.weight, teacher_detector.backbone.layer4.1.bn1.weight, teacher_detector.backbone.layer4.1.bn1.bias, teacher_detector.backbone.layer4.1.bn1.running_mean, teacher_detector.backbone.layer4.1.bn1.running_var, teacher_detector.backbone.layer4.1.bn1.num_batches_tracked, teacher_detector.backbone.layer4.1.conv2.weight, teacher_detector.backbone.layer4.1.bn2.weight, teacher_detector.backbone.layer4.1.bn2.bias, teacher_detector.backbone.layer4.1.bn2.running_mean, teacher_detector.backbone.layer4.1.bn2.running_var, teacher_detector.backbone.layer4.1.bn2.num_batches_tracked, teacher_detector.backbone.layer4.1.conv3.weight, teacher_detector.backbone.layer4.1.bn3.weight, teacher_detector.backbone.layer4.1.bn3.bias, teacher_detector.backbone.layer4.1.bn3.running_mean, teacher_detector.backbone.layer4.1.bn3.running_var, teacher_detector.backbone.layer4.1.bn3.num_batches_tracked, teacher_detector.backbone.layer4.2.conv1.weight, teacher_detector.backbone.layer4.2.bn1.weight, teacher_detector.backbone.layer4.2.bn1.bias, teacher_detector.backbone.layer4.2.bn1.running_mean, teacher_detector.backbone.layer4.2.bn1.running_var, teacher_detector.backbone.layer4.2.bn1.num_batches_tracked, teacher_detector.backbone.layer4.2.conv2.weight, teacher_detector.backbone.layer4.2.bn2.weight, teacher_detector.backbone.layer4.2.bn2.bias, teacher_detector.backbone.layer4.2.bn2.running_mean, teacher_detector.backbone.layer4.2.bn2.running_var, teacher_detector.backbone.layer4.2.bn2.num_batches_tracked, teacher_detector.backbone.layer4.2.conv3.weight, teacher_detector.backbone.layer4.2.bn3.weight, teacher_detector.backbone.layer4.2.bn3.bias, teacher_detector.backbone.layer4.2.bn3.running_mean, teacher_detector.backbone.layer4.2.bn3.running_var, teacher_detector.backbone.layer4.2.bn3.num_batches_tracked, teacher_detector.neck.lateral_convs.0.conv.weight, teacher_detector.neck.lateral_convs.0.conv.bias, teacher_detector.neck.lateral_convs.1.conv.weight, teacher_detector.neck.lateral_convs.1.conv.bias, teacher_detector.neck.lateral_convs.2.conv.weight, teacher_detector.neck.lateral_convs.2.conv.bias, teacher_detector.neck.lateral_convs.3.conv.weight, teacher_detector.neck.lateral_convs.3.conv.bias, teacher_detector.neck.fpn_convs.0.conv.weight, teacher_detector.neck.fpn_convs.0.conv.bias, teacher_detector.neck.fpn_convs.1.conv.weight, teacher_detector.neck.fpn_convs.1.conv.bias, teacher_detector.neck.fpn_convs.2.conv.weight, teacher_detector.neck.fpn_convs.2.conv.bias, teacher_detector.neck.fpn_convs.3.conv.weight, teacher_detector.neck.fpn_convs.3.conv.bias, teacher_detector.rpn_head.rpn_conv.weight, teacher_detector.rpn_head.rpn_conv.bias, teacher_detector.rpn_head.rpn_cls.weight, teacher_detector.rpn_head.rpn_cls.bias, teacher_detector.rpn_head.rpn_reg.weight, teacher_detector.rpn_head.rpn_reg.bias, teacher_detector.roi_head.bbox_head.fc_cls.weight, teacher_detector.roi_head.bbox_head.fc_cls.bias, teacher_detector.roi_head.bbox_head.fc_reg.weight, teacher_detector.roi_head.bbox_head.fc_reg.bias, teacher_detector.roi_head.bbox_head.shared_fcs.0.weight, teacher_detector.roi_head.bbox_head.shared_fcs.0.bias, teacher_detector.roi_head.bbox_head.shared_fcs.1.weight, teacher_detector.roi_head.bbox_head.shared_fcs.1.bias, teacher_track_head.embed_head.convs.0.conv.weight, teacher_track_head.embed_head.convs.0.gn.weight, teacher_track_head.embed_head.convs.0.gn.bias, teacher_track_head.embed_head.convs.1.conv.weight, teacher_track_head.embed_head.convs.1.gn.weight, teacher_track_head.embed_head.convs.1.gn.bias, teacher_track_head.embed_head.convs.2.conv.weight, teacher_track_head.embed_head.convs.2.gn.weight, teacher_track_head.embed_head.convs.2.gn.bias, teacher_track_head.embed_head.convs.3.conv.weight, teacher_track_head.embed_head.convs.3.gn.weight, teacher_track_head.embed_head.convs.3.gn.bias, teacher_track_head.embed_head.fcs.0.weight, teacher_track_head.embed_head.fcs.0.bias, teacher_track_head.embed_head.fc_embed.weight, teacher_track_head.embed_head.fc_embed.bias, teacher_track_head.causal_bank.pcs, teacher_track_head.causal_bank.initialized, teacher_track_head.causal_bank.cov_bank, teacher_track_head.causal_bank.cov_initialized, teacher_track_head.causal_bank.num_updates, teacher_track_head.causal_bank.last_eig1, teacher_track_head.causal_bank.last_eig_ratio, teacher_track_head.causal_bank.last_pc_drift, teacher_track_head.causal_bank.last_num_samples, teacher_track_head.causal_bank.last_update_ok, track_head.causal_bank.pcs, track_head.causal_bank.initialized, track_head.causal_bank.cov_bank, track_head.causal_bank.cov_initialized, track_head.causal_bank.num_updates, track_head.causal_bank.last_eig1, track_head.causal_bank.last_eig_ratio, track_head.causal_bank.last_pc_drift, track_head.causal_bank.last_num_samples, track_head.causal_bank.last_update_ok
+
+[                                                  ] 0/6476, elapsed: 0s, ETA:
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6524/6476, 31.8 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6525/6476, 31.8 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6526/6476, 31.8 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6527/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6528/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6529/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6530/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6531/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6532/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6533/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6534/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6535/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6536/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6537/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6538/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6539/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6540/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6541/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6542/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6543/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6544/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6545/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6546/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6547/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6548/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6549/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6550/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6551/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6552/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6553/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6554/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6555/6476, 31.9 task/s, elapsed: 205s, ETA:    -1s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6556/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6557/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6558/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6559/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6560/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6561/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6562/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6563/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6564/6476, 31.9 task/s, elapsed: 205s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6565/6476, 31.9 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6566/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6567/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6568/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6569/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6570/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6571/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6572/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6573/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6574/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6575/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6576/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6577/6476, 31.9 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6578/6476, 31.9 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6579/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6580/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6581/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6582/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6583/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6584/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6585/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6586/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6587/6476, 32.0 task/s, elapsed: 206s, ETA:    -2s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6588/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6589/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6590/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6591/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6592/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6593/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6594/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6595/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6596/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6597/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6598/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6599/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6600/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6601/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6602/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6603/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6604/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6605/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6606/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6607/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6608/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6609/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6610/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6611/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6612/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6613/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6614/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6615/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6616/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6617/6476, 32.0 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6618/6476, 32.1 task/s, elapsed: 206s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6619/6476, 32.1 task/s, elapsed: 207s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6620/6476, 32.1 task/s, elapsed: 207s, ETA:    -3s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6621/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6622/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6623/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6624/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6625/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6626/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6627/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6628/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6629/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6630/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6631/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6632/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6633/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6634/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6635/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6636/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6637/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6638/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6639/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6640/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6641/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6642/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6643/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6644/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6645/6476, 32.2 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6646/6476, 32.2 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6647/6476, 32.2 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6648/6476, 32.2 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6649/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6650/6476, 32.1 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6651/6476, 32.2 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6652/6476, 32.2 task/s, elapsed: 207s, ETA:    -4s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6653/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6654/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6655/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6656/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6657/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6658/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6659/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6660/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6661/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6662/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6663/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6664/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6665/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6666/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6667/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6668/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6669/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6670/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6671/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6672/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6673/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6674/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6675/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6676/6476, 32.2 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6677/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6678/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6679/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6680/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6681/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6682/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6683/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6684/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6685/6476, 32.3 task/s, elapsed: 207s, ETA:    -5s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6686/6476, 32.3 task/s, elapsed: 207s, ETA:    -6s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6687/6476, 32.3 task/s, elapsed: 207s, ETA:    -6s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6688/6476, 32.3 task/s, elapsed: 207s, ETA:    -6s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6689/6476, 32.3 task/s, elapsed: 207s, ETA:    -6s
+[>>>>>>>>>>>>>>>>>>>>>>>>>>] 6690/6476, 32.3 task/s, elapsed: 207s, ETA:    -6sWriting results to work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_224541/raw_results.pkl
+2026-07-04 22:49:24,734 - mmtrack - INFO - Evaluating CLEAR MOT metrics...
+2026-07-04 22:49:25,002 - mmtrack - INFO - ---CLEAR MOT Evaluation---
+2026-07-04 22:49:25,003 - mmtrack - INFO - Accumulating...
+2026-07-04 22:49:30,759 - mmtrack - INFO - Evaluating...
+2026-07-04 22:49:42,781 - mmtrack - INFO - Evaluation finishes with 17.78 s.
+2026-07-04 22:49:42,928 - mmtrack - INFO - Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 33 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 15.74 seconds
+2026-07-04 22:50:02,095 - mmtrack - INFO - Evaluating COCO metrics...
+2026-07-04 22:50:05,148 - mmtrack - INFO - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.83s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=25.69s).
+Accumulating evaluation results...
+DONE (t=5.50s).
+2026-07-04 22:50:38,060 - mmtrack - INFO - 
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.157
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.283
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.160
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.028
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.125
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.291
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.233
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.233
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.233
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.048
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.190
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.378
+
+2026-07-04 22:50:38,061 - mmtrack - INFO - 
++------------+-------+------------+-------+----------+-------+
+| category   | AP    | category   | AP    | category | AP    |
++------------+-------+------------+-------+----------+-------+
+| pedestrian | 0.178 | car        | 0.381 | truck    | 0.128 |
+| bus        | 0.231 | motorcycle | 0.000 | bicycle  | 0.025 |
++------------+-------+------------+-------+----------+-------+
+2026-07-04 22:50:38,345 - mmtrack - INFO - 
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  29.8   2.7  74.0  1734   4026   602  38.4  59.2   49  143   216   271
+car         55.0  45.3  81.2  2905  21939  1916  55.2  90.3  508  718   778   915
+truck       21.6   9.0  79.1   109   2023    22  14.5  75.9    0    9    63    30
+bus         32.1 -20.5  79.7   991    969    31  41.3  40.8    3   12    19    35
+motorcycle   0.0   0.0    -      0     31     0   0.0    -     0    0     2     0
+bicycle      0.0   0.0    -      0    288     0   0.0    -     0    0    17     0
+---------------------------------------------------------------------------------
+OVERALL     50.2  37.2  80.6  5739  29276  2571  51.1  84.2  560  882  1095  1251
+AVERAGE     23.1   6.1  52.3  5739  29276  2571  24.9  44.4  560  882  1095  1251
+
+2026-07-04 22:50:38,350 - mmtrack - INFO - 
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+car          55.7   70.2  48.9  83.3   46.2   75.8  42.8  45.5  29863  1926
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+bus          41.1   83.2  40.1  81.7   34.2   33.7  21.2  29.0   1673   261
+pedestrian   31.1   68.7  27.3  77.4   30.0   46.3  23.6  25.1   4238  1121
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        40.1   84.5  39.0  81.6   11.7   61.1  11.1  20.7    453    97
+---------------------------------------------------------------------------
+AVERAGE      28.0   51.1  25.9  87.3   20.4   36.2  16.4  20.1  36227  3405
+OVERALL      53.5   70.7  47.1  82.7   42.5   70.2  38.1  42.1  36227  3405
+
+2026-07-04 22:50:38,352 - mmtrack - INFO - 
+-------------------------------------------------
+         mAP  mAP_50  mAP_75  mAP_s  mAP_m  mAP_l
+-------------------------------------------------
+OVERALL 15.7    28.3    16.0    2.8   12.5   29.1
+
+2026-07-04 22:50:38,355 - mmtrack - INFO - 
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+car         83.3  42.8  45.3  45.5  55.0  48.9
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+bus         81.7  21.2 -20.5  29.0  32.1  40.1
+pedestrian  77.4  23.6   2.7  25.1  29.8  27.3
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+truck       81.6  11.1   9.0  20.7  21.6  39.0
+----------------------------------------------
+AVERAGE     87.3  16.4   6.1  20.1  23.1  25.9
+OVERALL     82.7  38.1  37.2  42.1  50.2  47.1
+

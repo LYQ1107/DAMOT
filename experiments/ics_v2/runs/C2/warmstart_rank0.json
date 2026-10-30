@@ -1,0 +1,14 @@
+{
+  "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+  "snapshot_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "matched_state_keys": 752,
+  "learned_parameters_bitwise_equal": true,
+  "all_nonbank_state_bitwise_equal": true,
+  "bank_reset": false,
+  "reset_keys": [],
+  "only_bank_keys_replaced": true,
+  "skipped_keys": [],
+  "only_bank_keys_skipped": true,
+  "shape_adaptations": [],
+  "rank": 0
+}

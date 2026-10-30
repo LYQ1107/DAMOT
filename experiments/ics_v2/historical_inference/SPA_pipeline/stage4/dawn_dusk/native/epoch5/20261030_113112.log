@@ -1,0 +1,74 @@
+2026-10-30 11:33:48,869 - mmtrack - INFO - Evaluating CLEAR MOT metrics...
+2026-10-30 11:33:49,155 - mmtrack - INFO - ---CLEAR MOT Evaluation---
+2026-10-30 11:33:49,155 - mmtrack - INFO - Accumulating...
+2026-10-30 11:33:55,395 - mmtrack - INFO - Evaluating...
+2026-10-30 11:34:08,457 - mmtrack - INFO - Evaluation finishes with 19.30 s.
+2026-10-30 11:34:08,812 - mmtrack - INFO - Evaluating HOTA metrics...
+2026-10-30 11:34:16,844 - mmtrack - INFO - Evaluating COCO metrics...
+2026-10-30 11:34:20,170 - mmtrack - INFO - Evaluating bbox...
+2026-10-30 11:34:58,621 - mmtrack - INFO - 
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.152
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.277
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.152
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.028
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.125
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.280
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.227
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.227
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.227
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.052
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.186
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.367
+
+2026-10-30 11:34:58,621 - mmtrack - INFO - 
++------------+-------+------------+-------+----------+-------+
+| category   | AP    | category   | AP    | category | AP    |
++------------+-------+------------+-------+----------+-------+
+| pedestrian | 0.175 | car        | 0.388 | truck    | 0.103 |
+| bus        | 0.230 | motorcycle | 0.000 | bicycle  | 0.019 |
++------------+-------+------------+-------+----------+-------+
+2026-10-30 11:34:58,982 - mmtrack - INFO - 
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  26.7  -7.7  73.6  2450   3913   680  40.2  51.8   50  159   199   289
+car         55.2  45.5  81.1  3298  21383  1980  56.3  89.3  519  728   757   944
+truck       13.7   5.0  77.1   147   2075    27  12.3  66.5    0    6    66    25
+bus         36.1 -17.7  79.7   968    951    25  42.4  42.0    5   11    18    34
+motorcycle   0.0   0.0    -      0     31     0   0.0    -     0    0     2     0
+bicycle      0.0   0.0    -      0    288     0   0.0    -     0    0    17     0
+---------------------------------------------------------------------------------
+OVERALL     49.8  36.1  80.4  6863  28641  2712  52.1  82.0  574  904  1059  1292
+AVERAGE     21.9   4.2  51.9  6863  28641  2712  25.2  41.6  574  904  1059  1292
+
+2026-10-30 11:34:58,986 - mmtrack - INFO - 
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+bus          46.1   82.3  44.6  81.7   35.0   34.7  21.9  31.1   1669   269
+pedestrian   27.6   69.4  24.6  77.0   31.4   40.6  22.8  23.4   5064  1527
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+car          55.6   70.3  49.0  83.2   47.2   75.0  43.3  45.9  30815  2053
+truck        23.0   80.6  22.5  79.9    9.7   52.1   9.0  14.2    439   109
+---------------------------------------------------------------------------
+AVERAGE      25.4   50.4  23.5  87.0   20.5   33.7  16.2  19.1  37987  3958
+OVERALL      53.0   70.7  46.8  82.6   43.4   68.3  38.2  42.1  37987  3958
+
+2026-10-30 11:34:58,989 - mmtrack - INFO - 
+-------------------------------------------------
+         mAP  mAP_50  mAP_75  mAP_s  mAP_m  mAP_l
+-------------------------------------------------
+OVERALL 15.2    27.7    15.2    2.8   12.5   28.0
+
+2026-10-30 11:34:58,992 - mmtrack - INFO - 
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+bus         81.7  21.9 -17.7  31.1  36.1  44.6
+pedestrian  77.0  22.8  -7.7  23.4  26.7  24.6
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+car         83.2  43.3  45.5  45.9  55.2  49.0
+truck       79.9   9.0   5.0  14.2  13.7  22.5
+----------------------------------------------
+AVERAGE     87.0  16.2   4.2  19.1  21.9  23.5
+OVERALL     82.6  38.2  36.1  42.1  49.8  46.8
+

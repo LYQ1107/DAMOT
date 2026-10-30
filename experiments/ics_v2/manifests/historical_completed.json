@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "inference_cells": 12,
+  "total_existing_plus_new_cells": 104,
+  "historical_training_repeated": false,
+  "comparison_rows": 8,
+  "all_requested_old_domain_statistics_available": true
+}

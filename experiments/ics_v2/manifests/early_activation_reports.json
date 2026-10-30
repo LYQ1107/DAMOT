@@ -1,0 +1,117 @@
+[
+  {
+    "group": "C1",
+    "completed_steps_per_rank": 7,
+    "rank_batches": 28,
+    "key_effective_ratio": 0.7857142857142857,
+    "ref_effective_ratio": 1.0,
+    "reported_in_chat": true,
+    "report": "Early warning below80%, before iteration50; configuration kept unchanged"
+  },
+  {
+    "group": "C1",
+    "completed_steps_per_rank": 10,
+    "rank_batches": 40,
+    "key_effective_ratio": 0.85,
+    "ref_effective_ratio": 1.0,
+    "reported_in_chat": true,
+    "report": "Update at10; all four ranks initialized at iteration1"
+  },
+  {
+    "group": "C1",
+    "completed_steps_per_rank": 50,
+    "rank_batches": 200,
+    "key_effective_ratio": 0.94,
+    "ref_effective_ratio": 1.0,
+    "min_rank_key_ratio": 0.86,
+    "loss_track_trim_mean": 0.026296642094966956,
+    "first_initialized_iteration": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "reported_in_chat": true
+  },
+  {
+    "group": "C2",
+    "window_steps_per_rank": 7,
+    "rank_batches": 28,
+    "key_effective_ratio": 0.7857142857142857,
+    "ref_effective_ratio": 1.0,
+    "observed_at_completed_steps_per_rank": 21,
+    "reported_in_chat": true,
+    "reported_before_iteration50": true,
+    "report": "Early prefix below80%; at10 key85% and ref100%. Keep final declared configuration."
+  },
+  {
+    "group": "C4",
+    "window_steps_per_rank": 7,
+    "rank_batches": 28,
+    "key_effective_ratio": 0.7857142857142857,
+    "ref_effective_ratio": 1.0,
+    "observed_at_completed_steps_per_rank": 21,
+    "reported_in_chat": true,
+    "reported_before_iteration50": true,
+    "report": "Early prefix below80%; at10 key85% and ref100%. Keep final declared configuration."
+  },
+  {
+    "group": "C2",
+    "completed_steps_per_rank": 50,
+    "rank_batches": 200,
+    "key_effective_ratio": 0.945,
+    "ref_effective_ratio": 1.0,
+    "min_rank_key_ratio": 0.88,
+    "loss_track_trim_mean": 0.02603227274608798,
+    "bank_update_calls": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "reported_in_chat": true
+  },
+  {
+    "group": "C4",
+    "completed_steps_per_rank": 50,
+    "rank_batches": 200,
+    "key_effective_ratio": 0.945,
+    "ref_effective_ratio": 1.0,
+    "min_rank_key_ratio": 0.88,
+    "loss_track_trim_mean": 0.024786713709472677,
+    "bank_update_calls": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "reported_in_chat": true
+  },
+  {
+    "group": "C3",
+    "window_steps_per_rank": 7,
+    "rank_batches": 28,
+    "key_effective_ratio": 0.7857142857142857,
+    "ref_effective_ratio": 1.0,
+    "observed_at_completed_steps_per_rank": 8,
+    "reported_in_chat": true,
+    "reported_before_iteration50": true,
+    "report": "First7 key78.6% below80%; at8 key81.25% and ref100%. Configuration unchanged."
+  },
+  {
+    "group": "C3",
+    "completed_steps_per_rank": 50,
+    "rank_batches": 200,
+    "key_effective_ratio": 0.945,
+    "ref_effective_ratio": 1.0,
+    "min_rank_key_ratio": 0.88,
+    "loss_track_trim_mean": 0.029336313344538213,
+    "bank_update_calls": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "reported_in_chat": true
+  }
+]

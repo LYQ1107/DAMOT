@@ -1,0 +1,1957 @@
+[
+  {
+    "run": "SPA_pipeline",
+    "stage": 1,
+    "method": "spa_pipeline_mild_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 1929377231,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1929377231
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1929377231
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_pipeline",
+    "stage": 2,
+    "method": "spa_pipeline_mild_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 1929377231,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1929377231
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1929377231
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_pipeline",
+    "stage": 3,
+    "method": "spa_pipeline_mild_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 1929377231,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1929377231
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1929377231
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_pipeline",
+    "stage": 4,
+    "method": "spa_pipeline_mild_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 1929377231,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1929377231
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1929377231
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_legacy",
+    "stage": 1,
+    "method": "spa_only_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 1468082502,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1468082502
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      }
+    ],
+    "use_spa_frequency_aug": true,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1468082502
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_legacy",
+    "stage": 2,
+    "method": "spa_only_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 1468082502,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1468082502
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      }
+    ],
+    "use_spa_frequency_aug": true,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1468082502
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_legacy",
+    "stage": 3,
+    "method": "spa_only_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 1468082502,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1468082502
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      }
+    ],
+    "use_spa_frequency_aug": true,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1468082502
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_legacy",
+    "stage": 4,
+    "method": "spa_only_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 1468082502,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1468082502
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {},
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      }
+    ],
+    "use_spa_frequency_aug": true,
+    "track_head_type": "QuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1468082502
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_oldICS",
+    "stage": 1,
+    "method": "spaP1_causalOld_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 1591423161,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1591423161
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": false
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1591423161
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_oldICS",
+    "stage": 2,
+    "method": "spaP1_causalOld_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 1591423161,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1591423161
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": false
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1591423161
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_oldICS",
+    "stage": 3,
+    "method": "spaP1_causalOld_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 1591423161,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1591423161
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": false
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1591423161
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_oldICS",
+    "stage": 4,
+    "method": "spaP1_causalOld_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 1591423161,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1591423161
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": false
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1591423161
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_APR",
+    "stage": 1,
+    "method": "spaP1_roiV1_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 1731334941,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1731334941
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_roi_proto_memory": true,
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.7,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.01,
+      "roi_proto_max_rois_per_batch": 128,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "ProtoQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1731334941
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_APR",
+    "stage": 2,
+    "method": "spaP1_roiV1_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 1731334941,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1731334941
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_roi_proto_memory": true,
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.7,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.01,
+      "roi_proto_max_rois_per_batch": 128,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "ProtoQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1731334941
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_APR",
+    "stage": 3,
+    "method": "spaP1_roiV1_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 1731334941,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1731334941
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_roi_proto_memory": true,
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.7,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.01,
+      "roi_proto_max_rois_per_batch": 128,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "ProtoQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1731334941
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "SPA_APR",
+    "stage": 4,
+    "method": "spaP1_roiV1_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 1731334941,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1731334941
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_roi_proto_memory": true,
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.7,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.01,
+      "roi_proto_max_rois_per_batch": 128,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "ProtoQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1731334941
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "F_old",
+    "stage": 1,
+    "method": "spaP1_causalOld_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 952475529,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 14,
+    "actual_training_seeds": [
+      952475529
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      952475529
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "F_old",
+    "stage": 2,
+    "method": "spaP1_causalOld_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 952475529,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 14,
+    "actual_training_seeds": [
+      952475529
+    ],
+    "epoch_evidence": "stage-scoped episode log: checkpoint saved at epoch5",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      952475529
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "F_old",
+    "stage": 3,
+    "method": "spaP1_causalOld_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 952475529,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 14,
+    "actual_training_seeds": [
+      952475529
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      952475529
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "F_old",
+    "stage": 4,
+    "method": "spaP1_causalOld_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 952475529,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 14,
+    "actual_training_seeds": [
+      952475529
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "global_pc_ema",
+      "causal_num_pcs": 1,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.25,
+      "causal_loss_weight": 0.1,
+      "causal_min_samples": 32,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      952475529
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalShrinkage",
+    "stage": 1,
+    "method": "spaP1_causalShrinkage_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 1776369864,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1776369864
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 128,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1776369864
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalShrinkage",
+    "stage": 2,
+    "method": "spaP1_causalShrinkage_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 1776369864,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1776369864
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 128,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1776369864
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalShrinkage",
+    "stage": 3,
+    "method": "spaP1_causalShrinkage_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 1776369864,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1776369864
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 128,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1776369864
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalShrinkage",
+    "stage": 4,
+    "method": "spaP1_causalShrinkage_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 1776369864,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1776369864
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 128,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1776369864
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoCenter",
+    "stage": 1,
+    "method": "spaP1_causalProtoCenter_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 388086182,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      388086182
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "prototype_centered_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.12,
+      "causal_loss_weight": 0.03,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.0,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      388086182,
+      884315508
+    ],
+    "auxiliary_startup_seeds": [
+      884315508
+    ]
+  },
+  {
+    "run": "causalProtoCenter",
+    "stage": 2,
+    "method": "spaP1_causalProtoCenter_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 388086182,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      388086182
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "prototype_centered_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.12,
+      "causal_loss_weight": 0.03,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.0,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      388086182
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoCenter",
+    "stage": 3,
+    "method": "spaP1_causalProtoCenter_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 388086182,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      388086182
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "prototype_centered_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.12,
+      "causal_loss_weight": 0.03,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.0,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      388086182
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoCenter",
+    "stage": 4,
+    "method": "spaP1_causalProtoCenter_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 388086182,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      388086182
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "prototype_centered_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.12,
+      "causal_loss_weight": 0.03,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.0,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      388086182
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoShrink",
+    "stage": 1,
+    "method": "spaP1_causalProtoShrink_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "seed": 1790355234,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1790355234
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "proto_shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1790355234
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoShrink",
+    "stage": 2,
+    "method": "spaP1_causalProtoShrink_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "seed": 1790355234,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1790355234
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "proto_shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1790355234
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoShrink",
+    "stage": 3,
+    "method": "spaP1_causalProtoShrink_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "seed": 1790355234,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1790355234
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "proto_shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1790355234
+    ],
+    "auxiliary_startup_seeds": []
+  },
+  {
+    "run": "causalProtoShrink",
+    "stage": 4,
+    "method": "spaP1_causalProtoShrink_roiV1Weak_4domain_5e",
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "seed": 1790355234,
+    "epochs": 5,
+    "logged_max_epoch": 5,
+    "samples_per_gpu": 16,
+    "actual_training_seeds": [
+      1790355234
+    ],
+    "epoch_evidence": "per-stage JSON train log",
+    "resolved_seed_matches_logs": true,
+    "gpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causal_roi_proto": {
+      "use_causal_direction_bank": true,
+      "causal_pca_mode": "proto_shrinkage_cov_ema",
+      "causal_num_pcs": 2,
+      "causal_start_pc": 0,
+      "causal_trim_alpha": 0.1,
+      "causal_loss_weight": 0.025,
+      "causal_min_samples": 96,
+      "causal_update_momentum": 0.9,
+      "causal_normalize_feats": true,
+      "causal_bank_scope": "global",
+      "causal_feat_dim": 256,
+      "use_roi_proto_memory": true,
+      "roi_proto_memory_mode": "stage",
+      "roi_proto_class_ids": [
+        1
+      ],
+      "roi_proto_score_thr": 0.75,
+      "roi_proto_k_per_domain_class": 100,
+      "roi_proto_max_candidates_per_domain": 1000,
+      "roi_proto_topk": 3,
+      "roi_proto_loss_weight": 0.005,
+      "roi_proto_max_rois_per_batch": 64,
+      "roi_proto_diverse_select": false,
+      "roi_proto_feature_source": "student",
+      "roi_proto_log_interval": 50,
+      "causal_update_by_covariance": true,
+      "causal_cov_momentum": 0.98,
+      "causal_qr_orthogonalize": true,
+      "causal_class_ids": null,
+      "causal_covariance_shrinkage": 0.15,
+      "causal_proto_center_momentum": 0.95,
+      "causal_proto_center_min_count": 8
+    },
+    "student_pipeline": [
+      {
+        "type": "SeqPhotoMetricDistortion",
+        "share_params": true
+      },
+      {
+        "type": "SeqSPAFrequencyTransform",
+        "mode": "low_freq_mask",
+        "low_ratio": 0.1,
+        "keep_prob": 0.9,
+        "apply_noise": false,
+        "noise_ratio": 0.0
+      }
+    ],
+    "use_spa_frequency_aug": false,
+    "track_head_type": "CausalQuasiDenseTrackHead",
+    "seed_evidence": "epoch5-completed JSON log header where available; otherwise stage header with stage-scoped epoch5 save evidence",
+    "all_startup_metadata_seeds": [
+      1790355234
+    ],
+    "auxiliary_startup_seeds": []
+  }
+]

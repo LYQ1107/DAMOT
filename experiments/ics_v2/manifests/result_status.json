@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "metric_rows": 98,
+  "training_ranks": 20,
+  "evaluation_cells": 14,
+  "required_evaluation_cells": 14,
+  "groups": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "APR_enabled": false,
+  "seed": 1790355234
+}

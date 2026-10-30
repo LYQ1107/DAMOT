@@ -1,0 +1,125 @@
+{
+  "reason": "Regenerable COCO export copies after all12 cells completed; original raw_results.pkl and all metrics retained.",
+  "removed": [
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage3/overcast/native/epoch5/track_coco.json",
+      "bytes": 5014734,
+      "sha256": "54139dbcee57c9db227deb645f603e2568e88b841a305a6065e6008c1367a166"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage3/overcast/native/epoch5/bbox_coco.json",
+      "bytes": 19292794,
+      "sha256": "2400beaf0f9e25acc25740e2a50ecce5cd8191f81e83b93c9ebd0fcb1da65661"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage3/rainy/native/epoch5/track_coco.json",
+      "bytes": 3907359,
+      "sha256": "a5e676cac93ccdee27995ea1d9febfc181df8285d3605663e2617b6cd7c0ff94"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage3/rainy/native/epoch5/bbox_coco.json",
+      "bytes": 13667290,
+      "sha256": "f21a75142ef3ff5ff3550dd0a0c15d0b3fc8256cb65a8207d7aa3cf1877ead6a"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/overcast/native/epoch5/track_coco.json",
+      "bytes": 5206873,
+      "sha256": "7058436d6c0ddb2c7a48095b6d36b8acde4ef1123e60399d7db5b9c9409d25d8"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/overcast/native/epoch5/bbox_coco.json",
+      "bytes": 20211330,
+      "sha256": "98619a22912b0bedfc5269f60938c328517994fe9e41e4c89f0880d50112cf90"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/rainy/native/epoch5/track_coco.json",
+      "bytes": 4129983,
+      "sha256": "a800ad269b278205c3e0dd5ea5759855b223c19aa87acd19baef95064fac8de9"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/rainy/native/epoch5/bbox_coco.json",
+      "bytes": 14492818,
+      "sha256": "5d71b732aaf4c572c1b571ffdf5cd8e8c5e27f4d57af916c6fe4e9d21d8a8045"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/dawn_dusk/native/epoch5/track_coco.json",
+      "bytes": 7006683,
+      "sha256": "263fc458fc7623e8f9bddbea48e8a59f5ab1da094a91091c09c69cf09088ff99"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/dawn_dusk/native/epoch5/bbox_coco.json",
+      "bytes": 28411103,
+      "sha256": "a95cf56faedc77eaa44bcc51a5d468db8f5adb0966ba65d5320f10302e9cd0b8"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage2/overcast/native/epoch5/track_coco.json",
+      "bytes": 5048224,
+      "sha256": "145d8a96fd78f525d6d0c7b592ce46805b0c9a9b91f7a4cea06e88adb2b154e5"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage2/overcast/native/epoch5/bbox_coco.json",
+      "bytes": 19529315,
+      "sha256": "8ae588080a36e4bb5e5c95cb1edf1b3e680cb11d61fb1916db5bab793adc14ea"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage3/overcast/native/epoch5/track_coco.json",
+      "bytes": 4867210,
+      "sha256": "c3d6e235a9625ab0a62e313172da9d932eed80446fffbbe78219261ee199e87a"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage3/overcast/native/epoch5/bbox_coco.json",
+      "bytes": 19416630,
+      "sha256": "e1d91eabe90fe2b2cf8147eee3f9998e89e8c9775308827ebd92add02cc626b6"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage3/rainy/native/epoch5/track_coco.json",
+      "bytes": 3804617,
+      "sha256": "e929ede3c56868c7fb3e1bcee03931588d66f030a52cb4b9b805141ef41ec57a"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage3/rainy/native/epoch5/bbox_coco.json",
+      "bytes": 13679723,
+      "sha256": "089260a113a0eed8fed4105e12194fb92c851740d2803565c18a3cc3a7ef2be7"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage4/overcast/native/epoch5/track_coco.json",
+      "bytes": 5181733,
+      "sha256": "d25e8827e4ce2db9c634532dbfebdda9a44085534a6f8a970af89554c176ee9c"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage4/overcast/native/epoch5/bbox_coco.json",
+      "bytes": 21014211,
+      "sha256": "64a510dcde7b7284116360d69fb36b9aed13f2a05b1ae17e97ea9098e101d2d5"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage4/rainy/native/epoch5/track_coco.json",
+      "bytes": 4011025,
+      "sha256": "9730fbd7776836c1df05c69b2e1a48b858fff4fe0a4dcaeafdc5c9a4c9c613a6"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage4/rainy/native/epoch5/bbox_coco.json",
+      "bytes": 14158305,
+      "sha256": "0cba8aab5d1a7d7203103d136e13493a4ac98e080267fb2345176bc6f4fe39f7"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage4/dawn_dusk/native/epoch5/track_coco.json",
+      "bytes": 6920865,
+      "sha256": "c78b2f4ee0a74446566c0262f8e0344aa7f2908fd35b57722a4262cca2aac808"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage4/dawn_dusk/native/epoch5/bbox_coco.json",
+      "bytes": 28379441,
+      "sha256": "8f3feb1a50191ffbe4fe7c80fdf19f8da94de6273d6eb2f88c0c9364a0feacc3"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage2/overcast/native/epoch5/track_coco.json",
+      "bytes": 5026232,
+      "sha256": "606a0948e7c0c9e6da13a1406e8c7c603ed1432a577fc800865394c2478389db"
+    },
+    {
+      "path": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_APR/stage2/overcast/native/epoch5/bbox_coco.json",
+      "bytes": 19670408,
+      "sha256": "e67b6b55009405ac7e31f019ec7c32f0cc16a7eb223314e27230c7ef608df853"
+    }
+  ]
+}

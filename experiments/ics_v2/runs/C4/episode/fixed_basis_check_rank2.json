@@ -1,0 +1,16 @@
+{
+  "path": "/data1/liuyeqiang/ics_v2_20261030_184026/basis/X3_seed0_random_k2.npy",
+  "sha256": "b95a1f4ce3b93405ca9f94d389bca68d55493ab3ff83ec7f90315dbd7e42a6cf",
+  "pcs_shape": [
+    2,
+    256
+  ],
+  "max_row_orthonormal_error": 1.1691140677783096e-07,
+  "principal_angles_deg": [
+    0.0,
+    1.7075472925031877e-06
+  ],
+  "initialized": true,
+  "num_updates": 660,
+  "rank": 2
+}

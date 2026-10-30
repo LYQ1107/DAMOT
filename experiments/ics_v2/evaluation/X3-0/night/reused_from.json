@@ -1,0 +1,36 @@
+{
+  "source": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0/evaluation/night",
+  "original_files": [
+    {
+      "file": "complete.json",
+      "sha256": "4f539901988636c993fb00a48f13dbf982124fe0e6e5e93c531c90bda784c77e"
+    },
+    {
+      "file": "metrics.csv",
+      "sha256": "d850a09fe11e36f3bdbb9cf8fb3adbba7e857d1fa2fca33c833dfd2fb7a8d5f1"
+    },
+    {
+      "file": "summary_metrics.csv",
+      "sha256": "816ed35ac945f5bebd337432f31539274b661292563341ae534637beb4ec0828"
+    },
+    {
+      "file": "track_metrics.csv",
+      "sha256": "92fe63546d638334cf7eb445cd74191a397cf08adc18282e2777e3c4fe61002f"
+    },
+    {
+      "file": "hota_metrics.csv",
+      "sha256": "28bb02bc0e7e8a3510381a892af40e8c8c5c4d67f2801b6865e30778f8231863"
+    },
+    {
+      "file": "used_config.py",
+      "sha256": "d40247421019c8ad8a4e5f2553253d4ba12db3169e99c6ac68bbee7cb7cac0d5"
+    },
+    {
+      "file": "runtime.json",
+      "sha256": "6217813b94c5b828cefeca1cdfc1effa7070d3da9fb37cc043b6c58bd10452a3"
+    }
+  ],
+  "original_metrics_sha256": "d850a09fe11e36f3bdbb9cf8fb3adbba7e857d1fa2fca33c833dfd2fb7a8d5f1",
+  "change": "IDSW column added from original track_metrics.csv; four metrics unchanged",
+  "training_or_inference_repeated": false
+}

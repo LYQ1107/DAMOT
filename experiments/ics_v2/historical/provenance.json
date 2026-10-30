@@ -1,0 +1,1252 @@
+[
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/SPA_pipeline/stage01_after_overcast.py",
+    "sha256": "1c48c45d89f6f74239e5e0b45d284a8fb8f88d9f352e0f52344f2597f60a3b33"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage01_after_overcast/20260702_085319.log.json",
+    "local": "historical/train_logs/SPA_pipeline/stage01_after_overcast/20260702_085319.log.json",
+    "sha256": "73b7f7a1cffbf2f6164a205aa28d9389c5f7b48ef92f9c0292a3738ede6da3c0"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/SPA_pipeline/stage02_after_rainy.py",
+    "sha256": "66426b7b02014cd3f0bc0084ec85d4d801c3a83fd2d015878e5a7150dea59a9f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage02_after_rainy/20260702_085319.log.json",
+    "local": "historical/train_logs/SPA_pipeline/stage02_after_rainy/20260702_085319.log.json",
+    "sha256": "190833c57979c8bf9f9485694ff02d60b07f647ec9d59bb542113f6ed873dafa"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/SPA_pipeline/stage03_after_dawn_dusk.py",
+    "sha256": "de8fc1d3bed000a596752f0ab29aa20a615e3810dc21402210e5af37e8f4035d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260702_085319.log.json",
+    "local": "historical/train_logs/SPA_pipeline/stage03_after_dawn_dusk/20260702_085319.log.json",
+    "sha256": "fbae886f1e586dd8b909afc389e26aa55fbe69e1d688a0a95ae065615335c0cb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/SPA_pipeline/stage04_after_night.py",
+    "sha256": "71dc566a13e0c3c7afd7de71dca0b3aee00084f33e9168426c085132a4cbe6f4"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/episode/adapt/stage04_after_night/20260702_085319.log.json",
+    "local": "historical/train_logs/SPA_pipeline/stage04_after_night/20260702_085319.log.json",
+    "sha256": "d7e62f96a11d7f8f9578d88a1c267b14e7156447cb0cc56be50a6b608dce0a75"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_pipeline/stage01_after_overcast/overcast/eval.log",
+    "sha256": "23e3d7c3ba91dd6a29f69e79b6c1b96464723d518092b74a92fb5a0e8929cf1b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260702_154711/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_pipeline/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "826269d19040ad0364bd80db48d2f27b7ae6b6bf352e6b058c72d34e7898f5b7"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_pipeline/stage02_after_rainy/rainy/eval.log",
+    "sha256": "b04c139414845a377fabfdcffbb45a93347c5ef5aac71a47eed7a31df37f7330"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260702_155303/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_pipeline/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "68fecc7dbed1fc69bab7a0dbe2c531779381f2a754659d5da0ac75a11793f861"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_pipeline/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "5762c70ccbc9b8ee4644faf5068f48d843acc767086ffe3a66d12edfb799ef03"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260702_155740/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_pipeline/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "d95b98025ba081262c9baba9e80e6ee647fa7bdaebb06eb40542fa6202c8d946"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_pipeline/stage04_after_night/night/eval.log",
+    "sha256": "d453a7178660d437305e2a14ca937d7d258bb3ec896d61c1896997a5b549bead"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_fix/spa_pipeline_mild_4domain_5e/eval/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260702_160532/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_pipeline/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "3d7c04d91ff9e976f289b0f46eac92dd67501d3acc90483d4211d8e744a8c6dd"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/SPA_legacy/stage01_after_overcast.py",
+    "sha256": "eb869692d40832c2c09d4d6ca7665df30903f909da4a4ffaaf8772cfb0691b94"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage01_after_overcast/20260701_195708.log.json",
+    "local": "historical/train_logs/SPA_legacy/stage01_after_overcast/20260701_195708.log.json",
+    "sha256": "9b33c9bd5f86270075b4f2af67c1959d702c0db0727a770e8b83f95e27e4716e"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/SPA_legacy/stage02_after_rainy.py",
+    "sha256": "2d9b6066d3d37ebad5c786f916e172a7503750b42ded8bf2799ba05d4ad5fca3"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage02_after_rainy/20260701_195708.log.json",
+    "local": "historical/train_logs/SPA_legacy/stage02_after_rainy/20260701_195708.log.json",
+    "sha256": "c175aa1c14ce958dfd92aee5df8fc935892b73d9d35789ca567c65dfed2706c7"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/SPA_legacy/stage03_after_dawn_dusk.py",
+    "sha256": "b28848d97c010b2e498ef45539c649c9529af3c69fd123b621e824caad9ca68f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260701_195708.log.json",
+    "local": "historical/train_logs/SPA_legacy/stage03_after_dawn_dusk/20260701_195708.log.json",
+    "sha256": "189ca8443a31411321c037ee05cc58a24673e7b31ce11d73fc165c93d4aa1893"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/SPA_legacy/stage04_after_night.py",
+    "sha256": "b136dc41631a7bac42f1ca7821f5463842a9b8ade0dcfb81994ade0148930011"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/episode/adapt/stage04_after_night/20260701_195708.log.json",
+    "local": "historical/train_logs/SPA_legacy/stage04_after_night/20260701_195708.log.json",
+    "sha256": "601c4528aa15426db7eb810dcef93680e43e34486b0518e211bac5cd45d9919c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_legacy/stage01_after_overcast/overcast/eval.log",
+    "sha256": "85cf4ab65fc13124ac8278d1efb6af702fefb179e8f45464947a000af463803c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260701_230705/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_legacy/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "59fff30c413ec85fbc7c427f59692329ac852962e109e2baa2faaa5f4264a8eb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_legacy/stage02_after_rainy/rainy/eval.log",
+    "sha256": "62f5f77ac756443c140f45a29d387542f0f6786249b5ca66b7e3b13a39c4f6ed"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260701_231117/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_legacy/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "4c31bdb05a11ac9934db437044ee6955b2c46caadafcdd448e0d281c55d06d9d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_legacy/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "78766cb972399e8493e27c27fcab5cb1b4f5eb72390ff6808767cd7ac22385f4"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260701_231439/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_legacy/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "d38e2f2d8ecb7719e90b5b80786a48213886455de2cd40fddef6e5ab451ea76b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_legacy/stage04_after_night/night/eval.log",
+    "sha256": "20f58192ba955a8b62cf1ef8bdac19c6b2f4dbee12c6bd658837a70ce4c30e96"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/spa_only_4domain_5e/eval/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260701_232006/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_legacy/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "bb9bed215a1832e9ca29b1c37df0fabbe64bf394e27a9bc3acd4ddbcc7cecd33"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/SPA_oldICS/stage01_after_overcast.py",
+    "sha256": "39678ed555c2e9eb05ece43d466f752fe99f5e0ac89f0793623c43f4e08b6476"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage01_after_overcast/20260703_080124.log.json",
+    "local": "historical/train_logs/SPA_oldICS/stage01_after_overcast/20260703_080124.log.json",
+    "sha256": "ee23a2829a4d8c35e61e1170f28a38b384a7f79c2fd2f0d69b1c39dfe4802a13"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/SPA_oldICS/stage02_after_rainy.py",
+    "sha256": "d9c94f88b4e6a0f04ce602fb947faf530af308298118f2579cfb5457056c8376"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage02_after_rainy/20260703_080124.log.json",
+    "local": "historical/train_logs/SPA_oldICS/stage02_after_rainy/20260703_080124.log.json",
+    "sha256": "7788b9360e5e47c838ea4542a59dee0f7e0e43784640fcba86d86b9f24610915"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/SPA_oldICS/stage03_after_dawn_dusk.py",
+    "sha256": "81fa0f24109ba2ba778e8a38bcbc1a222e8ae1d5c65a820ce0b7bcaf7651c115"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260703_080124.log.json",
+    "local": "historical/train_logs/SPA_oldICS/stage03_after_dawn_dusk/20260703_080124.log.json",
+    "sha256": "4752e49009a49bc8618aa330fa76af19d2db982e89c9880951b26c1b9836a80d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/SPA_oldICS/stage04_after_night.py",
+    "sha256": "8189831c62795d1b9cdcceb6cb8444d268d588132147b8a762b8d87c1c0b9cc8"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_4domain_5e/episode/adapt/stage04_after_night/20260703_080124.log.json",
+    "local": "historical/train_logs/SPA_oldICS/stage04_after_night/20260703_080124.log.json",
+    "sha256": "525688c830955238d498d8fc9dababd5106dee12f12a7e2f3ed97755d7036a03"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/overcast/eval.log",
+    "sha256": "bbe5439c5951a8bcf8dce08546a96998149ee9957253b1aa3475bcacd6766905"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_214003/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "e33263a67176d3ffc2a61efb001f3421df8929e6c63b490e88debde0a08c7902"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/rainy/eval.log",
+    "sha256": "c8eaca2081eee321a0400bdea7c4cd21e1c280457481ba1d5e1b98c735557d08"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_214405/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/rainy/summary_metrics.csv",
+    "sha256": "43b4ff495f39c91241b79ed9146ddce84e45e184ad3dad67424e8f62a09134dc"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/dawn_dusk/eval.log",
+    "sha256": "76f667dcb7c942f55d59e96f9a6000cbfd1cb01bceab1abc7b566b2e2ebd501c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_214712/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/dawn_dusk/summary_metrics.csv",
+    "sha256": "3bd6eac2d08a708c549b7deebb076c61d38631f0ab95275f5a209c68cc6feb1f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/night/eval.log",
+    "sha256": "ecb58b7dd0bad132dafd0466f3c275e0d39d0761961b28e40b04479d39c100bc"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage01_after_overcast/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_215218/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage01_after_overcast/night/summary_metrics.csv",
+    "sha256": "f219867458d36461ebc3d345f56d4f3d53e92d24bc3427a77b44aa6f77ce942f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/overcast/eval.log",
+    "sha256": "71e5e92b5a0a61f81903864876eda6acac666d0f3939d4cc11af901252a06712"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_215805/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/overcast/summary_metrics.csv",
+    "sha256": "2f538f11ce956cbe988bfb2ce36d2fc04ec82b9a6efa331892c36ed40c1bc387"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/rainy/eval.log",
+    "sha256": "63e0be7472fd13b8cd0cd5f98baaf949a457f85ca4599dbc13f21df517baea14"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_220207/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "8001ab6f4e8a921135bdd4d2f7ef3fce029c2d75b2aea0aa41b4773a559c8252"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/dawn_dusk/eval.log",
+    "sha256": "ea4615a0b5c3d6e21618a956664362646cb39f0a2e0ffdd17a0bb633ec0afe11"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_220539/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/dawn_dusk/summary_metrics.csv",
+    "sha256": "3506fdffcd49a2b3fc0b5946ffa2c195b7b1d5045a1055891a8e74f02196179c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/night/eval.log",
+    "sha256": "3d60aa1c97694038ddde8db645027c8c11fddf64442e315d008a9376c5e6f980"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage02_after_rainy/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_221132/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage02_after_rainy/night/summary_metrics.csv",
+    "sha256": "9a6d89fb420545aca5e2c88f8918ca5b599c845d3c3e72f4e7d5e3b63bf363bd"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/overcast/eval.log",
+    "sha256": "09c9eae44834e06553e6e5cdeeb3c3e0dcabd706277b95ce9681a7907664dc34"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_221814/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/overcast/summary_metrics.csv",
+    "sha256": "4398a6aa01c613dbcfe33023cf9bc5e795e8183cbc4dd2178870c9ddce890b82"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/rainy/eval.log",
+    "sha256": "b7dfc452fd95c8e3f5c8b41172ea72826b938ee32284e801d148af32865cc280"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_222256/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/rainy/summary_metrics.csv",
+    "sha256": "b2b317b640a85e24449e3fc494ad724c2e0e79c998a0419d77b89a3ac7e19994"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "9d74ffe0a2496b83d551081c998f0038710a9ea7e19b2df99742f9cc288fdaf5"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_222624/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "8b461b78449d1ca70960011d1f4d5d9fe08279caf7bea4489b249688421e5676"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/night/eval.log",
+    "sha256": "02c0b5831ca3589065d932c0102b13c3548a428df701db86db63780403bc3bcb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage03_after_dawn_dusk/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_223216/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage03_after_dawn_dusk/night/summary_metrics.csv",
+    "sha256": "794b56689aa1b7422d7bc9c81b2bf3cf89c9693ada1dd9b3dd2f93accd98b817"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/overcast/eval.log",
+    "sha256": "0f52451b1ce0b36b2994c549b789bf44c03a149d37e12c6fa2d9e68f469d5cc0"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_223827/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/overcast/summary_metrics.csv",
+    "sha256": "efd0ff79753cf4a9aa22434cdc6e06cd92faeff0b15c376b2b22ad67e645a7ba"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/rainy/eval.log",
+    "sha256": "3a418ded387a502493c0992d6457bd9b06ef7d91102a2468863814082df8ad39"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_224234/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/rainy/summary_metrics.csv",
+    "sha256": "9e83cacd79b413105b7bf2cfe27dc89d1afb9a26c480d25be4d83e0b11fb12dc"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/dawn_dusk/eval.log",
+    "sha256": "afac8a45c8f057a8851286234189b88caff5c3c596ff9bfd3a892df5c4215173"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_224541/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/dawn_dusk/summary_metrics.csv",
+    "sha256": "a56b8fe77b219158e6a9a5f38397920357a03317e40576f82b08ec4a1ea16d88"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/night/eval.log",
+    "sha256": "15906077a912424a295f9643e244f3320caee5d1c64cb8f50d3fcf175db501eb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_4domain_5e/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_225048/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_oldICS/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "b0660d1b4b23621a6883549aa17a76ec84ee0e09288694f5c74d3088475662be"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/SPA_APR/stage01_after_overcast.py",
+    "sha256": "be6704cea8df9bef387e2f28139c248110edf7cb26e093240db77d1e9b4b5a2c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage01_after_overcast/20260703_000200.log.json",
+    "local": "historical/train_logs/SPA_APR/stage01_after_overcast/20260703_000200.log.json",
+    "sha256": "20e90fd6fd07adae00da848b50a29698bf3e82bab13cfd9ea9f53494d111baa5"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/SPA_APR/stage02_after_rainy.py",
+    "sha256": "29160b8804f40c0753176cdb4b75454c81dab8211e41d6f5f8942eefaceea3f1"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage02_after_rainy/20260703_000200.log.json",
+    "local": "historical/train_logs/SPA_APR/stage02_after_rainy/20260703_000200.log.json",
+    "sha256": "e4c2726d06369261ae92ac7133db3652ae3d6a22f2efd8820f7bf613473a33d0"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/SPA_APR/stage03_after_dawn_dusk.py",
+    "sha256": "7ca6336f4b7127f8a90a3aaa5d10ab8f2b0a7108c8b2bc2fd1dffb592df56a03"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260703_000200.log.json",
+    "local": "historical/train_logs/SPA_APR/stage03_after_dawn_dusk/20260703_000200.log.json",
+    "sha256": "bd388c65c793b5982258ee9cc5994048e6b6f93b6782f5e1721d8976c87d9d46"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/SPA_APR/stage04_after_night.py",
+    "sha256": "b2c15b1a5f961da7378d3ee1547e78b7d2b69abc250928a3a908e13454dac301"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/episode/adapt/stage04_after_night/20260703_000200.log.json",
+    "local": "historical/train_logs/SPA_APR/stage04_after_night/20260703_000200.log.json",
+    "sha256": "40d7592a37a71947942098bde334f1b0755c47c13edd3a2f762be292e4487b0b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/SPA_APR/stage01_after_overcast/overcast/eval.log",
+    "sha256": "236478301571d006c9382c2c442b131b6b8089e95788b94867ea77f8cbcc877b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260703_074247/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_APR/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "322c15a1d5beeb4a381427c9f24796566f19f7fcea22da07fc5cf539c6aa84b0"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/SPA_APR/stage02_after_rainy/rainy/eval.log",
+    "sha256": "6f04f3e0a31232aa9180a40831a546e460d8c9fc7618ae23a6da2c3da45eaf8d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260703_074654/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_APR/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "7ab2779e98ff562ef4504b91dc478f036ce1dcfb48c129fb82c7ac76e82c0f8f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/SPA_APR/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "043b1e70b07fe2b3248afa62f84d07c51a532cd44bf1b961c3ad2c868da15946"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260703_075005/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_APR/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "2637e888044de40b2479c19b7e61aed979a7d2ca2f7374f691a3771368393e86"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/SPA_APR/stage04_after_night/night/eval.log",
+    "sha256": "9f7e996374c6193a79f7ce9199923d57720741abfdd26f9d10c4997080271965"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_roiV1_4domain_5e/eval/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260703_075532/summary_metrics.csv",
+    "local": "historical/eval_logs/SPA_APR/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "6a6f16536f0f3206073216df9d09af0b6a6d5f7b42ac036a935e27cb22f09800"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/F_old/stage01_after_overcast.py",
+    "sha256": "cfe7cdcdff5361e9681ca3f073b32c99b35f663a6dcf1427b35b238f54d93df3"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/20260704_011517.log.json",
+    "local": "historical/train_logs/F_old/stage01_after_overcast/20260704_011517.log.json",
+    "sha256": "8ca875f72b5245a610e466c0fdfb18aaaceacf014e582a8b946990c7d2bebe2c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/F_old/stage02_after_rainy.py",
+    "sha256": "b881c9a2e1f63bdb97caef2e4904610c603c39def030bb394838836e2869d574"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/20260704_011517.log.json",
+    "local": "historical/train_logs/F_old/stage02_after_rainy/20260704_011517.log.json",
+    "sha256": "825d4b3f0f1018785a2fb629d975e6a195002e48dd4239a9511101ce78addf5a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/logs/train_episode.log",
+    "local": "historical/episode_logs/F_old/train_episode.log",
+    "sha256": "4607367a94edfde71610d8f51f38c1129f054c858a8570136718495e14415a62"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/F_old/stage03_after_dawn_dusk.py",
+    "sha256": "7769ab91c9cf791cb76b119b4025c98dadc34800396d6aa0b16d0d968bbe1a13"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260704_011517.log.json",
+    "local": "historical/train_logs/F_old/stage03_after_dawn_dusk/20260704_011517.log.json",
+    "sha256": "c0ff14a024da647d9bd884362fe127f526bf3b6ee29c3ae4dc76263f9aa28313"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/F_old/stage04_after_night.py",
+    "sha256": "ec535427c8fbaff33955e9865fa4f6ab82dc4f8c8a54ddfe7e6f99ca1aa50e2a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/module_combinations/spaP1_causalOld_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/20260704_011517.log.json",
+    "local": "historical/train_logs/F_old/stage04_after_night/20260704_011517.log.json",
+    "sha256": "a080c7d0fa9f77a9fcaba0acd6d634d68d91757d1de83d6c19b8d9a104472e2d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/overcast/eval.log",
+    "sha256": "5df32b5a2befbb03a4bbb43f284f42f32bf27ba5530a653b989ae4fcd7e57d84"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_225645/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "ff0ce32c062a113d35552d12b6abc4c90eb1d9854371148be015d0a634c27c46"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/rainy/eval.log",
+    "sha256": "b5034a4c17417997c5a6de44540e841fcc1766235dc843704f49fee790c9df80"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_230047/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/rainy/summary_metrics.csv",
+    "sha256": "a86fe915fff0195fa34f6449335c40ccb9672b7a56885db4dde26def4feab080"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/dawn_dusk/eval.log",
+    "sha256": "63b9fc5cdcfcb16892943d80152d1478c7811f474450902f9212fdb1ef247067"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_230353/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/dawn_dusk/summary_metrics.csv",
+    "sha256": "b000f8428e28957d12760f5957ac85439fc7340f7dcc41026b46b92b04b665cb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/night/eval.log",
+    "sha256": "8970cd448e8d18fefd96254db716b3158eb30da92e55f73bd458c8241499a11f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage01_after_overcast/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_230900/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage01_after_overcast/night/summary_metrics.csv",
+    "sha256": "d420f21cf6630e85247253351e8f2d3e20f4400bccbab76cef698e977dad614b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/overcast/eval.log",
+    "sha256": "dff76a3b867bbbc80139491e05bcf9f3eeec6a3978383a5cc82e2db20b4bf083"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_231447/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/overcast/summary_metrics.csv",
+    "sha256": "aa3acce92984ac2c2baf65b714fb806c37a220012a907c0a24035ce1cd7d1988"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/rainy/eval.log",
+    "sha256": "af0c6529da300590d4d32598298334981689145a973e0985c037f709f0ec1918"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_231849/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "748f3a6949aa242546678cfec394795cabe6f7ac1800820c1f53b62c092c7ae8"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/dawn_dusk/eval.log",
+    "sha256": "74bf27d8ac0d30a98a04936f216f0d06f2af9f330996dbe17caf950610cd4d7f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_232156/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/dawn_dusk/summary_metrics.csv",
+    "sha256": "b8e9f2796e84d5cfd1e3da122285279803993086906bbe3ed896dac70eff32c3"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/night/eval.log",
+    "sha256": "3a2c5e8f1f5130ed8af6c593b336a9791c3a9ba2243dcc86e108615f626d0a82"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage02_after_rainy/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_232703/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage02_after_rainy/night/summary_metrics.csv",
+    "sha256": "5e4c08125dc8f66c5ea5b2764c76cc42d2087df1d4d190a12a4eace1ce42af2e"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/overcast/eval.log",
+    "sha256": "23282bc39b649aa6093c40c9d40819852a5e047cb7ac61e3bbc18e210ab6954a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_233250/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/overcast/summary_metrics.csv",
+    "sha256": "57604e403ee58023f4d1142b0eb4ddb3684aa8326f286657593d7cae67e6955f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/rainy/eval.log",
+    "sha256": "1118c4173ca274646db7cf74d71a3232b557d75de0dcf2d5792e0ece5032343f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_233702/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/rainy/summary_metrics.csv",
+    "sha256": "b006fb64a586a9096fa07795c0ab293f6d14e271b58a5a9c9457a8b12cf36fbd"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "6e0df82f3cb33b16becbfa66c012a987e963f8aefcaf57a016f856e5bbc6b82d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_234014/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "3d5fe02994beab08065e7572a542276afb4ead2949daf7fbc731c79d7ed6d30b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/night/eval.log",
+    "sha256": "0ede196dd2dc13256d7c8a02f48e1d7aa3ad6462dc34096a65e2d9952fdaceba"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage03_after_dawn_dusk/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260704_234521/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage03_after_dawn_dusk/night/summary_metrics.csv",
+    "sha256": "845d6b399a9cdd3e28067eef4a29d6208319bba37a7d085991572ad81e22b2b5"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/F_old/stage04_after_night/overcast/eval.log",
+    "sha256": "0312f433c135c264277a0bee78888021234c23aba1fc0ce196bd046dba07f283"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260704_235113/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage04_after_night/overcast/summary_metrics.csv",
+    "sha256": "a41e8facbdbdf1ecd5b7c5c1b1b944f9048ecea82830040bae8761c6698cef6f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/F_old/stage04_after_night/rainy/eval.log",
+    "sha256": "c37687827843e1f1dba2997b3e355dda89fd2c352c9ad5f3738bb65a3543fc7f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260704_235525/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage04_after_night/rainy/summary_metrics.csv",
+    "sha256": "876e83f8f3bc9a621d69e20060e8493a6f8b470b2a21d7557458e08e0b24ba87"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/F_old/stage04_after_night/dawn_dusk/eval.log",
+    "sha256": "fb51f0ca83285ddb7887f38e4d0f1c09e329b82ac96713520da95748ebdafea6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260704_235831/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage04_after_night/dawn_dusk/summary_metrics.csv",
+    "sha256": "b3065763962f8472fc7077f11c00e5c3c4a94bb13ae9bdf5fb335b8cbe1e7932"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/F_old/stage04_after_night/night/eval.log",
+    "sha256": "f0da9e62e3c8f636398f734b613ab2569fc62bced54ecd127be32753f57753fe"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/continual_forgetting_eval/spaP1_causalOld_roiV1Weak_4domain_5e/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260705_000344/summary_metrics.csv",
+    "local": "historical/eval_logs/F_old/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "3f83c8d892039eb04ecbab868892b0ada218b16aba6e6d5fc77f52c145f106df"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/causalShrinkage/stage01_after_overcast.py",
+    "sha256": "e937f5e28ae58223ea6d13f22badc419bbd53d3f85aaa7e64e42a1fd4adc7163"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/20260707_124412.log.json",
+    "local": "historical/train_logs/causalShrinkage/stage01_after_overcast/20260707_124412.log.json",
+    "sha256": "9061e4c55ebfe7701d55fb52e89f3eeb6286a9c4724099c322c63cd019ab5e60"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/causalShrinkage/stage02_after_rainy.py",
+    "sha256": "cae304f0946b4ff51539d0f0279d5becfb8e833e8cd7bd0f254244b4ab8c5eca"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/20260707_124412.log.json",
+    "local": "historical/train_logs/causalShrinkage/stage02_after_rainy/20260707_124412.log.json",
+    "sha256": "631b7399c1287b628e23ba036994a3479fc2b0519fffd2e2c77a931c5296304c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/causalShrinkage/stage03_after_dawn_dusk.py",
+    "sha256": "943e8342ce2c1ab148511b5bf92f6cdcc644d400a59190f41b7b0150f9e5a89a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260707_124412.log.json",
+    "local": "historical/train_logs/causalShrinkage/stage03_after_dawn_dusk/20260707_124412.log.json",
+    "sha256": "825844e3cbd28ba7503fb94a82bbb3c717e49ce5acaa586ee032e4c860b33494"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/causalShrinkage/stage04_after_night.py",
+    "sha256": "9fc78a6a994844758702db6bf2ff86b8b5d57f0dbaa94df8c5e02d52b740a102"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/20260707_124412.log.json",
+    "local": "historical/train_logs/causalShrinkage/stage04_after_night/20260707_124412.log.json",
+    "sha256": "74c3b436a5bd335215e3234f4d15fd0a3cbe785015debc52498d9b9c158ac58e"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/overcast/eval.log",
+    "sha256": "3b5c08e95a504cbab3d5a973263779b624fb32a0320addd08a5774add0a7acbe"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_191015/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "c8ca90ca7b296be2ff973512f1061bf9026d012d45b5a6e4e8fa231be1698e91"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/rainy/eval.log",
+    "sha256": "e61c566dcf8f4aa1e5480a8fb96b98ee730145c4cf1b3d858f6553b15c8b37e6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_191518/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/rainy/summary_metrics.csv",
+    "sha256": "dc57591948047b358a37bbc6539df769dd69aa82d2e64831128954c15d6fb50e"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/dawn_dusk/eval.log",
+    "sha256": "94df8729763790cfd167d1de1108f2b8a3c75bc3e12252f3e2012057652a0d5d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_191929/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/dawn_dusk/summary_metrics.csv",
+    "sha256": "05960419c495b3baded75bca211daac46f6534e411899d37e17fdfd559a5daf6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/night/eval.log",
+    "sha256": "c2debcd74f88632441cc08baaf4cd9a6be6c61050a1cdd7f56daa4530c1de799"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_192537/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage01_after_overcast/night/summary_metrics.csv",
+    "sha256": "3379c21b3b4a3f939b5898eea6ddd6062a3b7247527a1b2c793f5aed03a7fdeb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/overcast/eval.log",
+    "sha256": "c4f7222fed4bc29cd070219bd9c80b23c6f9137e7075d81b3b3c2fc7233032f1"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_193724/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/overcast/summary_metrics.csv",
+    "sha256": "d3d4e1eb0b7e041022ca9cdd13d33b0737200b22a208d15321c01f4981a5681c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/rainy/eval.log",
+    "sha256": "ae5d45c37114c45480b5cc06b764104d84041878eb36cd97b8568a84fde01ca5"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_194316/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "2b04055177f0313d2579c9f111c35fd338259bb4ff9a10fafd4d4a9fbec4f208"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/dawn_dusk/eval.log",
+    "sha256": "11b083d78919c0f92e64a164fe5741154cc1ff6f924543e26cde0c249fe6c530"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_194623/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/dawn_dusk/summary_metrics.csv",
+    "sha256": "828b4260888fc0977540fe0d6f49bd903ca83fb15530ebb3807701db90b14bae"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/night/eval.log",
+    "sha256": "331ba8639b28f01499506b0386ad06737189c120bd557cc9cf6ddec37b3991f4"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_195350/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage02_after_rainy/night/summary_metrics.csv",
+    "sha256": "4ebc8c22443a08fecc29df54e54ef58f707c93674ee00e24cdcb85d973e62bc8"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/overcast/eval.log",
+    "sha256": "22dd26e14f6f1660ef85a1c3af990c78eabade2a40253b96f0bc831236de167d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_195932/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/overcast/summary_metrics.csv",
+    "sha256": "dbb0333d562ca11c4bbe0dcba16b616155d6a09912e55f93d8a1c41ba3c5dba7"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/rainy/eval.log",
+    "sha256": "76f3834598efdd3f43d92024e4c60af237170da5da721aae167e8e439345192d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_200328/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/rainy/summary_metrics.csv",
+    "sha256": "df2a697f3ac0f422f86c52d2b912c7252c7128f73934d887b4d9f0598569dfa9"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "89212102ffb2efe288ae6eae54cff4977c105a3a9f71ceccb765f3cf39f1d5fc"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_200630/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "9558ef1ecf3fadec574d7bcdd753e2f4c9e3dfc2001396e2ca3f3ce3f64afcd7"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/night/eval.log",
+    "sha256": "c32824e914913ee8ce38128a3bc5c1a1acc4357616842748c1a20bbe5bf627d5"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_201228/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage03_after_dawn_dusk/night/summary_metrics.csv",
+    "sha256": "9ce3606b7def6f15abd725d8bcfd90e73df43c6a955771c8be6bce10ebfe2298"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/overcast/eval.log",
+    "sha256": "40c608b4eced70e909d022526370d98a23b90b37c3f8f7909352680c6fe389c9"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_201950/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/overcast/summary_metrics.csv",
+    "sha256": "89e66228e7e0afaa1a901b181ea3e05beccfc0c7a327df167d8d666ba45b1bb2"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/rainy/eval.log",
+    "sha256": "23c70353b14860dce91886e8b8a00fab881125bf1ccd7a65a1462d6e60496022"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_202507/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/rainy/summary_metrics.csv",
+    "sha256": "e9e949305e2bc2f927bdcbfd4b2dad6ad6b03797e4bb92c0dffd2aaaa6f98e4b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/dawn_dusk/eval.log",
+    "sha256": "e3e714da14f775eba95da05252a5b16430a2df00a6fb1dcd7fd2e34308c83d05"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_202929/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/dawn_dusk/summary_metrics.csv",
+    "sha256": "6454ede1b4443365e40b341d244bfccde1fcf96a16436346441fbd229640c063"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/night/eval.log",
+    "sha256": "c199c03f203821f896c3eae5f2ecc09ab9200d3c6b55b7fb2d42f98ce0b6746e"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalShrinkage_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_203641/summary_metrics.csv",
+    "local": "historical/eval_logs/causalShrinkage/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "dafa8b0db546fae82c4f5bb6a012f14561a04d1b782caecd17bec1e4705b6b52"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/causalProtoCenter/stage01_after_overcast.py",
+    "sha256": "7012620ede0b1418bb3ece6e07d8b4dd456fbe2f0a783c048374dcd05903b75f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/20260707_012135.log.json",
+    "local": "historical/train_logs/causalProtoCenter/stage01_after_overcast/20260707_012135.log.json",
+    "sha256": "194a37155047b0c9cbaa535496f5130d9f6a20f0fb2acbd418399d8505b3ae7d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/20260707_013839.log.json",
+    "local": "historical/train_logs/causalProtoCenter/stage01_after_overcast/20260707_013839.log.json",
+    "sha256": "a0ffe16b38260d51b76d80b7fd779b2312c25cdfacc830739ba3fc9670718e92"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/causalProtoCenter/stage02_after_rainy.py",
+    "sha256": "2a19b571808ab0a6ba641f25bde1a9c215a73591af1a73a015f2d8c53093cda0"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/20260707_013839.log.json",
+    "local": "historical/train_logs/causalProtoCenter/stage02_after_rainy/20260707_013839.log.json",
+    "sha256": "9c29a11df833c665f7c711e7f1b4c8c02d677f52ae50d4d361c3e07db79cce70"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/causalProtoCenter/stage03_after_dawn_dusk.py",
+    "sha256": "415e893c08c7613f3b9dd896fcefec38b195a462583223349113176753c93023"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260707_013839.log.json",
+    "local": "historical/train_logs/causalProtoCenter/stage03_after_dawn_dusk/20260707_013839.log.json",
+    "sha256": "eceeea5822ff9296581f04a19a20342d366e2b51dc40e01e1fd84963cbc2538f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/causalProtoCenter/stage04_after_night.py",
+    "sha256": "07ea7258c44dfeef34c3ade78cd1b95c1d89d2c8d50504800c6dd5c7f5c9a377"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/20260707_013839.log.json",
+    "local": "historical/train_logs/causalProtoCenter/stage04_after_night/20260707_013839.log.json",
+    "sha256": "c2b6b9dbf33bdf6856697b7a071372c10b9248cea464309f3b38de2a6e75c4f6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/overcast/eval.log",
+    "sha256": "60a331c2affc0dd73074f554d6579c6eb116973c34fe28a5d877dbe62072c27a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_113208/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "af6a0fea922db64e29064c7e62862c9b74afdbef70bdc2c5e5a0e7bba1da67ac"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/rainy/eval.log",
+    "sha256": "3182e9f8c921552cf93e25df222b2d5865534fa1e3265173706c616566a964ac"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_113604/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/rainy/summary_metrics.csv",
+    "sha256": "e3d961c7d5acd10da161d64c839184126b65aa1e78a3a629b13301a65a7d5257"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/dawn_dusk/eval.log",
+    "sha256": "83f1b8c9454d1c3a0234debe4313b61d446ec2038978d5d1c82bc3e83f48c0b2"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_113906/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/dawn_dusk/summary_metrics.csv",
+    "sha256": "f8e305543ba621de8a0f8845f4c9fac0284b388a650408d615047c385a3df6ba"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/night/eval.log",
+    "sha256": "137aa53406602c9b5fecf6b41b54a70b9e4e79656b6f07f61fa4fe5ae65fa97f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_114417/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage01_after_overcast/night/summary_metrics.csv",
+    "sha256": "15dbf815806edde5bde5bc9a7eaf421e00f7c0ae5c0c1240234b27d0f4bdd0ba"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/overcast/eval.log",
+    "sha256": "143fbd96de4aa8ab303379248912328693904d02e235567f060cbbb790e3d83d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_114959/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/overcast/summary_metrics.csv",
+    "sha256": "3c2bd4a5677e04ff2e247f9af39a126cc3e2024a51ef6497fb4bac0c7dc27dba"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/rainy/eval.log",
+    "sha256": "205a0f956408389c8c3b6c080fc50bdc0c2752dd9e4790799b2a1b3b04f10481"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_115356/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "b3b26132ffc6fdc944e687b7b8820fdf562e54bccc68aa8c2b2c5d6310ec51f8"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/dawn_dusk/eval.log",
+    "sha256": "94db83bc85908f700a37ba079781cd8e354e8efc112296e2bd35d6f0dc32f7a4"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_115658/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/dawn_dusk/summary_metrics.csv",
+    "sha256": "25ca275782d6d8ed8fdf64624f9aaef8c42bfe12d4059e0ad787956c054f3f00"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/night/eval.log",
+    "sha256": "50c93444a92e012dc0d76248df88f842d494a82e365e1d827cd4e4a97a9884e8"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_120205/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage02_after_rainy/night/summary_metrics.csv",
+    "sha256": "7c0936fa9131f67bc330271ebb880941e0c8f2351ba57fc3a42fc7a494314ce1"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/overcast/eval.log",
+    "sha256": "49e4ca44f50aebd7566df55df37f6f480b13f25be2fdb8fb26400e595661471c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_120807/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/overcast/summary_metrics.csv",
+    "sha256": "6c625f171c886e084f84e0e2dc409da0eb15e2a8326923667a9292b3b9742057"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/rainy/eval.log",
+    "sha256": "adee733a06889d04a6f497d815d4569f8841df10d93cb5d3fa7cf3a306006ff6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_121209/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/rainy/summary_metrics.csv",
+    "sha256": "70d0f3c5ec17153dd447709a78b007bebe8bbcca0cfa71e12dc951e183dab0ca"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "12c4381b16061c9ebf6c0f68eb02a7d52a1c527abad742b8c51a280c27b8ba83"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_121511/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "3c056ba4e1d8901b9e15731d8262b1d137da8bb069c7df67f96b53a0b1bdab6a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/night/eval.log",
+    "sha256": "ee93538a916c836c358220b5124b2d786b5cdc14e0300dfb035f8705ed1d5d0d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_122023/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage03_after_dawn_dusk/night/summary_metrics.csv",
+    "sha256": "24ded8a612fee30c1a6429821bcb69b07904bbfb634325a9b38d0bf8b4fb8a97"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/overcast/eval.log",
+    "sha256": "f4045de84413b82c4200333bc2024f465111791d7144715895e768453db97963"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260707_122614/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/overcast/summary_metrics.csv",
+    "sha256": "46acc784655c85a61e7b32db98faca9066ccebc2224f60dbccfb0e894deafb9b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/rainy/eval.log",
+    "sha256": "f25685e508644cfc1bbe3ff05d9f6bfef87603b5564f1edb9f5c6c07b6bacb9d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260707_123011/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/rainy/summary_metrics.csv",
+    "sha256": "04f550437d3d7c0e040b7441c7e8faae5c20cfb91a68729b75fb2aa723705400"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/dawn_dusk/eval.log",
+    "sha256": "8c806877cc19fbdda763d22a52fa68fb71a489922b1e35ea302576bbd92aa9fb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260707_123313/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/dawn_dusk/summary_metrics.csv",
+    "sha256": "84192e3f766276e4aedf538878711f93da6878dd5e0404271e08e05d3fa6ef81"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/night/eval.log",
+    "sha256": "4f1d11ed76a53d8fe14b13692d9c91c3f80564182cf448c946afd39cc539b7f1"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoCenter_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260707_123820/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoCenter/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "48e5aa42a8852f6c041d5c6f05eebbf5712e33f19a7ec9e9ccd94e3e74a5e568"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "local": "historical/configs/causalProtoShrink/stage01_after_overcast.py",
+    "sha256": "f58f88ff60a7a5eb99e09bd6fdbc0d38113b767ec7a58668950967a1ab40f6ac"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage01_after_overcast/20260707_204343.log.json",
+    "local": "historical/train_logs/causalProtoShrink/stage01_after_overcast/20260707_204343.log.json",
+    "sha256": "d42ce982dc3cf9ec884c46a461ad1bbf7628608c3f3315b7b82fe41a1ff07ad2"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "local": "historical/configs/causalProtoShrink/stage02_after_rainy.py",
+    "sha256": "191174760bf3be69db79c40a61239313979fede2e3d76309b104177b7df776b3"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage02_after_rainy/20260707_204343.log.json",
+    "local": "historical/train_logs/causalProtoShrink/stage02_after_rainy/20260707_204343.log.json",
+    "sha256": "bb6ff9c9585c7863a86eebbdb5da06470ee56f7599a545a7d5a733b0fdafea0a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "local": "historical/configs/causalProtoShrink/stage03_after_dawn_dusk.py",
+    "sha256": "38da31ec26b3b27b5daccbb6278b826d39c4c4d305bba7878a1c292827071d53"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage03_after_dawn_dusk/20260707_204343.log.json",
+    "local": "historical/train_logs/causalProtoShrink/stage03_after_dawn_dusk/20260707_204343.log.json",
+    "sha256": "96f0b3171f3c065daba61514e6fc94a6007a55634f6be4051be88d08d071f0ec"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "local": "historical/configs/causalProtoShrink/stage04_after_night.py",
+    "sha256": "06d7c03544dea6a2bf983fa051230d50cb1147b3480d9fadd9d7c2a814f88255"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/episode/adapt/stage04_after_night/20260707_204343.log.json",
+    "local": "historical/train_logs/causalProtoShrink/stage04_after_night/20260707_204343.log.json",
+    "sha256": "617b1451b956e40eea16bb7abb4e04cefc7088aaec0fac40facf7e5e377589a1"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/overcast/eval.log",
+    "sha256": "f6937460df889890623d0072ab4891fdf005212e72ea4e3bcc1ce5b0b80cc034"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260708_032738/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/overcast/summary_metrics.csv",
+    "sha256": "4547f155efa175439f1637436e5c522f28d3268f37ca20f803ad3515e4abd945"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/rainy/eval.log",
+    "sha256": "bb014dfc634b9499382011aa614a6b5984670ce4d01e8f21a6df20a9ef06ea96"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260708_033430/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/rainy/summary_metrics.csv",
+    "sha256": "ea21ac714fabba037b859527c4aa519ac1f48af45c36e3545388ec4a3c3f64c1"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/dawn_dusk/eval.log",
+    "sha256": "e8f87f54783d57fd782048937d7a4d413d5dd60a9ca2efcdfd0d80a2d2a6169d"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260708_033927/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/dawn_dusk/summary_metrics.csv",
+    "sha256": "6bc8af0a64f78a8c79fef36eff66263e81c53e5f9dc5f57c20ce88b4ed9c55d2"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/night/eval.log",
+    "sha256": "08fd33026e31e920d7625c762ee7a061bd42ede5e148819a2df3d275de80896a"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage01_after_overcast/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260708_034809/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage01_after_overcast/night/summary_metrics.csv",
+    "sha256": "bdc585be5719a64f1f1a7215cc6c98ac79cba823375c0d96e74171940667c326"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/overcast/eval.log",
+    "sha256": "2994c2610f891ff3874e9b9ff69a8b2934e7631901aeb87700cedaacf40a95a5"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260708_035756/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/overcast/summary_metrics.csv",
+    "sha256": "fa3dcb52140c32012ceb97e05cdf8ae1e11573c2d54c15305173e98daeb74a48"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/rainy/eval.log",
+    "sha256": "f207afd576baa9a7510d2641dac3e8ac7f91caa7345a6604d3b9b1513152682b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260708_040453/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/rainy/summary_metrics.csv",
+    "sha256": "707ba594a862da42403a3550f8bf9ac21c207d5524abccdecdbbc76df5752405"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/dawn_dusk/eval.log",
+    "sha256": "2d7d9f1ad6cf0b0dd1a08208f9128a9ad35966ca39748dc1adce7e7830d5f5b0"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260708_041000/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/dawn_dusk/summary_metrics.csv",
+    "sha256": "9ad0bc2740ee58ba75c95c269ec65545a25de9ee5ee26d90558e55f9e8b71bc3"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/night/eval.log",
+    "sha256": "6ce6d01ac4523ab5aded55ba5fa6ce06339718aa040ee34ab579ba7f1fd3e4e7"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage02_after_rainy/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260708_041852/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage02_after_rainy/night/summary_metrics.csv",
+    "sha256": "95d285d4f65900f348c2e4ab84fec65a910991db9f64e7192f1a86954331dac6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/overcast/eval.log",
+    "sha256": "c2e8602bfa26d50675784703e44524047c5b759442bb964b7bf4dd642b04aa06"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260708_042844/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/overcast/summary_metrics.csv",
+    "sha256": "ba7e7e0fcb2ee8fde3b6597a76c0612a0a29c9bab3ad219763a169de3543d6f9"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/rainy/eval.log",
+    "sha256": "d6718c7a03cddb6ff0023706c71b13a560933faad65562e8877b4dbff16fe062"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260708_043511/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/rainy/summary_metrics.csv",
+    "sha256": "176f2296976928cc1af6179ca823e0febaf6842b9ab3ec1aa4fa346be2b7640c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/dawn_dusk/eval.log",
+    "sha256": "868dcabc9f703a43c1da97fd9484fc3ea28f3907b873bdff473c7fb9ed35f481"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260708_044008/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/dawn_dusk/summary_metrics.csv",
+    "sha256": "8edf51dcd536d5f5f3638bbb7cb76036cb2c13a84899f01f5bdcdd40027cbb9c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/night/eval.log",
+    "sha256": "484be8d00ecf31878aedc81d2f4e3be347d952ac681d28a9cb4b14637095d86f"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage03_after_dawn_dusk/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260708_044830/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage03_after_dawn_dusk/night/summary_metrics.csv",
+    "sha256": "ecb7f14c483dce9a0e3c9a1daf2f910f5288a50d6826127c499c0b657e1a028c"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/overcast/eval.log",
+    "sha256": "5ad658f8c68754f2d5c9f90f2aa45b83d075ba6acc9db02d52cf8c04391ff192"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/overcast/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast/20260708_045822/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/overcast/summary_metrics.csv",
+    "sha256": "b077bfecd651ea070fb3e475ab3a0ee77447d9d97ba22fc35ff8d1600aafa7a6"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/rainy/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/rainy/eval.log",
+    "sha256": "e4a13a66f39a63546e38d90254992f50d03dbcf8a69961150e46713826f179fb"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/rainy/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy/20260708_050514/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/rainy/summary_metrics.csv",
+    "sha256": "bb404828cf271a209fc7170760405baea035b0d44029960c1e793b0431fea598"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/dawn_dusk/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/dawn_dusk/eval.log",
+    "sha256": "71bc22e61036dae78d6a8562a439061e3ee5713dff09326bb5aed3cbbfdde034"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/dawn_dusk/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk/20260708_050911/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/dawn_dusk/summary_metrics.csv",
+    "sha256": "037b0bf5eb45cb26a11e9d32907b18db13e52cf606fe76230f1c673ce47b1ecd"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/night/eval.log",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/night/eval.log",
+    "sha256": "6df817a4fd3b073b7de9058de3ea104b08785b6419211d41fd24bfd797caa37b"
+  },
+  {
+    "source": "/data1/liuyeqiang/idapr_20261030_153059/B3stage/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/DA-MOT/darth-main/work_dirs/bdd_4domain/tri_module_pca_variants/spaP1_causalProtoShrink_roiV1Weak_4domain_5e/forgetting_eval/stage04_after_night/epoch_5/night/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night/20260708_051808/summary_metrics.csv",
+    "local": "historical/eval_logs/causalProtoShrink/stage04_after_night/night/summary_metrics.csv",
+    "sha256": "10eee038977a3636333a4f61028190446153bc1a087668ea57bec5d443782f14"
+  }
+]

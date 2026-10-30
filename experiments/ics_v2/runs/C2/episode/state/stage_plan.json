@@ -1,0 +1,80 @@
+{
+  "source_domain": "clear",
+  "source_ckpt": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/S.pth",
+  "target_order": [
+    "overcast",
+    "rainy",
+    "dawn_dusk",
+    "night"
+  ],
+  "eval_domains": [
+    "overcast",
+    "rainy",
+    "dawn_dusk",
+    "night"
+  ],
+  "epochs_per_stage": 2,
+  "stage00": {
+    "stage": "stage00_source_only",
+    "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage00_source_only.pth"
+  },
+  "stages": [
+    {
+      "stage_idx": 1,
+      "stage": "stage01_after_overcast",
+      "target_domain": "overcast",
+      "adapted_domains_so_far": [
+        "overcast"
+      ],
+      "start_model": "in_memory_source_checkpoint",
+      "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage01_after_overcast.pth",
+      "epochs": 2
+    },
+    {
+      "stage_idx": 2,
+      "stage": "stage02_after_rainy",
+      "target_domain": "rainy",
+      "adapted_domains_so_far": [
+        "overcast",
+        "rainy"
+      ],
+      "start_model": "in_memory_previous_stage",
+      "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage02_after_rainy.pth",
+      "epochs": 2
+    },
+    {
+      "stage_idx": 3,
+      "stage": "stage03_after_dawn_dusk",
+      "target_domain": "dawn_dusk",
+      "adapted_domains_so_far": [
+        "overcast",
+        "rainy",
+        "dawn_dusk"
+      ],
+      "start_model": "in_memory_previous_stage",
+      "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+      "epochs": 2
+    },
+    {
+      "stage_idx": 4,
+      "stage": "stage04_after_night",
+      "target_domain": "night",
+      "adapted_domains_so_far": [
+        "overcast",
+        "rainy",
+        "dawn_dusk",
+        "night"
+      ],
+      "start_model": "in_memory_previous_stage",
+      "snapshot": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage04_after_night.pth",
+      "epochs": 2
+    }
+  ],
+  "snapshots": {
+    "stage00_source_only": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage00_source_only.pth",
+    "stage01_after_overcast": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage01_after_overcast.pth",
+    "stage02_after_rainy": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage02_after_rainy.pth",
+    "stage03_after_dawn_dusk": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+    "stage04_after_night": "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C2/episode/stage_snapshots/stage04_after_night.pth"
+  }
+}

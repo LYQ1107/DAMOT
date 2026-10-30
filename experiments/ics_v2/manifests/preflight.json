@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "no_GPU_training_or_inference": true,
+  "learned_weights_warmstarted_bitwise": true,
+  "APR_disabled_all_groups": true,
+  "APR_history_not_loaded": true,
+  "groups": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "records": [
+    {
+      "group": "C0",
+      "APR_enabled": false,
+      "APR_history_loaded": false,
+      "history_domains": 0,
+      "coupling": false,
+      "fixed": false,
+      "min_samples": 32,
+      "serialization_state_keys": 732
+    },
+    {
+      "group": "C1",
+      "APR_enabled": false,
+      "APR_history_loaded": false,
+      "history_domains": 0,
+      "coupling": false,
+      "fixed": false,
+      "min_samples": 32,
+      "num_pcs": 1,
+      "bank_initial_updates": 0,
+      "fixed_bank_bitwise": null,
+      "trim_operator_max_error": 0.0,
+      "finite_gradient": true,
+      "serialization_state_keys": 752
+    },
+    {
+      "group": "C2",
+      "APR_enabled": false,
+      "APR_history_loaded": false,
+      "history_domains": 0,
+      "coupling": false,
+      "fixed": true,
+      "min_samples": 32,
+      "num_pcs": 2,
+      "bank_initial_updates": 660,
+      "fixed_bank_bitwise": true,
+      "trim_operator_max_error": 2.384185791015625e-07,
+      "finite_gradient": true,
+      "serialization_state_keys": 752
+    },
+    {
+      "group": "C3",
+      "APR_enabled": false,
+      "APR_history_loaded": false,
+      "history_domains": 0,
+      "coupling": false,
+      "fixed": true,
+      "min_samples": 32,
+      "num_pcs": 2,
+      "bank_initial_updates": 660,
+      "fixed_bank_bitwise": true,
+      "trim_operator_max_error": 4.76837158203125e-07,
+      "finite_gradient": true,
+      "serialization_state_keys": 752
+    },
+    {
+      "group": "C4",
+      "APR_enabled": false,
+      "APR_history_loaded": false,
+      "history_domains": 0,
+      "coupling": false,
+      "fixed": true,
+      "min_samples": 32,
+      "num_pcs": 2,
+      "bank_initial_updates": 660,
+      "fixed_bank_bitwise": true,
+      "trim_operator_max_error": 2.384185791015625e-07,
+      "finite_gradient": true,
+      "serialization_state_keys": 752
+    }
+  ],
+  "stage3_snapshot_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b"
+}

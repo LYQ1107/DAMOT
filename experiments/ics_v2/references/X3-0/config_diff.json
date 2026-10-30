@@ -1,0 +1,37 @@
+{
+  "relative_to": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/configs/stage4.py",
+  "track_head_changes": {
+    "roi_proto_couple_ics": {
+      "HF": true,
+      "value": false
+    }
+  },
+  "bookkeeping_changes": {
+    "work_dir": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0/episode/adapt/stage04_after_night",
+    "epochs_per_stage": 2,
+    "custom_hooks": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "ICSQuickAuditHook",
+        "root": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-0",
+        "priority": "LOW"
+      }
+    ],
+    "initialization": "Full snapshot loaded; init_cfg/pretrained stripped",
+    "data_paths": "Read-only local annotation and image views, unchanged training transforms"
+  },
+  "shared_apr_history_sha256": "a8c2ea74e8d0d9aed6e069f9a7cb338bd0f39599a2e9f455dc07f8a6d2cf74bc",
+  "stage3_checkpoint_sha256": "0dbc117207f248eae2632bffe382d38dc0e0cc67409d44986399ae67a2a9090b",
+  "seed": 1790355234,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2
+}

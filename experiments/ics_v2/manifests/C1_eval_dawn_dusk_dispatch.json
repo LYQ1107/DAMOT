@@ -1,0 +1,27 @@
+{
+  "pid": 25483,
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/scripts/gpu_job.py",
+    "--name",
+    "C1_eval_dawn_dusk",
+    "--gpus",
+    "1",
+    "--prefer",
+    "6,7,8,9,2,3,4,5",
+    "--",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/scripts/evaluate.py",
+    "--model",
+    "HF",
+    "--domain",
+    "dawn_dusk",
+    "--checkpoint",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/runs/C1/episode/adapt/stage04_after_night/epoch_2.pth",
+    "--out",
+    "/data1/liuyeqiang/ics_v2_20261030_184026/evaluation/C1/dawn_dusk",
+    "--beta",
+    "0"
+  ],
+  "time": 1793364797.924473
+}

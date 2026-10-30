@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "training_or_inference_started": false,
+  "runs": 8,
+  "cells": 92,
+  "missing_cells": 36,
+  "all_stages_epoch5_verified": true,
+  "missing_results_not_filled": true
+}

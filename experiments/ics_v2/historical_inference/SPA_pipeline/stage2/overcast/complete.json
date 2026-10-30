@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "stage": 2,
+  "epoch": 5,
+  "domain": "overcast",
+  "group": "SPA_pipeline",
+  "summary": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage2/overcast/native/epoch5/summary_metrics.csv",
+  "time": 1793358900.7275264
+}

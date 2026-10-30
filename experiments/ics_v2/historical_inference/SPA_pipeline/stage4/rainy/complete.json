@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "stage": 4,
+  "epoch": 5,
+  "domain": "rainy",
+  "group": "SPA_pipeline",
+  "summary": "/data1/liuyeqiang/ics_v2_20261030_184026/historical_inference/SPA_pipeline/stage4/rainy/native/epoch5/summary_metrics.csv",
+  "time": 1793359863.7310634
+}

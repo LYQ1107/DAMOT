@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "completed_stage_configs_verified": 32,
+  "auxiliary_startups": [
+    {
+      "run": "causalProtoCenter",
+      "stage": "stage01_after_overcast",
+      "canonical": [
+        388086182
+      ],
+      "auxiliary": [
+        884315508
+      ]
+    }
+  ]
+}

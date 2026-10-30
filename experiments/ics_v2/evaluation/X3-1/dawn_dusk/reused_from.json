@@ -1,0 +1,36 @@
+{
+  "source": "/data1/liuyeqiang/ics_quick_20261029_160807/X3/X3-1/evaluation/dawn_dusk",
+  "original_files": [
+    {
+      "file": "complete.json",
+      "sha256": "4b520cc4e62bf67463b8e6e86882d8e28a04bb334bfc6ea847d189d03610657c"
+    },
+    {
+      "file": "metrics.csv",
+      "sha256": "2b6e492e6f403e65b66c55969aad14ccf7265708d96dcedd99b8d3fef1264c6e"
+    },
+    {
+      "file": "summary_metrics.csv",
+      "sha256": "e57a6b5e652610531ebf090da5ba60ac86d4e5c979313248b95e89237c8216ad"
+    },
+    {
+      "file": "track_metrics.csv",
+      "sha256": "a9c11e0758871752687ca89a608ebbfdea2ba133baa77aebe524e26df459ee46"
+    },
+    {
+      "file": "hota_metrics.csv",
+      "sha256": "ef9d878384357c675edce8a1730f2215a0ce185502772f466c5d7dc6451f2277"
+    },
+    {
+      "file": "used_config.py",
+      "sha256": "9e66951b5a34fb656314863330116fe5001555ad6c5895ffb746b1b769516f7e"
+    },
+    {
+      "file": "runtime.json",
+      "sha256": "6217813b94c5b828cefeca1cdfc1effa7070d3da9fb37cc043b6c58bd10452a3"
+    }
+  ],
+  "original_metrics_sha256": "2b6e492e6f403e65b66c55969aad14ccf7265708d96dcedd99b8d3fef1264c6e",
+  "change": "IDSW column added from original track_metrics.csv; four metrics unchanged",
+  "training_or_inference_repeated": false
+}

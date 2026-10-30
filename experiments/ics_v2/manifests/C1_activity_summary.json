@@ -1,0 +1,58 @@
+{
+  "group": "C1",
+  "definition": "trim output differs from input; all local-rank batches counted",
+  "total_rank_batches": 912,
+  "steps_per_rank": 228,
+  "key_effective_batches": 871,
+  "ref_effective_batches": 912,
+  "key_ratio": 0.9550438596491229,
+  "ref_ratio": 1.0,
+  "first_initialized_iteration_by_rank": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "by_rank": [
+    {
+      "rank": 0,
+      "batches": 228,
+      "key_effective": 219,
+      "ref_effective": 228,
+      "key_ratio": 0.9605263157894737,
+      "ref_ratio": 1.0,
+      "first_initialized_iteration": 1,
+      "iterations_sha256": "063661261bf562a0e7647413fd8a3cae9b5dd267f97a47821b40fe9246c821b7"
+    },
+    {
+      "rank": 1,
+      "batches": 228,
+      "key_effective": 218,
+      "ref_effective": 228,
+      "key_ratio": 0.956140350877193,
+      "ref_ratio": 1.0,
+      "first_initialized_iteration": 1,
+      "iterations_sha256": "cb346d2fba671ca4cd26f45e8165957faa9cfa4dbe468f41ee59e8f83e51e5f4"
+    },
+    {
+      "rank": 2,
+      "batches": 228,
+      "key_effective": 217,
+      "ref_effective": 228,
+      "key_ratio": 0.9517543859649122,
+      "ref_ratio": 1.0,
+      "first_initialized_iteration": 1,
+      "iterations_sha256": "bd56fee1df8bbbe6ed4cb9c82399e7bd3fc32d7cbf0572548323aed47919fe07"
+    },
+    {
+      "rank": 3,
+      "batches": 228,
+      "key_effective": 217,
+      "ref_effective": 228,
+      "key_ratio": 0.9517543859649122,
+      "ref_ratio": 1.0,
+      "first_initialized_iteration": 1,
+      "iterations_sha256": "a824521e0c0f8166ac713486fbde92a590042f2aa130060bc372e7d6ef7c9a3c"
+    }
+  ]
+}

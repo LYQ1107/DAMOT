@@ -1,0 +1,28 @@
+[plan] clone              videos=10 frames=200 dose_frames=0 missing(sampled)=0
+[plan] fog                videos=10 frames=200 dose_frames=0 missing(sampled)=0
+[plan] morning            videos=10 frames=200 dose_frames=0 missing(sampled)=0
+[plan] overcast           videos=10 frames=200 dose_frames=0 missing(sampled)=0
+[plan] rain               videos=10 frames=200 dose_frames=0 missing(sampled)=0
+[plan] sunset             videos=10 frames=200 dose_frames=0 missing(sampled)=0
+2026-10-30 14:06:01,808 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 14:06:01,808 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 14:06:01,808 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 14:06:02,466 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 14:06:02,466 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 14:06:02,466 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+[model] {"checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night/epoch_5.pth", "config": "checkpoint meta", "matched_keys": 752, "target_keys": 752, "missing_keys": 0, "bank_cfg": {"use_causal_direction_bank": true, "causal_pca_mode": "proto_shrinkage_cov_ema", "causal_num_pcs": 2, "causal_start_pc": 0, "causal_trim_alpha": 0.1, "causal_normalize_feats": true, "causal_residual_normalize_before_delta": null, "use_roi_proto_memory": true, "roi_proto_class_ids": [1]}, "bank_initialized": true, "bank_num_updates": 833, "missing_key_names": [], "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only"}
+[clone] 50/200 frames  29.5s
+[clone] 100/200 frames  51.4s
+[clone] 150/200 frames  73.9s
+[clone] 200/200 frames  97.1s
+[done] clone rois=3055 dose_rois=0 98.0s
+[fog] 50/200 frames  21.6s
+[fog] 100/200 frames  43.6s
+[fog] 150/200 frames  66.8s
+[fog] 200/200 frames  89.8s
+[done] fog rois=3055 dose_rois=0 90.6s
+[morning] 50/200 frames  22.9s
+[morning] 100/200 frames  46.2s
+[morning] 150/200 frames  70.0s
+/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 5 leaked semaphores to clean up at shutdown
+  len(cache))

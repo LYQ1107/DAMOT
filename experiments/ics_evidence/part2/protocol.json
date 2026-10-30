@@ -1,0 +1,48 @@
+[
+  {
+    "model": "F",
+    "fit_scenes": [
+      "Scene01",
+      "Scene06",
+      "Scene20"
+    ],
+    "test_scenes": [
+      "Scene02",
+      "Scene18"
+    ],
+    "comparator_source": "same-model BDD fit-video features; INT-vk uses clone fit scenes only",
+    "camera_policy": "GT pairing requires identical scene, camera and frame; metric split holds out entire scenes",
+    "identity_reference_pairs": 198,
+    "identity_reference": "one seed0 random different-car pair per clone test frame",
+    "pair_counts": {
+      "fog": 1179,
+      "morning": 1179,
+      "overcast": 1179,
+      "rain": 1179,
+      "sunset": 1179
+    }
+  },
+  {
+    "model": "HF",
+    "fit_scenes": [
+      "Scene01",
+      "Scene06",
+      "Scene20"
+    ],
+    "test_scenes": [
+      "Scene02",
+      "Scene18"
+    ],
+    "comparator_source": "same-model BDD fit-video features; INT-vk uses clone fit scenes only",
+    "camera_policy": "GT pairing requires identical scene, camera and frame; metric split holds out entire scenes",
+    "identity_reference_pairs": 198,
+    "identity_reference": "one seed0 random different-car pair per clone test frame",
+    "pair_counts": {
+      "fog": 1179,
+      "morning": 1179,
+      "overcast": 1179,
+      "rain": 1179,
+      "sunset": 1179
+    }
+  }
+]

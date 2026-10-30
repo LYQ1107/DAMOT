@@ -1,0 +1,9 @@
+{
+  "status": "published",
+  "branch": "main",
+  "commit": "a5a909801edc871227f7ebfc36fc1a93e5cfa5ee",
+  "tree": "b94a16d30599ea767a840fc45c5fe87e5c803032",
+  "path": "experiments/ics_evidence",
+  "contents": "Completed part1 and fixed VKITTI pairing plan; parts2 and3 explicitly pending",
+  "remote_file_verified": true
+}

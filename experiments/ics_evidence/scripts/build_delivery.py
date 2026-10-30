@@ -7,11 +7,13 @@ from evidence_cpu import ROOT, dump, sha
 def main():
     dest=ROOT/'delivery/experiments/ics_evidence'
     dest.mkdir(parents=True,exist_ok=True)
-    paths=[ROOT/'SUMMARY.md',ROOT/'vkitti2_inputs.txt']
+    paths=[ROOT/'SUMMARY.md',ROOT/'README.txt',ROOT/'vkitti2_inputs.txt']
     for directory in ['part1','part2','part3','scripts','manifests','logs']:
         if (ROOT/directory).exists():
             paths.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and
                          p.suffix not in ['.npz','.pth','.pyc'] and '__pycache__' not in str(p))
+    if (ROOT/'features').exists():
+        paths.extend((ROOT/'features').rglob('*meta.json'))
     paths.append(ROOT/'code/tools/analysis/ics_probe_extract.py')
     for p in paths:
         relative=p.relative_to(ROOT)

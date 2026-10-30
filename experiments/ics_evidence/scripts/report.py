@@ -58,13 +58,18 @@ def main():
               'in percentage points for accuracies/mAP; Fisher drop is relative percent. R is the mean over ten bases; '
               'all replicates and their SDs are retained in CSV.']
     tab=[]
+    binary_path=ROOT/'part1/binary_accuracy.csv'
+    binary={(r['model'],r['basis']):r for r in rows(binary_path)} if binary_path.exists() else {}
     for model in ['HF','F']:
         for r in rows(ROOT/'part1'/model/'deletion.csv'):
+            b=binary.get((model,r['basis']))
+            ordinary='%.3f (%+.3f)'%(float(b['accuracy_pp']),float(b['accuracy_delta_pp'])) if b else 'pending supplement'
             tab.append([model,r['basis'],'%.3f (%+.3f)'%(float(r['weather_bacc_pp']),float(r['weather_bacc_pp_delta'])),
+                ordinary,
                 '%.3f (%+.3f)'%(float(r['night_clear_bacc_pp']),float(r['night_clear_bacc_pp_delta'])),
                 '%.6f'%float(r['fisher']),'%.2f%%'%float(r['fisher_drop_pct']),
                 '%.3f (%+.3f)'%(float(r['id_mAP_pp']),float(r['id_mAP_pp_delta']))])
-    table(lines,['Model','Deleted basis','5-domain bAcc (Δ)','Night/Clear bAcc (Δ)','Fisher','Fisher drop','ID mAP (Δ)'],tab)
+    table(lines,['Model','Deleted basis','5-domain bAcc (Δ)','Night/Clear accuracy (Δ)','Night/Clear bAcc (Δ)','Fisher','Fisher drop','ID mAP (Δ)'],tab)
     for model in ['HF','F']:
         g=json.loads((ROOT/'part1'/model/'gates.json').read_text())
         lines += ['', 'Conclusion ④ (%s): **%s**. INT Fisher drop %.3f%% (required ≥30%%); identity mAP change %+.3f pp '
@@ -73,9 +78,19 @@ def main():
     ccr=ROOT/'part2/CCR.csv'
     if ccr.exists():
         data=rows(ccr)
-        table(lines,['Model','Basis','Weather','CCR','Δ total energy / pair','Weather/identity energy ratio'],
-              [[r['model'],r['basis'],r['weather'],'%.4f'%float(r['CCR']),
-                '%.5f'%float(r['delta_mean_sq']),'%.4f'%float(r['weather_identity_energy_ratio'])] for r in data])
+        if not (ROOT/'manifests/part2_inference_complete.json').exists():
+            lines += ['', '**Staged status: F/HF counterfactual results are complete; native VKITTI-model results remain pending.**']
+        lines += ['', 'The metric split holds out entire physical scenes across weather and both cameras. '
+                  'Fit scenes are Scene01/Scene06/Scene20 and test scenes are Scene02/Scene18: '
+                  '9,081 sampled pairs per variant overall, of which 1,179 are held-out test pairs used for CCR. '
+                  'F/HF are BDD-trained with no VKITTI finetuning. The optional VK_self checkpoint is the original '
+                  'VKITTI stage5 after sunset, epoch5; those images may have been part of its earlier network training, '
+                  'so this descriptive in-distribution row is distinct. Its BDD comparator bases use exactly the original '
+                  'HF fit RoIs; INT-vk uses clone fit scenes only. Error bars in Figure A are SD across five variants.']
+        table(lines,['Model','Basis','Weather','Pairs','CCR','Δ total energy','Δ mean squared / pair','Weather/identity energy ratio'],
+              [[r['model'],r['basis'],r['weather'],r['pairs'],'%.4f'%float(r['CCR']),
+                '%.5f'%float(r['delta_total_sq']),'%.5f'%float(r['delta_mean_sq']),
+                '%.4f'%float(r['weather_identity_energy_ratio'])] for r in data])
         for r in rows(ROOT/'part2/gates.csv'):
             lines += ['', 'Conclusion ① (%s): **%s**; mean INT CCR %.4f, random %.4f (%.2f×), stored ICS %.4f.'%
                       (r['model'],r['status'],float(r['INT_CCR']),float(r['R_CCR']),float(r['INT_over_random']),float(r['ICS_CCR']))]

@@ -1,0 +1,8 @@
+{
+  "status": "superseded",
+  "cause": "The frozen VKITTI annotation already contained every third original frame. An additional extractor stride3 incorrectly retained only20 rather than60 frames per video.",
+  "action": "Terminated only this task's process group37828 and retained partial feature directories under superseded/double_stride; logs retained with explicit suffix.",
+  "correction": "Extractor stride1 on the frozen sampled annotations; effective original frame stride remains3.",
+  "part1_affected": false,
+  "metrics_from_superseded_features_used": false
+}

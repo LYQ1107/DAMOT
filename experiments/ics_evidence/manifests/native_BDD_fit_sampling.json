@@ -1,0 +1,42 @@
+[
+  {
+    "domain": "clear_holdout_45v",
+    "annotation": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/native_BDD_fit/clear_holdout_45v.json",
+    "images": 643,
+    "car_rois": 4759,
+    "videos": 22,
+    "purpose": "Exactly original HF car fit RoIs; native BDD features are used only to fit comparator bases"
+  },
+  {
+    "domain": "overcast",
+    "annotation": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/native_BDD_fit/overcast.json",
+    "images": 420,
+    "car_rois": 3468,
+    "videos": 14,
+    "purpose": "Exactly original HF car fit RoIs; native BDD features are used only to fit comparator bases"
+  },
+  {
+    "domain": "rainy",
+    "annotation": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/native_BDD_fit/rainy.json",
+    "images": 226,
+    "car_rois": 1953,
+    "videos": 8,
+    "purpose": "Exactly original HF car fit RoIs; native BDD features are used only to fit comparator bases"
+  },
+  {
+    "domain": "dawn_dusk",
+    "annotation": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/native_BDD_fit/dawn_dusk.json",
+    "images": 453,
+    "car_rois": 2705,
+    "videos": 16,
+    "purpose": "Exactly original HF car fit RoIs; native BDD features are used only to fit comparator bases"
+  },
+  {
+    "domain": "night",
+    "annotation": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/native_BDD_fit/night.json",
+    "images": 330,
+    "car_rois": 2935,
+    "videos": 11,
+    "purpose": "Exactly original HF car fit RoIs; native BDD features are used only to fit comparator bases"
+  }
+]

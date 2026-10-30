@@ -1,0 +1,25 @@
+START HF GPU 1
+START F GPU 0
+REATTACH F 8348REATTACH
+ HF 8347
+WAIT_GPU VK_self_BDD 0 5332 100
+START VK_self_smoke GPU 1
+DONE VK_self_smoke seconds 18.08749771118164
+WAIT_GPU VK_self 1 20375 19
+WAIT_GPU VK_self_BDD 0 5332 95
+START VK_self GPU 1
+WAIT_GPU VK_self_BDD 0 5332 100
+WAIT_GPU VK_self_BDD 0 5332 100
+WAIT_GPU VK_self_BDD 0 5332 100
+WAIT_GPU VK_self_BDD 0 5332 100
+WAIT_GPU VK_self_BDD 0 5332 100
+REATTACH VK_self 4155
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot
+WAIT_GPU VK_self_BDD allowed0,1; no free task slot

@@ -56,20 +56,20 @@ Conclusion ③ (F): **FAIL**, ICC(INT) − ICC(ID) = -0.0252; required ≥0.3000
 
 Features are Z − ZEEᵀ, with no new row normalization before classifier fitting or Fisher calculation. Weather probes are refitted on fit videos, using fit-only standardization. Identity retrieval uses the unchanged cosine scoring convention. Changes are from the same model’s Full baseline, in percentage points for accuracies/mAP; Fisher drop is relative percent. R is the mean over ten bases; all replicates and their SDs are retained in CSV.
 
-| Model | Deleted basis | 5-domain bAcc (Δ) | Night/Clear bAcc (Δ) | Fisher | Fisher drop | ID mAP (Δ) |
-| --- | --- | --- | --- | --- | --- | --- |
-| HF | Full | 36.358 (+0.000) | 83.927 (+0.000) | 0.015310 | 0.00% | 57.489 (+0.000) |
-| HF | INT | 34.257 (-2.101) | 78.804 (-5.123) | 0.010017 | 34.57% | 57.510 (+0.022) |
-| HF | ICS | 36.500 (+0.143) | 83.695 (-0.232) | 0.018033 | -17.79% | 58.172 (+0.683) |
-| HF | W | 23.688 (-12.670) | 54.784 (-29.143) | 0.005589 | 63.50% | 57.753 (+0.265) |
-| HF | ID | 36.188 (-0.170) | 84.052 (+0.125) | 0.019304 | -26.09% | 58.074 (+0.585) |
-| HF | R | 36.355 (-0.003) | 83.871 (-0.056) | 0.015288 | 0.14% | 57.471 (-0.018) |
-| F | Full | 34.513 (+0.000) | 82.605 (+0.000) | 0.014334 | 0.00% | 57.314 (+0.000) |
-| F | INT | 32.782 (-1.730) | 77.984 (-4.622) | 0.010350 | 27.79% | 57.689 (+0.375) |
-| F | ICS | 34.668 (+0.156) | 83.057 (+0.451) | 0.016550 | -15.46% | 57.730 (+0.416) |
-| F | W | 22.123 (-12.389) | 54.127 (-28.478) | 0.005442 | 62.03% | 57.809 (+0.495) |
-| F | ID | 34.281 (-0.231) | 82.414 (-0.191) | 0.017351 | -21.04% | 59.346 (+2.032) |
-| F | R | 34.645 (+0.133) | 82.686 (+0.081) | 0.014321 | 0.09% | 57.307 (-0.007) |
+| Model | Deleted basis | 5-domain bAcc (Δ) | Night/Clear accuracy (Δ) | Night/Clear bAcc (Δ) | Fisher | Fisher drop | ID mAP (Δ) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| HF | Full | 36.358 (+0.000) | 83.064 (+0.000) | 83.927 (+0.000) | 0.015310 | 0.00% | 57.489 (+0.000) |
+| HF | INT | 34.257 (-2.101) | 77.833 (-5.231) | 78.804 (-5.123) | 0.010017 | 34.57% | 57.510 (+0.022) |
+| HF | ICS | 36.500 (+0.143) | 82.872 (-0.192) | 83.695 (-0.232) | 0.018033 | -17.79% | 58.172 (+0.683) |
+| HF | W | 23.688 (-12.670) | 55.565 (-27.499) | 54.784 (-29.143) | 0.005589 | 63.50% | 57.753 (+0.265) |
+| HF | ID | 36.188 (-0.170) | 83.256 (+0.192) | 84.052 (+0.125) | 0.019304 | -26.09% | 58.074 (+0.585) |
+| HF | R | 36.355 (-0.003) | 83.035 (-0.029) | 83.871 (-0.056) | 0.015288 | 0.14% | 57.471 (-0.018) |
+| F | Full | 34.513 (+0.000) | 81.640 (+0.000) | 82.605 (+0.000) | 0.014334 | 0.00% | 57.314 (+0.000) |
+| F | INT | 32.782 (-1.730) | 76.722 (-4.918) | 77.984 (-4.622) | 0.010350 | 27.79% | 57.689 (+0.375) |
+| F | ICS | 34.668 (+0.156) | 82.307 (+0.667) | 83.057 (+0.451) | 0.016550 | -15.46% | 57.730 (+0.416) |
+| F | W | 22.123 (-12.389) | 55.484 (-26.156) | 54.127 (-28.478) | 0.005442 | 62.03% | 57.809 (+0.495) |
+| F | ID | 34.281 (-0.231) | 81.337 (-0.303) | 82.414 (-0.191) | 0.017351 | -21.04% | 59.346 (+2.032) |
+| F | R | 34.645 (+0.133) | 81.726 (+0.086) | 82.686 (+0.081) | 0.014321 | 0.09% | 57.307 (-0.007) |
 
 Conclusion ④ (HF): **PASS**. INT Fisher drop 34.569% (required ≥30%); identity mAP change +0.022 pp (required within ±1 pp).
 
@@ -77,7 +77,88 @@ Conclusion ④ (F): **FAIL**. INT Fisher drop 27.795% (required ≥30%); identit
 
 ## Table 3 — Real-weather counterfactual capture (①)
 
-PENDING: F/HF six-weather inference and the separately identified VKITTI-trained checkpoint. Input annotations and sample matching are complete: 9,081 GT pairs for each variant. Every image is staged under this run to resolve the original absolute image links.
+**Staged status: F/HF counterfactual results are complete; native VKITTI-model results remain pending.**
+
+The metric split holds out entire physical scenes across weather and both cameras. Fit scenes are Scene01/Scene06/Scene20 and test scenes are Scene02/Scene18: 9,081 sampled pairs per variant overall, of which 1,179 are held-out test pairs used for CCR. F/HF are BDD-trained with no VKITTI finetuning. The optional VK_self checkpoint is the original VKITTI stage5 after sunset, epoch5; those images may have been part of its earlier network training, so this descriptive in-distribution row is distinct. Its BDD comparator bases use exactly the original HF fit RoIs; INT-vk uses clone fit scenes only. Error bars in Figure A are SD across five variants.
+
+| Model | Basis | Weather | Pairs | CCR | Δ total energy | Δ mean squared / pair | Weather/identity energy ratio |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| F | INT | fog | 1179 | 0.0998 | 619.66432 | 0.52558 | 0.4107 |
+| F | ICS | fog | 1179 | 0.0484 | 619.66432 | 0.52558 | 0.4107 |
+| F | W | fog | 1179 | 0.0300 | 619.66432 | 0.52558 | 0.4107 |
+| F | ID | fog | 1179 | 0.0519 | 619.66432 | 0.52558 | 0.4107 |
+| F | R | fog | 1179 | 0.0073 | 619.66432 | 0.52558 | 0.4107 |
+| F | INT-vk | fog | 1179 | 0.0767 | 619.66432 | 0.52558 | 0.4107 |
+| F | INT | morning | 1179 | 0.0484 | 223.06451 | 0.18920 | 0.1478 |
+| F | ICS | morning | 1179 | 0.0502 | 223.06451 | 0.18920 | 0.1478 |
+| F | W | morning | 1179 | 0.0423 | 223.06451 | 0.18920 | 0.1478 |
+| F | ID | morning | 1179 | 0.0481 | 223.06451 | 0.18920 | 0.1478 |
+| F | R | morning | 1179 | 0.0079 | 223.06451 | 0.18920 | 0.1478 |
+| F | INT-vk | morning | 1179 | 0.0406 | 223.06451 | 0.18920 | 0.1478 |
+| F | INT | overcast | 1179 | 0.0411 | 245.32115 | 0.20808 | 0.1626 |
+| F | ICS | overcast | 1179 | 0.0387 | 245.32115 | 0.20808 | 0.1626 |
+| F | W | overcast | 1179 | 0.0365 | 245.32115 | 0.20808 | 0.1626 |
+| F | ID | overcast | 1179 | 0.0400 | 245.32115 | 0.20808 | 0.1626 |
+| F | R | overcast | 1179 | 0.0077 | 245.32115 | 0.20808 | 0.1626 |
+| F | INT-vk | overcast | 1179 | 0.0344 | 245.32115 | 0.20808 | 0.1626 |
+| F | INT | rain | 1179 | 0.0488 | 383.89481 | 0.32561 | 0.2544 |
+| F | ICS | rain | 1179 | 0.0469 | 383.89481 | 0.32561 | 0.2544 |
+| F | W | rain | 1179 | 0.0416 | 383.89481 | 0.32561 | 0.2544 |
+| F | ID | rain | 1179 | 0.0600 | 383.89481 | 0.32561 | 0.2544 |
+| F | R | rain | 1179 | 0.0075 | 383.89481 | 0.32561 | 0.2544 |
+| F | INT-vk | rain | 1179 | 0.0367 | 383.89481 | 0.32561 | 0.2544 |
+| F | INT | sunset | 1179 | 0.0437 | 298.23413 | 0.25296 | 0.1977 |
+| F | ICS | sunset | 1179 | 0.0647 | 298.23413 | 0.25296 | 0.1977 |
+| F | W | sunset | 1179 | 0.0382 | 298.23413 | 0.25296 | 0.1977 |
+| F | ID | sunset | 1179 | 0.0514 | 298.23413 | 0.25296 | 0.1977 |
+| F | R | sunset | 1179 | 0.0075 | 298.23413 | 0.25296 | 0.1977 |
+| F | INT-vk | sunset | 1179 | 0.0442 | 298.23413 | 0.25296 | 0.1977 |
+| F | INT | mean | 5895 | 0.0564 | 1770.17891 | 0.30028 | 0.2346 |
+| F | ICS | mean | 5895 | 0.0498 | 1770.17891 | 0.30028 | 0.2346 |
+| F | W | mean | 5895 | 0.0377 | 1770.17891 | 0.30028 | 0.2346 |
+| F | ID | mean | 5895 | 0.0503 | 1770.17891 | 0.30028 | 0.2346 |
+| F | R | mean | 5895 | 0.0076 | 1770.17891 | 0.30028 | 0.2346 |
+| F | INT-vk | mean | 5895 | 0.0465 | 1770.17891 | 0.30028 | 0.2346 |
+| HF | INT | fog | 1179 | 0.0940 | 592.10263 | 0.50221 | 0.4083 |
+| HF | ICS | fog | 1179 | 0.0500 | 592.10263 | 0.50221 | 0.4083 |
+| HF | W | fog | 1179 | 0.0299 | 592.10263 | 0.50221 | 0.4083 |
+| HF | ID | fog | 1179 | 0.0359 | 592.10263 | 0.50221 | 0.4083 |
+| HF | R | fog | 1179 | 0.0082 | 592.10263 | 0.50221 | 0.4083 |
+| HF | INT-vk | fog | 1179 | 0.0840 | 592.10263 | 0.50221 | 0.4083 |
+| HF | INT | morning | 1179 | 0.0528 | 230.44180 | 0.19546 | 0.1589 |
+| HF | ICS | morning | 1179 | 0.0488 | 230.44180 | 0.19546 | 0.1589 |
+| HF | W | morning | 1179 | 0.0379 | 230.44180 | 0.19546 | 0.1589 |
+| HF | ID | morning | 1179 | 0.0493 | 230.44180 | 0.19546 | 0.1589 |
+| HF | R | morning | 1179 | 0.0080 | 230.44180 | 0.19546 | 0.1589 |
+| HF | INT-vk | morning | 1179 | 0.0396 | 230.44180 | 0.19546 | 0.1589 |
+| HF | INT | overcast | 1179 | 0.0395 | 250.61846 | 0.21257 | 0.1728 |
+| HF | ICS | overcast | 1179 | 0.0372 | 250.61846 | 0.21257 | 0.1728 |
+| HF | W | overcast | 1179 | 0.0334 | 250.61846 | 0.21257 | 0.1728 |
+| HF | ID | overcast | 1179 | 0.0391 | 250.61846 | 0.21257 | 0.1728 |
+| HF | R | overcast | 1179 | 0.0077 | 250.61846 | 0.21257 | 0.1728 |
+| HF | INT-vk | overcast | 1179 | 0.0295 | 250.61846 | 0.21257 | 0.1728 |
+| HF | INT | rain | 1179 | 0.0487 | 392.01121 | 0.33249 | 0.2703 |
+| HF | ICS | rain | 1179 | 0.0455 | 392.01121 | 0.33249 | 0.2703 |
+| HF | W | rain | 1179 | 0.0415 | 392.01121 | 0.33249 | 0.2703 |
+| HF | ID | rain | 1179 | 0.0507 | 392.01121 | 0.33249 | 0.2703 |
+| HF | R | rain | 1179 | 0.0076 | 392.01121 | 0.33249 | 0.2703 |
+| HF | INT-vk | rain | 1179 | 0.0329 | 392.01121 | 0.33249 | 0.2703 |
+| HF | INT | sunset | 1179 | 0.0433 | 299.07634 | 0.25367 | 0.2062 |
+| HF | ICS | sunset | 1179 | 0.0605 | 299.07634 | 0.25367 | 0.2062 |
+| HF | W | sunset | 1179 | 0.0392 | 299.07634 | 0.25367 | 0.2062 |
+| HF | ID | sunset | 1179 | 0.0575 | 299.07634 | 0.25367 | 0.2062 |
+| HF | R | sunset | 1179 | 0.0075 | 299.07634 | 0.25367 | 0.2062 |
+| HF | INT-vk | sunset | 1179 | 0.0409 | 299.07634 | 0.25367 | 0.2062 |
+| HF | INT | mean | 5895 | 0.0557 | 1764.25044 | 0.29928 | 0.2433 |
+| HF | ICS | mean | 5895 | 0.0484 | 1764.25044 | 0.29928 | 0.2433 |
+| HF | W | mean | 5895 | 0.0364 | 1764.25044 | 0.29928 | 0.2433 |
+| HF | ID | mean | 5895 | 0.0465 | 1764.25044 | 0.29928 | 0.2433 |
+| HF | R | mean | 5895 | 0.0078 | 1764.25044 | 0.29928 | 0.2433 |
+| HF | INT-vk | mean | 5895 | 0.0454 | 1764.25044 | 0.29928 | 0.2433 |
+
+Conclusion ① (F): **PASS**; mean INT CCR 0.0564, random 0.0076 (7.45×), stored ICS 0.0498.
+
+Conclusion ① (HF): **PASS**; mean INT CCR 0.0557, random 0.0078 (7.13×), stored ICS 0.0484.
 
 ## Table 4 — Cross-weather and clone retrieval (⑤)
 

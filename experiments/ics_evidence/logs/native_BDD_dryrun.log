@@ -1,0 +1,5 @@
+[plan] clear_holdout_45v  videos=22 frames=643 dose_frames=0 missing(sampled)=0
+[plan] overcast           videos=14 frames=420 dose_frames=0 missing(sampled)=0
+[plan] rainy              videos=8 frames=226 dose_frames=0 missing(sampled)=0
+[plan] dawn_dusk          videos=16 frames=453 dose_frames=0 missing(sampled)=0
+[plan] night              videos=11 frames=330 dose_frames=0 missing(sampled)=0

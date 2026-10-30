@@ -2,6 +2,7 @@
 import json
 import os
 import subprocess
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -13,6 +14,31 @@ VK = ['clone','fog','morning','overcast','rain','sunset']
 CROOT = Path('/data1/liuyeqiang/ics_v2_20261030_184026')
 FCK = '/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/F_stage4_e5.pth'
 HCK = '/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night/epoch_5.pth'
+GPU_LOCK=threading.Lock()
+RESERVED=set()
+for manifest in (ROOT/'manifests').glob('infer_*.json'):
+    record=json.loads(manifest.read_text())
+    if record.get('status')=='running' and Path('/proc/%d'%record['pid']).exists():
+        RESERVED.add(record['gpu'])
+
+
+def acquire(preferred,name):
+    while True:
+        with GPU_LOCK:
+            for gpu in [preferred,1-preferred]:
+                if gpu in RESERVED:continue
+                result=subprocess.check_output(['nvidia-smi','--id='+str(gpu),
+                    '--query-gpu=memory.free,utilization.gpu','--format=csv,noheader,nounits']).decode().strip()
+                free,util=[int(v.strip()) for v in result.split(',')]
+                if free>=16000 and util<=15:
+                    RESERVED.add(gpu)
+                    return gpu
+        print('WAIT_GPU',name,'allowed0,1; no free task slot',flush=True)
+        time.sleep(20)
+
+
+def release(gpu):
+    with GPU_LOCK:RESERVED.discard(gpu)
 
 
 def params(label, checkpoint, views, bdd=False, smoke=False):
@@ -20,16 +46,16 @@ def params(label, checkpoint, views, bdd=False, smoke=False):
           '--out-dir',str(ROOT/('smoke_feats' if smoke else 'features')),'--views',views,
           '--dose-frames-per-video','0','--classes','car','--box-source','gt',
           '--max-videos','1' if smoke else '0','--frames-per-video','1' if smoke else ('30' if bdd else '60'),
-          '--frame-stride','2' if bdd else '3','--max-rois-per-frame','100000',
+          '--frame-stride','1','--max-rois-per-frame','100000',
           '--min-box','0','--img-scale','1296' if bdd else '1242','720' if bdd else '375',
-          '--view-batch-size','1','--workers','1','--seed','0','--memory-fraction','.35',
+          '--view-batch-size','4' if bdd else '1','--workers','2' if bdd else '1','--seed','0','--memory-fraction','.35',
           '--allow-uninitialized-bank']
     if bdd:
         for domain in DOMAINS:
             prefix=Path('/data1/liuyeqiang/ics_v2_20261030_184026/data_views')/domain
             if not prefix.exists():
                 prefix=Path('/data1/liuyeqiang/damot_rebuttal_20261026/data/views')/domain
-            args+=['--domain',domain,'/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/'+domain+'.json',str(prefix)]
+            args+=['--domain',domain,str(ROOT/'data/native_BDD_fit'/(domain+'.json')),str(prefix)]
     else:
         for domain in (['clone'] if smoke else VK):
             args+=['--domain',domain,str(ROOT/'data/vkitti2/annotations'/(domain+'.json')),str(ROOT/'data/vkitti2/images')]
@@ -42,17 +68,24 @@ def job(label, checkpoint, views, gpu, bdd=False, smoke=False):
     complete=ROOT/'manifests'/('infer_'+name+'.json')
     if complete.exists() and json.loads(complete.read_text()).get('status')=='complete':
         return
+    if complete.exists() and json.loads(complete.read_text()).get('status')=='running':
+        record=json.loads(complete.read_text());pid=record['pid']
+        print('REATTACH',name,pid,flush=True)
+        while Path('/proc/%d'%pid).exists():
+            try:stat=Path('/proc/%d/stat'%pid).read_text().split()
+            except FileNotFoundError:break
+            if stat[2]=='Z':break
+            time.sleep(10)
+        final=ROOT/('smoke_feats' if smoke else 'features')/label/'meta.json'
+        assert final.exists(), 'Detached inference exited without a complete feature manifest: '+name
+        record.update(status='complete',end=time.time(),returncode=0,resumed_monitor=True)
+        dump(complete,record)
+        release(record['gpu'])
+        return
     args=params(label,checkpoint,views,bdd,smoke)
+    gpu=acquire(gpu,name)
     env=dict(os.environ,CUDA_VISIBLE_DEVICES=str(gpu),OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',
              MKL_NUM_THREADS='1',PYTHONDONTWRITEBYTECODE='1',TMPDIR=str(ROOT/'tmp'))
-    # Explicitly allowed GPUs retain their existing allocations; require enough free memory.
-    while True:
-        result=subprocess.check_output(['nvidia-smi','--id='+str(gpu),
-            '--query-gpu=memory.free,utilization.gpu','--format=csv,noheader,nounits']).decode().strip()
-        free,util=[int(v.strip()) for v in result.split(',')]
-        if free>=16000 and util<=15:break
-        print('WAIT_GPU',name,gpu,free,util,flush=True)
-        time.sleep(20)
     start=time.time()
     before=subprocess.check_output(['nvidia-smi','--query-compute-apps=gpu_uuid,pid,used_memory','--format=csv,noheader']).decode()
     print('START',name,'GPU',gpu,flush=True)
@@ -64,6 +97,7 @@ def job(label, checkpoint, views, gpu, bdd=False, smoke=False):
     manifest=json.loads(complete.read_text())
     manifest.update(status='complete' if rc==0 else 'failed',returncode=rc,end=time.time())
     dump(complete,manifest)
+    release(gpu)
     if rc:raise RuntimeError((name,rc))
     print('DONE',name,'seconds',time.time()-start,flush=True)
 

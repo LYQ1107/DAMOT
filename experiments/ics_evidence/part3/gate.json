@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "thresholds": {
+    "cross_gain_vs_C0_pp": 1.0,
+    "must_exceed_C4": true,
+    "cross_gain_must_exceed_clone_gain": true
+  }
+}

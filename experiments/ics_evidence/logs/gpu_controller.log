@@ -70,3 +70,77 @@ WAIT_C_TRAINING
 WAIT_C_TRAINING
 WAIT_C_TRAINING
 WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+WAIT_C_TRAINING
+START C0 GPU 5
+START C1 GPU 6
+START C2 GPU 1
+START C3 GPU 0
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU C4 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+DONE C2 seconds 173.78312945365906
+START C4 GPU 1
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+WAIT_GPU X3-1 idle cards or memory-limited sharing0/1 unavailable
+DONE C0 seconds 272.355103969574
+DONE C1 seconds 276.5471119880676
+START X3-1 GPU 5
+DONE C3 seconds 324.37436532974243
+DONE C4 seconds 245.7379331588745
+DONE X3-1 seconds 207.39529132843018

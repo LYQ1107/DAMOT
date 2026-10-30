@@ -1,0 +1,259 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "model": "C0",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C0",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C0",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C0",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C0",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C0",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C1",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C1",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C1",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C1",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C1",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C1",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C2",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C2",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C2",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C2",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C2",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C2",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C3",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C3",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C3",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C3",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C3",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C3",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C4",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C4",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C4",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C4",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C4",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "C4",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "X3-1",
+      "domain": "clone",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "X3-1",
+      "domain": "fog",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "X3-1",
+      "domain": "morning",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "X3-1",
+      "domain": "overcast",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "X3-1",
+      "domain": "rain",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    },
+    {
+      "model": "X3-1",
+      "domain": "sunset",
+      "rois": 9081,
+      "car_frames": 570,
+      "all_expected_annotations": true
+    }
+  ],
+  "frames_predeclared_before_inference": true,
+  "same_metadata_across_models": true
+}

@@ -21,12 +21,35 @@ def main():
         'Latest user resource authorization permits any idle GPU and memory-limited sharing on GPU0 when it is busy. '
         'Original GPU1 sharing remains permitted. All existing processes and allocations are retained; '
         'training processes are never controlled by this task.' % ROOT,
-        '', 'All subspaces are fitted on fit videos and metrics use held-out test videos; car only. '
+        '', 'Offline estimated INT/W/ID and INT-vk bases use fit videos only; metrics use held-out test videos, car only. '
         'INT is the uncentered scatter of normalized paired fap/photo/student minus normalized clean features, '
-        'estimated independently for each BDD checkpoint. ICS is QR of the checkpoint bank_pcs; '
+        'estimated independently for each BDD checkpoint. ICS is QR of the pre-existing checkpoint bank_pcs '
+        'and is not re-estimated on the probe split; '
         'W and ID are label-based weather and identity oracles. R reports ten seed-0 random 2D bases. '
-        'The historical video hash split is used unchanged.', '',
-        '## Table 1 — Cross-view identity retrieval (②)', '',
+        'The historical video hash split is used unchanged.']
+    overview=[]
+    for model in ['F','HF']:
+        g=json.loads((ROOT/'part1'/model/'gates.json').read_text())
+        ratios=[float(r['ratio']) for r in rows(ROOT/'part1'/model/'cross_view_retrieval.csv') if r['view']!='clean']
+        overview += [
+            ['② Identity consistency',model,'PASS' if g['cross_view_all_pass'] else 'FAIL','minimum cross-view/clean mAP %.4f'%min(ratios)],
+            ['③ Shared frame shifts',model,'PASS' if g['ICC_pass'] else 'FAIL','ICC(INT)−ICC(ID) %+.4f; threshold +0.3000'%g['ICC_INT_minus_ID']],
+            ['④ Delete INT',model,'PASS' if g['deletion_pass'] else 'FAIL','Fisher drop %.2f%%; ID mAP %+.3f pp'%(g['INT_fisher_drop_pct'],g['INT_id_delta_pp'])]]
+    if (ROOT/'part2/gates.csv').exists():
+        for r in rows(ROOT/'part2/gates.csv'):
+            overview.append(['① Weather counterfactuals',r['model'],r['status'],
+                             'mean INT CCR %.4f; %.2f× random'%(float(r['INT_CCR']),float(r['INT_over_random']))])
+    if (ROOT/'part3/gate.json').exists():
+        g=json.loads((ROOT/'part3/gate.json').read_text())
+        deltas={r['model']:float(r['cross_gain_vs_C0_pp']) for r in rows(ROOT/'part3/contrasts.csv')}
+        overview.append(['⑤ Trained ICS utility','C2/C3',g['status'],'cross-weather gain vs C0: C2 %+.3f, C3 %+.3f pp'%(deltas['C2'],deltas['C3'])])
+    else:
+        overview.append(['⑤ Trained ICS utility','C2/C3','PENDING','Awaiting final checkpoint inference'])
+    lines += ['', 'The evidence is mixed: intervention directions capture some real-weather changes, '
+              'while the shared-environment criterion fails for both F and HF. '
+              'These results do not establish a weather-specific or identity-free subspace.']
+    table(lines,['Prespecified test','Model','Status','Measured result'],overview)
+    lines += ['', '## Table 1 — Cross-view identity retrieval (②)', '',
         'mAP is in percentage points. Query and gallery pools, temporal windows and seed are identical across views. '
         'Historical P2: forward gallery frames in (query+4, query+34], up to 4,000 queries.']
     tab=[]
@@ -109,6 +132,12 @@ def main():
                   'Input annotations and sample matching are complete: 9,081 GT pairs for each variant. '
                   'Every image is staged under this run to resolve the original absolute image links.']
     lines += ['', '## Table 4 — Cross-weather and clone retrieval (⑤)']
+    lines += ['', 'C0–C4 use APR-off Night continuation; X3-1 is the APR-on, no-ICS reference. '
+              'C1 retains the legacy global_pc_ema estimator with one PC and alpha 0.25; '
+              'C4 is the fixed random two-PC control. '
+              'C2/C3 use fixed HF stage3 FAP-residual bases with shrinkage alpha 0.25/0.50, respectively. '
+              'Those trained bases differ from the stage4 fap+photo+student INT diagnostic used in Parts 1–2. '
+              'Each inference manifest records its exact checkpoint SHA256 and effective model settings.']
     retrieval=ROOT/'part3/retrieval.csv'
     if retrieval.exists():
         data=rows(retrieval)
@@ -132,10 +161,7 @@ def main():
                       'exceed C4, and improve cross-weather mAP more than clone mAP. '
                       'C0–C4 share the same single training seed; these are descriptive effects, not statistical significance claims.']
     else:
-        lines += ['', 'PENDING: use final Night epoch-2 checkpoints C0–C4 and X3-1 after C training completes. '
-                  'Current C-series implementation uses APR off for C0–C4; X3-1 is the APR-on, no-ICS reference. '
-                  'The trained C2/C3 bases were fixed using HF stage3 FAP residuals, as documented by their own manifests; '
-                  'they are distinct from the stage4 fap+photo+student INT diagnostic defined for this evidence package.']
+        lines += ['', 'PENDING: use final Night epoch-2 checkpoints C0–C4 and X3-1 after C training completes.']
     lines += ['', '## Figures and reproducibility', '',
               'For each model, `part1/<model>/figures/` contains PDF and PNG for B (40 fixed random test frames), '
               'C (10 globally unique tracks at each INT e1 extreme), D (signed e1 dose response), '

@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "parts": [
+    "1",
+    "2",
+    "3"
+  ],
+  "all_six_final_checkpoints_distinct": true,
+  "sample_audits": "PASS: part1 original input integrity plus part2 18 and part3 36 model-domain checks",
+  "figures": "A-E PDF and PNG complete; all figures visually inspected including final Figure E",
+  "C_inference_GPU_assignments": {
+    "C0": 5,
+    "C1": 6,
+    "C2": 1,
+    "C3": 0,
+    "C4": 1,
+    "X3-1": 5
+  },
+  "no_network_training_in_this_task": true,
+  "source_training_ended_before_part3": true,
+  "scientific_gates": {
+    "part1": {
+      "F": {
+        "cross_view_all_pass": true,
+        "ICC_INT_minus_ID": -0.025237186781209175,
+        "ICC_pass": false,
+        "INT_fisher_drop_pct": 27.794834763119326,
+        "INT_id_delta_pp": 0.37495592447380943,
+        "deletion_pass": false
+      },
+      "HF": {
+        "cross_view_all_pass": true,
+        "ICC_INT_minus_ID": -0.020440060080899436,
+        "ICC_pass": false,
+        "INT_fisher_drop_pct": 34.5686224173371,
+        "INT_id_delta_pp": 0.02160078143478472,
+        "deletion_pass": true
+      }
+    },
+    "part3": {
+      "status": "FAIL",
+      "thresholds": {
+        "cross_gain_vs_C0_pp": 1.0,
+        "must_exceed_C4": true,
+        "cross_gain_must_exceed_clone_gain": true
+      }
+    }
+  },
+  "interpretation": "Mixed evidence. Real-weather mean CCR exceeds random, but shared-environment ICC fails and C2/C3 do not improve mean cross-weather retrieval over C0. Do not claim a weather-specific subspace or a demonstrated utility gain."
+}

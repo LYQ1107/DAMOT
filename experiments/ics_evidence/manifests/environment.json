@@ -1,0 +1,20 @@
+{
+  "python": "3.7.16",
+  "executable": "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+  "platform": "Linux-4.15.0-197-generic-x86_64-with-debian-buster-sid",
+  "packages": {
+    "torch": "1.12.1",
+    "torchvision": "0.13.1",
+    "mmcv-full": "1.6.0",
+    "mmdet": "2.25.3",
+    "mmtrack": "0.14.0",
+    "numpy": "1.21.5",
+    "scipy": "1.4.1",
+    "scikit-learn": "0.22.2",
+    "matplotlib": "3.5.2",
+    "Pillow": "9.4.0",
+    "opencv-python": "4.8.0.76"
+  },
+  "devices": "0, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n1, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n2, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n3, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n4, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n5, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n6, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n7, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n8, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n9, Tesla V100-DGXS-32GB, 470.141.03, 32508 MiB\n",
+  "role": "single shared existing environment for task inference and offline analysis; no CUDA context created by this inventory"
+}

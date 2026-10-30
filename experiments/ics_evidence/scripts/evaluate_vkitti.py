@@ -136,8 +136,20 @@ def draw_A(all_rows,labels):
 
 
 def part3():
-    pair_rows=rows(ROOT/'part2/GT_pairs.csv');all_rows=[];means={};reference=None
+    pair_rows=rows(ROOT/'part2/GT_pairs.csv');all_rows=[];means={};reference=None;provenance=[]
     for label in ['C0','C1','C2','C3','C4','X3-1']:
+        meta=json.loads((ROOT/'features'/label/'meta.json').read_text())
+        infer=json.loads((ROOT/'manifests'/('infer_'+label+'.json')).read_text())
+        assert infer['status']=='complete' and meta['checkpoint']==infer['checkpoint']
+        source=dict(model=label,checkpoint=infer['checkpoint'],checkpoint_sha256=infer['checkpoint_sha256'],
+                    effective_bank_config=meta['bank_cfg'],missing_model_keys=meta['missing_key_names'])
+        if label!='X3-1':
+            audit_path=Path('/data1/liuyeqiang/ics_v2_20261030_184026/runs')/label/'v2_end_rank0.json'
+            audit=json.loads(audit_path.read_text())
+            assert audit['epoch']==2 and not audit['APR_enabled']
+            source['training_end_audit']=audit
+            source['training_end_audit_source']=str(audit_path)
+        provenance.append(source)
         ds=load(label);clone=ds['clone'];test=~p.split_mask(clone['scene'],0)
         keys=['video','scene','frame_id','annotation_id','instance_id','bbox','category']
         if reference is None:reference=ds
@@ -185,6 +197,7 @@ def part3():
         contrasts.append(dict(model=label,cross_gain_vs_C0_pp=dc,clone_gain_vs_C0_pp=ds,
                               cross_gain_vs_C4_pp=dr,pass_all_conditions=passed))
     csvout(ROOT/'part3/retrieval.csv',all_rows);csvout(ROOT/'part3/contrasts.csv',contrasts)
+    dump(ROOT/'part3/model_provenance.json',provenance)
     dump(ROOT/'part3/gate.json',dict(status='PASS' if any(r['pass_all_conditions'] and r['model'] in ['C2','C3'] for r in contrasts) else 'FAIL',
          thresholds=dict(cross_gain_vs_C0_pp=1.,must_exceed_C4=True,cross_gain_must_exceed_clone_gain=True)))
     dump(ROOT/'part3/protocol.json',dict(seed=0,split='held-out physical scenes, same as part2',

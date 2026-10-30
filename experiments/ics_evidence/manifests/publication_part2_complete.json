@@ -1,0 +1,10 @@
+{
+  "status": "published",
+  "branch": "main",
+  "commit": "1687b6310871310494342d8c7f413be19802c532",
+  "tree": "393431096d3f5bd67ce3697fa645f17c1147dfdc",
+  "models": ["F", "HF", "VK_self"],
+  "validation": "PASS, all18 model-domain metadata audits; exact original HF15820 fit RoI alignment for native BDD comparators",
+  "full_remote_tree_matches_expected_local_tree": true,
+  "pending": "Part3 C0-C4 and X3-1 cross-weather utility"
+}

@@ -2,7 +2,22 @@
 
 Run: `/data1/liuyeqiang/ics_evidence_20261030_215311`. Inference and offline calculations only; no network training. Fixed analysis seed 0. Latest user resource authorization permits any idle GPU and memory-limited sharing on GPU0 when it is busy. Original GPU1 sharing remains permitted. All existing processes and allocations are retained; training processes are never controlled by this task.
 
-All subspaces are fitted on fit videos and metrics use held-out test videos; car only. INT is the uncentered scatter of normalized paired fap/photo/student minus normalized clean features, estimated independently for each BDD checkpoint. ICS is QR of the checkpoint bank_pcs; W and ID are label-based weather and identity oracles. R reports ten seed-0 random 2D bases. The historical video hash split is used unchanged.
+Offline estimated INT/W/ID and INT-vk bases use fit videos only; metrics use held-out test videos, car only. INT is the uncentered scatter of normalized paired fap/photo/student minus normalized clean features, estimated independently for each BDD checkpoint. ICS is QR of the pre-existing checkpoint bank_pcs and is not re-estimated on the probe split; W and ID are label-based weather and identity oracles. R reports ten seed-0 random 2D bases. The historical video hash split is used unchanged.
+
+The evidence is mixed: intervention directions capture some real-weather changes, while the shared-environment criterion fails for both F and HF. These results do not establish a weather-specific or identity-free subspace.
+
+| Prespecified test | Model | Status | Measured result |
+| --- | --- | --- | --- |
+| ② Identity consistency | F | PASS | minimum cross-view/clean mAP 0.9819 |
+| ③ Shared frame shifts | F | FAIL | ICC(INT)−ICC(ID) -0.0252; threshold +0.3000 |
+| ④ Delete INT | F | FAIL | Fisher drop 27.79%; ID mAP +0.375 pp |
+| ② Identity consistency | HF | PASS | minimum cross-view/clean mAP 0.9849 |
+| ③ Shared frame shifts | HF | FAIL | ICC(INT)−ICC(ID) -0.0204; threshold +0.3000 |
+| ④ Delete INT | HF | PASS | Fisher drop 34.57%; ID mAP +0.022 pp |
+| ① Weather counterfactuals | F | PASS | mean INT CCR 0.0564; 7.45× random |
+| ① Weather counterfactuals | HF | PASS | mean INT CCR 0.0557; 7.13× random |
+| ① Weather counterfactuals | VK_self | PASS | mean INT CCR 0.0858; 11.80× random |
+| ⑤ Trained ICS utility | C2/C3 | FAIL | cross-weather gain vs C0: C2 -0.050, C3 -0.111 pp |
 
 ## Table 1 — Cross-view identity retrieval (②)
 
@@ -204,7 +219,60 @@ Variant check (VK_self): both inequalities hold for 5/5 variants; failed variant
 
 ## Table 4 — Cross-weather and clone retrieval (⑤)
 
-PENDING: use final Night epoch-2 checkpoints C0–C4 and X3-1 after C training completes. Current C-series implementation uses APR off for C0–C4; X3-1 is the APR-on, no-ICS reference. The trained C2/C3 bases were fixed using HF stage3 FAP residuals, as documented by their own manifests; they are distinct from the stage4 fap+photo+student INT diagnostic defined for this evidence package.
+C0–C4 use APR-off Night continuation; X3-1 is the APR-on, no-ICS reference. C1 retains the legacy global_pc_ema estimator with one PC and alpha 0.25; C4 is the fixed random two-PC control. C2/C3 use fixed HF stage3 FAP-residual bases with shrinkage alpha 0.25/0.50, respectively. Those trained bases differ from the stage4 fap+photo+student INT diagnostic used in Parts 1–2. Each inference manifest records its exact checkpoint SHA256 and effective model settings.
+
+Query eligibility was audited from GT metadata before C-series inference. All 1,179 cross-weather queries per variant are included, including ten all-positive galleries (AP=1). Clone retrieval uses 1,175 queries; four with no temporal positive are excluded. No query is selected using feature scores. Both cameras from the same scene are in the galleries.
+
+| Model | Weather | Cross-weather mAP % | Clone mAP % | Queries |
+| --- | --- | --- | --- | --- |
+| C0 | fog | 65.700 | 61.252 | 1179 |
+| C0 | morning | 81.031 | 61.252 | 1179 |
+| C0 | overcast | 80.737 | 61.252 | 1179 |
+| C0 | rain | 76.494 | 61.252 | 1179 |
+| C0 | sunset | 77.133 | 61.252 | 1179 |
+| C0 | mean | 76.219 | 61.252 | 5895 |
+| C1 | fog | 65.645 | 61.070 | 1179 |
+| C1 | morning | 80.856 | 61.070 | 1179 |
+| C1 | overcast | 80.513 | 61.070 | 1179 |
+| C1 | rain | 76.436 | 61.070 | 1179 |
+| C1 | sunset | 77.099 | 61.070 | 1179 |
+| C1 | mean | 76.110 | 61.070 | 5895 |
+| C2 | fog | 65.861 | 61.027 | 1179 |
+| C2 | morning | 80.985 | 61.027 | 1179 |
+| C2 | overcast | 80.628 | 61.027 | 1179 |
+| C2 | rain | 76.350 | 61.027 | 1179 |
+| C2 | sunset | 77.021 | 61.027 | 1179 |
+| C2 | mean | 76.169 | 61.027 | 5895 |
+| C3 | fog | 65.585 | 61.052 | 1179 |
+| C3 | morning | 80.861 | 61.052 | 1179 |
+| C3 | overcast | 80.586 | 61.052 | 1179 |
+| C3 | rain | 76.373 | 61.052 | 1179 |
+| C3 | sunset | 77.137 | 61.052 | 1179 |
+| C3 | mean | 76.109 | 61.052 | 5895 |
+| C4 | fog | 65.633 | 61.027 | 1179 |
+| C4 | morning | 80.927 | 61.027 | 1179 |
+| C4 | overcast | 80.562 | 61.027 | 1179 |
+| C4 | rain | 76.456 | 61.027 | 1179 |
+| C4 | sunset | 77.052 | 61.027 | 1179 |
+| C4 | mean | 76.126 | 61.027 | 5895 |
+| X3-1 | fog | 65.758 | 61.141 | 1179 |
+| X3-1 | morning | 81.028 | 61.141 | 1179 |
+| X3-1 | overcast | 80.603 | 61.141 | 1179 |
+| X3-1 | rain | 76.454 | 61.141 | 1179 |
+| X3-1 | sunset | 77.113 | 61.141 | 1179 |
+| X3-1 | mean | 76.191 | 61.141 | 5895 |
+
+Conclusion ⑤: **FAIL**. Full predeclared contrasts are in `part3/contrasts.csv`.
+
+| Model | Cross-weather Δ vs C0 pp | Clone Δ vs C0 pp | Cross-weather Δ vs C4 pp | All conditions |
+| --- | --- | --- | --- | --- |
+| C1 | -0.109 | -0.182 | -0.016 | FAIL |
+| C2 | -0.050 | -0.225 | +0.043 | FAIL |
+| C3 | -0.111 | -0.200 | -0.017 | FAIL |
+| C4 | -0.093 | -0.225 | +0.000 | FAIL |
+| X3-1 | -0.028 | -0.111 | +0.065 | FAIL |
+
+The gate requires C2 or C3 to gain at least 1.0 pp over C0 in mean cross-weather mAP, exceed C4, and improve cross-weather mAP more than clone mAP. C0–C4 share the same single training seed; these are descriptive effects, not statistical significance claims.
 
 ## Figures and reproducibility
 

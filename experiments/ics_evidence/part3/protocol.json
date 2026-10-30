@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "split": "held-out physical scenes, same as part2",
+  "cross_gallery": "clone, same physical scene (both cameras included), abs frame difference <=10",
+  "clone_gallery": "clone, same physical scene (both cameras included), abs frame difference 4 through30 inclusive",
+  "query_limit": "all eligible test-scene IoU pairs, no query cap",
+  "trivial_gallery_policy": "Include all-positive galleries with AP1; exclude only clone queries with no temporal positive; exact counts retained",
+  "positive_identity": "IoU-matched clone GT instance, then propagated within the clone tracking annotation",
+  "no_cross_weather_instance_id_assumption": true,
+  "metadata_exact_across_all_models": true,
+  "X3_1_role": "APR-on no-ICS reference, C0-C4 APR-off continuation"
+}

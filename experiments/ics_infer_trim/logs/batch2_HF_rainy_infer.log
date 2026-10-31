@@ -1,0 +1,26 @@
+loading annotations into memory...
+Done (t=0.39s)
+creating index...
+index created!
+VIDEO_COMPLETE HF rainy 1 202 elapsed 28.6
+VIDEO_COMPLETE HF rainy 2 102 elapsed 42.7
+VIDEO_COMPLETE HF rainy 3 208 elapsed 66.5
+VIDEO_COMPLETE HF rainy 4 103 elapsed 79.9
+VIDEO_COMPLETE HF rainy 5 203 elapsed 106.1
+VIDEO_COMPLETE HF rainy 6 202 elapsed 134.1
+VIDEO_COMPLETE HF rainy 7 203 elapsed 160.8
+VIDEO_COMPLETE HF rainy 8 202 elapsed 188.2
+VIDEO_COMPLETE HF rainy 9 203 elapsed 214.8
+VIDEO_COMPLETE HF rainy 10 202 elapsed 241.4
+VIDEO_COMPLETE HF rainy 11 106 elapsed 256.3
+VIDEO_COMPLETE HF rainy 12 202 elapsed 280.2
+VIDEO_COMPLETE HF rainy 13 202 elapsed 306.8
+loading annotations into memory...
+Done (t=0.32s)
+creating index...
+index created!
+VIDEO_COMPLETE HF rainy 14 203 elapsed 28.3
+VIDEO_COMPLETE HF rainy 15 202 elapsed 52.2
+VIDEO_COMPLETE HF rainy 16 203 elapsed 79.6
+VIDEO_COMPLETE HF rainy 17 202 elapsed 104.7
+INFERENCE_COMPLETE /data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/jobs/HF/rainy

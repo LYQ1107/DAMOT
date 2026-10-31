@@ -1,7 +1,5 @@
 # ICS advantage: paired-video quantitative and qualitative evaluation
 
-**2026-10-31 update:** The requested stage1 supplement is complete; the stage4 main comparison remains unavailable. Held-out Overcast AssA Δ is +1.582 pp [-0.240, 3.853] (8 videos); pooled Night/Dawn transfer IR Δ is +0.012122 [0.010594, 0.013722] (higher IR is worse). These one-seed results do not establish a consistent advantage. [Stage1 supplement and source-stop details](#batch2-status).
-
 Run: `/data1/liuyeqiang/ics_advantage_20261031_004629`. Inference and offline calculations only. **One training seed: 1790355234.** All reported confidence intervals condition on these trained checkpoints; resampling videos does not estimate variation across training seeds.
 
 The task fixes the primary model comparisons C2−C0 and C2−C4. C1/C3 are supplementary. All test-video selections use the historical split_mask seed0. Bootstrap uses10,000 paired video resamples, seed0, pointwise percentile95% intervals. Wilcoxon tests are two-sided; p values and intervals are not adjusted for multiple comparisons.
@@ -137,17 +135,7 @@ Night and Dawn/Dusk dose curves and bars are also included. t-SNE axes are indep
 
 Source training task: `/data1/liuyeqiang/damot_hf_intics_20261031_004258`. Stage4 epoch5 is the main comparison; stage1 epoch5 Overcast is supplementary. For both checkpoints the feature protocol remains the requested Night/Dawn-Dusk test pool, so the stage1 feature results measure transfer to those domains.
 
-Controller state: `waiting_source_training_and_evaluation`.
-
-Source task state: `formal_training_or_idle_GPU_queue`.
-
-**Stage4 is not yet available; the requested stage1 supplement is complete.**
-
-Historical stage1 stop record captured when this supplement was dispatched: `{"status": "stop", "reasons": ["bank PC1/offline FAP PC1 angle exceeds45deg"], "HOTA": 36.47477411631231, "HF_R11_HOTA": 36.781974908118556, "HOTA_delta": -0.3072007918062454, "first_direction_angle_deg": 82.48092299544699, "first_direction_to_offline_span_deg": 33.75608908725687, "principal_angles_deg": [33.453465219188544, 88.357491312671], "P1_weather_shift_energy_share": 0.08507769566556955, "P1_identity_energy_share": 0.09112870290405677, "seed": 1790355234, "time": 1793395076.516372}`.
-
-Source status update (2026-10-31T16:02:37.954788+08:00): the source task records an authorized correction of its gate-angle interpretation to `first_direction_to_offline_span_deg` = 33.7561°, gate status `pass`; its controller state is `formal_training_or_idle_GPU_queue`. The historical axis-to-axis angle above and this direction-to-subspace angle are different quantities.
-
-Frozen full-pool Overcast HOTA: INT 36.4748, HF 36.7820, Δ-0.3072 pp. Table1 below instead uses held-out test videos with an equal-video mean.
+Controller state: `offline_feature_statistics`.
 
 The full-run comparison jointly changes the instructed ICS estimator, shrinkage/loss settings and sample gate. APR complement coupling also follows that bank by design; this is the effect of the requested complete ICS configuration within that coupling, rather than an isolated change of estimator alone. One matched training seed is used.
 
@@ -155,21 +143,69 @@ The full-run comparison jointly changes the instructed ICS estimator, shrinkage/
 
 | Stage / domain / stratum | Metric | Videos | Mean | Median | Improved | 95% CI | Wilcoxon p |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| batch2_stage4 / overcast / all_test_videos | HOTA | 8 | 0.002 | -0.442 | 25.0% | [-0.906, 1.352] | 0.2076 |
+| batch2_stage4 / overcast / all_test_videos | AssA | 8 | 0.091 | -0.647 | 12.5% | [-2.222, 3.495] | 0.1614 |
+| batch2_stage4 / overcast / all_test_videos | IDF1 | 8 | 0.025 | -0.469 | 37.5% | [-1.178, 1.595] | 0.5754 |
+| batch2_stage4 / overcast / all_test_videos | IDSW | 8 | -1.875 | 0.500 | 37.5% | [-8.000, 3.000] | 0.8658 |
+| batch2_stage4 / rainy / all_test_videos | HOTA | 9 | -0.960 | -1.273 | 22.2% | [-1.478, -0.388] | 0.03815 |
+| batch2_stage4 / rainy / all_test_videos | AssA | 9 | -2.216 | -2.777 | 11.1% | [-3.421, -0.928] | 0.02088 |
+| batch2_stage4 / rainy / all_test_videos | IDF1 | 9 | -1.338 | -1.482 | 11.1% | [-1.886, -0.764] | 0.01086 |
+| batch2_stage4 / rainy / all_test_videos | IDSW | 9 | 4.556 | 4.000 | 11.1% | [1.889, 7.222] | 0.02488 |
+| batch2_stage4 / dawn_dusk / all_test_videos | HOTA | 17 | -0.248 | -0.191 | 47.1% | [-0.693, 0.207] | 0.356 |
+| batch2_stage4 / dawn_dusk / all_test_videos | AssA | 17 | -0.407 | 0.153 | 52.9% | [-1.298, 0.530] | 0.4348 |
+| batch2_stage4 / dawn_dusk / all_test_videos | IDF1 | 17 | -0.553 | -0.700 | 35.3% | [-1.267, 0.157] | 0.1626 |
+| batch2_stage4 / dawn_dusk / all_test_videos | IDSW | 17 | 1.412 | 3.000 | 29.4% | [-2.235, 4.824] | 0.2886 |
+| batch2_stage4 / night / all_test_videos | HOTA | 25 | 0.039 | 0.188 | 64.0% | [-0.430, 0.522] | 0.6186 |
+| batch2_stage4 / night / all_test_videos | AssA | 25 | -0.088 | -0.015 | 48.0% | [-1.232, 1.056] | 0.9036 |
+| batch2_stage4 / night / all_test_videos | IDF1 | 25 | -0.116 | -0.012 | 48.0% | [-0.802, 0.601] | 0.757 |
+| batch2_stage4 / night / all_test_videos | IDSW | 25 | 2.880 | 4.000 | 44.0% | [-1.800, 7.440] | 0.2526 |
+| batch2_stage4 / night / night_within_domain:darkest | HOTA | 9 | 0.199 | 0.187 | 77.8% | [-0.216, 0.670] | 0.3139 |
+| batch2_stage4 / night / night_within_domain:darkest | AssA | 9 | 0.193 | -0.015 | 44.4% | [-0.758, 1.391] | 0.9528 |
+| batch2_stage4 / night / night_within_domain:darkest | IDF1 | 9 | -0.054 | -0.260 | 44.4% | [-0.593, 0.488] | 0.9528 |
+| batch2_stage4 / night / night_within_domain:darkest | IDSW | 9 | 7.222 | 7.000 | 22.2% | [1.889, 12.000] | 0.05021 |
+| batch2_stage4 / night / night_within_domain:middle | HOTA | 8 | -0.230 | -0.505 | 37.5% | [-1.289, 0.985] | 0.4838 |
+| batch2_stage4 / night / night_within_domain:middle | AssA | 8 | -0.648 | -0.950 | 37.5% | [-3.166, 2.022] | 0.4838 |
+| batch2_stage4 / night / night_within_domain:middle | IDF1 | 8 | -0.600 | -1.068 | 25.0% | [-2.151, 1.245] | 0.2626 |
+| batch2_stage4 / night / night_within_domain:middle | IDSW | 8 | 6.125 | 1.000 | 50.0% | [-2.375, 15.375] | 0.4406 |
+| batch2_stage4 / night / night_within_domain:brightest | HOTA | 8 | 0.128 | 0.263 | 75.0% | [-0.678, 0.734] | 0.327 |
+| batch2_stage4 / night / night_within_domain:brightest | AssA | 8 | 0.155 | 0.965 | 62.5% | [-2.075, 2.031] | 0.6744 |
+| batch2_stage4 / night / night_within_domain:brightest | IDF1 | 8 | 0.300 | 0.852 | 75.0% | [-0.874, 1.269] | 0.4838 |
+| batch2_stage4 / night / night_within_domain:brightest | IDSW | 8 | -5.250 | -3.500 | 62.5% | [-12.000, 1.875] | 0.1755 |
+| batch2_stage4 / all_four_domains / all_test_videos | HOTA | 59 | -0.201 | -0.126 | 47.5% | [-0.496, 0.121] | 0.1079 |
+| batch2_stage4 / all_four_domains / all_test_videos | AssA | 59 | -0.480 | -0.480 | 39.0% | [-1.173, 0.279] | 0.0524 |
+| batch2_stage4 / all_four_domains / all_test_videos | IDF1 | 59 | -0.409 | -0.596 | 37.3% | [-0.819, 0.035] | 0.02648 |
+| batch2_stage4 / all_four_domains / all_test_videos | IDSW | 59 | 2.068 | 4.000 | 33.9% | [-0.254, 4.508] | 0.06263 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:darkest | HOTA | 20 | 0.044 | 0.107 | 60.0% | [-0.449, 0.585] | 0.8519 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:darkest | AssA | 20 | -0.229 | -0.129 | 40.0% | [-1.391, 1.017] | 0.4553 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:darkest | IDF1 | 20 | -0.223 | -0.264 | 40.0% | [-0.977, 0.608] | 0.4115 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:darkest | IDSW | 20 | 5.350 | 6.500 | 40.0% | [0.500, 10.250] | 0.05917 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:middle | HOTA | 20 | -0.110 | 0.136 | 55.0% | [-0.559, 0.316] | 0.7369 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:middle | AssA | 20 | -0.187 | 0.410 | 65.0% | [-1.341, 0.907] | 0.9702 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:middle | IDF1 | 20 | -0.106 | -0.060 | 50.0% | [-0.761, 0.518] | 0.8519 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:middle | IDSW | 20 | -0.900 | 0.500 | 40.0% | [-4.750, 2.850] | 0.8105 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:brightest | HOTA | 19 | -0.555 | -0.841 | 26.3% | [-1.087, 0.135] | 0.01758 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:brightest | AssA | 19 | -1.054 | -0.961 | 10.5% | [-2.243, 0.583] | 0.005491 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:brightest | IDF1 | 19 | -0.923 | -1.290 | 21.1% | [-1.596, -0.094] | 0.007013 |
+| batch2_stage4 / all_four_domains / four_domains_pooled:brightest | IDSW | 19 | 1.737 | 4.000 | 21.1% | [-1.579, 4.368] | 0.06791 |
 | batch2_stage1 / overcast / all_test_videos | HOTA | 8 | 0.134 | -0.055 | 37.5% | [-0.522, 0.820] | 1 |
 | batch2_stage1 / overcast / all_test_videos | AssA | 8 | 1.582 | 0.492 | 62.5% | [-0.240, 3.853] | 0.327 |
 | batch2_stage1 / overcast / all_test_videos | IDF1 | 8 | -0.034 | -0.218 | 37.5% | [-1.012, 0.918] | 0.8886 |
 | batch2_stage1 / overcast / all_test_videos | IDSW | 8 | -4.250 | -2.000 | 62.5% | [-13.375, 2.375] | 0.4817 |
 
-Batch2 Table1 conclusion: mean test-video AssA has a wholly positive95% interval in 0/1 reported stage/domain comparisons. All four tracking metrics and all fixed brightness strata are retained; these intervals do not measure training-seed variability.
+Batch2 Table1 conclusion: mean test-video AssA has a wholly positive95% interval in 0/6 reported stage/domain comparisons. All four tracking metrics and all fixed brightness strata are retained; these intervals do not measure training-seed variability.
 
 [All categories/strata](analysis/batch2/tracking/paired_effects.csv) · [Per-video differences](analysis/batch2/tracking/video_differences.csv) · [Spearman correlations](analysis/batch2/tracking/spearman.csv) · [Brightness-bin membership CSV](analysis/batch2/tracking/brightness_bins.csv)
 
 ## Batch2 Table2 — Intervention invariance
 
-Only stage1 Overcast tracking is available. Night tracking strata and pooled four-domain brightness strata are not applicable; their membership CSV contains its schema and no rows. The requested stage4 main comparison remains pending.
-
 | Pool | Model | Mean IR [95% CI] | Mean cross-intervention mAP% [95% CI] | Cosine silhouette |
 | --- | --- | --- | --- | --- |
+| night | HF_stage4 | 0.3562 [0.3259, 0.3864] | 77.838 [69.467, 85.585] | 0.04835 |
+| dawn_dusk | HF_stage4 | 0.2788 [0.2512, 0.3031] | 76.683 [66.788, 86.596] | 0.02842 |
+| pooled | HF_stage4 | 0.3286 [0.3036, 0.3537] | 77.294 [70.798, 83.498] | 0.01237 |
+| night | INT_stage4 | 0.3559 [0.3256, 0.3860] | 77.649 [69.393, 85.358] | 0.04847 |
+| dawn_dusk | INT_stage4 | 0.2787 [0.2513, 0.3024] | 76.575 [66.780, 86.371] | 0.02858 |
+| pooled | INT_stage4 | 0.3284 [0.3035, 0.3534] | 77.124 [70.724, 83.336] | 0.01106 |
 | night | HF_stage1 | 0.5191 [0.4841, 0.5534] | 76.336 [68.795, 83.647] | 0.05375 |
 | dawn_dusk | HF_stage1 | 0.3733 [0.3405, 0.4052] | 76.482 [66.672, 86.198] | 0.05408 |
 | pooled | HF_stage1 | 0.4667 [0.4303, 0.5026] | 76.262 [70.297, 82.135] | 0.02675 |
@@ -179,12 +215,20 @@ Only stage1 Overcast tracking is available. Night tracking strata and pooled fou
 
 | Pool | Comparison | Metric | Paired Δ | 95% CI | CI entirely favorable |
 | --- | --- | --- | --- | --- | --- |
+| night | INT_stage4−HF_stage4 | IR | -0.00033 | [-0.002058, 0.001420] | False |
+| night | INT_stage4−HF_stage4 | mAP | -0.18870 | [-0.814, 0.423] | False |
+| dawn_dusk | INT_stage4−HF_stage4 | IR | -0.00010 | [-0.001437, 0.000869] | False |
+| dawn_dusk | INT_stage4−HF_stage4 | mAP | -0.10836 | [-0.587, 0.395] | False |
+| pooled | INT_stage4−HF_stage4 | IR | -0.00014 | [-0.001298, 0.001048] | False |
+| pooled | INT_stage4−HF_stage4 | mAP | -0.17052 | [-0.601, 0.280] | False |
 | night | INT_stage1−HF_stage1 | IR | +0.01248 | [0.010194, 0.015033] | False |
 | night | INT_stage1−HF_stage1 | mAP | -0.09604 | [-0.471, 0.357] | False |
 | dawn_dusk | INT_stage1−HF_stage1 | IR | +0.01148 | [0.010060, 0.012715] | False |
 | dawn_dusk | INT_stage1−HF_stage1 | mAP | +0.33390 | [-0.076, 0.794] | False |
 | pooled | INT_stage1−HF_stage1 | IR | +0.01212 | [0.010594, 0.013722] | False |
 | pooled | INT_stage1−HF_stage1 | mAP | +0.04862 | [-0.251, 0.375] | False |
+
+Batch2 Table2 conclusion (INT_stage4): pooled mean IR interval entirely favorable: False; pooled mean cross-intervention mAP interval entirely favorable: False. Every requested strength is reported in the per-view and paired-effect CSVs.
 
 Batch2 Table2 conclusion (INT_stage1): pooled mean IR interval entirely favorable: False; pooled mean cross-intervention mAP interval entirely favorable: False. Every requested strength is reported in the per-view and paired-effect CSVs.
 
@@ -198,6 +242,18 @@ Unmodified second/third-part ICS-evidence scene split and IoU pairing are reused
 
 | Model | Weather | Cross-weather mAP% | Clone mAP% | Queries |
 | --- | --- | --- | --- | --- |
+| HF_stage4 | fog | 64.545 | 60.417 | 1179 |
+| HF_stage4 | morning | 80.640 | 60.417 | 1179 |
+| HF_stage4 | overcast | 80.729 | 60.417 | 1179 |
+| HF_stage4 | rain | 76.032 | 60.417 | 1179 |
+| HF_stage4 | sunset | 77.129 | 60.417 | 1179 |
+| HF_stage4 | mean | 75.815 | 60.417 | 5895 |
+| INT_stage4 | fog | 64.545 | 60.521 | 1179 |
+| INT_stage4 | morning | 80.373 | 60.521 | 1179 |
+| INT_stage4 | overcast | 80.338 | 60.521 | 1179 |
+| INT_stage4 | rain | 75.776 | 60.521 | 1179 |
+| INT_stage4 | sunset | 76.835 | 60.521 | 1179 |
+| INT_stage4 | mean | 75.573 | 60.521 | 5895 |
 | HF_stage1 | fog | 66.990 | 62.848 | 1179 |
 | HF_stage1 | morning | 81.350 | 62.848 | 1179 |
 | HF_stage1 | overcast | 81.065 | 62.848 | 1179 |
@@ -211,9 +267,15 @@ Unmodified second/third-part ICS-evidence scene split and IoU pairing are reused
 | INT_stage1 | sunset | 78.341 | 63.343 | 1179 |
 | INT_stage1 | mean | 76.694 | 63.343 | 5895 |
 
+VKITTI table conclusion (stage4): mean cross-weather mAP INT−HF is -0.241487 percentage points; the point estimate does not favor INT. This supplementary VK table reports one-seed point estimates.
+
 VKITTI table conclusion (stage1): mean cross-weather mAP INT−HF is -0.005959 percentage points; the point estimate does not favor INT. This supplementary VK table reports one-seed point estimates.
 
 [Night / stage1 Overcast brightness–AssA effects](analysis/batch2/tracking/brightness_AssA.png) · [PDF](analysis/batch2/tracking/brightness_AssA.pdf)
+
+[All four domains pooled: brightness–AssA effects](analysis/batch2/tracking/brightness_AssA_four_domains.png) · [PDF](analysis/batch2/tracking/brightness_AssA_four_domains.pdf)
+
+stage4: [Dose curves](figures/batch2/dose_response_pooled_stage4.png) · [IR/mAP/silhouette](figures/batch2/invariance_bars_pooled_stage4.png) · [Intervention t-SNE](figures/batch2/intervention_tsne_stage4.png) · [Cross-weather t-SNE](figures/batch2/cross_weather_tsne_stage4.png)
 
 stage1: [Dose curves](figures/batch2/dose_response_pooled_stage1.png) · [IR/mAP/silhouette](figures/batch2/invariance_bars_pooled_stage1.png) · [Intervention t-SNE](figures/batch2/intervention_tsne_stage1.png) · [Cross-weather t-SNE](figures/batch2/cross_weather_tsne_stage1.png)
 

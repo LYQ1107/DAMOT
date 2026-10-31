@@ -1,5 +1,9 @@
 {
-  "status": "ready_for_review_and_publication",
+  "status": "published",
   "batch": 1,
-  "time": 1793387620.8707638
+  "files": 819,
+  "all_NAS_and_local_hashes_equal": true,
+  "local_staging": "/data1/liuyeqiang/ics_infer_trim_github_stage_20261031_022136",
+  "time": 1793387714.6321244,
+  "commit": "f5e3d0b465cb6fa9912c698c50aa31cf2d4d9d01"
 }

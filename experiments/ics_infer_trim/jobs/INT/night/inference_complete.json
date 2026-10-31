@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "frames": 7286,
+  "videos": 36,
+  "beta0_bitwise_equal_to_frozen_all_frames": true,
+  "detector_calls_this_invocation": {
+    "extract_feat": 7286,
+    "simple_test_rpn": 7286,
+    "simple_test": 7286
+  },
+  "trimmed_embedding_calls": 7286,
+  "min_trimmed_roi_count": 1,
+  "peak_cuda_allocated_bytes": 560626688,
+  "peak_cuda_reserved_bytes": 639631360,
+  "elapsed_seconds": 631.6472203731537,
+  "checkpoint_sha256": "b4e69df6c1e74dd08e101aef9180fc205c66ca51675381891e7592abb51b6328"
+}

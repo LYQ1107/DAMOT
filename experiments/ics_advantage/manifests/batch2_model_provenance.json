@@ -1,4 +1,34 @@
 {
+  "HF_stage4": {
+    "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage04_after_night.pth",
+    "checkpoint_sha256": "63f8c6e8504caed2a7572fc1fc7d07e42632cc617747b8efa265f9a4098e14b3",
+    "stage": 4,
+    "epoch": 5,
+    "seed": 1790355234,
+    "role": "original HF ICS",
+    "frozen_evaluations": {
+      "overcast": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage4/overcast",
+      "rainy": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage4/rainy",
+      "dawn_dusk": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage4/dawn_dusk",
+      "night": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage4/night"
+    },
+    "inference_source_snapshot": "/data1/liuyeqiang/ics_advantage_20261031_004629/code_online"
+  },
+  "INT_stage4": {
+    "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage04_after_night.pth",
+    "checkpoint_sha256": "b4e69df6c1e74dd08e101aef9180fc205c66ca51675381891e7592abb51b6328",
+    "stage": 4,
+    "epoch": 5,
+    "seed": 1790355234,
+    "role": "online intervention-residual ICS",
+    "frozen_evaluations": {
+      "overcast": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/stage4/overcast",
+      "rainy": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/stage4/rainy",
+      "dawn_dusk": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/stage4/dawn_dusk",
+      "night": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/stage4/night"
+    },
+    "inference_source_snapshot": "/data1/liuyeqiang/ics_advantage_20261031_004629/code_online"
+  },
   "HF_stage1": {
     "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage01_after_overcast.pth",
     "checkpoint_sha256": "e46dc4354be22cc426e491705379397a4f4aa378458163996823bd8bafb7d7df",

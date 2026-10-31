@@ -1,0 +1,10 @@
+{
+  "stage": "/tmp/damot_ics_continue_20261031_160513",
+  "delivery": "/tmp/damot_ics_continue_20261031_160513/delivery",
+  "files": {
+    "ics_advantage": 1014,
+    "ics_infer_trim": 821
+  },
+  "all_source_transfer_hashes_verified": true,
+  "stage4_main_comparison_pending": true
+}

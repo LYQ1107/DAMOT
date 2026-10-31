@@ -1,0 +1,15 @@
+{
+  "status": "published",
+  "branch": "main",
+  "commit": "5e2e50b2929e78cbdf9a81d2aff6f01b3267e740",
+  "parent": "f5e3d0b465cb6fa9912c698c50aa31cf2d4d9d01",
+  "tree": "17aee5f5e1665a01f97cb996847207d788ec49f4",
+  "files": 1835,
+  "all_remote_blob_hashes_match": true,
+  "preserved_scientific_batch1_files": 293,
+  "stage4_main_comparison_pending": true,
+  "stage1_supplement_complete": true,
+  "source_training_resumed": true,
+  "published_at": "2026-10-31T16:17:42.006266+08:00",
+  "summary_url": "https://github.com/LYQ1107/DAMOT/blob/main/experiments/ics_advantage/SUMMARY.md#batch2-status"
+}

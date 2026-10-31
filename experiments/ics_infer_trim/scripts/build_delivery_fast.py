@@ -2,7 +2,7 @@
 import hashlib,json,os,shlex,shutil,subprocess,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-STAGE=Path('/data1/liuyeqiang/ics_infer_trim_github_stage_20261031_022136')
+STAGE=Path('/data1/liuyeqiang/ics_infer_trim_github_stage_20261031_1718')
 REMOTE='/home/Valadmin/A100/liuyeqiang_codex_runs/'+ROOT.name
 SSH=['ssh','-p','24557','-i','/home/liuyeqiang/.ssh/id_ed25519_nas_readwrite','-o','IdentitiesOnly=yes','-o','BatchMode=yes','-o','StrictHostKeyChecking=yes','-o','HostKeyAlias=nas-readwrite','-o','UserKnownHostsFile=/home/liuyeqiang/.ssh/known_hosts_nas_readwrite','-o','ConnectTimeout=10','Valadmin@127.0.0.1']
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

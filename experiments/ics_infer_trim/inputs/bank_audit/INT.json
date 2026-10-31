@@ -1,0 +1,24 @@
+{
+  "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage04_after_night.pth",
+  "checkpoint_sha256": "b4e69df6c1e74dd08e101aef9180fc205c66ca51675381891e7592abb51b6328",
+  "pcs_key": "track_head.causal_bank.pcs",
+  "rows": 2,
+  "dimension": 256,
+  "training_alpha": 0.25,
+  "causal_pca_mode": "intervention_residual",
+  "causal_fixed_basis_path": null,
+  "row_gram": [
+    [
+      1.0000001391082176,
+      -5.9354722733995224e-09
+    ],
+    [
+      -5.9354722733995224e-09,
+      1.000000114784246
+    ]
+  ],
+  "QR_orthogonality_error": 7.058844617660678e-16,
+  "sequential_training_vs_QR_operator_frobenius": 4.5125911651360314e-08,
+  "relative_to_training_removed_operator": 1.2763533634078247e-07,
+  "note": "Requested QR subspace projection; sequential training trim is identical only for orthonormal stored PCs (up to rounding)."
+}

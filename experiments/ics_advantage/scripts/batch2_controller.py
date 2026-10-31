@@ -15,7 +15,7 @@ def source_readiness():
         return 'waiting_source_manifest_replacement',dict(source_status='temporarily_unreadable_NAS_manifest')
     one=(NEW/'results/stage1/overcast/complete.json').exists()
     final=all((NEW/'results/stage4'/d/'complete.json').exists() for d in ['overcast','rainy','dawn_dusk','night'])
-    if (NEW/'episode/train_complete.json').exists() and one and final and status in ['complete_awaiting_publication','complete','published']:
+    if (NEW/'episode/train_complete.json').exists() and one and final and status in ['complete_awaiting_publication','complete','published','complete_published']:
         return 'all_stages_ready',dict(source_status=status)
     if (NEW/'episode/train_stopped.json').exists() and one:
         gate=read_json(NEW/'episode/stage1_gate.json')

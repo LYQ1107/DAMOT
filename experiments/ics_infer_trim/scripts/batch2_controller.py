@@ -47,7 +47,7 @@ def main():
         try:status=read_json(formal).get('status')
         except (FileNotFoundError,json.JSONDecodeError):status='not_dispatched'
         ready=(NEW/'episode/train_complete.json').exists() and all((NEW/'results/stage4'/d/'complete.json').exists() for d in DOMAINS4)
-        if ready and status in ['complete_awaiting_publication','complete','published']:break
+        if ready and status in ['complete_awaiting_publication','complete','published','complete_published']:break
         if (NEW/'episode/train_stopped.json').exists():
             changed=state('waiting_stage4_after_source_gate',source_status=status,stop=read_json(NEW/'episode/train_stopped.json'),
                           scope='Original stage4 only; no stage1 inference-trim substitute',user_instruction='保留原范围：注明 stage4 缺失，等训练任务处理后再跑第二批')

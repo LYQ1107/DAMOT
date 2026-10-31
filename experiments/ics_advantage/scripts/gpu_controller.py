@@ -71,12 +71,18 @@ def job(model,extra=False,vk=False,smoke=False):
         record=json.loads(manifest.read_text());print('REATTACH',name,record['pid'],flush=True)
         while alive(record['pid']):time.sleep(10)
         final=ROOT/('smoke_features' if smoke else 'vk_features' if vk else 'tsne_features' if extra else 'features')/model/'meta.json'
-        assert final.exists() and final.stat().st_mtime>=record['start'],('Detached extraction did not complete',name)
-        assert json.loads(final.read_text())['checkpoint']==record['checkpoint']
-        record.update(status='complete',returncode=0,end=time.time(),resumed_monitor=True,completion_basis='final manifest written after all requested domains')
+        if final.exists() and final.stat().st_mtime>=record['start']:
+            assert json.loads(final.read_text())['checkpoint']==record['checkpoint']
+            record.update(status='complete',returncode=0,end=time.time(),resumed_monitor=True,completion_basis='final manifest written after all requested domains')
+            dump(manifest,record)
+            with LOCK:RESERVED.discard(record['gpu'])
+            return
+        # A transport loss can kill the extractor after leaving a running
+        # manifest but before its final meta.json. Keep the manifest as an
+        # auditable stale record, then launch a fresh extraction below.
+        record.update(status='stale_after_detach',returncode=None,end=time.time(),resumed_monitor=False,
+                      stale_reason='detached process ended without a current final meta.json')
         dump(manifest,record)
-        with LOCK:RESERVED.discard(record['gpu'])
-        return
     ck=checkpoint(model);command=args(model,ck,extra,vk,smoke)
     digest=sha(ck)
     gpu,stats=acquire(name);e=env();e['CUDA_VISIBLE_DEVICES']=str(gpu)

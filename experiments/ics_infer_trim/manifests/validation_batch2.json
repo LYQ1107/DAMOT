@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "batch": 2,
+  "models": ["INT", "HF"],
+  "domains": ["overcast", "rainy", "dawn_dusk", "night"],
+  "inference_jobs": 8,
+  "inference_frames": 42720,
+  "inference_videos": 216,
+  "beta0_bitwise_equal_to_frozen_jobs": 8,
+  "metric_jobs": 16,
+  "aggregate_parity_checks_passed": 16,
+  "all_frame_hota_checks_passed": 16,
+  "aggregate_rows": 140,
+  "paired_effect_rows": 100,
+  "video_difference_rows": 236,
+  "analysis_complete": true,
+  "single_training_seed": true,
+  "source_data_mutation": "none; frozen predictions/checkpoints only"
+}

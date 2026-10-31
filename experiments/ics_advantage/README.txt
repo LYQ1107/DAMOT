@@ -37,14 +37,15 @@ Supplemental t-SNE views are extracted separately to provide the three requested
 doses at the four uniform trajectory frames. These features are excluded from
 all primary quantitative statistics. All selections are frozen in manifests.
 
-Second-batch controller: scripts/batch2_controller.py. It waits for both the
+Second-batch controller: scripts/batch2_controller.py. It waited for both the
 first-batch publication receipt and the independent source training/frozen
-evaluations. It copies the final source to code_online and overlays the identical
-task extractor, then evaluates HF/new through that same inference implementation.
-Source model training is never launched or modified here. If the source stops
-at its mandatory stage1 gate, only the requested stage1 supplement is available;
-the missing stage4 comparison is explicitly reported. Second-batch branches are
-prepared, but cannot be runtime-validated until those checkpoints exist.
+evaluations. It copied the final source to code_online and overlaid the identical
+task extractor, then evaluated HF/new through that same inference implementation.
+Source model training was never launched or modified here. The stage4 epoch5
+source checkpoint is now available and the four-domain stage4 feature, tracking,
+VKITTI2 and offline analyses are complete. `manifests/batch2_validation.json`
+records PASS (all four models, 18 figures, 80 native aggregate checks and valid
+10,000-repetition bootstrap intervals); the stage1 supplement is retained.
 
 All data images, model weights, frozen predictions and feature NPZs remain on
 the server. Delivery includes full metric CSVs, PDF/PNG figures, exact source
@@ -52,10 +53,9 @@ snapshots, selection/protocol metadata, versions, hashes and logs. Public source
 checkpoint paths and constructor basis paths must be remapped when reproducing
 on another machine. Small fixed constructor bases are included.
 
-Before publishing, run scripts/report.py, scripts/validate_delivery.py --batch 1,
-then scripts/build_delivery.py; verify SHA256SUMS from delivery/. The local Git
-publication directory has no checkout: NEVER git add --all there. Fetch latest
-main, run scripts/prepare_publication.py, upload exact blobs via the authorized
-GitHub connector, verify expected root-tree SHA, and update main with an expected-
-head lease. Verify remote artifact blobs after the update. Batch2 is appended
-only after its actual analyses complete and are reviewed.
+Before publishing, run scripts/report.py, scripts/validate_delivery.py --batch 2,
+then scripts/build_delivery.py; verify SHA256SUMS from delivery/. The published
+tree contains both batches, the stage4 supplement, validation manifests and the
+exact code snapshot used for extraction and analysis. Public source checkpoint
+paths and constructor basis paths must be remapped when reproducing on another
+machine.

@@ -1,0 +1,27 @@
+loading annotations into memory...
+Done (t=0.46s)
+creating index...
+index created!
+VIDEO_COMPLETE INT overcast 1 202 elapsed 20.2
+VIDEO_COMPLETE INT overcast 2 202 elapsed 36.4
+VIDEO_COMPLETE INT overcast 3 203 elapsed 56.1
+VIDEO_COMPLETE INT overcast 4 199 elapsed 71.8
+VIDEO_COMPLETE INT overcast 5 202 elapsed 89.0
+VIDEO_COMPLETE INT overcast 6 202 elapsed 104.7
+VIDEO_COMPLETE INT overcast 7 203 elapsed 120.0
+VIDEO_COMPLETE INT overcast 8 203 elapsed 135.7
+VIDEO_COMPLETE INT overcast 9 202 elapsed 151.9
+VIDEO_COMPLETE INT overcast 10 202 elapsed 168.4
+VIDEO_COMPLETE INT overcast 11 203 elapsed 186.4
+VIDEO_COMPLETE INT overcast 12 202 elapsed 204.3
+VIDEO_COMPLETE INT overcast 13 202 elapsed 222.4
+VIDEO_COMPLETE INT overcast 14 202 elapsed 240.2
+VIDEO_COMPLETE INT overcast 15 203 elapsed 258.0
+VIDEO_COMPLETE INT overcast 16 202 elapsed 275.9
+VIDEO_COMPLETE INT overcast 17 202 elapsed 297.1
+VIDEO_COMPLETE INT overcast 18 203 elapsed 314.0
+VIDEO_COMPLETE INT overcast 19 202 elapsed 331.0
+VIDEO_COMPLETE INT overcast 20 202 elapsed 348.8
+VIDEO_COMPLETE INT overcast 21 202 elapsed 367.3
+VIDEO_COMPLETE INT overcast 22 203 elapsed 385.5
+INFERENCE_COMPLETE /data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/jobs/INT/overcast

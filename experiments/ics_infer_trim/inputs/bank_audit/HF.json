@@ -5,6 +5,8 @@
   "rows": 2,
   "dimension": 256,
   "training_alpha": 0.1,
+  "causal_pca_mode": "proto_shrinkage_cov_ema",
+  "causal_fixed_basis_path": null,
   "row_gram": [
     [
       1.000000038792543,

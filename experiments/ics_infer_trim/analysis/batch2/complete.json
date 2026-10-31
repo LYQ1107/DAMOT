@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "batch": 2,
+  "bootstrap_seed": 0,
+  "repetitions": 10000,
+  "test_split": "Exact ics_advantage deterministic MD5 video split",
+  "single_training_seed": true,
+  "statistic": "Equal-video paired mean; percentile pointwise95% CI; pooled videos, no multiplicity correction",
+  "aggregate": "Original native nonlinear domain aggregate; B2 mean is unweighted domain mean"
+}

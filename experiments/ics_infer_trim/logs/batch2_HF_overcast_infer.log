@@ -1,0 +1,31 @@
+loading annotations into memory...
+Done (t=0.64s)
+creating index...
+index created!
+VIDEO_COMPLETE HF overcast 1 202 elapsed 29.3
+VIDEO_COMPLETE HF overcast 2 202 elapsed 56.5
+VIDEO_COMPLETE HF overcast 3 203 elapsed 82.9
+VIDEO_COMPLETE HF overcast 4 199 elapsed 109.4
+VIDEO_COMPLETE HF overcast 5 202 elapsed 135.6
+VIDEO_COMPLETE HF overcast 6 202 elapsed 158.8
+VIDEO_COMPLETE HF overcast 7 203 elapsed 182.3
+VIDEO_COMPLETE HF overcast 8 203 elapsed 205.1
+VIDEO_COMPLETE HF overcast 9 202 elapsed 232.2
+VIDEO_COMPLETE HF overcast 10 202 elapsed 257.6
+VIDEO_COMPLETE HF overcast 11 203 elapsed 283.7
+VIDEO_COMPLETE HF overcast 12 202 elapsed 310.0
+VIDEO_COMPLETE HF overcast 13 202 elapsed 334.5
+VIDEO_COMPLETE HF overcast 14 202 elapsed 361.8
+VIDEO_COMPLETE HF overcast 15 203 elapsed 389.6
+VIDEO_COMPLETE HF overcast 16 202 elapsed 414.3
+loading annotations into memory...
+Done (t=0.33s)
+creating index...
+index created!
+VIDEO_COMPLETE HF overcast 17 202 elapsed 34.2
+VIDEO_COMPLETE HF overcast 18 203 elapsed 58.0
+VIDEO_COMPLETE HF overcast 19 202 elapsed 84.9
+VIDEO_COMPLETE HF overcast 20 202 elapsed 110.0
+VIDEO_COMPLETE HF overcast 21 202 elapsed 136.2
+VIDEO_COMPLETE HF overcast 22 203 elapsed 166.9
+INFERENCE_COMPLETE /data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/jobs/HF/overcast

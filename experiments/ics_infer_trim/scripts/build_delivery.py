@@ -8,8 +8,8 @@ dest.mkdir(parents=True)
 sources=[ROOT/'SUMMARY.md']
 for folder in ['scripts','code','inputs','manifests','logs','analysis','jobs','results']:
     base=ROOT/folder
-    for p in (Path(parent)/name for parent,dirs,files in os.walk(str(base),followlinks=True) for name in files):
-        if not p.is_file() or '__pycache__' in p.parts:continue
+    for p in (Path(parent)/name for parent,dirs,files in os.walk(str(base),followlinks=False) for name in files):
+        if p.is_symlink() or not p.is_file() or '__pycache__' in p.parts:continue
         if folder=='code' and p.suffix not in ['.py','.md','.txt','.sh','.yml','.yaml','.json']:continue
         if folder=='results' and p.suffix not in ['.csv','.py','.json']:continue
         if folder=='results' and p.suffix=='.json' and p.name not in ['evaluation_flat_metrics.json','metrics_complete.json']:continue

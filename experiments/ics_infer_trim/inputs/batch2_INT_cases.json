@@ -1,0 +1,14 @@
+[
+  {
+    "label": "INT_b0",
+    "beta": 0.0,
+    "basis_source": "checkpoint_bank",
+    "npy_path": null
+  },
+  {
+    "label": "INT_b025",
+    "beta": 0.25,
+    "basis_source": "checkpoint_bank",
+    "npy_path": null
+  }
+]

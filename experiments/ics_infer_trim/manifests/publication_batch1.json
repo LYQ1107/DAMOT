@@ -1,0 +1,12 @@
+{
+  "status": "published",
+  "branch": "main",
+  "commit": "f5e3d0b465cb6fa9912c698c50aa31cf2d4d9d01",
+  "parent": "b76c74f5e954ef6f405b38b642a87b9208c5e3f5",
+  "tree": "35639930d50725df7978eca65c28298e5e8863ab",
+  "files": 819,
+  "all_remote_blob_hashes_match": true,
+  "summary_url": "https://github.com/LYQ1107/DAMOT/blob/main/experiments/ics_infer_trim/SUMMARY.md",
+  "NAS_root": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136",
+  "batch2": "queued, awaiting independent complete stage4 training and frozen evaluation"
+}

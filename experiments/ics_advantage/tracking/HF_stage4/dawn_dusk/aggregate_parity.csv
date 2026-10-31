@@ -1,0 +1,9 @@
+model,domain,category,metric,observed,reference,delta,passed
+HF_stage4,dawn_dusk,OVERALL,HOTA,42.61931577136514,42.61931577136514,0.0,True
+HF_stage4,dawn_dusk,OVERALL,AssA,48.303235281424975,48.303235281424975,0.0,True
+HF_stage4,dawn_dusk,OVERALL,IDF1,50.41983987502441,50.41983987502441,0.0,True
+HF_stage4,dawn_dusk,OVERALL,IDSW,2466.0,2466.0,0.0,True
+HF_stage4,dawn_dusk,car,HOTA,46.2878115746222,46.2878115746222,0.0,True
+HF_stage4,dawn_dusk,car,AssA,50.16298161236037,50.16298161236037,0.0,True
+HF_stage4,dawn_dusk,car,IDF1,55.610679795493276,55.610679795493276,0.0,True
+HF_stage4,dawn_dusk,car,IDSW,1797.0,1797.0,0.0,True

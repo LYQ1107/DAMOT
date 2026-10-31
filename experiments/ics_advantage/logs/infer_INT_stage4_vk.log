@@ -1,0 +1,91 @@
+[plan] clone              videos=10 frames=600 dose_frames=0 missing(sampled)=0
+[plan] fog                videos=10 frames=600 dose_frames=0 missing(sampled)=0
+[plan] morning            videos=10 frames=600 dose_frames=0 missing(sampled)=0
+[plan] overcast           videos=10 frames=600 dose_frames=0 missing(sampled)=0
+[plan] rain               videos=10 frames=600 dose_frames=0 missing(sampled)=0
+[plan] sunset             videos=10 frames=600 dose_frames=0 missing(sampled)=0
+2026-10-31 16:49:11,936 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 16:49:11,936 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 16:49:11,936 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-31 16:49:12,547 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 16:49:12,547 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 16:49:12,548 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+[model] {"checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage04_after_night.pth", "config": "checkpoint meta", "matched_keys": 752, "target_keys": 752, "missing_keys": 0, "bank_cfg": {"use_causal_direction_bank": true, "causal_pca_mode": "intervention_residual", "causal_num_pcs": 2, "causal_start_pc": 0, "causal_trim_alpha": 0.25, "causal_normalize_feats": true, "causal_residual_normalize_before_delta": null, "use_roi_proto_memory": true, "roi_proto_class_ids": [1]}, "bank_initialized": true, "bank_num_updates": 1640, "missing_key_names": [], "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only"}
+[clone] 50/600 frames  18.8s
+[clone] 100/600 frames  29.9s
+[clone] 150/600 frames  41.0s
+[clone] 200/600 frames  53.5s
+[clone] 250/600 frames  65.6s
+[clone] 300/600 frames  77.1s
+[clone] 350/600 frames  88.2s
+[clone] 400/600 frames  101.1s
+[clone] 450/600 frames  113.0s
+[clone] 500/600 frames  126.5s
+[clone] 550/600 frames  140.8s
+[clone] 600/600 frames  151.3s
+[done] clone rois=9081 dose_rois=0 158.8s
+[fog] 50/600 frames  6.4s
+[fog] 100/600 frames  12.4s
+[fog] 150/600 frames  19.4s
+[fog] 200/600 frames  24.5s
+[fog] 250/600 frames  33.6s
+[fog] 300/600 frames  40.1s
+[fog] 350/600 frames  47.5s
+[fog] 400/600 frames  55.1s
+[fog] 450/600 frames  64.3s
+[fog] 500/600 frames  74.7s
+[fog] 550/600 frames  82.7s
+[fog] 600/600 frames  95.6s
+[done] fog rois=9081 dose_rois=0 102.6s
+[morning] 50/600 frames  11.0s
+[morning] 100/600 frames  20.3s
+[morning] 150/600 frames  26.7s
+[morning] 200/600 frames  34.7s
+[morning] 250/600 frames  49.1s
+[morning] 300/600 frames  59.8s
+[morning] 350/600 frames  70.2s
+[morning] 400/600 frames  84.8s
+[morning] 450/600 frames  96.9s
+[morning] 500/600 frames  104.7s
+[morning] 550/600 frames  113.3s
+[morning] 600/600 frames  119.3s
+[done] morning rois=9081 dose_rois=0 123.1s
+[overcast] 50/600 frames  5.7s
+[overcast] 100/600 frames  11.0s
+[overcast] 150/600 frames  16.3s
+[overcast] 200/600 frames  22.3s
+[overcast] 250/600 frames  28.4s
+[overcast] 300/600 frames  34.0s
+[overcast] 350/600 frames  39.9s
+[overcast] 400/600 frames  46.0s
+[overcast] 450/600 frames  52.0s
+[overcast] 500/600 frames  58.1s
+[overcast] 550/600 frames  64.0s
+[overcast] 600/600 frames  69.4s
+[done] overcast rois=9081 dose_rois=0 72.7s
+[rain] 50/600 frames  5.6s
+[rain] 100/600 frames  10.8s
+[rain] 150/600 frames  15.5s
+[rain] 200/600 frames  20.4s
+[rain] 250/600 frames  25.2s
+[rain] 300/600 frames  30.7s
+[rain] 350/600 frames  35.9s
+[rain] 400/600 frames  41.6s
+[rain] 450/600 frames  48.0s
+[rain] 500/600 frames  53.4s
+[rain] 550/600 frames  59.2s
+[rain] 600/600 frames  65.2s
+[done] rain rois=9081 dose_rois=0 69.1s
+[sunset] 50/600 frames  5.4s
+[sunset] 100/600 frames  12.3s
+[sunset] 150/600 frames  18.4s
+[sunset] 200/600 frames  24.2s
+[sunset] 250/600 frames  30.5s
+[sunset] 300/600 frames  36.3s
+[sunset] 350/600 frames  41.9s
+[sunset] 400/600 frames  47.8s
+[sunset] 450/600 frames  54.3s
+[sunset] 500/600 frames  60.1s
+[sunset] 550/600 frames  66.4s
+[sunset] 600/600 frames  72.5s
+[done] sunset rois=9081 dose_rois=0 76.2s

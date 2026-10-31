@@ -54,3 +54,12 @@ BATCH2_STATE frozen_inference_and_native_sequence_metrics
 BATCH2_STATE offline_feature_statistics
 BATCH2_STATE ready_for_review_and_publication
 BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE all_stages_ready
+BATCH2_STATE frozen_inference_and_native_sequence_metrics
+START HF_stage4_smoke GPU 4
+START INT_stage4_smoke GPU 7
+DONE INT_stage4_smoke
+DONE HF_stage4_smoke
+START INT_stage4 GPU 4
+START HF_stage4 GPU 7

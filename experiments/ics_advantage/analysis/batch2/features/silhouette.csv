@@ -1,4 +1,10 @@
 model,pool,silhouette,samples,identities,metric,exact,views
+HF_stage4,night,0.048352586763678894,36693,588,cosine,True,15
+HF_stage4,dawn_dusk,0.02842122814986169,21282,446,cosine,True,15
+HF_stage4,pooled,0.012365980379085754,57975,1034,cosine,True,15
+INT_stage4,night,0.048472068613854925,36693,588,cosine,True,15
+INT_stage4,dawn_dusk,0.02858315804773581,21282,446,cosine,True,15
+INT_stage4,pooled,0.011056967574329028,57975,1034,cosine,True,15
 HF_stage1,night,0.05374832106169131,36693,588,cosine,True,15
 HF_stage1,dawn_dusk,0.05408032259929152,21282,446,cosine,True,15
 HF_stage1,pooled,0.02674503294548923,57975,1034,cosine,True,15

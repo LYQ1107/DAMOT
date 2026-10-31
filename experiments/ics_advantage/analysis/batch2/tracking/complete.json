@@ -11,6 +11,6 @@
   "all_zero_wilcoxon_p": 1,
   "CI": "pointwise percentile95%, no multiplicity correction",
   "single_training_seed": true,
-  "brightness_bin_rows": 0,
-  "brightness_bins_not_applicable": true
+  "brightness_bin_rows": 168,
+  "brightness_bins_not_applicable": false
 }

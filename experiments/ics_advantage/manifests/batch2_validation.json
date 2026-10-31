@@ -2,10 +2,26 @@
   "status": "PASS",
   "batch": "2",
   "models": [
+    "HF_stage4",
+    "INT_stage4",
     "HF_stage1",
     "INT_stage1"
   ],
   "feature_checks": [
+    {
+      "model": "HF_stage4",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 9.622994980515442e-07
+    },
+    {
+      "model": "INT_stage4",
+      "rois": 11489,
+      "all_GT_and_metadata_exact": true,
+      "first_five_dose_support_exact": true,
+      "supplemental_clean_max_abs_difference": 9.716258388831056e-07
+    },
     {
       "model": "HF_stage1",
       "rois": 11489,
@@ -21,11 +37,11 @@
       "supplemental_clean_max_abs_difference": 1.1317970536328659e-06
     }
   ],
-  "view_rows": 90,
-  "mean_rows": 6,
-  "paired_feature_rows": 90,
-  "native_aggregate_checks": 16,
-  "figures_pdf_png": 9,
+  "view_rows": 180,
+  "mean_rows": 12,
+  "paired_feature_rows": 180,
+  "native_aggregate_checks": 80,
+  "figures_pdf_png": 18,
   "all_bootstrap_intervals_valid10000": true,
   "source_data_mutation": "none; task-local snapshots and outputs only"
 }

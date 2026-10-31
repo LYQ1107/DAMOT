@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "source": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage4/overcast",
+  "videos": 22,
+  "frames": 4448,
+  "raw_predictions_sha256": "0fc931de75059a505206a0b1ae531e41b1b62595bad221f4c9b21db75478395f",
+  "annotation_sha256": "b95d22fd44142d15d637536938ac4dd4d0e160dee50ca530e5fe260711be8e33",
+  "HOTA_AssA": "Frozen original TrackEval detailed arrays, checked through native combine_sequences and combine_classes_det_averaged",
+  "IDF1_IDSW": "Same MMTracking/MOTMetrics accumulators as original evaluator; per-video identity counts sum to original aggregate exactly",
+  "note": "Native evaluator already mixes TrackEval HOTA/AssA with MOTMetrics IDF1/IDSW; keeping this protocol fulfills aggregate parity. Not switching ID matching implementations."
+}

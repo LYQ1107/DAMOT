@@ -1,0 +1,22 @@
+loading annotations into memory...
+Done (t=0.31s)
+creating index...
+index created!
+VIDEO_COMPLETE INT rainy 1 202 elapsed 19.1
+VIDEO_COMPLETE INT rainy 2 102 elapsed 28.2
+VIDEO_COMPLETE INT rainy 3 208 elapsed 44.8
+VIDEO_COMPLETE INT rainy 4 103 elapsed 56.3
+VIDEO_COMPLETE INT rainy 5 203 elapsed 72.9
+VIDEO_COMPLETE INT rainy 6 202 elapsed 90.7
+VIDEO_COMPLETE INT rainy 7 203 elapsed 106.7
+VIDEO_COMPLETE INT rainy 8 202 elapsed 122.7
+VIDEO_COMPLETE INT rainy 9 203 elapsed 138.3
+VIDEO_COMPLETE INT rainy 10 202 elapsed 155.2
+VIDEO_COMPLETE INT rainy 11 106 elapsed 163.9
+VIDEO_COMPLETE INT rainy 12 202 elapsed 181.9
+VIDEO_COMPLETE INT rainy 13 202 elapsed 200.0
+VIDEO_COMPLETE INT rainy 14 203 elapsed 218.2
+VIDEO_COMPLETE INT rainy 15 202 elapsed 236.6
+VIDEO_COMPLETE INT rainy 16 203 elapsed 258.5
+VIDEO_COMPLETE INT rainy 17 202 elapsed 277.3
+INFERENCE_COMPLETE /data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_infer_trim_20261031_022136/jobs/INT/rainy

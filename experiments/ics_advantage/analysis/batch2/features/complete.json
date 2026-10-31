@@ -1,6 +1,8 @@
 {
   "status": "complete",
   "models": [
+    "HF_stage4",
+    "INT_stage4",
     "HF_stage1",
     "INT_stage1"
   ],

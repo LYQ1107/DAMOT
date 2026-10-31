@@ -1,5 +1,5 @@
 {
-  "mode": "stage1_only_source_stopped",
+  "mode": "all_stages_ready",
   "source": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/code",
   "files": [
     {

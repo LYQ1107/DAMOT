@@ -1,0 +1,36 @@
+[plan] night              videos=25 frames=750 dose_frames=125 missing(sampled)=0
+[plan] dawn_dusk          videos=17 frames=510 dose_frames=85 missing(sampled)=0
+2026-10-31 16:27:46,186 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 16:27:46,186 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 16:27:46,187 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-31 16:27:46,845 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 16:27:46,845 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 16:27:46,845 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+[model] {"checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage04_after_night.pth", "config": "checkpoint meta", "matched_keys": 752, "target_keys": 752, "missing_keys": 0, "bank_cfg": {"use_causal_direction_bank": true, "causal_pca_mode": "intervention_residual", "causal_num_pcs": 2, "causal_start_pc": 0, "causal_trim_alpha": 0.25, "causal_normalize_feats": true, "causal_residual_normalize_before_delta": null, "use_roi_proto_memory": true, "roi_proto_class_ids": [1]}, "bank_initialized": true, "bank_num_updates": 1640, "missing_key_names": [], "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only"}
+[night] 50/750 frames  56.6s
+[night] 100/750 frames  106.9s
+[night] 150/750 frames  144.8s
+[night] 200/750 frames  195.4s
+[night] 250/750 frames  246.8s
+[night] 300/750 frames  285.8s
+[night] 350/750 frames  336.1s
+[night] 400/750 frames  383.3s
+[night] 450/750 frames  420.2s
+[night] 500/750 frames  466.4s
+[night] 550/750 frames  510.5s
+[night] 600/750 frames  546.3s
+[night] 650/750 frames  591.8s
+[night] 700/750 frames  635.8s
+[night] 750/750 frames  673.1s
+[done] night rois=7207 dose_rois=1256 682.2s
+[dawn_dusk] 50/510 frames  47.8s
+[dawn_dusk] 100/510 frames  94.4s
+[dawn_dusk] 150/510 frames  133.6s
+[dawn_dusk] 200/510 frames  178.9s
+[dawn_dusk] 250/510 frames  226.2s
+[dawn_dusk] 300/510 frames  263.3s
+[dawn_dusk] 350/510 frames  309.3s
+[dawn_dusk] 400/510 frames  357.2s
+[dawn_dusk] 450/510 frames  392.6s
+[dawn_dusk] 500/510 frames  437.1s
+[done] dawn_dusk rois=4282 dose_rois=703 448.3s

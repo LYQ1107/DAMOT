@@ -1,0 +1,6 @@
+No CUDA runtime is found, using CUDA_HOME='/usr'
+loading annotations into memory...
+Done (t=0.44s)
+creating index...
+index created!
+METRICS_COMPLETE HF_b0 rainy

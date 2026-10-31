@@ -1,0 +1,871 @@
+{
+  "no_old_task_writes": true,
+  "annotations_unchanged": true,
+  "NAS_source": "Valadmin@127.0.0.1:/home/A100",
+  "aliases": [
+    {
+      "domain": "overcast",
+      "video": "b1c66a42-6f7d68ca",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1c66a42-6f7d68ca",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1c66a42-6f7d68ca",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1d0091f-f2c2d2ae",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d0091f-f2c2d2ae",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d0091f-f2c2d2ae",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1d968b9-563405f4",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d968b9-563405f4",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d968b9-563405f4",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1d971b4-ac67ca0d",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d971b4-ac67ca0d",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d971b4-ac67ca0d",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1e0c01d-dd9e6e2f",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e0c01d-dd9e6e2f",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e0c01d-dd9e6e2f",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1f4491b-cf446195",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f4491b-cf446195",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f4491b-cf446195",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1f4491b-dd8dfed5",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f4491b-dd8dfed5",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f4491b-dd8dfed5",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1f85377-44885085",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f85377-44885085",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f85377-44885085",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1fc95c9-cb2882c7",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1fc95c9-cb2882c7",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1fc95c9-cb2882c7",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1ff4656-0435391e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ff4656-0435391e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ff4656-0435391e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b1ff4656-ebcfeb35",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ff4656-ebcfeb35",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ff4656-ebcfeb35",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b200e97a-bf074435",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b200e97a-bf074435",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b200e97a-bf074435",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b20b9c19-91e01a50",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b20b9c19-91e01a50",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b20b9c19-91e01a50",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b22f385b-5d7e5202",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b22f385b-5d7e5202",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b22f385b-5d7e5202",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b23b2649-6af03cd5",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23b2649-6af03cd5",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23b2649-6af03cd5",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b23b2649-8349d2a1",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23b2649-8349d2a1",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23b2649-8349d2a1",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b24071b8-b3ee1196",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b24071b8-b3ee1196",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b24071b8-b3ee1196",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b2408e45-984ba5aa",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2408e45-984ba5aa",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2408e45-984ba5aa",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b24d283f-33783d1b",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b24d283f-33783d1b",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b24d283f-33783d1b",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b251064f-30002542",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-30002542",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-30002542",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b251064f-4696b75e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-4696b75e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-4696b75e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "overcast",
+      "video": "b251064f-5f6b663e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-5f6b663e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b251064f-5f6b663e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "0010bf16-9ee17cd9",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0010bf16-9ee17cd9",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0010bf16-9ee17cd9",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "0024b742-acbed4fb",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0024b742-acbed4fb",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0024b742-acbed4fb",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "0051e391-d32a618e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0051e391-d32a618e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0051e391-d32a618e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "0062e803-38c0a33a",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0062e803-38c0a33a",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0062e803-38c0a33a",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "00690c26-e4bbbd72",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00690c26-e4bbbd72",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00690c26-e4bbbd72",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "00699de6-58847872",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00699de6-58847872",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00699de6-58847872",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "006dd004-34630e8d",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/006dd004-34630e8d",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/006dd004-34630e8d",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "00810e80-37641274",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00810e80-37641274",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00810e80-37641274",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "0081da60-27997c07",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0081da60-27997c07",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0081da60-27997c07",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "0081da60-5fa22cc6",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0081da60-5fa22cc6",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0081da60-5fa22cc6",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b1cac6a7-04e33135",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1cac6a7-04e33135",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1cac6a7-04e33135",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b1d0091f-75824d0d",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d0091f-75824d0d",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d0091f-75824d0d",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b1e1a7b8-65ec7612",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-65ec7612",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-65ec7612",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b1e1a7b8-a7426a97",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-a7426a97",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-a7426a97",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b1e1a7b8-b397c445",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-b397c445",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-b397c445",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b1e9ee0e-67e26f2e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e9ee0e-67e26f2e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e9ee0e-67e26f2e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "rainy",
+      "video": "b2156f8e-72e1547c",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2156f8e-72e1547c",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2156f8e-72e1547c",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "0000f77c-62c2a288",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0000f77c-62c2a288",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0000f77c-62c2a288",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "0000f77c-cb820c98",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0000f77c-cb820c98",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0000f77c-cb820c98",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00067cfb-e535423e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00067cfb-e535423e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00067cfb-e535423e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "0008a165-c48f4b3e",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0008a165-c48f4b3e",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0008a165-c48f4b3e",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00091078-84635cf2",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-84635cf2",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-84635cf2",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00091078-c1d32eea",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-c1d32eea",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-c1d32eea",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00091078-f32de4d2",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-f32de4d2",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00091078-f32de4d2",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00391a82-8be5b76d",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00391a82-8be5b76d",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00391a82-8be5b76d",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00391a82-d1428e56",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00391a82-d1428e56",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00391a82-d1428e56",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "00417c23-220bbc98",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00417c23-220bbc98",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/00417c23-220bbc98",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "005c4fd3-cb4d6287",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/005c4fd3-cb4d6287",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/005c4fd3-cb4d6287",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "0062ab5a-54bb129b",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0062ab5a-54bb129b",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/0062ab5a-54bb129b",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "006676e5-624162a7",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/006676e5-624162a7",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/train/006676e5-624162a7",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1ceb32e-51852abe",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ceb32e-51852abe",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1ceb32e-51852abe",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d10d08-5b108225",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d10d08-5b108225",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d10d08-5b108225",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d10d08-da110fcb",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d10d08-da110fcb",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d10d08-da110fcb",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d4b62c-60aab822",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d4b62c-60aab822",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d4b62c-60aab822",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d59b1f-a38aec79",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d59b1f-a38aec79",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d59b1f-a38aec79",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d7b3ac-0bdb47dc",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-0bdb47dc",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-0bdb47dc",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d7b3ac-9e14f05f",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-9e14f05f",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-9e14f05f",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d7b3ac-afa57f22",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-afa57f22",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d7b3ac-afa57f22",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1d968b9-ce42734f",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d968b9-ce42734f",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1d968b9-ce42734f",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1dd58c1-8b546ba7",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1dd58c1-8b546ba7",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1dd58c1-8b546ba7",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1e1a7b8-0aec80e8",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-0aec80e8",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1e1a7b8-0aec80e8",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1eb9133-5cc75c18",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1eb9133-5cc75c18",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1eb9133-5cc75c18",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1f0efd9-37a14dda",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f0efd9-37a14dda",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1f0efd9-37a14dda",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b1fbaab8-68db7df7",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1fbaab8-68db7df7",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b1fbaab8-68db7df7",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b2036451-aa924fd1",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2036451-aa924fd1",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b2036451-aa924fd1",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b216243d-ad4306b9",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b216243d-ad4306b9",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b216243d-ad4306b9",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b21c86ac-0dc77d82",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-0dc77d82",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-0dc77d82",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b21c86ac-2eb7ba16",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-2eb7ba16",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-2eb7ba16",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b21c86ac-71205084",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-71205084",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b21c86ac-71205084",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "dawn_dusk",
+      "video": "b23a79d1-e434acaa",
+      "HF_source": "/data1/liuyeqiang/nas/A100/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23a79d1-e434acaa",
+      "INTICS_source": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/data1/LWR/vranlee/SERVER_ONLY/avis/masa/data/bdd/bdd100k/images/track/val/b23a79d1-e434acaa",
+      "same_source_object": true,
+      "storage_kind": "NAS"
+    },
+    {
+      "domain": "night",
+      "video": "b1db7e22-cfa74dc3",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1db7e22-cfa74dc3",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1db7e22-cfa74dc3",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1e62c91-eca210a9",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1e62c91-eca210a9",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1e62c91-eca210a9",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1e88fd2-c1e4fd2b",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1e88fd2-c1e4fd2b",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1e88fd2-c1e4fd2b",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1ebfc3c-740ec84a",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ebfc3c-740ec84a",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ebfc3c-740ec84a",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1ebfc3c-cc9c2bb8",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ebfc3c-cc9c2bb8",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ebfc3c-cc9c2bb8",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1ee702d-4a193906",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ee702d-4a193906",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1ee702d-4a193906",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1f20aa0-3401c3bf",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f20aa0-3401c3bf",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f20aa0-3401c3bf",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1f20aa0-50213047",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f20aa0-50213047",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f20aa0-50213047",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1f6c103-8b75ea3e",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f6c103-8b75ea3e",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1f6c103-8b75ea3e",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b1fbf878-b31a8293",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1fbf878-b31a8293",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b1fbf878-b31a8293",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b200b84e-4a792877",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b200b84e-4a792877",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b200b84e-4a792877",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b20234fd-822029be",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b20234fd-822029be",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b20234fd-822029be",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b2064e61-2beadd45",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2064e61-2beadd45",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2064e61-2beadd45",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b206a78b-99f405ab",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b206a78b-99f405ab",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b206a78b-99f405ab",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b20eae11-6817ba7a",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b20eae11-6817ba7a",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b20eae11-6817ba7a",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b2102d00-5eb86b71",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2102d00-5eb86b71",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2102d00-5eb86b71",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b2102d00-a8c09be1",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2102d00-a8c09be1",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2102d00-a8c09be1",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b214d1e1-f248c616",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b214d1e1-f248c616",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b214d1e1-f248c616",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b21547c1-73e457f8",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21547c1-73e457f8",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21547c1-73e457f8",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b21547c1-796757ac",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21547c1-796757ac",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21547c1-796757ac",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b2194b15-1825056a",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2194b15-1825056a",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2194b15-1825056a",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b21bfb83-ea32f716",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21bfb83-ea32f716",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21bfb83-ea32f716",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b21c68e6-65674a17",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21c68e6-65674a17",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21c68e6-65674a17",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b21d5efb-5e2cd743",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21d5efb-5e2cd743",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b21d5efb-5e2cd743",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b229488e-e4714bb7",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b229488e-e4714bb7",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b229488e-e4714bb7",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b230132b-ff8f2719",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b230132b-ff8f2719",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b230132b-ff8f2719",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b23a79d1-43dfeecd",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23a79d1-43dfeecd",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23a79d1-43dfeecd",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b23f7012-32d284ce",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23f7012-32d284ce",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23f7012-32d284ce",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b23f7012-fab06dac",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23f7012-fab06dac",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b23f7012-fab06dac",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b242f6b2-0033bdfb",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-0033bdfb",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-0033bdfb",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b242f6b2-99d2f2c1",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-99d2f2c1",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-99d2f2c1",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b242f6b2-f5da110f",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-f5da110f",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b242f6b2-f5da110f",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b24380ab-6dbeb908",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b24380ab-6dbeb908",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b24380ab-6dbeb908",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b2505382-1423f56a",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2505382-1423f56a",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2505382-1423f56a",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b2505382-272e7823",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2505382-272e7823",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b2505382-272e7823",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    },
+    {
+      "domain": "night",
+      "video": "b251b746-00138418",
+      "HF_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b251b746-00138418",
+      "INTICS_source": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/images/night/b251b746-00138418",
+      "same_source_object": true,
+      "storage_kind": "local_cache"
+    }
+  ]
+}

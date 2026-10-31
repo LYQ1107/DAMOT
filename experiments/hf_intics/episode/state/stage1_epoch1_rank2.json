@@ -1,0 +1,40 @@
+{
+  "path": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/state/stage1_epoch1_rank2.pth",
+  "stage": 1,
+  "epoch": 1,
+  "rank": 2,
+  "final": false,
+  "activity": {
+    "bank_initialized": true,
+    "ICS_num_updates": 67,
+    "ICS_last_effective_rois": 124,
+    "ICS_last_update_ok": true,
+    "APR_calls": 68,
+    "APR_basis_ready_calls": 68,
+    "APR_coupled_loss_active_calls": 0,
+    "APR_memory": {
+      "history_domains": [],
+      "prototypes_per_domain_class": {},
+      "current_candidates": {
+        "1": 1000
+      },
+      "mean_feature_norm": 0.0,
+      "last_loss_stats": {}
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 1088
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 1088
+      }
+    ],
+    "allocated_MiB": 23240.927734375,
+    "reserved_MiB": 28070.0
+  },
+  "time": 1793388367.3990307
+}

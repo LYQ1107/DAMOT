@@ -1,0 +1,99 @@
+{
+  "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage01_after_overcast.pth",
+  "config": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/configs/stage1.py",
+  "matched_keys": 752,
+  "target_keys": 752,
+  "missing_keys": 0,
+  "bank_cfg": {
+    "use_causal_direction_bank": true,
+    "causal_pca_mode": "intervention_residual",
+    "causal_num_pcs": 2,
+    "causal_start_pc": 0,
+    "causal_trim_alpha": 0.25,
+    "causal_normalize_feats": true,
+    "causal_residual_normalize_before_delta": null,
+    "use_roi_proto_memory": true,
+    "roi_proto_class_ids": [
+      1
+    ]
+  },
+  "bank_initialized": true,
+  "bank_num_updates": 340,
+  "missing_key_names": [],
+  "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only",
+  "label": "INTICS_stage1_e5",
+  "domain": "clear_holdout_45v",
+  "views": [
+    "clean",
+    "fap"
+  ],
+  "dose_views": [
+    "dark_0.80",
+    "dark_0.60",
+    "dark_0.40",
+    "dark_0.25",
+    "fog_0.15",
+    "fog_0.30",
+    "fog_0.45",
+    "fog_0.60",
+    "fapk_0.90",
+    "fapk_0.70",
+    "fapk_0.50",
+    "fapk_0.30"
+  ],
+  "args": {
+    "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage01_after_overcast.pth",
+    "config": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/configs/stage1.py",
+    "label": "INTICS_stage1_e5",
+    "domain": [
+      [
+        "clear_holdout_45v",
+        "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/clear_holdout_45v.json",
+        "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/probe_data/clear_holdout_45v"
+      ],
+      [
+        "overcast",
+        "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
+        "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/probe_data/overcast"
+      ],
+      [
+        "rainy",
+        "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/rainy.json",
+        "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/probe_data/rainy"
+      ],
+      [
+        "dawn_dusk",
+        "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+        "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/probe_data/dawn_dusk"
+      ],
+      [
+        "night",
+        "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+        "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/probe_data/night"
+      ]
+    ],
+    "out_dir": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/probe/stage1/features",
+    "views": "clean,fap",
+    "dose_frames_per_video": 0,
+    "classes": "car",
+    "max_videos": 40,
+    "frames_per_video": 30,
+    "frame_stride": 2,
+    "max_rois_per_frame": 40,
+    "min_box": 16.0,
+    "img_scale": [
+      1296,
+      720
+    ],
+    "fap_low_ratio": 0.1,
+    "fap_keep_prob": 0.9,
+    "video_regex": null,
+    "seed": 20261028,
+    "device": "cuda",
+    "view_batch_size": 4,
+    "workers": 4,
+    "dry_run": false
+  },
+  "rois": 7956,
+  "elapsed_seconds": 318.11529779434204
+}

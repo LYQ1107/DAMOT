@@ -1,0 +1,3 @@
+SOURCE_SEALED 347
+REPORT_READY complete 70
+{"status": "passed", "stopped_by_prespecified_stage1_gate": false, "complete_four_domain_run": true, "evaluation_cells": 10, "seed": 1790355234, "gpus": 4, "epochs_per_stage": 5, "original_HF_code_seal_verified": true, "preflight_all_passed": true, "mandatory_stage1_gate_verified": true}

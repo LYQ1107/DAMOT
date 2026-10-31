@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "variant": "INTICS",
+  "iterations": 50,
+  "rank": 1,
+  "key_effective_batches": 50,
+  "ref_effective_batches": 50,
+  "first_initialized_iteration": 1,
+  "loss_track_trim_mean": 0.060811578705906866,
+  "compute_mean_last40": 21.988996169902386,
+  "iteration_mean_last40": 22.386162536591293,
+  "bank_center": false,
+  "bank_normalize": false,
+  "disposable_weights": true,
+  "seed": 1790355234,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2
+}

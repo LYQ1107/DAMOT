@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "independent_method": "scipy.linalg.subspace_angles",
+  "PC1_to_offline_PC1_deg": 82.480922995447,
+  "PC1_to_offline_2D_principal_angle_deg": 33.756089087256875,
+  "two_dimensional_principal_angles_deg": [
+    33.453465219188494,
+    88.35749131267073
+  ],
+  "threshold_deg": 45,
+  "original_registered_axis_rule": "stop",
+  "direction_to_subspace_rule": "pass",
+  "clarification_pending": false,
+  "bank_sha256": "5e7dc1a3327ce22d1d98bea200a4dec053d4120ad0d6a59b593edf73e14b6b2d",
+  "offline_sha256": "433fbb42fbd2d27b4955e0771bbebe51ac95b1035db4b37ab5175a78b9bf17f0",
+  "user_selected_gate": "direction_to_subspace",
+  "user_authorized_continuation": true
+}

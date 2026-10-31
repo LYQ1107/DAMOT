@@ -1,0 +1,23 @@
+{
+  "mode": "off",
+  "loss": 0.7292587757110596,
+  "log_vars": {
+    "rpn_distillation_loss": 0.48458677530288696,
+    "roi_distillation_loss": 0.0195439625531435,
+    "loss_track": 0.13549955189228058,
+    "loss_track_aux": 0.08182648569345474,
+    "loss_track_trim": 0.003552856622263789,
+    "loss_track_aux_trim": 0.001987301744520664,
+    "loss_roi_proto": 0.0022618582006543875,
+    "loss": 0.7292587757110596
+  },
+  "elapsed_s": 19.7093533501029,
+  "seed": 1790355234,
+  "num_samples": 16,
+  "HF_stage3_checkpoint": true,
+  "APR_history_domains": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ]
+}

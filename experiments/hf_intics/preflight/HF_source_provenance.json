@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "source_root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/code",
+  "source_and_original_copy_files": 346,
+  "source_matches_NAS_original_copy": true,
+  "all_SHA256_equal": true,
+  "source_read_only": true,
+  "baseline_manifest_sha256": "ce3ac5e81df5a188b20371480511cfab4757696115c146f8f5a6cfd52ee3344f",
+  "time": 1793390452.5041728
+}

@@ -1,0 +1,59 @@
+{
+  "path": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/state/stage2_epoch4_rank3.pth",
+  "stage": 2,
+  "epoch": 4,
+  "rank": 3,
+  "final": false,
+  "activity": {
+    "bank_initialized": true,
+    "ICS_num_updates": 540,
+    "ICS_last_effective_rois": 57,
+    "ICS_last_update_ok": true,
+    "APR_calls": 540,
+    "APR_basis_ready_calls": 540,
+    "APR_coupled_loss_active_calls": 200,
+    "APR_memory": {
+      "history_domains": [
+        "overcast"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 1000
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {
+        "selected_rois": 54,
+        "prototypes": 100,
+        "mean_topk_sim": 0.40277543663978577,
+        "loss": 0.5972245335578918,
+        "gate_enabled": false,
+        "sim_gate_thr": 0.5,
+        "gate_selected_rois": 54,
+        "gate_total_rois": 54,
+        "gate_ratio": 1.0,
+        "coupled": true,
+        "couple_beta": 1.0,
+        "coupled_metric": "projected_cosine"
+      }
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 8640
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 8640
+      }
+    ],
+    "allocated_MiB": 23599.666015625,
+    "reserved_MiB": 27910.0
+  },
+  "time": 1793436493.0933967
+}

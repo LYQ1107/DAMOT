@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "gpus": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "prelaunch_snapshot": "0, 7571, 0\n1, 12133, 0\n2, 2, 0\n3, 2, 0\n4, 2, 0\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 2, 0\n9, 2, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "-m",
+    "torch.distributed.launch",
+    "--nproc_per_node=4",
+    "--master_port=38825",
+    "--use_env",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/scripts/train_with_resume_audit.py",
+    "--run-root",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+    "--mode",
+    "train"
+  ],
+  "pid": 28629,
+  "time": 1793432669.8823647,
+  "exit_code": 0,
+  "finished_time": 1793457496.0159621
+}

@@ -1,0 +1,13 @@
+{
+  "authoritative_results_are_complete": true,
+  "original_raw_failed_attempts_retained": true,
+  "files": [
+    {
+      "original_path": "preflight/failed_disk_full_20261030/manifests__smoke_controller.json",
+      "published_path": "preflight/failed_disk_full_20261030/manifests__smoke_controller.json.incomplete.txt",
+      "bytes": 0,
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Raw metadata truncated by the documented failed attempt; original retained"
+    }
+  ]
+}

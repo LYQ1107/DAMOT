@@ -1,0 +1,26 @@
+{
+  "status": "resolved_continue",
+  "original_user_wording": "bank 第一方向与离线干预方向的主角 > 45°",
+  "initially_registered_definition": "bank PC1 versus offline PC1 (two 1D subspaces)",
+  "initially_registered_angle_deg": 82.48092299544699,
+  "alternative_definition": "bank PC1 versus the offline two-dimensional nuisance subspace",
+  "alternative_principal_angle_deg": 33.75608908725687,
+  "two_dimensional_principal_angles_deg": [
+    33.453465219188544,
+    88.357491312671
+  ],
+  "HOTA_gate_passed": true,
+  "training_process_stopped": true,
+  "all_four_stage1_final_states_saved": true,
+  "user_clarification_requested": true,
+  "dependent_training_and_publication_waiting": false,
+  "documentation": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.subspace_angles.html",
+  "independent_numeric_check": "probe/stage1/angle_definition_check.json",
+  "time": 1793395545.8841953,
+  "resume_authorized": true,
+  "user_answer": "采用PC1到离线二维子空间的主角33.76°，从完整stage1状态恢复并继续；披露判定更正和恢复",
+  "selected_angle_definition": "bank PC1 to offline two-dimensional nuisance column space",
+  "selected_angle_field": "first_direction_to_offline_span_deg",
+  "resolved_time": 1793432506.6191537,
+  "archive_relative_path": "episode/registered_axis_stop_20261031T074135Z"
+}

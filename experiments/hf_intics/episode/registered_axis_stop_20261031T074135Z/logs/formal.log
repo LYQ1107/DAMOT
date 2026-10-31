@@ -1,0 +1,148 @@
+/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/distributed/launch.py:186: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+fatal: not a git repository (or any parent up to mount point /home/liuyeqiang/remote)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /home/liuyeqiang/remote)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /home/liuyeqiang/remote)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /home/liuyeqiang/remote)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-30 19:05:00,478 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 19:05:00,479 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 19:05:00,479 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 19:05:00,998 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 19:05:00,999 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 19:05:00,999 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.33s)
+creating index...
+Done (t=0.38s)
+creating index...
+index created!
+2026-10-30 19:05:02,379 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage overcast, history_domains=[]
+loading annotations into memory...
+index created!
+Done (t=0.39s)
+creating index...
+index created!
+Done (t=0.39s)
+creating index...
+index created!
+2026-10-30 19:05:04,602 - mmtrack - INFO - FORMAL STAGE 1 domain=overcast source_once=True samples=4321 resume_epoch=0
+2026-10-30 19:05:04,604 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-30 19:05:07,136 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage01_after_overcast
+2026-10-30 19:05:07,136 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+2026-10-30 19:05:07,137 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-30 19:05:07,137 - mmtrack - INFO - Checkpoints will be saved to /home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage01_after_overcast by HardDiskBackend.
+2026-10-30 19:05:31,609 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=0.0247 std=1.1609 min=-2.1179 max=2.6400
+2026-10-30 19:05:31,610 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-0.3147 std=1.0784 min=-2.1179 max=2.6400
+2026-10-30 19:05:31,612 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=0.0761 std=1.1253 min=-2.1179 max=2.6400
+2026-10-30 19:05:33,212 - mmtrack - INFO - [CAUSAL_PCA] enabled=True
+2026-10-30 19:05:33,213 - mmtrack - INFO - [CAUSAL_PCA] mode=intervention_residual
+2026-10-30 19:05:33,213 - mmtrack - INFO - [CAUSAL_PCA] cov_momentum=0.98
+2026-10-30 19:05:33,213 - mmtrack - INFO - [CAUSAL_PCA] qr_orthogonalize=True
+2026-10-30 19:05:33,214 - mmtrack - INFO - [CAUSAL_PCA] num_pcs=2
+2026-10-30 19:05:33,214 - mmtrack - INFO - [CAUSAL_PCA] trim_alpha=0.25
+2026-10-30 19:05:33,214 - mmtrack - INFO - [CAUSAL_PCA] loss_weight=0.1
+2026-10-30 19:05:33,214 - mmtrack - INFO - [CAUSAL_PCA] min_samples=32
+2026-10-30 19:05:33,214 - mmtrack - INFO - [CAUSAL_PCA] normalize_feats=True
+2026-10-30 19:05:33,215 - mmtrack - INFO - [CAUSAL_PCA] class_ids=None
+2026-10-30 19:05:33,215 - mmtrack - INFO - [CAUSAL_PCA] score_thr=0.7
+2026-10-30 19:05:33,215 - mmtrack - INFO - [CAUSAL_PCA] use_scores=False
+2026-10-30 19:05:33,215 - mmtrack - INFO - [CAUSAL_PCA] normalized_tensor_spa=False
+2026-10-30 19:05:33,215 - mmtrack - INFO - [CAUSAL_PCA] use_roi_proto_memory=True mode=stage
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+2026-10-30 19:11:32,182 - mmtrack - INFO - Epoch [1][20/68]	lr: 3.996e-05, eta: 1:42:13, time: 19.168, data_time: 0.780, memory: 23602, rpn_distillation_loss: 0.8887, roi_distillation_loss: 0.0690, loss_track: 1.1239, loss_track_aux: 0.1638, loss_track_trim: 0.1079, loss_track_aux_trim: 0.0162, loss_roi_proto: 0.0000, loss: 2.3694, grad_norm: 26.6056
+2026-10-30 19:17:37,114 - mmtrack - INFO - Epoch [1][40/68]	lr: 7.992e-05, eta: 1:33:34, time: 18.261, data_time: 0.203, memory: 23669, rpn_distillation_loss: 0.7526, roi_distillation_loss: 0.0552, loss_track: 0.5850, loss_track_aux: 0.1554, loss_track_trim: 0.0581, loss_track_aux_trim: 0.0154, loss_roi_proto: 0.0000, loss: 1.6218, grad_norm: 14.4232
+2026-10-30 19:20:38,633 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=50 mode=intervention_residual domain=overcast num_feats=79 update_ok=True skip_reason='' eig1=0.0125 eig_ratio=0.1087 cov_trace=0.2162 pc_norm=1.0000 pc_drift=0.0883 loss_track_trim=0.05767 loss_track_aux_trim=0.01354
+2026-10-30 19:20:38,636 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=overcast beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=50 coupled_loss_active_calls=0 total_calls=50 loss_active_now=False history_domains=[]
+2026-10-30 19:23:42,111 - mmtrack - INFO - Epoch [1][60/68]	lr: 1.199e-04, eta: 1:26:36, time: 18.251, data_time: 0.198, memory: 23669, rpn_distillation_loss: 0.6742, roi_distillation_loss: 0.0501, loss_track: 0.5465, loss_track_aux: 0.1442, loss_track_trim: 0.0546, loss_track_aux_trim: 0.0143, loss_roi_proto: 0.0000, loss: 1.4841, grad_norm: 10.1248
+2026-10-30 19:26:06,203 - mmtrack - INFO - Saving checkpoint at 1 epochs
+2026-10-30 19:33:25,313 - mmtrack - INFO - Epoch [2][20/68]	lr: 1.758e-04, eta: 1:11:04, time: 18.778, data_time: 0.521, memory: 23693, rpn_distillation_loss: 0.5840, roi_distillation_loss: 0.0416, loss_track: 0.4556, loss_track_aux: 0.1253, loss_track_trim: 0.0457, loss_track_aux_trim: 0.0125, loss_roi_proto: 0.0000, loss: 1.2647, grad_norm: 11.0330
+2026-10-30 19:37:01,539 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=100 mode=intervention_residual domain=overcast num_feats=147 update_ok=True skip_reason='' eig1=0.0066 eig_ratio=0.0687 cov_trace=0.1772 pc_norm=1.0000 pc_drift=0.2690 loss_track_trim=0.03141 loss_track_aux_trim=0.01163
+2026-10-30 19:37:01,544 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=overcast beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=100 coupled_loss_active_calls=0 total_calls=100 loss_active_now=False history_domains=[]
+2026-10-30 19:39:28,915 - mmtrack - INFO - Epoch [2][40/68]	lr: 2.158e-04, eta: 1:06:19, time: 18.180, data_time: 0.195, memory: 23693, rpn_distillation_loss: 0.5391, roi_distillation_loss: 0.0400, loss_track: 0.3987, loss_track_aux: 0.1149, loss_track_trim: 0.0402, loss_track_aux_trim: 0.0115, loss_roi_proto: 0.0000, loss: 1.1444, grad_norm: 8.6175
+2026-10-30 19:45:33,531 - mmtrack - INFO - Epoch [2][60/68]	lr: 2.557e-04, eta: 1:01:12, time: 18.231, data_time: 0.197, memory: 23693, rpn_distillation_loss: 0.4978, roi_distillation_loss: 0.0362, loss_track: 0.3229, loss_track_aux: 0.1018, loss_track_trim: 0.0328, loss_track_aux_trim: 0.0102, loss_roi_proto: 0.0000, loss: 1.0017, grad_norm: 8.8180
+2026-10-30 19:47:57,820 - mmtrack - INFO - Saving checkpoint at 2 epochs
+2026-10-30 19:53:26,583 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=150 mode=intervention_residual domain=overcast num_feats=162 update_ok=True skip_reason='' eig1=0.0070 eig_ratio=0.0750 cov_trace=0.1637 pc_norm=1.0000 pc_drift=0.1778 loss_track_trim=0.01684 loss_track_aux_trim=0.00800
+2026-10-30 19:53:26,586 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=overcast beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=150 coupled_loss_active_calls=0 total_calls=150 loss_active_now=False history_domains=[]
+2026-10-30 19:55:16,376 - mmtrack - INFO - Epoch [3][20/68]	lr: 3.117e-04, eta: 0:50:52, time: 18.553, data_time: 0.527, memory: 23693, rpn_distillation_loss: 0.5032, roi_distillation_loss: 0.0388, loss_track: 0.3731, loss_track_aux: 0.1090, loss_track_trim: 0.0379, loss_track_aux_trim: 0.0109, loss_roi_proto: 0.0000, loss: 1.0730, grad_norm: 10.2030
+2026-10-30 20:01:21,981 - mmtrack - INFO - Epoch [3][40/68]	lr: 3.517e-04, eta: 0:45:52, time: 18.280, data_time: 0.191, memory: 23693, rpn_distillation_loss: 0.4689, roi_distillation_loss: 0.0363, loss_track: 0.3028, loss_track_aux: 0.1014, loss_track_trim: 0.0307, loss_track_aux_trim: 0.0102, loss_roi_proto: 0.0000, loss: 0.9503, grad_norm: 9.2723
+2026-10-30 20:07:24,937 - mmtrack - INFO - Epoch [3][60/68]	lr: 3.916e-04, eta: 0:40:36, time: 18.148, data_time: 0.198, memory: 23693, rpn_distillation_loss: 0.4655, roi_distillation_loss: 0.0314, loss_track: 0.3111, loss_track_aux: 0.0983, loss_track_trim: 0.0318, loss_track_aux_trim: 0.0099, loss_roi_proto: 0.0000, loss: 0.9479, grad_norm: 23.7755
+2026-10-30 20:08:33,052 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=200 mode=intervention_residual domain=overcast num_feats=176 update_ok=True skip_reason='' eig1=0.0071 eig_ratio=0.0886 cov_trace=0.1435 pc_norm=1.0000 pc_drift=0.1052 loss_track_trim=0.02217 loss_track_aux_trim=0.00979
+2026-10-30 20:08:33,055 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=overcast beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=200 coupled_loss_active_calls=0 total_calls=200 loss_active_now=False history_domains=[]
+2026-10-30 20:09:46,638 - mmtrack - INFO - Saving checkpoint at 3 epochs
+2026-10-30 20:16:58,843 - mmtrack - INFO - Epoch [4][20/68]	lr: 4.476e-04, eta: 0:31:48, time: 18.390, data_time: 0.500, memory: 23693, rpn_distillation_loss: 0.6154, roi_distillation_loss: 0.0347, loss_track: 0.2835, loss_track_aux: 0.0936, loss_track_trim: 0.0288, loss_track_aux_trim: 0.0094, loss_roi_proto: 0.0000, loss: 1.0654, grad_norm: 46.5076
+2026-10-30 20:23:02,803 - mmtrack - INFO - Epoch [4][40/68]	lr: 4.875e-04, eta: 0:26:32, time: 18.198, data_time: 0.200, memory: 23693, rpn_distillation_loss: 1.1082, roi_distillation_loss: 0.0340, loss_track: 0.2982, loss_track_aux: 0.0995, loss_track_trim: 0.0304, loss_track_aux_trim: 0.0100, loss_roi_proto: 0.0000, loss: 1.5804, grad_norm: 86.3377
+2026-10-30 20:24:47,890 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=250 mode=intervention_residual domain=overcast num_feats=131 update_ok=True skip_reason='' eig1=0.0070 eig_ratio=0.0886 cov_trace=0.1421 pc_norm=1.0000 pc_drift=0.1028 loss_track_trim=0.03825 loss_track_aux_trim=0.01107
+2026-10-30 20:24:47,894 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=overcast beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=250 coupled_loss_active_calls=0 total_calls=250 loss_active_now=False history_domains=[]
+2026-10-30 20:29:05,056 - mmtrack - INFO - Epoch [4][60/68]	lr: 5.275e-04, eta: 0:21:09, time: 18.112, data_time: 0.191, memory: 23693, rpn_distillation_loss: 0.7811, roi_distillation_loss: 0.0356, loss_track: 0.2989, loss_track_aux: 0.0974, loss_track_trim: 0.0303, loss_track_aux_trim: 0.0098, loss_roi_proto: 0.0000, loss: 1.2531, grad_norm: 53.9681
+2026-10-30 20:31:29,122 - mmtrack - INFO - Saving checkpoint at 4 epochs
+2026-10-30 20:38:41,358 - mmtrack - INFO - Epoch [5][20/68]	lr: 5.834e-04, eta: 0:13:05, time: 18.442, data_time: 0.515, memory: 23693, rpn_distillation_loss: 1.1551, roi_distillation_loss: 0.0318, loss_track: 0.2638, loss_track_aux: 0.0930, loss_track_trim: 0.0268, loss_track_aux_trim: 0.0094, loss_roi_proto: 0.0000, loss: 1.5799, grad_norm: 76.6192
+2026-10-30 20:41:01,772 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=300 mode=intervention_residual domain=overcast num_feats=48 update_ok=True skip_reason='' eig1=0.0061 eig_ratio=0.0874 cov_trace=0.1365 pc_norm=1.0000 pc_drift=0.1771 loss_track_trim=0.06165 loss_track_aux_trim=0.01358
+2026-10-30 20:41:01,774 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=overcast beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=300 coupled_loss_active_calls=0 total_calls=300 loss_active_now=False history_domains=[]
+2026-10-30 20:44:41,269 - mmtrack - INFO - Epoch [5][40/68]	lr: 6.234e-04, eta: 0:07:41, time: 17.996, data_time: 0.203, memory: 23693, rpn_distillation_loss: 1.1825, roi_distillation_loss: 0.0334, loss_track: 0.2969, loss_track_aux: 0.1027, loss_track_trim: 0.0301, loss_track_aux_trim: 0.0103, loss_roi_proto: 0.0000, loss: 1.6560, grad_norm: 72.7607
+2026-10-30 20:50:44,781 - mmtrack - INFO - Epoch [5][60/68]	lr: 6.633e-04, eta: 0:02:12, time: 18.176, data_time: 0.203, memory: 23693, rpn_distillation_loss: 1.1582, roi_distillation_loss: 0.0337, loss_track: 0.2560, loss_track_aux: 0.0910, loss_track_trim: 0.0261, loss_track_aux_trim: 0.0091, loss_roi_proto: 0.0000, loss: 1.5741, grad_norm: 64.2173
+2026-10-30 20:53:13,519 - mmtrack - INFO - Saving checkpoint at 5 epochs
+2026-10-30 20:54:18,035 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain overcast: prototypes={1: 100} mean_norm=1.0000

@@ -1,0 +1,11 @@
+{
+  "pid": 27804,
+  "args": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/scripts/early_frozen_eval.py",
+    "--stage",
+    "3"
+  ],
+  "time": 1793446975.0990217,
+  "reason": "Frozen stage3 inference on wholly idle cards while unchanged four-GPU Night training continues"
+}

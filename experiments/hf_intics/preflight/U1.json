@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "total_loss_bitwise_equal": true,
+  "all_loss_terms_equal": true,
+  "original": 0.7292587757110596,
+  "modified": 0.7292587757110596,
+  "HF_stage3_with_real_APR_history": true,
+  "seed": 1790355234
+}

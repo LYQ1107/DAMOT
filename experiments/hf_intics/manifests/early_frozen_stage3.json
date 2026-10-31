@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "stage": 3,
+  "pid": 27804,
+  "time": 1793447998.44928,
+  "max_concurrent_inference_jobs": 2,
+  "training_configuration_unchanged": true,
+  "domains": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "checkpoint_sha256": "d607ad65110fc8f02e40ae3d403e1cdfbf84d226ef59184ee2835662af4ee90b",
+  "reused_by_final_controller": true
+}

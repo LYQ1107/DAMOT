@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "gpus": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "prelaunch_snapshot": "0, 9308, 41\n1, 13868, 22\n2, 2, 0\n3, 2, 0\n4, 5445, 0\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 21305, 0\n9, 2, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "-m",
+    "torch.distributed.launch",
+    "--nproc_per_node=4",
+    "--master_port=38029",
+    "--use_env",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/scripts/smoke.py",
+    "--variant",
+    "INTICS"
+  ],
+  "pid": 22141,
+  "time": 1793385670.4854872,
+  "exit_code": 0,
+  "finished_time": 1793386913.8722982
+}

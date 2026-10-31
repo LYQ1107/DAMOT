@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "gpus": [
+    3
+  ],
+  "prelaunch_snapshot": "0, 7571, 0\n1, 12133, 0\n2, 19607, 100\n3, 2, 0\n4, 5295, 0\n5, 2, 100\n6, 2, 0\n7, 5295, 0\n8, 21279, 0\n9, 21279, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/damot_hf_intics_20261031_004258/scripts/preflight_batch.py",
+    "--mode",
+    "residual"
+  ],
+  "pid": 40635,
+  "time": 1793379009.952422,
+  "exit_code": 0,
+  "finished_time": 1793379037.26986
+}

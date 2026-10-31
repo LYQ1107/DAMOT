@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "stage": 2,
+  "domain": "overcast",
+  "epoch": 5,
+  "frames": 4448,
+  "videos": 22,
+  "exit_code": 0,
+  "all_frame_HOTA": true,
+  "time": 1793438283.6037169
+}

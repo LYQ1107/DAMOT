@@ -1,0 +1,28 @@
+{
+  "HF_R11_OVERALL_HOTA": 36.781974908118556,
+  "HOTA_stop_if_delta_leq": -0.5,
+  "angle_stop_if_gt_degrees": 45,
+  "angle_gate_definition": "principal angle between bank row0 (one-dimensional space) and offline uncentered normalized FAP-minus-clean top2 column space, fit videos only",
+  "additional_angles": [
+    "bank row0 versus offline PC1 (axis diagnostic)",
+    "two two-dimensional subspace principal angles"
+  ],
+  "offline_split_seed": 0,
+  "P1_classes": [
+    "car"
+  ],
+  "domains": [
+    "clear_holdout_45v",
+    "overcast",
+    "rainy",
+    "dawn_dusk",
+    "night"
+  ],
+  "HF_baseline_seed": 1790355234,
+  "original_angle_gate_definition": "acute bank row0 versus top1 offline uncentered normalized FAP-minus-clean residual direction, fit videos only",
+  "angle_metric_field": "first_direction_to_offline_span_deg",
+  "angle_definition_corrected_after_stage1_with_user_authorization": true,
+  "user_answer": "采用PC1到离线二维子空间的主角33.76°，从完整stage1状态恢复并继续；披露判定更正和恢复",
+  "correction_time": 1793432507.01449,
+  "original_timestamp_prespecified": "2026-10-31 01:00 Asia/Shanghai"
+}

@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "reference": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/forgetting_metrics.csv",
+  "checks": [
+    {
+      "category": "OVERALL",
+      "metric": "IDF1_percent",
+      "values": {
+        "FinalOld_percent": 45.59396450525562,
+        "AvgF_percentage_points": 0.45061698839053815,
+        "F_overcast_pp": 0.1508586591173824,
+        "F_rainy_pp": 1.395704197361873,
+        "F_dawn_dusk_pp": -0.19471189130764088
+      }
+    },
+    {
+      "category": "OVERALL",
+      "metric": "AssA_percent",
+      "values": {
+        "FinalOld_percent": 48.93759637345795,
+        "AvgF_percentage_points": -0.05109381770673357,
+        "F_overcast_pp": 1.2021049997146065,
+        "F_rainy_pp": -0.514973296198086,
+        "F_dawn_dusk_pp": -0.8404131566367212
+      }
+    },
+    {
+      "category": "OVERALL",
+      "metric": "HOTA_percent",
+      "values": {
+        "FinalOld_percent": 39.98253166127628,
+        "AvgF_percentage_points": -0.015193010046736788,
+        "F_overcast_pp": 0.07728118589150768,
+        "F_rainy_pp": 0.18550388782752947,
+        "F_dawn_dusk_pp": -0.3083641038592475
+      }
+    },
+    {
+      "category": "car",
+      "metric": "IDF1_percent",
+      "values": {
+        "FinalOld_percent": 51.658917785011035,
+        "AvgF_percentage_points": 0.510149886045447,
+        "F_overcast_pp": 0.1809865657333063,
+        "F_rainy_pp": 1.5284904933514412,
+        "F_dawn_dusk_pp": -0.17902740094840652
+      }
+    },
+    {
+      "category": "car",
+      "metric": "AssA_percent",
+      "values": {
+        "FinalOld_percent": 51.40664450697064,
+        "AvgF_percentage_points": 0.16890267018296137,
+        "F_overcast_pp": 1.606857543017739,
+        "F_rainy_pp": -0.4595066572805351,
+        "F_dawn_dusk_pp": -0.6406428751883197
+      }
+    },
+    {
+      "category": "car",
+      "metric": "HOTA_percent",
+      "values": {
+        "FinalOld_percent": 44.2091987027467,
+        "AvgF_percentage_points": -0.010110199712843363,
+        "F_overcast_pp": 0.08162288520073702,
+        "F_rainy_pp": 0.16385224488230676,
+        "F_dawn_dusk_pp": -0.27580572922157387
+      }
+    }
+  ]
+}

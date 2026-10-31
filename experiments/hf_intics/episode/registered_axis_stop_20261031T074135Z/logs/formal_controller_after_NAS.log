@@ -1,0 +1,4 @@
+SOURCE_SEALED 347
+REPORT_READY stopped at stage1 gate 7
+REPORT_READY stopped at stage1 gate 7
+{"status": "passed", "stopped_by_prespecified_stage1_gate": true, "complete_four_domain_run": false, "evaluation_cells": 1, "seed": 1790355234, "gpus": 4, "epochs_per_stage": 5, "original_HF_code_seal_verified": true, "preflight_all_passed": true, "mandatory_stage1_gate_verified": true}

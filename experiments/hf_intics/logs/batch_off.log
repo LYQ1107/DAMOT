@@ -1,0 +1,25 @@
+2026-10-30 16:49:47,738 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 16:49:47,739 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 16:49:47,739 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 16:49:48,249 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 16:49:48,249 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 16:49:48,249 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 16:49:50,588 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage night, history_domains=['overcast', 'rainy', 'dawn_dusk']
+2026-10-30 16:50:06,253 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=-0.4829 std=0.9706 min=-2.1179 max=2.6400
+2026-10-30 16:50:06,254 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-0.4993 std=0.9480 min=-2.1179 max=2.6400
+2026-10-30 16:50:06,255 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=-0.4744 std=1.0885 min=-2.1179 max=2.6400
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] enabled=True
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] mode=proto_shrinkage_cov_ema
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] cov_momentum=0.98
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] qr_orthogonalize=True
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] num_pcs=2
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] trim_alpha=0.1
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] loss_weight=0.025
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] min_samples=96
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] normalize_feats=True
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] class_ids=None
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] score_thr=0.7
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] use_scores=False
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] normalized_tensor_spa=False
+2026-10-30 16:50:07,636 - mmtrack - INFO - [CAUSAL_PCA] use_roi_proto_memory=True mode=stage
+PREFLIGHT_BATCH_COMPLETE off 0.7292587757110596

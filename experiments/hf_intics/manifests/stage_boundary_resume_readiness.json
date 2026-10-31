@@ -1,0 +1,103 @@
+{
+  "status": "saved_state_inputs_verified",
+  "resume_training_not_started": true,
+  "resume_stage": 2,
+  "resume_domain": "rainy",
+  "seed": 1790355234,
+  "snapshot_sha256": "7919eb9e244c194465d9c90c72831594f1c4e548bece7c4d33aa30eeabefd364",
+  "states": [
+    {
+      "rank": 0,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank0.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 340,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    },
+    {
+      "rank": 1,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank1.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 340,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    },
+    {
+      "rank": 2,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank2.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 339,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    },
+    {
+      "rank": 3,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank3.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 340,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    }
+  ],
+  "time": 1793395629.1648831
+}

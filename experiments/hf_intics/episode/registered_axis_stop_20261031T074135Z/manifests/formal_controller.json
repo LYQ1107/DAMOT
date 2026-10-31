@@ -1,0 +1,8 @@
+{
+  "status": "awaiting_angle_definition_clarification",
+  "controller_exited": true,
+  "training_processes_exited": true,
+  "GPUs_released": true,
+  "registered_axis_stop_archive": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/manifests/registered_axis_stop_controller.json",
+  "time": 1793395666.2621994
+}

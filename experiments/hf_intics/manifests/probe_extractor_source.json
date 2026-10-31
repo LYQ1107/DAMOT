@@ -1,0 +1,6 @@
+{
+  "source": "/data1/liuyeqiang/damot_rebuttal_20261026/code/tools/analysis/ics_probe_extract.py",
+  "copy": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/code/tools/analysis/ics_probe_extract.py",
+  "sha256": "a35f8aba0c904f3a7ab49f4fdc9dd98971a078559ea86537e2d851dbb115976e",
+  "protocol": "Original P1 fixed-geometry GT-box extractor; default sampling and seed preserved"
+}

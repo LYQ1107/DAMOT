@@ -1,0 +1,579 @@
+{
+  "teacher_shape": [
+    16,
+    3,
+    736,
+    1088
+  ],
+  "student_shape": [
+    16,
+    3,
+    736,
+    1088
+  ],
+  "box_coordinates_bitwise_equal": true,
+  "teacher": [
+    {
+      "img_shape": [
+        503,
+        894,
+        3
+      ],
+      "pad_shape": [
+        512,
+        896,
+        3
+      ],
+      "scale_factor": [
+        0.698437511920929,
+        0.6986111402511597,
+        0.698437511920929,
+        0.6986111402511597
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        530,
+        942,
+        3
+      ],
+      "pad_shape": [
+        544,
+        960,
+        3
+      ],
+      "scale_factor": [
+        0.7359374761581421,
+        0.7361111044883728,
+        0.7359374761581421,
+        0.7361111044883728
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        667,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        672,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        0.926562488079071,
+        0.9263888597488403,
+        0.926562488079071,
+        0.9263888597488403
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        522,
+        928,
+        3
+      ],
+      "pad_shape": [
+        544,
+        928,
+        3
+      ],
+      "scale_factor": [
+        0.7250000238418579,
+        0.7250000238418579,
+        0.7250000238418579,
+        0.7250000238418579
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        670,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        672,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        0.930468738079071,
+        0.9305555820465088,
+        0.930468738079071,
+        0.9305555820465088
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        705,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        736,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        0.979687511920929,
+        0.9791666865348816,
+        0.979687511920929,
+        0.9791666865348816
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        580,
+        1031,
+        3
+      ],
+      "pad_shape": [
+        608,
+        1056,
+        3
+      ],
+      "scale_factor": [
+        0.805468738079071,
+        0.8055555820465088,
+        0.805468738079071,
+        0.8055555820465088
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        518,
+        920,
+        3
+      ],
+      "pad_shape": [
+        544,
+        928,
+        3
+      ],
+      "scale_factor": [
+        0.71875,
+        0.7194444537162781,
+        0.71875,
+        0.7194444537162781
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        505,
+        898,
+        3
+      ],
+      "pad_shape": [
+        512,
+        928,
+        3
+      ],
+      "scale_factor": [
+        0.7015625238418579,
+        0.7013888955116272,
+        0.7015625238418579,
+        0.7013888955116272
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        723,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        736,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        1.00390625,
+        1.0041667222976685,
+        1.00390625,
+        1.0041667222976685
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        496,
+        882,
+        3
+      ],
+      "pad_shape": [
+        512,
+        896,
+        3
+      ],
+      "scale_factor": [
+        0.6890624761581421,
+        0.6888889074325562,
+        0.6890624761581421,
+        0.6888889074325562
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        705,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        736,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        0.979687511920929,
+        0.9791666865348816,
+        0.979687511920929,
+        0.9791666865348816
+      ],
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        563,
+        1001,
+        3
+      ],
+      "pad_shape": [
+        576,
+        1024,
+        3
+      ],
+      "scale_factor": [
+        0.782031238079071,
+        0.7819444537162781,
+        0.782031238079071,
+        0.7819444537162781
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        700,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        704,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        0.971875011920929,
+        0.9722222089767456,
+        0.971875011920929,
+        0.9722222089767456
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        528,
+        939,
+        3
+      ],
+      "pad_shape": [
+        544,
+        960,
+        3
+      ],
+      "scale_factor": [
+        0.733593761920929,
+        0.7333333492279053,
+        0.733593761920929,
+        0.7333333492279053
+      ],
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        634,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        640,
+        1088,
+        3
+      ],
+      "scale_factor": [
+        0.8804687261581421,
+        0.8805555701255798,
+        0.8804687261581421,
+        0.8805555701255798
+      ],
+      "flip": false,
+      "flip_direction": null
+    }
+  ],
+  "student": [
+    {
+      "img_shape": [
+        503,
+        894,
+        3
+      ],
+      "pad_shape": [
+        512,
+        896,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        530,
+        942,
+        3
+      ],
+      "pad_shape": [
+        544,
+        960,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        667,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        672,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        522,
+        928,
+        3
+      ],
+      "pad_shape": [
+        544,
+        928,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        670,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        672,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        705,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        736,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        580,
+        1031,
+        3
+      ],
+      "pad_shape": [
+        608,
+        1056,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        518,
+        920,
+        3
+      ],
+      "pad_shape": [
+        544,
+        928,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        505,
+        898,
+        3
+      ],
+      "pad_shape": [
+        512,
+        928,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        723,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        736,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        496,
+        882,
+        3
+      ],
+      "pad_shape": [
+        512,
+        896,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        705,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        736,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": true,
+      "flip_direction": "horizontal"
+    },
+    {
+      "img_shape": [
+        563,
+        1001,
+        3
+      ],
+      "pad_shape": [
+        576,
+        1024,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        700,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        704,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        528,
+        939,
+        3
+      ],
+      "pad_shape": [
+        544,
+        960,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    },
+    {
+      "img_shape": [
+        634,
+        1088,
+        3
+      ],
+      "pad_shape": [
+        640,
+        1088,
+        3
+      ],
+      "scale_factor": 1.0,
+      "flip": false,
+      "flip_direction": null
+    }
+  ]
+}

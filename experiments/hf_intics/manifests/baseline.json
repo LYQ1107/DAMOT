@@ -1,0 +1,10 @@
+{
+  "HF_root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+  "seed": 1790355234,
+  "single_seed": true,
+  "gpu_count": 4,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "epochs_per_stage": 5,
+  "baseline_code": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/code"
+}

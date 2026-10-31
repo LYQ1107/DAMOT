@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "stage": 1,
+  "domain": "overcast",
+  "epoch": 5,
+  "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage01_after_overcast.pth",
+  "checkpoint_sha256": "7919eb9e244c194465d9c90c72831594f1c4e548bece7c4d33aa30eeabefd364",
+  "rank_local_memory_saved": true,
+  "time": 1793393881.3495452
+}

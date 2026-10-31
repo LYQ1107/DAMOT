@@ -1,0 +1,53 @@
+{
+  "original_names_and_bytes_preserved": true,
+  "files": [
+    {
+      "path": "preflight/failed_before_first_batch/HF/work/intics_smoke.log.json",
+      "format": "MMCV JSON lines",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/failed_disk_full_20261030/preflight__smoke__INTICS/work/intics_smoke.log.json",
+      "format": "MMCV JSON lines",
+      "records": 3,
+      "original_sha256": "907819281a08058149b7e7ef42aeeb756cd383506b7eab9ef963562535c507a5"
+    },
+    {
+      "path": "preflight/smoke/HF/work/intics_smoke.log.json",
+      "format": "MMCV JSON lines",
+      "records": 3,
+      "original_sha256": "e94af3e92bac39a7e30c29869921b15f51a11fd52b46c110bd0c4207fd7c0d11"
+    },
+    {
+      "path": "preflight/smoke/INTICS/work/intics_smoke.log.json",
+      "format": "MMCV JSON lines",
+      "records": 3,
+      "original_sha256": "008248c5e508a490ff3d259c7ee86a682f6f6259aacbb3d723da2089a5694766"
+    },
+    {
+      "path": "episode/adapt/stage01_after_overcast/apr_complement_20261028.log.json",
+      "format": "MMCV JSON lines",
+      "records": 16,
+      "original_sha256": "62dd68eead1a76c4aa2ce6fdd74d785183a98b2240f770ebae4d59b64673445c"
+    },
+    {
+      "path": "episode/adapt/stage02_after_rainy/apr_complement_20261028.log.json",
+      "format": "MMCV JSON lines",
+      "records": 11,
+      "original_sha256": "f0ca18a0c2bafc95bc72764332cdaba992f2d30094935d0e99b5d67a8f867822"
+    },
+    {
+      "path": "episode/adapt/stage03_after_dawn_dusk/apr_complement_20261028.log.json",
+      "format": "MMCV JSON lines",
+      "records": 21,
+      "original_sha256": "d7e379be5bc664f4bc2927cf51851750e07af4c01968a33a6f1fc1766a740146"
+    },
+    {
+      "path": "episode/adapt/stage04_after_night/apr_complement_20261028.log.json",
+      "format": "MMCV JSON lines",
+      "records": 26,
+      "original_sha256": "954b5ba4c29f78202da6cde714602364af1f20d0b4b4c3b23d73131fb46ccbd3"
+    }
+  ]
+}

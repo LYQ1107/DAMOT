@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "reason": "local cached input availability after overnight stage-boundary pause",
+  "local_frames_checked": 7286,
+  "local_video_count": 36,
+  "missing": 0,
+  "source_data_modified": false,
+  "time": 1793433192.0091567
+}

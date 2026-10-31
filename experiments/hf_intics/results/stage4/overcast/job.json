@@ -1,0 +1,18 @@
+{
+  "pid": 33784,
+  "stage": 4,
+  "domain": "overcast",
+  "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage04_after_night.pth",
+  "sha256": "b4e69df6c1e74dd08e101aef9180fc205c66ca51675381891e7592abb51b6328",
+  "gpu": "3",
+  "command": [
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/code/tools/run/evaluate_apr_complement.py",
+    "--run-root",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+    "--stage",
+    "4",
+    "--domain",
+    "overcast"
+  ],
+  "start": 1793457580.3268578
+}

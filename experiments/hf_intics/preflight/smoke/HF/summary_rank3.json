@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "variant": "HF",
+  "iterations": 50,
+  "rank": 3,
+  "key_effective_batches": 27,
+  "ref_effective_batches": 49,
+  "first_initialized_iteration": 2,
+  "loss_track_trim_mean": 0.022197911310940982,
+  "compute_mean_last40": 22.081185369193555,
+  "iteration_mean_last40": 22.210336760245262,
+  "bank_center": true,
+  "bank_normalize": true,
+  "disposable_weights": true,
+  "seed": 1790355234,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2
+}

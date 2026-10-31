@@ -1,0 +1,156 @@
+{
+  "status": "verified",
+  "resume_after_completed_stage": 1,
+  "resume_next_stage": 2,
+  "resume_domain": "rainy",
+  "seed": 1790355234,
+  "epochs_per_stage": 5,
+  "gpus": 4,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "snapshot_sha256": "7919eb9e244c194465d9c90c72831594f1c4e548bece7c4d33aa30eeabefd364",
+  "rank_state_inputs": [
+    {
+      "rank": 0,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank0.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 340,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    },
+    {
+      "rank": 1,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank1.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 340,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    },
+    {
+      "rank": 2,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank2.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 339,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    },
+    {
+      "rank": 3,
+      "path": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/state/stage1_final_rank3.pth",
+      "bytes": 1190799,
+      "buffer_count": 342,
+      "counter_names": [
+        "_proto_iter",
+        "_apr_couple_calls",
+        "_apr_couple_basis_ready",
+        "_apr_couple_loss_active",
+        "_causal_forward_count"
+      ],
+      "bank_updates": 340,
+      "APR_state_keys": [
+        "version",
+        "history",
+        "candidates",
+        "candidate_scores",
+        "current_domain",
+        "last_stats"
+      ],
+      "all_parent_RNG_states_saved": true
+    }
+  ],
+  "user_answer": "采用PC1到离线二维子空间的主角33.76°，从完整stage1状态恢复并继续；披露判定更正和恢复",
+  "original_stop_archive": "episode/registered_axis_stop_20261031T074135Z",
+  "model_code_changed": false,
+  "model_config_changed": false,
+  "stage1_retraining": false,
+  "restore_scope": "full student/teacher parameters, all rank-local buffers, APR runtime history/candidates, counters and Python/NumPy/Torch/CUDA RNG states",
+  "optimizer_and_workers": "fresh for each new domain as in the unchanged HF runner",
+  "verification_wrapper": "scripts/train_with_resume_audit.py",
+  "verification_wrapper_sha256": "eae6803cb4f13eb4177d5c3728001fd39bdc5c543dae75978686e6c444e56fc1",
+  "numerical_equivalence_to_uninterrupted_training_not_claimed": true,
+  "time": 1793432508.6655495,
+  "four_rank_restore_audits": [
+    {
+      "rank": 0,
+      "audit_sha256": "e12fb9c01447ff3829040f53ecbd1177c45e0f629cf9891b8993ebb469f5bc5d",
+      "parameters_exact": true,
+      "buffers_exact": true,
+      "APR_runtime_exact": true,
+      "counters_exact": true,
+      "all_parent_RNG_states_exact": true
+    },
+    {
+      "rank": 1,
+      "audit_sha256": "24b9aa58bae547a95fd295e85f7b3847099483f99b4990fbbd54c9fc43f4b62c",
+      "parameters_exact": true,
+      "buffers_exact": true,
+      "APR_runtime_exact": true,
+      "counters_exact": true,
+      "all_parent_RNG_states_exact": true
+    },
+    {
+      "rank": 2,
+      "audit_sha256": "f0335671dd366bd4ad4dbc0e84fc6d95f14fb1672ca8173cda6f2624f41c2463",
+      "parameters_exact": true,
+      "buffers_exact": true,
+      "APR_runtime_exact": true,
+      "counters_exact": true,
+      "all_parent_RNG_states_exact": true
+    },
+    {
+      "rank": 3,
+      "audit_sha256": "7287a33329c5ba00bf4ef00061b9be5bbde88359d21d66dfeacc65eb54eff11a",
+      "parameters_exact": true,
+      "buffers_exact": true,
+      "APR_runtime_exact": true,
+      "counters_exact": true,
+      "all_parent_RNG_states_exact": true
+    }
+  ],
+  "verified_time": 1793432890.524682
+}

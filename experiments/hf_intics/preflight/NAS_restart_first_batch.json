@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "same_four_physical_GPUs": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "same_seed": 1790355234,
+  "first_forward_comparison": [
+    {
+      "rank": 0,
+      "original_first_loss": 4.398706912994385,
+      "NAS_restart_first_loss": 4.398706912994385,
+      "bitwise_scalar_equal": true
+    },
+    {
+      "rank": 1,
+      "original_first_loss": 1.4471338987350464,
+      "NAS_restart_first_loss": 1.4471338987350464,
+      "bitwise_scalar_equal": true
+    },
+    {
+      "rank": 2,
+      "original_first_loss": 1.3810482025146484,
+      "NAS_restart_first_loss": 1.3810482025146484,
+      "bitwise_scalar_equal": true
+    },
+    {
+      "rank": 3,
+      "original_first_loss": 3.3328185081481934,
+      "NAS_restart_first_loss": 3.3328185081481934,
+      "bitwise_scalar_equal": true
+    }
+  ],
+  "later_optimizer_updates_not_bitwise_equal": true,
+  "HF_deterministic_setting_unchanged": true,
+  "incomplete_attempt_weights_discarded": true
+}

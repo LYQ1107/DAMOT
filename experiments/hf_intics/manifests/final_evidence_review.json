@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "summary_links_verified": true,
+  "metrics_unchanged_by_summary_update": true,
+  "evidence_csv_rows": {
+    "cross_view_retrieval.csv": 4,
+    "deletion.csv": 6,
+    "ICC.csv": 10,
+    "dose_response.csv": 12
+  },
+  "numeric_evidence_finite": true,
+  "FigureC_visual_review": "20 nonempty car crops, readable labels; ten distinct tracks at each end as recorded by original selector",
+  "stage1_gate_scope_retained": true
+}

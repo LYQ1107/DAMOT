@@ -1,0 +1,7 @@
+{
+  "status": "incomplete_discarded",
+  "reason": "local filesystem filled during disposable new-mode smoke; no formal training",
+  "same_seed_restart": 1790355234,
+  "HF50_reused": true,
+  "partial_measurements_not_used_for_U3": true
+}

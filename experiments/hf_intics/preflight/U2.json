@@ -1,0 +1,12 @@
+{
+  "status": "complete_no_angle_threshold",
+  "principal_angles_deg": [
+    65.60928851701706,
+    74.41979434785247
+  ],
+  "num_key_positive_rois": 98,
+  "centered": false,
+  "residual_renormalized": false,
+  "bank_orthogonality_error": 1.2249149383691815e-07,
+  "reference_basis_sha256": "431605fa763d13387a8e777f9bf95190b27aa62b1cc1b3256bcad26d225bc652"
+}

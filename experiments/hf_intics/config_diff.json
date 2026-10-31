@@ -1,0 +1,858 @@
+[
+  {
+    "stage": 1,
+    "path": "custom_hooks",
+    "HF": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+        "stage": 1,
+        "priority": "LOW"
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+        "stage": 1,
+        "priority": "LOW"
+      }
+    ]
+  },
+  {
+    "stage": 1,
+    "path": "data.train",
+    "HF": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
+        "img_prefix": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/overcast/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/overcast.json",
+        "img_prefix": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/data/images/overcast/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ]
+  },
+  {
+    "stage": 1,
+    "path": "model.track_head.causal_covariance_shrinkage",
+    "HF": 0.15,
+    "INTICS": 0.0
+  },
+  {
+    "stage": 1,
+    "path": "model.track_head.causal_loss_weight",
+    "HF": 0.025,
+    "INTICS": 0.1
+  },
+  {
+    "stage": 1,
+    "path": "model.track_head.causal_min_samples",
+    "HF": 96,
+    "INTICS": 32
+  },
+  {
+    "stage": 1,
+    "path": "model.track_head.causal_pca_mode",
+    "HF": "proto_shrinkage_cov_ema",
+    "INTICS": "intervention_residual"
+  },
+  {
+    "stage": 1,
+    "path": "model.track_head.causal_trim_alpha",
+    "HF": 0.1,
+    "INTICS": 0.25
+  },
+  {
+    "stage": 1,
+    "path": "work_dir",
+    "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage01_after_overcast",
+    "INTICS": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage01_after_overcast"
+  },
+  {
+    "stage": 2,
+    "path": "custom_hooks",
+    "HF": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+        "stage": 2,
+        "priority": "LOW"
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+        "stage": 2,
+        "priority": "LOW"
+      }
+    ]
+  },
+  {
+    "stage": 2,
+    "path": "data.train",
+    "HF": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/rainy.json",
+        "img_prefix": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/rainy/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/rainy.json",
+        "img_prefix": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/data/images/rainy/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ]
+  },
+  {
+    "stage": 2,
+    "path": "model.track_head.causal_covariance_shrinkage",
+    "HF": 0.15,
+    "INTICS": 0.0
+  },
+  {
+    "stage": 2,
+    "path": "model.track_head.causal_loss_weight",
+    "HF": 0.025,
+    "INTICS": 0.1
+  },
+  {
+    "stage": 2,
+    "path": "model.track_head.causal_min_samples",
+    "HF": 96,
+    "INTICS": 32
+  },
+  {
+    "stage": 2,
+    "path": "model.track_head.causal_pca_mode",
+    "HF": "proto_shrinkage_cov_ema",
+    "INTICS": "intervention_residual"
+  },
+  {
+    "stage": 2,
+    "path": "model.track_head.causal_trim_alpha",
+    "HF": 0.1,
+    "INTICS": 0.25
+  },
+  {
+    "stage": 2,
+    "path": "work_dir",
+    "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage02_after_rainy",
+    "INTICS": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage02_after_rainy"
+  },
+  {
+    "stage": 3,
+    "path": "custom_hooks",
+    "HF": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+        "stage": 3,
+        "priority": "LOW"
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+        "stage": 3,
+        "priority": "LOW"
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "path": "data.train",
+    "HF": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+        "img_prefix": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/dawn_dusk/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/dawn_dusk.json",
+        "img_prefix": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/data/images/dawn_dusk/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "path": "model.track_head.causal_covariance_shrinkage",
+    "HF": 0.15,
+    "INTICS": 0.0
+  },
+  {
+    "stage": 3,
+    "path": "model.track_head.causal_loss_weight",
+    "HF": 0.025,
+    "INTICS": 0.1
+  },
+  {
+    "stage": 3,
+    "path": "model.track_head.causal_min_samples",
+    "HF": 96,
+    "INTICS": 32
+  },
+  {
+    "stage": 3,
+    "path": "model.track_head.causal_pca_mode",
+    "HF": "proto_shrinkage_cov_ema",
+    "INTICS": "intervention_residual"
+  },
+  {
+    "stage": 3,
+    "path": "model.track_head.causal_trim_alpha",
+    "HF": 0.1,
+    "INTICS": 0.25
+  },
+  {
+    "stage": 3,
+    "path": "work_dir",
+    "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage03_after_dawn_dusk",
+    "INTICS": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage03_after_dawn_dusk"
+  },
+  {
+    "stage": 4,
+    "path": "custom_hooks",
+    "HF": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+        "stage": 4,
+        "priority": "LOW"
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "EMATrainHook",
+        "momentum": 0.002,
+        "interval": 1,
+        "warm_up": 100
+      },
+      {
+        "type": "APRFiniteLossHook",
+        "priority": "HIGH"
+      },
+      {
+        "type": "APRExperimentStateHook",
+        "root": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+        "stage": 4,
+        "priority": "LOW"
+      }
+    ]
+  },
+  {
+    "stage": 4,
+    "path": "data.train",
+    "HF": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+        "img_prefix": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/night/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ],
+    "INTICS": [
+      {
+        "type": "BDDTrackingDataset",
+        "ann_file": "/data1/liuyeqiang/damot_rebuttal_20261026/data/annotations/night.json",
+        "img_prefix": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/data/images/night/",
+        "key_img_sampler": {
+          "interval": 1
+        },
+        "ref_img_sampler": {
+          "num_ref_imgs": 1,
+          "frame_range": 3,
+          "method": "uniform"
+        },
+        "pipeline": [
+          {
+            "type": "LoadMultiImagesFromFile",
+            "to_float32": true
+          },
+          {
+            "type": "SeqLoadAnnotations",
+            "with_bbox": true,
+            "with_track": true
+          },
+          {
+            "type": "SeqRandomFlip",
+            "share_params": true,
+            "flip_ratio": 0.5
+          },
+          {
+            "type": "SeqResize",
+            "img_scale": [
+              1296,
+              720
+            ],
+            "share_params": true,
+            "keep_ratio": true,
+            "bbox_clip_border": false
+          },
+          {
+            "type": "MatchInstances",
+            "skip_nomatch": true
+          },
+          {
+            "type": "VideoCollect",
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels",
+              "gt_match_indices",
+              "gt_instance_ids"
+            ]
+          },
+          {
+            "type": "SeqDefaultFormatBundle",
+            "ref_prefix": "ref"
+          }
+        ],
+        "classes": [
+          "pedestrian",
+          "car",
+          "truck",
+          "bus",
+          "motorcycle",
+          "bicycle"
+        ]
+      }
+    ]
+  },
+  {
+    "stage": 4,
+    "path": "model.track_head.causal_covariance_shrinkage",
+    "HF": 0.15,
+    "INTICS": 0.0
+  },
+  {
+    "stage": 4,
+    "path": "model.track_head.causal_loss_weight",
+    "HF": 0.025,
+    "INTICS": 0.1
+  },
+  {
+    "stage": 4,
+    "path": "model.track_head.causal_min_samples",
+    "HF": 96,
+    "INTICS": 32
+  },
+  {
+    "stage": 4,
+    "path": "model.track_head.causal_pca_mode",
+    "HF": "proto_shrinkage_cov_ema",
+    "INTICS": "intervention_residual"
+  },
+  {
+    "stage": 4,
+    "path": "model.track_head.causal_trim_alpha",
+    "HF": 0.1,
+    "INTICS": 0.25
+  },
+  {
+    "stage": 4,
+    "path": "work_dir",
+    "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night",
+    "INTICS": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage04_after_night"
+  }
+]

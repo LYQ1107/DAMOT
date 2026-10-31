@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "hardlink_supported": true,
+  "rename_supported": true,
+  "readback_sha256": "d10145cacd48c98d6dc19a663fa82236d6102fccbede31953270742c79b5368b",
+  "NAS_free_GiB": 3546.8454399108887
+}

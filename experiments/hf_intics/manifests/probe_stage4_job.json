@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "gpus": [
+    3
+  ],
+  "prelaunch_snapshot": "0, 26825, 93\n1, 16155, 18\n2, 1727, 0\n3, 2, 0\n4, 2, 0\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 2, 0\n9, 2, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/scripts/probe_visible_gpu.py"
+  ],
+  "pid": 36630,
+  "time": 1793458623.1254833,
+  "exit_code": 0,
+  "finished_time": 1793462189.0933213
+}

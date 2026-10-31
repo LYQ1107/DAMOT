@@ -1,0 +1,122 @@
+{
+  "status": "hash_verified",
+  "files": [
+    {
+      "path": "episode/stage1_gate.json",
+      "sha256": "5dc5a0ea576b38b137b3641221f47af16a7b3031b6b3916705d143b01296aca3",
+      "bytes": 541,
+      "moved": false
+    },
+    {
+      "path": "manifests/stage1_gate_protocol.json",
+      "sha256": "a54cdd70e7aa1e49b486b645b81857284b1ae04ffdcfbc7d6011975529c8931e",
+      "bytes": 619,
+      "moved": false
+    },
+    {
+      "path": "manifests/angle_clarification.json",
+      "sha256": "095c0390235a5603fab822caab65747d16d7ee337d1259aa2755a3de83d1ec39",
+      "bytes": 913,
+      "moved": false
+    },
+    {
+      "path": "probe/stage1/P1.json",
+      "sha256": "dff77da7503f4f748ad9758227f2705c10a90f5f1358e9b0e54d08769986820c",
+      "bytes": 4918,
+      "moved": false
+    },
+    {
+      "path": "probe/stage1/angle_definition_check.json",
+      "sha256": "9603fd9b9bd9061c340089e27a62c9d62d3226879fd762855a1d1bfd9ddb1765",
+      "bytes": 596,
+      "moved": false
+    },
+    {
+      "path": "SUMMARY.md",
+      "sha256": "ee767dd202b91dd4252f030ac4cdee230422fbb862f6fa360f763d35eba4d20b",
+      "bytes": 5924,
+      "moved": false
+    },
+    {
+      "path": "manifests/stage_boundary_resume_readiness.json",
+      "sha256": "a2bf4b13ccf7fd68d8843873502e7e0e3df2806b01df7d52c243f346524684cf",
+      "bytes": 2741,
+      "moved": false
+    },
+    {
+      "path": "episode/train_stopped.json",
+      "sha256": "5ccbc2fc35ff3580f67ac7139222f6a5007a40f21b77f6936b4c2f0291e4a922",
+      "bytes": 700,
+      "moved": true
+    },
+    {
+      "path": "manifests/formal_dispatch.json",
+      "sha256": "95066181a2fbb71ca34ed52e2ad77b7c4fc747f01fc4c0b5b08220bcf4f7cfa9",
+      "bytes": 843,
+      "moved": true
+    },
+    {
+      "path": "manifests/formal_job.json",
+      "sha256": "bf5602ae6c8ddedcdf7b75a569cb71cee87f53a3003ce4d36e293eb1e1a5a65f",
+      "bytes": 819,
+      "moved": true
+    },
+    {
+      "path": "manifests/formal_controller.json",
+      "sha256": "d54f816296b9c7967a74d7368362bd9c24038641fccf74a5755e6a55fcadbc2a",
+      "bytes": 313,
+      "moved": true
+    },
+    {
+      "path": "manifests/final_validation.json",
+      "sha256": "0747595962a497e084b14efea413b1aa4ab64be4a0ad085e1024c875607c26b4",
+      "bytes": 310,
+      "moved": true
+    },
+    {
+      "path": "manifests/result_status.json",
+      "sha256": "18763dc29f7a5975ee92286dd0aa7d814c0ef15ba90e425c91b4b5d9f225994d",
+      "bytes": 195,
+      "moved": true
+    },
+    {
+      "path": "progress.json",
+      "sha256": "c87553edc85e6f1f1218da5e44e04553aaa39dac2347117e70a57d5d819d4392",
+      "bytes": 322,
+      "moved": true
+    },
+    {
+      "path": "logs/formal.log",
+      "sha256": "c14b6cc238a8d8ab17345dc4fac54626d233e0755a7bc29539fd5832a4480040",
+      "bytes": 17540,
+      "moved": true
+    },
+    {
+      "path": "logs/episode_rank0.log",
+      "sha256": "7780ca6dbd7e4dba837917da349ff100d989141564277a780d93fb4e1daf0649",
+      "bytes": 13942,
+      "moved": true
+    },
+    {
+      "path": "logs/formal_controller_after_NAS.log",
+      "sha256": "4f815f119c95e7726a4065d8672f9386ae756c5b4e4c4acfb3f4bb5a93eb74ad",
+      "bytes": 382,
+      "moved": true
+    },
+    {
+      "path": "manifests/formal_controller_after_NAS_dispatch.json",
+      "sha256": "ab0b645e1d6cfcd2919d1a56d3946522d75886c557bf9fdb4ab15af9d9bfef7c",
+      "bytes": 226,
+      "moved": true
+    },
+    {
+      "path": "manifests/environment.json",
+      "sha256": "544eba7756090ec427e91746365342b90334aa33a80ad14115074b84982554eb",
+      "bytes": 2637,
+      "moved": true
+    }
+  ],
+  "original_stop_preserved": true,
+  "no_weights_or_rank_states_moved": true,
+  "time": 1793432506.3531008
+}

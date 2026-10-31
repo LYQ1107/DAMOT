@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "stage": 2,
+  "pid": 24332,
+  "time": 1793438286.9658666,
+  "max_concurrent_inference_jobs": 2,
+  "training_configuration_unchanged": true,
+  "domains": [
+    "overcast",
+    "rainy"
+  ],
+  "checkpoint_sha256": "fa11e6c10b56c0374338a151f3a31e66d2472dbdfa3e7134651d4e148e0acbf3",
+  "reused_by_final_controller": true
+}

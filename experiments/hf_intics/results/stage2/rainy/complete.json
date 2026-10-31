@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "stage": 2,
+  "domain": "rainy",
+  "epoch": 5,
+  "frames": 3150,
+  "videos": 17,
+  "exit_code": 0,
+  "all_frame_HOTA": true,
+  "time": 1793438177.6431067
+}

@@ -1,0 +1,111 @@
+/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/distributed/launch.py:186: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+2026-10-30 18:05:37,182 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 18:05:37,182 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 18:05:37,182 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-30 18:05:37,703 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-30 18:05:37,703 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-30 18:05:37,703 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+loading annotations into memory...
+loading annotations into memory...
+2026-10-30 18:05:38,266 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage overcast, history_domains=[]
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.37s)
+creating index...
+Done (t=0.42s)
+creating index...
+Done (t=0.42s)
+creating index...
+Done (t=0.34s)
+creating index...
+index created!
+index created!
+index created!
+index created!
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-30 18:05:39,003 - mmtrack - INFO - set find_unused_parameters = True in DDP
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-30 18:05:42,300 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_intics_20261031_004258/preflight/smoke/INTICS/work
+2026-10-30 18:05:42,300 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) EMATrainHook                       
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) INTICSSmokeAuditHook               
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) INTICSSmokeAuditHook               
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) INTICSSmokeAuditHook               
+ -------------------- 
+after_train_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+2026-10-30 18:05:42,301 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-30 18:06:42,153 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=0.0247 std=1.1609 min=-2.1179 max=2.6400
+2026-10-30 18:06:42,155 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-0.3147 std=1.0784 min=-2.1179 max=2.6400
+2026-10-30 18:06:42,156 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=0.0761 std=1.1253 min=-2.1179 max=2.6400
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] enabled=True
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] mode=intervention_residual
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] cov_momentum=0.98
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] qr_orthogonalize=True
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] num_pcs=2
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] trim_alpha=0.25
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] loss_weight=0.1
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] min_samples=32
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] normalize_feats=True
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] class_ids=None
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] score_thr=0.7
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] use_scores=False
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] normalized_tensor_spa=False
+2026-10-30 18:06:43,594 - mmtrack - INFO - [CAUSAL_PCA] use_roi_proto_memory=True mode=stage
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+2026-10-30 18:13:06,535 - mmtrack - INFO - Epoch [1][20/68]	lr: 3.996e-05, eta: 1:58:27, time: 22.211, data_time: 0.574, memory: 23602, rpn_distillation_loss: 0.8885, roi_distillation_loss: 0.0690, loss_track: 1.1220, loss_track_aux: 0.1635, loss_track_tri

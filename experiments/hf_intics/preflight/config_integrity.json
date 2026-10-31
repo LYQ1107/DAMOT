@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "exact_HF_config_after_restoring_five_ICS_fields_and_storage_paths": true,
+  "stages": [
+    {
+      "stage": 1,
+      "seed": 1790355234,
+      "HF_config_sha256": "35cf1502aca701ff31996a72e729291cabd380964a6d31e3c22306e7eba13504",
+      "INTICS_config_sha256": "6889d9ec1431b3c93b8915690ca9510d3b09258547ad808b3c386988112fb1bf"
+    },
+    {
+      "stage": 2,
+      "seed": 1790355234,
+      "HF_config_sha256": "16a562e60a4f2b7b46026824d49a8c1ba63628cf5eb31f84689315397b50de7f",
+      "INTICS_config_sha256": "f3316bb52e29401ddba14fcecd4660a602fec66daef28a07c44115ff61fd54b2"
+    },
+    {
+      "stage": 3,
+      "seed": 1790355234,
+      "HF_config_sha256": "72baf3d2f0dafb7812cee218868d16e6a120b69c336052db88624599c6c490e4",
+      "INTICS_config_sha256": "6c65ff0d336b7a5083ce5ac64db6b05970ad02600535d11b31b9c3cbe753c6d9"
+    },
+    {
+      "stage": 4,
+      "seed": 1790355234,
+      "HF_config_sha256": "0ff8e1f524b2d888a423480441ef875844703acac27dc1056d003cbafde6310d",
+      "INTICS_config_sha256": "1871db344fad4f2947c1121454b3a3e01d4385f8409aca15aa50cdcd06b27132"
+    }
+  ]
+}

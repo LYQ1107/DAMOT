@@ -1,0 +1,26 @@
+{
+  "pid": 28629,
+  "command": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/scripts/gpu_job.py",
+    "--name",
+    "formal",
+    "--gpus",
+    "4",
+    "--prefer",
+    "2,3,5,6,4,7,8,9",
+    "--",
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "-m",
+    "torch.distributed.launch",
+    "--nproc_per_node=4",
+    "--master_port=38825",
+    "--use_env",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/scripts/train_with_resume_audit.py",
+    "--run-root",
+    "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258",
+    "--mode",
+    "train"
+  ],
+  "time": 1793432669.2707882
+}

@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "stages": 4,
+  "epochs_per_stage": 5,
+  "source_loaded_from": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/S.pth",
+  "time": 1793457489.6051595
+}

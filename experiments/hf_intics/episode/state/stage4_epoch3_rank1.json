@@ -1,0 +1,67 @@
+{
+  "path": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/state/stage4_epoch3_rank1.pth",
+  "stage": 4,
+  "epoch": 3,
+  "rank": 1,
+  "final": false,
+  "activity": {
+    "bank_initialized": true,
+    "ICS_num_updates": 1411,
+    "ICS_last_effective_rois": 47,
+    "ICS_last_update_ok": true,
+    "APR_calls": 1422,
+    "APR_basis_ready_calls": 1422,
+    "APR_coupled_loss_active_calls": 1082,
+    "APR_memory": {
+      "history_domains": [
+        "overcast",
+        "rainy",
+        "dawn_dusk"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        },
+        "rainy": {
+          "1": 100
+        },
+        "dawn_dusk": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 1000
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {
+        "selected_rois": 39,
+        "prototypes": 300,
+        "mean_topk_sim": 0.5491818785667419,
+        "loss": 0.45081818103790283,
+        "gate_enabled": false,
+        "sim_gate_thr": 0.5,
+        "gate_selected_rois": 39,
+        "gate_total_rois": 39,
+        "gate_ratio": 1.0,
+        "coupled": true,
+        "couple_beta": 1.0,
+        "coupled_metric": "projected_cosine"
+      }
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 22752
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 22752
+      }
+    ],
+    "allocated_MiB": 23695.70849609375,
+    "reserved_MiB": 30368.0
+  },
+  "time": 1793453029.520682
+}

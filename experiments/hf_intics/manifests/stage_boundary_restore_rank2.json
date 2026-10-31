@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "rank": 2,
+  "stage": 1,
+  "epoch": 5,
+  "parameters_exact": true,
+  "buffers_exact": true,
+  "APR_runtime_exact": true,
+  "counters_exact": true,
+  "all_parent_RNG_states_exact": true,
+  "FAP_audit_counters_restored": true,
+  "history_domains": [
+    "overcast"
+  ],
+  "resumed_next_stage": 2,
+  "seed": 1790355234,
+  "model_code_unchanged": true,
+  "checkpoint_sha256": "7919eb9e244c194465d9c90c72831594f1c4e548bece7c4d33aa30eeabefd364",
+  "numerical_equivalence_to_uninterrupted_training_not_claimed": true,
+  "time": 1793432715.621016
+}

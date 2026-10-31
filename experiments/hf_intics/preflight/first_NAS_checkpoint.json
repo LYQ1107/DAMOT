@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "first_epoch": 1,
+  "stage": 1,
+  "checkpoint": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/episode/adapt/stage01_after_overcast/epoch_1.pth",
+  "physical_checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/adapt/stage01_after_overcast/epoch_1.pth",
+  "bytes": 682303665,
+  "output_filesystem_device": 64,
+  "NAS_free_GiB": 3544.4798698425293,
+  "all_four_rank_states_saved": true,
+  "original_HF_retention_policy": true,
+  "time": 1793388635.030927
+}

@@ -1,0 +1,80 @@
+loading annotations into memory...
+Done (t=0.35s)
+creating index...
+index created!
+VIDEO COMPLETE 1 overcast 1 202
+VIDEO COMPLETE 1 overcast 2 202
+VIDEO COMPLETE 1 overcast 3 203
+VIDEO COMPLETE 1 overcast 4 199
+VIDEO COMPLETE 1 overcast 5 202
+VIDEO COMPLETE 1 overcast 6 202
+VIDEO COMPLETE 1 overcast 7 203
+VIDEO COMPLETE 1 overcast 8 203
+VIDEO COMPLETE 1 overcast 9 202
+VIDEO COMPLETE 1 overcast 10 202
+VIDEO COMPLETE 1 overcast 11 203
+VIDEO COMPLETE 1 overcast 12 202
+VIDEO COMPLETE 1 overcast 13 202
+VIDEO COMPLETE 1 overcast 14 202
+VIDEO COMPLETE 1 overcast 15 203
+VIDEO COMPLETE 1 overcast 16 202
+VIDEO COMPLETE 1 overcast 17 202
+VIDEO COMPLETE 1 overcast 18 203
+VIDEO COMPLETE 1 overcast 19 202
+VIDEO COMPLETE 1 overcast 20 202
+VIDEO COMPLETE 1 overcast 21 202
+VIDEO COMPLETE 1 overcast 22 203
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 16.41 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 22 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 6.95 seconds
+
+            IDF1   MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+----------------------------------------------------------------------------------
+pedestrian  28.7   14.5  75.7   840   3945   472  35.9  72.4   50  114   189   214
+car         46.3   34.9  82.4  1015  28250   917  39.0  94.7  196  556  1220   785
+truck       12.3    2.0  78.2   246   4053    30   8.2  59.6    0   13   128    71
+bus         20.6 -103.2  77.3  1377    715    11  30.9  18.9    2    8    17     4
+motorcycle   0.0    0.0    -      0    186     0   0.0    -     0    0     5     0
+bicycle      0.8    0.4  54.1     0    721     0   0.4 100.0    0    1    33     0
+----------------------------------------------------------------------------------
+OVERALL     41.0   27.3  81.6  3478  37870  1430  35.6  85.8  248  692  1592  1074
+AVERAGE     18.1   -8.6  61.3  3478  37870  1430  19.1  57.6  248  692  1592  1074
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+pedestrian   29.7   72.8  27.2  78.9   28.3   57.1  24.6  25.6   3045   824
+bus          53.4   76.0  51.2  80.3   24.5   14.9  10.4  23.1   1697   203
+car          55.4   74.9  50.7  84.3   33.1   80.2  31.8  40.1  19103  1048
+bicycle      16.1   47.4  16.1  74.9    0.2   45.6   0.2   1.7      3     2
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        26.2   80.0  25.2  81.0    6.7   48.3   6.3  12.5    609   143
+---------------------------------------------------------------------------
+AVERAGE      30.1   58.5  28.4  83.2   15.4   41.0  12.2  17.2  24457  2220
+OVERALL      52.4   74.9  48.1  83.6   29.9   72.0  27.8  36.5  24457  2220
+
+
+            LocA  DetA   MOTA  HOTA  IDF1  AssA
+-----------------------------------------------
+pedestrian  78.9  24.6   14.5  25.6  28.7  27.2
+bus         80.3  10.4 -103.2  23.1  20.6  51.2
+car         84.3  31.8   34.9  40.1  46.3  50.7
+bicycle     74.9   0.2    0.4   1.7   0.8  16.1
+motorcycle 100.0   0.0    0.0   0.0   0.0   0.0
+truck       81.0   6.3    2.0  12.5  12.3  25.2
+-----------------------------------------------
+AVERAGE     83.2  12.2   -8.6  17.2  18.1  28.4
+OVERALL     83.6  27.8   27.3  36.5  41.0  48.1
+
+CELL COMPLETE 1 overcast

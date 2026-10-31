@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "checks": [
+    "stage1 gate allows only stage1 supplement",
+    "completed stage4 takes precedence over historical stop marker",
+    "shared runtime uses short /tmp path"
+  ]
+}

@@ -1,1 +1,4 @@
-{"pid": 2283, "recovery": "OpenMP startup failure, GNU MKL threading; live C3 child retained"}
+{
+  "pid": 9565,
+  "purpose": "Wait for stage4 after published stage1 supplement; historical stop marker does not override validated completed stage4"
+}

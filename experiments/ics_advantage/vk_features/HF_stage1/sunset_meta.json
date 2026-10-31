@@ -1,0 +1,107 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage01_after_overcast.pth",
+  "config": "checkpoint meta",
+  "matched_keys": 752,
+  "target_keys": 752,
+  "missing_keys": 0,
+  "bank_cfg": {
+    "use_causal_direction_bank": true,
+    "causal_pca_mode": "proto_shrinkage_cov_ema",
+    "causal_num_pcs": 2,
+    "causal_start_pc": 0,
+    "causal_trim_alpha": 0.1,
+    "causal_normalize_feats": true,
+    "causal_residual_normalize_before_delta": null,
+    "use_roi_proto_memory": true,
+    "roi_proto_class_ids": [
+      1
+    ]
+  },
+  "bank_initialized": true,
+  "bank_num_updates": 217,
+  "missing_key_names": [],
+  "perturbation_protocol": "fixed geometry; shared random seed across dose levels; student view contains photometric distortion and FAP only",
+  "label": "HF_stage1",
+  "domain": "sunset",
+  "views": [
+    "clean"
+  ],
+  "dose_views": [
+    "dark_0.80",
+    "dark_0.60",
+    "dark_0.40",
+    "dark_0.25",
+    "fog_0.15",
+    "fog_0.30",
+    "fog_0.45",
+    "fog_0.60",
+    "fapk_0.90",
+    "fapk_0.70",
+    "fapk_0.50",
+    "fapk_0.30"
+  ],
+  "args": {
+    "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage01_after_overcast.pth",
+    "config": null,
+    "label": "HF_stage1",
+    "domain": [
+      [
+        "clone",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/clone.json",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images"
+      ],
+      [
+        "fog",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/fog.json",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images"
+      ],
+      [
+        "morning",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/morning.json",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images"
+      ],
+      [
+        "overcast",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/overcast.json",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images"
+      ],
+      [
+        "rain",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/rain.json",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images"
+      ],
+      [
+        "sunset",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/annotations/sunset.json",
+        "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images"
+      ]
+    ],
+    "out_dir": "/data1/liuyeqiang/ics_advantage_20261031_004629/vk_features",
+    "views": "clean",
+    "box_source": "gt",
+    "allow_uninitialized_bank": true,
+    "memory_fraction": 0.35,
+    "dose_frames_per_video": 0,
+    "dose_views": "dark_0.80,dark_0.60,dark_0.40,dark_0.25,fog_0.15,fog_0.30,fog_0.45,fog_0.60,fapk_0.90,fapk_0.70,fapk_0.50,fapk_0.30",
+    "classes": "car",
+    "max_videos": 0,
+    "frames_per_video": 60,
+    "frame_stride": 1,
+    "max_rois_per_frame": 100000,
+    "min_box": 0.0,
+    "img_scale": [
+      1242,
+      375
+    ],
+    "fap_low_ratio": 0.1,
+    "fap_keep_prob": 0.9,
+    "video_regex": "(?P<scene>Scene\\d+)_(?P<variant>\\w+)_Camera_\\d+",
+    "seed": 0,
+    "device": "cuda",
+    "view_batch_size": 3,
+    "workers": 2,
+    "dry_run": false
+  },
+  "rois": 9081,
+  "elapsed_seconds": 76.84535479545593
+}

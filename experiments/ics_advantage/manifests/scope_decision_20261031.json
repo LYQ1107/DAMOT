@@ -1,0 +1,6 @@
+{
+  "user_choice": "保留原范围：注明 stage4 缺失，等训练任务处理后再跑第二批",
+  "stage4_main_comparison_pending": true,
+  "new_stage1_inference_trim": false,
+  "advantage_requested_stage1_supplement": true
+}

@@ -6,8 +6,8 @@
   },
   {
     "path": "experiments/ics_advantage/SUMMARY.md",
-    "bytes": 13816,
-    "sha256": "5ff9c456e192a0cb7212f665f75d06cb5a9ef21fcab328236716ad7e14bdc7b1"
+    "bytes": 20491,
+    "sha256": "b115d5fca452c0ae0dd870557ad7016f197f43303a8a9f1940389fca994715ca"
   },
   {
     "path": "experiments/ics_advantage/analysis/batch1/features/PER_VIEW_TABLE.md",
@@ -113,6 +113,106 @@
     "path": "experiments/ics_advantage/analysis/batch1/tracking/video_differences.csv",
     "bytes": 21483,
     "sha256": "0d59848ae695a987c72255d4cd32fd1fb532cc43d2d363e3019f47441198cb7c"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/complete.json",
+    "bytes": 449,
+    "sha256": "95eed3b2d19f56ee19e7586109ce4be88a9b1fd35ae5ca78c9988115b8e9b6f6"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/intervention_tsne_stage1_coordinates.csv",
+    "bytes": 169048,
+    "sha256": "85d68a9bdbacd4a8340142650462d60532101d7790ba2f39da7e2019c4205982"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/intervention_tsne_stage1_protocol.json",
+    "bytes": 1369,
+    "sha256": "95004644452738218a94884e123c6e17189afa6e5376eb4a44aa5d3eea542e33"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/model_means.csv",
+    "bytes": 1019,
+    "sha256": "80ff133928d97acc08579496c1b1919b7782bd3b936d419731af52d65f71445f"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/paired_effects.csv",
+    "bytes": 10448,
+    "sha256": "98369b5dfd9bf5eb3296265c755459deb8c036692da5657aead9777b2115fb63"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/per_video/HF_stage1.csv",
+    "bytes": 133092,
+    "sha256": "be19fe263e062d89105473eee6ae361ff67c09c3e1f16792732896afbbc4270d"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/per_video/INT_stage1.csv",
+    "bytes": 134720,
+    "sha256": "3688dddaf0aa7819b662d6c4409ab85342c1036bd4ac03a6b0a31c1c7dafea2b"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/per_view.csv",
+    "bytes": 22142,
+    "sha256": "da6e5e28f108567bdb665451204c90eb47a2a6f307612397bbfd2bdab06a4302"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/query_supports.json",
+    "bytes": 173568,
+    "sha256": "fc992ef5332180356be5ee1664c5a3f8973f5a8deaed3ea6b067be30c9319145"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/features/silhouette.csv",
+    "bytes": 449,
+    "sha256": "f9b1552f5dee17d677e634dff83cdfe0a08ff68e57570ed2a2728b811fd8b00a"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/brightness_AssA.pdf",
+    "bytes": 15104,
+    "sha256": "d9490ffc95f4705bba0f29aa7d504c81d285036bf98536b690d09fdbb322145e"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/brightness_AssA.png",
+    "bytes": 79561,
+    "sha256": "1b36bbc737485396326e9a055c5ec1b20e78c81b5f3b8c04e06746ab7e899b5d"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/brightness_bins.csv",
+    "bytes": 122,
+    "sha256": "4fe6006a0fb67f00c0df59a487a9b65b7d595a79d3c7f6448b143f9b9c7637ee"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/complete.json",
+    "bytes": 453,
+    "sha256": "0c65c64bc5e3a9f5ebcc28ce6925e946bb907649e85a2bcf1c2a022d95b44e7a"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/paired_effects.csv",
+    "bytes": 1501,
+    "sha256": "c037f3f7b2d4d75ea1715064428620b212322ed523b43eaadae6de5263043277"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/spearman.csv",
+    "bytes": 949,
+    "sha256": "7895976c079e070dc7005e06772f4abed2730bf030de5c986e7799c9c28deed7"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/tracking/video_differences.csv",
+    "bytes": 2515,
+    "sha256": "387d5bd01e08d172f4f926f0c3b5414b8138b2bbae7ac09f1d13edf87c903129"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/vkitti/complete.json",
+    "bytes": 490,
+    "sha256": "4f1bb4613e138a3c2d1dcf5609afa3be262e00016d31f2850e87f52c06fce8c7"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/vkitti/retrieval.csv",
+    "bytes": 895,
+    "sha256": "71a07d3ac17159e91881873ae70784e4212589aa36e48b1df164c6140e6107a1"
+  },
+  {
+    "path": "experiments/ics_advantage/analysis/batch2/vkitti/tsne_stage1_coordinates.csv",
+    "bytes": 5942,
+    "sha256": "879f55cf065b328bf48724d448f3098b76936b3489a8b400dd6fa03946d43f22"
   },
   {
     "path": "experiments/ics_advantage/code/configs/_base_/datasets/bdd_as_shift_track_det.py",
@@ -1870,6 +1970,1741 @@
     "sha256": "0f3ee82161d6f4900d9a4e80d6b66df7aca389cfaf8dce9750e8e1847dc7f150"
   },
   {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_as_shift_track_det.py",
+    "bytes": 3546,
+    "sha256": "85b18a75f510bb56847858f8df20dcf6066fdccb43393a05bd6c7e16bb15d711"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_clear.py",
+    "bytes": 2011,
+    "sha256": "d7667d5eb5d2835a7de73c5f6faef749e8bc6ec28a67c90d2d1c3bb5ce0943e4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_dawn_dusk.py",
+    "bytes": 2060,
+    "sha256": "022bb3201e1bc95aff1dff459cb7a660be353f65329c771140eaddd008c99733"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_night.py",
+    "bytes": 2040,
+    "sha256": "6d5b769427521f5a1e05026b82de4c0c0655c3a6a9eeb3fe008ff235f0efcf85"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_overcast.py",
+    "bytes": 2055,
+    "sha256": "27d231e031d4c9e714a17d079bb58e50e2996f666802bacc29cf157a68ed3d74"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_partly_cloudy.py",
+    "bytes": 2080,
+    "sha256": "48911c14073267dc53a92b42b456146659835e4e83f2d26bb01d0fd9198c0273"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_rainy.py",
+    "bytes": 2040,
+    "sha256": "dfe9ab7819b57a002751b86afce8d653a31d5d23363894b2ad45f932edb3818a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_da_snowy.py",
+    "bytes": 2040,
+    "sha256": "de58e9cb536320d36b8c9c78ce8f78f8c63592ed909294a24fab79eb3340309c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/bdd_pedestrian_track_det.py",
+    "bytes": 3354,
+    "sha256": "0fdbe6e557681cfdc9906c57510be96d62946dd9b672f2847bd65b83c7cd8632"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/dancetrack.py",
+    "bytes": 2547,
+    "sha256": "1ab20aa1ff9d7421ef204bc9c8be74ac09563b98277b7d987861dd766fccd0a1"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/dancetrack_from_bdd.py",
+    "bytes": 2552,
+    "sha256": "9f40f3592764cd34d894d94d9cf7872b4638de42a02bb2a93bdd0cd93a9809de"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/mot_challenge.py",
+    "bytes": 2554,
+    "sha256": "ccbee6d78a441719386f0d137b7873c749fbef544970362503a13a07b85a0f16"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/mot_challenge_from_bdd.py",
+    "bytes": 2632,
+    "sha256": "6ff9b6df3762242c2c94b5cdeb217fd4f82446983605e2b961b46aa0c2a4d880"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_cloudy.py",
+    "bytes": 2002,
+    "sha256": "169133128ad145f81b3df4c05ad8af0019dddd3e41da1fedd8386bb267e15cb2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_cloudy_eval.py",
+    "bytes": 1157,
+    "sha256": "24bc59c2a0dc5a305af3d9e51b1fc63d68478d4f6e9e118d2f70a1a2a83743a3"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_dark.py",
+    "bytes": 1994,
+    "sha256": "e416cb42f1d0a64d731cddae5edc695bf988d1f369c174a0d595d884383f6c5e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_dark_eval.py",
+    "bytes": 1151,
+    "sha256": "d8169b1b1175f55c02622f1b1a0f760001aee775abc957ae07cb74af43eb3239"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_fog.py",
+    "bytes": 1990,
+    "sha256": "5b5675995e2d5627cfeaf9ccc25f7e13a2cc7a4497277a3f3dc0b0cbaf8d99cc"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_fog_eval.py",
+    "bytes": 1148,
+    "sha256": "6b9a24162dfabc39a809abeea0449ee66e92f91efb7b78c4565305b8c089c1e9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_normal.py",
+    "bytes": 2002,
+    "sha256": "62c2bd55680bf37802568a44928254d89cd2c7c3c95cb4fbd25a9c979e6f52db"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_normal_eval.py",
+    "bytes": 1157,
+    "sha256": "00e7c0b1ba3c5c7f28bf3debaf61a606c9a470a3271532c1285fa70b0cb7d74e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_rain.py",
+    "bytes": 1994,
+    "sha256": "fb95957d88b7edeec075708458018ac90723cd4dc81f442849c5880489bfe12e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_rain_eval.py",
+    "bytes": 1151,
+    "sha256": "86bcd467bc550ec7e5a4364d6bc943f489b1de85a5ecbaa69b181487c1099899"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_snow.py",
+    "bytes": 1994,
+    "sha256": "bf7d9aabf65d827300265f3e11604ab768a2a9103c03fdf57894ef54220ea0f2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/motsynth_snow_eval.py",
+    "bytes": 1151,
+    "sha256": "f78bd28e14891dcd49bba244e238178b4a2807ec532dcc7b492d7e8bdff5ca56"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/shift_track.py",
+    "bytes": 3239,
+    "sha256": "fc4eaaff34617bb03c62ceb4fddf41338b5874556c5cd8fc310d69229c6fbad4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_cloudy.py",
+    "bytes": 2045,
+    "sha256": "7d894035d9b1998e51270f7254aa0e0580ae1fe8845e6d2b688ab762bbf95498"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_cloudy_eval.py",
+    "bytes": 1175,
+    "sha256": "71a8d8de5610c2364609054efc0dec14f5e602e2bc47347efec112005eeaea22"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_night.py",
+    "bytes": 2040,
+    "sha256": "d905c1fc84c5b766c0d1e6f253d4b67ce52b0090e27230340de4556f78b2b65e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_night_eval.py",
+    "bytes": 1171,
+    "sha256": "7b75e61b232bb768e2b2575363d0b0df8ab98d4b441d417462292d126328c0fd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_rainy.py",
+    "bytes": 2040,
+    "sha256": "638fab574f57106df90393feff934bed3b64a3bf2ffaf25e8de59ff0929015fc"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_rainy_eval.py",
+    "bytes": 1171,
+    "sha256": "4cd447ef702471c6819be27c1472566f54895656702297d786e9b04dd183b0b2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_sunny.py",
+    "bytes": 2040,
+    "sha256": "0b335b9365133baebad676eb461b89387cc0941643ffa67804b30a9353f65690"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/ua_detrac_sunny_eval.py",
+    "bytes": 1171,
+    "sha256": "cf91ec91556ffe9203375570a8e0e92bc9b6d261f6d4786984c68492acb50373"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/vkitti2_clone.py",
+    "bytes": 2044,
+    "sha256": "737a792718f13dc6cbd81070a48f32aa9b9febc8257b7f44fd5a2a973e12270c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/vkitti2_fog_eval.py",
+    "bytes": 1196,
+    "sha256": "bde380a523e3e8a817249996b0ed743fe3e682054c86632b39f57e482202f418"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/vkitti2_morning_eval.py",
+    "bytes": 1208,
+    "sha256": "8148fb7ca62d3dd5628431657ed98218d0b2d02123662b2536d2dcb9092cf5ac"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/vkitti2_overcast_eval.py",
+    "bytes": 1211,
+    "sha256": "73739470b0f47279018e224bcf0b919ca9ee560305f767792229240f3f6e0a93"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/vkitti2_rain_eval.py",
+    "bytes": 1199,
+    "sha256": "14f32e504d8251391a2e619dc5cd17179da45c7a471a5d30692f8c1d6d421b70"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/datasets/vkitti2_sunset_eval.py",
+    "bytes": 1205,
+    "sha256": "cc2655c2c1b237e362780faba61c48928147adff04ca415d86ac1baf7dbb6ccc"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/default_runtime.py",
+    "bytes": 613,
+    "sha256": "8f0137d09e31d7fc840b5444e3d62d5ef3835f5df40ae5ba18b649ea37ab1b19"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/models/faster_rcnn_r50_fpn.py",
+    "bytes": 4123,
+    "sha256": "4ee6d955aa01884b6bf8d6211f795a31b025ab614dc6d8ae7afd3932f94650c3"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_as_shift.py",
+    "bytes": 2544,
+    "sha256": "c478b449519510ba6dc2cca63f4f2a734d9035f6e1b8b771260df3c0fd5ae492"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_clear.py",
+    "bytes": 2040,
+    "sha256": "dcd1a66c6ccd2dcd0b8e4793aa8ea12ba06222cce722884bf0e989d0f21d68e0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_dawn_dusk.py",
+    "bytes": 2060,
+    "sha256": "022bb3201e1bc95aff1dff459cb7a660be353f65329c771140eaddd008c99733"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_night.py",
+    "bytes": 2011,
+    "sha256": "212bcceaab12c5faa700ed395b9c1515197307321d64ec07d09d89938218a7dd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_overcast.py",
+    "bytes": 2055,
+    "sha256": "27d231e031d4c9e714a17d079bb58e50e2996f666802bacc29cf157a68ed3d74"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_partly_cloudy.py",
+    "bytes": 2080,
+    "sha256": "48911c14073267dc53a92b42b456146659835e4e83f2d26bb01d0fd9198c0273"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_rainy.py",
+    "bytes": 2040,
+    "sha256": "dfe9ab7819b57a002751b86afce8d653a31d5d23363894b2ad45f932edb3818a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_da_snowy.py",
+    "bytes": 2040,
+    "sha256": "de58e9cb536320d36b8c9c78ce8f78f8c63592ed909294a24fab79eb3340309c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_pedestrian.py",
+    "bytes": 2385,
+    "sha256": "2976389f7fe61ddb6fedb3c83356994caa7deddf76221ac28c3bdd9abb21b977"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/bdd_pedestrian_from_mot.py",
+    "bytes": 2380,
+    "sha256": "d06a5faf65803e151d88d97598b39c156db553c5951b271f784b59eb07fb5283"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/dancetrack.py",
+    "bytes": 2312,
+    "sha256": "b0cff84de08349ad359b504bb692e483a7bfa2c20345ba6719caeee8fc25921d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/dancetrack_from_bdd.py",
+    "bytes": 2317,
+    "sha256": "ee0a3948c6ee051d057bb6b77a3795c60ebc8b69ec8f1e9be2b4b1e766529710"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/mot_challenge.py",
+    "bytes": 2321,
+    "sha256": "bd9e2ee53a67199c6dc3dd77a078dc7eb855c9dc56e3755d178c8c2e3c9aa019"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/mot_challenge_from_bdd.py",
+    "bytes": 2326,
+    "sha256": "db86868161825735b1e0fd5829e2322cbac6792caa8edc624326192e52230af7"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/motsynth_cloudy.py",
+    "bytes": 2004,
+    "sha256": "ace551e9831895e505e54fc902f8a7ee77492c84b42b6298e2573d1f3c00b00a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/motsynth_dark.py",
+    "bytes": 1996,
+    "sha256": "1d1635198e6509c9a601c223c754b157d8208c1ce4538414966ef06aaa9e867f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/motsynth_fog.py",
+    "bytes": 1992,
+    "sha256": "8f79c6801992edcefdc9e8726c32feabfe11708aac7de8a6ffef5f85914f749e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/motsynth_rain.py",
+    "bytes": 1996,
+    "sha256": "907492ffdab66ba42b510327412d5a997d068592dd9bee3bb187bd7be06a61a6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/motsynth_snow.py",
+    "bytes": 1996,
+    "sha256": "8d7b9631510362a63d22e441d0616d98b6079679a25921b115cb6a943fa55616"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/ua_detrac_cloudy.py",
+    "bytes": 2047,
+    "sha256": "d9bcac903b6de4492981d8627d3be49b5ffdb567d2a6be4cc6dd9341f33f966e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/ua_detrac_night.py",
+    "bytes": 2042,
+    "sha256": "a261063e324396925ad1e888d459a5f87ef84c5ed8ea0f713f8f781db272ba3c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/ua_detrac_rainy.py",
+    "bytes": 2042,
+    "sha256": "7c44a478d80ee44f5264c549a2e4c30ba0b5fb1c7fd51de8cf48c6f37ba4762f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/vkitti2_fog.py",
+    "bytes": 2038,
+    "sha256": "6f786312b4670cefc87fe7b633968dd4f676f34717489503e8747e9083e78e0f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/vkitti2_morning.py",
+    "bytes": 2054,
+    "sha256": "61dedfb2d99329e8a36a31267db9296fc62f7ce2db4b3e3436c8d15d740ef1fd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/vkitti2_overcast.py",
+    "bytes": 2058,
+    "sha256": "e7649040b264baec53ada8513b4b1ef52e74a8634f8ee6508571892d89f393c3"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/vkitti2_rain.py",
+    "bytes": 2042,
+    "sha256": "7010a8b7685a7f198b35a492e8aee224b66e5b89a8e881d6e9d1024b04a4d2aa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/_base_/target_datasets/vkitti2_sunset.py",
+    "bytes": 2050,
+    "sha256": "7307db5bf1ece024c9ee2ce55012da8148e513a89fa86456fe590b4e9af628ce"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/causal_pca_ablation/darth_seq_causal_pca_v1_cov_ema_4domain_5e.py",
+    "bytes": 1525,
+    "sha256": "9bf9274b150278505fefe8718df01e4a964d4022162ae173d56f6bb8598e80ec"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/causal_pca_ablation/darth_seq_causal_pca_v2_car_weighted_cov_ema_4domain_5e.py",
+    "bytes": 1677,
+    "sha256": "65595cae6f68148b5dc0b7202ef59029bddf9e1fb2dde2e267df9c309ca98cb6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/causal_pca_ablation/darth_seq_causal_pca_v3_pairwise_residual_4domain_5e.py",
+    "bytes": 1846,
+    "sha256": "db6ede5650e1e09a187df8d96cfe4caee62283e34dee9984b1e9023f87fc6806"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_F_highnoise_aprComplement_4domain_5e.py",
+    "bytes": 1039,
+    "sha256": "14d8b7f454a1dc4d3a0374cc06ef5ffd3f13971b803137c46dfa042a4cc5aa03"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalOldWeak_roiV1_4domain_5e.py",
+    "bytes": 254,
+    "sha256": "f304a8ee9a4346aea092f0f6ecacbcc7b8337e3235f3c3ed79abe11a898c9e51"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalOld_4domain_5e.py",
+    "bytes": 932,
+    "sha256": "d26a17cd4dfcb235443f00db11928563fdb875ab30a4ce3857926bfb8455a1a1"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalOld_roiV1Gate_4domain_5e.py",
+    "bytes": 343,
+    "sha256": "2558de3af2f1d9f9e9ec19ee0ef394529fb50d4335fcd1f35c0b8c68a73748e4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalOld_roiV1Weak_4domain_5e.py",
+    "bytes": 301,
+    "sha256": "9db8de417b860d4e2ad7e1cdf3cbcb68af1a1c4f9bfab407c76aa4ee4abcf9eb"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalOld_roiV1_4domain_5e.py",
+    "bytes": 1551,
+    "sha256": "0039ef755de3a5fc6af757b148c3aeb7d368be6b50783e19b581dc5b445b5ec7"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalOld_roiV1_scorewired_4domain_5e.py",
+    "bytes": 763,
+    "sha256": "3613850120a0b9682b5f8993474494c4079ca3546fb4ec0af14ae5598b2b8074"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalProtoCenter_roiV1Weak_4domain_5e.py",
+    "bytes": 559,
+    "sha256": "52252ba2aff11b3702dbaeeae364dd5d5ac4690cd0cd0a554b402a0d6665adca"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_4domain_5e.py",
+    "bytes": 558,
+    "sha256": "1cf6691194306c1559dbb241994aba1147f570daf81e87f3aadfbf8fdb6605dc"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_coupledComplement_4domain_5e.py",
+    "bytes": 134,
+    "sha256": "772e8b15d35e3a970e5d17f0dcdade04552bf02ed6744d87c0c3b4e552f0000e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_coupledFeatPCA_4domain_5e.py",
+    "bytes": 145,
+    "sha256": "4e213b12512aa290f0ce3f4c107c138e88405fabdaecd42f04e02ac8dfeeccfe"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_coupled_4domain_5e.py",
+    "bytes": 376,
+    "sha256": "c0e032b99bdfdca23798b4d838d445858c938f925c489835d6d1bb4f365d397b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_causalShrinkage_roiV1Weak_4domain_5e.py",
+    "bytes": 469,
+    "sha256": "316fa2ba111dcaf57b914c577d27cd4dbac7b2dd4da685324738e2b11cb08f3a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/module_combinations/darth_spaP1_roiV1_4domain_5e.py",
+    "bytes": 918,
+    "sha256": "b022c1923454804b21789a65093c515ea9369c7a44909da1f7d8dfe8a9205168"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_best_4domain_5e.py",
+    "bytes": 1310,
+    "sha256": "16d978f6c4843e28e59d7a5e9c9e71cdc514e3fa71d165c15c4c833a89bc4a12"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v0_control_clear_overcast_night_5e.py",
+    "bytes": 865,
+    "sha256": "398e13525efde7a4999db74bb3cf327dad750f312c7cb317cccbe79b22a6fc93"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v1_topscore_car_l001_clear_overcast_night_5e.py",
+    "bytes": 1185,
+    "sha256": "2060bc38d9697bb9e463a09c0c77531be367cdd90e8d3acbf735dc2f9346246c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v1a_4domain_5e.py",
+    "bytes": 1131,
+    "sha256": "abfac3950ed07467ae9e7b11a6ca2599febce0c38b1ff7abdaea9dc7171327a6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v1a_topscore_car_l0005_clear_overcast_night_3e.py",
+    "bytes": 1438,
+    "sha256": "391308cda6fec3638d53fc49ca5a5ef2fdbafb9d480a5bd1baefcec7e8bd241a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v1b_4domain_5e.py",
+    "bytes": 1140,
+    "sha256": "140fa1cf0444e63c4856499191e9919a43dd31699f6a8ab899941e4046b431ed"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v1b_topscore_car_k200_topk5_l001_clear_overcast_night_3e.py",
+    "bytes": 1558,
+    "sha256": "658f06351c128058d210569fea34d5a93b22a54beae1523c96a9863fd0f55130"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v2_conservative_car_l0005_clear_overcast_night_5e.py",
+    "bytes": 1149,
+    "sha256": "eef7765e7a95c7a8dc6da148a866cc6f1686c018fa5cc309fa08c63f59ac219c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_roi_proto_v3_diverse_car_l001_clear_overcast_night_5e.py",
+    "bytes": 1228,
+    "sha256": "1cc4b19a1e8d4262744a03a630c9504b715c040e395b6cf7cb161e11f404e7d2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/roi_proto/darth_seq_spa_only_4domain_5e.py",
+    "bytes": 1332,
+    "sha256": "5a6dcccb862d1250ee77c8634329986c9a247b1b59475f253a7e153fcb1349a6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_det_only_4domain_5e.py",
+    "bytes": 1071,
+    "sha256": "978130d3104c1d3e7f055c1ad54297165a37f873262f176e9e7cf3bebaf3fb7b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_det_only_clear_to_night_5e.py",
+    "bytes": 1071,
+    "sha256": "978130d3104c1d3e7f055c1ad54297165a37f873262f176e9e7cf3bebaf3fb7b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_A_4domain_5e.py",
+    "bytes": 948,
+    "sha256": "fcc842f6fc4898dc5347ac527558c13f4716832c802055883367bfd405e56533"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_A_clear_to_night_5e.py",
+    "bytes": 948,
+    "sha256": "fcc842f6fc4898dc5347ac527558c13f4716832c802055883367bfd405e56533"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_B_4domain_5e.py",
+    "bytes": 925,
+    "sha256": "95d389996e0b24f74d06fd4c38d7ed0c80922f2bed61e77c015aac35a416c467"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_B_clear_to_night_5e.py",
+    "bytes": 925,
+    "sha256": "95d389996e0b24f74d06fd4c38d7ed0c80922f2bed61e77c015aac35a416c467"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_conf60_clear_to_night_5e.py",
+    "bytes": 1012,
+    "sha256": "51c6e0db5d15b9f72414e1416bf3450abc0053fbacecfa00ba941f5017791f3a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_conf70_4domain_5e.py",
+    "bytes": 1012,
+    "sha256": "0dba058acfa8c8bb1c442e6f99905612d91b78dbee37adade56b72fbbadcbb40"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_mild_conf70_clear_to_night_5e.py",
+    "bytes": 1012,
+    "sha256": "0dba058acfa8c8bb1c442e6f99905612d91b78dbee37adade56b72fbbadcbb40"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_pipeline_mild_4domain_5e.py",
+    "bytes": 1606,
+    "sha256": "b4b0ca73b2242ee6e6a1a9f0366692b910a0e104057fbc35effd7ef74277936a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_4domain/spa_fix/darth_spa_pipeline_mild_clear_to_night_5e.py",
+    "bytes": 1606,
+    "sha256": "b4b0ca73b2242ee6e6a1a9f0366692b910a0e104057fbc35effd7ef74277936a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_10e_bdd_mixed4.py",
+    "bytes": 3401,
+    "sha256": "9983ec8c9aa97dae50081dd8816d5a25643c031655eda7f8991b58526024ef7f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_clear.py",
+    "bytes": 507,
+    "sha256": "dfca4a3bfbba98536bf84a7f55ed6a2fd2dc60f9043ac03b3b0f56d70371b37d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_dawn_dusk.py",
+    "bytes": 511,
+    "sha256": "2bc42598ff01b108d4eb215b40fdf2c1dab2a3c5f63068db095b99b9bb8ef608"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_night.py",
+    "bytes": 507,
+    "sha256": "fb602277e3cbdd3b28c241a677a4e852e1c4f8fd04a5610c80c7c7b4d625a2ef"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_overcast.py",
+    "bytes": 510,
+    "sha256": "78eb9c7c428132bde22e65ccbcde205b6575143df0465c6dcd1b9a0ac19a530c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_partly_cloudy.py",
+    "bytes": 515,
+    "sha256": "2e3ea6d403fcde9b8070ebbe54e0b420c70c19b69ab88e39bbba74de86e3342e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_rainy.py",
+    "bytes": 507,
+    "sha256": "6e779dfdb7b503bdd26c2ea7349c6320ed3986dd3dabae0180869a853c1c24e0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_snowy.py",
+    "bytes": 507,
+    "sha256": "ff4bb6f54d13d1211121f4fc2c33a677f00b9c8d60811e8237138bb8330faa94"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_qdtrack_faster-rcnn_r50_fpn_40e_bdd_mixed4.py",
+    "bytes": 3401,
+    "sha256": "9983ec8c9aa97dae50081dd8816d5a25643c031655eda7f8991b58526024ef7f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_seq_ablation_base.py",
+    "bytes": 1768,
+    "sha256": "4a45cb916b957464d6eb90de908090d4e3de8c92a3298e17a4ba0ff6e84d7ef6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_seq_causal_only.py",
+    "bytes": 568,
+    "sha256": "52e2beca495ed5c66f46b27f236fe276adaba62d8bdb88a07a6b095584e92640"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_seq_spa_causal.py",
+    "bytes": 703,
+    "sha256": "c2b9c332996fea60bb65c6daacf397301cb8a873077c39aaea37e72db2f1e9a5"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_seq_spa_only.py",
+    "bytes": 449,
+    "sha256": "e3c44f47e598e18478539f0072e02b6949a8d9b44b061b60b2b6cc2cf141161a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/bdd_7domain/darth_seq_spa_style_replace_clear_to_night_5e.py",
+    "bytes": 1682,
+    "sha256": "f534af17b5bf1ca4df90316aef9adf66c71be6f9c70e71b9454ce8db7a86a7a0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_10e_bdd_night_from_clear.py",
+    "bytes": 220,
+    "sha256": "004001f979fe6071c56a13f9096de06d73388255cdb4c6c0fe73039d42114ce6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_12e_base.py",
+    "bytes": 3205,
+    "sha256": "484bdac241be656e0ea13afd29730b6822646173fd6d1b18f4a9f96e1c311a3d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_as_shift.py",
+    "bytes": 220,
+    "sha256": "a0b5fe0c00d5f8811eb5e5249815aa02865f562fcf76940788216aeabc0e30ae"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_12e_bdd_pedestrian_from_mot.py",
+    "bytes": 716,
+    "sha256": "ca2ca6115444c58b5256d6d59db73d5c04c54863fc70cd0f3f0a46e06995903b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_4e_dancetrack.py",
+    "bytes": 198,
+    "sha256": "ea59fe09ba5077b304e3afdfce1efa29a2dd1a81256935d0d8d7b2d0050e1809"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_4e_dancetrack_from_bdd.py",
+    "bytes": 651,
+    "sha256": "89d9bcebe9048119876c3907deccc4e8ee5bc04c08e1b794a95b88aed0535979"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_4e_mot17-private-half.py",
+    "bytes": 201,
+    "sha256": "7836859a38e0957bc5ae7cdb7b843ef64e89b5eec3847650d7879749a13f73d9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster-rcnn_r50_fpn_4e_mot17-private-half_from_bdd.py",
+    "bytes": 655,
+    "sha256": "62510ab2f3b096491c06420ec35dfea9116a54402b50971af3bbadffe8003a55"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/darth_qdtrack_faster_rcnn_r50_fpn_4e_base.py",
+    "bytes": 3039,
+    "sha256": "312f53efa28872c1b4c4f18cc2035baca7617b282ab6da0820aae84dd2dae163"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/darth_qdtrack_faster-rcnn_r50_fpn_5e_motsynth_cloudy_from_normal.py",
+    "bytes": 850,
+    "sha256": "13d64d7e25febca736cacce66ddc76f5fa935e36acb368279200d36050488e37"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/darth_qdtrack_faster-rcnn_r50_fpn_5e_motsynth_dark_from_normal.py",
+    "bytes": 848,
+    "sha256": "69bd2e5b34d0be968d971079a3fc0decafd2340d1e9e4ada190178bfc3adde87"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/darth_qdtrack_faster-rcnn_r50_fpn_5e_motsynth_fog_from_normal.py",
+    "bytes": 847,
+    "sha256": "ebb884de7b0d8dbfe20e1caa3576e79f9d7dd0c1f2ca31751ee3d2cf5f104e11"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/darth_qdtrack_faster-rcnn_r50_fpn_5e_motsynth_rain_from_normal.py",
+    "bytes": 848,
+    "sha256": "3640e48800d7ba7dc1180acd26a86f385c87c7886d1ad53365662779e4266b30"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/darth_qdtrack_faster-rcnn_r50_fpn_5e_motsynth_snow_from_normal.py",
+    "bytes": 848,
+    "sha256": "eec6b53aa7a2af5e83d1a3241fc9a338bfc3405480db4f1b85658396b0d4e83d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_motsynth_cloudy_from_normal.py",
+    "bytes": 2746,
+    "sha256": "ea6e72e0977290f413ea2e489adb1b0e8922f26299a7257c1e5e281384b7dbbf"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_motsynth_dark_from_normal.py",
+    "bytes": 2744,
+    "sha256": "d03f16fa71e2b81b7c0ea698ff0f29ac564224bc57f2a8dea85f3bce7b546064"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_motsynth_fog_from_normal.py",
+    "bytes": 2743,
+    "sha256": "0189e36321c2d32b20a22e08f63b14c8831c0d1a735d67ca97ab2e004859624f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_motsynth_rain_from_normal.py",
+    "bytes": 2744,
+    "sha256": "f61db822b84388b840835fdc2d399c851bbe327c88207d01b4fdd01fc8327181"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_motsynth_snow_from_normal.py",
+    "bytes": 2744,
+    "sha256": "3fca8a1d617a95737fd5de1822c4f90f60a0892873904b728fd50e3cb2aab3e4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_motsynth_cloudy_from_normal.py",
+    "bytes": 3037,
+    "sha256": "814c2112b2bfbfa53de7c056e7c6a5bc268e4f4e2107e7c476f3d24c9851e5a4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_motsynth_dark_from_normal.py",
+    "bytes": 3035,
+    "sha256": "c0fce580cad396e6ec63d7ceba752c1a0b2abafca80ec7a806110975233a2f7d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_motsynth_fog_from_normal.py",
+    "bytes": 3034,
+    "sha256": "bae25bca5770afd271608c2c1df5ed879eef0933f479f80e9e8eab7978de8e69"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_motsynth_rain_from_normal.py",
+    "bytes": 3035,
+    "sha256": "067bd2c8a3d4e0a5b2746d7858196866712587b5a58f4336bb3c2698ef40bcff"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/motsynth/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_motsynth_snow_from_normal.py",
+    "bytes": 3035,
+    "sha256": "55a8ffbf4a3848f2f3199324be04ffb1d86b5ec924eb64e1363234860daf1793"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/darth_qdtrack_faster-rcnn_r50_fpn_5e_ua_detrac_cloudy_from_sunny.py",
+    "bytes": 851,
+    "sha256": "ceda6c8db51d291c1f96074ee5515a4dfb3f56c727c0c47a169302576dfde438"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/darth_qdtrack_faster-rcnn_r50_fpn_5e_ua_detrac_night_from_sunny.py",
+    "bytes": 850,
+    "sha256": "bf6b6fbcef8b1e28499eaf34fbd6a181fdc0721a3ca1d9133ca448d67d703137"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/darth_qdtrack_faster-rcnn_r50_fpn_5e_ua_detrac_rainy_from_sunny.py",
+    "bytes": 850,
+    "sha256": "95cef331881c734193c44ea55ecef76a32a308cf1d7d428b2205c0dde823e30e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_ua_detrac_cloudy_from_sunny.py",
+    "bytes": 2747,
+    "sha256": "3e79d7c615367e422991e328e56d1bebf5885c201790ea2eac9814913aec508a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_ua_detrac_night_from_sunny.py",
+    "bytes": 2746,
+    "sha256": "e4c4136f7c78ee4fb52b8f9662cb30afd510fd968068cf1eff8e5d2f1973579b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_ua_detrac_rainy_from_sunny.py",
+    "bytes": 2746,
+    "sha256": "9945dd4d63c49c700159e6075487c46779fea7bb3e3872adf44341c8731dca80"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_ua_detrac_cloudy_from_sunny.py",
+    "bytes": 3038,
+    "sha256": "f006f45c8a5c90fef79a0d09008c1feccec4b8a226603be900ab6c4ea1029204"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_ua_detrac_night_from_sunny.py",
+    "bytes": 3037,
+    "sha256": "1f586601a95aa40ff840b13251728f25f84332b01b25bd7359bd69651433c9cd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/ua_detrac/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_ua_detrac_rainy_from_sunny.py",
+    "bytes": 3037,
+    "sha256": "a33e066ad496aeb4e2f2d997fd8973f4f9e028790cf3cc4d50aab8c5ab5063a8"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/darth_qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_fog_from_clone.py",
+    "bytes": 840,
+    "sha256": "23ff215736a45d10a49e7def59fdcbef44537b287cd20afec7c3397976b089f3"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/darth_qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_morning_from_clone.py",
+    "bytes": 844,
+    "sha256": "066688953c4cb0e4bf5d6dce50a73c20c82c8e9dacbe05f314a2b9595cc5bc74"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/darth_qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_overcast_from_clone.py",
+    "bytes": 845,
+    "sha256": "84e9196ff9abbea88956b572effec51e68bc0ac371b687bb22f87797e44f5b3e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/darth_qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_rain_from_clone.py",
+    "bytes": 841,
+    "sha256": "585a538c7f9dca94cff4b222c1433ff0c927f7ca6e4e81d00543929cb6e078ce"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/darth_qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_sunset_from_clone.py",
+    "bytes": 843,
+    "sha256": "4b1ce4d02d579761678cee643c02c1716ebfa2da89230bb931f83e83e6d33a82"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_vkitti2_fog_from_clone.py",
+    "bytes": 2800,
+    "sha256": "59e091b9ac0462292bc77c1e613d3757043f81967f99a0aa1cba97d6ca74b3ee"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_vkitti2_morning_from_clone.py",
+    "bytes": 2804,
+    "sha256": "00a641a9f3287e7f865d9dd61dabab016786db1d636367bd2b3c995d8d05a78c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_vkitti2_overcast_from_clone.py",
+    "bytes": 2805,
+    "sha256": "50fb4a2e5843bdd15e2fd0a8d8c86e351a84004446f2e3c54398ac7829de44da"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_vkitti2_rain_from_clone.py",
+    "bytes": 2801,
+    "sha256": "d0eab85a824d1888d9f2bd842e3a129e82d7a7d2266fefdfdf95faa56fd4c21e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalOld_roiV1Weak_5e_vkitti2_sunset_from_clone.py",
+    "bytes": 2803,
+    "sha256": "d17dfa450c8ccee106c26df9b596b1a428513f1b1bb15da6d165e8d1ec3d62eb"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_vkitti2_fog_from_clone.py",
+    "bytes": 3091,
+    "sha256": "61717305afd535544a2be33d1722634efe92175f4a33e1b9ddef58b1e56e67e8"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_vkitti2_morning_from_clone.py",
+    "bytes": 3095,
+    "sha256": "5d511d2dff674a0dcdd00ca323adfea6b4b60d5bccd6e9e27f84713f1e3eb1d8"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_vkitti2_overcast_from_clone.py",
+    "bytes": 3096,
+    "sha256": "eeb793a1e7609255a6b7a0467b88251f176ca9df5cdb7c5ea4975b12e769edde"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_vkitti2_rain_from_clone.py",
+    "bytes": 3092,
+    "sha256": "9150dfa2b86667da4cb1afe146fa8272b12049db648f1d8c750a1b92f3b1077a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/adapters/darth/vkitti2/module_combinations/darth_spaP1_causalProtoShrink_roiV1Weak_5e_vkitti2_sunset_from_clone.py",
+    "bytes": 3094,
+    "sha256": "4ee77b3c41689c5bc67c38f251043212fa8bc4aaae6eec332f02c9cc420b0da5"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/jepa/temporal_jepa_bdd_night.py",
+    "bytes": 1479,
+    "sha256": "118654d227e4cf04f1dc131b153a6300435e8bfa28848d0acfb84dab9565376b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/jepa/temporal_jepa_bdd_sample.py",
+    "bytes": 1267,
+    "sha256": "56bbd897e8099e7a5a30df3a4f38aa55a53c9d4c5e4d61002c898ca4a7b076cd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_clear.py",
+    "bytes": 1487,
+    "sha256": "99de178b1d727c69d8911ddaec942ad35d20454ed6ec31efc5833f2b32b49d49"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_dawn_dusk.py",
+    "bytes": 1491,
+    "sha256": "ffe7570131c7d3f118b50e66442c09d9e8935345bf286717d72ffa84ff5bc5e2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_night.py",
+    "bytes": 1487,
+    "sha256": "6b8b149862a67310af0ff86bd5d5b8d6ef28bfbacaad773929c64975bf326e60"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_overcast.py",
+    "bytes": 1490,
+    "sha256": "0a85064d0c9c2694cc8876aabe86dc601240cd2246c5495d5f054ed0221f37fd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_partly_cloudy.py",
+    "bytes": 1495,
+    "sha256": "d362ad197bcde9611c40c4955c1ea776056bc58cc4026c3e56e4172c35671efa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_rainy.py",
+    "bytes": 1487,
+    "sha256": "0cf0750bcad84a388d49eae3f4932766ea688488cbd37eb22f5e934004c97509"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/bdd_7domain/qdtrack_faster-rcnn_r50_fpn_20e_bdd_snowy.py",
+    "bytes": 1487,
+    "sha256": "04dc24631d267f9e6a767940fa00c96dbe06f6447ef7d92ed6baff0a2b84580b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_cloudy_eval.py",
+    "bytes": 994,
+    "sha256": "5483526f95d7d31deb2bbdeed715fd8d64e562631174053c89dd0bc4cc25883c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_dark_eval.py",
+    "bytes": 992,
+    "sha256": "3d0df6c1ca6c0e500a5c24e18474bcfa4ff44b59f2635471dcc7c647bd9237c5"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_fog_eval.py",
+    "bytes": 991,
+    "sha256": "d6d9a208da2e346c5efaf16ac02964f00112da1d62e0726d4ef1236edb7395b9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_normal.py",
+    "bytes": 1519,
+    "sha256": "3a7ccdf9a5991601cd29fc74e5e319bd3b6d95ecba97f9e43bc5751ce0cb7353"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_normal_eval.py",
+    "bytes": 994,
+    "sha256": "310303a5eda6ca8b6fd3980ac1e31b3aa01f14cef4a30e49d3f0aa43fd22e86b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_rain_eval.py",
+    "bytes": 992,
+    "sha256": "cac4f390f5501956ac77c567e8027a247cc2b9536fe5f285d390e58e0f3b0e43"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/motsynth/qdtrack_faster-rcnn_r50_fpn_20e_motsynth_snow_eval.py",
+    "bytes": 992,
+    "sha256": "7534df3e8d8488b3785f5097a0f1d85d08a66d5a3cf785218bce4880cac5e227"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_base.py",
+    "bytes": 2329,
+    "sha256": "a59db14f457ea18bb7ae34125f49e6b0c4fab654d64d3c39734bf32ff01a3cb8"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_bdd_as_shift_track_det.py",
+    "bytes": 196,
+    "sha256": "b169962529ec2a4bc6b9ac6a616fc9ef0cb71fbb37a169472fee3ab7b3ba6ec8"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_bdd_clear.py",
+    "bytes": 1198,
+    "sha256": "444ff346e54c478295e9d8f36ed0285477e5ce724ea7be22fb045187f1cea302"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_bdd_pedestrian_from_mot_track_det.py",
+    "bytes": 207,
+    "sha256": "3ae7022adc9a0274baceb3639f0efbb76aa13e6450deb88a3536d125e1a698ac"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_bdd_pedestrian_track_det.py",
+    "bytes": 198,
+    "sha256": "851ef54a2e37b9ba88ebae3210d52b08a36ca2c2e40d817bba9df7fb32ffce8d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_bdd_track_det.py",
+    "bytes": 187,
+    "sha256": "3b8a0c94700cbc1e34fb49acc289aed620b7c7df797055cf8859f626c32591cf"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_12e_dancetrack.py",
+    "bytes": 1844,
+    "sha256": "7c97fcd34302e79a053ed559488670cf6e900e9b55d9079d60448f8fbdec8baa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_4e_base.py",
+    "bytes": 2958,
+    "sha256": "d05111c5af7dbdbb31b459d9a8456f119e1b2d417d3637804fed12173deed5ff"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_4e_crowdhuman_mot17-private-half.py",
+    "bytes": 1823,
+    "sha256": "042215ae13173ecb5a78bc4c13908b1ca55d7ace77e32b9eaf79a7def5b5c8a0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_4e_dancetrack.py",
+    "bytes": 1839,
+    "sha256": "f56c757846a8b5b9018f846c95e1b0c7b6f4c49242a370d445384078b80519c1"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_4e_mot17-private-half.py",
+    "bytes": 1764,
+    "sha256": "d6f237332eca34f9bc33b647cecad1134c2d53069312288ef684fca08c41a79d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_4e_mot_challenge_from_bdd_pedestrian.py",
+    "bytes": 195,
+    "sha256": "4afb3755c1105d3a564ef27202f930be0d86abb55bfd57a16e01db70d0a0aa60"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/qdtrack_faster-rcnn_r50_fpn_6e_shift_track.py",
+    "bytes": 348,
+    "sha256": "16be17a8bff47b8c47e4a041ddd6c9d0be690c101c920f4580f0781d22e8392c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/ua_detrac/qdtrack_faster-rcnn_r50_fpn_20e_ua_detrac_cloudy_eval.py",
+    "bytes": 995,
+    "sha256": "5427a147a2fa28cccb26c9de87d6a05b7fabaf5fa9ea94a04017a1bcd15deb61"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/ua_detrac/qdtrack_faster-rcnn_r50_fpn_20e_ua_detrac_night_eval.py",
+    "bytes": 994,
+    "sha256": "158e4d3f199616c525cc5166baaae02e36f7d5cd40b5feb64f3c5686fa924047"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/ua_detrac/qdtrack_faster-rcnn_r50_fpn_20e_ua_detrac_rainy_eval.py",
+    "bytes": 994,
+    "sha256": "a0fda67d0fe5538c59a690f0e260215d8412a62d3680c01dccdb8bacb1ec8f19"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/ua_detrac/qdtrack_faster-rcnn_r50_fpn_20e_ua_detrac_sunny.py",
+    "bytes": 1519,
+    "sha256": "57abacd83a26600dc6cfb2c5749e87433ad276a9b851420a23dca0caad8b0aea"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/ua_detrac/qdtrack_faster-rcnn_r50_fpn_20e_ua_detrac_sunny_eval.py",
+    "bytes": 994,
+    "sha256": "4382dec35e6ad8283b969f5fd60dcf1da58dd9c5d96bea84bdb19aa94085c02a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/baseline_finetune/qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_fog_from_clone.py",
+    "bytes": 1499,
+    "sha256": "fe87b74e24ab58238baa153e78a13eda5a2f441cea764de6858db7327a44a65b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/baseline_finetune/qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_morning_from_clone.py",
+    "bytes": 1503,
+    "sha256": "f2e00d49c0d422451f8949ceeb8ef4dc19a802c5ca6bfd91c0002b848b1d8537"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/baseline_finetune/qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_overcast_from_clone.py",
+    "bytes": 1504,
+    "sha256": "21a4708f31b9c16ccb29896945f3c68d5c9d48fc0a53a0b4f77bad370fc59862"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/baseline_finetune/qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_rain_from_clone.py",
+    "bytes": 1500,
+    "sha256": "3d635dc80b421f90086c0690fb731f10cf441a807a8843e53acb43dbf29c0077"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/baseline_finetune/qdtrack_faster-rcnn_r50_fpn_5e_vkitti2_sunset_from_clone.py",
+    "bytes": 1502,
+    "sha256": "b07628ff0133a78440853bcf0ab77a6f6b9f3dabf76941b3c7a24e6e98ccfbdb"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/qdtrack_faster-rcnn_r50_fpn_20e_vkitti2_clone.py",
+    "bytes": 1517,
+    "sha256": "e4c0cc07a2e2dde07991f7c50c20a6689f4bde97c5b49f9762d84415739053ef"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/qdtrack_faster-rcnn_r50_fpn_20e_vkitti2_fog_eval.py",
+    "bytes": 990,
+    "sha256": "09a2529d967d65e68a184d8f35fad223a87123997dd1eecc495c7f4eb9062c8b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/qdtrack_faster-rcnn_r50_fpn_20e_vkitti2_morning_eval.py",
+    "bytes": 994,
+    "sha256": "c0506bf6453cf49735fe5a3ef78bfcdc7b09c2def0cb61dc61015eb0938f6fed"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/qdtrack_faster-rcnn_r50_fpn_20e_vkitti2_overcast_eval.py",
+    "bytes": 1212,
+    "sha256": "2955ec3a058ecd1fdc77a0d777587ffa892e29b629464ed1e9c111dac767c0aa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/qdtrack_faster-rcnn_r50_fpn_20e_vkitti2_rain_eval.py",
+    "bytes": 991,
+    "sha256": "e30ce3239f6b1bd2fcf89d2fbd766ff2c0ec887e8196416ec89f9630d11c21eb"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/configs/mot/qdtrack/vkitti2/qdtrack_faster-rcnn_r50_fpn_20e_vkitti2_sunset_eval.py",
+    "bytes": 993,
+    "sha256": "4ce82fc12ecb7a5ca339aa0de1d388e130d8112b65b05b200b4c06c5247c9519"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/__init__.py",
+    "bytes": 2248,
+    "sha256": "fcb843c216b41ae4c72870f7c52bc5d788bea1abcce5ab3bec2a7ee3232f5f39"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/apis/__init__.py",
+    "bytes": 273,
+    "sha256": "4d080ae86cd6b206f3ab51e3eaabe0f705a5ea25eee0d397e82709900235f8b6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/apis/inference.py",
+    "bytes": 4500,
+    "sha256": "aa09be00f90300d491044ad2a4dce0c3bfd2d1cf79a7996d049d8f9237338a5e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/apis/test.py",
+    "bytes": 7881,
+    "sha256": "c1c3f3a969888c0840b43c7671afcb094e111e0b2d2f21ccae5b79d5f883330b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/apis/train.py",
+    "bytes": 6636,
+    "sha256": "04c2a3e2dfbf70e17dba64657e556fbe79c3087f6d8e27605350e1e2c8933509"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/__init__.py",
+    "bytes": 169,
+    "sha256": "4f9cf0fcb495edda78e9e4cd47b78db814885552465fa19c2c2a7324aa0e8261"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/hooks/__init__.py",
+    "bytes": 134,
+    "sha256": "a539658abe5721f67142e36aa68c38629661784c6368680fc767ccc10e2d9e07"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/hooks/ema.py",
+    "bytes": 3945,
+    "sha256": "e21789457eb8e03cde30aa5c221b3fff3f825eaee96aaffdc99bb68e722eada4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/hooks/optimizer.py",
+    "bytes": 993,
+    "sha256": "d9a10aab6710aef74fa4fe9bb54b67054bae4e308bc22ebac55f5ca6c184054a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/to_scalabel/__init__.py",
+    "bytes": 69,
+    "sha256": "60e7069fc78573cfffe436a7f2da867a67f38907b9a19a2bd9c615d5361ea453"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/to_scalabel/transforms.py",
+    "bytes": 4714,
+    "sha256": "f2380398dd0a9cbdd6831547109d6c9a35844123707937cf9fc63e019cdfd14c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/to_scalabel/utils.py",
+    "bytes": 2030,
+    "sha256": "1ed27736566a88d621770ae49cbae7f2d684c9960a6aef3fe8a3ccd76fb105c9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/track/__init__.py",
+    "bytes": 78,
+    "sha256": "162bda58ed42e5aabd49720d72934634f2c18e2418d75e7423a06a4d20c02741"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/track/postprocessing.py",
+    "bytes": 1714,
+    "sha256": "19b0d9e20af6fd841172dce7cf3c99fae33bd3ea3d905f55a672efbd300c238e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/utils/__init__.py",
+    "bytes": 115,
+    "sha256": "5154e109a008fb38b2ca3bc17983a0a8c3f22971c325e0c6e2d337a975e70a56"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/core/utils/visualization.py",
+    "bytes": 15573,
+    "sha256": "5b4d4df73ea76b0eeb6f62948e319dec302fc6d0442e427655a44a9cb8d0f8fa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/__init__.py",
+    "bytes": 749,
+    "sha256": "a430e8db245ad1410f25663a5075915c00bd7455f17d1730cae07a6808eb0672"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/bdd_tracking_dataset.py",
+    "bytes": 394,
+    "sha256": "3a69f28505859425c7a9347196afda042f2c5f90904849cb9b2e0e1dc53bfdaa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/builder.py",
+    "bytes": 1673,
+    "sha256": "7564a2560a82de9ad82afbd3aa92c933a33728e04cc80fc7411aeaf474601243"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/coco_tracking_dataset.py",
+    "bytes": 29178,
+    "sha256": "d8fb2b7f714fee89a7006db51e33bc8424be331887b74345523f515b83613cf3"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/dancetrack_tracking_dataset.py",
+    "bytes": 802,
+    "sha256": "4ef990b60a7e57b92a87288517a5bd0007cfc60108d8cad6351c57c0e51cda17"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/dataset_wrappers.py",
+    "bytes": 6613,
+    "sha256": "779d55190aaae9ec084c7eb8dba10cfc474d215a28ceb79ddb434ef48831a6e6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/eval/__init__.py",
+    "bytes": 581,
+    "sha256": "1b31f75b42a618d5cf74a3aa4f47a2e720e1290066664cdd9cec5910a149a471"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/eval/coco_eval_dataset.py",
+    "bytes": 23466,
+    "sha256": "3e089b48080c40acf78b8d7cd4caa12bfae370d0b8a99ed26f7109d8176da459"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/eval/coco_eval_utils.py",
+    "bytes": 2060,
+    "sha256": "e13a239406a2f389752e2b2901965f840d741aa32ad66b166631fee17d16d740"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/eval/eval_mot.py",
+    "bytes": 4082,
+    "sha256": "0bfcd7e03288b436694677e1bb7c3596154f37459e0f626469999fde7f47751f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/eval/logging_utils.py",
+    "bytes": 2573,
+    "sha256": "6b7ceff79271273cfdc23de5b7c0cfb11c44bc0f5b663eab817c0f98e967775d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/mot_tracking_dataset.py",
+    "bytes": 12654,
+    "sha256": "156dee341dae85a6a7596f2600102efd37b0c20e8913891ac7841acd71fbae6d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/parsers/__init__.py",
+    "bytes": 101,
+    "sha256": "abafe627fe237a5e4c18a16f43f1f8965265e6daed559f1def80174fe47a221c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/parsers/coco_parser.py",
+    "bytes": 6560,
+    "sha256": "1c620270fff707eca3b00ff8512ea3356e66c5482ef228c7ce8e6b346de0927c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/parsers/coco_video_parser.py",
+    "bytes": 7756,
+    "sha256": "d60fd3bf130c5d3d8b0a96f41dd5ef55277fd9121febead9f2840ff104a13d55"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/pipelines/__init__.py",
+    "bytes": 488,
+    "sha256": "86c1f488b704ff4b1e53d80b72e4b1683de438e970448a819d2d5a4ad17d8a90"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/pipelines/formatting.py",
+    "bytes": 970,
+    "sha256": "df517eb0828456fe7c3c9f03d535ae143be905a8d34d0269b69cd0adacfe1408"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/pipelines/io/__init__.py",
+    "bytes": 67,
+    "sha256": "d973d14519457928b7e3b1c1210b53847748eb27cbc9a8734f39df0035922a8a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/pipelines/io/tarbackend.py",
+    "bytes": 834,
+    "sha256": "04b556346bc744ec08da4016c8315801c9e86e6fdafa46620d1cdc65753d86b6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/pipelines/loading.py",
+    "bytes": 1093,
+    "sha256": "8ad28b49ffc694905184249ab3e47de17fcd7d6251a99990d0209d10850af12f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/pipelines/transforms.py",
+    "bytes": 35149,
+    "sha256": "8455c989254f2b5050f4422e4504fe566763463482d47db34d53dd94124e2f32"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/shift_tracking_dataset.py",
+    "bytes": 362,
+    "sha256": "0d27371cd132826ce266266d1f810032b01d5e34ad3b66169d2f4c31ad83a6c8"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/utils/__init__.py",
+    "bytes": 263,
+    "sha256": "f453b122e775742204c7f7a2a3975b75d25c0fb39599831e323e948fa73468f4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/utils/coco_to_scalabel.py",
+    "bytes": 3433,
+    "sha256": "a4b57660ee4f2041f09f76352bfcb7b96b655b69b73d01712f2f4230a7237226"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/datasets/utils/filters.py",
+    "bytes": 1311,
+    "sha256": "5272994db5c8603d6c290090d2b5ab67b4c0266458e826234c6991346a112232"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/__init__.py",
+    "bytes": 369,
+    "sha256": "5a0064e6a6ee5ef14a705a4c42cf070b0150e3ab93e2564f1174a09b58fab1d2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/adapters/__init__.py",
+    "bytes": 166,
+    "sha256": "7c46c3c9f1f1a1c1a0aec19d8793777f2a7f6472eef7e8834d9ea4b7bb587d0f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/adapters/base/__init__.py",
+    "bytes": 73,
+    "sha256": "a5a1f6a147c71bd3aaeb1188a0e57077ca2e88d561ab15e4adba2a54092eea3a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/adapters/base/teacher_qdtrack.py",
+    "bytes": 10126,
+    "sha256": "52c615b85881a66c32597c3bcd379392ca9d59562081835c4e93dd1150b3c011"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/adapters/darth_qdtrack.py",
+    "bytes": 28032,
+    "sha256": "d70ab339ca1be09e4d3f231990b3cb1f2eb97704982fccf9f04d8f767c636c6c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/adapters/kd_qdtrack.py",
+    "bytes": 7208,
+    "sha256": "e83cf7391d91b6b54b4f995f9e045ef1335908779bc0eadcd1554687b135ae8e"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/jepa/__init__.py",
+    "bytes": 321,
+    "sha256": "2d363e69586bfcfcb55f0c17515dbc2a8d4b82101d6273c07954f7db0a174686"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/jepa/temporal_adapter.py",
+    "bytes": 10359,
+    "sha256": "27fd217896c85ebaf9f5d54bbae9afb85d2ecbde6b0815c7f17bee5a7956c46d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/losses/__init__.py",
+    "bytes": 149,
+    "sha256": "8a5ecdae3a745be269823f5b45caee2671638799a2e2ba9cd911ca7c87bb86db"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/losses/distillation.py",
+    "bytes": 4739,
+    "sha256": "99636fc423b84419973d701364dd3ec3fcb257f768e186e2ac37e03a0968e1d9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/roi_heads/__init__.py",
+    "bytes": 77,
+    "sha256": "d4a05d35ee3ff945b24b0160ddaedff7cfbfeba6dde057cbf3adad19e2254ee6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/roi_heads/modified_roi_head.py",
+    "bytes": 5978,
+    "sha256": "c20b70f96820e2a3da281272cf2d23c3a9ba798effb1146c3392f3a9e3bab9a0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/track_heads/__init__.py",
+    "bytes": 216,
+    "sha256": "377e21a87d9b39dd318e40626811159597a6ab81187489f72d6c64b077c650f0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/track_heads/causal_quasi_dense_track_head.py",
+    "bytes": 39387,
+    "sha256": "5f75dca23649269f1abeafe608c0669137284c8167d941fae4bebe25686f6f42"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/track_heads/proto_quasi_dense_track_head.py",
+    "bytes": 11625,
+    "sha256": "06f5bd2fea1f94981dca7fe8801d9d7c9fe59f91b88bfc06635e19767b3e4691"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/trackers/__init__.py",
+    "bytes": 146,
+    "sha256": "12b6d00e7ae993be6bea61d4a0f45c23631363a00d82118219f1f1c9cc56fa23"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/trackers/quasi_dense_tracker.py",
+    "bytes": 4470,
+    "sha256": "e8c302978ac8df15fe79762d637aa5423d0ec7f22f3f4f9d2fefca1322b954b0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/trackers/temporal_jepa_tracker.py",
+    "bytes": 40101,
+    "sha256": "f79ae80160f6401f28f153b21ea554dd32b3b0a0a7343b6b8e7ea007f0d75559"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/__init__.py",
+    "bytes": 730,
+    "sha256": "d28e8b1baf58e1ced9aaa90342581c55499bfd525f1585057a49b5c40f2ca054"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/kd_weight_init.py",
+    "bytes": 4117,
+    "sha256": "11a190f2424c4291a1fcbb7ae5dfe8762abaf243209266c50d4f03b5524c0bd0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/roi_causal_bank.py",
+    "bytes": 14659,
+    "sha256": "bd2534acf1aa59f505e0c0d3f3038201563da7e1b2ca13831f11bfd928e7dad2"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/roi_proto_memory.py",
+    "bytes": 16443,
+    "sha256": "554722ba0bca3acae72afcb29df6ae714f42f0da84c627fe7195c70ee7d00a0f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/roi_prototype_memory.py",
+    "bytes": 4967,
+    "sha256": "cdb2c9b82d11c83a5e8da33e0c667402d46cf6e0a45c9ffacc2656df8e661f9b"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/spa_frequency.py",
+    "bytes": 6252,
+    "sha256": "8c0bcd48ef4390cf923f7dc82fab0df6e8949f1078b9c9d029d0290336e03f85"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/transforms.py",
+    "bytes": 2220,
+    "sha256": "c78de6409d40d9457518e249b2e3b347824fa417216b5bf1cf9e3b1188ec9e9a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/models/utils/vis.py",
+    "bytes": 633,
+    "sha256": "0d195866d3a117b53c0e8208b53522c8bb5cf17104306d4fac74fe02ec470222"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/darth/version.py",
+    "bytes": 450,
+    "sha256": "03f673aa7314be55c83bee19dec73e7d98ca595a1396ed76a5fe3fb86f79b2db"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/scripts/collect_ablation_results.py",
+    "bytes": 7658,
+    "sha256": "1353b5b87bad484e7bc25f00e0b1a6d7361b66a6e4deb0c319f8948f5d3eb8f9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/scripts/collect_new_dataset_experiment_results.py",
+    "bytes": 9558,
+    "sha256": "eb67c2e81925023f74b7a4177c265b474198f852563f4643cb5b47f53cb3320c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/scripts/collect_spa_style_replace_results.py",
+    "bytes": 3456,
+    "sha256": "155c3b7d3472864f2716528351dc8715efab2c4e03a8f221c69f7b43aa549a8c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/scripts/collect_vkitti2_darth_baseline_results.py",
+    "bytes": 4842,
+    "sha256": "297c9027272ed8981dd98a7256017e79e2a5023d46a1f309469e07f665c9bcb5"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/setup.py",
+    "bytes": 4550,
+    "sha256": "087d747d8c5e67d967f961b7fd9cb25b1f7b9dd6c309e690b8c11013a545d328"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/find_best_frames.py",
+    "bytes": 8406,
+    "sha256": "ff5cfd171b838d85f72b98be32199dede85743454f79bb56a5dfd033e21f73a1"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/ics_probe_extract.py",
+    "bytes": 21946,
+    "sha256": "96c2c06ca0f6dbc95b1f0d0084179bd8a1efb10e0d7c19ddb1189cd3d6396221"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/parse_bdd_7domain_results.py",
+    "bytes": 2945,
+    "sha256": "72f676196a880876fb3afafc353177b9ddb9f0e11121de937aefa385804737ac"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/plot_bdd_night_method_vs_baseline_tsne.py",
+    "bytes": 22710,
+    "sha256": "95dbc3e3a18e5148210b84f4e4fff2969baaaef108bd274668d297cd3ac59efa"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/plot_focused_tsne_from_cache.py",
+    "bytes": 10946,
+    "sha256": "46719f820bc3ca50663b3e59fc18cfa008694d95a581290dc277312c99bb216a"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/plot_ua_detrac_identity_timeline.py",
+    "bytes": 54125,
+    "sha256": "15c6e033c8c54c0eb4589fb702f2585247050c26faa7fbd9f9d6636bef0cc1ff"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/render_all_domains_ours.py",
+    "bytes": 13228,
+    "sha256": "07e8ce87998ae3934eecfbe8d0252b6f4e1c5ffc4233ace92dd9d49d4cf05f1f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/render_track_boxes.py",
+    "bytes": 5686,
+    "sha256": "c3e7dcbe0091db7f75b3e8fc15fe04041acb6d1e44cc8c223793f7f57f8896ba"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/search_sequence_tsne_candidates.py",
+    "bytes": 16787,
+    "sha256": "b6da28470ea5539d0ad54b3e0a5db26b05aaa720b30b987aa08d9d61a0108c08"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/analysis/test_apr_coupling.py",
+    "bytes": 4506,
+    "sha256": "3a0ce2252b0d30c1909558b9d32db1772c34ffdb640adec9de537985715f96ba"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/bdd_7domain_manager.py",
+    "bytes": 20974,
+    "sha256": "ebd5a2fdcf6e9dbe64eeb1ae53df4ea319518db920ca3a420928289274afc26c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_all_results.py",
+    "bytes": 7217,
+    "sha256": "7775c5b18327e439698de64112d5b5810e7f03b6cbb76dc3d4a0cb6c33eedf3c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_apr_sensitivity_bdd.py",
+    "bytes": 5088,
+    "sha256": "40ee2e2e8263f13159264f484f12d38b94cf0a43cb198d29be291977365bfdcd"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_baseline_threshold_sweep.py",
+    "bytes": 12498,
+    "sha256": "163968690afeb67ba06afd8651a78db32bcf2cb9dfe8fe5550df67b07eaeee40"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_bdd_night_related_baselines.py",
+    "bytes": 8403,
+    "sha256": "923b2bc40978421fbbdd5fdb49eac4de7ec260f1e7650dffcf042f2136c7ab6c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_bdd_seq3_results.py",
+    "bytes": 4757,
+    "sha256": "9af19d49f52e397bd9251dcea99e8e58c11032136d54a549f8bbeb7f1f00c220"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_causal_pca_ablation.py",
+    "bytes": 10062,
+    "sha256": "ca693b163ca291b171c0429226befcf63dbd0afdfef8890612ab0543dc82ef5c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_continual_forgetting_eval.py",
+    "bytes": 11120,
+    "sha256": "f832ac21be30ff8f30bf83254fb892cc7bbb0590b8ffdb2f823f9b9fee70369c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_limit_search_best_thresholds.py",
+    "bytes": 8323,
+    "sha256": "70eab19312046072fd1c39ed25a9244216efa76abece9db8d2f345c14a7ae124"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_module_components_summary.py",
+    "bytes": 13061,
+    "sha256": "02ca5f03e8f6794fd246236121e23483d9f229982b0045a38d2fbabdd7162e60"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_roi_proto_ablation.py",
+    "bytes": 6865,
+    "sha256": "73ce2ed63907dbc3b89e4848ce8845066363b5e9c00cba6c4456a109045065c4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_roiweak_6domain_forgetting.py",
+    "bytes": 7527,
+    "sha256": "1e5855c5ae987235f4d9bed09deb97b7effe44ee75a6cd30a96e219613bb2de0"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_roiweak_order_sensitivity.py",
+    "bytes": 8952,
+    "sha256": "89e2ca4f0b14fc4c4172d3ea5e2395fc3b363171d97d3be52b046264365c243f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_spa_fix_results.py",
+    "bytes": 7063,
+    "sha256": "96f5042e9ebdf0681217f606fee584d4befce81552d308bd603f188e13e0c490"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_spa_pipeline_mild_threshold_sweep.py",
+    "bytes": 10148,
+    "sha256": "e3be98bb8b37768c45722e8c387a6cda5d6dd509b67485a03de124ffc69ec293"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/collect_tri_module_pca_variants.py",
+    "bytes": 10024,
+    "sha256": "6f9b38ac9e8110ae5328c34b05d653a899dd69e6990f90afaa4d4167613884cf"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/compose_paper_tracklet_figure.py",
+    "bytes": 6958,
+    "sha256": "9d7fb6c3b491076620c4f09d358ccea0461d0cde7a62cac712460bde31e9d038"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/compose_selected_tracklet_panels.py",
+    "bytes": 5048,
+    "sha256": "62226d865bf80f8b240f6598334fafc4d78fef49c1ef336a704eb37a82fd72ec"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/bdd100k/attributes_to_track.py",
+    "bytes": 3608,
+    "sha256": "d31e6c376300ebb502fb3daed04fe2ecd80ba3b4edb18d5dd11e80d69be3b95f"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/bdd100k/check_cocovid_json.py",
+    "bytes": 6789,
+    "sha256": "f7f7ccbca1b7dee43d69f891c400d89fa767dd16d0c34942d9593f7e43243e73"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/bdd100k/convert_bdd_weather_to_cocovid.py",
+    "bytes": 13957,
+    "sha256": "ed40f27c62ce49991eaacd467a5d8f2fcae3dbe2cf5fd01bb7d7daa190124a32"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/bdd100k/location_to_det.py",
+    "bytes": 5532,
+    "sha256": "24fe47379c9c497ae5934bcf83ac96ca7f2647a9f956a4e7942c4aca53a20826"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/dancetrack/dancetrack2coco.py",
+    "bytes": 5551,
+    "sha256": "422af03547f783c1e40e8d784e0666e85d3ad709d82c51e5ac5b625d68dd2f91"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/mot/crowdhuman2coco.py",
+    "bytes": 3126,
+    "sha256": "e2babc9efd50b24b621d5f4b246dc85ecad2e1b5e961c8b13b70bccc43f3ffa6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/mot/mot2coco.py",
+    "bytes": 8046,
+    "sha256": "45010181c2fcfabec8c963b3d49affb385582dd79e710704fc7e9647f426006d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/mot/mot2reid.py",
+    "bytes": 7164,
+    "sha256": "d8929a3910a3e0b18476e857c884d04a23a48f1344c5773513279240318a661c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/motsynth/convert_motsynth_sparse.py",
+    "bytes": 6351,
+    "sha256": "d59098668ca9e0ea66207adb3e9589a1781d57f28c4bba31c4f93e556f334c32"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/motsynth/convert_motsynth_to_cocofmt.py",
+    "bytes": 8964,
+    "sha256": "b9381c04eecada801b0db1bb1582582c66756fadcb2fb4fda7a5a2bb98d0133d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/to_scalabel.py",
+    "bytes": 2161,
+    "sha256": "f1652dcdcec73052319c35c176b60a8e911409275b24acde8cf55c7508c9ee58"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/convert_datasets/vkitti2/convert_vkitti2_to_cocofmt.py",
+    "bytes": 10314,
+    "sha256": "4049db28c1bccef21a5bd09168e46ba1ac6ca861f4f82c8b3317e0f98b7fe74d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/damot_audit_source_ckpts_and_targets.py",
+    "bytes": 11715,
+    "sha256": "01c335ecfc9a0a0fef281ff32ecf314d1ca156041f78cf8d03e00a3f7c29b5ea"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/generate_bdd_7domain_configs.py",
+    "bytes": 5627,
+    "sha256": "00f0ed60b29716b64c7dceec3dcea084d1782960372958cdc9d1a460be096e7d"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/jepa/build_track_feature_cache.py",
+    "bytes": 6674,
+    "sha256": "78306159e67fc24bea0c48259b63b38b1f66492493e5d6828aaa98394aa6e6f1"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/jepa/evaluate_adapter.py",
+    "bytes": 4657,
+    "sha256": "5d688d4b1f15b6fe83d0ee0e5c4c011d1501641d2769f4ac2e448b615b512b3c"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/jepa/make_cocovid_prefix.py",
+    "bytes": 2575,
+    "sha256": "a9fef612aa2c9b1621d2ce53000f79d22e5ae7a4b2258f29fb93ec2bc9a514b9"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/jepa/train_temporal_adapter.py",
+    "bytes": 13767,
+    "sha256": "63f433429ed3b9822b8045b80973f30583a2c88a6dd6c4b98615ab1224fd1585"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/jepa/validate_protocol.py",
+    "bytes": 6390,
+    "sha256": "42923a62c16b3a14bd730c4f9bc2097a152da7b25a9fa67bd90ae9db27e2ef23"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/plot_other_datasets_tracklet_comparisons.py",
+    "bytes": 16634,
+    "sha256": "4f6cca8b8ef136ac44f2726cefd8303d292d5b8848f2afb21aa16e69f29d7437"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/plot_vkitti2_tracklet_comparisons.py",
+    "bytes": 24515,
+    "sha256": "b38ba78c8fe2cfb01f081b78d7ef43b51a417c5172164e2675e025618f8ff347"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/apr_complement_experiment.py",
+    "bytes": 26789,
+    "sha256": "d379598b276392abe767650ae338f6daee0110dc5bc7e5a07451f932d54d92cf"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/control_apr_complement.py",
+    "bytes": 5234,
+    "sha256": "8c4fd45a58fd99877090a4e6f1f25d914a6fe9acd090aa0a29f53571f3d3b3d5"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/evaluate_apr_complement.py",
+    "bytes": 15464,
+    "sha256": "25b216989199a3e580c79ac30f3b363ae5805022e5bf97c349f697745d4e8470"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/extract_teacher_as_student.py",
+    "bytes": 1578,
+    "sha256": "09a3a659cbdd9c5236c508d8e8fef9a64ccab63a8ed0bea1004104e1f4c5d071"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/test.py",
+    "bytes": 9818,
+    "sha256": "9e3cf7c2d081b53708f8d1abd3f3fb623e90e1d373540280c05c3970bba784f4"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/train.py",
+    "bytes": 9684,
+    "sha256": "5642d9b49c63beaea1d29cbbe7a9324ec5474bfb0fff264d2ad7aa934ce8ffa7"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/train_seq3_episode.py",
+    "bytes": 12053,
+    "sha256": "a6e066e0278b863e6463d06cf8d5365f930eccaf8de28dd939267869b6ed5556"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run/train_seq4_student_reset.py",
+    "bytes": 12648,
+    "sha256": "130c32ddedd7f65a7fc4f8e146babfd4ffa67949d199e6f340779ca19cd65f25"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/run_source_detector_on_targets.py",
+    "bytes": 18927,
+    "sha256": "3489fc5ec4a144024a3b5178998ec66c0a79ef4a9280c43b479fd097c046fbe6"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/visualize_spa_augmentation.py",
+    "bytes": 8156,
+    "sha256": "0a8d78c0580ea172c1693499ab5408b39131170af02eee8cca06aa6461dfbe70"
+  },
+  {
+    "path": "experiments/ics_advantage/code_online/tools/viz/track_identity_comparison.py",
+    "bytes": 32904,
+    "sha256": "0f3ee82161d6f4900d9a4e80d6b66df7aca389cfaf8dce9750e8e1847dc7f150"
+  },
+  {
     "path": "experiments/ics_advantage/features/C0/dawn_dusk_meta.json",
     "bytes": 2488,
     "sha256": "72b208f91a85c4d085924e4cc80778505f711cf292612b42ee0ebf4424ed1350"
@@ -1945,6 +3780,36 @@
     "sha256": "32ee3c6f9fb1e2d3a0de95438b2d1e5582223ca1ce940e068bb5f33e0b769b4d"
   },
   {
+    "path": "experiments/ics_advantage/features/HF_stage1/dawn_dusk_meta.json",
+    "bytes": 2525,
+    "sha256": "b8c9a69142315395dddfae96b92804b42ebf236f3b9a9b3245aa31c68cd5affc"
+  },
+  {
+    "path": "experiments/ics_advantage/features/HF_stage1/meta.json",
+    "bytes": 2492,
+    "sha256": "567481cd24e87533ab2916d422d6bbbc77fb35bc99d7eccbc4a21cf512f3a7d7"
+  },
+  {
+    "path": "experiments/ics_advantage/features/HF_stage1/night_meta.json",
+    "bytes": 2519,
+    "sha256": "a4be1829ca6aa59f8d708e5aaf78aace5981c063dd38b098949a24c774c10b47"
+  },
+  {
+    "path": "experiments/ics_advantage/features/INT_stage1/dawn_dusk_meta.json",
+    "bytes": 2630,
+    "sha256": "85b1d124be96038860a49db806cc2ef730b80bb1a62dbfc805b3f5c63269b3f3"
+  },
+  {
+    "path": "experiments/ics_advantage/features/INT_stage1/meta.json",
+    "bytes": 2597,
+    "sha256": "2ed8db1dc2b2e29b4992291ff203319c52164385c6f8f521d317d9ff7edadcf3"
+  },
+  {
+    "path": "experiments/ics_advantage/features/INT_stage1/night_meta.json",
+    "bytes": 2625,
+    "sha256": "15fc7d090675ade3a5bdb9ac071902a115fcbf47d1a6ed46d319beb5de2a325c"
+  },
+  {
     "path": "experiments/ics_advantage/figures/batch1/dose_response_dawn_dusk.pdf",
     "bytes": 22514,
     "sha256": "1e517f71e30992c9bac94182eb750d8708072d260ee1b319408841a811a08097"
@@ -2015,6 +3880,86 @@
     "sha256": "bf3fee838b1c11506b2c3b32c9c388f9bc4af0b9d1445edaefe7aa0818c8bb20"
   },
   {
+    "path": "experiments/ics_advantage/figures/batch2/cross_weather_tsne_stage1.pdf",
+    "bytes": 55940,
+    "sha256": "14479d8e6a1811651b7a62f7627c2691c43ada4506731ff1944e1024439d6e50"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/cross_weather_tsne_stage1.png",
+    "bytes": 220815,
+    "sha256": "b1dceb06b589342dab6c29269723698a97907ae8d956ef6e676939ef54d98dd4"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/dose_response_dawn_dusk_stage1.pdf",
+    "bytes": 18736,
+    "sha256": "24f931d09f52f2e942168055910330d2370d058e43abe890db97bd7493cade7b"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/dose_response_dawn_dusk_stage1.png",
+    "bytes": 189757,
+    "sha256": "c2120279170916d82b6d740182f39417ec2c453270af65c151263d3e0f106141"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/dose_response_night_stage1.pdf",
+    "bytes": 18795,
+    "sha256": "acf7c3ebe8b5ad04b8e6005c38a724aad33cde4b584e2a7289bb98fc90f9abab"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/dose_response_night_stage1.png",
+    "bytes": 194807,
+    "sha256": "01be2d8a975df7ef4489d7aed513d1fa6e6e7a9a19e1c613b466e38f52c61f8e"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/dose_response_pooled_stage1.pdf",
+    "bytes": 18729,
+    "sha256": "43756eed233ad7f09026a8a1b78b217223709c75c6af41da9ddfe449118ede8e"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/dose_response_pooled_stage1.png",
+    "bytes": 194448,
+    "sha256": "2a62259d9f7a341d4828d4aa77251bd116dd2b02edbfde0503a3b47ca4fa77f2"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/intervention_tsne_stage1.pdf",
+    "bytes": 75818,
+    "sha256": "a3ad64609d5bb168f64fa89ae84f7fa3a8d7710e7a054939b0d758135fc7353f"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/intervention_tsne_stage1.png",
+    "bytes": 221679,
+    "sha256": "15ac7fb1b743d1d36aa63febdfed0d200fe7d4cb9876f620c1dd67950d21fdb4"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/invariance_bars_dawn_dusk_stage1.pdf",
+    "bytes": 15488,
+    "sha256": "6088970856bc351f8ae644a4a2d6684e345b3db6cc3cf44961c4b577cde9f0fd"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/invariance_bars_dawn_dusk_stage1.png",
+    "bytes": 109806,
+    "sha256": "88daef621f0a26f088deb43cca4a607cb265b8aa57e0574033d698b509c99d3e"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/invariance_bars_night_stage1.pdf",
+    "bytes": 15397,
+    "sha256": "27a3ef5cc8dfa499b0fd37a8eef98c8f1224c91e9c96e5f5232c978cf7338645"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/invariance_bars_night_stage1.png",
+    "bytes": 105710,
+    "sha256": "bc15f27b442f0f9fa7ea9b11ed01d4192e25c2eefc8cde431ee95683252ba9c0"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/invariance_bars_pooled_stage1.pdf",
+    "bytes": 15389,
+    "sha256": "dcdfb15d3466feb8bb6fafe4b40bd43f75abb33bc7062d4d30c61e0100f4ca1b"
+  },
+  {
+    "path": "experiments/ics_advantage/figures/batch2/invariance_bars_pooled_stage1.png",
+    "bytes": 107026,
+    "sha256": "f0c8692cf7e261e4141a8ad4ae681ee0a1a7307a1eee7f3f7899d3771552470e"
+  },
+  {
     "path": "experiments/ics_advantage/inputs/model_bases/HF_stage3_A_nuisance_k2.npy",
     "bytes": 4224,
     "sha256": "431605fa763d13387a8e777f9bf95190b27aa62b1cc1b3256bcad26d225bc652"
@@ -2036,13 +3981,43 @@
   },
   {
     "path": "experiments/ics_advantage/logs/batch2_controller.log",
-    "bytes": 99,
-    "sha256": "8013004298684ddb02dde4ed4fde755cdd24287baaec43ceb7bb31975115e73e"
+    "bytes": 3131,
+    "sha256": "37af3455a272ca89f8929cecacd91c16f51527410fc6a653019fdcf8cb7556f4"
   },
   {
     "path": "experiments/ics_advantage/logs/batch2_controller_before_openmp_recovery.log",
     "bytes": 52,
     "sha256": "ff3fc3bcc2210948381251a8bd8cbe51fe774ec265d3f030531e9f6c80b9e85b"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/batch2_feature_figures.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/batch2_feature_statistics.log",
+    "bytes": 387,
+    "sha256": "aaf52df2f3bacb398af6eed6271e784d283359b586e45594b43f9500b9520373"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/batch2_report.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/batch2_tracking_statistics.log",
+    "bytes": 230,
+    "sha256": "e1708505b69d7a0c2c133af2ba3adf065b9d7d70e027a0bfee7090a95a970675"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/batch2_tracking_statistics_empty_bins_attempt.log",
+    "bytes": 887,
+    "sha256": "30115b866468da4773d21afc67db553b9aa74293e9770ed9585faff1aa0e7d92"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/batch2_vkitti_statistics.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "path": "experiments/ics_advantage/logs/brightness.log",
@@ -2140,6 +4115,56 @@
     "sha256": "23fe96ba94ecf718b64d70d27efa03f1b17d8d578e66584bd2bb72ed19fd4ac6"
   },
   {
+    "path": "experiments/ics_advantage/logs/infer_HF_stage1.log",
+    "bytes": 2586,
+    "sha256": "6e33ea413b4fb1c89c7bbd56ce081cf3df77e35562683df525e4b1e7ad18e2fd"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_HF_stage1_smoke.log",
+    "bytes": 1754,
+    "sha256": "2df80d343a88419242d90996d8ca198856ff7349e75a2b02d0cb8db4137cc43a"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_HF_stage1_tsne.log",
+    "bytes": 1640,
+    "sha256": "d7dc6ba14564a5ba9ad639cc13e47284e9bce7a95f4d22658adc07916544bd5a"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_HF_stage1_vk.log",
+    "bytes": 4434,
+    "sha256": "7697841c6e54f284456b590e3189696922e47e1d66fb60d9c2bbc3d0789ab7f2"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_INT_stage1.log",
+    "bytes": 2637,
+    "sha256": "e0a932647b3d0547cd446e136c18a5f9cd77040f583465310646166ec6c3072c"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_INT_stage1_smoke.log",
+    "bytes": 1805,
+    "sha256": "20700929643a6260348079c37bc650ebe521543c8f756786cd382bd34bcc7597"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_INT_stage1_tsne.log",
+    "bytes": 1691,
+    "sha256": "9dd3571f829adc478a9635d2fcfdfcc1456e9580748e71ebe565ef66eb3c357c"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/infer_INT_stage1_vk.log",
+    "bytes": 4485,
+    "sha256": "b271ae369c95f562daf0173184ffe2cd348f5abcabb938dfadfd6e4f222e3f66"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/nas_migration.log",
+    "bytes": 119,
+    "sha256": "588f1b7ba599e628f9bee6ae86fbf31a32ee8c4ff936a800896837964d7023b0"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/nas_migration_bulk.log",
+    "bytes": 353,
+    "sha256": "e6a3d7c5310fe6970bca0968af8ad617531d655d5cef506d1be3236be95db579"
+  },
+  {
     "path": "experiments/ics_advantage/logs/tracking_C0_dawn_dusk.log",
     "bytes": 1652,
     "sha256": "b4b08abd7cf5f03bff275dd29f1a6ecd990ade2de46a72b7d74b403e1b69aa3d"
@@ -2188,6 +4213,16 @@
     "path": "experiments/ics_advantage/logs/tracking_C4_night.log",
     "bytes": 2380,
     "sha256": "2069c02cec04243ac629aff9e901540c8ca6dac45c75b298564cba4a76ed4f9d"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/tracking_HF_stage1_overcast.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "experiments/ics_advantage/logs/tracking_INT_stage1_overcast.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "path": "experiments/ics_advantage/logs/tracking_statistics.log",
@@ -2295,14 +4330,54 @@
     "sha256": "7343cfbffb85307ef925e9331bc8725ee71c0ab6bda9cc5627756c110e9bfc38"
   },
   {
+    "path": "experiments/ics_advantage/manifests/batch2_analysis_complete.json",
+    "bytes": 776,
+    "sha256": "7ab3c92c0df43e5623df8ac713a924c8973a97d3978fdb121191d95fd06c4887"
+  },
+  {
     "path": "experiments/ics_advantage/manifests/batch2_controller_process.json",
-    "bytes": 94,
-    "sha256": "246c4b4e78e427816213cc7eb3e5f847bafd76d456c42db57247d622863d9cab"
+    "bytes": 153,
+    "sha256": "d4fdc678f4bbbc917181f9c67efe755bf071f27ab273d87031829cb139c6cecb"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_failure_empty_brightness_bins.json",
+    "bytes": 1055,
+    "sha256": "abbfc46b6af98a3606f1773ba1c22cf40e03f33ab9da9b68f921f6921eb421d2"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_failure_nas_manifest_gap.json",
+    "bytes": 1247,
+    "sha256": "87e92da60da873388627dce2392370cecbcb1133f817541cc57847f3643b2565"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_inference_complete.json",
+    "bytes": 120,
+    "sha256": "cc45fb6bd4d64f5c6d5e85eac920bbfb9f657e2d41b8dfb2b81434a2ef17712d"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_model_provenance.json",
+    "bytes": 1187,
+    "sha256": "ce1f9a739359a2017681b62b2256ba28479aa9a0c78509ff8a9f368d2c21ea3a"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_source_snapshot.json",
+    "bytes": 61178,
+    "sha256": "6045beb1009c9eb0b893b181db7a4c69c66364661c86525fb76c83603f0ccd7a"
   },
   {
     "path": "experiments/ics_advantage/manifests/batch2_status.json",
-    "bytes": 164,
-    "sha256": "c5fdfad1d74a4db37402cd1ba77a9c3d9bbd343d167fa4ee3e70d687836088d9"
+    "bytes": 183,
+    "sha256": "2c5701e5bc00062dafd46110ff7259e6aa8413aa93f16ed20f37eba2f770ed53"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_training_config_differences.json",
+    "bytes": 24768,
+    "sha256": "6dc065a0803e32e1872336b836e33df994a13dba86e98c49e59e223f91643748"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/batch2_validation.json",
+    "bytes": 797,
+    "sha256": "3faf771b626a13bcbc3aee490edba0b0ced0887af73faf3156dc48b3d8c8010e"
   },
   {
     "path": "experiments/ics_advantage/manifests/brightness_complete.json",
@@ -2385,14 +4460,59 @@
     "sha256": "6fd2fcb85c8c29d11dbfa46c50b9528bc22da6cd6d9f38546cd30ead27ade73a"
   },
   {
+    "path": "experiments/ics_advantage/manifests/infer_HF_stage1.json",
+    "bytes": 1892,
+    "sha256": "2140e79852a1ba76c03c16c08aa3238188779872e94c7a022345a7d5b3271e50"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_HF_stage1_smoke.json",
+    "bytes": 1887,
+    "sha256": "618969388717b4d9a9446484a98772ee436b54354c8269e1d3d1148f6026e5d9"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_HF_stage1_tsne.json",
+    "bytes": 1769,
+    "sha256": "1d6390ece92923a99e5aabca88d831936f209cd4091b97deae5db332ca99e2db"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_HF_stage1_vk.json",
+    "bytes": 2775,
+    "sha256": "3c44634c1e2b0c84c7a67a10ef8624fe1643e95645bd556627135b5d0d12f9f1"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_INT_stage1.json",
+    "bytes": 1998,
+    "sha256": "8bae7b882d0ff4c003f5c98143cff55a3fd12ec86a8c171bf07730b467186f84"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_INT_stage1_smoke.json",
+    "bytes": 1993,
+    "sha256": "accbd86fb6cf30bf3119d33aa8203e1a34b721220de652fd127ee405fdb367ac"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_INT_stage1_tsne.json",
+    "bytes": 1874,
+    "sha256": "905a1336ab645ef483bc20a2fd4a7e0f32880a737063f13712235f33b6bd5244"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/infer_INT_stage1_vk.json",
+    "bytes": 2876,
+    "sha256": "ff3f160507389e4420601c396c3eb5a28fd494db0b58e36a59e0266ac22e34b6"
+  },
+  {
     "path": "experiments/ics_advantage/manifests/input_snapshot_hashes.json",
     "bytes": 457,
     "sha256": "f8bddabea78260524f1d7b1c37e5109897e2d9738eb1365e3d93104889dd175c"
   },
   {
     "path": "experiments/ics_advantage/manifests/model_source_hashes.json",
-    "bytes": 60550,
-    "sha256": "2950c68b4cb94bb00b222aa947394e2bd7ddf9188878ddec3b6f1505b7c36af4"
+    "bytes": 122950,
+    "sha256": "4fb1ee925cdf34183015aa4dc302bc973b1da800d7ccb0f734cc1f48613996cf"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/nas_storage_migration.json",
+    "bytes": 1948,
+    "sha256": "333fac9503bb19737208ce8577877bd496beea454b42cd9af3e6682605ea2b3e"
   },
   {
     "path": "experiments/ics_advantage/manifests/openmp_recovery.json",
@@ -2400,9 +4520,29 @@
     "sha256": "12a8e6f29384778ffeabcb36f9931643d29582b881a52b648c567d67ddf870a3"
   },
   {
+    "path": "experiments/ics_advantage/manifests/plot_export_fix.json",
+    "bytes": 210,
+    "sha256": "fc54afebb87cdf3c6dca8de8926771c4cfcaa37e4f4b56c91ec274a81c3885f6"
+  },
+  {
     "path": "experiments/ics_advantage/manifests/probe_samples.json",
     "bytes": 4743,
     "sha256": "189508d147dd9c84134f8de96734121259d5cbf92b30ff61e2f723273928dbc1"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/publication_batch1.json",
+    "bytes": 347,
+    "sha256": "95f557d84de17b5a583fbd14f273a6123430fd4f75deeafc5c1970ff08f3982c"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/readiness_regression.json",
+    "bytes": 202,
+    "sha256": "d649f991aff96f79126b84482c9bbe529acce879de96f16a0133fc6ed6df5205"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/resource_policy.json",
+    "bytes": 313,
+    "sha256": "37ef866ed368169f85bbba343a794ca76522f8613f844161b931a3154aa2a1ad"
   },
   {
     "path": "experiments/ics_advantage/manifests/run.json",
@@ -2413,6 +4553,21 @@
     "path": "experiments/ics_advantage/manifests/runtime_versions.json",
     "bytes": 2397,
     "sha256": "f0b262f385502c46c0b4b192039f18a9560661003e7052151beb0bbc95703552"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/scope_decision_20261031.json",
+    "bytes": 233,
+    "sha256": "5f3dce748dbf9e66a6fb0536c2d4df22e0fb348f637c2e7fef2449a5ac00cfa5"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/source_readiness_context.json",
+    "bytes": 2059,
+    "sha256": "c674c8ef7f94025eb2c0e3ae60bd86e8e3bcba1a11aded8d2e613fe84381b509"
+  },
+  {
+    "path": "experiments/ics_advantage/manifests/stage1_supplement_review.json",
+    "bytes": 449,
+    "sha256": "ea42b5f2d3b1440aa8aae49e4aaf3fdcba5fa83062b9ea3d6cfcd8ef49bf0dbd"
   },
   {
     "path": "experiments/ics_advantage/manifests/tracking_aggregate_validation.json",
@@ -2446,8 +4601,8 @@
   },
   {
     "path": "experiments/ics_advantage/scripts/batch2_controller.py",
-    "bytes": 6229,
-    "sha256": "7581765b3942df286ddd88d7b034b75edee9e468859fd02943066edd979ce01e"
+    "bytes": 6803,
+    "sha256": "f3768b30b749058535bdcbc6c8e611d95a09944a368b322b8728d50b882cc516"
   },
   {
     "path": "experiments/ics_advantage/scripts/brightness.py",
@@ -2461,8 +4616,8 @@
   },
   {
     "path": "experiments/ics_advantage/scripts/common.py",
-    "bytes": 2259,
-    "sha256": "5c6bb7ade004b948697df8fac38ac669d0694e59abe9d863537d160c0be68c71"
+    "bytes": 2742,
+    "sha256": "924dd2a8a46bbf55872810170f611c0267284cee712acfdeb1d2e6e671642c87"
   },
   {
     "path": "experiments/ics_advantage/scripts/cpu_controller.py",
@@ -2480,14 +4635,29 @@
     "sha256": "e3615e385132575a96bd10911eba1e45fa8ea5725fcf7f38cb8bc6f633e0df3e"
   },
   {
+    "path": "experiments/ics_advantage/scripts/freeze_continue_delivery.py",
+    "bytes": 6027,
+    "sha256": "fe9df8d790af2430443907d077c3e60c18fc28f64faa75ef52c6689630641f34"
+  },
+  {
     "path": "experiments/ics_advantage/scripts/gpu_controller.py",
-    "bytes": 6485,
-    "sha256": "32250f03800d3e69d86eb04db2666dea2e1de5782c400781f547fe11d6315b43"
+    "bytes": 6685,
+    "sha256": "b8d93b8f368e08a105efe5e7d880bb37a18a1dd37aece539cdb8f50ac7d102b1"
   },
   {
     "path": "experiments/ics_advantage/scripts/ics_probe_analyze.py",
     "bytes": 49874,
     "sha256": "8fe210dde78c83c4043539db44a483ffcedea0488f59de11232ffe8c47103d9c"
+  },
+  {
+    "path": "experiments/ics_advantage/scripts/migrate_finished_caches.py",
+    "bytes": 2510,
+    "sha256": "b50d031e47b91d618dc84cab4005776d3de593a376e1b7197651064567144e39"
+  },
+  {
+    "path": "experiments/ics_advantage/scripts/migrate_image_cache_bulk.py",
+    "bytes": 3659,
+    "sha256": "c42254712b0f16eb799e6e211803899f0136b0fd160d7f498150fe02933154da"
   },
   {
     "path": "experiments/ics_advantage/scripts/prepare_inputs.py",
@@ -2501,8 +4671,8 @@
   },
   {
     "path": "experiments/ics_advantage/scripts/report.py",
-    "bytes": 17234,
-    "sha256": "92a86711d2e3d741705f52d486c50d91a0b2c25ab3626be17aa3fe671d9f0fc9"
+    "bytes": 20668,
+    "sha256": "52e43f963bdf42290396c6903c59a3742aa3457ea6f55587504e0e661a671c29"
   },
   {
     "path": "experiments/ics_advantage/scripts/selftest.py",
@@ -2521,8 +4691,8 @@
   },
   {
     "path": "experiments/ics_advantage/scripts/tracking_statistics.py",
-    "bytes": 7966,
-    "sha256": "a732b21b5990f860091343a46132ecc2b7d7711c8a55ceec8697c900eb1bfb3f"
+    "bytes": 8864,
+    "sha256": "7bd6955a9dd69255b2654430fa2a9e274e3d68bbcaef6d9988e33225b9e72b85"
   },
   {
     "path": "experiments/ics_advantage/scripts/validate_delivery.py",
@@ -2533,6 +4703,36 @@
     "path": "experiments/ics_advantage/scripts/vkitti_statistics.py",
     "bytes": 9019,
     "sha256": "568cef403676ac16440810e673924c50dbf3aa0496c53bd7f66baacb42b9411a"
+  },
+  {
+    "path": "experiments/ics_advantage/smoke_features/HF_stage1/dawn_dusk_meta.json",
+    "bytes": 2493,
+    "sha256": "be9aded6e02f024d8d73a34a7434569d9d064560d3bdc979e47b63c2bd847568"
+  },
+  {
+    "path": "experiments/ics_advantage/smoke_features/HF_stage1/meta.json",
+    "bytes": 2463,
+    "sha256": "e30f5300d1c0a4d97aa4499512d657a4ee139c2d44472790a0b733fd9188c1bb"
+  },
+  {
+    "path": "experiments/ics_advantage/smoke_features/HF_stage1/night_meta.json",
+    "bytes": 2489,
+    "sha256": "171398095f7a8d5a7d53faaa05507b70ff253c951af1a58a89a414a89c009a16"
+  },
+  {
+    "path": "experiments/ics_advantage/smoke_features/INT_stage1/dawn_dusk_meta.json",
+    "bytes": 2598,
+    "sha256": "fa1bd718e51cbef95af115875116b39e3757e19fe234b1fc559b78636be2421b"
+  },
+  {
+    "path": "experiments/ics_advantage/smoke_features/INT_stage1/meta.json",
+    "bytes": 2568,
+    "sha256": "6d14f667d781f7f3bd8a934ab9b450cb7988f7de18406553868b310fb9daf37f"
+  },
+  {
+    "path": "experiments/ics_advantage/smoke_features/INT_stage1/night_meta.json",
+    "bytes": 2594,
+    "sha256": "d5027e7d24c2bfa7169d6877f233e2da217c29c49c1c049765fcf4dce16abf6d"
   },
   {
     "path": "experiments/ics_advantage/tracking/C0/dawn_dusk/aggregate_parity.csv",
@@ -2685,6 +4885,36 @@
     "sha256": "6de8ffcf55f9edfd515c977433ce7eae8e1580fa2582a3f020a681f91db508d7"
   },
   {
+    "path": "experiments/ics_advantage/tracking/HF_stage1/overcast/aggregate_parity.csv",
+    "bytes": 626,
+    "sha256": "b34f67b9fffd569576c79886efbaa2b5f21e83b0a4d6627a872bb2a83936878f"
+  },
+  {
+    "path": "experiments/ics_advantage/tracking/HF_stage1/overcast/complete.json",
+    "bytes": 802,
+    "sha256": "f16a75276390c4e63dd56ca1cc127d5451e6f2ef08f5085055cf699634831dd3"
+  },
+  {
+    "path": "experiments/ics_advantage/tracking/HF_stage1/overcast/per_video.csv",
+    "bytes": 5923,
+    "sha256": "316c4e80305d839d77157045537d9ea4f74ba0448135c1b9104b23d70648f6b2"
+  },
+  {
+    "path": "experiments/ics_advantage/tracking/INT_stage1/overcast/aggregate_parity.csv",
+    "bytes": 630,
+    "sha256": "b64920cb2c95beda145f138742cc67d219aa904657c1738039c41d6d3c4fd8b1"
+  },
+  {
+    "path": "experiments/ics_advantage/tracking/INT_stage1/overcast/complete.json",
+    "bytes": 796,
+    "sha256": "788566ee7d4a5ffdbd98ad4868599489d2cefa0e795b93c510391a6740d1d091"
+  },
+  {
+    "path": "experiments/ics_advantage/tracking/INT_stage1/overcast/per_video.csv",
+    "bytes": 5978,
+    "sha256": "53828bb99f511b6ea213aa08839bbd668518da7c2f53af0a8ad4b5353f5d35e2"
+  },
+  {
     "path": "experiments/ics_advantage/tracking/video_brightness.csv",
     "bytes": 6239,
     "sha256": "57daca2d422823eecefd5c18e920dfb81e81415f91e122586d083509847a1607"
@@ -2738,5 +4968,95 @@
     "path": "experiments/ics_advantage/tsne_features/C4/night_meta.json",
     "bytes": 2028,
     "sha256": "f0f1a4a443d57569974cb4b3c600cb37369e587f61eb53b59a6a712cb66e6b69"
+  },
+  {
+    "path": "experiments/ics_advantage/tsne_features/HF_stage1/meta.json",
+    "bytes": 2020,
+    "sha256": "982d47ef8224935bc2436b4e83637f4398ea4f3b86e109e47b338a6bd07a9cc7"
+  },
+  {
+    "path": "experiments/ics_advantage/tsne_features/HF_stage1/night_meta.json",
+    "bytes": 2063,
+    "sha256": "377a5f1bd6008659866dab0b95092bdea57a3c737266317b64f683dc47b28d12"
+  },
+  {
+    "path": "experiments/ics_advantage/tsne_features/INT_stage1/meta.json",
+    "bytes": 2125,
+    "sha256": "77dec34b741f5b95a242fc5139002d77f3408e7f00906fbdbf48a1051d69bfd5"
+  },
+  {
+    "path": "experiments/ics_advantage/tsne_features/INT_stage1/night_meta.json",
+    "bytes": 2168,
+    "sha256": "96a955d39169012b87da1820d0c7e536b897b93157b9708902df0a71a2aba6e1"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/clone_meta.json",
+    "bytes": 3390,
+    "sha256": "2727415224423977030fb39af580ea06d69f14dfc3a9d7152d3ae5135cd50877"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/fog_meta.json",
+    "bytes": 3389,
+    "sha256": "3d1ada59a8ef91ab35254fcec7103af592be88bc722e17701b81ed0606c80344"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/meta.json",
+    "bytes": 3414,
+    "sha256": "681e576ef72da86b85ff4dfe73841b242d87e18ed8a6b0ad89abee658fd954d9"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/morning_meta.json",
+    "bytes": 3393,
+    "sha256": "444b3799d4469e1cbd4050831f024860b6d49753fe55f229103b26632b5fc09e"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/overcast_meta.json",
+    "bytes": 3394,
+    "sha256": "2e87bd35a224255e6c77261550b07f7736426dce147b7f9df90e39c3aebfc967"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/rain_meta.json",
+    "bytes": 3390,
+    "sha256": "c1f94362ef44d99e2cc70f7823b3764b178921978a94c253c76d1cd57aa1c817"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/HF_stage1/sunset_meta.json",
+    "bytes": 3392,
+    "sha256": "976eb1e23ee42855599fac93c5e6281ccf70c49db8bb055b090cc009cff221b5"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/clone_meta.json",
+    "bytes": 3496,
+    "sha256": "eccb31fe910cdc7dba20a116505a0ac0dbc014680ae08a4d25a92cd74d96cb88"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/fog_meta.json",
+    "bytes": 3493,
+    "sha256": "2f491fc28fe6af1e9f75793a87c41f1e2abdf1f8b1a7975bcd9d78b2a7f0c916"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/meta.json",
+    "bytes": 3519,
+    "sha256": "2d911f34349d8a101cde4d27888f4e023d717b429edb6e00a25a98b2c2d5b377"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/morning_meta.json",
+    "bytes": 3497,
+    "sha256": "4cbe8adeef54e574f4e0bcc3ff5a3ed9c4c59964d9a5209d8ad9804a594cf847"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/overcast_meta.json",
+    "bytes": 3498,
+    "sha256": "e9b8da8c8259741f1dbb6dc919fdde286f795302771df5feeef1fcd84396daf7"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/rain_meta.json",
+    "bytes": 3495,
+    "sha256": "e9d226957d08a7a5b5ef6a990356d90dfbd783363c17ed0ddb0eaf4f7d87b308"
+  },
+  {
+    "path": "experiments/ics_advantage/vk_features/INT_stage1/sunset_meta.json",
+    "bytes": 3497,
+    "sha256": "154378775a37a545d95dc82bc8223a4524c161073225c9fdfc88392ccbdb5cfd"
   }
 ]

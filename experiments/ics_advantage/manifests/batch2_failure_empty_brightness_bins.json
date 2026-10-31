@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "source_root": "/data1/liuyeqiang/damot_hf_intics_20261031_004258",
+  "error": "Traceback (most recent call last):\n  File \"/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py\", line 95, in <module>\n    try:main()\n  File \"/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py\", line 84, in main\n    run_script('tracking_statistics.py',['--batch','2'])\n  File \"/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py\", line 69, in run_script\n    subprocess.run([PY,'-u',str(ROOT/'scripts'/script)]+list(args),env=env(True),stdout=f,stderr=subprocess.STDOUT,check=True)\n  File \"/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/subprocess.py\", line 512, in run\n    output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python', '-u', '/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/tracking_statistics.py', '--batch', '2']' returned non-zero exit status 1.\n"
+}

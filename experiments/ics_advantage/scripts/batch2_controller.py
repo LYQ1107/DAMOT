@@ -5,19 +5,21 @@ from common import *
 
 def state(status,**values):
     path=ROOT/'manifests/batch2_status.json';record=dict(status=status,source_root=str(NEW),**values)
-    if path.exists() and json.loads(path.read_text())==record:return
+    if path.exists() and read_json(path)==record:return
     dump(path,record);print('BATCH2_STATE',status,flush=True)
 
 def source_readiness():
     formal=NEW/'manifests/formal_controller.json'
-    status=json.loads(formal.read_text()).get('status') if formal.exists() else 'not_dispatched'
+    try:status=read_json(formal).get('status')
+    except (FileNotFoundError,json.JSONDecodeError):
+        return 'waiting_source_manifest_replacement',dict(source_status='temporarily_unreadable_NAS_manifest')
     one=(NEW/'results/stage1/overcast/complete.json').exists()
     final=all((NEW/'results/stage4'/d/'complete.json').exists() for d in ['overcast','rainy','dawn_dusk','night'])
-    if (NEW/'episode/train_stopped.json').exists() and one:
-        gate=json.loads((NEW/'episode/stage1_gate.json').read_text())
-        return 'stage1_only_source_stopped',dict(source_status=status,gate=gate)
     if (NEW/'episode/train_complete.json').exists() and one and final and status in ['complete_awaiting_publication','complete','published']:
         return 'all_stages_ready',dict(source_status=status)
+    if (NEW/'episode/train_stopped.json').exists() and one:
+        gate=read_json(NEW/'episode/stage1_gate.json')
+        return 'stage1_only_source_stopped',dict(source_status=status,gate=gate)
     if status in ['failed','preflight_failed_no_formal_training']:
         return 'waiting_source_failure_resolution',dict(source_status=status)
     return 'waiting_source_training_and_evaluation',dict(source_status=status)
@@ -67,9 +69,17 @@ def run_script(script,args=()):
         subprocess.run([PY,'-u',str(ROOT/'scripts'/script)]+list(args),env=env(True),stdout=f,stderr=subprocess.STDOUT,check=True)
 
 def main():
-    if (ROOT/'manifests/batch2_analysis_complete.json').exists():return
+    completed=ROOT/'manifests/batch2_analysis_complete.json'
+    previous=read_json(completed) if completed.exists() else None
+    if previous and previous['stage4_available']:return
     while True:
-        mode,info=source_readiness();state(mode,**info)
+        try:mode,info=source_readiness()
+        except OSError as exc:
+            state('waiting_source_storage',error=str(exc));time.sleep(30);continue
+        if mode=='stage1_only_source_stopped' and previous:
+            state('waiting_stage4_after_stage1_supplement',stage1_supplement_complete=True,**info)
+            time.sleep(30);continue
+        state(mode,**info)
         if mode in ['all_stages_ready','stage1_only_source_stopped'] and (ROOT/'manifests/publication_batch1.json').exists():break
         time.sleep(30)
     records=prepare_models(mode);state('frozen_inference_and_native_sequence_metrics',mode=mode,models=list(records))
@@ -88,6 +98,7 @@ def main():
         mode=mode,models=list(records),stage4_available=mode=='all_stages_ready',source_stop=info.get('gate')))
     run_script('report.py')
     state('ready_for_review_and_publication',mode=mode,models=list(records))
+    if mode=='stage1_only_source_stopped':return main()
 
 if __name__=='__main__':
     try:main()

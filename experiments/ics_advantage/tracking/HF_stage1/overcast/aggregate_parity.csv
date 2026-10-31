@@ -1,0 +1,9 @@
+model,domain,category,metric,observed,reference,delta,passed
+HF_stage1,overcast,OVERALL,HOTA,36.781974908118556,36.781974908118556,0.0,True
+HF_stage1,overcast,OVERALL,AssA,47.44571915035093,47.44571915035093,0.0,True
+HF_stage1,overcast,OVERALL,IDF1,41.55664307760917,41.55664307760917,0.0,True
+HF_stage1,overcast,OVERALL,IDSW,1555.0,1555.0,0.0,True
+HF_stage1,overcast,car,HOTA,40.44639088129213,40.44639088129213,0.0,True
+HF_stage1,overcast,car,AssA,49.9890786675921,49.9890786675921,0.0,True
+HF_stage1,overcast,car,IDF1,46.89897986819536,46.89897986819536,0.0,True
+HF_stage1,overcast,car,IDSW,1024.0,1024.0,0.0,True

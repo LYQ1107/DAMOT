@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "stage1_scope": "Overcast tracking; Night/Dawn transfer features; VKITTI heldout scenes",
+  "inspected_figures": [
+    "brightness_AssA",
+    "dose_response_pooled_stage1",
+    "intervention_tsne_stage1",
+    "cross_weather_tsne_stage1"
+  ],
+  "overall_interval_shown_when_strata_not_applicable": true,
+  "empty_strata_CSV_has_header": true,
+  "stage4_unavailable": true,
+  "final_brightness_export_visually_checked": true
+}

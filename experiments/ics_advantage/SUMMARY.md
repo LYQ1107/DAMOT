@@ -1,5 +1,7 @@
 # ICS advantage: paired-video quantitative and qualitative evaluation
 
+**2026-10-31 update:** The requested stage1 supplement is complete; the stage4 main comparison remains unavailable. Held-out Overcast AssA Δ is +1.582 pp [-0.240, 3.853] (8 videos); pooled Night/Dawn transfer IR Δ is +0.012122 [0.010594, 0.013722] (higher IR is worse). These one-seed results do not establish a consistent advantage. [Stage1 supplement and source-stop details](#batch2-status).
+
 Run: `/data1/liuyeqiang/ics_advantage_20261031_004629`. Inference and offline calculations only. **One training seed: 1790355234.** All reported confidence intervals condition on these trained checkpoints; resampling videos does not estimate variation across training seeds.
 
 The task fixes the primary model comparisons C2−C0 and C2−C4. C1/C3 are supplementary. All test-video selections use the historical split_mask seed0. Bootstrap uses10,000 paired video resamples, seed0, pointwise percentile95% intervals. Wilcoxon tests are two-sided; p values and intervals are not adjusted for multiple comparisons.
@@ -137,7 +139,83 @@ Source training task: `/data1/liuyeqiang/damot_hf_intics_20261031_004258`. Stage
 
 Controller state: `waiting_source_training_and_evaluation`.
 
-Pending the independently trained final checkpoints and frozen evaluations. The prepared inference/analysis queue is waiting; no second-batch measurements are claimed yet. An externally stopped source run will be reported explicitly.
+Source task state: `formal_training_or_idle_GPU_queue`.
+
+**Stage4 is not yet available; the requested stage1 supplement is complete.**
+
+Historical stage1 stop record captured when this supplement was dispatched: `{"status": "stop", "reasons": ["bank PC1/offline FAP PC1 angle exceeds45deg"], "HOTA": 36.47477411631231, "HF_R11_HOTA": 36.781974908118556, "HOTA_delta": -0.3072007918062454, "first_direction_angle_deg": 82.48092299544699, "first_direction_to_offline_span_deg": 33.75608908725687, "principal_angles_deg": [33.453465219188544, 88.357491312671], "P1_weather_shift_energy_share": 0.08507769566556955, "P1_identity_energy_share": 0.09112870290405677, "seed": 1790355234, "time": 1793395076.516372}`.
+
+Source status update (2026-10-31T16:02:37.954788+08:00): the source task records an authorized correction of its gate-angle interpretation to `first_direction_to_offline_span_deg` = 33.7561°, gate status `pass`; its controller state is `formal_training_or_idle_GPU_queue`. The historical axis-to-axis angle above and this direction-to-subspace angle are different quantities.
+
+Frozen full-pool Overcast HOTA: INT 36.4748, HF 36.7820, Δ-0.3072 pp. Table1 below instead uses held-out test videos with an equal-video mean.
+
+The full-run comparison jointly changes the instructed ICS estimator, shrinkage/loss settings and sample gate. APR complement coupling also follows that bank by design; this is the effect of the requested complete ICS configuration within that coupling, rather than an isolated change of estimator alone. One matched training seed is used.
+
+## Batch2 Table1 — Paired tracking differences
+
+| Stage / domain / stratum | Metric | Videos | Mean | Median | Improved | 95% CI | Wilcoxon p |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| batch2_stage1 / overcast / all_test_videos | HOTA | 8 | 0.134 | -0.055 | 37.5% | [-0.522, 0.820] | 1 |
+| batch2_stage1 / overcast / all_test_videos | AssA | 8 | 1.582 | 0.492 | 62.5% | [-0.240, 3.853] | 0.327 |
+| batch2_stage1 / overcast / all_test_videos | IDF1 | 8 | -0.034 | -0.218 | 37.5% | [-1.012, 0.918] | 0.8886 |
+| batch2_stage1 / overcast / all_test_videos | IDSW | 8 | -4.250 | -2.000 | 62.5% | [-13.375, 2.375] | 0.4817 |
+
+Batch2 Table1 conclusion: mean test-video AssA has a wholly positive95% interval in 0/1 reported stage/domain comparisons. All four tracking metrics and all fixed brightness strata are retained; these intervals do not measure training-seed variability.
+
+[All categories/strata](analysis/batch2/tracking/paired_effects.csv) · [Per-video differences](analysis/batch2/tracking/video_differences.csv) · [Spearman correlations](analysis/batch2/tracking/spearman.csv) · [Brightness-bin membership CSV](analysis/batch2/tracking/brightness_bins.csv)
+
+## Batch2 Table2 — Intervention invariance
+
+Only stage1 Overcast tracking is available. Night tracking strata and pooled four-domain brightness strata are not applicable; their membership CSV contains its schema and no rows. The requested stage4 main comparison remains pending.
+
+| Pool | Model | Mean IR [95% CI] | Mean cross-intervention mAP% [95% CI] | Cosine silhouette |
+| --- | --- | --- | --- | --- |
+| night | HF_stage1 | 0.5191 [0.4841, 0.5534] | 76.336 [68.795, 83.647] | 0.05375 |
+| dawn_dusk | HF_stage1 | 0.3733 [0.3405, 0.4052] | 76.482 [66.672, 86.198] | 0.05408 |
+| pooled | HF_stage1 | 0.4667 [0.4303, 0.5026] | 76.262 [70.297, 82.135] | 0.02675 |
+| night | INT_stage1 | 0.5315 [0.4975, 0.5648] | 76.240 [68.634, 83.620] | 0.05073 |
+| dawn_dusk | INT_stage1 | 0.3847 [0.3518, 0.4167] | 76.816 [67.022, 86.494] | 0.05610 |
+| pooled | INT_stage1 | 0.4788 [0.4426, 0.5142] | 76.311 [70.305, 82.190] | 0.02646 |
+
+| Pool | Comparison | Metric | Paired Δ | 95% CI | CI entirely favorable |
+| --- | --- | --- | --- | --- | --- |
+| night | INT_stage1−HF_stage1 | IR | +0.01248 | [0.010194, 0.015033] | False |
+| night | INT_stage1−HF_stage1 | mAP | -0.09604 | [-0.471, 0.357] | False |
+| dawn_dusk | INT_stage1−HF_stage1 | IR | +0.01148 | [0.010060, 0.012715] | False |
+| dawn_dusk | INT_stage1−HF_stage1 | mAP | +0.33390 | [-0.076, 0.794] | False |
+| pooled | INT_stage1−HF_stage1 | IR | +0.01212 | [0.010594, 0.013722] | False |
+| pooled | INT_stage1−HF_stage1 | mAP | +0.04862 | [-0.251, 0.375] | False |
+
+Batch2 Table2 conclusion (INT_stage1): pooled mean IR interval entirely favorable: False; pooled mean cross-intervention mAP interval entirely favorable: False. Every requested strength is reported in the per-view and paired-effect CSVs.
+
+Pooled IR is higher (worse) for INT_stage1 across its full paired95% interval: Δ+0.012122 [0.010594, 0.013722].
+
+[Every model/view/strength and matched clean baseline](analysis/batch2/features/per_view.csv) · [All paired feature effects](analysis/batch2/features/paired_effects.csv) · [Silhouette sample counts](analysis/batch2/features/silhouette.csv)
+
+## Batch2 VKITTI cross-weather retrieval
+
+Unmodified second/third-part ICS-evidence scene split and IoU pairing are reused. All1,179 test queries per variant are kept, including10 all-positive galleries with AP1. Clone temporal retrieval uses1,175 queries. Both models are BDD-trained and receive no VKITTI finetuning.
+
+| Model | Weather | Cross-weather mAP% | Clone mAP% | Queries |
+| --- | --- | --- | --- | --- |
+| HF_stage1 | fog | 66.990 | 62.848 | 1179 |
+| HF_stage1 | morning | 81.350 | 62.848 | 1179 |
+| HF_stage1 | overcast | 81.065 | 62.848 | 1179 |
+| HF_stage1 | rain | 75.868 | 62.848 | 1179 |
+| HF_stage1 | sunset | 78.227 | 62.848 | 1179 |
+| HF_stage1 | mean | 76.700 | 62.848 | 5895 |
+| INT_stage1 | fog | 66.513 | 63.343 | 1179 |
+| INT_stage1 | morning | 81.447 | 63.343 | 1179 |
+| INT_stage1 | overcast | 81.458 | 63.343 | 1179 |
+| INT_stage1 | rain | 75.711 | 63.343 | 1179 |
+| INT_stage1 | sunset | 78.341 | 63.343 | 1179 |
+| INT_stage1 | mean | 76.694 | 63.343 | 5895 |
+
+VKITTI table conclusion (stage1): mean cross-weather mAP INT−HF is -0.005959 percentage points; the point estimate does not favor INT. This supplementary VK table reports one-seed point estimates.
+
+[Night / stage1 Overcast brightness–AssA effects](analysis/batch2/tracking/brightness_AssA.png) · [PDF](analysis/batch2/tracking/brightness_AssA.pdf)
+
+stage1: [Dose curves](figures/batch2/dose_response_pooled_stage1.png) · [IR/mAP/silhouette](figures/batch2/invariance_bars_pooled_stage1.png) · [Intervention t-SNE](figures/batch2/intervention_tsne_stage1.png) · [Cross-weather t-SNE](figures/batch2/cross_weather_tsne_stage1.png)
 
 ## Reproducibility and validation
 

@@ -1,0 +1,7 @@
+BULK_BEGIN ics_evidence_20261030_215311/data/vkitti2/images 3600
+REMOTE_HASH_PASS {"verified": true, "files": 3600}
+MIGRATED ics_evidence_20261030_215311/data/vkitti2/images
+BULK_BEGIN ics_advantage_20261031_004629/tsne_features 15
+REMOTE_HASH_PASS {"verified": true, "files": 15}
+MIGRATED ics_advantage_20261031_004629/tsne_features
+MIGRATION_COMPLETE

@@ -1,0 +1,9 @@
+case,model,reference,category,domain,stratum,metric,rho,p
+batch2_stage1,INT_stage1,HF_stage1,OVERALL,overcast,all_test_videos,HOTA,-0.2142857142857143,0.6103444156452669
+batch2_stage1,INT_stage1,HF_stage1,OVERALL,overcast,all_test_videos,AssA,-0.09523809523809526,0.8225054302036114
+batch2_stage1,INT_stage1,HF_stage1,OVERALL,overcast,all_test_videos,IDF1,-0.2380952380952381,0.5701563208157683
+batch2_stage1,INT_stage1,HF_stage1,OVERALL,overcast,all_test_videos,IDSW,-0.27545404024004955,0.5090540726550732
+batch2_stage1,INT_stage1,HF_stage1,car,overcast,all_test_videos,HOTA,0.07142857142857144,0.8665262706759088
+batch2_stage1,INT_stage1,HF_stage1,car,overcast,all_test_videos,AssA,-0.19047619047619052,0.6514014957024814
+batch2_stage1,INT_stage1,HF_stage1,car,overcast,all_test_videos,IDF1,0.2380952380952381,0.5701563208157683
+batch2_stage1,INT_stage1,HF_stage1,car,overcast,all_test_videos,IDSW,-0.16868694244915797,0.689660806707391

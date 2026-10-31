@@ -1,0 +1,6 @@
+{
+  "allow_shared_0_1": true,
+  "authorization": "direct human reply: \u5141\u8bb8\u5171\u4eab0/1\uff0c\u4f18\u5148\u65b0\u8bad\u7ec3\uff08\u63a8\u8350\uff09",
+  "approved_time_unix": 1793383288.30788,
+  "policy": "Reserve2/3/5/6 for pending training; sharing0/1 only with >=12GiB free and <=35% allocator cap"
+}

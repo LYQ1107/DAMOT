@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "mode": "stage1_only_source_stopped",
+  "models": [
+    "HF_stage1",
+    "INT_stage1"
+  ]
+}

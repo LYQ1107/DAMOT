@@ -1,5 +1,5 @@
 """Task-local paths and exact sample/statistics protocol; no network training."""
-import csv,hashlib,json,os,sys
+import csv,hashlib,json,os,sys,time
 from pathlib import Path
 import numpy as np
 
@@ -22,10 +22,20 @@ def dump(path,value):
     tmp=path.with_suffix(path.suffix+'.tmp')
     tmp.write_text(json.dumps(value,indent=2,ensure_ascii=False,allow_nan=False)+'\n');tmp.replace(path)
 
-def csvout(path,rows):
+def read_json(path):
+    for attempt in range(20):
+        try:return json.loads(Path(path).read_text())
+        except (FileNotFoundError,json.JSONDecodeError):
+            if attempt==19:raise
+            time.sleep(.1)
+
+def csvout(path,rows,fieldnames=None):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    if fieldnames is None:
+        if not rows:raise ValueError('Empty CSV rows require explicit fieldnames: '+str(path))
+        fieldnames=list(rows[0])
     with path.open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+        w=csv.DictWriter(f,fieldnames=fieldnames);w.writeheader();w.writerows(rows)
 
 def readcsv(path):
     with Path(path).open() as f:return list(csv.DictReader(f))
@@ -50,7 +60,8 @@ def checkpoint(model):
     return Path(next(x['path'] for x in a['models'] if x['group']==model))
 
 def env(cpu=False):
+    scratch=Path('/tmp/damot_advantage_004629');scratch.mkdir(parents=True,exist_ok=True)
     e=dict(os.environ,OMP_NUM_THREADS='2' if cpu else '1',OPENBLAS_NUM_THREADS='2' if cpu else '1',
-           MKL_NUM_THREADS='2' if cpu else '1',MKL_THREADING_LAYER='GNU',PYTHONDONTWRITEBYTECODE='1',TMPDIR=str(ROOT/'tmp'))
+           MKL_NUM_THREADS='2' if cpu else '1',MKL_THREADING_LAYER='GNU',PYTHONDONTWRITEBYTECODE='1',TMPDIR=str(scratch))
     if cpu:e['CUDA_VISIBLE_DEVICES']=''
     return e

@@ -102,8 +102,20 @@ def report():
                 lines.append('- %s，INT_b025 − %s：%s。'%(r['domain'],r['reference'],conclusion))
         lines+=['','四域的均值按域等权；pooled_test_videos 的配对统计按视频等权。两者口径不同。全部类别及 car 结果在 `analysis/batch2/`。','']
     else:
-        status=ROOT/'manifests/batch2_status.json';s=json.loads(status.read_text()) if status.exists() else {'status':'waiting_for_full_training'}
-        lines+=['尚未完成；等待独立完整训练及其冻结评估，当前状态：`%s`。不修改或控制该训练。'%s['status'],'']
+        status=ROOT/'manifests/batch2_status.json';s=read_json(status) if status.exists() else {'status':'waiting_for_full_training'}
+        lines+=['尚未完成；等待独立完整训练及其冻结评估，当前状态：`%s`。'%s['status'],'']
+        if s.get('stop'):
+            d=s['stop']['decision']
+            lines+=['源运行在 stage1 的注册停止指标 `bank PC1 / offline FAP PC1` 为 %.4f°，超过45°门槛；Stage4 checkpoint 尚不存在。'%d['first_direction_angle_deg'],
+                    '', '源任务当前状态：`%s`。同时记录的第一方向到离线二维子空间夹角为 %.4f°，两个子空间主角为 %s；这些角度的定义不同。'%(s.get('source_status','unknown'),d['first_direction_to_offline_span_deg'],d['principal_angles_deg']),
+                    '']
+        context=ROOT/'manifests/source_readiness_context.json'
+        if context.exists():
+            current=read_json(context);gate=current['current_stage1_gate']
+            if gate.get('user_authorized_interpretation_correction'):
+                lines+=['源任务状态更新（%s）：门槛按其记录的授权解释修正为“第一方向到离线二维子空间”，夹角 %.4f°，判定 `%s`；当前控制器状态 `%s`。'%
+                        (current['captured_at'],gate['gate_angle_deg'],gate['status'],current['formal']['status']),'']
+        lines+=['按用户2026-10-31的明确选择，第二批保留 stage4 四域的原范围，等待源任务完成；stage1 结果只属于另一个任务的补充，不代替本任务第二批。','']
     lines+=['## 实现与可复现信息','',
             '- 源码为隔离副本；不调用 `bank.trim()`；单 RoI 的矩阵收缩及默认关闭路径自检通过。',
             '- 同帧同模型的不同 β 复用检测器前向，跟踪器状态彼此独立；β=0 的整域逐位一致检查保留在 `jobs/*/*/inference_complete.json`。',

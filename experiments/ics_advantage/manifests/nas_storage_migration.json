@@ -1,0 +1,49 @@
+[
+  {
+    "original": "/data1/liuyeqiang/ics_advantage_20261031_004629/features",
+    "NAS": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_advantage_20261031_004629/features",
+    "files": 25,
+    "bytes": 279699346,
+    "sha256_verified_every_file": true,
+    "path_preserved_by_symlink": true,
+    "finished_unix": 1793384659.9331493
+  },
+  {
+    "original": "/data1/liuyeqiang/ics_evidence_20261030_215311/weights",
+    "NAS": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_evidence_20261030_215311/weights",
+    "files": 1,
+    "bytes": 682303345,
+    "sha256_verified_every_file": true,
+    "path_preserved_by_symlink": true,
+    "finished_unix": 1793385259.8028293
+  },
+  {
+    "original": "/data1/liuyeqiang/ics_evidence_20261030_215311/features",
+    "NAS": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_evidence_20261030_215311/features",
+    "files": 128,
+    "bytes": 855225229,
+    "sha256_verified_every_file": true,
+    "path_preserved_by_symlink": true,
+    "finished_unix": 1793385607.3153665
+  },
+  {
+    "original": "/data1/liuyeqiang/ics_evidence_20261030_215311/data/vkitti2/images",
+    "NAS": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_evidence_20261030_215311/data/vkitti2/images",
+    "files": 3600,
+    "bytes": 620894088,
+    "sha256_verified_every_file": true,
+    "verification": "Remote NAS computes actual file hashes; exact local manifest equality",
+    "path_preserved_by_symlink": true,
+    "finished_unix": 1793385758.2621179
+  },
+  {
+    "original": "/data1/liuyeqiang/ics_advantage_20261031_004629/tsne_features",
+    "NAS": "/data1/liuyeqiang/nas/A100/liuyeqiang_codex_runs/ics_advantage_20261031_004629/tsne_features",
+    "files": 15,
+    "bytes": 1522310,
+    "sha256_verified_every_file": true,
+    "verification": "Remote NAS computes actual file hashes; exact local manifest equality",
+    "path_preserved_by_symlink": true,
+    "finished_unix": 1793385760.5016477
+  }
+]

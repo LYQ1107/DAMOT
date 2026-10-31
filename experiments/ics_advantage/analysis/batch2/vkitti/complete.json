@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "same_protocol_as": "ics_evidence part3",
+  "metadata_exact": true,
+  "test_scenes": [
+    "Scene02",
+    "Scene18"
+  ],
+  "cross_gallery": "same scene, both cameras, clone abs frame difference<=10",
+  "clone_gallery": "same scene, both cameras, abs frame difference4..30",
+  "positives": "IoU-matched clone track, propagated only in clone",
+  "all_positive_galleries": "included AP1",
+  "query_cap": null,
+  "training": "none",
+  "single_training_seed": true
+}

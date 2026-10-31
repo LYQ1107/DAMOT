@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "batch": "2",
+  "seed": 0,
+  "bootstrap_repetitions": 10000,
+  "statistic": "equal-video paired mean differences; distinct from original nonlinear aggregate differences",
+  "test_only": true,
+  "lower_is_better": [
+    "IDSW"
+  ],
+  "all_zero_wilcoxon_p": 1,
+  "CI": "pointwise percentile95%, no multiplicity correction",
+  "single_training_seed": true,
+  "brightness_bin_rows": 0,
+  "brightness_bins_not_applicable": true
+}

@@ -5,8 +5,9 @@ from common import *
 DOMAINS4=['overcast','rainy','dawn_dusk','night']
 def state(status,**extra):
     path=ROOT/'manifests/batch2_status.json';value=dict(status=status,source_root=str(NEW),**extra)
-    if path.exists() and read_json(path)==value:return
+    if path.exists() and read_json(path)==value:return False
     dump(path,value);print('BATCH2_STATE',status,flush=True)
+    return True
 
 def run(script,args,gpu=None,logname=None):
     path=ROOT/'logs'/(logname or ('batch2_'+script+'.log'))
@@ -44,13 +45,16 @@ def main():
     while True:
         formal=NEW/'manifests/formal_controller.json'
         try:status=read_json(formal).get('status')
-        except FileNotFoundError:status='not_dispatched'
-        if (NEW/'episode/train_stopped.json').exists():
-            state('unavailable_source_stopped_before_stage4',stop=json.loads((NEW/'episode/train_stopped.json').read_text()))
-            run('analysis.py',['--report']);return
+        except (FileNotFoundError,json.JSONDecodeError):status='not_dispatched'
         ready=(NEW/'episode/train_complete.json').exists() and all((NEW/'results/stage4'/d/'complete.json').exists() for d in DOMAINS4)
         if ready and status in ['complete_awaiting_publication','complete','published']:break
-        state('waiting_source_training_and_frozen_stage4',source_status=status);time.sleep(45)
+        if (NEW/'episode/train_stopped.json').exists():
+            changed=state('waiting_stage4_after_source_gate',source_status=status,stop=read_json(NEW/'episode/train_stopped.json'),
+                          scope='Original stage4 only; no stage1 inference-trim substitute',user_instruction='保留原范围：注明 stage4 缺失，等训练任务处理后再跑第二批')
+            if changed:run('analysis.py',['--report'])
+            time.sleep(45);continue
+        if state('waiting_source_training_and_frozen_stage4',source_status=status):run('analysis.py',['--report'])
+        time.sleep(45)
     records={}
     for label,base,beta in [('INT',NEW,.25),('HF',HF,.1)]:
         ev={d:base/'results/stage4'/d for d in DOMAINS4}

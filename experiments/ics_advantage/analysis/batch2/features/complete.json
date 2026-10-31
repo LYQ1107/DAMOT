@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "models": [
+    "HF_stage1",
+    "INT_stage1"
+  ],
+  "bootstrap": 10000,
+  "seed": 0,
+  "exact_cosine_silhouette": true,
+  "all_models_metadata_exact": true,
+  "full_test_GT_boxes": true,
+  "view_average": "equal mean of14 intervention views",
+  "note": "Dose retrieval uses only first-five sampled frame galleries; a separate matched-support clean baseline is reported. t-SNE supplemental dose features are excluded."
+}

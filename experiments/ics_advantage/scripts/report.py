@@ -12,7 +12,10 @@ def append_batch2(lines):
         'Source training task: `%s`. Stage4 epoch5 is the main comparison; stage1 epoch5 Overcast is supplementary. '
         'For both checkpoints the feature protocol remains the requested Night/Dawn-Dusk test pool, so the stage1 feature results measure transfer to those domains.'%NEW]
     status=ROOT/'manifests/batch2_status.json'
-    if status.exists():lines+=['','Controller state: `'+json.loads(status.read_text())['status']+'`.']
+    if status.exists():
+        current=read_json(status)
+        lines+=['','Controller state: `'+current['status']+'`.']
+        if current.get('source_status'):lines+=['','Source task state: `'+current['source_status']+'`.']
     complete=ROOT/'manifests/batch2_analysis_complete.json'
     if not complete.exists():
         lines+=['','Pending the independently trained final checkpoints and frozen evaluations. '
@@ -21,8 +24,20 @@ def append_batch2(lines):
         return
     result=json.loads(complete.read_text())
     if not result['stage4_available']:
-        lines+=['','**Source run stopped at its mandatory stage1 gate. Stage4 is unavailable; only the requested stage1 supplement can be measured.**',
-                '', 'Source stop record: `'+json.dumps(result.get('source_stop'),ensure_ascii=False)+'`.']
+        lines+=['','**Stage4 is not yet available; the requested stage1 supplement is complete.**',
+                '', 'Historical stage1 stop record captured when this supplement was dispatched: `'+json.dumps(result.get('source_stop'),ensure_ascii=False)+'`.']
+        context=ROOT/'manifests/source_readiness_context.json'
+        if context.exists():
+            current=read_json(context);gate=current['current_stage1_gate']
+            if gate.get('user_authorized_interpretation_correction'):
+                lines+=['','Source status update (%s): the source task records an authorized correction of its gate-angle interpretation to '
+                        '`%s` = %.4f°, gate status `%s`; its controller state is `%s`. '
+                        'The historical axis-to-axis angle above and this direction-to-subspace angle are different quantities.'%
+                        (current['captured_at'],gate['gate_angle_field'],gate['gate_angle_deg'],gate['status'],current['formal']['status'])]
+        gate=result.get('source_stop') or {}
+        if 'HOTA_delta' in gate:
+            lines+=['','Frozen full-pool Overcast HOTA: INT %.4f, HF %.4f, Δ%+.4f pp. '
+                    'Table1 below instead uses held-out test videos with an equal-video mean.'%(gate['HOTA'],gate['HF_R11_HOTA'],gate['HOTA_delta'])]
     lines+=['','The full-run comparison jointly changes the instructed ICS estimator, shrinkage/loss settings and sample gate. '
             'APR complement coupling also follows that bank by design; this is the effect of the requested complete ICS configuration within that coupling, '
             'rather than an isolated change of estimator alone. One matched training seed is used.','',
@@ -39,8 +54,11 @@ def append_batch2(lines):
             '', '[All categories/strata](analysis/batch2/tracking/paired_effects.csv) · '
             '[Per-video differences](analysis/batch2/tracking/video_differences.csv) · '
             '[Spearman correlations](analysis/batch2/tracking/spearman.csv) · '
-            '[Pooled-four-domain brightness bins](analysis/batch2/tracking/brightness_bins.csv)',
+            '[Brightness-bin membership CSV](analysis/batch2/tracking/brightness_bins.csv)',
             '', '## Batch2 Table2 — Intervention invariance']
+    if not result['stage4_available']:
+        lines+=['','Only stage1 Overcast tracking is available. Night tracking strata and pooled four-domain brightness strata are not applicable; '
+                'their membership CSV contains its schema and no rows. The requested stage4 main comparison remains pending.']
     means=readcsv(ROOT/'analysis/batch2/features/model_means.csv')
     table(lines,['Pool','Model','Mean IR [95% CI]','Mean cross-intervention mAP% [95% CI]','Cosine silhouette'],
         [[r['pool'],r['model'],'%.4f %s'%(float(r['mean_IR']),ci(r,'IR_ci_low','IR_ci_high',4)),
@@ -55,6 +73,9 @@ def append_batch2(lines):
         lines+=['','Batch2 Table2 conclusion (%s): pooled mean IR interval entirely favorable: %s; '
                 'pooled mean cross-intervention mAP interval entirely favorable: %s. '
                 'Every requested strength is reported in the per-view and paired-effect CSVs.'%(model,flags['IR'],flags['mAP'])]
+        ir=next(r for r in group if r['metric']=='IR')
+        if float(ir['ci_low'])>0:
+            lines+=['','Pooled IR is higher (worse) for %s across its full paired95%% interval: Δ%+.6f %s.'%(model,float(ir['delta']),ci(ir,'ci_low','ci_high',6))]
     lines+=['','[Every model/view/strength and matched clean baseline](analysis/batch2/features/per_view.csv) · '
             '[All paired feature effects](analysis/batch2/features/paired_effects.csv) · '
             '[Silhouette sample counts](analysis/batch2/features/silhouette.csv)',
@@ -65,6 +86,12 @@ def append_batch2(lines):
     vk=readcsv(ROOT/'analysis/batch2/vkitti/retrieval.csv')
     table(lines,['Model','Weather','Cross-weather mAP%','Clone mAP%','Queries'],
         [[r['model'],r['weather'],'%.3f'%float(r['cross_weather_mAP']),'%.3f'%float(r['clone_mAP']),r['queries']] for r in vk])
+    for stage in ['stage4','stage1']:
+        pair={r['model']:r for r in vk if r['weather']=='mean' and r['model'].endswith(stage)}
+        if 'INT_'+stage in pair and 'HF_'+stage in pair:
+            delta=float(pair['INT_'+stage]['cross_weather_mAP'])-float(pair['HF_'+stage]['cross_weather_mAP'])
+            lines+=['','VKITTI table conclusion (%s): mean cross-weather mAP INT−HF is %+.6f percentage points; '
+                    'the point estimate %s INT. This supplementary VK table reports one-seed point estimates.'%(stage,delta,'favors' if delta>0 else 'does not favor')]
     lines+=['','[Night / stage1 Overcast brightness–AssA effects](analysis/batch2/tracking/brightness_AssA.png) · '
             '[PDF](analysis/batch2/tracking/brightness_AssA.pdf)']
     if result['stage4_available']:
@@ -101,6 +128,16 @@ def main():
         'they are excluded from the primary quantitative metrics. Tracks, frames and background are selected from metadata before feature outcomes. '
         'Each model uses its own PCA50 and t-SNE with the requested fixed parameters.','',
         '## Batch1: C0–C4 Night epoch2']
+    completed=ROOT/'manifests/batch2_analysis_complete.json'
+    if completed.exists() and not read_json(completed)['stage4_available']:
+        tracking_rows=readcsv(ROOT/'analysis/batch2/tracking/paired_effects.csv')
+        association=next(r for r in tracking_rows if r['category']=='OVERALL' and r['metric']=='AssA')
+        feature_rows=readcsv(ROOT/'analysis/batch2/features/paired_effects.csv')
+        ir=next(r for r in feature_rows if r['pool']=='pooled' and r['view']=='mean' and r['metric']=='IR')
+        lines[2:2]=['**2026-10-31 update:** The requested stage1 supplement is complete; the stage4 main comparison remains unavailable. '
+                    'Held-out Overcast AssA Δ is %+.3f pp %s (%s videos); pooled Night/Dawn transfer IR Δ is %+.6f %s (higher IR is worse). '
+                    'These one-seed results do not establish a consistent advantage. [Stage1 supplement and source-stop details](#batch2-status).'%
+                    (float(association['mean']),ci(association,'ci_low','ci_high'),association['videos'],float(ir['delta']),ci(ir,'ci_low','ci_high',6)),'']
     tracking=ROOT/'analysis/batch1/tracking/paired_effects.csv'
     if tracking.exists():
         a=readcsv(tracking)

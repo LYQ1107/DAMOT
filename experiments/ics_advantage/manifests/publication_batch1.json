@@ -1,0 +1,9 @@
+{
+  "status": "published",
+  "branch": "main",
+  "commit": "b76c74f5e954ef6f405b38b642a87b9208c5e3f5",
+  "files": 550,
+  "all_remote_blob_hashes_match": true,
+  "summary_url": "https://github.com/LYQ1107/DAMOT/blob/main/experiments/ics_advantage/SUMMARY.md",
+  "batch2": "waiting source training/evaluation, automatic task-local queue prepared"
+}

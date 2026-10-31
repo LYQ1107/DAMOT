@@ -2,13 +2,13 @@
   "files": [
     {
       "path": "REMOTE_SOURCE_HASHES.json",
-      "bytes": 51072,
-      "sha256": "dbc102422279aa32975a08fe57daec8e5b042384c3e8b8f5f38fc3392da45572"
+      "bytes": 51376,
+      "sha256": "d2591988fac24067c02302bb9a7ea4084152e4e9d3fd7f737de8d7377a3f8981"
     },
     {
       "path": "SUMMARY.md",
-      "bytes": 5675,
-      "sha256": "7db2699fa010e795f32315dc7b013c35ca8a30a847a71ef257f3db66e381f119"
+      "bytes": 6077,
+      "sha256": "3af2873111071cdd9c5755ec266d8acfdd37afe9c3fb5cb958431281893924a1"
     },
     {
       "path": "analysis/batch1/aggregate_metrics.csv",
@@ -2542,8 +2542,8 @@
     },
     {
       "path": "logs/batch2_controller.log",
-      "bytes": 165,
-      "sha256": "f5d832b0665e5dc50515e48cd5c61613d6155919c68a85eb3b9c92f01de95bf2"
+      "bytes": 329,
+      "sha256": "30c747ba279e8bccfbaeb91bb54da5797b19ae4de468dd94216a4186890fa5cd"
     },
     {
       "path": "logs/build_delivery_fast.log",
@@ -2597,8 +2597,8 @@
     },
     {
       "path": "manifests/batch2_controller_process.json",
-      "bytes": 18,
-      "sha256": "9529ccfdcc698d93c72ed019c63fa9a60aea1c8d7c121a7c814a516022d5b3fb"
+      "bytes": 121,
+      "sha256": "0f406a35f30a6318f816d9ca039f82beccbf6fe8f97baf3ccf3237fb786c49cb"
     },
     {
       "path": "manifests/batch2_status.json",
@@ -2676,9 +2676,19 @@
       "sha256": "5dfe5c9a11bc7909d6204fed36945521aa8738601037f90cce4fbc75c6d30ffe"
     },
     {
+      "path": "manifests/scope_decision_20261031.json",
+      "bytes": 233,
+      "sha256": "5f3dce748dbf9e66a6fb0536c2d4df22e0fb348f637c2e7fef2449a5ac00cfa5"
+    },
+    {
       "path": "manifests/selftest.json",
       "bytes": 356,
       "sha256": "029af0bb1428d44ada557e9dbc48eb24592c60a074fdc34acba00f526e84a1f0"
+    },
+    {
+      "path": "manifests/source_readiness_context.json",
+      "bytes": 2059,
+      "sha256": "c674c8ef7f94025eb2c0e3ae60bd86e8e3bcba1a11aded8d2e613fe84381b509"
     },
     {
       "path": "manifests/validation_batch1.json",
@@ -3987,8 +3997,8 @@
     },
     {
       "path": "scripts/analysis.py",
-      "bytes": 9858,
-      "sha256": "6e18357b7fef3795d04f4f013721948ef47aa17e66a460b7524a06262da6c122"
+      "bytes": 11152,
+      "sha256": "63350b7071be236be42cc4e79395289303efab52bb513f31a27717a7e9693296"
     },
     {
       "path": "scripts/audit_fixed_bases.py",
@@ -4002,8 +4012,8 @@
     },
     {
       "path": "scripts/batch2_controller.py",
-      "bytes": 5154,
-      "sha256": "5990372055efc91c4b52564540fcda566b965ea440a1a5f185709cc3c00616cf"
+      "bytes": 5481,
+      "sha256": "2fd5d3a92b92b384d7d279139210a4c602ef2d8f5d8904877c4f0267025d8815"
     },
     {
       "path": "scripts/build_delivery.py",

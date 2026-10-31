@@ -1,2 +1,56 @@
 BATCH2_STATE waiting_source_failure_resolution
 BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE failed
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py", line 93, in <module>
+    try:main()
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py", line 72, in main
+    mode,info=source_readiness();state(mode,**info)
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py", line 13, in source_readiness
+    status=json.loads(formal.read_text()).get('status') if formal.exists() else 'not_dispatched'
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/pathlib.py", line 1221, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/pathlib.py", line 1208, in open
+    opener=self._opener)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/pathlib.py", line 1063, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/data1/liuyeqiang/damot_hf_intics_20261031_004258/manifests/formal_controller.json'
+BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE waiting_source_training_and_evaluation
+BATCH2_STATE stage1_only_source_stopped
+BATCH2_STATE frozen_inference_and_native_sequence_metrics
+START HF_stage1_smoke GPU 2
+START INT_stage1_smoke GPU 3
+DONE HF_stage1_smoke
+DONE INT_stage1_smoke
+START HF_stage1 GPU 2
+START INT_stage1 GPU 3
+DONE HF_stage1
+START HF_stage1_tsne GPU 2
+DONE INT_stage1
+START INT_stage1_tsne GPU 3
+DONE HF_stage1_tsne
+START HF_stage1_vk GPU 2
+DONE INT_stage1_tsne
+START INT_stage1_vk GPU 3
+DONE INT_stage1_vk
+DONE HF_stage1_vk
+BATCH2_STATE failed
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py", line 95, in <module>
+    try:main()
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py", line 84, in main
+    run_script('tracking_statistics.py',['--batch','2'])
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/batch2_controller.py", line 69, in run_script
+    subprocess.run([PY,'-u',str(ROOT/'scripts'/script)]+list(args),env=env(True),stdout=f,stderr=subprocess.STDOUT,check=True)
+  File "/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/subprocess.py", line 512, in run
+    output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python', '-u', '/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/tracking_statistics.py', '--batch', '2']' returned non-zero exit status 1.
+BATCH2_STATE stage1_only_source_stopped
+BATCH2_STATE frozen_inference_and_native_sequence_metrics
+BATCH2_STATE offline_feature_statistics
+BATCH2_STATE ready_for_review_and_publication
+BATCH2_STATE waiting_source_training_and_evaluation

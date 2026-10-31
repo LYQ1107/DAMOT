@@ -1,4 +1,4 @@
-"""Finite inference queue; acquire only completely idle GPUs, never share."""
+"""Finite inference queue, honoring the explicit GPU and NAS storage policies."""
 import json,os,subprocess,threading,time
 from concurrent.futures import ThreadPoolExecutor
 from common import *
@@ -62,6 +62,8 @@ def args(label,ck,extra=False,vk=False,smoke=False):
     return command
 
 def job(model,extra=False,vk=False,smoke=False):
+    while not any(line.split()[4]=='/data1/liuyeqiang/nas/A100' for line in Path('/proc/self/mountinfo').read_text().splitlines()):
+        print('WAIT_NAS_MOUNT',model,flush=True);time.sleep(15)
     name=model+('_smoke' if smoke else '_vk' if vk else '_tsne' if extra else '')
     manifest=ROOT/'manifests'/('infer_'+name+'.json')
     if manifest.exists() and json.loads(manifest.read_text()).get('status')=='complete':return

@@ -39,11 +39,14 @@ def main(batch):
                     stratify(pool,effects,bins,'four_domains_pooled')
     out=ROOT/'analysis'/('batch'+batch)/'tracking'
     csvout(out/'paired_effects.csv',effects);csvout(out/'video_differences.csv',details)
-    csvout(out/'spearman.csv',corrs);csvout(out/'brightness_bins.csv',bins)
+    csvout(out/'spearman.csv',corrs)
+    # A stopped stage1-only run has Overcast data, but no requested Night/four-domain bins.
+    csvout(out/'brightness_bins.csv',bins,fieldnames=list(details[0])+['scope','brightness_third'])
     draw(details,effects,bins,out)
     dump(out/'complete.json',dict(status='complete',batch=batch,seed=0,bootstrap_repetitions=NBOOT,
          statistic='equal-video paired mean differences; distinct from original nonlinear aggregate differences',
-         test_only=True,lower_is_better=['IDSW'],all_zero_wilcoxon_p=1,CI='pointwise percentile95%, no multiplicity correction',single_training_seed=True))
+         test_only=True,lower_is_better=['IDSW'],all_zero_wilcoxon_p=1,CI='pointwise percentile95%, no multiplicity correction',single_training_seed=True,
+         brightness_bin_rows=len(bins),brightness_bins_not_applicable=not bool(bins)))
 
 def summarize(rows,effects,corrs,stratum,domain):
     base={k:rows[0][k] for k in ['case','model','reference','category']}
@@ -78,6 +81,13 @@ def draw(details,effects,bins,out):
             if not selected:continue
             stat=next(r for r in effects if r['case']==case and r['model']==model and r['reference']==ref and r['category']=='OVERALL' and r['domain']=='night' and r['stratum']=='night_within_domain:'+group and r['metric']=='AssA')
             mean=stat['mean'];ax.errorbar(np.mean([r['brightness'] for r in selected]),mean,yerr=[[mean-stat['ci_low']],[stat['ci_high']-mean]],fmt='o',capsize=4,color=color,label=group)
+        if not ax.get_legend_handles_labels()[0]:
+            # Overcast-only supplement: show its registered overall interval,
+            # without inventing the unavailable Night/four-domain strata.
+            domain=data[0]['domain']
+            stat=next(r for r in effects if r['case']==case and r['model']==model and r['reference']==ref and r['category']=='OVERALL' and r['domain']==domain and r['stratum']=='all_test_videos' and r['metric']=='AssA')
+            ax.axhspan(stat['ci_low'],stat['ci_high'],color='#315d9b',alpha=.12,label='Mean and 95% CI ({} videos)'.format(stat['videos']))
+            ax.axhline(stat['mean'],color='#315d9b',lw=1.2)
         ax.axhline(0,color='k',lw=.8);ax.set_title(case+': '+model+' − '+ref)
         ax.set_xlabel('Original-frame video brightness (0–255)');ax.set_ylabel('Paired AssA difference (pp)');ax.grid(alpha=.15)
         if ax.get_legend_handles_labels()[0]:ax.legend(fontsize=8)

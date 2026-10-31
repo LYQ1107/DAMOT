@@ -1,7 +1,7 @@
 {
   "SUMMARY.md": {
-    "bytes": 5675,
-    "sha256": "7db2699fa010e795f32315dc7b013c35ca8a30a847a71ef257f3db66e381f119"
+    "bytes": 6077,
+    "sha256": "3af2873111071cdd9c5755ec266d8acfdd37afe9c3fb5cb958431281893924a1"
   },
   "analysis/batch1/aggregate_metrics.csv": {
     "bytes": 8413,
@@ -268,8 +268,8 @@
     "sha256": "012ed5f77731d17b243b971a3b2e0f92384ed1404dfc42003cb9cee818a45def"
   },
   "logs/batch2_controller.log": {
-    "bytes": 165,
-    "sha256": "f5d832b0665e5dc50515e48cd5c61613d6155919c68a85eb3b9c92f01de95bf2"
+    "bytes": 329,
+    "sha256": "30c747ba279e8bccfbaeb91bb54da5797b19ae4de468dd94216a4186890fa5cd"
   },
   "logs/build_delivery_fast.log": {
     "bytes": 20,
@@ -312,8 +312,8 @@
     "sha256": "e306abbd21f1b343d7000de8a2e00dcbd5a1d60d6e592175fddd64ef725b676f"
   },
   "manifests/batch2_controller_process.json": {
-    "bytes": 18,
-    "sha256": "9529ccfdcc698d93c72ed019c63fa9a60aea1c8d7c121a7c814a516022d5b3fb"
+    "bytes": 121,
+    "sha256": "0f406a35f30a6318f816d9ca039f82beccbf6fe8f97baf3ccf3237fb786c49cb"
   },
   "manifests/batch2_status.json": {
     "bytes": 186,
@@ -1232,8 +1232,8 @@
     "sha256": "b0f2a5cdce61229aff1933e2b2a69397502569c03036dbfc092aebbeda7f061d"
   },
   "scripts/analysis.py": {
-    "bytes": 9858,
-    "sha256": "6e18357b7fef3795d04f4f013721948ef47aa17e66a460b7524a06262da6c122"
+    "bytes": 11152,
+    "sha256": "63350b7071be236be42cc4e79395289303efab52bb513f31a27717a7e9693296"
   },
   "scripts/audit_fixed_bases.py": {
     "bytes": 980,
@@ -1244,8 +1244,8 @@
     "sha256": "5347b1cd28ffe84f2b76798f05500d7ae6c3efd254155f8fba7b8e1ac8338f35"
   },
   "scripts/batch2_controller.py": {
-    "bytes": 5154,
-    "sha256": "5990372055efc91c4b52564540fcda566b965ea440a1a5f185709cc3c00616cf"
+    "bytes": 5481,
+    "sha256": "2fd5d3a92b92b384d7d279139210a4c602ef2d8f5d8904877c4f0267025d8815"
   },
   "scripts/build_delivery.py": {
     "bytes": 1773,
@@ -1310,5 +1310,13 @@
   "scripts/verify_detector_reuse.py": {
     "bytes": 2688,
     "sha256": "4d4ab94f7e2e7674741c18783fe86fd40800f49f05d3347df56a352aac9e24c6"
+  },
+  "manifests/scope_decision_20261031.json": {
+    "bytes": 233,
+    "sha256": "5f3dce748dbf9e66a6fb0536c2d4df22e0fb348f637c2e7fef2449a5ac00cfa5"
+  },
+  "manifests/source_readiness_context.json": {
+    "bytes": 2059,
+    "sha256": "c674c8ef7f94025eb2c0e3ae60bd86e8e3bcba1a11aded8d2e613fe84381b509"
   }
 }

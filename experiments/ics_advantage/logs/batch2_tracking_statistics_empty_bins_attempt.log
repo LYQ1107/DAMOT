@@ -1,0 +1,10 @@
+/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/scipy/stats/morestats.py:2879: UserWarning: Sample size too small for normal approximation.
+  warnings.warn("Sample size too small for normal approximation.")
+Traceback (most recent call last):
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/tracking_statistics.py", line 103, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--batch',choices=['1','2'],default='1');main(p.parse_args().batch)
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/tracking_statistics.py", line 42, in main
+    csvout(out/'spearman.csv',corrs);csvout(out/'brightness_bins.csv',bins)
+  File "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/common.py", line 35, in csvout
+    w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+IndexError: list index out of range

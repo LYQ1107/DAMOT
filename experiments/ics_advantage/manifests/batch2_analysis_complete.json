@@ -1,0 +1,28 @@
+{
+  "status": "available_stage1_complete_source_stopped",
+  "mode": "stage1_only_source_stopped",
+  "models": [
+    "HF_stage1",
+    "INT_stage1"
+  ],
+  "stage4_available": false,
+  "source_stop": {
+    "status": "stop",
+    "reasons": [
+      "bank PC1/offline FAP PC1 angle exceeds45deg"
+    ],
+    "HOTA": 36.47477411631231,
+    "HF_R11_HOTA": 36.781974908118556,
+    "HOTA_delta": -0.3072007918062454,
+    "first_direction_angle_deg": 82.48092299544699,
+    "first_direction_to_offline_span_deg": 33.75608908725687,
+    "principal_angles_deg": [
+      33.453465219188544,
+      88.357491312671
+    ],
+    "P1_weather_shift_energy_share": 0.08507769566556955,
+    "P1_identity_energy_share": 0.09112870290405677,
+    "seed": 1790355234,
+    "time": 1793395076.516372
+  }
+}

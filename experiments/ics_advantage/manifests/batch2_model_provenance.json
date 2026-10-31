@@ -1,0 +1,26 @@
+{
+  "HF_stage1": {
+    "checkpoint": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/stage_snapshots/stage01_after_overcast.pth",
+    "checkpoint_sha256": "e46dc4354be22cc426e491705379397a4f4aa378458163996823bd8bafb7d7df",
+    "stage": 1,
+    "epoch": 5,
+    "seed": 1790355234,
+    "role": "original HF ICS",
+    "frozen_evaluations": {
+      "overcast": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage1/overcast"
+    },
+    "inference_source_snapshot": "/data1/liuyeqiang/ics_advantage_20261031_004629/code_online"
+  },
+  "INT_stage1": {
+    "checkpoint": "/home/liuyeqiang/remote/damot_hf_intics_20261031_004258_nas/liuyeqiang_runs/damot_hf_intics_20261031_004258/episode/stage_snapshots/stage01_after_overcast.pth",
+    "checkpoint_sha256": "7919eb9e244c194465d9c90c72831594f1c4e548bece7c4d33aa30eeabefd364",
+    "stage": 1,
+    "epoch": 5,
+    "seed": 1790355234,
+    "role": "online intervention-residual ICS",
+    "frozen_evaluations": {
+      "overcast": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/stage1/overcast"
+    },
+    "inference_source_snapshot": "/data1/liuyeqiang/ics_advantage_20261031_004629/code_online"
+  }
+}

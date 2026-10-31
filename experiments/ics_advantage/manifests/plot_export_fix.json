@@ -1,0 +1,6 @@
+{
+  "reason": "Unescaped percent in an additional legend label",
+  "fix": "Use str.format for literal95% text",
+  "metric_CSVs_recomputed_identically": true,
+  "baseline_figure_preserved_until_success": true
+}

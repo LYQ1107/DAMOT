@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "gpus": [
+    2,
+    3,
+    6,
+    8
+  ],
+  "prelaunch_snapshot": "0, 15702, 91\n1, 20308, 91\n2, 2, 0\n3, 2, 0\n4, 1525, 2\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 2, 0\n9, 2, 0\n",
+  "command": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/scripts/preflight_pair.py"
+  ],
+  "pid": 34250,
+  "time": 1793465302.3894868,
+  "exit_code": 0,
+  "finished_time": 1793467732.6211
+}

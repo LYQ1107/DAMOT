@@ -1,0 +1,11 @@
+{
+  "stage": 4,
+  "domain": "night",
+  "actual_training_samples": 7274,
+  "original_annotation_counts": [
+    36,
+    7286
+  ],
+  "global_batch": 64,
+  "resume_epoch": 0
+}

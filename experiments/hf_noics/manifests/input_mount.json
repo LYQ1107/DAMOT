@@ -1,0 +1,16 @@
+{
+  "mount": "/home/liuyeqiang/remote/damot_hf_noics_20261101_004139_nas_inputs",
+  "source": "Valadmin@127.0.0.1:/home/A100",
+  "read_only": true,
+  "owned_by_this_task": true,
+  "command": [
+    "/home/liuyeqiang/.local/share/nas-mount/runtime/usr/bin/sshfs",
+    "-p",
+    "24557",
+    "Valadmin@127.0.0.1:/home/A100",
+    "/home/liuyeqiang/remote/damot_hf_noics_20261101_004139_nas_inputs",
+    "-o",
+    "ro,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/home/liuyeqiang/.ssh/id_ed25519_nas_readwrite,IdentitiesOnly=yes,BatchMode=yes,StrictHostKeyChecking=yes,HostKeyAlias=nas-readwrite,UserKnownHostsFile=/home/liuyeqiang/.ssh/known_hosts_nas_readwrite,ConnectTimeout=10"
+  ],
+  "time": 1793465005.2836902
+}

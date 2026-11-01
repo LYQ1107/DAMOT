@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "unit": "test video",
+  "tracking_metric_protocol": "ics_advantage native TrackEval HOTA/AssA + native MMTracking MOTMetrics IDF1",
+  "bootstrap": 10000,
+  "seed": 0,
+  "files": [
+    {
+      "source": "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/tracking_per_video.py",
+      "target": "scripts/tracking_per_video.py",
+      "sha256": "cc65c42d58a0ca0d6813c88495dc9120365420e04375951a4dca5c569fb62dd5"
+    },
+    {
+      "source": "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/statistics_utils.py",
+      "target": "scripts/statistics_utils.py",
+      "sha256": "031384a4c6e44868d85ad409ce4565dcbd1ec6a9d280e6f0b3fb53b07bcce23d"
+    },
+    {
+      "source": "/data1/liuyeqiang/ics_advantage_20261031_004629/scripts/ics_probe_analyze.py",
+      "function": "split_mask",
+      "function_source_sha256": "9cd4a4f7128d295b8b57c0621c603788238210b09feee8ce98626b0c0d40f62e",
+      "target": "scripts/video_split.py"
+    },
+    {
+      "source": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/results/stage_domain_metrics.csv",
+      "target": "reference/HF/stage_domain_metrics.csv",
+      "sha256": "a216c5322ba91051d98a854d50ac52005a2ce43b3106d64ca146743db7af5729"
+    },
+    {
+      "source": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/stage_domain_metrics.csv",
+      "target": "reference/INTICS/stage_domain_metrics.csv",
+      "sha256": "f475963e7e98b85dd64349b77bbe737eade3bde09945ecc7ffa1d535bebb2721"
+    },
+    {
+      "domain": "overcast",
+      "HF_video_metrics_reused_from": "/data1/liuyeqiang/ics_advantage_20261031_004629/tracking/HF_stage4/overcast",
+      "raw_predictions_sha256": "0fc931de75059a505206a0b1ae531e41b1b62595bad221f4c9b21db75478395f",
+      "per_video_sha256": "3e963f9026db3b1c21f9f1b582c1bac29bbe6712d754e2c46895bdb28f6b0386"
+    },
+    {
+      "domain": "rainy",
+      "HF_video_metrics_reused_from": "/data1/liuyeqiang/ics_advantage_20261031_004629/tracking/HF_stage4/rainy",
+      "raw_predictions_sha256": "383be172344128762667d5755b1c69d1754c4d2e64e8afe09651c107eb66bc3e",
+      "per_video_sha256": "b4c51072cf8f14085a2fed1a8b1e00f35106674dc38420f11c364ec281db3533"
+    },
+    {
+      "domain": "dawn_dusk",
+      "HF_video_metrics_reused_from": "/data1/liuyeqiang/ics_advantage_20261031_004629/tracking/HF_stage4/dawn_dusk",
+      "raw_predictions_sha256": "6fe65cd89acd25c95128956b46637e0cd63f24dcbbb7e4cea3cf19a757a021a6",
+      "per_video_sha256": "65b6a28c6bcbc8a103c78c19e70428a576826ecd1df55120e8539596f74b3872"
+    },
+    {
+      "domain": "night",
+      "HF_video_metrics_reused_from": "/data1/liuyeqiang/ics_advantage_20261031_004629/tracking/HF_stage4/night",
+      "raw_predictions_sha256": "1fe7f22b38dec6e346814884cb8973d8e2f78adcb6f15f207842b3ff1056e749",
+      "per_video_sha256": "4113f5375f8ccd92cc49e38d2ae3a775f24a0fb3d0a99208723c21e1e80479aa"
+    }
+  ]
+}

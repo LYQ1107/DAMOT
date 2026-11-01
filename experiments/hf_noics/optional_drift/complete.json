@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "models": [
+    "F",
+    "HF",
+    "NoICS"
+  ],
+  "NoICS_bank_rows": "not applicable; omitted because no bank exists",
+  "common_reference": "F_stage1_e5 fit videos",
+  "statistics_split": "test; video-name MD5 seed0",
+  "random_basis_seed": 9973,
+  "no_new_training": true,
+  "coordinate_alignment": "unchanged historical shared-coordinate convention; not proven gauge-invariant",
+  "metadata_alignment_asserted": true,
+  "NoICS_drift_rows": 64
+}

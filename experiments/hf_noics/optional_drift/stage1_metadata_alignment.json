@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "stage": 1,
+  "rois": 33839,
+  "metadata_keys": [
+    "video",
+    "instance_id",
+    "frame_id",
+    "image_id",
+    "category",
+    "bbox"
+  ],
+  "reference": "F_stage1_e5",
+  "NoICS_bank_arrays_absent": true,
+  "standard_views": [
+    "clean",
+    "fap"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "stage_training_complete",
+  "stage": 4,
+  "domain": "night",
+  "rank": 1,
+  "calls": 570,
+  "APR_active_iterations": 570,
+  "APR_loss_mean": 0.0020875065628308477,
+  "total_loss_mean": 0.5338655139009157,
+  "history_domains": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "history_domain_count": 3,
+  "bank_modules": 0,
+  "bank_none": true,
+  "expect_noics": true,
+  "full_space_basis": true,
+  "seed": 1790355234,
+  "disposable_weights": false,
+  "time": 1793496845.3005662
+}

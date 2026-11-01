@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "stage": 4,
+  "domain": "night",
+  "epoch": 5,
+  "checkpoint": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/stage_snapshots/stage04_after_night.pth",
+  "checkpoint_sha256": "fe9d4ff27fa0823ed23952d9fa41e1ed542e29a679bd121a2709d226bb496588",
+  "rank_local_memory_saved": true,
+  "time": 1793496847.4991906
+}

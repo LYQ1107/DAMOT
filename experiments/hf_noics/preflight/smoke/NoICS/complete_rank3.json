@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "variant": "NoICS",
+  "total_iterations": 50,
+  "phase_steps": [
+    13,
+    13,
+    12,
+    12
+  ],
+  "history_domains": [
+    "overcast",
+    "rainy",
+    "dawn_dusk",
+    "night"
+  ],
+  "formal_weights_saved": false,
+  "seed": 1790355234
+}

@@ -1,0 +1,8 @@
+{
+  "checkpoint": "/data1/liuyeqiang/damot_rebuttal_20261026/cache/weights/S.pth",
+  "source_initialization": true,
+  "loaded_keys": 364,
+  "teacher_initialized_from_student": true,
+  "critical_tensors_exact": true,
+  "checkpoint_epoch": 20
+}

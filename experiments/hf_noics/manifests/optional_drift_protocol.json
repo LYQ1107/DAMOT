@@ -1,0 +1,12 @@
+{
+  "status": "prepared_optional_only",
+  "extractor_source": "/data1/liuyeqiang/ics_advantage_20261031_004629/code/tools/analysis/ics_probe_extract.py",
+  "extractor_sha256": "96c2c06ca0f6dbc95b1f0d0084179bd8a1efb10e0d7c19ddb1189cd3d6396221",
+  "drift_source": "/data1/liuyeqiang/ics_quick_20261029_160807/github_verify_final_fca0761/tools/analysis/ics_probe_drift.py",
+  "drift_change": "Only omit ICS stored-bank/covariance basis rows when the checkpoint contains no ICS bank; no replacement bank is estimated.",
+  "common_reference": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/F_stage1_e5",
+  "F_HF_results_source": "/data1/liuyeqiang/damot_ics_followup_20261029/results/drift_decomposition",
+  "training_changes": [],
+  "no_new_training": true,
+  "extraction": "Standard views and canonical batch match the historical HF checkpoint at each stage; unused dose views omitted. Same GT RoI metadata is asserted against the fixed F stage1 reference."
+}

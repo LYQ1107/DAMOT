@@ -1,0 +1,17 @@
+{
+  "pid": 34250,
+  "command": [
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/scripts/gpu_job.py",
+    "--name",
+    "preflight_pair",
+    "--gpus",
+    "4",
+    "--prefer",
+    "2,3,6,8,9",
+    "--",
+    "/home/liuyeqiang/anaconda3/bin/python3",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/scripts/preflight_pair.py"
+  ],
+  "time": 1793465302.1103363
+}

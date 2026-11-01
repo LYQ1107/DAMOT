@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "single_training_seed": true,
+  "training_seed": 1790355234,
+  "test_only": true,
+  "split": "exact ics_advantage video-name MD5 split, seed0",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 0,
+  "estimand": "equal-video paired mean difference; median is a point estimate",
+  "CI": "pointwise percentile95% interval of mean differences; no multiplicity correction",
+  "pooled_statistic": "equal-video pool; distinct from the main four-domain macro average and from nonlinear official aggregates",
+  "test_videos_by_domain": {
+    "overcast": 8,
+    "rainy": 9,
+    "dawn_dusk": 17,
+    "night": 25
+  }
+}

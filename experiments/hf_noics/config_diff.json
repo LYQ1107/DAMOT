@@ -1,0 +1,170 @@
+{
+  "model_changes": [
+    {
+      "stage": 1,
+      "path": "model.track_head.roi_proto_couple_ics",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 1,
+      "path": "model.track_head.use_causal_direction_bank",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 2,
+      "path": "model.track_head.roi_proto_couple_ics",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 2,
+      "path": "model.track_head.use_causal_direction_bank",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 3,
+      "path": "model.track_head.roi_proto_couple_ics",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 3,
+      "path": "model.track_head.use_causal_direction_bank",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 4,
+      "path": "model.track_head.roi_proto_couple_ics",
+      "HF": true,
+      "NoICS": false
+    },
+    {
+      "stage": 4,
+      "path": "model.track_head.use_causal_direction_bank",
+      "HF": true,
+      "NoICS": false
+    }
+  ],
+  "bookkeeping_changes": [
+    {
+      "stage": 1,
+      "path": "custom_hooks[2].root",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139"
+    },
+    {
+      "stage": 1,
+      "path": "custom_hooks[3]",
+      "HF": null,
+      "NoICS": {
+        "type": "NoICSRuntimeAuditHook",
+        "root": "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+        "stage": 1,
+        "priority": "LOWEST"
+      }
+    },
+    {
+      "stage": 1,
+      "path": "data.train[0].img_prefix",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/overcast/",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/data/images/overcast/"
+    },
+    {
+      "stage": 1,
+      "path": "work_dir",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage01_after_overcast",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage01_after_overcast"
+    },
+    {
+      "stage": 2,
+      "path": "custom_hooks[2].root",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139"
+    },
+    {
+      "stage": 2,
+      "path": "custom_hooks[3]",
+      "HF": null,
+      "NoICS": {
+        "type": "NoICSRuntimeAuditHook",
+        "root": "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+        "stage": 2,
+        "priority": "LOWEST"
+      }
+    },
+    {
+      "stage": 2,
+      "path": "data.train[0].img_prefix",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/rainy/",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/data/images/rainy/"
+    },
+    {
+      "stage": 2,
+      "path": "work_dir",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage02_after_rainy",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage02_after_rainy"
+    },
+    {
+      "stage": 3,
+      "path": "custom_hooks[2].root",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139"
+    },
+    {
+      "stage": 3,
+      "path": "custom_hooks[3]",
+      "HF": null,
+      "NoICS": {
+        "type": "NoICSRuntimeAuditHook",
+        "root": "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+        "stage": 3,
+        "priority": "LOWEST"
+      }
+    },
+    {
+      "stage": 3,
+      "path": "data.train[0].img_prefix",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/dawn_dusk/",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/data/images/dawn_dusk/"
+    },
+    {
+      "stage": 3,
+      "path": "work_dir",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage03_after_dawn_dusk",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage03_after_dawn_dusk"
+    },
+    {
+      "stage": 4,
+      "path": "custom_hooks[2].root",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139"
+    },
+    {
+      "stage": 4,
+      "path": "custom_hooks[3]",
+      "HF": null,
+      "NoICS": {
+        "type": "NoICSRuntimeAuditHook",
+        "root": "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+        "stage": 4,
+        "priority": "LOWEST"
+      }
+    },
+    {
+      "stage": 4,
+      "path": "data.train[0].img_prefix",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/data/images/night/",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/data/images/night/"
+    },
+    {
+      "stage": 4,
+      "path": "work_dir",
+      "HF": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420/episode/adapt/stage04_after_night",
+      "NoICS": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage04_after_night"
+    }
+  ]
+}

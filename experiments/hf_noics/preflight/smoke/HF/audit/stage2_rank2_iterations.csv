@@ -1,0 +1,14 @@
+stage,domain,rank,iteration,global_smoke_iteration,total_loss,APR_loss,history_domains,bank_none,loss_keys,compute_seconds,iteration_seconds
+2,rainy,2,1,14,1.7526719570159912,0.0017951217014342546,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,21.647674903273582,21.647674903273582
+2,rainy,2,2,15,2.5098464488983154,0.002097016666084528,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.94462862610817,19.06356167793274
+2,rainy,2,3,16,1.6191924810409546,0.001963969087228179,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.926005139946938,19.05105911195278
+2,rainy,2,4,17,2.3253517150878906,0.001994698541238904,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.62567138671875,18.75259079039097
+2,rainy,2,5,18,2.7650375366210938,0.0021923764143139124,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.949682354927063,19.059602707624435
+2,rainy,2,6,19,1.4466748237609863,0.0018023115117102861,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.679256290197372,17.786493569612503
+2,rainy,2,7,20,1.3467862606048584,0.0019862568005919456,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.573838979005814,18.717336639761925
+2,rainy,2,8,21,1.793552279472351,0.0021375471260398626,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.66316908597946,18.791177660226822
+2,rainy,2,9,22,1.6153299808502197,0.0019614738412201405,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,19.652320504188538,19.76021134853363
+2,rainy,2,10,23,2.748490571975708,0.0022941778879612684,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.947455629706383,19.051631942391396
+2,rainy,2,11,24,2.1001155376434326,0.002065446227788925,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,18.89021687209606,18.98395299911499
+2,rainy,2,12,25,1.511820673942566,0.0018545202910900116,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.157146751880646,17.25937247276306
+2,rainy,2,13,26,2.795109510421753,0.002281874418258667,overcast,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.55622109770775,17.650558680295944

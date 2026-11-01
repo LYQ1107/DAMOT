@@ -1,0 +1,22 @@
+{
+  "status": "stage_training_complete",
+  "stage": 3,
+  "domain": "dawn_dusk",
+  "rank": 1,
+  "calls": 490,
+  "APR_active_iterations": 490,
+  "APR_loss_mean": 0.0025863171958991765,
+  "total_loss_mean": 0.8357067099335242,
+  "history_domains": [
+    "overcast",
+    "rainy"
+  ],
+  "history_domain_count": 2,
+  "bank_modules": 0,
+  "bank_none": true,
+  "expect_noics": true,
+  "full_space_basis": true,
+  "seed": 1790355234,
+  "disposable_weights": false,
+  "time": 1793486944.6769526
+}

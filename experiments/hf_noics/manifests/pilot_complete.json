@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "validation": "preflight/validation.json",
+  "steps": 50,
+  "ranks": 4,
+  "formal_weights_saved": false,
+  "disposable_pair": [
+    "HF",
+    "NoICS"
+  ]
+}

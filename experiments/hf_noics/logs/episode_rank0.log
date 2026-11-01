@@ -1,0 +1,463 @@
+2026-10-31 17:29:02,802 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 17:29:02,802 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 17:29:02,802 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-31 17:29:03,332 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 17:29:03,332 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 17:29:03,332 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-31 17:29:04,907 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage overcast, history_domains=[]
+2026-10-31 17:29:06,708 - mmtrack - INFO - FORMAL STAGE 1 domain=overcast source_once=True samples=4321 resume_epoch=0
+2026-10-31 17:29:06,708 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-31 17:29:09,722 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage01_after_overcast
+2026-10-31 17:29:09,723 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 17:29:09,723 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 17:29:09,723 - mmtrack - INFO - Checkpoints will be saved to /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage01_after_overcast by HardDiskBackend.
+2026-10-31 17:29:36,495 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=0.0247 std=1.1609 min=-2.1179 max=2.6400
+2026-10-31 17:29:36,496 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-0.3147 std=1.0784 min=-2.1179 max=2.6400
+2026-10-31 17:29:36,497 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=0.0761 std=1.1253 min=-2.1179 max=2.6400
+2026-10-31 17:29:40,026 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=1 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:29:56,925 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=2 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:30:13,646 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=3 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:34:58,546 - mmtrack - INFO - Epoch [1][20/68]	lr: 3.996e-05, eta: 1:33:00, time: 17.440, data_time: 0.556, memory: 22558, rpn_distillation_loss: 0.8879, roi_distillation_loss: 0.0690, loss_track: 1.1317, loss_track_aux: 0.1640, loss: 2.2527, grad_norm: 25.4222
+2026-10-31 17:34:58,547 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=20 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:40:35,173 - mmtrack - INFO - Epoch [1][40/68]	lr: 7.992e-05, eta: 1:25:40, time: 16.831, data_time: 0.114, memory: 22623, rpn_distillation_loss: 0.7519, roi_distillation_loss: 0.0553, loss_track: 0.5940, loss_track_aux: 0.1546, loss: 1.5558, grad_norm: 13.9735
+2026-10-31 17:40:35,174 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=40 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:46:16,960 - mmtrack - INFO - Epoch [1][60/68]	lr: 1.199e-04, eta: 1:19:53, time: 17.089, data_time: 0.105, memory: 22624, rpn_distillation_loss: 0.6742, roi_distillation_loss: 0.0502, loss_track: 0.5516, loss_track_aux: 0.1466, loss: 1.4225, grad_norm: 9.9248
+2026-10-31 17:46:16,961 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=60 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:48:39,421 - mmtrack - INFO - Saving checkpoint at 1 epochs
+2026-10-31 17:52:22,313 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=80 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 17:54:44,662 - mmtrack - INFO - Epoch [2][20/68]	lr: 1.758e-04, eta: 1:06:22, time: 18.171, data_time: 0.425, memory: 22651, rpn_distillation_loss: 0.5840, roi_distillation_loss: 0.0416, loss_track: 0.4664, loss_track_aux: 0.1266, loss: 1.2186, grad_norm: 10.9694
+2026-10-31 17:58:18,574 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=100 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:00:41,184 - mmtrack - INFO - Epoch [2][40/68]	lr: 2.158e-04, eta: 1:02:33, time: 17.826, data_time: 0.118, memory: 22651, rpn_distillation_loss: 0.5389, roi_distillation_loss: 0.0399, loss_track: 0.4091, loss_track_aux: 0.1162, loss: 1.1041, grad_norm: 8.4606
+2026-10-31 18:04:15,426 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=120 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:06:37,423 - mmtrack - INFO - Epoch [2][60/68]	lr: 2.557e-04, eta: 0:58:03, time: 17.812, data_time: 0.116, memory: 22651, rpn_distillation_loss: 0.4976, roi_distillation_loss: 0.0360, loss_track: 0.3288, loss_track_aux: 0.1026, loss: 0.9651, grad_norm: 8.5323
+2026-10-31 18:08:59,150 - mmtrack - INFO - Saving checkpoint at 2 epochs
+2026-10-31 18:10:21,165 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=140 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:15:03,222 - mmtrack - INFO - Epoch [3][20/68]	lr: 3.117e-04, eta: 0:48:28, time: 18.105, data_time: 0.435, memory: 22651, rpn_distillation_loss: 0.5032, roi_distillation_loss: 0.0385, loss_track: 0.3777, loss_track_aux: 0.1099, loss: 1.0294, grad_norm: 10.2129
+2026-10-31 18:16:15,391 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=160 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:21:03,378 - mmtrack - INFO - Epoch [3][40/68]	lr: 3.517e-04, eta: 0:43:52, time: 18.008, data_time: 0.116, memory: 22651, rpn_distillation_loss: 0.4684, roi_distillation_loss: 0.0362, loss_track: 0.3080, loss_track_aux: 0.1020, loss: 0.9146, grad_norm: 8.8417
+2026-10-31 18:22:15,096 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=180 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:26:58,417 - mmtrack - INFO - Epoch [3][60/68]	lr: 3.916e-04, eta: 0:38:56, time: 17.752, data_time: 0.114, memory: 22651, rpn_distillation_loss: 0.4689, roi_distillation_loss: 0.0312, loss_track: 0.3172, loss_track_aux: 0.0987, loss: 0.9161, grad_norm: 26.3443
+2026-10-31 18:28:06,793 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=200 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:29:15,125 - mmtrack - INFO - Saving checkpoint at 3 epochs
+2026-10-31 18:34:07,681 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=220 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:35:19,948 - mmtrack - INFO - Epoch [4][20/68]	lr: 4.476e-04, eta: 0:30:35, time: 18.144, data_time: 0.421, memory: 22651, rpn_distillation_loss: 1.3425, roi_distillation_loss: 0.0365, loss_track: 0.2934, loss_track_aux: 0.0961, loss: 1.7685, grad_norm: 99.2663
+2026-10-31 18:40:02,203 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=240 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:41:12,506 - mmtrack - INFO - Epoch [4][40/68]	lr: 4.875e-04, eta: 0:25:32, time: 17.628, data_time: 0.114, memory: 22651, rpn_distillation_loss: 0.9516, roi_distillation_loss: 0.0349, loss_track: 0.3107, loss_track_aux: 0.1000, loss: 1.3972, grad_norm: 62.5878
+2026-10-31 18:45:47,920 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=260 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:46:56,344 - mmtrack - INFO - Epoch [4][60/68]	lr: 5.275e-04, eta: 0:20:20, time: 17.192, data_time: 0.112, memory: 22651, rpn_distillation_loss: 0.4973, roi_distillation_loss: 0.0354, loss_track: 0.3117, loss_track_aux: 0.0998, loss: 0.9441, grad_norm: 22.9243
+2026-10-31 18:49:11,959 - mmtrack - INFO - Saving checkpoint at 4 epochs
+2026-10-31 18:51:38,377 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=280 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 18:55:08,729 - mmtrack - INFO - Epoch [5][20/68]	lr: 5.834e-04, eta: 0:12:35, time: 17.745, data_time: 0.431, memory: 22651, rpn_distillation_loss: 0.3890, roi_distillation_loss: 0.0280, loss_track: 0.2678, loss_track_aux: 0.0920, loss: 0.7768, grad_norm: 17.4149
+2026-10-31 18:57:27,469 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=300 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 19:00:58,652 - mmtrack - INFO - Epoch [5][40/68]	lr: 6.234e-04, eta: 0:07:23, time: 17.496, data_time: 0.133, memory: 22651, rpn_distillation_loss: 0.5305, roi_distillation_loss: 0.0289, loss_track: 0.2918, loss_track_aux: 0.1018, loss: 0.9530, grad_norm: 38.6993
+2026-10-31 19:03:20,395 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=320 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 19:06:51,324 - mmtrack - INFO - Epoch [5][60/68]	lr: 6.633e-04, eta: 0:02:07, time: 17.634, data_time: 0.114, memory: 22651, rpn_distillation_loss: 1.2317, roi_distillation_loss: 0.0310, loss_track: 0.2557, loss_track_aux: 0.0899, loss: 1.6083, grad_norm: 79.3073
+2026-10-31 19:09:13,431 - mmtrack - INFO - [NOICS_AUDIT] stage=1 iteration=340 bank_none=True history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 19:09:13,431 - mmtrack - INFO - Saving checkpoint at 5 epochs
+2026-10-31 19:09:16,360 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain overcast: prototypes={1: 100} mean_norm=1.0000
+2026-10-31 19:09:19,002 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage rainy, history_domains=['overcast']
+2026-10-31 19:09:20,443 - mmtrack - INFO - FORMAL STAGE 2 domain=rainy source_once=True samples=3142 resume_epoch=0
+2026-10-31 19:09:20,443 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-31 19:09:20,594 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage02_after_rainy
+2026-10-31 19:09:20,595 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 19:09:20,595 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 19:09:20,595 - mmtrack - INFO - Checkpoints will be saved to /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage02_after_rainy by HardDiskBackend.
+2026-10-31 19:09:46,047 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=1 bank_none=True history_domains=['overcast'] APR_loss=0.00283088 APR_active=1
+2026-10-31 19:10:03,422 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=2 bank_none=True history_domains=['overcast'] APR_loss=0.00257360 APR_active=2
+2026-10-31 19:10:20,755 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=3 bank_none=True history_domains=['overcast'] APR_loss=0.00246182 APR_active=3
+2026-10-31 19:12:20,836 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=rainy history_domains=['overcast'] prototypes_per_domain_class={'overcast': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=100 mean_topk_sim=0.4638 loss=0.5362 weighted_loss=0.0027 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 19:15:11,162 - mmtrack - INFO - Epoch [1][20/50]	lr: 3.996e-05, eta: 1:07:11, time: 17.528, data_time: 0.459, memory: 22651, rpn_distillation_loss: 0.6137, roi_distillation_loss: 0.0317, loss_track: 0.2729, loss_track_aux: 0.0922, loss_roi_proto: 0.0027, loss: 1.0131, grad_norm: 32.6276
+2026-10-31 19:15:11,163 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=20 bank_none=True history_domains=['overcast'] APR_loss=0.00300679 APR_active=20
+2026-10-31 19:21:14,429 - mmtrack - INFO - Epoch [1][40/50]	lr: 7.992e-05, eta: 1:02:27, time: 18.163, data_time: 0.123, memory: 22651, rpn_distillation_loss: 0.4421, roi_distillation_loss: 0.0309, loss_track: 0.3209, loss_track_aux: 0.0979, loss_roi_proto: 0.0027, loss: 0.8944, grad_norm: 15.9227
+2026-10-31 19:21:14,431 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=40 bank_none=True history_domains=['overcast'] APR_loss=0.00251662 APR_active=40
+2026-10-31 19:24:22,094 - mmtrack - INFO - Saving checkpoint at 1 epochs
+2026-10-31 19:27:33,423 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=rainy history_domains=['overcast'] prototypes_per_domain_class={'overcast': {1: 100}} current_candidates={1: 1000} selected_rois=61 prototypes=100 mean_topk_sim=0.3938 loss=0.6062 weighted_loss=0.0030 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=61 gate_total_rois=61 gate_ratio=1.0
+2026-10-31 19:27:34,612 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=60 bank_none=True history_domains=['overcast'] APR_loss=0.00303121 APR_active=60
+2026-10-31 19:30:38,176 - mmtrack - INFO - Epoch [2][20/50]	lr: 1.399e-04, eta: 0:46:37, time: 18.712, data_time: 0.422, memory: 22651, rpn_distillation_loss: 0.3641, roi_distillation_loss: 0.0288, loss_track: 0.2751, loss_track_aux: 0.0935, loss_roi_proto: 0.0027, loss: 0.7642, grad_norm: 7.7309
+2026-10-31 19:33:46,168 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=80 bank_none=True history_domains=['overcast'] APR_loss=0.00293400 APR_active=80
+2026-10-31 19:36:39,719 - mmtrack - INFO - Epoch [2][40/50]	lr: 1.798e-04, eta: 0:42:57, time: 18.077, data_time: 0.126, memory: 22651, rpn_distillation_loss: 0.3052, roi_distillation_loss: 0.0245, loss_track: 0.2825, loss_track_aux: 0.0938, loss_roi_proto: 0.0027, loss: 0.7085, grad_norm: 5.7242
+2026-10-31 19:39:32,224 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=100 bank_none=True history_domains=['overcast'] APR_loss=0.00286995 APR_active=100
+2026-10-31 19:39:32,224 - mmtrack - INFO - Saving checkpoint at 2 epochs
+2026-10-31 19:42:34,664 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=rainy history_domains=['overcast'] prototypes_per_domain_class={'overcast': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=100 mean_topk_sim=0.4818 loss=0.5182 weighted_loss=0.0026 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 19:45:30,688 - mmtrack - INFO - Epoch [3][20/50]	lr: 2.398e-04, eta: 0:32:36, time: 17.833, data_time: 0.437, memory: 22651, rpn_distillation_loss: 0.2890, roi_distillation_loss: 0.0225, loss_track: 0.2828, loss_track_aux: 0.0943, loss_roi_proto: 0.0027, loss: 0.6913, grad_norm: 5.6422
+2026-10-31 19:45:30,689 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=120 bank_none=True history_domains=['overcast'] APR_loss=0.00253654 APR_active=120
+2026-10-31 19:51:22,036 - mmtrack - INFO - Epoch [3][40/50]	lr: 2.797e-04, eta: 0:28:15, time: 17.567, data_time: 0.131, memory: 22651, rpn_distillation_loss: 0.3070, roi_distillation_loss: 0.0260, loss_track: 0.2164, loss_track_aux: 0.0846, loss_roi_proto: 0.0027, loss: 0.6368, grad_norm: 5.1721
+2026-10-31 19:51:22,037 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=140 bank_none=True history_domains=['overcast'] APR_loss=0.00248721 APR_active=140
+2026-10-31 19:54:14,313 - mmtrack - INFO - Saving checkpoint at 3 epochs
+2026-10-31 19:57:16,891 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=rainy history_domains=['overcast'] prototypes_per_domain_class={'overcast': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=100 mean_topk_sim=0.4707 loss=0.5293 weighted_loss=0.0026 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 19:57:18,109 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=160 bank_none=True history_domains=['overcast'] APR_loss=0.00264672 APR_active=160
+2026-10-31 20:00:13,815 - mmtrack - INFO - Epoch [4][20/50]	lr: 3.397e-04, eta: 0:19:43, time: 17.882, data_time: 0.438, memory: 22651, rpn_distillation_loss: 0.2848, roi_distillation_loss: 0.0241, loss_track: 0.2176, loss_track_aux: 0.0848, loss_roi_proto: 0.0028, loss: 0.6141, grad_norm: 5.5739
+2026-10-31 20:03:06,755 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=180 bank_none=True history_domains=['overcast'] APR_loss=0.00296293 APR_active=180
+2026-10-31 20:05:58,777 - mmtrack - INFO - Epoch [4][40/50]	lr: 3.796e-04, eta: 0:15:03, time: 17.248, data_time: 0.139, memory: 22651, rpn_distillation_loss: 0.2674, roi_distillation_loss: 0.0230, loss_track: 0.2420, loss_track_aux: 0.0908, loss_roi_proto: 0.0027, loss: 0.6260, grad_norm: 5.3839
+2026-10-31 20:08:51,966 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=200 bank_none=True history_domains=['overcast'] APR_loss=0.00265147 APR_active=200
+2026-10-31 20:08:51,982 - mmtrack - INFO - Saving checkpoint at 4 epochs
+2026-10-31 20:11:54,079 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=rainy history_domains=['overcast'] prototypes_per_domain_class={'overcast': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=100 mean_topk_sim=0.4514 loss=0.5486 weighted_loss=0.0027 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 20:14:49,857 - mmtrack - INFO - Epoch [5][20/50]	lr: 4.396e-04, eta: 0:07:18, time: 17.805, data_time: 0.430, memory: 22651, rpn_distillation_loss: 0.2650, roi_distillation_loss: 0.0220, loss_track: 0.2426, loss_track_aux: 0.0860, loss_roi_proto: 0.0028, loss: 0.6184, grad_norm: 5.1675
+2026-10-31 20:14:49,858 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=220 bank_none=True history_domains=['overcast'] APR_loss=0.00269535 APR_active=220
+2026-10-31 20:20:34,121 - mmtrack - INFO - Epoch [5][40/50]	lr: 4.795e-04, eta: 0:02:28, time: 17.213, data_time: 0.124, memory: 22651, rpn_distillation_loss: 0.2664, roi_distillation_loss: 0.0229, loss_track: 0.2278, loss_track_aux: 0.0846, loss_roi_proto: 0.0028, loss: 0.6044, grad_norm: 4.9963
+2026-10-31 20:20:34,122 - mmtrack - INFO - [NOICS_AUDIT] stage=2 iteration=240 bank_none=True history_domains=['overcast'] APR_loss=0.00313036 APR_active=240
+2026-10-31 20:23:29,145 - mmtrack - INFO - Saving checkpoint at 5 epochs
+2026-10-31 20:23:32,213 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain rainy: prototypes={1: 100} mean_norm=1.0000
+2026-10-31 20:23:34,660 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage dawn_dusk, history_domains=['overcast', 'rainy']
+2026-10-31 20:23:36,348 - mmtrack - INFO - FORMAL STAGE 3 domain=dawn_dusk source_once=True samples=6254 resume_epoch=0
+2026-10-31 20:23:36,348 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-31 20:23:36,389 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage03_after_dawn_dusk
+2026-10-31 20:23:36,390 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 20:23:36,390 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 20:23:36,390 - mmtrack - INFO - Checkpoints will be saved to /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage03_after_dawn_dusk by HardDiskBackend.
+2026-10-31 20:24:02,569 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=1 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00248401 APR_active=1
+2026-10-31 20:24:21,064 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=2 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00282050 APR_active=2
+2026-10-31 20:24:38,876 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=3 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00229352 APR_active=3
+2026-10-31 20:26:42,913 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.5097 loss=0.4903 weighted_loss=0.0025 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 20:29:35,775 - mmtrack - INFO - Epoch [1][20/98]	lr: 3.996e-05, eta: 2:20:45, time: 17.969, data_time: 0.523, memory: 22651, rpn_distillation_loss: 0.3467, roi_distillation_loss: 0.0343, loss_track: 0.3797, loss_track_aux: 0.1074, loss_roi_proto: 0.0026, loss: 0.8707, grad_norm: 6.8077
+2026-10-31 20:29:35,777 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=20 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00278629 APR_active=20
+2026-10-31 20:35:33,717 - mmtrack - INFO - Epoch [1][40/98]	lr: 7.992e-05, eta: 2:14:29, time: 17.897, data_time: 0.120, memory: 22651, rpn_distillation_loss: 0.3295, roi_distillation_loss: 0.0332, loss_track: 0.3947, loss_track_aux: 0.1109, loss_roi_proto: 0.0027, loss: 0.8710, grad_norm: 5.5665
+2026-10-31 20:35:33,719 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=40 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00248295 APR_active=40
+2026-10-31 20:41:43,861 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.5316 loss=0.4684 weighted_loss=0.0023 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 20:41:45,202 - mmtrack - INFO - Epoch [1][60/98]	lr: 1.199e-04, eta: 2:10:03, time: 18.574, data_time: 0.120, memory: 22651, rpn_distillation_loss: 0.3540, roi_distillation_loss: 0.0347, loss_track: 0.3592, loss_track_aux: 0.1112, loss_roi_proto: 0.0026, loss: 0.8617, grad_norm: 6.1819
+2026-10-31 20:41:45,204 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=60 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00234197 APR_active=60
+2026-10-31 20:47:51,955 - mmtrack - INFO - Epoch [1][80/98]	lr: 1.598e-04, eta: 2:04:19, time: 18.338, data_time: 0.125, memory: 22651, rpn_distillation_loss: 0.3325, roi_distillation_loss: 0.0345, loss_track: 0.3424, loss_track_aux: 0.1091, loss_roi_proto: 0.0026, loss: 0.8211, grad_norm: 5.0994
+2026-10-31 20:47:51,956 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=80 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00281655 APR_active=80
+2026-10-31 20:53:06,977 - mmtrack - INFO - Saving checkpoint at 1 epochs
+2026-10-31 20:53:50,543 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=100 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00257074 APR_active=100
+2026-10-31 20:56:44,604 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.4859 loss=0.5141 weighted_loss=0.0026 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 20:59:06,583 - mmtrack - INFO - Epoch [2][20/98]	lr: 2.358e-04, eta: 1:35:15, time: 17.877, data_time: 0.438, memory: 22651, rpn_distillation_loss: 0.3094, roi_distillation_loss: 0.0314, loss_track: 0.3307, loss_track_aux: 0.1040, loss_roi_proto: 0.0026, loss: 0.7782, grad_norm: 5.5107
+2026-10-31 20:59:42,074 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=120 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00236437 APR_active=120
+2026-10-31 21:04:59,038 - mmtrack - INFO - Epoch [2][40/98]	lr: 2.757e-04, eta: 1:32:03, time: 17.623, data_time: 0.127, memory: 22651, rpn_distillation_loss: 0.3182, roi_distillation_loss: 0.0333, loss_track: 0.3512, loss_track_aux: 0.1091, loss_roi_proto: 0.0026, loss: 0.8144, grad_norm: 5.3301
+2026-10-31 21:05:35,558 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=140 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00251039 APR_active=140
+2026-10-31 21:10:58,090 - mmtrack - INFO - Epoch [2][60/98]	lr: 3.157e-04, eta: 1:28:24, time: 17.952, data_time: 0.128, memory: 22651, rpn_distillation_loss: 0.3038, roi_distillation_loss: 0.0312, loss_track: 0.3166, loss_track_aux: 0.1055, loss_roi_proto: 0.0026, loss: 0.7597, grad_norm: 5.6815
+2026-10-31 21:11:31,068 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=49 prototypes=200 mean_topk_sim=0.4902 loss=0.5098 weighted_loss=0.0025 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=49 gate_total_rois=49 gate_ratio=1.0
+2026-10-31 21:11:32,300 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=160 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00254891 APR_active=160
+2026-10-31 21:16:48,465 - mmtrack - INFO - Epoch [2][80/98]	lr: 3.556e-04, eta: 1:23:59, time: 17.519, data_time: 0.125, memory: 22651, rpn_distillation_loss: 0.2942, roi_distillation_loss: 0.0304, loss_track: 0.3437, loss_track_aux: 0.1079, loss_roi_proto: 0.0026, loss: 0.7789, grad_norm: 5.6221
+2026-10-31 21:17:24,083 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=180 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00221212 APR_active=180
+2026-10-31 21:22:07,383 - mmtrack - INFO - Saving checkpoint at 2 epochs
+2026-10-31 21:23:26,057 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=200 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00280695 APR_active=200
+2026-10-31 21:26:19,951 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.4044 loss=0.5956 weighted_loss=0.0030 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 21:28:07,047 - mmtrack - INFO - Epoch [3][20/98]	lr: 4.316e-04, eta: 1:08:20, time: 17.888, data_time: 0.436, memory: 22653, rpn_distillation_loss: 0.2676, roi_distillation_loss: 0.0281, loss_track: 0.3350, loss_track_aux: 0.1066, loss_roi_proto: 0.0026, loss: 0.7398, grad_norm: 6.6794
+2026-10-31 21:29:18,655 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=220 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00254634 APR_active=220
+2026-10-31 21:34:03,047 - mmtrack - INFO - Epoch [3][40/98]	lr: 4.715e-04, eta: 1:04:22, time: 17.800, data_time: 0.130, memory: 22653, rpn_distillation_loss: 0.2662, roi_distillation_loss: 0.0278, loss_track: 0.3250, loss_track_aux: 0.1044, loss_roi_proto: 0.0026, loss: 0.7260, grad_norm: 7.6695
+2026-10-31 21:35:12,616 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=240 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00242556 APR_active=240
+2026-10-31 21:39:53,869 - mmtrack - INFO - Epoch [3][60/98]	lr: 5.115e-04, eta: 1:00:01, time: 17.541, data_time: 0.125, memory: 22653, rpn_distillation_loss: 0.2620, roi_distillation_loss: 0.0282, loss_track: 0.3342, loss_track_aux: 0.1047, loss_roi_proto: 0.0026, loss: 0.7317, grad_norm: 6.1349
+2026-10-31 21:41:04,120 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=29 prototypes=200 mean_topk_sim=0.4480 loss=0.5520 weighted_loss=0.0028 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=29 gate_total_rois=29 gate_ratio=1.0
+2026-10-31 21:41:05,318 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=260 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00275990 APR_active=260
+2026-10-31 21:45:47,664 - mmtrack - INFO - Epoch [3][80/98]	lr: 5.514e-04, eta: 0:55:28, time: 17.689, data_time: 0.129, memory: 22653, rpn_distillation_loss: 0.2513, roi_distillation_loss: 0.0262, loss_track: 0.3160, loss_track_aux: 0.1033, loss_roi_proto: 0.0027, loss: 0.6995, grad_norm: 7.1502
+2026-10-31 21:46:56,556 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=280 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00263246 APR_active=280
+2026-10-31 21:51:06,810 - mmtrack - INFO - Saving checkpoint at 3 epochs
+2026-10-31 21:53:02,392 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=300 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00281964 APR_active=300
+2026-10-31 21:55:59,036 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.5094 loss=0.4906 weighted_loss=0.0025 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 21:57:11,699 - mmtrack - INFO - Epoch [4][20/98]	lr: 6.274e-04, eta: 0:43:29, time: 18.143, data_time: 0.438, memory: 22653, rpn_distillation_loss: 0.2667, roi_distillation_loss: 0.0268, loss_track: 0.2936, loss_track_aux: 0.1007, loss_roi_proto: 0.0026, loss: 0.6905, grad_norm: 9.1843
+2026-10-31 21:58:56,466 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=320 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00293650 APR_active=320
+2026-10-31 22:03:05,584 - mmtrack - INFO - Epoch [4][40/98]	lr: 6.673e-04, eta: 0:39:00, time: 17.694, data_time: 0.126, memory: 22653, rpn_distillation_loss: 0.2535, roi_distillation_loss: 0.0262, loss_track: 0.3287, loss_track_aux: 0.1049, loss_roi_proto: 0.0027, loss: 0.7161, grad_norm: 9.3309
+2026-10-31 22:04:52,594 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=340 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00307039 APR_active=340
+2026-10-31 22:09:00,059 - mmtrack - INFO - Epoch [4][60/98]	lr: 7.073e-04, eta: 0:34:20, time: 17.724, data_time: 0.128, memory: 22653, rpn_distillation_loss: 0.2490, roi_distillation_loss: 0.0268, loss_track: 0.3406, loss_track_aux: 0.1064, loss_roi_proto: 0.0028, loss: 0.7256, grad_norm: 7.9856
+2026-10-31 22:10:46,187 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.4997 loss=0.5003 weighted_loss=0.0025 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 22:10:47,396 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=360 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00250133 APR_active=360
+2026-10-31 22:14:52,362 - mmtrack - INFO - Epoch [4][80/98]	lr: 7.473e-04, eta: 0:29:33, time: 17.615, data_time: 0.125, memory: 22653, rpn_distillation_loss: 0.2306, roi_distillation_loss: 0.0242, loss_track: 0.2991, loss_track_aux: 0.1005, loss_roi_proto: 0.0027, loss: 0.6571, grad_norm: 7.3315
+2026-10-31 22:16:38,035 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=380 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00259045 APR_active=380
+2026-10-31 22:20:09,673 - mmtrack - INFO - Saving checkpoint at 4 epochs
+2026-10-31 22:22:39,996 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=400 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00252653 APR_active=400
+2026-10-31 22:25:34,761 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=200 mean_topk_sim=0.5398 loss=0.4602 weighted_loss=0.0023 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 22:26:12,224 - mmtrack - INFO - Epoch [5][20/98]	lr: 8.232e-04, eta: 0:19:10, time: 18.032, data_time: 0.449, memory: 22653, rpn_distillation_loss: 0.2335, roi_distillation_loss: 0.0222, loss_track: 0.3077, loss_track_aux: 0.1038, loss_roi_proto: 0.0027, loss: 0.6699, grad_norm: 14.6499
+2026-10-31 22:28:32,920 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=420 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00287860 APR_active=420
+2026-10-31 22:32:04,784 - mmtrack - INFO - Epoch [5][40/98]	lr: 8.631e-04, eta: 0:14:23, time: 17.628, data_time: 0.132, memory: 22653, rpn_distillation_loss: 0.2744, roi_distillation_loss: 0.0247, loss_track: 0.3262, loss_track_aux: 0.1008, loss_roi_proto: 0.0028, loss: 0.7289, grad_norm: 19.0769
+2026-10-31 22:34:24,782 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=440 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00254457 APR_active=440
+2026-10-31 22:37:57,305 - mmtrack - INFO - Epoch [5][60/98]	lr: 9.031e-04, eta: 0:09:30, time: 17.626, data_time: 0.131, memory: 22653, rpn_distillation_loss: 0.2510, roi_distillation_loss: 0.0218, loss_track: 0.2791, loss_track_aux: 0.0982, loss_roi_proto: 0.0027, loss: 0.6528, grad_norm: 16.4691
+2026-10-31 22:40:15,787 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=dawn_dusk history_domains=['overcast', 'rainy'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}} current_candidates={1: 1000} selected_rois=36 prototypes=200 mean_topk_sim=0.4574 loss=0.5426 weighted_loss=0.0027 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=36 gate_total_rois=36 gate_ratio=1.0
+2026-10-31 22:40:16,971 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=460 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00271308 APR_active=460
+2026-10-31 22:43:44,807 - mmtrack - INFO - Epoch [5][80/98]	lr: 9.431e-04, eta: 0:04:31, time: 17.375, data_time: 0.132, memory: 22653, rpn_distillation_loss: 1.9269, roi_distillation_loss: 0.0262, loss_track: 0.2678, loss_track_aux: 0.0961, loss_roi_proto: 0.0029, loss: 2.3198, grad_norm: 98.4822
+2026-10-31 22:46:07,196 - mmtrack - INFO - [NOICS_AUDIT] stage=3 iteration=480 bank_none=True history_domains=['overcast', 'rainy'] APR_loss=0.00312996 APR_active=480
+2026-10-31 22:49:01,635 - mmtrack - INFO - Saving checkpoint at 5 epochs
+2026-10-31 22:49:04,846 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain dawn_dusk: prototypes={1: 100} mean_norm=1.0000
+2026-10-31 22:49:07,525 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage night, history_domains=['overcast', 'rainy', 'dawn_dusk']
+2026-10-31 22:49:09,474 - mmtrack - INFO - FORMAL STAGE 4 domain=night source_once=True samples=7274 resume_epoch=0
+2026-10-31 22:49:09,475 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-31 22:49:09,542 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage04_after_night
+2026-10-31 22:49:09,542 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(LOW         ) APRExperimentStateHook             
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 22:49:09,542 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 22:49:09,542 - mmtrack - INFO - Checkpoints will be saved to /data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/adapt/stage04_after_night by HardDiskBackend.
+2026-10-31 22:49:31,254 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=1 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00215970 APR_active=1
+2026-10-31 22:49:48,841 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=2 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00212660 APR_active=2
+2026-10-31 22:50:06,030 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=3 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00248281 APR_active=3
+2026-10-31 22:55:04,836 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=300 mean_topk_sim=0.5811 loss=0.4189 weighted_loss=0.0021 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 22:55:06,126 - mmtrack - INFO - Epoch [1][20/114]	lr: 3.996e-05, eta: 2:43:25, time: 17.829, data_time: 0.321, memory: 22653, rpn_distillation_loss: 0.3413, roi_distillation_loss: 0.0274, loss_track: 0.2536, loss_track_aux: 0.0927, loss_roi_proto: 0.0022, loss: 0.7171, grad_norm: 15.6775
+2026-10-31 22:55:06,127 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=20 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00209462 APR_active=20
+2026-10-31 23:00:42,394 - mmtrack - INFO - Epoch [1][40/114]	lr: 7.992e-05, eta: 2:33:00, time: 16.813, data_time: 0.120, memory: 22653, rpn_distillation_loss: 0.2893, roi_distillation_loss: 0.0266, loss_track: 0.2573, loss_track_aux: 0.0942, loss_roi_proto: 0.0021, loss: 0.6694, grad_norm: 8.2273
+2026-10-31 23:00:42,395 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=40 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00198098 APR_active=40
+2026-10-31 23:06:33,014 - mmtrack - INFO - Epoch [1][60/114]	lr: 1.199e-04, eta: 2:27:49, time: 17.531, data_time: 0.124, memory: 22653, rpn_distillation_loss: 0.2600, roi_distillation_loss: 0.0258, loss_track: 0.2409, loss_track_aux: 0.0935, loss_roi_proto: 0.0021, loss: 0.6222, grad_norm: 6.1439
+2026-10-31 23:06:33,015 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=60 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00210460 APR_active=60
+2026-10-31 23:09:37,951 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=53 prototypes=300 mean_topk_sim=0.6014 loss=0.3986 weighted_loss=0.0020 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=53 gate_total_rois=53 gate_ratio=1.0
+2026-10-31 23:12:44,015 - mmtrack - INFO - Epoch [1][80/114]	lr: 1.598e-04, eta: 2:24:23, time: 18.550, data_time: 0.134, memory: 22653, rpn_distillation_loss: 0.2449, roi_distillation_loss: 0.0239, loss_track: 0.2272, loss_track_aux: 0.0914, loss_roi_proto: 0.0021, loss: 0.5895, grad_norm: 5.5439
+2026-10-31 23:12:44,016 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=80 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00204924 APR_active=80
+2026-10-31 23:18:52,031 - mmtrack - INFO - Epoch [1][100/114]	lr: 1.998e-04, eta: 2:19:37, time: 18.401, data_time: 0.131, memory: 22653, rpn_distillation_loss: 0.2359, roi_distillation_loss: 0.0234, loss_track: 0.2212, loss_track_aux: 0.0901, loss_roi_proto: 0.0020, loss: 0.5726, grad_norm: 5.3711
+2026-10-31 23:18:52,033 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=100 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00242184 APR_active=100
+2026-10-31 23:23:02,566 - mmtrack - INFO - Saving checkpoint at 1 epochs
+2026-10-31 23:24:50,481 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=29 prototypes=300 mean_topk_sim=0.5738 loss=0.4262 weighted_loss=0.0021 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=29 gate_total_rois=29 gate_ratio=1.0
+2026-10-31 23:24:53,456 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=120 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00213108 APR_active=120
+2026-10-31 23:28:58,682 - mmtrack - INFO - Epoch [2][20/114]	lr: 2.677e-04, eta: 1:55:52, time: 17.718, data_time: 0.282, memory: 22653, rpn_distillation_loss: 0.2174, roi_distillation_loss: 0.0214, loss_track: 0.2256, loss_track_aux: 0.0907, loss_roi_proto: 0.0020, loss: 0.5572, grad_norm: 5.4937
+2026-10-31 23:30:43,290 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=140 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00220448 APR_active=140
+2026-10-31 23:34:41,548 - mmtrack - INFO - Epoch [2][40/114]	lr: 3.077e-04, eta: 1:51:38, time: 17.143, data_time: 0.121, memory: 22653, rpn_distillation_loss: 0.2193, roi_distillation_loss: 0.0215, loss_track: 0.2479, loss_track_aux: 0.0917, loss_roi_proto: 0.0020, loss: 0.5823, grad_norm: 5.7782
+2026-10-31 23:36:24,588 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=160 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00207742 APR_active=160
+2026-10-31 23:39:12,680 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=45 prototypes=300 mean_topk_sim=0.5944 loss=0.4056 weighted_loss=0.0020 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=45 gate_total_rois=45 gate_ratio=1.0
+2026-10-31 23:40:24,633 - mmtrack - INFO - Epoch [2][60/114]	lr: 3.477e-04, eta: 1:47:04, time: 17.154, data_time: 0.119, memory: 22653, rpn_distillation_loss: 0.2102, roi_distillation_loss: 0.0212, loss_track: 0.2252, loss_track_aux: 0.0889, loss_roi_proto: 0.0021, loss: 0.5475, grad_norm: 5.4663
+2026-10-31 23:42:06,260 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=180 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00190387 APR_active=180
+2026-10-31 23:46:05,689 - mmtrack - INFO - Epoch [2][80/114]	lr: 3.876e-04, eta: 1:42:11, time: 17.053, data_time: 0.118, memory: 22653, rpn_distillation_loss: 0.2126, roi_distillation_loss: 0.0219, loss_track: 0.2182, loss_track_aux: 0.0866, loss_roi_proto: 0.0021, loss: 0.5413, grad_norm: 5.1978
+2026-10-31 23:47:48,171 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=200 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00257131 APR_active=200
+2026-10-31 23:51:47,291 - mmtrack - INFO - Epoch [2][100/114]	lr: 4.276e-04, eta: 1:37:11, time: 17.080, data_time: 0.112, memory: 22653, rpn_distillation_loss: 0.2023, roi_distillation_loss: 0.0211, loss_track: 0.2386, loss_track_aux: 0.0928, loss_roi_proto: 0.0020, loss: 0.5569, grad_norm: 5.9359
+2026-10-31 23:53:27,787 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=300 mean_topk_sim=0.5363 loss=0.4637 weighted_loss=0.0023 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-10-31 23:53:29,807 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=220 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00231864 APR_active=220
+2026-10-31 23:55:47,656 - mmtrack - INFO - Saving checkpoint at 2 epochs
+2026-10-31 23:59:14,983 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=240 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00201193 APR_active=240
+2026-11-01 00:01:32,665 - mmtrack - INFO - Epoch [3][20/114]	lr: 4.955e-04, eta: 1:23:17, time: 17.160, data_time: 0.280, memory: 22653, rpn_distillation_loss: 0.1882, roi_distillation_loss: 0.0194, loss_track: 0.2328, loss_track_aux: 0.0911, loss_roi_proto: 0.0020, loss: 0.5335, grad_norm: 5.3348
+2026-11-01 00:04:57,035 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=260 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00212229 APR_active=260
+2026-11-01 00:07:15,471 - mmtrack - INFO - Epoch [3][40/114]	lr: 5.355e-04, eta: 1:18:43, time: 17.140, data_time: 0.117, memory: 22653, rpn_distillation_loss: 0.1958, roi_distillation_loss: 0.0201, loss_track: 0.1962, loss_track_aux: 0.0822, loss_roi_proto: 0.0021, loss: 0.4965, grad_norm: 5.5723
+2026-11-01 00:07:47,984 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=300 mean_topk_sim=0.6405 loss=0.3595 weighted_loss=0.0018 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-11-01 00:10:38,998 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=280 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00237203 APR_active=280
+2026-11-01 00:12:56,557 - mmtrack - INFO - Epoch [3][60/114]	lr: 5.754e-04, eta: 1:13:58, time: 17.054, data_time: 0.117, memory: 22653, rpn_distillation_loss: 0.2030, roi_distillation_loss: 0.0208, loss_track: 0.2269, loss_track_aux: 0.0876, loss_roi_proto: 0.0021, loss: 0.5403, grad_norm: 7.7812
+2026-11-01 00:16:22,656 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=300 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00211604 APR_active=300
+2026-11-01 00:18:40,279 - mmtrack - INFO - Epoch [3][80/114]	lr: 6.154e-04, eta: 1:09:07, time: 17.186, data_time: 0.118, memory: 22653, rpn_distillation_loss: 0.1831, roi_distillation_loss: 0.0185, loss_track: 0.2070, loss_track_aux: 0.0858, loss_roi_proto: 0.0020, loss: 0.4965, grad_norm: 5.9249
+2026-11-01 00:22:03,117 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=60 prototypes=300 mean_topk_sim=0.5515 loss=0.4485 weighted_loss=0.0022 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=60 gate_total_rois=60 gate_ratio=1.0
+2026-11-01 00:22:05,260 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=320 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00224226 APR_active=320
+2026-11-01 00:24:23,682 - mmtrack - INFO - Epoch [3][100/114]	lr: 6.553e-04, eta: 1:04:11, time: 17.170, data_time: 0.116, memory: 22653, rpn_distillation_loss: 0.1857, roi_distillation_loss: 0.0188, loss_track: 0.1981, loss_track_aux: 0.0833, loss_roi_proto: 0.0021, loss: 0.4880, grad_norm: 6.9349
+2026-11-01 00:27:48,545 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=340 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00205042 APR_active=340
+2026-11-01 00:28:22,538 - mmtrack - INFO - Saving checkpoint at 3 epochs
+2026-11-01 00:33:35,668 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=360 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00197798 APR_active=360
+2026-11-01 00:34:08,102 - mmtrack - INFO - Epoch [4][20/114]	lr: 7.233e-04, eta: 0:53:16, time: 17.188, data_time: 0.282, memory: 22653, rpn_distillation_loss: 0.1749, roi_distillation_loss: 0.0187, loss_track: 0.2112, loss_track_aux: 0.0862, loss_roi_proto: 0.0021, loss: 0.4930, grad_norm: 5.6007
+2026-11-01 00:36:24,749 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=300 mean_topk_sim=0.5794 loss=0.4206 weighted_loss=0.0021 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-11-01 00:39:18,265 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=380 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00176516 APR_active=380
+2026-11-01 00:39:52,459 - mmtrack - INFO - Epoch [4][40/114]	lr: 7.632e-04, eta: 0:48:27, time: 17.218, data_time: 0.125, memory: 22653, rpn_distillation_loss: 0.1771, roi_distillation_loss: 0.0184, loss_track: 0.1913, loss_track_aux: 0.0820, loss_roi_proto: 0.0021, loss: 0.4709, grad_norm: 6.7778
+2026-11-01 00:44:59,152 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=400 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00242607 APR_active=400
+2026-11-01 00:45:33,131 - mmtrack - INFO - Epoch [4][60/114]	lr: 8.032e-04, eta: 0:43:31, time: 17.034, data_time: 0.121, memory: 22653, rpn_distillation_loss: 0.1726, roi_distillation_loss: 0.0185, loss_track: 0.1974, loss_track_aux: 0.0835, loss_roi_proto: 0.0021, loss: 0.4741, grad_norm: 5.6901
+2026-11-01 00:50:39,751 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=50 prototypes=300 mean_topk_sim=0.5681 loss=0.4319 weighted_loss=0.0022 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=50 gate_total_rois=50 gate_ratio=1.0
+2026-11-01 00:50:41,986 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=420 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00215968 APR_active=420
+2026-11-01 00:51:16,412 - mmtrack - INFO - Epoch [4][80/114]	lr: 8.432e-04, eta: 0:38:31, time: 17.164, data_time: 0.134, memory: 22653, rpn_distillation_loss: 0.1691, roi_distillation_loss: 0.0178, loss_track: 0.2007, loss_track_aux: 0.0825, loss_roi_proto: 0.0021, loss: 0.4721, grad_norm: 6.3159
+2026-11-01 00:56:20,567 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=440 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00211065 APR_active=440
+2026-11-01 00:56:54,052 - mmtrack - INFO - Epoch [4][100/114]	lr: 8.831e-04, eta: 0:33:26, time: 16.882, data_time: 0.117, memory: 22653, rpn_distillation_loss: 0.1707, roi_distillation_loss: 0.0177, loss_track: 0.2303, loss_track_aux: 0.0874, loss_roi_proto: 0.0021, loss: 0.5082, grad_norm: 7.5368
+2026-11-01 01:00:56,169 - mmtrack - INFO - Saving checkpoint at 4 epochs
+2026-11-01 01:02:11,719 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=460 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00212666 APR_active=460
+2026-11-01 01:05:00,198 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=64 prototypes=300 mean_topk_sim=0.5493 loss=0.4507 weighted_loss=0.0023 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=64 gate_total_rois=64 gate_ratio=1.0
+2026-11-01 01:06:43,579 - mmtrack - INFO - Epoch [5][20/114]	lr: 9.510e-04, eta: 0:23:56, time: 17.284, data_time: 0.282, memory: 22653, rpn_distillation_loss: 0.1711, roi_distillation_loss: 0.0175, loss_track: 0.1972, loss_track_aux: 0.0828, loss_roi_proto: 0.0021, loss: 0.4708, grad_norm: 8.8757
+2026-11-01 01:07:52,034 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=480 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00224421 APR_active=480
+2026-11-01 01:12:25,212 - mmtrack - INFO - Epoch [5][40/114]	lr: 9.910e-04, eta: 0:18:56, time: 17.082, data_time: 0.115, memory: 22653, rpn_distillation_loss: 0.1733, roi_distillation_loss: 0.0178, loss_track: 0.1995, loss_track_aux: 0.0806, loss_roi_proto: 0.0021, loss: 0.4733, grad_norm: 8.0310
+2026-11-01 01:13:33,947 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=500 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00199047 APR_active=500
+2026-11-01 01:18:15,170 - mmtrack - INFO - Epoch [5][60/114]	lr: 1.031e-03, eta: 0:13:53, time: 17.498, data_time: 0.117, memory: 22653, rpn_distillation_loss: 0.1615, roi_distillation_loss: 0.0173, loss_track: 0.2002, loss_track_aux: 0.0807, loss_roi_proto: 0.0021, loss: 0.4618, grad_norm: 7.0698
+2026-11-01 01:19:29,106 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=48 prototypes=300 mean_topk_sim=0.5789 loss=0.4211 weighted_loss=0.0021 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=48 gate_total_rois=48 gate_ratio=1.0
+2026-11-01 01:19:33,426 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=520 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00210541 APR_active=520
+2026-11-01 01:24:13,292 - mmtrack - INFO - Epoch [5][80/114]	lr: 1.071e-03, eta: 0:08:48, time: 17.906, data_time: 0.137, memory: 22653, rpn_distillation_loss: 0.1641, roi_distillation_loss: 0.0172, loss_track: 0.1931, loss_track_aux: 0.0788, loss_roi_proto: 0.0021, loss: 0.4553, grad_norm: 7.6244
+2026-11-01 01:25:20,669 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=540 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00206803 APR_active=540
+2026-11-01 01:29:53,750 - mmtrack - INFO - Epoch [5][100/114]	lr: 1.111e-03, eta: 0:03:38, time: 17.023, data_time: 0.124, memory: 22653, rpn_distillation_loss: 0.1595, roi_distillation_loss: 0.0166, loss_track: 0.2290, loss_track_aux: 0.0840, loss_roi_proto: 0.0021, loss: 0.4912, grad_norm: 7.7386
+2026-11-01 01:31:05,053 - mmtrack - INFO - [NOICS_AUDIT] stage=4 iteration=560 bank_none=True history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00223423 APR_active=560
+2026-11-01 01:34:01,086 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 1000} selected_rois=42 prototypes=300 mean_topk_sim=0.6870 loss=0.3130 weighted_loss=0.0016 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=42 gate_total_rois=42 gate_ratio=1.0
+2026-11-01 01:34:02,544 - mmtrack - INFO - Saving checkpoint at 5 epochs
+2026-11-01 01:34:05,482 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain night: prototypes={1: 100} mean_norm=1.0000

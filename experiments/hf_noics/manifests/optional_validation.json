@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "optional_S3_complete": true,
+  "reference_files_byte_identical": [
+    {
+      "model": "F",
+      "file": "config_diff.json",
+      "sha256": "2de5e152149b501195fbcb30ebda16add364e1352163130dfd655bba0f744f1c"
+    },
+    {
+      "model": "F",
+      "file": "complete.json",
+      "sha256": "0e1266939be621910e9fbf157cd9f6e3e25412361d42f3a42d3e894e2d915efb"
+    },
+    {
+      "model": "F",
+      "file": "drift_energy.csv",
+      "sha256": "f1f843eb40e892f403f6db303a24f4d6679c0536529c26b8bbbcc852d5ceaffd"
+    },
+    {
+      "model": "F",
+      "file": "cross_stage_retrieval.csv",
+      "sha256": "5717a38fef112c8443c55588d804d05658e78d48c8a2ec62a369fd6587e3b6a9"
+    },
+    {
+      "model": "F",
+      "file": "drift_restoration.csv",
+      "sha256": "e315373475ea1dd607fe06ff739402ac16ffe97702ba78ffe8ccedbe7357fd61"
+    },
+    {
+      "model": "HF",
+      "file": "config_diff.json",
+      "sha256": "2ccbb265d6452c7331d66d51cca198596cd9d4dd449b3b3f684808c04fa1948b"
+    },
+    {
+      "model": "HF",
+      "file": "complete.json",
+      "sha256": "0e1266939be621910e9fbf157cd9f6e3e25412361d42f3a42d3e894e2d915efb"
+    },
+    {
+      "model": "HF",
+      "file": "drift_energy.csv",
+      "sha256": "354d3983c1bf4d71f9f9cf168a9325191c50209c4dadc20b53d7a7ca7c7b9105"
+    },
+    {
+      "model": "HF",
+      "file": "cross_stage_retrieval.csv",
+      "sha256": "3a8b09c7d3e09259ae94eb399d4bc7ab9eea399d6e54f059d4b9f6400ba91120"
+    },
+    {
+      "model": "HF",
+      "file": "drift_restoration.csv",
+      "sha256": "ce01e88e0ab4e9aca56956b2090f90aaf927682ea1e0102ef4bf1b5651694629"
+    }
+  ],
+  "no_ICS_proxy_bank": true,
+  "metadata_alignment_asserted_by_drift_script": true
+}

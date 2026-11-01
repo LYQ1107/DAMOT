@@ -1,0 +1,11 @@
+{
+  "stage": 2,
+  "domain": "rainy",
+  "actual_training_samples": 3142,
+  "original_annotation_counts": [
+    17,
+    3150
+  ],
+  "global_batch": 64,
+  "resume_epoch": 0
+}

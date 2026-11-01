@@ -1,0 +1,91 @@
+loading annotations into memory...
+Done (t=0.33s)
+creating index...
+index created!
+VIDEO COMPLETE 4 dawn_dusk 1 203
+VIDEO COMPLETE 4 dawn_dusk 2 203
+VIDEO COMPLETE 4 dawn_dusk 3 202
+VIDEO COMPLETE 4 dawn_dusk 4 202
+VIDEO COMPLETE 4 dawn_dusk 5 103
+VIDEO COMPLETE 4 dawn_dusk 6 202
+VIDEO COMPLETE 4 dawn_dusk 7 202
+VIDEO COMPLETE 4 dawn_dusk 8 203
+VIDEO COMPLETE 4 dawn_dusk 9 202
+VIDEO COMPLETE 4 dawn_dusk 10 203
+VIDEO COMPLETE 4 dawn_dusk 11 202
+VIDEO COMPLETE 4 dawn_dusk 12 202
+VIDEO COMPLETE 4 dawn_dusk 13 202
+VIDEO COMPLETE 4 dawn_dusk 14 203
+VIDEO COMPLETE 4 dawn_dusk 15 202
+VIDEO COMPLETE 4 dawn_dusk 16 203
+VIDEO COMPLETE 4 dawn_dusk 17 203
+VIDEO COMPLETE 4 dawn_dusk 18 203
+VIDEO COMPLETE 4 dawn_dusk 19 202
+VIDEO COMPLETE 4 dawn_dusk 20 202
+VIDEO COMPLETE 4 dawn_dusk 21 202
+VIDEO COMPLETE 4 dawn_dusk 22 203
+VIDEO COMPLETE 4 dawn_dusk 23 197
+VIDEO COMPLETE 4 dawn_dusk 24 203
+VIDEO COMPLETE 4 dawn_dusk 25 202
+VIDEO COMPLETE 4 dawn_dusk 26 203
+VIDEO COMPLETE 4 dawn_dusk 27 202
+VIDEO COMPLETE 4 dawn_dusk 28 202
+VIDEO COMPLETE 4 dawn_dusk 29 103
+VIDEO COMPLETE 4 dawn_dusk 30 202
+VIDEO COMPLETE 4 dawn_dusk 31 203
+VIDEO COMPLETE 4 dawn_dusk 32 202
+VIDEO COMPLETE 4 dawn_dusk 33 203
+Evaluating CLEAR MOT metrics...
+---CLEAR MOT Evaluation---
+Accumulating...
+Evaluating...
+Evaluation finishes with 19.85 s.
+Evaluating HOTA metrics...
+
+Evaluating 1 tracker(s) on 33 sequence(s) for 6 class(es) on BDD100K dataset using the following metrics: HOTA, Count
+
+
+Evaluating track
+
+
+All sequences for track finished in 5.25 seconds
+
+            IDF1  MOTA  MOTP    FP     FN  IDSw  Rcll  Prcn   MT   PT    ML    FM
+---------------------------------------------------------------------------------
+pedestrian  27.4  -3.7  73.8  2163   3990   631  39.0  54.1   54  145   209   267
+car         55.1  45.4  81.7  2947  21957  1816  55.2  90.2  506  701   797   887
+truck       19.7   8.3  79.8    90   2065    15  12.8  77.0    0    6    66    22
+bus         37.0 -20.9  80.1  1007    973    18  41.1  40.3    3   11    20    32
+motorcycle   0.0   0.0    -      0     31     0   0.0    -     0    0     2     0
+bicycle      0.0   0.0    -      0    288     0   0.0    -     0    0    17     0
+---------------------------------------------------------------------------------
+OVERALL     50.1  36.5  81.0  6207  29304  2480  51.0  83.1  563  863  1111  1208
+AVERAGE     23.2   4.8  52.6  6207  29304  2480  24.7  43.6  563  863  1111  1208
+
+
+            AssRe  AssPr  AssA  LocA  DetRe  DetPr  DetA  HOTA   Dets   IDs
+---------------------------------------------------------------------------
+bus          50.2   82.8  48.5  82.1   34.1   33.4  21.0  31.8   1686   244
+pedestrian   29.6   68.9  26.0  77.2   30.5   42.3  22.8  24.1   4714  1315
+car          56.7   71.4  50.0  83.7   46.4   75.9  42.8  46.1  29947  1893
+motorcycle    0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+bicycle       0.0    0.0   0.0 100.0    0.0    0.0   0.0   0.0      0     0
+truck        41.4   83.4  39.9  82.0   10.5   63.5  10.1  20.0    392    67
+---------------------------------------------------------------------------
+AVERAGE      29.7   51.1  27.4  87.5   20.3   35.9  16.1  20.3  36739  3519
+OVERALL      54.4   71.7  48.1  83.1   42.7   69.5  37.9  42.5  36739  3519
+
+
+            LocA  DetA  MOTA  HOTA  IDF1  AssA
+----------------------------------------------
+bus         82.1  21.0 -20.9  31.8  37.0  48.5
+pedestrian  77.2  22.8  -3.7  24.1  27.4  26.0
+car         83.7  42.8  45.4  46.1  55.1  50.0
+motorcycle 100.0   0.0   0.0   0.0   0.0   0.0
+bicycle    100.0   0.0   0.0   0.0   0.0   0.0
+truck       82.0  10.1   8.3  20.0  19.7  39.9
+----------------------------------------------
+AVERAGE     87.5  16.1   4.8  20.3  23.2  27.4
+OVERALL     83.1  37.9  36.5  42.5  50.1  48.1
+
+CELL COMPLETE 4 dawn_dusk

@@ -1,0 +1,21 @@
+{
+  "status": "smoke_phase_complete",
+  "stage": 2,
+  "domain": "rainy",
+  "rank": 0,
+  "calls": 13,
+  "APR_active_iterations": 13,
+  "APR_loss_mean": 0.0018147625960409641,
+  "total_loss_mean": 1.9521976801065297,
+  "history_domains": [
+    "overcast"
+  ],
+  "history_domain_count": 1,
+  "bank_modules": 0,
+  "bank_none": true,
+  "expect_noics": true,
+  "full_space_basis": true,
+  "seed": 1790355234,
+  "disposable_weights": true,
+  "time": 1793467215.3328295
+}

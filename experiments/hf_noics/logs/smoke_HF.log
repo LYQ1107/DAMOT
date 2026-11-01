@@ -1,0 +1,363 @@
+/home/liuyeqiang/anaconda3/envs/open-mmlab/lib/python3.7/site-packages/torch/distributed/launch.py:186: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  FutureWarning,
+2026-10-31 16:48:28,985 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 16:48:28,985 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 16:48:28,985 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+2026-10-31 16:48:29,553 - mmtrack - INFO - [ROI_PROTO] enabled=True mode=stage history_only=True stage_end_update=True
+2026-10-31 16:48:29,553 - mmtrack - INFO - [ROI_PROTO] class_ids=[1] score_thr=0.750 K=100 topk=3 loss_weight=0.0050
+2026-10-31 16:48:29,553 - mmtrack - INFO - [ROI_PROTO] max_candidates_per_domain=1000 max_rois_per_batch=64 diverse_select=False sim_gate=False thr=0.500
+loading annotations into memory...
+loading annotations into memory...
+2026-10-31 16:48:30,319 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage overcast, history_domains=[]
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.34s)
+creating index...
+Done (t=0.34s)
+creating index...
+Done (t=0.38s)
+creating index...
+Done (t=0.39s)
+creating index...
+index created!
+index created!
+index created!
+index created!
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-31 16:48:30,953 - mmtrack - INFO - set find_unused_parameters = True in DDP
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-31 16:48:34,202 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/preflight/smoke/HF/stage1_work
+2026-10-31 16:48:34,203 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) EMATrainHook                       
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 16:48:34,203 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 16:50:25,263 - mmtrack - INFO - [VIEW STATS post-Normalize] teacher     mean=0.0247 std=1.1609 min=-2.1179 max=2.6400
+2026-10-31 16:50:25,264 - mmtrack - INFO - [VIEW STATS post-Normalize] student     mean=-0.3147 std=1.0784 min=-2.1179 max=2.6400
+2026-10-31 16:50:25,265 - mmtrack - INFO - [VIEW STATS post-Normalize] contrastive mean=0.0761 std=1.1253 min=-2.1179 max=2.6400
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] enabled=True
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] mode=proto_shrinkage_cov_ema
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] cov_momentum=0.98
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] qr_orthogonalize=True
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] num_pcs=2
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] trim_alpha=0.1
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] loss_weight=0.025
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] min_samples=96
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] normalize_feats=True
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] class_ids=None
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] score_thr=0.7
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] use_scores=False
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] normalized_tensor_spa=False
+2026-10-31 16:50:26,871 - mmtrack - INFO - [CAUSAL_PCA] use_roi_proto_memory=True mode=stage
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[W reducer.cpp:1251] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+2026-10-31 16:50:28,767 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=1 iteration=1 bank_none=False history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 16:51:05,650 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=1 iteration=2 bank_none=False history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 16:51:43,908 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=1 iteration=3 bank_none=False history_domains=[] APR_loss=0.00000000 APR_active=0
+2026-10-31 16:55:28,161 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain overcast: prototypes={1: 100} mean_norm=1.0000
+loading annotations into memory...
+2026-10-31 16:55:29,143 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage rainy, history_domains=['overcast']
+loading annotations into memory...
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.12s)
+creating index...
+Done (t=0.14s)Done (t=0.14s)
+
+creating index...creating index...
+
+Done (t=0.15s)
+creating index...
+index created!
+index created!
+index created!
+index created!
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-31 16:55:30,263 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-31 16:55:30,314 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/preflight/smoke/HF/stage2_work
+2026-10-31 16:55:30,314 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) EMATrainHook                       
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 16:55:30,314 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 16:56:04,152 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=2 iteration=1 bank_none=False history_domains=['overcast'] APR_loss=0.00191178 APR_active=1
+2026-10-31 16:56:23,216 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=2 iteration=2 bank_none=False history_domains=['overcast'] APR_loss=0.00199121 APR_active=2
+2026-10-31 16:56:42,266 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=2 iteration=3 bank_none=False history_domains=['overcast'] APR_loss=0.00184901 APR_active=3
+2026-10-31 16:59:48,615 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain rainy: prototypes={1: 100} mean_norm=1.0000
+loading annotations into memory...
+loading annotations into memory...
+2026-10-31 16:59:49,308 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage dawn_dusk, history_domains=['overcast', 'rainy']
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.33s)
+creating index...
+Done (t=0.34s)
+creating index...
+Done (t=0.42s)
+creating index...
+index created!
+Done (t=0.43s)
+creating index...
+index created!
+index created!
+index created!
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-31 16:59:50,572 - mmtrack - INFO - set find_unused_parameters = True in DDP
+2026-10-31 16:59:50,617 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/preflight/smoke/HF/stage3_work
+2026-10-31 16:59:50,618 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) EMATrainHook                       
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 16:59:50,618 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 17:00:20,465 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=3 iteration=1 bank_none=False history_domains=['overcast', 'rainy'] APR_loss=0.00173051 APR_active=1
+2026-10-31 17:00:38,103 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=3 iteration=2 bank_none=False history_domains=['overcast', 'rainy'] APR_loss=0.00208749 APR_active=2
+2026-10-31 17:00:55,502 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=3 iteration=3 bank_none=False history_domains=['overcast', 'rainy'] APR_loss=0.00178396 APR_active=3
+2026-10-31 17:03:28,823 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain dawn_dusk: prototypes={1: 100} mean_norm=1.0000
+loading annotations into memory...
+loading annotations into memory...
+2026-10-31 17:03:29,259 - mmtrack - INFO - [ROI_PROTO][rank=0] Start stage night, history_domains=['overcast', 'rainy', 'dawn_dusk']
+loading annotations into memory...
+loading annotations into memory...
+Done (t=0.37s)
+creating index...
+Done (t=0.38s)
+creating index...
+Done (t=0.39s)
+creating index...
+Done (t=0.42s)
+creating index...
+index created!
+index created!
+index created!
+index created!
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-31 17:03:30,426 - mmtrack - INFO - set find_unused_parameters = True in DDP
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2026-10-31 17:03:30,503 - mmtrack - INFO - Start running, host: liuyeqiang@cieelab, work_dir: /data1/liuyeqiang/damot_hf_noics_20261101_004139/preflight/smoke/HF/stage4_work
+2026-10-31 17:03:30,503 - mmtrack - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) EMATrainHook                       
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) StepLrUpdaterHook                  
+(LOW         ) IterTimerHook                      
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_iter:
+(HIGH        ) APRFiniteLossHook                  
+(ABOVE_NORMAL) CustomOptimizerHook                
+(NORMAL      ) EMATrainHook                       
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+after_train_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) DistSamplerSeedHook                
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) TextLoggerHook                     
+ -------------------- 
+after_run:
+(VERY_LOW    ) TextLoggerHook                     
+(LOWEST      ) NoICSRuntimeAuditHook              
+ -------------------- 
+2026-10-31 17:03:30,503 - mmtrack - INFO - workflow: [('train', 1)], max: 5 epochs
+2026-10-31 17:03:53,126 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=4 iteration=1 bank_none=False history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00186198 APR_active=1
+2026-10-31 17:04:10,974 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=4 iteration=2 bank_none=False history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00225147 APR_active=2
+2026-10-31 17:04:28,222 - mmtrack - INFO - [HF_SMOKE_AUDIT] stage=4 iteration=3 bank_none=False history_domains=['overcast', 'rainy', 'dawn_dusk'] APR_loss=0.00201626 APR_active=3
+2026-10-31 17:07:00,511 - mmtrack - INFO - [CAUSAL_PCA_STATS] step=50 mode=proto_shrinkage_cov_ema domain=night num_feats=28 update_ok=False skip_reason='insufficient_proto_centered(28)' eig1=0.1005 eig_ratio=0.2013 cov_trace=0.8222 pc_norm=1.0000 pc_drift=0.0638 loss_track_trim=0.02250 loss_track_aux_trim=0.00403
+2026-10-31 17:07:00,514 - mmtrack - INFO - [ROI_PROTO_COUPLE][rank=0] domain=night beta=1.000 metric=projected_cosine basis_dim=2 basis_ready_calls=47 coupled_loss_active_calls=37 total_calls=50 loss_active_now=True history_domains=['overcast', 'rainy', 'dawn_dusk']
+2026-10-31 17:07:00,514 - mmtrack - INFO - [ROI_PROTO_LOSS][rank=0] scores_available=True domain=night history_domains=['overcast', 'rainy', 'dawn_dusk'] prototypes_per_domain_class={'overcast': {1: 100}, 'rainy': {1: 100}, 'dawn_dusk': {1: 100}} current_candidates={1: 274} selected_rois=24 prototypes=300 mean_topk_sim=0.5343 loss=0.4657 weighted_loss=0.0023 gate_enabled=False sim_gate_thr=0.5 gate_selected_rois=24 gate_total_rois=24 gate_ratio=1.0
+2026-10-31 17:07:02,374 - mmtrack - INFO - [ROI_PROTO][rank=0] Finalize domain night: prototypes={1: 100} mean_norm=1.0000
+DISPOSABLE_SMOKE_COMPLETE HF 3
+DISPOSABLE_SMOKE_COMPLETE HF 0
+DISPOSABLE_SMOKE_COMPLETE HF 2
+DISPOSABLE_SMOKE_COMPLETE HF 1

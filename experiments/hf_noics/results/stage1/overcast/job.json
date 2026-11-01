@@ -1,0 +1,18 @@
+{
+  "pid": 13346,
+  "stage": 1,
+  "domain": "overcast",
+  "checkpoint": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/stage_snapshots/stage01_after_overcast.pth",
+  "sha256": "400bc5a2db4fab510cefa77a9b1cafa4e146d27006d4721ab1c9540ed62ca2d1",
+  "gpu": "5",
+  "command": [
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/code/tools/run/evaluate_apr_complement.py",
+    "--run-root",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+    "--stage",
+    "1",
+    "--domain",
+    "overcast"
+  ],
+  "start": 1793473772.456359
+}

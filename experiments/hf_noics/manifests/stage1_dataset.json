@@ -1,0 +1,11 @@
+{
+  "stage": 1,
+  "domain": "overcast",
+  "actual_training_samples": 4321,
+  "original_annotation_counts": [
+    22,
+    4448
+  ],
+  "global_batch": 64,
+  "resume_epoch": 0
+}

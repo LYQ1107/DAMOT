@@ -1,0 +1,68 @@
+{
+  "path": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/state/stage1_final_rank1.pth",
+  "stage": 1,
+  "epoch": 5,
+  "rank": 1,
+  "final": true,
+  "activity": {
+    "bank_exists": false,
+    "bank_initialized": false,
+    "ICS_num_updates": 0,
+    "ICS_last_effective_rois": 0,
+    "ICS_last_update_ok": false,
+    "APR_calls": 340,
+    "APR_basis_ready_calls": 0,
+    "APR_coupled_loss_active_calls": 0,
+    "APR_memory": {
+      "history_domains": [
+        "overcast"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 0
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {}
+    },
+    "APR_full_space_audit": {
+      "1": {
+        "status": "stage_training_complete",
+        "stage": 1,
+        "domain": "overcast",
+        "rank": 1,
+        "calls": 340,
+        "APR_active_iterations": 0,
+        "APR_loss_mean": 0.0,
+        "total_loss_mean": 1.2132124177673285,
+        "history_domains": [],
+        "history_domain_count": 0,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793473756.249056
+      }
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 5440
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 5440
+      }
+    ],
+    "allocated_MiB": 22649.0458984375,
+    "reserved_MiB": 26296.0
+  },
+  "time": 1793473756.424935
+}

@@ -1,0 +1,11 @@
+{
+  "stage": 3,
+  "domain": "dawn_dusk",
+  "actual_training_samples": 6254,
+  "original_annotation_counts": [
+    33,
+    6476
+  ],
+  "global_batch": 64,
+  "resume_epoch": 0
+}

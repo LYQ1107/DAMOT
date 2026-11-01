@@ -1,0 +1,18 @@
+{
+  "pid": 7460,
+  "stage": 4,
+  "domain": "dawn_dusk",
+  "checkpoint": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/stage_snapshots/stage04_after_night.pth",
+  "sha256": "fe9d4ff27fa0823ed23952d9fa41e1ed542e29a679bd121a2709d226bb496588",
+  "gpu": "9",
+  "command": [
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/code/tools/run/evaluate_apr_complement.py",
+    "--run-root",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+    "--stage",
+    "4",
+    "--domain",
+    "dawn_dusk"
+  ],
+  "start": 1793497145.6784556
+}

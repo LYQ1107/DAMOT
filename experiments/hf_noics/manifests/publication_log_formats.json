@@ -1,0 +1,67 @@
+{
+  "original_logs_retained": true,
+  "compacted_progress_prefixes": [],
+  "MMCV_JSON_lines_logs": [
+    {
+      "path": "preflight/smoke/HF/stage1_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/HF/stage2_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/HF/stage3_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/HF/stage4_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/NoICS/stage1_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/NoICS/stage2_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/NoICS/stage3_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "preflight/smoke/NoICS/stage4_work/noics_smoke.log.json",
+      "records": 1,
+      "original_sha256": "7a794fde79ec551a88589612da055f3409eca4695060880255b37d8aa00de57c"
+    },
+    {
+      "path": "episode/adapt/stage01_after_overcast/apr_complement_20261028.log.json",
+      "records": 16,
+      "original_sha256": "d1bbc1d335ff9c83859f4d434462ad6fec53bba4257e960a9416f0ba91c0f9b1"
+    },
+    {
+      "path": "episode/adapt/stage02_after_rainy/apr_complement_20261028.log.json",
+      "records": 11,
+      "original_sha256": "ab06e189b214b50e97e7f25e7ddd0eb3417d6d8abf3679e7c335bc9e57e86610"
+    },
+    {
+      "path": "episode/adapt/stage03_after_dawn_dusk/apr_complement_20261028.log.json",
+      "records": 21,
+      "original_sha256": "46ed58291dcd1a11aa850c646aec0c4305ec105ac1e93668b2562883fdf2bfed"
+    },
+    {
+      "path": "episode/adapt/stage04_after_night/apr_complement_20261028.log.json",
+      "records": 26,
+      "original_sha256": "faa4a28e578afd67b50161408d517150bab1d8bf2e10a83192a75ced97222461"
+    }
+  ],
+  "incomplete_failed_attempt_archives": []
+}

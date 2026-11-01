@@ -1,0 +1,155 @@
+{
+  "path": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/state/stage4_epoch5_rank1.pth",
+  "stage": 4,
+  "epoch": 5,
+  "rank": 1,
+  "final": false,
+  "activity": {
+    "bank_exists": false,
+    "bank_initialized": false,
+    "ICS_num_updates": 0,
+    "ICS_last_effective_rois": 0,
+    "ICS_last_update_ok": false,
+    "APR_calls": 1650,
+    "APR_basis_ready_calls": 0,
+    "APR_coupled_loss_active_calls": 0,
+    "APR_memory": {
+      "history_domains": [
+        "overcast",
+        "rainy",
+        "dawn_dusk"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        },
+        "rainy": {
+          "1": 100
+        },
+        "dawn_dusk": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 1000
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {
+        "selected_rois": 64,
+        "prototypes": 300,
+        "mean_topk_sim": 0.517723560333252,
+        "loss": 0.48227640986442566,
+        "gate_enabled": false,
+        "sim_gate_thr": 0.5,
+        "gate_selected_rois": 64,
+        "gate_total_rois": 64,
+        "gate_ratio": 1.0,
+        "coupled": false,
+        "couple_beta": 0.0,
+        "coupled_metric": "projected_cosine"
+      }
+    },
+    "APR_full_space_audit": {
+      "1": {
+        "status": "stage_training_complete",
+        "stage": 1,
+        "domain": "overcast",
+        "rank": 1,
+        "calls": 340,
+        "APR_active_iterations": 0,
+        "APR_loss_mean": 0.0,
+        "total_loss_mean": 1.2132124177673285,
+        "history_domains": [],
+        "history_domain_count": 0,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793473756.249056
+      },
+      "2": {
+        "status": "stage_training_complete",
+        "stage": 2,
+        "domain": "rainy",
+        "rank": 1,
+        "calls": 250,
+        "APR_active_iterations": 250,
+        "APR_loss_mean": 0.0026782474741339686,
+        "total_loss_mean": 0.7141512171030044,
+        "history_domains": [
+          "overcast"
+        ],
+        "history_domain_count": 1,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793478212.0243006
+      },
+      "3": {
+        "status": "stage_training_complete",
+        "stage": 3,
+        "domain": "dawn_dusk",
+        "rank": 1,
+        "calls": 490,
+        "APR_active_iterations": 490,
+        "APR_loss_mean": 0.0025863171958991765,
+        "total_loss_mean": 0.8357067099335242,
+        "history_domains": [
+          "overcast",
+          "rainy"
+        ],
+        "history_domain_count": 2,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793486944.6769526
+      },
+      "4": {
+        "status": "training",
+        "stage": 4,
+        "domain": "night",
+        "rank": 1,
+        "calls": 560,
+        "APR_active_iterations": 560,
+        "APR_loss_mean": 0.0020853058514018943,
+        "total_loss_mean": 0.5360327851825527,
+        "history_domains": [
+          "overcast",
+          "rainy",
+          "dawn_dusk"
+        ],
+        "history_domain_count": 3,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793496665.0529978
+      }
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 26400
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 26400
+      }
+    ],
+    "allocated_MiB": 22649.0458984375,
+    "reserved_MiB": 29442.0
+  },
+  "time": 1793496842.5656757
+}

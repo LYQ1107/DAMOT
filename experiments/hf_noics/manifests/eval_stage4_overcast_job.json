@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "gpus": [
+    7
+  ],
+  "prelaunch_snapshot": "0, 25242, 96\n1, 20310, 96\n2, 2, 0\n3, 2, 0\n4, 2, 0\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 2, 0\n9, 2, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/code/tools/run/evaluate_apr_complement.py",
+    "--run-root",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+    "--stage",
+    "4",
+    "--domain",
+    "overcast"
+  ],
+  "pid": 35017,
+  "time": 1793496853.8759873,
+  "exit_code": 0,
+  "finished_time": 1793497223.4832118
+}

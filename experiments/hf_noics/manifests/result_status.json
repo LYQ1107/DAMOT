@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "metric_rows": 70,
+  "evaluation_cells": 10,
+  "decision_status": "complete",
+  "single_training_seed": true,
+  "seed": 1790355234
+}

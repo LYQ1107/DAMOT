@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "stage": 3,
+  "domain": "dawn_dusk",
+  "epoch": 5,
+  "checkpoint": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/stage_snapshots/stage03_after_dawn_dusk.pth",
+  "checkpoint_sha256": "2a3f227dd183ce4cb7bf9c9bb8d80dd92f865dbf715fd7f9f74e66abebf3519f",
+  "rank_local_memory_saved": true,
+  "time": 1793486946.942542
+}

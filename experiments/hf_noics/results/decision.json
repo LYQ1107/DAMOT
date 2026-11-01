@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "training_seed": 1790355234,
+  "single_training_seed": true,
+  "category": "OVERALL",
+  "criteria": {
+    "FinalMean_delta_min": -0.3,
+    "AvgF_delta_max": 0.3,
+    "both_required": true
+  },
+  "HF_FinalMean": 38.69987894251484,
+  "HF_AvgF": -0.015193010046736788,
+  "required_NoICS_FinalMean_min": 38.399878942514846,
+  "required_NoICS_AvgF_max": 0.2848069899532632,
+  "NoICS_FinalMean": 38.49864718711561,
+  "NoICS_AvgF": -0.056692894473222566,
+  "FinalMean_delta": -0.20123175539923466,
+  "AvgF_delta": -0.04149988442648578,
+  "HOTA_condition_passed": true,
+  "AvgF_condition_passed": true,
+  "equivalent_by_prespecified_rule": true,
+  "main_method": "FAP + APR; ICS and coupling supplementary"
+}

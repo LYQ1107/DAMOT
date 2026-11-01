@@ -1,0 +1,13 @@
+stage,domain,rank,iteration,global_smoke_iteration,total_loss,APR_loss,history_domains,bank_none,loss_keys,compute_seconds,iteration_seconds
+4,night,1,1,39,2.628979444503784,0.002164362696930766,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.746100962162018,17.746100962162018
+4,night,1,2,40,2.541311025619507,0.0019175674533471465,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.77268373966217,17.848168447613716
+4,night,1,3,41,3.0723657608032227,0.002044110093265772,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.039617866277695,17.24753710627556
+4,night,1,4,42,2.8268744945526123,0.002110900590196252,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.855883106589317,16.925128534436226
+4,night,1,5,43,2.5189783573150635,0.002078364370390773,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.639163225889206,16.80654187500477
+4,night,1,6,44,2.5487263202667236,0.0022062966600060463,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.938720017671585,17.001286894083023
+4,night,1,7,45,2.661311388015747,0.0020023323595523834,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.74641327559948,16.954354643821716
+4,night,1,8,46,2.4671597480773926,0.002111839596182108,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.541530951857567,17.622747465968132
+4,night,1,9,47,2.745405673980713,0.00217613042332232,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.912990242242813,17.10565558075905
+4,night,1,10,48,2.6078102588653564,0.0019372821552678943,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,17.251670137047768,17.314918503165245
+4,night,1,11,49,2.017836332321167,0.001687927171587944,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.772635832428932,16.966882809996605
+4,night,1,12,50,2.373203992843628,0.0021422947756946087,overcast|rainy|dawn_dusk,False,loss_roi_proto|loss_track|loss_track_aux|loss_track_aux_trim|loss_track_trim,16.8393487483263,16.944677963852882

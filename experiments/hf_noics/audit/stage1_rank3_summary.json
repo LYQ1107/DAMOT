@@ -1,0 +1,19 @@
+{
+  "status": "stage_training_complete",
+  "stage": 1,
+  "domain": "overcast",
+  "rank": 3,
+  "calls": 340,
+  "APR_active_iterations": 0,
+  "APR_loss_mean": 0.0,
+  "total_loss_mean": 1.2695924257530886,
+  "history_domains": [],
+  "history_domain_count": 0,
+  "bank_modules": 0,
+  "bank_none": true,
+  "expect_noics": true,
+  "full_space_basis": true,
+  "seed": 1790355234,
+  "disposable_weights": false,
+  "time": 1793473756.2490761
+}

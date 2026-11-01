@@ -1,0 +1,13 @@
+stage,domain,rank,iteration,global_smoke_iteration,total_loss,APR_loss,history_domains,bank_none,loss_keys,compute_seconds,iteration_seconds
+3,dawn_dusk,3,1,27,2.721668243408203,0.002060792874544859,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,22.85128690302372,22.85128690302372
+3,dawn_dusk,3,2,28,2.564110040664673,0.0016688582254573703,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.90434594452381,21.04395079612732
+3,dawn_dusk,3,3,29,2.411067247390747,0.0019713458605110645,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.87697097659111,20.995241343975067
+3,dawn_dusk,3,4,30,2.905860662460327,0.0018741590902209282,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.166738390922546,21.286888122558594
+3,dawn_dusk,3,5,31,2.1706748008728027,0.0020420970395207405,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.259311869740486,21.37002420425415
+3,dawn_dusk,3,6,32,3.151158571243286,0.002023391192778945,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.973934903740883,22.08817133307457
+3,dawn_dusk,3,7,33,2.187791109085083,0.001557620707899332,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,22.92629325389862,23.03596557676792
+3,dawn_dusk,3,8,34,2.556295871734619,0.002060367725789547,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.54343491792679,20.67869672179222
+3,dawn_dusk,3,9,35,2.620372772216797,0.0019249303732067347,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.484058052301407,20.597308188676834
+3,dawn_dusk,3,10,36,2.633763313293457,0.0019721239805221558,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.052543476223946,20.167778000235558
+3,dawn_dusk,3,11,37,2.6191022396087646,0.00203165365383029,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.50086686015129,20.62143975496292
+3,dawn_dusk,3,12,38,2.6587448120117188,0.0020345214288681746,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,18.779263585805893,18.886273697018623

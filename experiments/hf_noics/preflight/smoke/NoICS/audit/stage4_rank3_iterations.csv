@@ -1,0 +1,13 @@
+stage,domain,rank,iteration,global_smoke_iteration,total_loss,APR_loss,history_domains,bank_none,loss_keys,compute_seconds,iteration_seconds
+4,night,3,1,39,2.3294806480407715,0.0018757089274004102,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,21.661746829748154,21.661746829748154
+4,night,3,2,40,2.319270372390747,0.002201108494773507,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,20.27995216846466,20.420892670750618
+4,night,3,3,41,2.7091729640960693,0.001938959350809455,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.67350547015667,19.870674833655357
+4,night,3,4,42,2.3281328678131104,0.001953770872205496,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,20.418584018945694,20.475656136870384
+4,night,3,5,43,2.599238395690918,0.0019863247871398926,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.271856293082237,19.4405490309
+4,night,3,6,44,2.5231869220733643,0.0020030878949910402,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.15086793899536,19.208109512925148
+4,night,3,7,45,2.3526670932769775,0.0020826333202421665,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,18.80471557378769,18.971439391374588
+4,night,3,8,46,1.8945410251617432,0.0018148295348510146,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.723082453012466,19.78427104651928
+4,night,3,9,47,2.6603009700775146,0.0018405289156362414,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.736190363764763,19.92063057422638
+4,night,3,10,48,2.3665237426757812,0.0018869554623961449,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,20.4893718957901,20.54618911445141
+4,night,3,11,49,2.514695405960083,0.00197422644123435,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.09348188340664,19.252364054322243
+4,night,3,12,50,2.37416934967041,0.0020668422803282738,overcast|rainy|dawn_dusk,True,loss_roi_proto|loss_track|loss_track_aux,19.51975506544113,19.58036532998085

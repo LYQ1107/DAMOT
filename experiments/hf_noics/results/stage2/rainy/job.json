@@ -1,0 +1,18 @@
+{
+  "pid": 32760,
+  "stage": 2,
+  "domain": "rainy",
+  "checkpoint": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/stage_snapshots/stage02_after_rainy.pth",
+  "sha256": "35dd9ae7acc4da00c392b175cab4fc3a010fe8e62916d5584bf0904835446970",
+  "gpu": "5",
+  "command": [
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/code/tools/run/evaluate_apr_complement.py",
+    "--run-root",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139",
+    "--stage",
+    "2",
+    "--domain",
+    "rainy"
+  ],
+  "start": 1793478224.2091298
+}

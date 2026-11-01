@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "allowed_model_paths": [
+    "model.track_head.use_causal_direction_bank",
+    "model.track_head.roi_proto_couple_ics"
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "seed": 1790355234,
+      "config_sha256": "bbf3fc3520c7b6bb6f6649cea3f48a50f904ac15b28bdeb327622c7305a9fad9",
+      "HF_config_sha256": "35cf1502aca701ff31996a72e729291cabd380964a6d31e3c22306e7eba13504"
+    },
+    {
+      "stage": 2,
+      "seed": 1790355234,
+      "config_sha256": "f40839c195c68e821ebd9a9be55087deb30edecccc1c79f2f44103b8b8c45bf6",
+      "HF_config_sha256": "16a562e60a4f2b7b46026824d49a8c1ba63628cf5eb31f84689315397b50de7f"
+    },
+    {
+      "stage": 3,
+      "seed": 1790355234,
+      "config_sha256": "f7502ff29b468fcd767b9d0788c0b45f0a9c1476fba372e8f46521937fd4515a",
+      "HF_config_sha256": "72baf3d2f0dafb7812cee218868d16e6a120b69c336052db88624599c6c490e4"
+    },
+    {
+      "stage": 4,
+      "seed": 1790355234,
+      "config_sha256": "76aeda98feeaf62246430db1beee427a36d9b4e8e4c1e134b26c1e98cef10caa",
+      "HF_config_sha256": "0ff8e1f524b2d888a423480441ef875844703acac27dc1056d003cbafde6310d"
+    }
+  ],
+  "bookkeeping_only_other_changes": true
+}

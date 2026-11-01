@@ -1,0 +1,8 @@
+{
+  "file": "code/tools/run/evaluate_apr_complement.py",
+  "sha256": "25b216989199a3e580c79ac30f3b363ae5805022e5bf97c349f697745d4e8470",
+  "source_repository_commit": "66f19ab",
+  "applies_to": "post-training evaluation and aggregation only",
+  "created_utc": "2026-10-28T14:50:00Z",
+  "change": "write results/report_table.csv, report_table.md, and notes from final stage-4 epoch-5 rows"
+}

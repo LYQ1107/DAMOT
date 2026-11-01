@@ -1,0 +1,13 @@
+stage,domain,rank,iteration,global_smoke_iteration,total_loss,APR_loss,history_domains,bank_none,loss_keys,compute_seconds,iteration_seconds
+3,dawn_dusk,0,1,27,1.833992600440979,0.0016760327853262424,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,23.064934581518173,23.064934581518173
+3,dawn_dusk,0,2,28,3.308175802230835,0.002098224824294448,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.971613004803658,21.043363824486732
+3,dawn_dusk,0,3,29,2.626859426498413,0.0017342206556349993,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.890216529369354,20.99538880586624
+3,dawn_dusk,0,4,30,2.2810842990875244,0.0020403601229190826,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.171221181750298,21.287572368979454
+3,dawn_dusk,0,5,31,2.568633556365967,0.0019103544764220715,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.259280428290367,21.368632212281227
+3,dawn_dusk,0,6,32,3.148181200027466,0.0021298746578395367,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.98632825911045,22.088525146245956
+3,dawn_dusk,0,7,33,3.12591814994812,0.0021274785976856947,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,22.938402488827705,23.036488980054855
+3,dawn_dusk,0,8,34,2.070432424545288,0.0017676098505035043,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.557608053088188,20.678613767027855
+3,dawn_dusk,0,9,35,2.0486550331115723,0.0021481034345924854,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.50019332766533,20.59704713523388
+3,dawn_dusk,0,10,36,1.712781310081482,0.001812600763514638,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.047948002815247,20.168581783771515
+3,dawn_dusk,0,11,37,2.60003924369812,0.00228829775005579,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.506118655204773,20.62048201262951
+3,dawn_dusk,0,12,38,2.437156915664673,0.0023458595387637615,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,18.770346522331238,18.88657034933567

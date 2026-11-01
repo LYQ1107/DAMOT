@@ -1,0 +1,44 @@
+{
+  "experiment": "HF NoICS uncoupled APR",
+  "seed": 1790355234,
+  "single_training_seed": true,
+  "baseline_root": "/data1/liuyeqiang/damot_apr_complement_hf_20261028_1420",
+  "reference_INTICS": "/data1/liuyeqiang/damot_hf_intics_20261031_004258",
+  "model_changes": {
+    "use_causal_direction_bank": false,
+    "roi_proto_couple_ics": false
+  },
+  "gpus": 4,
+  "epochs_per_stage": 5,
+  "samples_per_gpu": 16,
+  "workers_per_gpu": 2,
+  "precision": "FP32",
+  "source": "Clear S",
+  "target_order": [
+    "overcast",
+    "rainy",
+    "dawn_dusk",
+    "night"
+  ],
+  "stop_gates": [],
+  "decision": {
+    "category": "OVERALL",
+    "HOTA_FinalMean_NoICS_minus_HF_min": -0.3,
+    "HOTA_AvgF_NoICS_minus_HF_max": 0.3,
+    "both_conditions_required": true,
+    "if_pass": "FAP + APR main method; ICS/coupling supplementary",
+    "if_fail": "retain HF main method"
+  },
+  "video_bootstrap": {
+    "repeats": 10000,
+    "seed": 0,
+    "unit": "paired test video",
+    "metrics": [
+      "HOTA",
+      "AssA",
+      "IDF1"
+    ]
+  },
+  "output_storage": "local",
+  "created_client_time": "2026-11-01T00:41:39.632618+08:00"
+}

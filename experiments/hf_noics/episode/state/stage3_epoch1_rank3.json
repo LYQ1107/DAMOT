@@ -1,0 +1,128 @@
+{
+  "path": "/data1/liuyeqiang/damot_hf_noics_20261101_004139/episode/state/stage3_epoch1_rank3.pth",
+  "stage": 3,
+  "epoch": 1,
+  "rank": 3,
+  "final": false,
+  "activity": {
+    "bank_exists": false,
+    "bank_initialized": false,
+    "ICS_num_updates": 0,
+    "ICS_last_effective_rois": 0,
+    "ICS_last_update_ok": false,
+    "APR_calls": 688,
+    "APR_basis_ready_calls": 0,
+    "APR_coupled_loss_active_calls": 0,
+    "APR_memory": {
+      "history_domains": [
+        "overcast",
+        "rainy"
+      ],
+      "prototypes_per_domain_class": {
+        "overcast": {
+          "1": 100
+        },
+        "rainy": {
+          "1": 100
+        }
+      },
+      "current_candidates": {
+        "1": 1000
+      },
+      "mean_feature_norm": 1.0,
+      "last_loss_stats": {
+        "selected_rois": 64,
+        "prototypes": 200,
+        "mean_topk_sim": 0.5465406179428101,
+        "loss": 0.4534594416618347,
+        "gate_enabled": false,
+        "sim_gate_thr": 0.5,
+        "gate_selected_rois": 64,
+        "gate_total_rois": 64,
+        "gate_ratio": 1.0,
+        "coupled": false,
+        "couple_beta": 0.0,
+        "coupled_metric": "projected_cosine"
+      }
+    },
+    "APR_full_space_audit": {
+      "1": {
+        "status": "stage_training_complete",
+        "stage": 1,
+        "domain": "overcast",
+        "rank": 3,
+        "calls": 340,
+        "APR_active_iterations": 0,
+        "APR_loss_mean": 0.0,
+        "total_loss_mean": 1.2695924257530886,
+        "history_domains": [],
+        "history_domain_count": 0,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793473756.2490761
+      },
+      "2": {
+        "status": "stage_training_complete",
+        "stage": 2,
+        "domain": "rainy",
+        "rank": 3,
+        "calls": 250,
+        "APR_active_iterations": 250,
+        "APR_loss_mean": 0.0027887998474761845,
+        "total_loss_mean": 0.6913245527744293,
+        "history_domains": [
+          "overcast"
+        ],
+        "history_domain_count": 1,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793478212.0214038
+      },
+      "3": {
+        "status": "training",
+        "stage": 3,
+        "domain": "dawn_dusk",
+        "rank": 3,
+        "calls": 80,
+        "APR_active_iterations": 80,
+        "APR_loss_mean": 0.002693193036247976,
+        "total_loss_mean": 0.8498226545751095,
+        "history_domains": [
+          "overcast",
+          "rainy"
+        ],
+        "history_domain_count": 2,
+        "bank_modules": 0,
+        "bank_none": true,
+        "expect_noics": true,
+        "full_space_basis": true,
+        "seed": 1790355234,
+        "disposable_weights": false,
+        "time": 1793479671.9557776
+      }
+    },
+    "FAP": [
+      {
+        "pipeline": "student_pipeline",
+        "mode": "low_freq_mask",
+        "calls": 11008
+      },
+      {
+        "pipeline": "contrastive_pipeline",
+        "mode": "high_freq_noise",
+        "calls": 11008
+      }
+    ],
+    "allocated_MiB": 22623.31591796875,
+    "reserved_MiB": 29302.0
+  },
+  "time": 1793479986.9901502
+}

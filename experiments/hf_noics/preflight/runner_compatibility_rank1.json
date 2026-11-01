@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "HF_snapshot_files_unchanged": true,
+  "training_AST_identical_except_two_assertions": true,
+  "changed_assertions": [
+    "bank_assert",
+    "APR_assert"
+  ],
+  "other_runtime_override": "None-safe read-only activity logger",
+  "model_numerical_operations_changed": false,
+  "forward_observation": "read-only audit wrapper returns the original loss object unchanged"
+}

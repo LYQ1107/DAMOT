@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "reference": "/data1/liuyeqiang/damot_hf_intics_20261031_004258/results/continual_metrics.csv",
+  "rows": 16,
+  "numeric_comparisons": 96,
+  "max_tolerance": 1e-10
+}

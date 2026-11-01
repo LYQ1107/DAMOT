@@ -1,0 +1,21 @@
+{
+  "status": "stage_training_complete",
+  "stage": 2,
+  "domain": "rainy",
+  "rank": 0,
+  "calls": 250,
+  "APR_active_iterations": 250,
+  "APR_loss_mean": 0.002702579129487276,
+  "total_loss_mean": 0.6993587893247605,
+  "history_domains": [
+    "overcast"
+  ],
+  "history_domain_count": 1,
+  "bank_modules": 0,
+  "bank_none": true,
+  "expect_noics": true,
+  "full_space_basis": true,
+  "seed": 1790355234,
+  "disposable_weights": false,
+  "time": 1793478212.0251594
+}

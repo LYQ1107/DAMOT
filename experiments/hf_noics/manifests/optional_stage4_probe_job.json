@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "gpus": [
+    5
+  ],
+  "prelaunch_snapshot": "0, 25242, 100\n1, 20310, 93\n2, 2, 0\n3, 2, 0\n4, 2, 0\n5, 2, 0\n6, 2, 0\n7, 2, 0\n8, 2, 0\n9, 2, 0\n",
+  "command": [
+    "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+    "/data1/liuyeqiang/damot_hf_noics_20261101_004139/scripts/optional_stage_probe.py",
+    "--stage",
+    "4"
+  ],
+  "pid": 29635,
+  "time": 1793497677.5000825,
+  "exit_code": 0,
+  "finished_time": 1793499476.3694808
+}

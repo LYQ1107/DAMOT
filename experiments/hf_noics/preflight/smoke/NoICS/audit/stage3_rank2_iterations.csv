@@ -1,0 +1,13 @@
+stage,domain,rank,iteration,global_smoke_iteration,total_loss,APR_loss,history_domains,bank_none,loss_keys,compute_seconds,iteration_seconds
+3,dawn_dusk,2,1,27,3.0044150352478027,0.00221649301238358,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,22.16300842165947,22.16300842165947
+3,dawn_dusk,2,2,28,1.9499715566635132,0.0017839915817603469,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.9477798640728,21.043832257390022
+3,dawn_dusk,2,3,29,2.837068557739258,0.002232349943369627,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.82855451107025,20.996218740940094
+3,dawn_dusk,2,4,30,2.23256778717041,0.0018486827611923218,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.212954685091972,21.291838973760605
+3,dawn_dusk,2,5,31,2.4413094520568848,0.002071255585178733,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,21.20458361506462,21.36877979338169
+3,dawn_dusk,2,6,32,2.5821967124938965,0.002052950905635953,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,22.02045649290085,22.08297497034073
+3,dawn_dusk,2,7,33,2.576756477355957,0.001833906746469438,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,22.85912698507309,23.03700691461563
+3,dawn_dusk,2,8,34,1.817436933517456,0.001839487231336534,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.591833218932152,20.682335898280144
+3,dawn_dusk,2,9,35,2.422376871109009,0.0021021305583417416,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.398572772741318,20.593268051743507
+3,dawn_dusk,2,10,36,2.67641544342041,0.0020190796349197626,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.076175153255463,20.16696248948574
+3,dawn_dusk,2,11,37,2.914813995361328,0.0023491382598876953,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,20.449083298444748,20.62168525159359
+3,dawn_dusk,2,12,38,2.795537233352661,0.0019956340547651052,overcast|rainy,True,loss_roi_proto|loss_track|loss_track_aux,18.804528519511223,18.886802196502686

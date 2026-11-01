@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "evaluation_cells": 10,
+  "metric_rows": 70,
+  "source_files_verified": 442,
+  "python_source_files": 346,
+  "all_config_model_changes_are_the_two_requested_flags": true,
+  "seed": 1790355234,
+  "gpus": 4,
+  "epochs_per_stage": 5,
+  "video_pair_protocol": "ics_advantage",
+  "bootstrap_repetitions": 10000,
+  "prespecified_decision_verified": true,
+  "equivalent_by_prespecified_rule": true
+}

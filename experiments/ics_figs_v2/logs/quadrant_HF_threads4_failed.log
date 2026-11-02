@@ -1,0 +1,43 @@
+2026-11-02T03:56:21Z HF load
+2026-11-02T03:56:34Z HF metrics_INT_00
+METRIC {"model": "HF", "space": "INT", "replicate": 0, "id_mAP_euc": 35.73297754159359, "id_mAP_cos": "", "silhouette": -0.15766531991285465, "within_var_ratio": 0.4593479148120305, "weather_bacc": 27.62163605209615, "nightclear_bacc": 68.04511453574229, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:35Z HF metrics_Random_00
+METRIC {"model": "HF", "space": "Random", "replicate": 0, "id_mAP_euc": 30.71712479393897, "id_mAP_cos": "", "silhouette": -0.18337495557472538, "within_var_ratio": 0.5050405647232428, "weather_bacc": 25.785183939829025, "nightclear_bacc": 65.72394608386824, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:36Z HF metrics_Random_01
+METRIC {"model": "HF", "space": "Random", "replicate": 1, "id_mAP_euc": 31.288134001286604, "id_mAP_cos": "", "silhouette": -0.16671995619095487, "within_var_ratio": 0.47763242939915723, "weather_bacc": 20.10692276318117, "nightclear_bacc": 50.19429335434483, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:36Z HF metrics_Random_02
+METRIC {"model": "HF", "space": "Random", "replicate": 2, "id_mAP_euc": 31.60852273491449, "id_mAP_cos": "", "silhouette": -0.16675090291312508, "within_var_ratio": 0.4867969710182714, "weather_bacc": 24.094985408041097, "nightclear_bacc": 57.058385972867455, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:37Z HF metrics_Random_03
+METRIC {"model": "HF", "space": "Random", "replicate": 3, "id_mAP_euc": 32.39431770987417, "id_mAP_cos": "", "silhouette": -0.16630340266020802, "within_var_ratio": 0.4680893987550212, "weather_bacc": 20.36347609704661, "nightclear_bacc": 56.333913901851965, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:37Z HF metrics_Random_04
+METRIC {"model": "HF", "space": "Random", "replicate": 4, "id_mAP_euc": 31.250607907711387, "id_mAP_cos": "", "silhouette": -0.1611877322706861, "within_var_ratio": 0.4809982665893838, "weather_bacc": 21.267402863381704, "nightclear_bacc": 53.827534995639326, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:38Z HF metrics_Random_05
+METRIC {"model": "HF", "space": "Random", "replicate": 5, "id_mAP_euc": 28.633093334140046, "id_mAP_cos": "", "silhouette": -0.19504350395354692, "within_var_ratio": 0.5239554556641581, "weather_bacc": 23.436137115136606, "nightclear_bacc": 59.21640044252896, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:39Z HF metrics_Random_06
+METRIC {"model": "HF", "space": "Random", "replicate": 6, "id_mAP_euc": 29.30292803819427, "id_mAP_cos": "", "silhouette": -0.20625009191096583, "within_var_ratio": 0.5037193004407898, "weather_bacc": 20.888582977435625, "nightclear_bacc": 57.82612427711755, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:39Z HF metrics_Random_07
+METRIC {"model": "HF", "space": "Random", "replicate": 7, "id_mAP_euc": 30.535085898490895, "id_mAP_cos": "", "silhouette": -0.17917935368505972, "within_var_ratio": 0.5037741710905653, "weather_bacc": 24.004085626256977, "nightclear_bacc": 64.36596389652212, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:40Z HF metrics_Random_08
+METRIC {"model": "HF", "space": "Random", "replicate": 8, "id_mAP_euc": 29.707017963425663, "id_mAP_cos": "", "silhouette": -0.1817359988320569, "within_var_ratio": 0.5020730818547499, "weather_bacc": 18.92957162490132, "nightclear_bacc": 47.48561349344802, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:41Z HF metrics_Random_09
+METRIC {"model": "HF", "space": "Random", "replicate": 9, "id_mAP_euc": 29.81646944049986, "id_mAP_cos": "", "silhouette": -0.18706676060543323, "within_var_ratio": 0.5165407773648041, "weather_bacc": 21.876069677386052, "nightclear_bacc": 47.86973106078895, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:41Z HF metrics_ID_00
+METRIC {"model": "HF", "space": "ID", "replicate": 0, "id_mAP_euc": 40.94389772939121, "id_mAP_cos": "", "silhouette": -0.12431435968351973, "within_var_ratio": 0.3495485875582229, "weather_bacc": 21.53156334791346, "nightclear_bacc": 52.95200314799226, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:42Z HF metrics_W_00
+METRIC {"model": "HF", "space": "W", "replicate": 0, "id_mAP_euc": 37.61408358355979, "id_mAP_cos": "", "silhouette": -0.16130194564893593, "within_var_ratio": 0.36632688017881676, "weather_bacc": 31.21995831877088, "nightclear_bacc": 75.4803918755862, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:42Z HF metrics_ICS_00
+METRIC {"model": "HF", "space": "ICS", "replicate": 0, "id_mAP_euc": 38.566466154305814, "id_mAP_cos": "", "silhouette": -0.14837025589304087, "within_var_ratio": 0.4017514732371512, "weather_bacc": 22.482046490662405, "nightclear_bacc": 57.94517464522691, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:43Z HF metrics_Complement_00
+METRIC {"model": "HF", "space": "Complement", "replicate": 0, "id_mAP_euc": 57.56063237338822, "id_mAP_cos": 57.51019868557289, "silhouette": 0.13596385270844408, "within_var_ratio": 0.48638971744075343, "weather_bacc": 34.268270591473474, "nightclear_bacc": 78.8039192223694, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T03:56:46Z HF metrics_Full_00
+METRIC {"model": "HF", "space": "Full", "replicate": 0, "id_mAP_euc": 57.4885979041381, "id_mAP_cos": 57.4885979041381, "silhouette": 0.1368475528653067, "within_var_ratio": 0.48294416853219096, "weather_bacc": 36.355460804268716, "nightclear_bacc": 83.92681944319071, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+Traceback (most recent call last):
+  File "experiments/ics_figs_v2/scripts/quadrant_analysis.py", line 324, in <module>
+    main()
+  File "experiments/ics_figs_v2/scripts/quadrant_analysis.py", line 315, in main
+    rows = metrics(args.model, data, Z, fit, sources) if args.phase != 'figures' else read_csv(OUT / ('quadrant_metrics_%s.csv' % args.model))
+  File "experiments/ics_figs_v2/scripts/quadrant_analysis.py", line 201, in metrics
+    checks = original_selfchecks(model, rows)
+  File "experiments/ics_figs_v2/scripts/quadrant_analysis.py", line 128, in original_selfchecks
+    assert check['pass_check'], check
+AssertionError: {'model': 'HF', 'space': 'Full', 'metric': 'weather_bacc', 'actual': 36.355460804268716, 'reference_exact': 36.35750560773475, 'absolute_error': 0.0020448034660347503, 'reference_prompt': 36.358, 'pass_check': False}

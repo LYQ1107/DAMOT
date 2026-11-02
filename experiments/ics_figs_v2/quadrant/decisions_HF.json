@@ -1,0 +1,41 @@
+{
+  "model": "HF",
+  "P1": {
+    "status": "FAIL",
+    "INT_weather_bacc": 27.62163605209615,
+    "random_mean": 22.07524180925962,
+    "random_sd": 2.054643629296373,
+    "threshold": 28.23917269714874
+  },
+  "P2": {
+    "status": "PASS",
+    "INT_id_mAP": 35.73297754159359,
+    "ID_id_mAP": 40.94389772939121,
+    "INT_silhouette": -0.15766531991285465,
+    "ID_silhouette": -0.12431435968351973
+  },
+  "P3": {
+    "id_mAP_euc": {
+      "INT": 35.73297754159359,
+      "random_mean": 30.525330182247636,
+      "random_sd": 1.0980958066958915,
+      "band_low": 28.329138568855853,
+      "band_high": 32.72152179563942,
+      "result": "higher"
+    },
+    "silhouette": {
+      "INT": -0.15766531991285465,
+      "random_mean": -0.1793612658596762,
+      "random_sd": 0.013673724581893412,
+      "band_low": -0.20670871502346302,
+      "band_high": -0.1520138166958894,
+      "result": "comparable"
+    }
+  },
+  "P4": {
+    "status": "PASS",
+    "retention_ratio": 1.000375740272372,
+    "complement_cosine_mAP": 57.51019868557289,
+    "full_cosine_mAP": 57.4885979041381
+  }
+}

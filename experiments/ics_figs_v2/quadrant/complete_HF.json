@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "phase": "all",
+  "source_files_unchanged": true,
+  "model": "HF",
+  "metric_rows": 16,
+  "cpu_only": true
+}

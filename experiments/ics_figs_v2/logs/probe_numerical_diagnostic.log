@@ -1,0 +1,12 @@
+{"model": "F", "space": "Full", "MKL_runtime_threads": 4, "actual": 34.515852059184695, "reference": 34.51257904293181, "difference_pp": 0.003273016252883565}
+{"model": "F", "space": "Complement", "MKL_runtime_threads": 4, "actual": 32.78222278468896, "reference": 32.78222278468896, "difference_pp": 0.0}
+{"model": "F", "space": "Full", "MKL_runtime_threads": 2, "actual": 34.51257904293181, "reference": 34.51257904293181, "difference_pp": 0.0}
+{"model": "F", "space": "Complement", "MKL_runtime_threads": 2, "actual": 32.78222278468896, "reference": 32.78222278468896, "difference_pp": 0.0}
+{"model": "F", "space": "Full", "MKL_runtime_threads": 1, "actual": 34.515852059184695, "reference": 34.51257904293181, "difference_pp": 0.003273016252883565}
+{"model": "F", "space": "Complement", "MKL_runtime_threads": 1, "actual": 32.78222278468896, "reference": 32.78222278468896, "difference_pp": 0.0}
+{"model": "HF", "space": "Full", "MKL_runtime_threads": 4, "actual": 36.355460804268716, "reference": 36.35750560773475, "difference_pp": -0.0020448034660347503}
+{"model": "HF", "space": "Complement", "MKL_runtime_threads": 4, "actual": 34.268270591473474, "reference": 34.25698707451368, "difference_pp": 0.011283516959792905}
+{"model": "HF", "space": "Full", "MKL_runtime_threads": 2, "actual": 36.35750560773475, "reference": 36.35750560773475, "difference_pp": 0.0}
+{"model": "HF", "space": "Complement", "MKL_runtime_threads": 2, "actual": 34.25698707451368, "reference": 34.25698707451368, "difference_pp": 0.0}
+{"model": "HF", "space": "Full", "MKL_runtime_threads": 1, "actual": 36.36048845635519, "reference": 36.35750560773475, "difference_pp": 0.0029828486204408478}
+{"model": "HF", "space": "Complement", "MKL_runtime_threads": 1, "actual": 34.24361304750554, "reference": 34.25698707451368, "difference_pp": -0.013374027008140388}

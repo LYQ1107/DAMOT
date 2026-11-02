@@ -1,0 +1,195 @@
+{
+  "status": "PASS",
+  "source_files": [
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/scripts/evidence_cpu.py",
+      "bytes": 18262,
+      "sha256": "c640c4ea4e47bc352e0ff9e0519ea0a433f4ee14cd35d2a43e01687da19465a3"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/scripts/ics_probe_analyze.py",
+      "bytes": 49874,
+      "sha256": "8fe210dde78c83c4043539db44a483ffcedea0488f59de11232ffe8c47103d9c"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/scripts/idapr_basis.py",
+      "bytes": 2673,
+      "sha256": "d9cf7b6b548ff4f72495d26f55e9b281eb0405c57b7129da224650eebb905d2f"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/protocol.json",
+      "bytes": 5817,
+      "sha256": "e8d98c89263c84e2e609c52884d3ff190e2bea70cebae79ff64bbee3af0f6006"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/figure_protocol.json",
+      "bytes": 43590,
+      "sha256": "99ba27ae5abaad2a413d2d2e775a272ce5d5aa425adc2ec5c674bb6f1de9bdb9"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/deletion.csv",
+      "bytes": 1741,
+      "sha256": "a39181542bd3910ed9b9bff1615f90601911568fd02645631e86f501e5e01ae2"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/ICS_00.npy",
+      "bytes": 4224,
+      "sha256": "d88e2ebc273c74cfe3b8bb1b6c4d2d75d108ee871e6301ebe49af625c3ce141c"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/ID_00.npy",
+      "bytes": 4224,
+      "sha256": "0e41fd59a3df9bda16d7281772aee730cb04e04331a3ef57201557717ace9fc9"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/INT_00.npy",
+      "bytes": 4224,
+      "sha256": "8f3e4d544d49a41afa07087dda6855a6eaeb54c33ebf52e1b90f4fce4d5bd52e"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_00.npy",
+      "bytes": 4224,
+      "sha256": "2c835794958ffad9cdda44aa57d6fe17863a7270c2209b5de618f984305276e2"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_01.npy",
+      "bytes": 4224,
+      "sha256": "c4b407c9099d8953b271f79003d35b01aa1f16867a77f85fbc8cd13ee00a1dd8"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_02.npy",
+      "bytes": 4224,
+      "sha256": "5dd7cb6cf753334d979f31e46aec134dfe474be0bbed1b7f73ece135dbe5e43d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_03.npy",
+      "bytes": 4224,
+      "sha256": "1d1e1b027ff34e04cc3c6efde8f49a3bfa33d16060f96ba6ef1f9b2f70ce52ab"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_04.npy",
+      "bytes": 4224,
+      "sha256": "dafc7decb1130b2da6f4ca695bbff64e3c0c56f3278b2b07f7f575d9a972a66e"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_05.npy",
+      "bytes": 4224,
+      "sha256": "bb068ad02622abcf4b2029eae6ed824a2f4145a604e8d8f28318d17d59932851"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_06.npy",
+      "bytes": 4224,
+      "sha256": "c97a9385171ba8472aa7af16e0ce1408dad94bcf0c4ec7cc2c124f03ad786e4e"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_07.npy",
+      "bytes": 4224,
+      "sha256": "28fbfd0a05620dcdf15c7e04878b4918f29c1cf239f99438ad1c6611809753f8"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_08.npy",
+      "bytes": 4224,
+      "sha256": "366b8068a870cdb5a2b58fd36b932ef8493618b44e48898a5af9fed53d897c52"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/R_09.npy",
+      "bytes": 4224,
+      "sha256": "4aaf4da6d63300bc9636a6048a26c91cfca0b1ba5b251f044fe26745f11a6de3"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/F/bases/W_00.npy",
+      "bytes": 4224,
+      "sha256": "1c1753623de8f385e5c446af8d7d9878ba2325a60a5963cf626afc95c68c90f6"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/clear_holdout_45v.npz",
+      "bytes": 40218614,
+      "sha256": "ffa2e70da11f59705b6e56d5feb725038ed940915e03224839cbbb820ec0d0bc"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/overcast.npz",
+      "bytes": 26893004,
+      "sha256": "0c0ee808c6f428e4d4f5d1ad4a72ac4eae8f77b0b4486464bad9e774fd14ae35"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/rainy.npz",
+      "bytes": 21576040,
+      "sha256": "2f4c6d47a1f1d5068b0c1e10dae5ce1980fbdec7e76253521d56e20e97aae756"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/dawn_dusk.npz",
+      "bytes": 33584362,
+      "sha256": "5b53c92a192726de45068506a1b42c0a9bac4586e190f88fce521289ec4f49b1"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/results/ics_probe/feats/F_stage4_e5/night.npz",
+      "bytes": 48987854,
+      "sha256": "7865b0bbaf0e5b9a3f4ba2bdd11f9711c095fe8a62092a269e0d623a0490fc97"
+    }
+  ],
+  "load_function": "Unmodified evidence_cpu.load(model); stage4 clean features L2 normalized once",
+  "fit_rois": 15820,
+  "test_rois": 18019,
+  "fit_videos": 71,
+  "test_videos": 77,
+  "dimensions": 256,
+  "category": "car",
+  "seed": 0,
+  "retrieval": {
+    "gap": 4,
+    "window": 30,
+    "max_queries": 4000,
+    "queries": 4000,
+    "task_sha256": "79b28e35cb55c004ff84aab198a4e14a8e465c9b3891ea316fb88a1170316c27",
+    "scoring": "Negative Euclidean distance in every space; additional historical cosine for Full/Complement"
+  },
+  "silhouette": "Exact sklearn silhouette_score, Euclidean, within video; identity count>=3 and >=2 eligible identities; RoI-weighted video mean",
+  "within_var_ratio": "Within-identity SSE / video-total SSE in every nonconstant test video, all identities; RoI-weighted video mean",
+  "random_sd_ddof": 0,
+  "basis_reestimated": false,
+  "source_mutation": false,
+  "original_selfchecks": [
+    {
+      "model": "F",
+      "space": "Full",
+      "metric": "id_mAP_cos",
+      "actual": 57.31398500607996,
+      "reference_exact": 57.31398500607996,
+      "absolute_error": 0.0,
+      "reference_prompt": 57.314,
+      "pass_check": true
+    },
+    {
+      "model": "F",
+      "space": "Full",
+      "metric": "weather_bacc",
+      "actual": 34.51257904293181,
+      "reference_exact": 34.51257904293181,
+      "absolute_error": 0.0,
+      "reference_prompt": 34.513,
+      "pass_check": true
+    },
+    {
+      "model": "F",
+      "space": "Complement",
+      "metric": "id_mAP_cos",
+      "actual": 57.68894093055377,
+      "reference_exact": 57.68894093055377,
+      "absolute_error": 0.0,
+      "reference_prompt": 57.689,
+      "pass_check": true
+    },
+    {
+      "model": "F",
+      "space": "Complement",
+      "metric": "weather_bacc",
+      "actual": 32.78222278468896,
+      "reference_exact": 32.78222278468896,
+      "absolute_error": 0.0,
+      "reference_prompt": 32.782,
+      "pass_check": true
+    }
+  ],
+  "numerical_compatibility": "Shell thread variables are 4; load/projections/logistic probes replay historical MKL=2; all other operations restore MKL=4",
+  "compatibility_evidence": "../ics_evidence/logs/part1_F_terminal_transcript.txt and logs/probe_numerical_diagnostic.csv"
+}

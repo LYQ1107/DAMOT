@@ -1,0 +1,22 @@
+{
+  "status": "reviewed",
+  "review_method": "Direct visual inspection of the delivered PNGs; no changes to selected RoIs, identities or bases",
+  "reviewed_images": [
+    "drift/drift_restoration_A_single.png",
+    "drift/drift_restoration_A_double.png",
+    "drift/drift_restoration_B_single.png",
+    "drift/drift_restoration_B_double.png",
+    "drift/drift_restoration_C_double.png",
+    "quadrant/quadrant_pca_F.png",
+    "quadrant/quadrant_tsne_F.png",
+    "quadrant/quadrant_pca_HF.png",
+    "quadrant/quadrant_tsne_HF.png"
+  ],
+  "observations": [
+    "t-SNE 更清楚地展示了补空间中的局部身份聚集：两模型的补空间下排中，高亮同一身份的点比 INT 或 Random 列更集中。PCA 只保留最高方差的两个方向，补空间下排仍有较多身份重叠。该观察对应原空间中补空间约 57.5% 的欧氏检索 mAP 和正的轮廓系数。",
+    "PCA 对原本只有两维的 INT、Random、ID 空间只是旋转，更适合直接观察这些平面的原始几何结构。INT 和 Random 的天气颜色均大量混合，两种可视化都没有展示清晰的五域分离。INT 天气 bAcc 高于随机均值，但 F/HF 均未达到预定 mean+3SD 的 P1 阈值。",
+    "t-SNE 在 INT、Random 和 ID 三个二维输入上都产生了岛状或曲线状结构，不能将这些结构本身当作天气可分的证据。图上的身份聚集必须结合降维前的全测试集指标判断。",
+    "结论应写成：去掉 INT 两维基本保留身份检索能力；INT 含部分天气信息，也仍含身份信息。P2 支持 INT 的身份信息弱于身份 oracle；P3 显示 INT 身份检索高于随机均值+2SD，身份轮廓系数位于随机均值±2SD 内。现有结果不足以把 INT 称为只承载天气的专用子空间。",
+    "漂移 A/B/C 均使用相同配色和共享纵轴，明确显示 k=2、8、16，随机误差棒包含十个预定基底。k=2 的 FAP 恢复比例为 F 5.6%、HF 0.2%，身份 oracle 为 43.5%、52.9%；FAP 在 k=8/16 时恢复比例明显增大。此处衡量的是跨阶段身份检索遗忘代理，不是跟踪 AvgF。"
+  ]
+}

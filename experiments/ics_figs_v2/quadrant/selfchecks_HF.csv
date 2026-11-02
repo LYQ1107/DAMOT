@@ -1,0 +1,5 @@
+model,space,metric,actual,reference_exact,absolute_error,reference_prompt,pass_check
+HF,Full,id_mAP_cos,57.4885979041381,57.4885979041381,0.0,57.489,True
+HF,Full,weather_bacc,36.35750560773475,36.35750560773475,0.0,36.358,True
+HF,Complement,id_mAP_cos,57.51019868557289,57.51019868557289,0.0,57.51,True
+HF,Complement,weather_bacc,34.25698707451368,34.25698707451368,0.0,34.257,True

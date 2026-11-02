@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source_files": [
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/A2_restoration.csv",
+      "bytes": 22661,
+      "sha256": "24c745f05ea69c09208565bf44c3e4b752448b7bec1939160f9ead39ed07cec7"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/A2_random_replicates.csv",
+      "bytes": 35685,
+      "sha256": "6de7cb9cc0a8de7c733ce206910e3dcf76f624a26bf592ca9ec3a1cef956072c"
+    }
+  ],
+  "recovery": "100 * sum(reduction over old domains) / sum(forgetting_proxy over old domains)",
+  "residual": "100 * sum(forgetting_restored over old domains) / 3",
+  "random": "One ratio-of-sums per replicate; ten-replicate mean, population SD (ddof=0), min/max",
+  "query_stage": 4,
+  "gallery_stages": [
+    1,
+    2,
+    3
+  ],
+  "dimensions": [
+    2,
+    8,
+    16
+  ],
+  "checks": 24,
+  "all_selfchecks_pass": true,
+  "no_averaging_of_domain_ratios": true
+}

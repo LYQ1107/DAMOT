@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "drift": {
+    "summary_rows": 24,
+    "random_replicates": 60,
+    "selfchecks": 24
+  },
+  "quadrant": {
+    "F": {
+      "metric_rows": 16,
+      "selfchecks": 4,
+      "plot_coordinate_rows": 32000,
+      "test_rois": 18019,
+      "silhouette_rois": 17410,
+      "test_videos": 77
+    },
+    "HF": {
+      "metric_rows": 16,
+      "selfchecks": 4,
+      "plot_coordinate_rows": 32000,
+      "test_rois": 18019,
+      "silhouette_rois": 17410,
+      "test_videos": 77
+    }
+  },
+  "files": {
+    "pngs": 10,
+    "pdfs": 10,
+    "all_source_syntax": "PASS",
+    "other_experiment_directories_unchanged": true,
+    "audit_base_commit": "ed937c3"
+  },
+  "cpu_only": true,
+  "all_outputs_under": "experiments/ics_figs_v2/"
+}

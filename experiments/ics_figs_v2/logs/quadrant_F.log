@@ -1,0 +1,44 @@
+2026-11-02T04:13:08Z F load
+2026-11-02T04:13:26Z F metrics_INT_00
+METRIC {"model": "F", "space": "INT", "replicate": 0, "id_mAP_euc": 34.929302969042325, "id_mAP_cos": "", "silhouette": -0.16657540268766793, "within_var_ratio": 0.4526598753400818, "weather_bacc": 28.02028078575892, "nightclear_bacc": 69.28485341286353, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:27Z F metrics_Random_00
+METRIC {"model": "F", "space": "Random", "replicate": 0, "id_mAP_euc": 31.30196822338188, "id_mAP_cos": "", "silhouette": -0.17755716430149998, "within_var_ratio": 0.49727335239036263, "weather_bacc": 26.08435107487898, "nightclear_bacc": 65.94101433180855, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:28Z F metrics_Random_01
+METRIC {"model": "F", "space": "Random", "replicate": 1, "id_mAP_euc": 30.77099894817167, "id_mAP_cos": "", "silhouette": -0.1717887329163669, "within_var_ratio": 0.49536031700660976, "weather_bacc": 21.15974429052681, "nightclear_bacc": 54.20735602938718, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:28Z F metrics_Random_02
+METRIC {"model": "F", "space": "Random", "replicate": 2, "id_mAP_euc": 31.53328996606418, "id_mAP_cos": "", "silhouette": -0.16579814079477306, "within_var_ratio": 0.4994002632001948, "weather_bacc": 23.6081128183065, "nightclear_bacc": 55.925192731720664, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:29Z F metrics_Random_03
+METRIC {"model": "F", "space": "Random", "replicate": 3, "id_mAP_euc": 31.86551395963279, "id_mAP_cos": "", "silhouette": -0.17241679661999632, "within_var_ratio": 0.4890289088653068, "weather_bacc": 21.13074259952245, "nightclear_bacc": 54.83300316268724, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:29Z F metrics_Random_04
+METRIC {"model": "F", "space": "Random", "replicate": 4, "id_mAP_euc": 31.477717618476493, "id_mAP_cos": "", "silhouette": -0.1653016777728584, "within_var_ratio": 0.4702653013715867, "weather_bacc": 20.66970785345091, "nightclear_bacc": 53.535925855172295, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:30Z F metrics_Random_05
+METRIC {"model": "F", "space": "Random", "replicate": 5, "id_mAP_euc": 28.723465223583755, "id_mAP_cos": "", "silhouette": -0.1923245778958261, "within_var_ratio": 0.5336240056689684, "weather_bacc": 24.99324403712796, "nightclear_bacc": 61.56054905127546, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:31Z F metrics_Random_06
+METRIC {"model": "F", "space": "Random", "replicate": 6, "id_mAP_euc": 28.70689093184128, "id_mAP_cos": "", "silhouette": -0.20543121880724155, "within_var_ratio": 0.5321884078002762, "weather_bacc": 21.854072932784465, "nightclear_bacc": 56.82454678218325, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:31Z F metrics_Random_07
+METRIC {"model": "F", "space": "Random", "replicate": 7, "id_mAP_euc": 30.789497461736502, "id_mAP_cos": "", "silhouette": -0.18913752871850728, "within_var_ratio": 0.5108450570509407, "weather_bacc": 23.095272245352728, "nightclear_bacc": 58.43667989448535, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:32Z F metrics_Random_08
+METRIC {"model": "F", "space": "Random", "replicate": 8, "id_mAP_euc": 30.14265888001615, "id_mAP_cos": "", "silhouette": -0.1812290567455209, "within_var_ratio": 0.5043587640530688, "weather_bacc": 19.140499986309027, "nightclear_bacc": 53.74660761615394, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:33Z F metrics_Random_09
+METRIC {"model": "F", "space": "Random", "replicate": 9, "id_mAP_euc": 30.9954126567906, "id_mAP_cos": "", "silhouette": -0.1877606216761651, "within_var_ratio": 0.5092630676157377, "weather_bacc": 21.008206852233464, "nightclear_bacc": 46.105843075758244, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:33Z F metrics_ID_00
+METRIC {"model": "F", "space": "ID", "replicate": 0, "id_mAP_euc": 38.77748479791537, "id_mAP_cos": "", "silhouette": -0.13020121478104618, "within_var_ratio": 0.39096846050577766, "weather_bacc": 22.377203653734558, "nightclear_bacc": 54.469836444821375, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:34Z F metrics_W_00
+METRIC {"model": "F", "space": "W", "replicate": 0, "id_mAP_euc": 37.89176760940875, "id_mAP_cos": "", "silhouette": -0.1564360083851022, "within_var_ratio": 0.34897763532841775, "weather_bacc": 29.802887041076993, "nightclear_bacc": 76.38174491046206, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:34Z F metrics_ICS_00
+METRIC {"model": "F", "space": "ICS", "replicate": 0, "id_mAP_euc": 38.49654833165844, "id_mAP_cos": "", "silhouette": -0.1471119557907404, "within_var_ratio": 0.40308070343747765, "weather_bacc": 20.560319332091236, "nightclear_bacc": 58.158767412682046, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:35Z F metrics_Complement_00
+METRIC {"model": "F", "space": "Complement", "replicate": 0, "id_mAP_euc": 57.55251595835475, "id_mAP_cos": 57.68894093055377, "silhouette": 0.13633970954310984, "within_var_ratio": 0.4827971579270991, "weather_bacc": 32.78222278468896, "nightclear_bacc": 77.98363585175045, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+2026-11-02T04:13:39Z F metrics_Full_00
+METRIC {"model": "F", "space": "Full", "replicate": 0, "id_mAP_euc": 57.31398500607996, "id_mAP_cos": 57.31398500607996, "silhouette": 0.13641113829608761, "within_var_ratio": 0.4788843018044826, "weather_bacc": 34.51257904293181, "nightclear_bacc": 82.60534146362512, "n_rois": 18019, "n_videos_used": 76, "n_silhouette_rois": 17410, "n_variance_videos": 77, "n_variance_rois": 18019, "n_test_videos": 77, "n_retrieval_queries": 4000}
+QUADRANT_SELFCHECK_PASS F 4
+2026-11-02T04:13:44Z F metrics_complete
+2026-11-02T04:13:45Z F pca_INT
+2026-11-02T04:13:45Z F pca_Random
+2026-11-02T04:13:45Z F pca_ID
+2026-11-02T04:13:45Z F pca_Complement
+2026-11-02T04:13:47Z F tsne_INT
+2026-11-02T04:14:00Z F tsne_Random
+2026-11-02T04:14:11Z F tsne_ID
+2026-11-02T04:14:21Z F tsne_Complement
+2026-11-02T04:14:37Z F figures_complete

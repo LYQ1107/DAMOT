@@ -1,0 +1,17 @@
+{
+  "python": "3.7.16",
+  "numpy": "1.21.5",
+  "scipy": "1.4.1",
+  "sklearn": "0.22.2",
+  "matplotlib": "3.5.2",
+  "executable": "/data1/liuyeqiang/damot_rebuttal_20261026/env/bin/python",
+  "shell_threads": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "random_sd_ddof": 0,
+  "default_MKL_threads": 4,
+  "historical_probe_MKL_threads": 2
+}

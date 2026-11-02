@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "source_sha256": {
+    "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3_energy/energy_summary.csv": "ccb6ed9ce0172034835d3d26af90ea8e080ca7a0e70b7abd9fb8a22511dce02a",
+    "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/drift_summary.csv": "96be6077d27f7ce1ce47f28bfc669b511da2d2e0055e5f51c10c93727922b23a"
+  },
+  "data_rows": 9,
+  "figures": [
+    {
+      "name": "drift_share_HF_3bars",
+      "size_inches": [
+        3.3,
+        3.5
+      ],
+      "png_pixels": [
+        990,
+        1050
+      ],
+      "min_font_pt": 8,
+      "dpi": 300
+    },
+    {
+      "name": "drift_pair_HF_horizontal",
+      "size_inches": [
+        3.3,
+        2.45
+      ],
+      "png_pixels": [
+        990,
+        735
+      ],
+      "min_font_pt": 8,
+      "dpi": 300
+    },
+    {
+      "name": "drift_pair_HF_vertical",
+      "size_inches": [
+        3.3,
+        4.6
+      ],
+      "png_pixels": [
+        990,
+        1380
+      ],
+      "min_font_pt": 8,
+      "dpi": 300
+    }
+  ],
+  "data_recomputed": false,
+  "GPU_used": false,
+  "training": false,
+  "selected_bases": [
+    "Intervention-sensitive",
+    "Random",
+    "Identity oracle"
+  ],
+  "dimensions": [
+    2,
+    8,
+    16
+  ],
+  "colors": {
+    "Intervention-sensitive": "#0072B2",
+    "Random": "#777777",
+    "Identity oracle": "#D55E00"
+  },
+  "source_base_commit": "5473ff81b871819e125e68d03f499c6e3b98ecef",
+  "random_error_bars": "SD over ten fixed bases, ddof=0",
+  "quantity": "Drift share is cross-stage per-RoI feature drift energy; not weather-mean shift energy"
+}

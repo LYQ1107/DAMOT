@@ -1,0 +1,4 @@
+FIGURE drift_share_HF_3bars
+FIGURE drift_pair_HF_horizontal
+FIGURE drift_pair_HF_vertical
+CSV_MATCH_PASS; all sources unchanged; three PNG/PDF pairs

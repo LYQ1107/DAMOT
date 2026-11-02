@@ -1,0 +1,15 @@
+{
+  "status": "reviewed",
+  "method": "Direct inspection of all three generated PNGs",
+  "files": [
+    "drift_share_HF_3bars.png",
+    "drift_pair_HF_horizontal.png",
+    "drift_pair_HF_vertical.png"
+  ],
+  "recommended_layout": "drift_pair_HF_horizontal",
+  "observations": [
+    "The horizontal 3.3 x 2.45 inch layout fits both charts in one column with a shared legend, metric names above panels, all three ranks and eight-point text.",
+    "The vertical version provides wider individual panels when more height is available; standalone Drift share matches the original figure dimensions.",
+    "Value labels, random SD error bars, k=2 shading and legend are visible without clipping. Source values and SDs are unchanged."
+  ]
+}

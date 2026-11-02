@@ -1,0 +1,34 @@
+{
+  "model": "HF",
+  "query_stage": 4,
+  "domains": [
+    "overcast",
+    "rainy",
+    "dawn_dusk"
+  ],
+  "gallery_stages": [
+    1,
+    2,
+    3
+  ],
+  "category": "car",
+  "split": "Original v3 test videos, seed=0",
+  "energy_rois": 8117,
+  "energy_queries_capped": false,
+  "delta": "L2-normalized HF stage4 clean feature minus same-RoI HF stage_j clean feature",
+  "energy": "100 * sum_over_domains_and_RoIs(||delta @ E||^2) / sum_over_domains_and_RoIs(||delta||^2)",
+  "summation": "Ratio of sums; no averaging of per-RoI or per-domain ratios",
+  "native_bases": "Saved HF stage1 PCA/identity bases from ics_figs_v3/bases; unchanged",
+  "random_bases": "Saved idapr/A/HF/bases/random_k{k}_rep{0..9}.npy; unchanged",
+  "bases_reestimated": false,
+  "basis_orthogonalization_applied": false,
+  "random_replicates": 10,
+  "sd_ddof": 0,
+  "restoration": "Read directly from ics_figs_v3/drift_restoration_HF_native.csv, including each random replicate",
+  "efficiency": "recovered_forgetting_pct / drift_energy_pct; main-table Random is ratio of means",
+  "additional_random_efficiency": "Mean/SD of paired replicate ratios also retained in CSV, distinguished from the main-table ratio of means",
+  "random_sanity_rule": "Theoretical k/256 within empirical random mean +/-2SD; descriptive, not a significance test",
+  "no_GPU": true,
+  "no_training": true,
+  "input_base_commit": "68595ecad85a987008cb53523ccc401d844b10fd"
+}

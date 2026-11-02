@@ -1,0 +1,322 @@
+{
+  "sources": [
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/clear_holdout_45v.npz",
+      "bytes": 15581313,
+      "sha256": "f4686ecad985ef64149727685422c71c079d432bf21e071c8ddf17709d983955"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/overcast.npz",
+      "bytes": 10420400,
+      "sha256": "30570f14f4fd8eba82d229247ba9cbed53214862d3ade008904d50ccf0c5b767"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/rainy.npz",
+      "bytes": 8484383,
+      "sha256": "f5a7c47da8930fafb70a9e2ba628e41a29e4dd3d29bbdb3a38cc60773a84d790"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/dawn_dusk.npz",
+      "bytes": 13121685,
+      "sha256": "cacf7eb0cb45b52c7358d44fc9041c6384c19dca886bcd84aa223de38f944506"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/night.npz",
+      "bytes": 18805620,
+      "sha256": "cc338746c225cf31d98c8b4e97f1a53cbb86c8348b729451e5c054d658eeb18a"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/clear_holdout_45v.npz",
+      "bytes": 15583894,
+      "sha256": "6dcfd0b519433e4c5755fcefe59095f17bd7fdecec64b539122b8ce3c1787a3a"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/overcast.npz",
+      "bytes": 10421446,
+      "sha256": "aa8c469f932d7421432f29d54a21765286e60275a8555bc8a9eb09039f265b41"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/rainy.npz",
+      "bytes": 8485973,
+      "sha256": "71b6c98e4f8487ab2dfb9e12ee62b63dee025cf3b09c718f2302ed2dbf021b5e"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/dawn_dusk.npz",
+      "bytes": 13124116,
+      "sha256": "9a9a3322f3a9ab2f79a5e7dfb030f37da0116969d7b8c48e8155dd8d4ea78f04"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/night.npz",
+      "bytes": 18809509,
+      "sha256": "30a89c5e5741402dfde1851b441e7581ef58162d02b49623bb9970d54bcd72b7"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/clear_holdout_45v.npz",
+      "bytes": 15588814,
+      "sha256": "4054648b10995b6484f64dbd1ef1798862d6311f742a32e1cd9ec771ae5cfdc2"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/overcast.npz",
+      "bytes": 10425936,
+      "sha256": "645a13baa8b4bd2a5077035b3c972e2c7d85b6305278fd0227b95c8cf6ca5d40"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/rainy.npz",
+      "bytes": 8488508,
+      "sha256": "ea49d701028c4604375e6719cae81991c7d324e9408a4fa8ce1d5e8baca8ee58"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/dawn_dusk.npz",
+      "bytes": 13128116,
+      "sha256": "c444807e152a6efb121775ec79cc36435e8a5dd761c9695cbf374776a5ecc49e"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/night.npz",
+      "bytes": 18814239,
+      "sha256": "ce004e3fc1905924f6521fd84ef06192456c5eaa71e39810f50c6e5a490f13ac"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/clear_holdout_45v.npz",
+      "bytes": 40195301,
+      "sha256": "e890b3f5e6d2f6329dd59c23de7266bf463dbdc132a372bf201073d06626b6de"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/overcast.npz",
+      "bytes": 26878681,
+      "sha256": "a72d249094860e37cfebe9549cd16cf1c7118c73d06061b71b441a28925d8799"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/rainy.npz",
+      "bytes": 21561451,
+      "sha256": "187fd90c5e2f01a5947ea9fbb496a0f2f263cb9fe709e840d7c210e006e8ec57"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/dawn_dusk.npz",
+      "bytes": 33563501,
+      "sha256": "b10a95e8f361a9bcde159528cf289ab63e7bbdc1be3023163fb5bc925e9f27c7"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/night.npz",
+      "bytes": 48964054,
+      "sha256": "1f3e155617d06a06c3f960b2bec733aebd0028f399543bf6b98f3ba1eef5ce7b"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/bases/HF_stage1_FAP_residual_PCA_k2.npy",
+      "bytes": 4224,
+      "sha256": "45e9d39462d3780a18db38d469a20c71c29c7e74222b1b38361155313b82e09d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/bases/HF_stage1_Identity_oracle_k2.npy",
+      "bytes": 4224,
+      "sha256": "91068ff4aad23b1e218422c97db0f3af84ce240de7eb1b7e60447eddc7fc0d66"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep0.npy",
+      "bytes": 4224,
+      "sha256": "a1289548f2252193d5961c4fa0829d4070caa3e47989d78634e13605ab8e9fa9"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep1.npy",
+      "bytes": 4224,
+      "sha256": "c4b407c9099d8953b271f79003d35b01aa1f16867a77f85fbc8cd13ee00a1dd8"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep2.npy",
+      "bytes": 4224,
+      "sha256": "ca70ec0873b3813a31d08c8176bb0218b1b5aa31a680e5d1479c1a9b7bd294af"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep3.npy",
+      "bytes": 4224,
+      "sha256": "4db0d0f7c38102cd16d63167a93d4336fda48d94bebc2d91ec68bd8fb13b04d3"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep4.npy",
+      "bytes": 4224,
+      "sha256": "dafc7decb1130b2da6f4ca695bbff64e3c0c56f3278b2b07f7f575d9a972a66e"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep5.npy",
+      "bytes": 4224,
+      "sha256": "bb068ad02622abcf4b2029eae6ed824a2f4145a604e8d8f28318d17d59932851"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep6.npy",
+      "bytes": 4224,
+      "sha256": "b750f5383893d56d0aa96ccc2ede7850b6feaefbbfa69f8f2d9d49b12166b2e9"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep7.npy",
+      "bytes": 4224,
+      "sha256": "74da634d56ecde192f9b8b4d419ab9a48fb1c0026fcdce4e7684a7fe65371639"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep8.npy",
+      "bytes": 4224,
+      "sha256": "fed6d9bc55c2d2bf60f09267fc6fadd54062abfc205900ad359c1cc77366fa39"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k2_rep9.npy",
+      "bytes": 4224,
+      "sha256": "32be0d747d82a703aed5e53a960aa2cd3bc92c2a30be1ccc81e5d85fc31d410d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/bases/HF_stage1_FAP_residual_PCA_k8.npy",
+      "bytes": 16512,
+      "sha256": "1da1409782f03569f4dd7d05e9167be41f4c41e8ea68d87d040bd289c461e433"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/bases/HF_stage1_Identity_oracle_k8.npy",
+      "bytes": 16512,
+      "sha256": "7dd8b700e39c3d903b9ba4a659887e4549359debe697d2afc9cc46c1fc608b84"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep0.npy",
+      "bytes": 16512,
+      "sha256": "302f3b75d8dd4ec12d5cd1809f9d9cf80b3c3e8518ebd897d195259fa239f8af"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep1.npy",
+      "bytes": 16512,
+      "sha256": "e0caa50772d7043cfc8fbcb409023aae561ba443773a2baf0edf246ac3dcff9d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep2.npy",
+      "bytes": 16512,
+      "sha256": "0399adcd4021c5b1ffd96585e87a0a3fc34658c9828de8b9bdb5f240b6da704a"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep3.npy",
+      "bytes": 16512,
+      "sha256": "c7b0ade4a4afb750b9fe6f03d789f1f4fc6755db42b5189afabf8a8b76aa672d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep4.npy",
+      "bytes": 16512,
+      "sha256": "f0667ccf52000f97149f5ac7779115b9830a1725e102238f8af7735c418fae26"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep5.npy",
+      "bytes": 16512,
+      "sha256": "77c3622b3bfc47d0ce791578077d2d2e00b1512e8464473d0130231e9eb118d7"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep6.npy",
+      "bytes": 16512,
+      "sha256": "5f3eb1b7adf5603c8b71d4b54ca349cec057030f15095b6a71b71e231d7e7f1d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep7.npy",
+      "bytes": 16512,
+      "sha256": "cc99bf65d033ed38c7793226d5a2d06d34ea4f51cc2a9dcf623077923c4510fb"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep8.npy",
+      "bytes": 16512,
+      "sha256": "1e5657131834ff0307475f4bdd1c80c422fa8e1610bece8a7db84c400714b694"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k8_rep9.npy",
+      "bytes": 16512,
+      "sha256": "f9b1c7454820e07f52a72de422f9be9555664bacf73fa7f4f9b6f4561923f37d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/bases/HF_stage1_FAP_residual_PCA_k16.npy",
+      "bytes": 32896,
+      "sha256": "9548b6ee0d11d99057dc95e35bae6172777494488732404afbcd666bddbb08aa"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/bases/HF_stage1_Identity_oracle_k16.npy",
+      "bytes": 32896,
+      "sha256": "821b1d4036b7bdf46d771af7f28625c6a43817b06d18cbb9ba525d5e8113892d"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep0.npy",
+      "bytes": 32896,
+      "sha256": "fc9a419629090b79970cbea9f6b89708f01bc4198a07a232479cbcce354c3097"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep1.npy",
+      "bytes": 32896,
+      "sha256": "bd3657b28d8440322b1593474981a02d652839f00a639ee827400fd71793b114"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep2.npy",
+      "bytes": 32896,
+      "sha256": "363358f14d082108686cd34ecbfedd35d7793e19b756bb2994160f0b4ea2ffe8"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep3.npy",
+      "bytes": 32896,
+      "sha256": "213ccab0aa5577a2d43832dc5ab9d1f9858b68107cac6305abc9ba6931473156"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep4.npy",
+      "bytes": 32896,
+      "sha256": "d25328a39201b763397a3a56c7b04c450ed6645169493e6d43d736af4751a8ab"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep5.npy",
+      "bytes": 32896,
+      "sha256": "979485434a42faf18ee6e812f275eb7cca38d6f55a6dea04dc743347abef44f4"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep6.npy",
+      "bytes": 32896,
+      "sha256": "93a519ee9faf3053f26f3123865aa5c1977e1283a1ce13efeeecf8bb5178d52b"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep7.npy",
+      "bytes": 32896,
+      "sha256": "5c09a1ae44b94f0e9b117fb090dc02455a0830d4475894410002985aaa4fb5cf"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep8.npy",
+      "bytes": 32896,
+      "sha256": "27c9eb03acddb825f3ecb578fd25829d4f08adb948a0b80384592032499d415f"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/random_k16_rep9.npy",
+      "bytes": 32896,
+      "sha256": "a8986c5a3e3918443e9cf03e8692ff4a52b89be3cde477b917532d47549f19aa"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/input_manifest.json",
+      "bytes": 12105,
+      "sha256": "e566f4613c02730566c3e12f26b136a9b11fa4e0c1895104da4218f3363ced61"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/split.json",
+      "bytes": 3841,
+      "sha256": "c49463ee0ee68f4ba258ae6f0f8604f21b0911fa6cbe281ebbabdee76d78d738"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/retrieval_protocol.json",
+      "bytes": 1772,
+      "sha256": "8c218c9bbe381c2bc0f7da078acb1f10518532a8a683ae0a2d94c6ec60b60487"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_figs_v3/drift_restoration_HF_native.csv",
+      "bytes": 49452,
+      "sha256": "dbb923d488b1c91e564f0ee00db6076b9d1479cd2efaeee788f89cd99981af62"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/inputs.txt",
+      "bytes": 777,
+      "sha256": "05caaadafdabd31308f7ae612518417d6abbc445680837c07b9f2462e5d46cb9"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/scripts/ics_probe_analyze.py",
+      "bytes": 49874,
+      "sha256": "8fe210dde78c83c4043539db44a483ffcedea0488f59de11232ffe8c47103d9c"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/tools/analysis/ics_probe_drift.py",
+      "bytes": 5556,
+      "sha256": "4da63199d14732a6493c2b44ee5751619cf68ec5513a3baf9d48cd5cea536019"
+    }
+  ],
+  "bases_reestimated": false,
+  "basis_orthogonalization_applied": false,
+  "feature_hashes_identical_to_v3": true
+}

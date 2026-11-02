@@ -1,0 +1,13 @@
+domain,k,random_mean_pct,random_sd_pct,theoretical_pct,difference_pp,relative_error_pct,theoretical_within_mean_plus_minus_2SD,interpretation
+overcast,2,0.8028079066509684,0.11416667561512092,0.78125,0.02155790665096835,2.7594120513239506,True,"Descriptive numerical sanity check, not a significance test"
+rainy,2,0.8546930731939744,0.15521267166801664,0.78125,0.07344307319397436,9.400713368828729,True,"Descriptive numerical sanity check, not a significance test"
+dawn_dusk,2,0.8725383051182268,0.2430239947276917,0.78125,0.09128830511822683,11.684903055133034,True,"Descriptive numerical sanity check, not a significance test"
+three_old_domains,2,0.845872319863774,0.14573520786969116,0.78125,0.06462231986377398,8.271656942563066,True,"Descriptive numerical sanity check, not a significance test"
+overcast,8,3.2739502116228225,0.5433086627219866,3.125,0.14895021162282251,4.7664067719303205,True,"Descriptive numerical sanity check, not a significance test"
+rainy,8,3.073718766268295,0.4045689126290864,3.125,-0.05128123373170501,-1.6409994794145621,True,"Descriptive numerical sanity check, not a significance test"
+dawn_dusk,8,3.172238369508981,0.7989165140021754,3.125,0.04723836950898086,1.5116278242873982,True,"Descriptive numerical sanity check, not a significance test"
+three_old_domains,8,3.1729360696547637,0.5195789448687267,3.125,0.04793606965476371,1.5339542289524388,True,"Descriptive numerical sanity check, not a significance test"
+overcast,16,6.310925348729241,0.4161314859275886,6.25,0.06092534872924116,0.9748055796678479,True,"Descriptive numerical sanity check, not a significance test"
+rainy,16,6.447340483359875,0.5783292418469815,6.25,0.1973404833598753,3.157447733758012,True,"Descriptive numerical sanity check, not a significance test"
+dawn_dusk,16,6.267413781698147,0.6021550882861421,6.25,0.017413781698146558,0.27862050717033515,True,"Descriptive numerical sanity check, not a significance test"
+three_old_domains,16,6.335820454152195,0.4149622908788395,6.25,0.08582045415219497,1.3731272664351257,True,"Descriptive numerical sanity check, not a significance test"

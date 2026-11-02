@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "feature_files": 20,
+  "saved_basis_files": 36,
+  "paired_test_RoIs": 8117,
+  "input_hashes_unchanged": true,
+  "original_v3_restoration_values_unchanged": true,
+  "energy_rows": 156,
+  "summary_rows": 9,
+  "all_combined_random_checks": true,
+  "CPU_only": true,
+  "bases_reestimated": false,
+  "python": "3.7.16",
+  "numpy": "1.21.5",
+  "MKL_runtime_threads": 4
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "source_hashes_unchanged": true,
+  "saved_bases": 36,
+  "fitted_bases": 0,
+  "paired_car_test_RoIs": 8117,
+  "data_rows": 156,
+  "table_rows": 9,
+  "random_bases_per_rank": 10,
+  "ratio_of_sums_checked": true,
+  "original_recovery_values_checked": true,
+  "random_theory_combined_checks": [
+    {
+      "k": "2",
+      "result": "True"
+    },
+    {
+      "k": "8",
+      "result": "True"
+    },
+    {
+      "k": "16",
+      "result": "True"
+    }
+  ],
+  "other_directories_unchanged": true,
+  "CPU_only": true,
+  "base_commit": "68595ecad85a987008cb53523ccc401d844b10fd"
+}

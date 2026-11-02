@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "feature_files": 20,
+  "HF_stage1_clean_FAP_confirmed": true,
+  "restoration_selfchecks": 13,
+  "drift_csv_rows": 168,
+  "drift_summary_rows": 12,
+  "random_summary_replicates": 30,
+  "basis_files": 8,
+  "saved_RoIs_preserved": 20,
+  "figures_PNG": 3,
+  "figures_PDF": 3,
+  "all_input_hashes_unchanged": true,
+  "other_directories_unchanged": true,
+  "CPU_only": true,
+  "audit_base_commit": "6375023aef7987a66e2d75809f85c9a551f8afa2",
+  "S1_INT_matches_A1": true
+}

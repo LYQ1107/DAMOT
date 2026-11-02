@@ -1,0 +1,27 @@
+{
+  "model": "HF",
+  "widths_inches": 3.3,
+  "png_dpi": 300,
+  "min_font_pt": 8,
+  "no_k2_annotation": true,
+  "no_suptitle": true,
+  "categories": [
+    "Intervention-sensitive",
+    "Label-free nuisance",
+    "Random",
+    "Identity oracle"
+  ],
+  "k": [
+    2,
+    8,
+    16
+  ],
+  "random_error_bars": "Population SD (ddof=0), ten ratio-of-sums replicates",
+  "intervention_and_oracle_reference": "HF_stage1_e5 fit car RoIs",
+  "colors": {
+    "Intervention-sensitive": "#0072B2",
+    "Label-free nuisance": "#009E73",
+    "Random": "#777777",
+    "Identity oracle": "#D55E00"
+  }
+}

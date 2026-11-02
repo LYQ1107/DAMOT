@@ -1,0 +1,14 @@
+{
+  "status": "reviewed",
+  "review_method": "Direct inspection of all three delivered PNGs",
+  "reviewed_files": [
+    "drift_restoration_HF_4bars.png",
+    "drift_restoration_HF_3bars.png",
+    "intervention_extremes_HF.png"
+  ],
+  "observations": [
+    "Both drift figures contain one HF panel, the prescribed three ranks, fixed consistent colors, one-decimal value labels, random SD error bars and a lower legend. The k=2 group is shaded with no text annotation.",
+    "The negative label-free nuisance recovery at k=2 is retained, and k=8/16 are both displayed. No rank or unfavorable result is omitted.",
+    "The crop figure contains the same 20 RoIs in the same 2x10 positions. It has no global title; every small label contains only weather and the original signed coordinate rounded to three decimals. Original aspect ratios and bounding boxes are retained."
+  ]
+}

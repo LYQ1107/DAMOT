@@ -1,0 +1,123 @@
+{
+  "source_files": [
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/HF/plot_C_crops.csv",
+      "bytes": 5060,
+      "sha256": "301e6a44d570b70eb15eb0bed519b6921bfc33834c68e0e12e7ac056771a6c8a"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b200b84e-4a792877/b200b84e-4a792877-0000011.jpg",
+      "bytes": 56887,
+      "sha256": "065178b1056efe74409ebddb16593a41f454fde4224cb81a6ffa4d6a70cc0d29"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b2505382-1423f56a/b2505382-1423f56a-0000053.jpg",
+      "bytes": 96842,
+      "sha256": "713a65d30dccd304eb618d1755b29b4622236fc6347b6674e407e3bf6d0b9409"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b2505382-1423f56a/b2505382-1423f56a-0000001.jpg",
+      "bytes": 98396,
+      "sha256": "39948416b42732e9a285386a002ca3491af60ef49c1ea5a1c1b9eb49d3c2e382"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_holdout_45v/0048f391-eae6a189/0048f391-eae6a189-0000039.jpg",
+      "bytes": 122474,
+      "sha256": "836bfcffccdd27fa42f06501d9a803795d79ad90abbd3d6c2ab9fa7968a7e19d"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b206a78b-99f405ab/b206a78b-99f405ab-0000043.jpg",
+      "bytes": 79472,
+      "sha256": "100b2837e43118e87562ec6c0007ac401ebeaf719064e2ed7a80c15c06372f1a"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b21d5efb-5e2cd743/b21d5efb-5e2cd743-0000027.jpg",
+      "bytes": 57706,
+      "sha256": "a7363d039434fa7386d795433b8c5780f338734eae1679d443ef968140fd681c"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/rainy/0081da60-5fa22cc6/0081da60-5fa22cc6-0000053.jpg",
+      "bytes": 171915,
+      "sha256": "599bc7dcb791da0ee80cb93000c5f5f60de46b51ec8f17b6bafcd105432c6e15"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b229488e-e4714bb7/b229488e-e4714bb7-0000009.jpg",
+      "bytes": 87916,
+      "sha256": "4982aca24f8b0cccb212849f1021913e4670eb9e20bfc95eaf5fd98b6fc4f46a"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b1ebfc3c-740ec84a/b1ebfc3c-740ec84a-0000049.jpg",
+      "bytes": 83737,
+      "sha256": "23d30a045d9a05e65701ddb2349af7f861dc9e8ca1438f648dea091641d0b360"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/dawn_dusk/b23a79d1-e434acaa/b23a79d1-e434acaa-0000059.jpg",
+      "bytes": 37820,
+      "sha256": "ac5074398f4eb25691285d55bc35613fcac0b7816b2807144613ac085329a8bd"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/overcast/b200e97a-bf074435/b200e97a-bf074435-0000037.jpg",
+      "bytes": 163816,
+      "sha256": "15870b49a6066882003e9e5859f1a33b80e3908a32f0ad01ba154bcf04c2e91b"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b2505382-1423f56a/b2505382-1423f56a-0000021.jpg",
+      "bytes": 62709,
+      "sha256": "0be5beb5f16eede29707a91fe50f8e237eb580aacc9a118e58d4a9ba221333d2"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/rainy/0062e803-38c0a33a/0062e803-38c0a33a-0000051.jpg",
+      "bytes": 152009,
+      "sha256": "147a3000f54478e944a98b14dc08d0bd96fc851ebc2694d63bed2085ee519b0b"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/clear_holdout_45v/007693e6-2535e7bf/007693e6-2535e7bf-0000015.jpg",
+      "bytes": 205831,
+      "sha256": "9572c50e819f8e5ac1403d39f93d33516e6035e44134de8edc41a3404e52c740"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/dawn_dusk/005c4fd3-cb4d6287/005c4fd3-cb4d6287-0000047.jpg",
+      "bytes": 141769,
+      "sha256": "8deb17a6ed17d7e7c57f48729254e28e96e4d202c9311f35038a508ca700bc3c"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/overcast/b1f4491b-cf446195/b1f4491b-cf446195-0000053.jpg",
+      "bytes": 103648,
+      "sha256": "2d762c4040a302054a30406977d141803c02a8cf11eb8b1a3b811953a48f17e2"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/dawn_dusk/00067cfb-e535423e/00067cfb-e535423e-0000005.jpg",
+      "bytes": 148294,
+      "sha256": "4e9d94e5ea6f44325dc8b2063fe5f7514c6d94e5acac50d610ebfb43ee235fc3"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/dawn_dusk/00067cfb-e535423e/00067cfb-e535423e-0000013.jpg",
+      "bytes": 158555,
+      "sha256": "521946704d262103e886329de094b4cf47e0002843359808f511287615cd606c"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/night/b2102d00-a8c09be1/b2102d00-a8c09be1-0000057.jpg",
+      "bytes": 68921,
+      "sha256": "3bcc7b97113aa1977b7738d702139214c8a56c82276076b39388120c31a99288"
+    },
+    {
+      "path": "/data1/liuyeqiang/damot_rebuttal_20261026/data/views/rainy/0024b742-acbed4fb/0024b742-acbed4fb-0000005.jpg",
+      "bytes": 169920,
+      "sha256": "2c47e75f09eae24b357a7a1247586616abea4f23c8385ecb8f488d783025715e"
+    }
+  ],
+  "rows": 2,
+  "columns": 10,
+  "selected_rois": 20,
+  "reselection": false,
+  "suptitle": null,
+  "label": "Weather, signed coordinate to 3 decimals",
+  "same_original_crop_boxes": true,
+  "same_original_row_and_column_order": true,
+  "physical_size_inches": [
+    14,
+    3.8
+  ],
+  "min_font_pt": 8,
+  "png_dpi": 300
+}

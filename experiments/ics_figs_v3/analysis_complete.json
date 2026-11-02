@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "CPU_only": true,
+  "sources_unchanged": true,
+  "reference_model": "HF",
+  "reference_stage": 1,
+  "F_features_read": false,
+  "runtime_threads": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  },
+  "all_tasks_complete": [
+    "HF native restoration",
+    "S1 exact INT energy check"
+  ]
+}

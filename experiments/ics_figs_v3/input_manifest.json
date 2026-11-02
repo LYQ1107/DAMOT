@@ -1,0 +1,450 @@
+{
+  "HF_stage1_readable": true,
+  "sources": [
+    {
+      "model": "HF",
+      "stage": 1,
+      "domain": "clear_holdout_45v",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/clear_holdout_45v.npz",
+      "bytes": 15581313,
+      "sha256": "f4686ecad985ef64149727685422c71c079d432bf21e071c8ddf17709d983955",
+      "feat_clean_shape": [
+        7956,
+        256
+      ],
+      "feat_fap_shape": [
+        7956,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 1,
+      "domain": "overcast",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/overcast.npz",
+      "bytes": 10420400,
+      "sha256": "30570f14f4fd8eba82d229247ba9cbed53214862d3ade008904d50ccf0c5b767",
+      "feat_clean_shape": [
+        5281,
+        256
+      ],
+      "feat_fap_shape": [
+        5281,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 1,
+      "domain": "rainy",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/rainy.npz",
+      "bytes": 8484383,
+      "sha256": "f5a7c47da8930fafb70a9e2ba628e41a29e4dd3d29bbdb3a38cc60773a84d790",
+      "feat_clean_shape": [
+        4279,
+        256
+      ],
+      "feat_fap_shape": [
+        4279,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 1,
+      "domain": "dawn_dusk",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/dawn_dusk.npz",
+      "bytes": 13121685,
+      "sha256": "cacf7eb0cb45b52c7358d44fc9041c6384c19dca886bcd84aa223de38f944506",
+      "feat_clean_shape": [
+        6683,
+        256
+      ],
+      "feat_fap_shape": [
+        6683,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 1,
+      "domain": "night",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage1_e5/night.npz",
+      "bytes": 18805620,
+      "sha256": "cc338746c225cf31d98c8b4e97f1a53cbb86c8348b729451e5c054d658eeb18a",
+      "feat_clean_shape": [
+        9640,
+        256
+      ],
+      "feat_fap_shape": [
+        9640,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 2,
+      "domain": "clear_holdout_45v",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/clear_holdout_45v.npz",
+      "bytes": 15583894,
+      "sha256": "6dcfd0b519433e4c5755fcefe59095f17bd7fdecec64b539122b8ce3c1787a3a",
+      "feat_clean_shape": [
+        7956,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 2,
+      "domain": "overcast",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/overcast.npz",
+      "bytes": 10421446,
+      "sha256": "aa8c469f932d7421432f29d54a21765286e60275a8555bc8a9eb09039f265b41",
+      "feat_clean_shape": [
+        5281,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 2,
+      "domain": "rainy",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/rainy.npz",
+      "bytes": 8485973,
+      "sha256": "71b6c98e4f8487ab2dfb9e12ee62b63dee025cf3b09c718f2302ed2dbf021b5e",
+      "feat_clean_shape": [
+        4279,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 2,
+      "domain": "dawn_dusk",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/dawn_dusk.npz",
+      "bytes": 13124116,
+      "sha256": "9a9a3322f3a9ab2f79a5e7dfb030f37da0116969d7b8c48e8155dd8d4ea78f04",
+      "feat_clean_shape": [
+        6683,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 2,
+      "domain": "night",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage2_e5/night.npz",
+      "bytes": 18809509,
+      "sha256": "30a89c5e5741402dfde1851b441e7581ef58162d02b49623bb9970d54bcd72b7",
+      "feat_clean_shape": [
+        9640,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 3,
+      "domain": "clear_holdout_45v",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/clear_holdout_45v.npz",
+      "bytes": 15588814,
+      "sha256": "4054648b10995b6484f64dbd1ef1798862d6311f742a32e1cd9ec771ae5cfdc2",
+      "feat_clean_shape": [
+        7956,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 3,
+      "domain": "overcast",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/overcast.npz",
+      "bytes": 10425936,
+      "sha256": "645a13baa8b4bd2a5077035b3c972e2c7d85b6305278fd0227b95c8cf6ca5d40",
+      "feat_clean_shape": [
+        5281,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 3,
+      "domain": "rainy",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/rainy.npz",
+      "bytes": 8488508,
+      "sha256": "ea49d701028c4604375e6719cae81991c7d324e9408a4fa8ce1d5e8baca8ee58",
+      "feat_clean_shape": [
+        4279,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 3,
+      "domain": "dawn_dusk",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/dawn_dusk.npz",
+      "bytes": 13128116,
+      "sha256": "c444807e152a6efb121775ec79cc36435e8a5dd761c9695cbf374776a5ecc49e",
+      "feat_clean_shape": [
+        6683,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 3,
+      "domain": "night",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage3_e5/night.npz",
+      "bytes": 18814239,
+      "sha256": "ce004e3fc1905924f6521fd84ef06192456c5eaa71e39810f50c6e5a490f13ac",
+      "feat_clean_shape": [
+        9640,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 4,
+      "domain": "clear_holdout_45v",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/clear_holdout_45v.npz",
+      "bytes": 40195301,
+      "sha256": "e890b3f5e6d2f6329dd59c23de7266bf463dbdc132a372bf201073d06626b6de",
+      "feat_clean_shape": [
+        7956,
+        256
+      ],
+      "feat_fap_shape": [
+        7956,
+        256
+      ],
+      "feat_photo_shape": [
+        7956,
+        256
+      ],
+      "feat_student_shape": [
+        7956,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 4,
+      "domain": "overcast",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/overcast.npz",
+      "bytes": 26878681,
+      "sha256": "a72d249094860e37cfebe9549cd16cf1c7118c73d06061b71b441a28925d8799",
+      "feat_clean_shape": [
+        5281,
+        256
+      ],
+      "feat_fap_shape": [
+        5281,
+        256
+      ],
+      "feat_photo_shape": [
+        5281,
+        256
+      ],
+      "feat_student_shape": [
+        5281,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 4,
+      "domain": "rainy",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/rainy.npz",
+      "bytes": 21561451,
+      "sha256": "187fd90c5e2f01a5947ea9fbb496a0f2f263cb9fe709e840d7c210e006e8ec57",
+      "feat_clean_shape": [
+        4279,
+        256
+      ],
+      "feat_fap_shape": [
+        4279,
+        256
+      ],
+      "feat_photo_shape": [
+        4279,
+        256
+      ],
+      "feat_student_shape": [
+        4279,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 4,
+      "domain": "dawn_dusk",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/dawn_dusk.npz",
+      "bytes": 33563501,
+      "sha256": "b10a95e8f361a9bcde159528cf289ab63e7bbdc1be3023163fb5bc925e9f27c7",
+      "feat_clean_shape": [
+        6683,
+        256
+      ],
+      "feat_fap_shape": [
+        6683,
+        256
+      ],
+      "feat_photo_shape": [
+        6683,
+        256
+      ],
+      "feat_student_shape": [
+        6683,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "model": "HF",
+      "stage": 4,
+      "domain": "night",
+      "path": "/data1/liuyeqiang/damot_ics_followup_20261029/results/feats/HF_stage4_e5/night.npz",
+      "bytes": 48964054,
+      "sha256": "1f3e155617d06a06c3f960b2bec733aebd0028f399543bf6b98f3ba1eef5ce7b",
+      "feat_clean_shape": [
+        9640,
+        256
+      ],
+      "feat_fap_shape": [
+        9640,
+        256
+      ],
+      "feat_photo_shape": [
+        9640,
+        256
+      ],
+      "feat_student_shape": [
+        9640,
+        256
+      ],
+      "categories": [
+        1
+      ]
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/inputs.txt",
+      "bytes": 777,
+      "sha256": "05caaadafdabd31308f7ae612518417d6abbc445680837c07b9f2462e5d46cb9"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/A2_baselines.csv",
+      "bytes": 655,
+      "sha256": "d0288482907a7ce7ca3991c4783541fccef0c4048b9628bb851f78d22d9c41cf"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/A2_restoration.csv",
+      "bytes": 22661,
+      "sha256": "24c745f05ea69c09208565bf44c3e4b752448b7bec1939160f9ead39ed07cec7"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/A2_random_replicates.csv",
+      "bytes": 35685,
+      "sha256": "6de7cb9cc0a8de7c733ce206910e3dcf76f624a26bf592ca9ec3a1cef956072c"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/A1_subspaces.csv",
+      "bytes": 40346,
+      "sha256": "a969242acad97e5db4b2128ae8a35d6bbe4db6a179f8b455946f609c416567c0"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/HF_stage4_nuisance_k2.npy",
+      "bytes": 4224,
+      "sha256": "80cdc00ca1cec6b818601b5b89ee5e99e73365ef4a00396c808b179e6db1c8c0"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/A/HF/bases/HF_stage4_identity_k2.npy",
+      "bytes": 4224,
+      "sha256": "3f205baa3a257d5a8c5c45dcdcada2c4524c14a50659fcc02acfb95c78df1ff2"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/HF/bases/INT_00.npy",
+      "bytes": 4224,
+      "sha256": "66a5e681e93b5c62fdd9b088d855b79a8d510e6f76e0ece162c7ceb336757fe1"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/part1/HF/protocol.json",
+      "bytes": 5793,
+      "sha256": "bd9b581d10751543d80a8c9a1a939c144a4c3a37a596cd931ba6ce690ee3f34b"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/ics_evidence/scripts/ics_probe_analyze.py",
+      "bytes": 49874,
+      "sha256": "8fe210dde78c83c4043539db44a483ffcedea0488f59de11232ffe8c47103d9c"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/tools/analysis/ics_probe_drift.py",
+      "bytes": 5556,
+      "sha256": "4da63199d14732a6493c2b44ee5751619cf68ec5513a3baf9d48cd5cea536019"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/source/tools/analysis/idapr_offline.py",
+      "bytes": 26466,
+      "sha256": "36ed5243e20859d141c3729c13fbe9d2cf55479a465be92eeaa1154dd790a6bf"
+    },
+    {
+      "path": "/data1/liuyeqiang/DAMOT_publish_20261031/experiments/idapr/source/tools/analysis/idapr_basis.py",
+      "bytes": 2673,
+      "sha256": "d9cf7b6b548ff4f72495d26f55e9b281eb0405c57b7129da224650eebb905d2f"
+    }
+  ]
+}

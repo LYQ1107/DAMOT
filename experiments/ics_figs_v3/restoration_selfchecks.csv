@@ -1,0 +1,14 @@
+check,domain,k,actual,expected,error,tolerance,passed
+A2_baseline_mAP_same,overcast,,0.6130070166669573,0.6130070166669573,0.0,1e-09,True
+A2_baseline_mAP_cross,overcast,,0.5797994965489383,0.5797994965489383,0.0,1e-09,True
+A2_baseline_forgetting_proxy,overcast,,0.033207520118019085,0.033207520118019085,0.0,1e-09,True
+A2_baseline_mAP_same,rainy,,0.6316281014116565,0.6316281014116565,0.0,1e-09,True
+A2_baseline_mAP_cross,rainy,,0.6196621931961785,0.6196621931961785,0.0,1e-09,True
+A2_baseline_forgetting_proxy,rainy,,0.011965908215477938,0.011965908215477938,0.0,1e-09,True
+A2_baseline_mAP_same,dawn_dusk,,0.5513522616978274,0.5513522616978274,0.0,1e-09,True
+A2_baseline_mAP_cross,dawn_dusk,,0.5425766914449663,0.5425766914449663,0.0,1e-09,True
+A2_baseline_forgetting_proxy,dawn_dusk,,0.00877557025286102,0.00877557025286102,0.0,1e-09,True
+random_recovery_pct,three_old_domains,2,1.1674738399529179,1.2,0.03252616004708209,0.1,True
+random_recovery_pct,three_old_domains,8,5.707013664319911,5.7,0.007013664319910795,0.1,True
+random_recovery_pct,three_old_domains,16,12.489366511140704,12.5,0.010633488859296492,0.1,True
+none_forgetting_pp,three_old_domains,,1.7982999528786017,1.798,0.0002999528786016281,0.001,True

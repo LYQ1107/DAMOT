@@ -1,0 +1,60 @@
+{
+  "model": "HF",
+  "basis_reference": "HF_stage1_e5",
+  "gap": 4,
+  "window": 30,
+  "max_q": 4000,
+  "seed": 0,
+  "category": "car",
+  "query_stage": 4,
+  "gallery_stages": [
+    1,
+    2,
+    3
+  ],
+  "scoring": "Original drift.cross_map: cosine after re-normalizing restored query and old gallery",
+  "restoration": "new - ((new-old) @ E) @ E.T",
+  "domains": [
+    {
+      "domain": "overcast",
+      "gallery_stage": 1,
+      "queries": 1142,
+      "test_rois": 1813,
+      "task_sha256": "2d35b9b36ff3e5dbde69244ce8c715d08196681875d09c0450fa500c2848cf77",
+      "mAP_same": 0.6130070166669573,
+      "mAP_cross": 0.5797994965489383,
+      "forgetting_proxy": 0.033207520118019085
+    },
+    {
+      "domain": "rainy",
+      "gallery_stage": 2,
+      "queries": 1837,
+      "test_rois": 2326,
+      "task_sha256": "5a6ba24a13934c18f6ca81a78e6710791b36b71cc7e17046f65ac14833c5aa8b",
+      "mAP_same": 0.6316281014116565,
+      "mAP_cross": 0.6196621931961785,
+      "forgetting_proxy": 0.011965908215477938
+    },
+    {
+      "domain": "dawn_dusk",
+      "gallery_stage": 3,
+      "queries": 2866,
+      "test_rois": 3978,
+      "task_sha256": "ab37e02e1546ca42f3a274f197907f5bd107d8c36a37afd54beb2c51c3ed445a",
+      "mAP_same": 0.5513522616978274,
+      "mAP_cross": 0.5425766914449663,
+      "forgetting_proxy": 0.00877557025286102
+    }
+  ],
+  "random_recomputed": false,
+  "nuisance_recomputed": false,
+  "sd_ddof": 0,
+  "aggregation": "100 * sum(forgetting_reduction) / sum(forgetting_proxy); residual_pp=100*sum(restored)/3",
+  "summary_raw_forgetting_columns": "Sums over three domains; mAP columns are intentionally blank in summary rows",
+  "csv_row_types": [
+    "domain",
+    "summary",
+    "random_replicate_domain",
+    "random_replicate_summary"
+  ]
+}

@@ -1,0 +1,26 @@
+2026-11-02T08:39:10Z HF input preflight; fail immediately if any required HF array is absent
+2026-11-02T08:39:16Z HF_NATIVE_BASES_READY fit=15820 test=18019
+2026-11-02T08:39:16Z A2 overcast Intervention-sensitive k2 restored=0.579682225
+2026-11-02T08:39:16Z A2 overcast Intervention-sensitive k8 restored=0.592477229
+2026-11-02T08:39:16Z A2 overcast Intervention-sensitive k16 restored=0.599892237
+2026-11-02T08:39:16Z A2 overcast Identity oracle k2 restored=0.589225527
+2026-11-02T08:39:17Z A2 overcast Identity oracle k8 restored=0.597991158
+2026-11-02T08:39:17Z A2 overcast Identity oracle k16 restored=0.598142715
+2026-11-02T08:39:17Z A2 rainy Intervention-sensitive k2 restored=0.619180669
+2026-11-02T08:39:17Z A2 rainy Intervention-sensitive k8 restored=0.620638491
+2026-11-02T08:39:18Z A2 rainy Intervention-sensitive k16 restored=0.623437004
+2026-11-02T08:39:18Z A2 rainy Identity oracle k2 restored=0.621746828
+2026-11-02T08:39:18Z A2 rainy Identity oracle k8 restored=0.620887964
+2026-11-02T08:39:18Z A2 rainy Identity oracle k16 restored=0.622872968
+2026-11-02T08:39:19Z A2 dawn_dusk Intervention-sensitive k2 restored=0.543590338
+2026-11-02T08:39:19Z A2 dawn_dusk Intervention-sensitive k8 restored=0.548475427
+2026-11-02T08:39:20Z A2 dawn_dusk Intervention-sensitive k16 restored=0.552537340
+2026-11-02T08:39:20Z A2 dawn_dusk Identity oracle k2 restored=0.552432519
+2026-11-02T08:39:20Z A2 dawn_dusk Identity oracle k8 restored=0.549077881
+2026-11-02T08:39:20Z A2 dawn_dusk Identity oracle k16 restored=0.549834432
+2026-11-02T08:39:20Z RESTORATION_SELFCHECK_PASS 13
+2026-11-02T08:39:22Z ENERGY INT_00 weather=39.388027454 identity=11.112478751 angles=[4.20834255e-16 2.50084690e-14]
+2026-11-02T08:39:22Z ENERGY Label-free identity weather=2.553181984 identity=13.344943363 angles=[82.59841015 88.45489264]
+2026-11-02T08:39:22Z ENERGY A1 nuisance saved weather=39.388027454 identity=11.112478751 angles=[4.20834255e-16 2.50084690e-14]
+2026-11-02T08:39:22Z ENERGY A1 identity saved weather=2.553181984 identity=13.344943363 angles=[82.59841015 88.45489264]
+2026-11-02T08:39:23Z HF_NATIVE_ANALYSIS_COMPLETE
